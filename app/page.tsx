@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { FormEvent, useState } from "react";
@@ -270,6 +270,11 @@ const icons = [Layers3, ShieldCheck, BadgeCheck, Factory, PackageCheck];
 const applicationIcons = [ShieldCheck, Globe2, Layers3, Truck, Factory];
 const capabilityIcons = [Factory, ClipboardCheck, Truck, Layers3];
 const whyIcons = [BadgeCheck, Truck, PackageCheck, Globe2];
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+function asset(path: string) {
+  return `${basePath}${path}`;
+}
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>("en");
@@ -398,7 +403,7 @@ export default function Home() {
 
       <section className="relative min-h-[720px] pt-20">
         <Image
-          src="/images/agm-hero-production.png"
+          src={asset("/images/agm-hero-production.png")}
           alt="AGM separator production line"
           fill
           priority
@@ -521,7 +526,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="relative overflow-hidden rounded-md bg-ink shadow-industrial">
             <Image
-              src="/images/agm-factory-capability.png"
+              src={asset("/images/agm-factory-capability.png")}
               alt="AGM separator manufacturing floor"
               width={1400}
               height={1049}
@@ -594,7 +599,7 @@ export default function Home() {
 
           <div className="relative overflow-hidden rounded-md bg-ink shadow-industrial">
             <Image
-              src="/images/agm-quality-control.png"
+              src={asset("/images/agm-quality-control.png")}
               alt="AGM separator quality control testing"
               width={1456}
               height={1088}
