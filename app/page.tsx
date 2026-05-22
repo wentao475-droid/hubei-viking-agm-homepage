@@ -419,7 +419,7 @@ export default function Home() {
     setFormState("idle");
 
     try {
-      const response = await fetch("/__forms.html", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: body.toString()
@@ -958,6 +958,7 @@ export default function Home() {
           <form
             name="inquiry"
             method="POST"
+            action="/"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={submitInquiry}
