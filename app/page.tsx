@@ -17,6 +17,7 @@ type IconName =
   | "mail"
   | "menu"
   | "package"
+  | "phone"
   | "send"
   | "shield"
   | "truck"
@@ -34,8 +35,10 @@ const copy = {
     language: "中文",
     hero: {
       badge: "Hubei Viking Technology Co., Ltd.",
-      title:
-        "Hubei Viking AGM Glass Fiber Separator Manufacturing",
+      title: [
+        "Hubei Viking Technology",
+        "AGM Glass Fiber Separator Manufacturer"
+      ],
       subtitle:
         "Focused manufacturing and stable supply of AGM glass fiber separators for lead-acid battery producers.",
       quote: "Request a Quote",
@@ -49,14 +52,19 @@ const copy = {
     ],
     company: {
       eyebrow: "Company at a Glance",
-      title: "A real manufacturing base behind every inquiry",
-      text:
-        "Hubei Viking Technology operates with a visible office and manufacturing base, documented qualification materials and a process-driven supply system for AGM separator customers.",
+      title: "A technology-driven AGM separator manufacturer in Hubei",
+      text: [
+        "Hubei Viking Technology Co., Ltd. was established in December 2015 with registered capital of RMB 30 million. The company is located in Ezhou Economic and Technological Development Zone, Hubei Province, covering about 65 mu, and focuses on the research, production and sales of ultra-fine glass fiber separators.",
+        "The company mainly produces AGM separator products, with an annual capacity of about 4,000 tons. It operates multiple advanced AGM separator production lines in China and is equipped with process control, inspection and quality management systems.",
+        "Viking Technology has passed ISO9001:2015 quality management system certification. Products can be customized according to customer requirements and are widely used in lead-acid battery applications."
+      ],
       imageLabel: "Hubei Viking Technology office and manufacturing base",
       cards: [
-        ["Visible company presence", "Office and manufacturing facilities give customers a clearer view of the supplier behind each inquiry."],
-        ["Documented qualifications", "Business license and certification materials are available to support buyer due diligence."],
-        ["Process-based communication", "A clear workflow supports technical discussion from raw material selection through quality analysis and customer follow-up."]
+        ["Established in 2015", "Registered capital of RMB 30 million and a long-term focus on AGM separator manufacturing."],
+        ["65 mu production site", "Located in Ezhou Economic and Technological Development Zone, Hubei Province."],
+        ["About 4,000 tons annual capacity", "Multiple AGM separator production lines support stable batch supply."],
+        ["ISO9001:2015 certified", "Quality management system certification supports customer supplier review."],
+        ["Custom production", "Separator products can be produced according to customer specifications and application needs."]
       ]
     },
     values: {
@@ -188,6 +196,8 @@ const copy = {
     footer: {
       description:
         "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      wechat: "Official WeChat account",
+      mobile: "Mobile website",
       columns: {
         Company: ["About Manufacturing", "Quality Control", "Export Support"],
         Products: ["AGM Separator Rolls", "Custom Thickness", "Custom Width"],
@@ -207,7 +217,7 @@ const copy = {
     language: "EN",
     hero: {
       badge: "湖北维京科技有限公司",
-      title: "湖北维京 AGM 玻璃纤维隔板制造",
+      title: ["湖北维京科技", "AGM 玻璃纤维隔板制造商"],
       subtitle:
         "专注为铅酸电池生产企业提供 AGM 玻璃纤维隔板制造与稳定供货。",
       quote: "获取报价",
@@ -221,14 +231,19 @@ const copy = {
     ],
     company: {
       eyebrow: "公司概览",
-      title: "询盘背后是真实的制造基地",
-      text:
-        "湖北维京科技拥有可见的办公与制造基地、可供核验的资质材料，以及面向 AGM 隔板客户的过程化供应体系。",
+      title: "专注超细玻璃纤维隔板的科技型企业",
+      text: [
+        "湖北维京科技有限公司成立于2015年12月，注册资本3000万元，位于湖北省鄂州市经济技术开发区，占地面积65亩，是一家专注于超细玻璃纤维隔板研发、生产与销售的科技型企业。",
+        "公司主要生产各类AGM隔板产品，年产能约4000吨，拥有多条国内先进的AGM隔板生产线，并配备完善的过程控制、检测检验和质量管理体系。公司已通过ISO9001:2015质量管理体系认证，产品可根据客户需求进行定制化生产，广泛服务于铅酸蓄电池相关应用领域。",
+        "维京科技始终坚持以客户满意为核心，以稳定品质、准时交付和持续改进为目标，致力于为客户提供可靠的产品与高效的服务，成为客户值得信赖的长期合作伙伴。"
+      ],
       imageLabel: "湖北维京科技办公及制造基地",
       cards: [
-        ["公司实体可见", "办公与制造设施帮助客户更清楚了解询盘背后的供应商主体。"],
-        ["资质材料可查", "营业执照和认证材料可用于客户尽调和供应商审核。"],
-        ["流程沟通明确", "清晰的流程体系支持从原料选择到质量分析、客户跟进的技术沟通。"]
+        ["2015年成立", "注册资本3000万元，长期专注AGM隔板相关产品。"],
+        ["65亩厂区", "位于湖北省鄂州市经济技术开发区。"],
+        ["约4000吨年产能", "多条国内先进AGM隔板生产线支撑稳定供货。"],
+        ["ISO9001:2015", "已通过质量管理体系认证，支持客户供应商审核。"],
+        ["定制化生产", "可根据客户需求进行规格和应用场景适配。"]
       ]
     },
     values: {
@@ -338,6 +353,8 @@ const copy = {
     footer: {
       description:
         "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      wechat: "官方微信公众号",
+      mobile: "移动官网",
       columns: {
         公司: ["制造能力", "质量控制", "出口支持"],
         产品: ["AGM 隔板卷材", "定制厚度", "定制宽度"],
@@ -359,6 +376,7 @@ const Layers3 = makeIcon("layers");
 const Mail = makeIcon("mail");
 const Menu = makeIcon("menu");
 const PackageCheck = makeIcon("package");
+const Phone = makeIcon("phone");
 const Send = makeIcon("send");
 const ShieldCheck = makeIcon("shield");
 const Truck = makeIcon("truck");
@@ -369,10 +387,46 @@ const applicationIcons = [ShieldCheck, Globe2, Layers3, Truck, Factory];
 const capabilityIcons = [Factory, ClipboardCheck, Truck, Layers3];
 const whyIcons = [BadgeCheck, Truck, PackageCheck, Globe2];
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const contactInfo = {
+  phone: "18907186665",
+  email: "vikingsales@vikingagm.com"
+};
+const certificationImages = [
+  "/images/certification (1).png",
+  "/images/certification (2).png",
+  "/images/certification (3).png",
+  "/images/certification (4).png",
+  "/images/certification (5).png"
+];
 const useEvidenceImagePlaceholders = true;
 
 function asset(path: string) {
   return `${basePath}${path}`;
+}
+
+function netlifyImage(
+  path: string,
+  width: number,
+  height?: number,
+  quality = 76,
+  fit: "cover" | "contain" = "cover"
+) {
+  if (process.env.NODE_ENV !== "production") {
+    return asset(path);
+  }
+
+  const params = new URLSearchParams({
+    url: path,
+    w: String(width),
+    q: String(quality),
+    fit
+  });
+
+  if (height) {
+    params.set("h", String(height));
+  }
+
+  return asset(`/.netlify/images?${params.toString()}`);
 }
 
 export default function Home() {
@@ -451,8 +505,15 @@ export default function Home() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/25 bg-white/90 shadow-sm backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <a href="#" className="flex min-w-0 items-center gap-3">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-ink text-sm font-bold text-white">
-              VK
+            <span className="flex h-12 w-36 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white sm:w-40">
+              <Image
+                src={asset("/images/viking_logo_transparent_cropped.png")}
+                alt="Viking Technology logo"
+                width={260}
+                height={108}
+                priority
+                className="h-full w-full object-contain"
+              />
             </span>
             <span className="min-w-0">
               <span className="block truncate text-sm font-semibold text-ink sm:text-base">
@@ -536,7 +597,7 @@ export default function Home() {
 
       <section className="relative min-h-[720px] pt-20">
         <Image
-          src={asset("/images/agm-hero-production.png")}
+          src={netlifyImage("/images/agm-hero-production.png", 1600, 900, 72)}
           alt="AGM separator production line"
           fill
           priority
@@ -552,8 +613,11 @@ export default function Home() {
               <Factory size={16} />
               <span className="truncate">{t.hero.badge}</span>
             </div>
-            <h1 className="max-w-4xl text-4xl font-bold leading-[1.06] text-ink sm:text-5xl lg:text-6xl">
-              {t.hero.title}
+            <h1 className="max-w-4xl text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[4rem]">
+              <span className="block">{t.hero.title[0]}</span>
+              <span className="mt-2 block text-[0.74em] font-extrabold leading-[1.12] text-ink sm:text-[0.82em] lg:text-[0.88em]">
+                {t.hero.title[1]}
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-graphite sm:text-xl">
               {t.hero.subtitle}
@@ -605,7 +669,7 @@ export default function Home() {
       </section>
 
       <section className="px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
               {t.company.eyebrow}
@@ -613,8 +677,14 @@ export default function Home() {
             <h2 className="mt-4 text-3xl font-bold leading-tight text-ink sm:text-4xl">
               {t.company.title}
             </h2>
-            <p className="mt-5 text-base leading-8 text-steel">{t.company.text}</p>
-            <div className="mt-8 grid gap-4">
+            <div className="mt-5 grid gap-4">
+              {t.company.text.map((paragraph) => (
+                <p key={paragraph} className="text-base leading-8 text-steel">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {t.company.cards.map(([title, text]) => (
                 <article
                   key={title}
@@ -627,20 +697,40 @@ export default function Home() {
             </div>
           </div>
 
-          <EvidenceImageSlot
-            src={asset("/images/viking-company-building.jpg")}
-            alt={t.company.imageLabel}
-            eyebrow="Hubei Viking Technology"
-            title={t.company.imageLabel}
-            note={
-              lang === "zh"
-                ? "厂区与办公楼高清素材位已预留"
-                : "Factory and office image slot reserved"
-            }
-            replacement="public/images/viking-company-building.jpg"
-            icon="factory"
-            showImage
-          />
+          <div className="rounded-md border border-line bg-white p-4 shadow-industrial">
+            <Image
+              src={netlifyImage("/images/viking-company-building.jpg", 900, 650, 78)}
+              alt={t.company.imageLabel}
+              width={900}
+              height={650}
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              className="aspect-[4/3] w-full rounded-md object-cover"
+            />
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              {(
+                lang === "zh"
+                  ? [
+                      ["2015", "成立时间"],
+                      ["65亩", "厂区面积"],
+                      ["4000吨", "年产能约"],
+                      ["ISO9001", "质量体系"]
+                    ]
+                  : [
+                      ["2015", "Established"],
+                      ["65 mu", "Production site"],
+                      ["4,000 tons", "Annual capacity"],
+                      ["ISO9001", "Quality system"]
+                    ]
+              ).map(([value, label]) => (
+                <div key={label} className="rounded-md bg-frost p-4">
+                  <div className="text-xl font-bold text-signal">{value}</div>
+                  <div className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-graphite">
+                    {label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -766,7 +856,7 @@ export default function Home() {
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <EvidenceImageSlot
-            src={asset("/images/agm-factory-capability.png")}
+            src={netlifyImage("/images/agm-factory-capability.png", 1200, 900, 76)}
             alt="AGM separator manufacturing floor"
             eyebrow="Hubei Viking Technology"
             title="AGM separator manufacturing and roll finishing"
@@ -837,7 +927,7 @@ export default function Home() {
 
           <div className="relative overflow-hidden rounded-md bg-ink shadow-industrial">
             <Image
-              src={asset("/images/agm-quality-control.png")}
+              src={netlifyImage("/images/agm-quality-control.png", 1200, 900, 76)}
               alt="AGM separator quality control testing"
               width={1456}
               height={1088}
@@ -856,19 +946,7 @@ export default function Home() {
 
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <EvidenceImageSlot
-            src={asset("/images/viking-certification-evidence.jpg")}
-            alt="Hubei Viking certificate and compliance materials"
-            eyebrow={t.certifications.eyebrow}
-            title={t.certifications.title}
-            note={
-              lang === "zh"
-                ? "营业执照、认证证书与资质文件高清素材位"
-                : "License, certificate and compliance image slot reserved"
-            }
-            replacement="public/images/viking-certification-evidence.jpg"
-            icon="badge"
-          />
+          <CertificationBanner lang={lang} />
 
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
@@ -950,6 +1028,18 @@ export default function Home() {
                   <p className="mt-2 text-sm leading-6 text-white/68">
                     AGM Battery Separator / Absorbent Glass Mat Separator
                   </p>
+                  <div className="mt-4 grid gap-2 text-sm font-semibold text-white/78">
+                    <CopyContactButton
+                      label="TEL"
+                      value={contactInfo.phone}
+                      lang={lang}
+                    />
+                    <CopyContactButton
+                      label="E-mail"
+                      value={contactInfo.email}
+                      lang={lang}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -1032,9 +1122,15 @@ export default function Home() {
       <footer className="bg-white px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_2fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-md bg-ink text-sm font-bold text-white">
-                VK
+            <div className="flex items-center gap-4">
+              <span className="flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-md border border-line bg-white p-2">
+                <Image
+                  src={asset("/images/viking_logo.png")}
+                  alt="Viking Technology logo"
+                  width={240}
+                  height={240}
+                  className="h-full w-full object-contain"
+                />
               </span>
               <div>
                 <p className="font-bold text-ink">Hubei Viking Technology Co., Ltd.</p>
@@ -1044,6 +1140,28 @@ export default function Home() {
             <p className="mt-5 max-w-md text-sm leading-7 text-steel">
               {t.footer.description}
             </p>
+            <div className="mt-6 grid max-w-md gap-4 sm:grid-cols-2">
+              {[
+                [t.footer.wechat, "/images/qrcode_for_logo.jpg"],
+                [t.footer.mobile, "/images/website_logo.png"]
+              ].map(([label, src]) => (
+                <div
+                  key={label}
+                  className="rounded-md border border-line bg-frost p-4"
+                >
+                  <Image
+                    src={asset(src)}
+                    alt={label}
+                    width={120}
+                    height={120}
+                    className="mx-auto h-28 w-28 rounded-sm bg-white object-contain"
+                  />
+                  <p className="mt-3 text-center text-sm font-semibold leading-6 text-graphite">
+                    {label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -1066,8 +1184,210 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <QuickContactDock lang={lang} />
     </main>
   );
+}
+
+function QuickContactDock({ lang }: { lang: Lang }) {
+  const [copiedContact, setCopiedContact] = useState<"phone" | "email" | null>(
+    null
+  );
+  const labels =
+    lang === "zh"
+      ? {
+          phone: "电话",
+          email: "邮箱",
+          copyPhone: "复制电话",
+          copyEmail: "复制邮箱",
+          copied: "已复制"
+        }
+      : {
+          phone: "TEL",
+          email: "E-mail",
+          copyPhone: "Copy phone",
+          copyEmail: "Copy email",
+          copied: "Copied"
+        };
+
+  const items = [
+    {
+      id: "phone" as const,
+      label: labels.phone,
+      value: contactInfo.phone,
+      aria: `${labels.copyPhone}: ${contactInfo.phone}`,
+      Icon: Phone
+    },
+    {
+      id: "email" as const,
+      label: labels.email,
+      value: contactInfo.email,
+      aria: `${labels.copyEmail}: ${contactInfo.email}`,
+      Icon: Mail
+    }
+  ];
+
+  async function copyContact(id: "phone" | "email", value: string) {
+    const copied = await copyToClipboard(value);
+
+    if (!copied) {
+      window.prompt("Copy this contact detail:", value);
+      return;
+    }
+
+    setCopiedContact(id);
+    window.setTimeout(() => {
+      setCopiedContact((current) => (current === id ? null : current));
+    }, 1800);
+  }
+
+  return (
+    <div className="fixed bottom-5 right-4 z-40 flex flex-col gap-2 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2">
+      {items.map(({ id, label, value, aria, Icon }) => (
+        <button
+          key={id}
+          type="button"
+          onClick={() => copyContact(id, value)}
+          aria-label={aria}
+          className="group relative flex h-12 w-12 items-center justify-center rounded-md bg-signal text-white shadow-industrial transition hover:bg-ink focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink"
+        >
+          <span className="pointer-events-none absolute right-14 hidden min-w-max translate-x-2 rounded-md bg-ink px-3 py-2 text-xs font-bold text-white opacity-0 shadow-industrial transition group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 sm:block">
+            {copiedContact === id ? labels.copied : `${label}: ${value}`}
+          </span>
+          <Icon size={22} />
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function CertificationBanner({ lang }: { lang: Lang }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeImage = certificationImages[activeIndex];
+  const labels =
+    lang === "zh"
+      ? {
+          previous: "上一张资质材料",
+          next: "下一张资质材料",
+          item: "资质材料",
+          counter: "张"
+        }
+      : {
+          previous: "Previous qualification material",
+          next: "Next qualification material",
+          item: "Qualification material",
+          counter: "of"
+        };
+
+  function showPrevious() {
+    setActiveIndex((index) =>
+      index === 0 ? certificationImages.length - 1 : index - 1
+    );
+  }
+
+  function showNext() {
+    setActiveIndex((index) =>
+      index === certificationImages.length - 1 ? 0 : index + 1
+    );
+  }
+
+  return (
+    <div className="overflow-hidden rounded-md border border-line bg-white shadow-industrial">
+      <div className="relative bg-frost p-4">
+        <div className="relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-md bg-white">
+          <Image
+            src={netlifyImage(activeImage, 900, 1200, 72, "contain")}
+            alt={`${labels.item} ${activeIndex + 1}`}
+            width={900}
+            height={1200}
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            className="h-full w-full object-contain"
+          />
+        </div>
+        <button
+          type="button"
+          onClick={showPrevious}
+          aria-label={labels.previous}
+          className="absolute left-7 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-md bg-ink/86 text-2xl font-bold leading-none text-white shadow-sm transition hover:bg-signal focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          onClick={showNext}
+          aria-label={labels.next}
+          className="absolute right-7 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-md bg-ink/86 text-2xl font-bold leading-none text-white shadow-sm transition hover:bg-signal focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          ›
+        </button>
+      </div>
+      <div className="flex items-center justify-between gap-4 px-5 py-4">
+        <div className="flex gap-2">
+          {certificationImages.map((image, index) => (
+            <button
+              key={image}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              aria-label={`${labels.item} ${index + 1}`}
+              className={`h-2.5 rounded-full transition ${
+                index === activeIndex ? "w-8 bg-signal" : "w-2.5 bg-line"
+              }`}
+            />
+          ))}
+        </div>
+        <p className="text-sm font-semibold text-steel">
+          {lang === "zh"
+            ? `${activeIndex + 1} / ${certificationImages.length} ${labels.counter}`
+            : `${activeIndex + 1} ${labels.counter} ${certificationImages.length}`}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function CopyContactButton({
+  label,
+  value,
+  lang
+}: {
+  label: string;
+  value: string;
+  lang: Lang;
+}) {
+  const [copied, setCopied] = useState(false);
+  const copiedLabel = lang === "zh" ? "已复制" : "Copied";
+
+  async function copyValue() {
+    const didCopy = await copyToClipboard(value);
+
+    if (!didCopy) {
+      window.prompt("Copy this contact detail:", value);
+      return;
+    }
+
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1800);
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={copyValue}
+      className="text-left transition hover:text-white focus:outline-none focus:text-white"
+      aria-label={`Copy ${label}: ${value}`}
+    >
+      {label}: {copied ? copiedLabel : value}
+    </button>
+  );
+}
+
+async function copyToClipboard(value: string) {
+  try {
+    await navigator.clipboard.writeText(value);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function makeIcon(name: IconName) {
@@ -1179,6 +1499,12 @@ function iconPath(name: IconName) {
           <path d="M4 7.5 12 12l8-4.5" />
           <path d="M12 12v9" />
           <path d="m8.5 15 1.5 1.5 3.5-4" />
+        </>
+      );
+    case "phone":
+      return (
+        <>
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z" />
         </>
       );
     case "send":

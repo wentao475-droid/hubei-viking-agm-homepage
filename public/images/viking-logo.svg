@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260" role="img" aria-labelledby="title">
+  <title id="title">Viking Technology logo</title>
+  <defs>
+    <linearGradient id="leaf" x1="80" y1="40" x2="350" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9ad900"/>
+      <stop offset="1" stop-color="#66b800"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="210" y1="84" x2="620" y2="126" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0076c8"/>
+      <stop offset="1" stop-color="#0066b3"/>
+    </linearGradient>
+    <linearGradient id="word" x1="55" y1="160" x2="666" y2="222" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0084d7"/>
+      <stop offset="1" stop-color="#0069bd"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="260" rx="18" fill="#fff"/>
+  <g transform="translate(28 6)">
+    <path d="M60 92c70-58 131-61 203-10 40 29 77 36 131 17-70 55-134 54-201 8C151 78 108 77 60 92Z" fill="url(#leaf)"/>
+    <path d="M22 126c75-55 136-52 204-4 41 29 76 33 120 17-68 49-130 51-193 10-45-30-83-36-131-23Z" fill="url(#leaf)"/>
+    <path d="M115 166c105 31 179 13 255-57 71-65 143-73 232-39-84-7-144 16-210 81-72 69-151 86-277 15Z" fill="url(#wave)"/>
+    <path d="M270 202c98 18 164-2 225-61 48-47 97-57 161-36-67-1-111 22-163 75-56 56-124 73-223 22Z" fill="url(#wave)"/>
+  </g>
+  <g fill="url(#word)" font-family="Microsoft YaHei, Noto Sans SC, Arial, sans-serif">
+    <text x="56" y="202" font-size="74" font-weight="800" letter-spacing="8">维京科技</text>
+    <text x="62" y="246" font-size="42" font-style="italic" font-weight="500" letter-spacing="1">Viking Technology</text>
+  </g>
+</svg>

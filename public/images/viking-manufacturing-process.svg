@@ -1,162 +1,166 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
   <title id="title">AGM 制造流程 / AGM Manufacturing Process</title>
-  <desc id="desc">Bilingual process flowchart for AGM glass fiber separator manufacturing.</desc>
+  <desc id="desc">AGM manufacturing process flowchart with complete directional arrows.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#06101f"/>
-      <stop offset="0.48" stop-color="#081a33"/>
-      <stop offset="1" stop-color="#020713"/>
+      <stop offset="0" stop-color="#06111f"/>
+      <stop offset="0.52" stop-color="#081d35"/>
+      <stop offset="1" stop-color="#020815"/>
     </linearGradient>
     <linearGradient id="node" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#14365f" stop-opacity="0.96"/>
-      <stop offset="1" stop-color="#06152a" stop-opacity="0.96"/>
+      <stop offset="0" stop-color="#174f73"/>
+      <stop offset="1" stop-color="#08213b"/>
     </linearGradient>
-    <linearGradient id="nodeAlt" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#164a72" stop-opacity="0.96"/>
-      <stop offset="1" stop-color="#08203a" stop-opacity="0.96"/>
+    <linearGradient id="check" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#126a87"/>
+      <stop offset="1" stop-color="#08233d"/>
     </linearGradient>
-    <filter id="glow" x="-35%" y="-45%" width="170%" height="190%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.13 0 0 0 0 0.76 0 0 0 0 1 0 0 0 0.9 0" result="glow"/>
-      <feMerge>
-        <feMergeNode in="glow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="9" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.72 0 0 0 0 1 0 0 0 0.62 0"/>
+    <linearGradient id="quality" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#21516f"/>
+      <stop offset="1" stop-color="#102338"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#6ee7ff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="nodeGlow" x="-40%" y="-50%" width="180%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.16 0 0 0 0 0.78 0 0 0 0 1 0 0 0 0.72 0"/>
       <feMerge>
         <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
-      <path d="M2 2 L10 6 L2 10 Z" fill="#9cecff"/>
+    <filter id="arrowGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.55 0 0 0 0 0.95 0 0 0 0 1 0 0 0 0.72 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowEnd" markerWidth="18" markerHeight="18" refX="15.5" refY="9" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 2 16 9 2 16Z" fill="#e9fbff" stroke="#63e5ff" stroke-width="1"/>
     </marker>
-    <marker id="arrowStart" markerWidth="12" markerHeight="12" refX="2" refY="6" orient="auto" markerUnits="strokeWidth">
-      <path d="M10 2 L2 6 L10 10 Z" fill="#9cecff"/>
+    <marker id="arrowStart" markerWidth="18" markerHeight="18" refX="2.5" refY="9" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M16 2 2 9 16 16Z" fill="#e9fbff" stroke="#63e5ff" stroke-width="1"/>
     </marker>
-    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M50 0H0V50" fill="none" stroke="#7de7ff" stroke-opacity="0.08" stroke-width="1"/>
-    </pattern>
     <style>
-      .cn{font:700 27px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#f4fbff}
-      .en{font:500 21px Arial,"Microsoft YaHei",sans-serif;fill:#b7e6f8}
-      .small{font:600 17px Arial,"Microsoft YaHei",sans-serif;fill:#a8dcef}
-      .title{font:700 34px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#f4fbff}
-      .line{fill:none;stroke:#9cecff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow);filter:url(#softGlow)}
-      .lineBoth{fill:none;stroke:#9cecff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#arrowStart);marker-end:url(#arrow);filter:url(#softGlow)}
-      .node{fill:url(#node);stroke:#54dcff;stroke-width:2.2;filter:url(#glow)}
-      .nodeAlt{fill:url(#nodeAlt);stroke:#54dcff;stroke-width:2.2;filter:url(#glow)}
-      .halo{fill:none;stroke:#4bdfff;stroke-opacity:0.17;stroke-width:2}
+      .title{font:700 39px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#f7fdff}
+      .section{font:700 15px Arial,"Microsoft YaHei",sans-serif;letter-spacing:.08em;fill:#6fdfff;text-transform:uppercase}
+      .cn{font:700 23px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#f8fdff}
+      .cnSmall{font:700 20px "Microsoft YaHei","Noto Sans SC",Arial,sans-serif;fill:#f8fdff}
+      .en{font:700 17px Arial,"Microsoft YaHei",sans-serif;fill:#c7f4ff}
+      .enSmall{font:700 14px Arial,"Microsoft YaHei",sans-serif;fill:#c7f4ff}
+      .box{fill:url(#node);stroke:#58e6ff;stroke-width:2.4;filter:url(#nodeGlow)}
+      .check{fill:url(#check);stroke:#66eaff;stroke-width:2.4;filter:url(#nodeGlow)}
+      .qbox{fill:url(#quality);stroke:#7fefff;stroke-width:2.4;filter:url(#nodeGlow)}
+      .line{fill:none;stroke:#e9fbff;stroke-width:5.2;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrowEnd);filter:url(#arrowGlow)}
+      .both{fill:none;stroke:#e9fbff;stroke-width:5.2;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#arrowStart);marker-end:url(#arrowEnd);filter:url(#arrowGlow)}
+      .qualityLine{fill:none;stroke:#8ef6ff;stroke-width:5.4;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrowEnd);filter:url(#arrowGlow)}
+      .guide{fill:none;stroke:#0fb9ff;stroke-width:2;stroke-opacity:.45}
     </style>
   </defs>
 
   <rect width="1400" height="1000" fill="url(#bg)"/>
   <rect width="1400" height="1000" fill="url(#grid)"/>
-  <circle class="halo" cx="1320" cy="920" r="360"/>
-  <circle class="halo" cx="1320" cy="920" r="520"/>
-  <circle class="halo" cx="1320" cy="920" r="720"/>
-  <path d="M28 258V92L92 28H1310L1372 88V958H1088" fill="none" stroke="#0fb9ff" stroke-opacity="0.55" stroke-width="2"/>
-  <path d="M42 242V103L103 42H1298L1358 99V942H1105" fill="none" stroke="#4bdfff" stroke-opacity="0.22" stroke-width="1"/>
-  <path d="M60 848c128-104 252-136 376-98s246 22 364-48 256-100 414-56" fill="none" stroke="#1bbfff" stroke-opacity="0.12" stroke-width="18"/>
+  <path class="guide" d="M32 252V98L98 32h1204l66 66v806l-64 64H96l-64-64V816"/>
+  <path d="M52 238V110l58-58h1180l58 58v780l-58 58H110l-58-58V832" fill="none" stroke="#5cecff" stroke-opacity=".18" stroke-width="1.5"/>
 
-  <rect x="42" y="28" width="600" height="60" rx="16" fill="#071a33" fill-opacity="0.86" stroke="#54dcff" stroke-opacity="0.55"/>
-  <text x="64" y="65" class="title">AGM 制造流程 / AGM Manufacturing Process</text>
-  <text x="64" y="104" class="small">Process control from raw material selection to customer feedback</text>
+  <text x="50" y="68" class="title">AGM 制造流程 / AGM Manufacturing Process</text>
+  <text x="83" y="115" class="section">Material and water preparation</text>
+  <text x="544" y="115" class="section">Production control</text>
+  <text x="1035" y="115" class="section">Quality feedback loop</text>
 
   <g id="nodes">
-    <rect class="node" x="60" y="104" width="320" height="86" rx="16"/>
-    <text x="220" y="139" text-anchor="middle" class="cn">原材料筛选</text>
-    <text x="220" y="169" text-anchor="middle" class="en">Selection of Raw Material</text>
+    <rect id="A" class="box" x="80" y="140" width="300" height="72" rx="12"/>
+    <text x="230" y="171" text-anchor="middle" class="cn">原材料筛选</text>
+    <text x="230" y="196" text-anchor="middle" class="en">Selection Of Raw Material</text>
 
-    <ellipse class="nodeAlt" cx="675" cy="147" rx="96" ry="48"/>
-    <text x="675" y="139" text-anchor="middle" class="cn">检验</text>
-    <text x="675" y="169" text-anchor="middle" class="en">Inspection</text>
+    <ellipse id="B" class="check" cx="700" cy="176" rx="94" ry="42"/>
+    <text x="700" y="169" text-anchor="middle" class="cnSmall">检验</text>
+    <text x="700" y="194" text-anchor="middle" class="en">Check Up</text>
 
-    <rect class="node" x="1010" y="104" width="330" height="90" rx="16"/>
-    <text x="1175" y="139" text-anchor="middle" class="cn">水质多级精处理</text>
-    <text x="1175" y="169" text-anchor="middle" class="en">Multi-stage Fine</text>
-    <text x="1175" y="195" text-anchor="middle" class="en">Treatment of Water</text>
+    <rect id="C" class="box" x="1020" y="136" width="300" height="80" rx="12"/>
+    <text x="1170" y="166" text-anchor="middle" class="cnSmall">水质多级精处理</text>
+    <text x="1170" y="190" text-anchor="middle" class="enSmall">Multiage Fine</text>
+    <text x="1170" y="210" text-anchor="middle" class="enSmall">Treatment Of Water</text>
 
-    <rect class="nodeAlt" x="510" y="245" width="330" height="78" rx="14"/>
-    <text x="675" y="277" text-anchor="middle" class="cn">制浆</text>
-    <text x="675" y="307" text-anchor="middle" class="en">Making Pulp</text>
+    <rect id="D" class="box" x="560" y="260" width="280" height="72" rx="12"/>
+    <text x="700" y="291" text-anchor="middle" class="cn">制浆</text>
+    <text x="700" y="316" text-anchor="middle" class="en">Making Pulp</text>
 
-    <ellipse class="nodeAlt" cx="220" cy="292" rx="96" ry="48"/>
-    <text x="220" y="284" text-anchor="middle" class="cn">检验</text>
-    <text x="220" y="314" text-anchor="middle" class="en">Inspection</text>
+    <ellipse id="E" class="check" cx="360" cy="296" rx="86" ry="40"/>
+    <text x="360" y="289" text-anchor="middle" class="cnSmall">检验</text>
+    <text x="360" y="314" text-anchor="middle" class="en">Check Up</text>
 
-    <rect class="node" x="60" y="350" width="330" height="92" rx="16"/>
-    <text x="225" y="386" text-anchor="middle" class="cn">沉渣除渣</text>
-    <text x="225" y="416" text-anchor="middle" class="en">Sedimentation &amp; Slag Removal</text>
+    <rect id="F" class="box" x="80" y="386" width="300" height="84" rx="12"/>
+    <text x="230" y="415" text-anchor="middle" class="cnSmall">沉渣 除渣</text>
+    <text x="230" y="440" text-anchor="middle" class="enSmall">Sedimentation Removing</text>
+    <text x="230" y="461" text-anchor="middle" class="enSmall">Sediment</text>
 
-    <ellipse class="nodeAlt" cx="675" cy="396" rx="96" ry="48"/>
-    <text x="675" y="388" text-anchor="middle" class="cn">检验</text>
-    <text x="675" y="418" text-anchor="middle" class="en">Inspection</text>
+    <ellipse id="G" class="check" cx="700" cy="428" rx="86" ry="40"/>
+    <text x="700" y="421" text-anchor="middle" class="cnSmall">检验</text>
+    <text x="700" y="446" text-anchor="middle" class="en">Check Up</text>
 
-    <rect class="nodeAlt" x="490" y="502" width="370" height="118" rx="16"/>
-    <text x="675" y="544" text-anchor="middle" class="cn">上网成型烘干（复合）</text>
-    <text x="675" y="574" text-anchor="middle" class="en">Forming, Drying &amp; Compounding</text>
+    <rect id="H" class="box" x="550" y="520" width="300" height="110" rx="12"/>
+    <text x="700" y="550" text-anchor="middle" class="cnSmall">上网成型烘干(复合)</text>
+    <text x="700" y="574" text-anchor="middle" class="enSmall">Shaping With Fixing</text>
+    <text x="700" y="595" text-anchor="middle" class="enSmall">Net Stoving</text>
+    <text x="700" y="616" text-anchor="middle" class="enSmall">(To Compound)</text>
 
-    <ellipse class="nodeAlt" cx="220" cy="561" rx="112" ry="52"/>
-    <text x="220" y="552" text-anchor="middle" class="cn">在线检测</text>
-    <text x="220" y="582" text-anchor="middle" class="en">In-line Inspection</text>
+    <ellipse id="I" class="check" cx="360" cy="575" rx="100" ry="42"/>
+    <text x="360" y="567" text-anchor="middle" class="cnSmall">在线检测</text>
+    <text x="360" y="594" text-anchor="middle" class="en">Follow Users</text>
 
-    <rect class="node" x="60" y="650" width="320" height="78" rx="14"/>
-    <text x="220" y="682" text-anchor="middle" class="cn">分切</text>
-    <text x="220" y="712" text-anchor="middle" class="en">Slitting</text>
+    <rect id="J" class="box" x="80" y="686" width="300" height="72" rx="12"/>
+    <text x="230" y="717" text-anchor="middle" class="cn">分切</text>
+    <text x="230" y="742" text-anchor="middle" class="en">Splitting</text>
 
-    <ellipse class="nodeAlt" cx="675" cy="689" rx="96" ry="48"/>
-    <text x="675" y="681" text-anchor="middle" class="cn">检验</text>
-    <text x="675" y="711" text-anchor="middle" class="en">Inspection</text>
+    <ellipse id="K" class="check" cx="700" cy="722" rx="86" ry="40"/>
+    <text x="700" y="715" text-anchor="middle" class="cnSmall">检验</text>
+    <text x="700" y="740" text-anchor="middle" class="en">Check Up</text>
 
-    <rect class="nodeAlt" x="510" y="780" width="330" height="78" rx="14"/>
-    <text x="675" y="812" text-anchor="middle" class="cn">产品出厂</text>
-    <text x="675" y="842" text-anchor="middle" class="en">Products Leave Factory</text>
+    <rect id="L" class="box" x="560" y="810" width="280" height="72" rx="12"/>
+    <text x="700" y="841" text-anchor="middle" class="cn">成品出厂</text>
+    <text x="700" y="866" text-anchor="middle" class="en">Products Leave Factory</text>
 
-    <rect class="node" x="510" y="895" width="330" height="78" rx="14"/>
-    <text x="675" y="927" text-anchor="middle" class="cn">跟踪用户</text>
-    <text x="675" y="957" text-anchor="middle" class="en">Customer Follow-up</text>
+    <rect id="M" class="box" x="560" y="906" width="280" height="72" rx="12"/>
+    <text x="700" y="937" text-anchor="middle" class="cn">跟踪用户</text>
+    <text x="700" y="962" text-anchor="middle" class="en">Follow The Customer</text>
 
-    <rect class="node" x="1010" y="650" width="330" height="78" rx="14"/>
-    <text x="1175" y="682" text-anchor="middle" class="cn">质量分析</text>
-    <text x="1175" y="712" text-anchor="middle" class="en">Quality Analysis</text>
+    <rect id="N" class="qbox" x="1020" y="762" width="300" height="76" rx="12"/>
+    <text x="1170" y="794" text-anchor="middle" class="cn">质量分析</text>
+    <text x="1170" y="821" text-anchor="middle" class="en">Analysis Of Quality</text>
 
-    <rect class="node" x="1010" y="502" width="330" height="100" rx="16"/>
-    <text x="1175" y="541" text-anchor="middle" class="cn">纠正预防措施</text>
-    <text x="1175" y="571" text-anchor="middle" class="en">Corrective &amp; Preventive</text>
-    <text x="1175" y="597" text-anchor="middle" class="en">Measures</text>
+    <rect id="O" class="qbox" x="1020" y="568" width="300" height="88" rx="12"/>
+    <text x="1170" y="598" text-anchor="middle" class="cnSmall">纠正预防措施</text>
+    <text x="1170" y="623" text-anchor="middle" class="enSmall">Correct Precautionary</text>
+    <text x="1170" y="644" text-anchor="middle" class="enSmall">Measures</text>
 
-    <rect class="node" x="1010" y="350" width="330" height="78" rx="14"/>
-    <text x="1175" y="382" text-anchor="middle" class="cn">反馈到各个环节</text>
-    <text x="1175" y="412" text-anchor="middle" class="en">Feedback to All Links</text>
+    <rect id="P" class="qbox" x="1020" y="386" width="300" height="76" rx="12"/>
+    <text x="1170" y="418" text-anchor="middle" class="cnSmall">反馈到各个环节</text>
+    <text x="1170" y="444" text-anchor="middle" class="enSmall">Feedback To All Link</text>
   </g>
 
-  <g id="arrows">
-    <path class="lineBoth" d="M390 147H570"/>
-    <path class="lineBoth" d="M780 147H998"/>
-    <path class="line" d="M675 196V240"/>
-    <path class="lineBoth" d="M326 292H500"/>
-    <path class="line" d="M220 340V344"/>
-    <path class="line" d="M510 284H420V396H398"/>
-    <path class="lineBoth" d="M400 396H570"/>
-    <path class="line" d="M675 444V496"/>
-    <path class="lineBoth" d="M342 561H480"/>
-    <path class="line" d="M220 614V644"/>
-    <path class="lineBoth" d="M390 689H570"/>
-    <path class="line" d="M675 620V636"/>
-    <path class="line" d="M675 737V774"/>
-    <path class="line" d="M675 858V889"/>
-    <path class="line" d="M840 819H940V689H1000"/>
-    <path class="line" d="M840 934H976V690H1000"/>
-    <path class="line" d="M1175 650V610"/>
-    <path class="line" d="M1175 502V438"/>
-    <path class="line" d="M1010 389H925V284H850"/>
-  </g>
+  <g id="arrows" aria-label="Complete flow relationships">
+    <path class="both" d="M392 176H593"/>
+    <path class="both" d="M807 176H1008"/>
+    <path class="line" d="M700 230V250"/>
 
-  <rect x="1018" y="900" width="330" height="62" rx="14" fill="#06152a" fill-opacity="0.82" stroke="#54dcff" stroke-opacity="0.42"/>
-  <text x="1040" y="924" class="small" fill="#f4fbff">Closed-loop Quality Control</text>
-  <text x="1040" y="950" class="en" font-size="19">Inspection · Analysis · CAPA · Feedback</text>
+    <path class="both" d="M456 296H548"/>
+    <path class="line" d="M360 346V376H230V375"/>
+    <path class="both" d="M392 428H604"/>
+    <path class="line" d="M700 478V510"/>
+
+    <path class="both" d="M538 575H472"/>
+    <path class="line" d="M360 627V676H230"/>
+    <path class="both" d="M392 722H604"/>
+    <path class="line" d="M700 772V800"/>
+    <path class="line" d="M700 892V896"/>
+
+    <path class="qualityLine" d="M852 846H965V800H1008"/>
+    <path class="qualityLine" d="M852 942H976V824H1008"/>
+    <path class="qualityLine" d="M1170 752V668"/>
+    <path class="qualityLine" d="M1170 558V474"/>
+  </g>
 </svg>
