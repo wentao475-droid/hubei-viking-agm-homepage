@@ -2,13 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.vikingagm.com"),
   title: "Hubei Viking Technology Co., Ltd. | AGM Battery Separator Manufacturer",
   description:
     "AGM battery separator manufacturer supplying glass fiber separators for VRLA, UPS, motorcycle, automotive and energy storage batteries.",
   icons: {
-    icon: "/images/viking_logo_transparent_cropped.png",
-    shortcut: "/images/viking_logo_transparent_cropped.png",
-    apple: "/images/viking_logo_transparent_cropped.png"
+    icon: [
+      { url: "/images/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/images/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/icon-512.png", sizes: "512x512", type: "image/png" }
+    ],
+    shortcut: "/images/favicon-32.png",
+    apple: "/images/apple-touch-icon.png"
   },
   keywords: [
     "AGM Battery Separator",
