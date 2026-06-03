@@ -8,12 +8,13 @@ export const metadata: Metadata = {
     "AGM battery separator manufacturer supplying glass fiber separators for VRLA, UPS, motorcycle, automotive and energy storage batteries.",
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48 64x64", type: "image/x-icon" },
       { url: "/images/favicon-32.png", sizes: "32x32", type: "image/png" },
       { url: "/images/favicon-48.png", sizes: "48x48", type: "image/png" },
       { url: "/images/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/images/icon-512.png", sizes: "512x512", type: "image/png" }
     ],
-    shortcut: "/images/favicon-32.png",
+    shortcut: "/favicon.ico",
     apple: "/images/apple-touch-icon.png"
   },
   keywords: [
