@@ -3,6 +3,12 @@
   publish = "out"
 
 [[redirects]]
+  from = "/baidu_verify_codeva-KKQCucIOJa.html"
+  to = "/baidu_verify_codeva-KKQCucIOJa.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "https://vikingagm.com/*"
   to = "https://www.vikingagm.com/:splat"
   status = 301
