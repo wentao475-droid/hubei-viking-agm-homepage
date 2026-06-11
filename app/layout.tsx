@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.vikingagm.com"),
-  title: "Hubei Viking Technology Co., Ltd. | AGM Battery Separator Manufacturer",
+  title: "Viking AGM | AGM Battery Separator Manufacturer",
   description:
     "AGM battery separator manufacturer supplying glass fiber separators for VRLA, UPS, motorcycle, automotive and energy storage batteries.",
   icons: {

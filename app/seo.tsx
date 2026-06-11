@@ -2,14 +2,18 @@ import type { Metadata } from "next";
 import type { Lang } from "./VikingHome";
 
 export const SITE_URL = "https://www.vikingagm.com";
+const PREVIEW_IMAGE = `${SITE_URL}/images/viking-finished-separator-roll-900.webp`;
+const SHEETS_PREVIEW_IMAGE = `${SITE_URL}/images/sheets1-900.webp`;
+const QUALITY_PREVIEW_IMAGE = `${SITE_URL}/images/agm-quality-control-1200.webp`;
 
-const seo = {
+const homeSeo = {
   en: {
     path: "/",
     locale: "en_US",
     language: "en",
-    title:
-      "AGM Glass Fiber Separator Manufacturer | Hubei Viking Technology",
+    siteName: "Viking AGM",
+    alternateSiteName: "Hubei Viking AGM",
+    title: "Viking AGM | AGM Glass Fiber Separator Manufacturer",
     description:
       "Hubei Viking Technology manufactures AGM glass fiber separators for VRLA, UPS, motorcycle, automotive and energy storage lead-acid battery applications.",
     keywords: [
@@ -28,7 +32,9 @@ const seo = {
     path: "/zh/",
     locale: "zh_CN",
     language: "zh-CN",
-    title: "AGM 玻璃纤维隔板专业制造商 | 湖北维京科技",
+    siteName: "湖北维京AGM",
+    alternateSiteName: "维京AGM",
+    title: "湖北维京AGM | AGM 玻璃纤维隔板专业制造商",
     description:
       "湖北维京科技有限公司专注 AGM 玻璃纤维隔板研发、生产与销售，服务 VRLA、UPS、汽车、摩托车及储能铅酸电池应用。",
     keywords: [
@@ -45,74 +51,490 @@ const seo = {
   }
 } as const;
 
-export function buildHomeMetadata(lang: Lang): Metadata {
-  const current = seo[lang];
+const agmSeparatorSeo = {
+  en: {
+    path: "/products/agm-separator/",
+    alternatePath: "/zh/products/agm-separator/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator Manufacturer for VRLA Lead-Acid Batteries",
+    description:
+      "AGM glass fiber separators for VRLA lead-acid batteries, available in roll or sheet type. Send your thickness, width and battery application for quotation.",
+    keywords: [
+      "AGM separator",
+      "AGM battery separator",
+      "AGM glass fiber separator",
+      "VRLA battery separator",
+      "AGM separator manufacturer"
+    ],
+    productName: "AGM Separator for VRLA Lead-Acid Batteries",
+    serviceDescription:
+      "AGM glass fiber separators for VRLA lead-acid batteries, available in roll and sheet formats for customer specification discussion.",
+    breadcrumbs: ["Home", "Products", "AGM Separator"]
+  },
+  zh: {
+    path: "/zh/products/agm-separator/",
+    alternatePath: "/products/agm-separator/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板制造商 | 湖北维京AGM",
+    description:
+      "湖北维京AGM提供用于VRLA铅酸电池的AGM玻璃纤维隔板，可按卷材或片材形式沟通。请提供厚度、宽度及电池应用以便报价。",
+    keywords: [
+      "AGM 隔板",
+      "AGM 电池隔板",
+      "AGM 玻璃纤维隔板",
+      "VRLA 电池隔板",
+      "AGM 隔板制造商"
+    ],
+    productName: "用于 VRLA 铅酸电池的 AGM 隔板",
+    serviceDescription:
+      "用于 VRLA 铅酸电池的 AGM 玻璃纤维隔板，可按卷材和片材形式与客户沟通规格。",
+    breadcrumbs: ["首页", "产品", "AGM 隔板"]
+  }
+} as const;
 
-  return {
+const agmSeparatorRollsSeo = {
+  en: {
+    path: "/products/agm-separator-rolls/",
+    alternatePath: "/zh/products/agm-separator-rolls/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator Rolls for Battery Production Lines",
+    description:
+      "AGM separator rolls for VRLA battery production. Custom width, thickness and roll packing can be discussed based on customer requirements.",
+    keywords: [
+      "AGM separator rolls",
+      "AGM separator roll supplier",
+      "AGM battery separator rolls",
+      "VRLA battery separator rolls",
+      "custom AGM separator"
+    ],
+    productName: "AGM Separator Rolls",
+    serviceDescription:
+      "Roll-format AGM glass fiber separators for VRLA lead-acid battery production, with width, thickness, roll length, core and packing requirements confirmed according to buyer needs.",
+    breadcrumbs: ["Home", "Products", "AGM Separator Rolls"]
+  },
+  zh: {
+    path: "/zh/products/agm-separator-rolls/",
+    alternatePath: "/products/agm-separator-rolls/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板卷材 | 湖北维京AGM",
+    description:
+      "湖北维京AGM提供用于VRLA电池生产的AGM隔板卷材，宽度、厚度和卷材包装方式可根据客户要求沟通确认。",
+    keywords: [
+      "AGM 隔板卷材",
+      "AGM 电池隔板卷材",
+      "AGM 玻璃纤维隔板卷材",
+      "VRLA 电池隔板卷材",
+      "AGM 隔板供应商"
+    ],
+    productName: "AGM 隔板卷材",
+    serviceDescription:
+      "用于 VRLA 铅酸电池生产的 AGM 玻璃纤维隔板卷材，宽度、厚度、卷长、芯管和包装要求可按客户需求沟通确认。",
+    breadcrumbs: ["首页", "产品", "AGM 隔板卷材"]
+  }
+} as const;
+
+const agmSeparatorSheetsSeo = {
+  en: {
+    path: "/products/agm-separator-sheets/",
+    alternatePath: "/zh/products/agm-separator-sheets/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator Sheets for VRLA Battery Assembly",
+    description:
+      "Pre-cut AGM separator sheets for VRLA lead-acid battery assembly. Sheet dimensions and thickness should be confirmed by battery design.",
+    keywords: [
+      "AGM separator sheets",
+      "AGM battery separator sheets",
+      "VRLA battery separator",
+      "pre-cut AGM separator",
+      "AGM glass fiber separator sheets"
+    ],
+    productName: "AGM Separator Sheets",
+    serviceDescription:
+      "Pre-cut AGM glass fiber separator sheets for VRLA lead-acid battery assembly, with sheet height, width, thickness and packing requirements confirmed according to customer battery design.",
+    breadcrumbs: ["Home", "Products", "AGM Separator Sheets"]
+  },
+  zh: {
+    path: "/zh/products/agm-separator-sheets/",
+    alternatePath: "/products/agm-separator-sheets/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板片材 | 湖北维京AGM",
+    description:
+      "湖北维京AGM提供用于VRLA铅酸电池装配的预裁切AGM隔板片材，片材尺寸和厚度可根据电池设计沟通确认。",
+    keywords: [
+      "AGM 隔板片材",
+      "AGM 电池隔板片材",
+      "VRLA 电池隔板",
+      "预裁切 AGM 隔板",
+      "AGM 玻璃纤维隔板片材"
+    ],
+    productName: "AGM 隔板片材",
+    serviceDescription:
+      "用于 VRLA 铅酸电池装配的预裁切 AGM 玻璃纤维隔板片材，片材高度、宽度、厚度和包装要求可按客户电池设计沟通确认。",
+    breadcrumbs: ["首页", "产品", "AGM 隔板片材"]
+  }
+} as const;
+
+const agmSeparatorTestingSeo = {
+  en: {
+    path: "/quality-control/agm-separator-testing/",
+    alternatePath: "/zh/quality-control/agm-separator-testing/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator Testing and Quality Control",
+    description:
+      "Understand key AGM separator quality checks, including thickness, basis weight, acid absorption, electrical resistance, porosity and appearance.",
+    keywords: [
+      "AGM separator testing",
+      "AGM separator quality control",
+      "battery separator testing",
+      "AGM separator inspection",
+      "VRLA battery separator quality"
+    ],
+    pageName: "AGM Separator Testing and Quality Control",
+    serviceDescription:
+      "AGM separator quality-control discussion covering thickness, basis weight, acid absorption, electrical resistance, porosity, appearance and customer-specific test requirements.",
+    breadcrumbs: ["Home", "Quality Control", "AGM Separator Testing"]
+  },
+  zh: {
+    path: "/zh/quality-control/agm-separator-testing/",
+    alternatePath: "/quality-control/agm-separator-testing/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板检测与质量控制 | 湖北维京AGM",
+    description:
+      "了解AGM隔板常见质量检查项目，包括厚度、克重、吸酸性能、电阻、孔隙率和外观等，具体要求可按客户电池设计确认。",
+    keywords: [
+      "AGM 隔板检测",
+      "AGM 隔板质量控制",
+      "电池隔板检测",
+      "AGM 隔板检验",
+      "VRLA 电池隔板质量"
+    ],
+    pageName: "AGM 隔板检测与质量控制",
+    serviceDescription:
+      "围绕 AGM 隔板厚度、克重、吸酸性能、电阻、孔隙率、外观和客户特定检测要求开展质量控制沟通。",
+    breadcrumbs: ["首页", "质量控制", "AGM 隔板检测"]
+  }
+} as const;
+
+const agmSeparatorVrlaApplicationSeo = {
+  en: {
+    path: "/applications/agm-separator-for-vrla-battery/",
+    alternatePath: "/zh/applications/agm-separator-for-vrla-battery/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator for VRLA Lead-Acid Battery Applications",
+    description:
+      "AGM separators for VRLA lead-acid batteries used in UPS, telecom, motorcycle, e-bike, energy storage and automotive starting batteries.",
+    keywords: [
+      "battery separator for VRLA batteries",
+      "lead-acid battery separator",
+      "VRLA battery separator",
+      "AGM separator applications",
+      "AGM battery separator"
+    ],
+    pageName: "AGM Separator for VRLA Battery Applications",
+    serviceDescription:
+      "Application-focused AGM glass fiber separator discussion for VRLA lead-acid batteries, including UPS, telecom, motorcycle, e-bike, energy storage and automotive starting battery applications.",
+    breadcrumbs: ["Home", "Applications", "AGM Separator for VRLA Battery"]
+  },
+  zh: {
+    path: "/zh/applications/agm-separator-for-vrla-battery/",
+    alternatePath: "/applications/agm-separator-for-vrla-battery/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "VRLA 铅酸电池应用 AGM 隔板 | 湖北维京AGM",
+    description:
+      "湖北维京AGM提供用于VRLA铅酸电池应用的AGM玻璃纤维隔板，服务UPS、通信、摩托车、电动车、储能和汽车启动电池等应用。",
+    keywords: [
+      "VRLA 电池隔板",
+      "铅酸电池隔板",
+      "AGM 隔板应用",
+      "AGM 玻璃纤维隔板",
+      "湖北维京AGM"
+    ],
+    pageName: "用于 VRLA 电池应用的 AGM 隔板",
+    serviceDescription:
+      "面向 VRLA 铅酸电池应用的 AGM 玻璃纤维隔板沟通，覆盖 UPS、通信、摩托车、电动车、储能和汽车启动电池等应用场景。",
+    breadcrumbs: ["首页", "应用", "VRLA 电池 AGM 隔板应用"]
+  }
+} as const;
+
+const whatIsAgmSeparatorSeo = {
+  en: {
+    path: "/blog/what-is-agm-separator/",
+    alternatePath: "/zh/blog/what-is-agm-separator/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "What Is AGM Separator? A Practical Guide for VRLA Battery Buyers",
+    description:
+      "Learn what AGM separator is, how it works in VRLA lead-acid batteries and what information buyers should confirm before purchasing.",
+    keywords: [
+      "what is AGM separator",
+      "AGM battery separator",
+      "AGM glass fiber separator",
+      "VRLA battery separator",
+      "Absorbent Glass Mat separator"
+    ],
+    pageName: "What Is AGM Separator?",
+    articleDescription:
+      "A practical educational guide explaining AGM separators, their function in VRLA lead-acid batteries, key parameters, roll and sheet formats, and buyer checklist information.",
+    breadcrumbs: ["Home", "Resources", "What Is AGM Separator"]
+  },
+  zh: {
+    path: "/zh/blog/what-is-agm-separator/",
+    alternatePath: "/blog/what-is-agm-separator/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "什么是 AGM 隔板？VRLA 电池买家实用指南 | 湖北维京AGM",
+    description:
+      "了解AGM隔板是什么、它在VRLA铅酸电池中的作用，以及采购前应确认的厚度、宽度、吸酸性能、电阻等信息。",
+    keywords: [
+      "什么是 AGM 隔板",
+      "AGM 电池隔板",
+      "AGM 玻璃纤维隔板",
+      "VRLA 电池隔板",
+      "铅酸电池隔板"
+    ],
+    pageName: "什么是 AGM 隔板？",
+    articleDescription:
+      "面向 VRLA 铅酸电池买家的 AGM 隔板入门指南，说明隔板定义、电池中的作用、关键参数、卷材片材形式和询价前信息清单。",
+    breadcrumbs: ["首页", "资料", "什么是 AGM 隔板"]
+  }
+} as const;
+
+export function buildHomeMetadata(lang: Lang): Metadata {
+  const current = homeSeo[lang];
+
+  return buildMetadata({
     title: current.title,
     description: current.description,
     keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/",
+    zhPath: "/zh/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.serviceName
+  });
+}
+
+export function buildAgmSeparatorMetadata(lang: Lang): Metadata {
+  const current = agmSeparatorSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/products/agm-separator/",
+    zhPath: "/zh/products/agm-separator/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.productName
+  });
+}
+
+export function buildAgmSeparatorRollsMetadata(lang: Lang): Metadata {
+  const current = agmSeparatorRollsSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/products/agm-separator-rolls/",
+    zhPath: "/zh/products/agm-separator-rolls/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.productName
+  });
+}
+
+export function buildAgmSeparatorSheetsMetadata(lang: Lang): Metadata {
+  const current = agmSeparatorSheetsSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/products/agm-separator-sheets/",
+    zhPath: "/zh/products/agm-separator-sheets/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.productName,
+    image: {
+      url: SHEETS_PREVIEW_IMAGE,
+      width: 900,
+      height: 675
+    }
+  });
+}
+
+export function buildAgmSeparatorTestingMetadata(lang: Lang): Metadata {
+  const current = agmSeparatorTestingSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/quality-control/agm-separator-testing/",
+    zhPath: "/zh/quality-control/agm-separator-testing/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: QUALITY_PREVIEW_IMAGE,
+      width: 1200,
+      height: 900
+    }
+  });
+}
+
+export function buildAgmSeparatorVrlaApplicationMetadata(
+  lang: Lang
+): Metadata {
+  const current = agmSeparatorVrlaApplicationSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/applications/agm-separator-for-vrla-battery/",
+    zhPath: "/zh/applications/agm-separator-for-vrla-battery/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: PREVIEW_IMAGE,
+      width: 900,
+      height: 675
+    }
+  });
+}
+
+export function buildWhatIsAgmSeparatorMetadata(lang: Lang): Metadata {
+  const current = whatIsAgmSeparatorSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/what-is-agm-separator/",
+    zhPath: "/zh/blog/what-is-agm-separator/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: PREVIEW_IMAGE,
+      width: 900,
+      height: 675
+    }
+  });
+}
+
+function buildMetadata({
+  title,
+  description,
+  keywords,
+  path,
+  enPath,
+  zhPath,
+  locale,
+  siteName,
+  imageAlt,
+  image = {
+    url: PREVIEW_IMAGE,
+    width: 900,
+    height: 675
+  }
+}: {
+  title: string;
+  description: string;
+  keywords: string[];
+  path: string;
+  enPath: string;
+  zhPath: string;
+  locale: string;
+  siteName: string;
+  imageAlt: string;
+  image?: {
+    url: string;
+    width: number;
+    height: number;
+  };
+}): Metadata {
+  return {
+    title,
+    description,
+    keywords,
     alternates: {
-      canonical: current.path,
+      canonical: path,
       languages: {
-        en: "/",
-        "zh-CN": "/zh/",
-        "x-default": "/"
+        en: enPath,
+        "zh-CN": zhPath,
+        "x-default": enPath
       }
     },
     openGraph: {
       type: "website",
-      url: `${SITE_URL}${current.path}`,
-      title: current.title,
-      description: current.description,
-      siteName: "Hubei Viking Technology",
-      locale: current.locale,
+      url: `${SITE_URL}${path}`,
+      title,
+      description,
+      siteName,
+      locale,
       images: [
         {
-          url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
-          width: 1600,
-          height: 900,
-          alt: current.serviceName
+          url: image.url,
+          width: image.width,
+          height: image.height,
+          alt: imageAlt
         }
       ]
     },
     twitter: {
       card: "summary_large_image",
-      title: current.title,
-      description: current.description,
-      images: [`${SITE_URL}/images/agm-hero-production-1600.webp`]
+      title,
+      description,
+      images: [image.url]
     }
   };
 }
 
 export function StructuredData({ lang }: { lang: Lang }) {
-  const current = seo[lang];
+  const current = homeSeo[lang];
   const url = `${SITE_URL}${current.path}`;
   const data = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${SITE_URL}/#organization`,
-        name: "Hubei Viking Technology Co., Ltd.",
-        alternateName: "湖北维京科技有限公司",
-        url: SITE_URL,
-        logo: `${SITE_URL}/images/banner-logo-header.webp`,
-        email: "vikingsales@vikingagm.com",
-        telephone: "+86-18907186665",
-        foundingDate: "2015-12",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Ezhou",
-          addressRegion: "Hubei",
-          addressCountry: "CN"
-        },
-        description: current.description
-      },
+      organizationData(lang, current.description),
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
-        name: "Hubei Viking Technology",
+        name: current.siteName,
+        alternateName: current.alternateSiteName,
         url: SITE_URL,
         inLanguage: current.language,
         publisher: {
@@ -125,16 +547,501 @@ export function StructuredData({ lang }: { lang: Lang }) {
         name: current.serviceName,
         description: current.serviceDescription,
         serviceType: "AGM glass fiber separator manufacturing",
+        image: PREVIEW_IMAGE,
         provider: {
           "@id": `${SITE_URL}/#organization`
         },
         areaServed: "Worldwide",
         url,
         inLanguage: current.language
+      },
+      {
+        "@type": "Product",
+        "@id": `${SITE_URL}/#agm-separator-product`,
+        name: "AGM glass fiber separator",
+        alternateName: "AGM separator roll",
+        image: PREVIEW_IMAGE,
+        description: current.serviceDescription,
+        brand: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        manufacturer: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        category: "Battery separator"
       }
     ]
   };
 
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorStructuredData({ lang }: { lang: Lang }) {
+  const current = agmSeparatorSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: PREVIEW_IMAGE,
+          width: 900,
+          height: 675
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": `${url}#product`,
+        name: current.productName,
+        alternateName:
+          lang === "zh"
+            ? ["AGM 电池隔板", "AGM 玻璃纤维隔板", "VRLA 电池隔板"]
+            : [
+                "AGM battery separator",
+                "AGM glass fiber separator",
+                "VRLA battery separator"
+              ],
+        image: PREVIEW_IMAGE,
+        description: current.serviceDescription,
+        brand: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        manufacturer: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        category: "Battery separator"
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: current.productName,
+        description: current.serviceDescription,
+        serviceType: "AGM separator manufacturing",
+        image: PREVIEW_IMAGE,
+        provider: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        areaServed: "Worldwide",
+        url,
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}#products`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorRollsStructuredData({ lang }: { lang: Lang }) {
+  const current = agmSeparatorRollsSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: PREVIEW_IMAGE,
+          width: 900,
+          height: 675
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": `${url}#product`,
+        name: current.productName,
+        alternateName:
+          lang === "zh"
+            ? ["AGM 电池隔板卷材", "AGM 玻璃纤维隔板卷材", "VRLA 电池隔板卷材"]
+            : [
+                "AGM separator rolls",
+                "AGM battery separator rolls",
+                "VRLA battery separator rolls"
+              ],
+        image: PREVIEW_IMAGE,
+        description: current.serviceDescription,
+        brand: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        manufacturer: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        category: "Battery separator"
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: current.productName,
+        description: current.serviceDescription,
+        serviceType: "AGM separator roll supply",
+        image: PREVIEW_IMAGE,
+        provider: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        areaServed: "Worldwide",
+        url,
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}#products`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorSheetsStructuredData({ lang }: { lang: Lang }) {
+  const current = agmSeparatorSheetsSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: SHEETS_PREVIEW_IMAGE,
+          width: 900,
+          height: 675
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": `${url}#product`,
+        name: current.productName,
+        alternateName:
+          lang === "zh"
+            ? ["AGM 电池隔板片材", "预裁切 AGM 隔板", "VRLA 电池隔板片材"]
+            : [
+                "AGM separator sheets",
+                "AGM battery separator sheets",
+                "Pre-cut AGM separator"
+              ],
+        image: SHEETS_PREVIEW_IMAGE,
+        description: current.serviceDescription,
+        brand: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        manufacturer: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        category: "Battery separator"
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: current.productName,
+        description: current.serviceDescription,
+        serviceType: "AGM separator sheet supply",
+        image: SHEETS_PREVIEW_IMAGE,
+        provider: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        areaServed: "Worldwide",
+        url,
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}#products`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorTestingStructuredData({ lang }: { lang: Lang }) {
+  const current = agmSeparatorTestingSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: QUALITY_PREVIEW_IMAGE,
+          width: 1200,
+          height: 900
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: current.pageName,
+        description: current.serviceDescription,
+        serviceType: "AGM separator testing and quality control",
+        image: QUALITY_PREVIEW_IMAGE,
+        provider: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        areaServed: "Worldwide",
+        url,
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}#quality`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorVrlaApplicationStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = agmSeparatorVrlaApplicationSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: PREVIEW_IMAGE,
+          width: 900,
+          height: 675
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: current.pageName,
+        description: current.serviceDescription,
+        serviceType: "AGM separator for VRLA lead-acid battery applications",
+        image: PREVIEW_IMAGE,
+        provider: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        areaServed: "Worldwide",
+        url,
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}#applications`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function WhatIsAgmSeparatorStructuredData({ lang }: { lang: Lang }) {
+  const current = whatIsAgmSeparatorSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: PREVIEW_IMAGE,
+          width: 900,
+          height: 675
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: PREVIEW_IMAGE,
+        url,
+        mainEntityOfPage: {
+          "@id": `${url}#webpage`
+        },
+        author: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        publisher: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        about: [
+          "AGM separator",
+          "AGM battery separator",
+          "VRLA lead-acid battery"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+function organizationData(lang: Lang, description: string) {
+  return {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: lang === "zh" ? "湖北维京AGM" : "Viking AGM",
+    legalName: "Hubei Viking Technology Co., Ltd.",
+    alternateName:
+      lang === "zh"
+        ? ["湖北维京科技有限公司", "维京AGM", "Viking AGM"]
+        : ["Hubei Viking Technology Co., Ltd.", "Hubei Viking AGM", "湖北维京AGM"],
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/banner-logo-header.webp`,
+    email: "vikingsales@vikingagm.com",
+    telephone: "+86-18907186665",
+    foundingDate: "2015-12",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Ezhou",
+      addressRegion: "Hubei",
+      addressCountry: "CN"
+    },
+    description
+  };
+}
+
+function JsonLd({ data }: { data: unknown }) {
   return (
     <script
       type="application/ld+json"

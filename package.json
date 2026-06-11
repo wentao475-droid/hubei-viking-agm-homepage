@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:volcengine": "npm run build && npm run verify:static",
+    "verify:static": "node scripts/verify-static-export.mjs",
+    "verify:prod": "node scripts/verify-production.mjs",
     "start": "next start",
     "lint": "next lint"
   },

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useState } from "react";
+import { SiteHeader } from "./SiteHeader";
 
 export type Lang = "en" | "zh";
 type IconProps = { size?: number; className?: string };
@@ -191,6 +192,8 @@ const copy = {
       success:
         "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
       required: "Please complete all required fields before submitting.",
+      emailFallback:
+        "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry.",
       failure:
         "Sorry, the inquiry could not be sent right now. Please try again later."
     },
@@ -349,6 +352,8 @@ const copy = {
       submitting: "发送中...",
       success: "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
       required: "请先填写所有必填字段。",
+      emailFallback:
+        "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。",
       failure: "抱歉，询盘暂时未能发送，请稍后再试。"
     },
     footer: {
@@ -375,14 +380,12 @@ const FlaskConical = makeIcon("flask");
 const Globe2 = makeIcon("globe");
 const Layers3 = makeIcon("layers");
 const Mail = makeIcon("mail");
-const Menu = makeIcon("menu");
 const PackageCheck = makeIcon("package");
 const Phone = makeIcon("phone");
 const Send = makeIcon("send");
 const ShieldCheck = makeIcon("shield");
 const ArrowUp = makeIcon("top");
 const Truck = makeIcon("truck");
-const X = makeIcon("x");
 
 const icons = [Layers3, ShieldCheck, BadgeCheck, Factory, PackageCheck];
 const applicationIcons = [ShieldCheck, Globe2, Layers3, Truck, Factory];
@@ -393,6 +396,12 @@ const contactInfo = {
   phone: "18907186665",
   email: "vikingsales@vikingagm.com"
 };
+const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/";
+const staticFormFallback =
+  process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
+const inquiryEmail =
+  process.env.NEXT_PUBLIC_INQUIRY_EMAIL || contactInfo.email;
+const icpLicense = process.env.NEXT_PUBLIC_ICP_LICENSE || "";
 const certificationImages = [
   "/images/certification-1-900.webp",
   "/images/certification-2-900.webp",
@@ -408,9 +417,8 @@ function asset(path: string) {
 
 export function VikingHome({ initialLang }: { initialLang: Lang }) {
   const lang = initialLang;
-  const [menuOpen, setMenuOpen] = useState(false);
   const [formState, setFormState] = useState<
-    "idle" | "error" | "success" | "failure"
+    "idle" | "error" | "success" | "failure" | "emailFallback"
   >("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const t = copy[lang];
@@ -439,6 +447,13 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
     formData.set("form-name", "inquiry");
     formData.set("language", lang);
 
+    if (staticFormFallback) {
+      setFormState("idle");
+      window.location.href = buildInquiryMailto(formData, lang);
+      setFormState("emailFallback");
+      return;
+    }
+
     const body = new URLSearchParams();
     formData.forEach((value, key) => {
       if (typeof value === "string") {
@@ -450,7 +465,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
     setFormState("idle");
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch(formEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: body.toString()
@@ -469,111 +484,14 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
     }
   }
 
-  const navItems = [
-    [t.nav.company, "#company"],
-    [t.nav.products, "#products"],
-    [t.nav.applications, "#applications"],
-    [t.nav.quality, "#quality"],
-    [t.nav.contact, "#contact"]
-  ];
-  const languageHref = asset(lang === "en" ? "/zh/" : "/");
-
   return (
     <main className="min-h-screen overflow-hidden bg-frost text-ink">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/25 bg-white/90 shadow-sm backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          <a href="#" className="flex min-w-0 items-center gap-3">
-            <span className="flex h-9 w-36 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white sm:h-10 sm:w-44">
-              <Image
-                src={asset("/images/banner-logo-header.webp")}
-                alt="Viking Technology logo"
-                width={520}
-                height={150}
-                priority
-                className="h-full w-full object-contain"
-              />
-            </span>
-            <span className="min-w-0">
-              <span className="block truncate text-sm font-semibold text-ink sm:text-base">
-                {lang === "zh"
-                  ? "湖北维京科技有限公司"
-                  : "Hubei Viking Technology Co., Ltd."}
-              </span>
-              <span className="block text-xs font-medium uppercase tracking-[0.18em] text-steel">
-                AGM Separator
-              </span>
-            </span>
-          </a>
-
-          <nav className="hidden items-center gap-7 lg:flex">
-            {navItems.map(([label, href]) => (
-              <a
-                key={href}
-                href={href}
-                className="text-sm font-medium text-graphite transition hover:text-signal"
-              >
-                {label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="hidden items-center gap-3 lg:flex">
-            <a
-              href={languageHref}
-              className="rounded-md border border-line bg-white px-3 py-2 text-sm font-semibold text-graphite transition hover:border-signal hover:text-signal"
-            >
-              {t.language}
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-md bg-signal px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-ink"
-            >
-              {t.hero.quote}
-              <ArrowRight size={16} />
-            </a>
-          </div>
-
-          <button
-            aria-label="Toggle menu"
-            onClick={() => setMenuOpen((open) => !open)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-line bg-white text-ink lg:hidden"
-          >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-
-        {menuOpen && (
-          <div className="border-t border-line bg-white px-4 py-4 lg:hidden">
-            <div className="mx-auto grid max-w-7xl gap-2">
-              {navItems.map(([label, href]) => (
-                <a
-                  key={href}
-                  href={href}
-                  onClick={() => setMenuOpen(false)}
-                  className="rounded-md px-3 py-2 text-sm font-semibold text-graphite hover:bg-frost"
-                >
-                  {label}
-                </a>
-              ))}
-              <div className="mt-2 flex gap-2">
-                <a
-                  href={languageHref}
-                  className="flex-1 rounded-md border border-line px-3 py-2 text-sm font-semibold"
-                >
-                  {t.language}
-                </a>
-                <a
-                  href="#contact"
-                  onClick={() => setMenuOpen(false)}
-                  className="flex-1 rounded-md bg-signal px-3 py-2 text-center text-sm font-semibold text-white"
-                >
-                  {t.hero.quote}
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
-      </header>
+      <SiteHeader
+        lang={lang}
+        homePath={lang === "zh" ? "/zh/" : "/"}
+        languagePath={lang === "en" ? "/zh/" : "/"}
+        quoteLabel={t.hero.quote}
+      />
 
       <section className="relative min-h-[720px] pt-20">
         <Image
@@ -763,6 +681,19 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mx-auto mt-8 flex max-w-7xl justify-center">
+          <a
+            href={asset(
+              lang === "zh"
+                ? "/zh/products/agm-separator/"
+                : "/products/agm-separator/"
+            )}
+            className="inline-flex items-center justify-center gap-2 rounded-md border border-signal bg-white px-5 py-3 text-sm font-bold text-signal transition hover:bg-signal hover:text-white"
+          >
+            {lang === "zh" ? "了解 AGM 隔板产品" : "Learn more about AGM separator"}
+            <ArrowRight size={16} />
+          </a>
         </div>
       </section>
 
@@ -1087,6 +1018,8 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
                   ? t.form.success
                   : formState === "failure"
                     ? t.form.failure
+                    : formState === "emailFallback"
+                      ? t.form.emailFallback
                     : t.form.required}
               </div>
             )}
@@ -1125,6 +1058,16 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             <p className="mt-5 max-w-md text-sm leading-7 text-steel">
               {t.footer.description}
             </p>
+            {icpLicense && (
+              <a
+                href="https://beian.miit.gov.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex text-sm font-semibold text-steel transition hover:text-signal"
+              >
+                {icpLicense}
+              </a>
+            )}
             <div className="mt-6 grid max-w-md gap-4 sm:grid-cols-2">
               {[
                 [t.footer.wechat, "/images/qrcode_for_logo.jpg"],
@@ -1392,6 +1335,46 @@ async function copyToClipboard(value: string) {
   } catch {
     return false;
   }
+}
+
+function buildInquiryMailto(formData: FormData, lang: Lang) {
+  const labels =
+    lang === "zh"
+      ? {
+          subject: "网站询盘 - 湖北维京科技",
+          name: "姓名",
+          company: "公司",
+          email: "邮箱",
+          country: "国家/地区",
+          application: "电池应用",
+          message: "留言"
+        }
+      : {
+          subject: "Website inquiry - Viking AGM",
+          name: "Name",
+          company: "Company",
+          email: "Email",
+          country: "Country / region",
+          application: "Battery application",
+          message: "Message"
+        };
+
+  const fields = [
+    ["name", labels.name],
+    ["company", labels.company],
+    ["email", labels.email],
+    ["country", labels.country],
+    ["application", labels.application],
+    ["message", labels.message]
+  ] as const;
+
+  const body = fields
+    .map(([key, label]) => `${label}: ${String(formData.get(key) || "").trim()}`)
+    .join("\n");
+
+  return `mailto:${inquiryEmail}?subject=${encodeURIComponent(
+    labels.subject
+  )}&body=${encodeURIComponent(body)}`;
 }
 
 function makeIcon(name: IconName) {
