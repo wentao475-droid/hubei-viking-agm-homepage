@@ -321,6 +321,96 @@ const whatIsAgmSeparatorSeo = {
   }
 } as const;
 
+const keyTechnicalParametersSeo = {
+  en: {
+    path: "/blog/key-technical-parameters-of-agm-separator/",
+    alternatePath: "/zh/blog/key-technical-parameters-of-agm-separator/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "Key Technical Parameters of AGM Separator",
+    description:
+      "Understand AGM separator thickness, basis weight, acid absorption, electrical resistance, porosity and strength in buyer-friendly language.",
+    keywords: [
+      "AGM separator thickness",
+      "AGM separator basis weight",
+      "AGM separator acid absorption",
+      "AGM separator electrical resistance",
+      "AGM separator technical parameters"
+    ],
+    pageName: "Key Technical Parameters of AGM Separator",
+    articleDescription:
+      "A buyer-friendly technical guide explaining AGM separator thickness, basis weight, acid absorption, electrical resistance, porosity and mechanical strength for VRLA lead-acid battery sourcing.",
+    breadcrumbs: ["Home", "Resources", "Key Technical Parameters"]
+  },
+  zh: {
+    path: "/zh/blog/key-technical-parameters-of-agm-separator/",
+    alternatePath: "/blog/key-technical-parameters-of-agm-separator/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板关键技术参数 | 湖北维京AGM",
+    description:
+      "了解AGM隔板厚度、克重、吸酸性能、电阻、孔隙率和强度等关键参数，便于采购和技术沟通。",
+    keywords: [
+      "AGM 隔板厚度",
+      "AGM 隔板克重",
+      "AGM 隔板吸酸性能",
+      "AGM 隔板电阻",
+      "AGM 隔板技术参数"
+    ],
+    pageName: "AGM 隔板关键技术参数",
+    articleDescription:
+      "面向采购和工程人员的 AGM 隔板技术参数说明，解释厚度、克重、吸酸性能、电阻、孔隙率和机械强度等关键沟通点。",
+    breadcrumbs: ["首页", "资料", "AGM 隔板技术参数"]
+  }
+} as const;
+
+const howToChooseAgmSeparatorSeo = {
+  en: {
+    path: "/blog/how-to-choose-agm-separator/",
+    alternatePath: "/zh/blog/how-to-choose-agm-separator/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "How to Choose AGM Separator for VRLA Batteries",
+    description:
+      "A practical buyer checklist for choosing AGM separators: thickness, width, roll or sheet type, battery application and quality requirements.",
+    keywords: [
+      "how to choose AGM separator",
+      "custom AGM separator",
+      "AGM separator supplier",
+      "AGM separator checklist",
+      "VRLA battery separator supplier"
+    ],
+    pageName: "How to Choose AGM Separator",
+    articleDescription:
+      "A practical buyer checklist for selecting AGM separators by battery application, roll or sheet type, dimensions, technical parameters, samples and quality requirements.",
+    breadcrumbs: ["Home", "Resources", "How to Choose AGM Separator"]
+  },
+  zh: {
+    path: "/zh/blog/how-to-choose-agm-separator/",
+    alternatePath: "/blog/how-to-choose-agm-separator/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "如何选择 AGM 隔板 | 湖北维京AGM",
+    description:
+      "AGM隔板买家实用清单：从电池应用、厚度、宽度、卷材或片材形式、技术参数和质量要求出发进行选择。",
+    keywords: [
+      "如何选择 AGM 隔板",
+      "定制 AGM 隔板",
+      "AGM 隔板供应商",
+      "AGM 隔板询盘清单",
+      "VRLA 电池隔板供应商"
+    ],
+    pageName: "如何选择 AGM 隔板",
+    articleDescription:
+      "面向买家的 AGM 隔板选择清单，说明如何根据电池应用、卷材或片材形式、尺寸、技术参数、样品和质量要求沟通需求。",
+    breadcrumbs: ["首页", "资料", "如何选择 AGM 隔板"]
+  }
+} as const;
+
 export function buildHomeMetadata(lang: Lang): Metadata {
   const current = homeSeo[lang];
 
@@ -444,6 +534,48 @@ export function buildWhatIsAgmSeparatorMetadata(lang: Lang): Metadata {
     path: current.path,
     enPath: "/blog/what-is-agm-separator/",
     zhPath: "/zh/blog/what-is-agm-separator/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: PREVIEW_IMAGE,
+      width: 900,
+      height: 675
+    }
+  });
+}
+
+export function buildKeyTechnicalParametersMetadata(lang: Lang): Metadata {
+  const current = keyTechnicalParametersSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/key-technical-parameters-of-agm-separator/",
+    zhPath: "/zh/blog/key-technical-parameters-of-agm-separator/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: QUALITY_PREVIEW_IMAGE,
+      width: 1200,
+      height: 900
+    }
+  });
+}
+
+export function buildHowToChooseAgmSeparatorMetadata(lang: Lang): Metadata {
+  const current = howToChooseAgmSeparatorSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/how-to-choose-agm-separator/",
+    zhPath: "/zh/blog/how-to-choose-agm-separator/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -991,6 +1123,156 @@ export function WhatIsAgmSeparatorStructuredData({ lang }: { lang: Lang }) {
         about: [
           "AGM separator",
           "AGM battery separator",
+          "VRLA lead-acid battery"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function KeyTechnicalParametersStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = keyTechnicalParametersSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: QUALITY_PREVIEW_IMAGE,
+          width: 1200,
+          height: 900
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: QUALITY_PREVIEW_IMAGE,
+        url,
+        mainEntityOfPage: {
+          "@id": `${url}#webpage`
+        },
+        author: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        publisher: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        about: [
+          "AGM separator technical parameters",
+          "AGM separator thickness",
+          "AGM separator electrical resistance",
+          "VRLA lead-acid battery"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function HowToChooseAgmSeparatorStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = howToChooseAgmSeparatorSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: PREVIEW_IMAGE,
+          width: 900,
+          height: 675
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: PREVIEW_IMAGE,
+        url,
+        mainEntityOfPage: {
+          "@id": `${url}#webpage`
+        },
+        author: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        publisher: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        about: [
+          "AGM separator sourcing",
+          "custom AGM separator",
+          "AGM separator supplier",
           "VRLA lead-acid battery"
         ],
         inLanguage: current.language

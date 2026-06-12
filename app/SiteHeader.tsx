@@ -194,18 +194,26 @@ export function SiteHeader({
           </a>
         </div>
 
-        <button
-          aria-label={menuOpen ? t.menuClose : t.menuOpen}
-          onClick={() => setMenuOpen((open) => !open)}
-          className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-line bg-white text-ink lg:hidden"
-          type="button"
-        >
-          {menuOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
-        </button>
+        <div className="flex shrink-0 items-center gap-2 lg:hidden">
+          <a
+            href={languageHref}
+            className="inline-flex h-10 min-w-12 items-center justify-center rounded-md border border-line bg-white px-3 text-sm font-semibold text-graphite transition hover:border-signal hover:text-signal"
+          >
+            {t.language}
+          </a>
+          <button
+            aria-label={menuOpen ? t.menuClose : t.menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-line bg-white text-ink"
+            type="button"
+          >
+            {menuOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
+          </button>
+        </div>
       </div>
 
       {menuOpen && (
-        <div className="border-t border-line bg-white px-4 py-4 lg:hidden">
+        <div className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto overscroll-contain border-t border-line bg-white px-4 py-4 lg:hidden">
           <div className="mx-auto grid max-w-7xl gap-2">
             {navItemsBeforeProducts.map(([label, href]) => (
               <a
@@ -248,12 +256,6 @@ export function SiteHeader({
               </a>
             ))}
             <div className="mt-2 flex gap-2">
-              <a
-                href={languageHref}
-                className="flex-1 rounded-md border border-line px-3 py-2 text-sm font-semibold"
-              >
-                {t.language}
-              </a>
               <a
                 href="#contact"
                 onClick={() => setMenuOpen(false)}

@@ -12,6 +12,18 @@ const resourcesNavItems = {
       description:
         "A practical buyer guide for VRLA lead-acid battery applications.",
       href: "/blog/what-is-agm-separator/"
+    },
+    {
+      title: "Key Technical Parameters",
+      description:
+        "Thickness, basis weight, acid absorption, resistance, porosity and strength.",
+      href: "/blog/key-technical-parameters-of-agm-separator/"
+    },
+    {
+      title: "How to Choose AGM Separator",
+      description:
+        "A practical buyer checklist for comparing separator requirements.",
+      href: "/blog/how-to-choose-agm-separator/"
     }
   ],
   zh: [
@@ -19,6 +31,16 @@ const resourcesNavItems = {
       title: "什么是 AGM 隔板？",
       description: "面向 VRLA 铅酸电池买家的实用入门说明。",
       href: "/zh/blog/what-is-agm-separator/"
+    },
+    {
+      title: "AGM 隔板技术参数",
+      description: "厚度、克重、吸酸性能、电阻、孔隙率和强度说明。",
+      href: "/zh/blog/key-technical-parameters-of-agm-separator/"
+    },
+    {
+      title: "如何选择 AGM 隔板",
+      description: "面向买家的隔板需求沟通和供应商比较清单。",
+      href: "/zh/blog/how-to-choose-agm-separator/"
     }
   ]
 } as const;

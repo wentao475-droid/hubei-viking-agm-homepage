@@ -6,6 +6,10 @@ import { SiteHeader } from "./SiteHeader";
 import type { Lang } from "./VikingHome";
 
 type IconProps = { size?: number; className?: string };
+type BlogArticleKind =
+  | "whatIsAgmSeparator"
+  | "keyTechnicalParameters"
+  | "howToChooseAgmSeparator";
 type IconName =
   | "arrow"
   | "check"
@@ -63,7 +67,13 @@ const articleCopy = {
       subtitle:
         "A practical guide for new buyers, traders and engineers sourcing AGM glass fiber separators for VRLA lead-acid batteries.",
       primary: "Ask for AGM Separator Guide",
-      secondary: "Send Your Battery Application"
+      secondary: "Send Your Battery Application",
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "Finished AGM separator roll",
+        width: 900,
+        height: 675
+      }
     },
     intro: [
       "AGM stands for Absorbent Glass Mat. In the battery separator industry, AGM separator usually refers to a glass fiber separator used in VRLA lead-acid batteries.",
@@ -324,16 +334,577 @@ const articleCopy = {
   }
 } as const;
 
+const keyTechnicalCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/key-technical-parameters-of-agm-separator/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request a Quote",
+    hero: {
+      eyebrow: "Technical Parameters",
+      title: "Key Technical Parameters of AGM Separator",
+      subtitle:
+        "A buyer-friendly guide to AGM separator thickness, basis weight, acid absorption, electrical resistance, porosity and mechanical strength.",
+      primary: "Send Technical Parameters",
+      secondary: "Request Specification Review",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM separator quality control and technical parameter review",
+        width: 1200,
+        height: 900
+      }
+    },
+    intro: [
+      "When evaluating AGM separators, buyers should look at a group of parameters rather than one single number. Thickness, basis weight, acid absorption behavior, electrical resistance, porosity and mechanical strength all affect how the separator works in a VRLA lead-acid battery.",
+      "The best specification depends on the customer’s battery design, plate spacing, assembly process and application requirements. Technical values should be reviewed together before sample or order confirmation."
+    ],
+    sections: [
+      {
+        eyebrow: "Thickness and Dimensions",
+        title: "Thickness and size should match battery design",
+        text:
+          "Thickness and dimensions are connected with plate spacing, compression, roll feeding, cutting and direct assembly. Buyers should confirm thickness, width or sheet size according to the battery structure and production process."
+      },
+      {
+        eyebrow: "Basis Weight",
+        title: "Basis weight helps describe material mass and consistency",
+        text:
+          "Basis weight is one way to discuss separator material mass and batch consistency. It should be reviewed together with thickness, separator structure and electrolyte-retention expectations."
+      },
+      {
+        eyebrow: "Acid Absorption / Wetting",
+        title: "Acid-related behavior is tied to electrolyte retention",
+        text:
+          "Acid absorption and wetting behavior are related to electrolyte retention and distribution inside the VRLA battery. The exact requirement should follow the customer’s battery design and test method."
+      },
+      {
+        eyebrow: "Electrical Resistance",
+        title: "Electrical resistance affects ion movement in electrolyte",
+        text:
+          "Electrical resistance reflects how the separator affects ion movement through the electrolyte. It should be reviewed with battery performance targets and agreed test conditions."
+      },
+      {
+        eyebrow: "Porosity and Pore Structure",
+        title: "Porosity influences electrolyte movement",
+        text:
+          "Porosity and pore structure influence electrolyte movement and separator function. Buyers should discuss these values together with acid-related behavior and battery application."
+      },
+      {
+        eyebrow: "Mechanical Strength",
+        title: "Strength matters during handling, slitting and assembly",
+        text:
+          "Mechanical strength is important during roll handling, slitting, cutting and battery assembly. The requirement should match the customer’s production workflow and separator format."
+      }
+    ],
+    parameters: [
+      ["Thickness", "Connected with plate spacing, compression and assembly requirements."],
+      ["Basis weight", "Used to discuss material mass and consistency."],
+      ["Acid absorption / wetting", "Related to electrolyte retention and distribution."],
+      ["Electrical resistance", "Reviewed with battery performance targets and test conditions."],
+      ["Porosity", "Influences electrolyte movement and separator function."],
+      ["Mechanical strength", "Important for handling, slitting, cutting and assembly."]
+    ],
+    formats: {
+      eyebrow: "Specification Review",
+      title: "Technical parameters should be reviewed together",
+      items: [
+        [
+          "Roll material discussion",
+          "Roll format requirements should include width, thickness, production workflow and any target technical parameters.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM separator roll for technical parameter discussion"
+        ],
+        [
+          "Sheet material discussion",
+          "Sheet format requirements should include sheet size, thickness, battery model and sample or drawing reference when available.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets for technical parameter discussion"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "Quotation Information",
+      title: "What to send for specification review",
+      text:
+        "Please send your target separator information so the technical discussion can match the battery design and production process.",
+      items: [
+        "Required thickness",
+        "Width or sheet size",
+        "Roll or sheet type",
+        "Battery application",
+        "Target technical parameters",
+        "Sample or drawing reference"
+      ]
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with product and quality details",
+      items: [
+        ["What Is AGM Separator?", "/blog/what-is-agm-separator/"],
+        ["AGM Separator Product", "/products/agm-separator/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["VRLA Battery Applications", "/applications/agm-separator-for-vrla-battery/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Send your AGM separator technical parameters",
+      text:
+        "Share your target thickness, width, roll or sheet type, battery application and technical parameter requirements for review.",
+      checklist: [
+        "Required thickness and width",
+        "Roll or sheet type",
+        "Battery application",
+        "Target technical parameters"
+      ],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        message:
+          "Required thickness, width, roll or sheet type, battery application and target technical parameters"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/key-technical-parameters-of-agm-separator/",
+    brandName: articleCopy.zh.brandName,
+    quote: "获取报价",
+    hero: {
+      eyebrow: "技术参数",
+      title: "AGM 隔板关键技术参数",
+      subtitle:
+        "用便于采购和技术沟通的语言，说明 AGM 隔板厚度、克重、吸酸/润湿、电阻、孔隙率和机械强度等关键参数。",
+      primary: "发送技术参数",
+      secondary: "申请规格评审",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM 隔板质量控制与技术参数评审",
+        width: 1200,
+        height: 900
+      }
+    },
+    intro: [
+      "评估 AGM 隔板时，买家不应只看单一数值。厚度、克重、吸酸行为、电阻、孔隙率和机械强度都会影响隔板在 VRLA 铅酸电池中的表现。",
+      "合适的规格取决于客户电池设计、极板间距、装配工艺和应用要求。技术参数应在样品或订单确认前共同评审。"
+    ],
+    sections: [
+      {
+        eyebrow: "厚度与尺寸",
+        title: "厚度和尺寸应匹配电池设计",
+        text:
+          "厚度和尺寸与极板间距、压缩状态、卷材上料、裁切和直接装配有关。买家应根据电池结构和生产工艺确认厚度、宽度或片材尺寸。"
+      },
+      {
+        eyebrow: "克重",
+        title: "克重有助于描述材料质量和一致性",
+        text:
+          "克重是沟通隔板材料质量和批次一致性的方式之一，应结合厚度、隔板结构和电解液保持需求共同评审。"
+      },
+      {
+        eyebrow: "吸酸 / 润湿",
+        title: "吸酸相关表现与电解液保持有关",
+        text:
+          "吸酸和润湿行为与 VRLA 电池内部电解液保持和分布有关。具体要求应结合客户电池设计和测试方法确认。"
+      },
+      {
+        eyebrow: "电阻",
+        title: "电阻影响电解液中的离子移动",
+        text:
+          "电阻反映隔板对电解液中离子移动的影响，应结合电池性能目标和约定测试条件进行评审。"
+      },
+      {
+        eyebrow: "孔隙率与孔结构",
+        title: "孔隙结构影响电解液移动",
+        text:
+          "孔隙率和孔结构会影响电解液移动和隔板功能，买家应结合吸酸相关表现和电池应用共同沟通。"
+      },
+      {
+        eyebrow: "机械强度",
+        title: "强度影响搬运、分切和装配过程",
+        text:
+          "机械强度对卷材搬运、分切、裁切和电池装配过程很重要，具体要求应匹配客户生产流程和隔板形式。"
+      }
+    ],
+    parameters: [
+      ["厚度", "与极板间距、压缩状态和装配要求有关。"],
+      ["克重", "用于沟通材料质量和一致性。"],
+      ["吸酸 / 润湿", "与电解液保持和分布有关。"],
+      ["电阻", "结合电池性能目标和测试条件评审。"],
+      ["孔隙率", "影响电解液移动和隔板功能。"],
+      ["机械强度", "对搬运、分切、裁切和装配过程很重要。"]
+    ],
+    formats: {
+      eyebrow: "规格评审",
+      title: "技术参数应结合整体规格共同评审",
+      items: [
+        [
+          "卷材规格沟通",
+          "卷材需求应包含宽度、厚度、生产流程和目标技术参数。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板卷材技术参数沟通"
+        ],
+        [
+          "片材规格沟通",
+          "片材需求应包含片材尺寸、厚度、电池型号，以及可提供的样品或图纸参考。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材技术参数沟通"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "报价信息",
+      title: "规格评审前建议提供的信息",
+      text:
+        "请提供目标隔板信息，便于技术沟通与电池设计和生产工艺匹配。",
+      items: [
+        "所需厚度",
+        "宽度或片材尺寸",
+        "卷材或片材形式",
+        "电池应用",
+        "目标技术参数",
+        "样品或图纸参考"
+      ]
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续查看产品和质量信息",
+      items: [
+        ["什么是 AGM 隔板？", "/zh/blog/what-is-agm-separator/"],
+        ["AGM 隔板产品", "/zh/products/agm-separator/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["VRLA 电池应用", "/zh/applications/agm-separator-for-vrla-battery/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "发送 AGM 隔板技术参数需求",
+      text:
+        "请提供目标厚度、宽度、卷材或片材形式、电池应用和技术参数要求，便于我们进行规格评审。",
+      checklist: [
+        "所需厚度和宽度",
+        "卷材或片材形式",
+        "电池应用",
+        "目标技术参数"
+      ],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        message:
+          "所需厚度、宽度、卷材或片材形式、电池应用和目标技术参数"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
+const howToChooseCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/how-to-choose-agm-separator/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request a Quote",
+    hero: {
+      eyebrow: "Buyer Checklist",
+      title: "How to Choose AGM Separator",
+      subtitle:
+        "A practical checklist for choosing AGM separators by battery application, roll or sheet type, dimensions, technical parameters and quality requirements.",
+      primary: "Send Inquiry Checklist",
+      secondary: "Request Sample Support",
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "AGM separator roll for supplier selection",
+        width: 900,
+        height: 675
+      }
+    },
+    intro: [
+      "Choosing an AGM separator starts with the battery, not with the separator alone. A UPS battery, telecom battery, motorcycle battery or energy storage battery may require different separator specifications.",
+      "A practical sourcing discussion should confirm the product form, dimensions, technical parameters, sample information and quality requirements before quotation or sample arrangement."
+    ],
+    sections: [
+      {
+        eyebrow: "Battery Application",
+        title: "Start from the battery application",
+        text:
+          "Different VRLA battery applications can have different plate design, assembly process and performance priorities. Start by telling the supplier whether the separator will be used for UPS, telecom, motorcycle, e-bike, energy storage or another lead-acid battery application."
+      },
+      {
+        eyebrow: "Roll or Sheet Type",
+        title: "Confirm whether you need rolls or sheets",
+        text:
+          "Rolls are usually discussed for continuous production, slitting or in-house cutting. Sheets are convenient for direct assembly, sample review, small batches or customized battery models."
+      },
+      {
+        eyebrow: "Dimensions",
+        title: "Confirm thickness, width or sheet size",
+        text:
+          "Thickness and dimensions should match battery design, plate spacing and production workflow. If an existing separator is already in use, a sample, drawing or specification sheet can help the supplier review the requirement."
+      },
+      {
+        eyebrow: "Technical Parameters",
+        title: "Review the technical parameters together",
+        text:
+          "Basis weight, acid absorption behavior, electrical resistance, porosity and mechanical strength should be reviewed with the battery design and production process rather than as isolated numbers."
+      },
+      {
+        eyebrow: "Samples and Quality Checks",
+        title: "Confirm samples and customer-specific quality checks",
+        text:
+          "For new projects, technical parameters should be confirmed through sample testing and battery design review. Quality checks can be performed according to customer requirements after the test items are agreed."
+      }
+    ],
+    parameters: [
+      ["Battery application", "UPS, telecom, motorcycle, e-bike, energy storage or automotive starting battery."],
+      ["Product form", "Rolls, sheets or both formats according to production workflow."],
+      ["Dimensions", "Thickness, width, sheet size or other drawing-based dimensions."],
+      ["Technical parameters", "Basis weight, acid absorption, resistance, porosity and mechanical strength."],
+      ["Reference material", "Existing sample, drawing or specification sheet when available."],
+      ["Quality requirements", "Customer-required test items and review priorities."]
+    ],
+    formats: {
+      eyebrow: "Roll vs Sheet",
+      title: "Choose the supply format according to your production workflow",
+      items: [
+        [
+          "Roll format",
+          "Suitable for continuous production, further slitting and in-house cutting before battery assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM separator roll for VRLA battery production"
+        ],
+        [
+          "Sheet format",
+          "Useful for direct assembly, sample review, customized battery models and smaller batch discussion.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheet pieces for battery assembly"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "Inquiry Form Checklist",
+      title: "Prepare these details before asking for quotation",
+      text:
+        "The clearer the inquiry information, the easier it is to review separator fit and quotation direction.",
+      items: [
+        "Battery application",
+        "Roll or sheet type",
+        "Thickness",
+        "Width or sheet size",
+        "Target technical parameters",
+        "Sample or specification reference"
+      ]
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with product and technical details",
+      items: [
+        ["AGM Separator Product", "/products/agm-separator/"],
+        ["Key Technical Parameters", "/blog/key-technical-parameters-of-agm-separator/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["VRLA Battery Applications", "/applications/agm-separator-for-vrla-battery/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Send your AGM separator inquiry checklist",
+      text:
+        "Share your battery application, product form, dimensions and quality requirements so we can discuss the next specification review step.",
+      checklist: [
+        "Battery application",
+        "Roll or sheet type",
+        "Thickness and width or sheet size",
+        "Quality or sample requirements"
+      ],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        message:
+          "Battery application, roll or sheet type, thickness, width or sheet size, technical parameters and sample requirements"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/how-to-choose-agm-separator/",
+    brandName: articleCopy.zh.brandName,
+    quote: "获取报价",
+    hero: {
+      eyebrow: "买家清单",
+      title: "如何选择 AGM 隔板",
+      subtitle:
+        "从电池应用、卷材或片材形式、尺寸、技术参数和质量要求出发，帮助买家更清晰地沟通 AGM 隔板需求。",
+      primary: "发送询盘清单",
+      secondary: "申请样品支持",
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "用于供应商沟通的 AGM 隔板卷材",
+        width: 900,
+        height: 675
+      }
+    },
+    intro: [
+      "选择 AGM 隔板应从电池开始，而不是只看隔板本身。UPS 电池、通信电池、摩托车电池或储能电池可能需要不同的隔板规格。",
+      "实际采购沟通中，应在报价或样品安排前确认产品形式、尺寸、技术参数、样品信息和质量要求。"
+    ],
+    sections: [
+      {
+        eyebrow: "电池应用",
+        title: "先从电池应用开始",
+        text:
+          "不同 VRLA 电池应用在极板设计、装配工艺和性能重点上可能不同。请先说明隔板用于 UPS、通信、摩托车、电动车、储能或其他铅酸电池应用。"
+      },
+      {
+        eyebrow: "卷材或片材",
+        title: "确认需要卷材还是片材",
+        text:
+          "卷材通常用于连续生产、分切或厂内裁切。片材适合直接装配、样品评审、小批量或定制电池型号沟通。"
+      },
+      {
+        eyebrow: "尺寸",
+        title: "确认厚度、宽度或片材尺寸",
+        text:
+          "厚度和尺寸应匹配电池设计、极板间距和生产流程。如果已有隔板在使用，样品、图纸或规格书可帮助供应商评审需求。"
+      },
+      {
+        eyebrow: "技术参数",
+        title: "共同评审关键技术参数",
+        text:
+          "克重、吸酸行为、电阻、孔隙率和机械强度应结合电池设计和生产工艺共同评审，而不是孤立看单个数值。"
+      },
+      {
+        eyebrow: "样品与质量检查",
+        title: "确认样品和按客户要求的质量检查",
+        text:
+          "新项目的技术参数通常需要结合样品测试和电池设计评审确认。质量检查可在测试项目约定后按客户要求进行沟通。"
+      }
+    ],
+    parameters: [
+      ["电池应用", "UPS、通信、摩托车、电动车、储能或汽车启动电池。"],
+      ["产品形式", "按生产流程确认卷材、片材或两种形式。"],
+      ["尺寸", "厚度、宽度、片材尺寸或图纸相关尺寸。"],
+      ["技术参数", "克重、吸酸、电阻、孔隙率和机械强度。"],
+      ["参考资料", "如有现有样品、图纸或规格书，可一并提供。"],
+      ["质量要求", "客户要求的测试项目和评审重点。"]
+    ],
+    formats: {
+      eyebrow: "卷材或片材",
+      title: "根据生产流程选择供应形式",
+      items: [
+        [
+          "卷材形式",
+          "适用于连续生产、后续分切和电池装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "用于 VRLA 电池生产的 AGM 隔板卷材"
+        ],
+        [
+          "片材形式",
+          "适用于直接装配、样品评审、定制电池型号和小批量需求沟通。",
+          "/images/sheets1-900.webp",
+          "用于电池装配的 AGM 隔板片材"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "询盘清单",
+      title: "报价前建议准备这些信息",
+      text:
+        "询盘信息越清晰，越有利于供应商评审隔板匹配度和报价方向。",
+      items: [
+        "电池应用",
+        "卷材或片材形式",
+        "厚度",
+        "宽度或片材尺寸",
+        "目标技术参数",
+        "样品或规格参考"
+      ]
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续查看产品和技术信息",
+      items: [
+        ["AGM 隔板产品", "/zh/products/agm-separator/"],
+        ["AGM 隔板技术参数", "/zh/blog/key-technical-parameters-of-agm-separator/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["VRLA 电池应用", "/zh/applications/agm-separator-for-vrla-battery/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "发送 AGM 隔板询盘清单",
+      text:
+        "请提供电池应用、产品形式、尺寸和质量要求，便于我们沟通下一步规格评审。",
+      checklist: [
+        "电池应用",
+        "卷材或片材形式",
+        "厚度和宽度或片材尺寸",
+        "质量或样品要求"
+      ],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        message:
+          "电池应用、卷材或片材形式、厚度、宽度或片材尺寸、技术参数和样品需求"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 function asset(path: string) {
   return `${basePath}${path}`;
 }
 
-export function BlogArticlePage({ lang }: { lang: Lang }) {
+export function BlogArticlePage({
+  lang,
+  page = "whatIsAgmSeparator"
+}: {
+  lang: Lang;
+  page?: BlogArticleKind;
+}) {
   const [formState, setFormState] = useState<
     "idle" | "error" | "success" | "failure" | "emailFallback"
   >("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const t = articleCopy[lang];
+  const t =
+    page === "keyTechnicalParameters"
+      ? keyTechnicalCopy[lang]
+      : page === "howToChooseAgmSeparator"
+        ? howToChooseCopy[lang]
+        : articleCopy[lang];
+  const sectionIds =
+    page === "keyTechnicalParameters"
+      ? [
+          "thickness",
+          "basis-weight",
+          "acid-absorption",
+          "electrical-resistance",
+          "porosity",
+          "mechanical-strength"
+        ]
+      : page === "howToChooseAgmSeparator"
+        ? [
+            "battery-application",
+            "roll-or-sheet",
+            "dimensions",
+            "technical-parameters",
+            "samples-quality"
+          ]
+      : ["definition", "function", "parameters"];
+  const heroImage =
+    "image" in t.hero
+      ? t.hero.image
+      : {
+          src: "/images/viking-finished-separator-roll-900.webp",
+          alt: "Finished AGM separator roll",
+          width: 900,
+          height: 675
+        };
 
   async function submitInquiry(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -431,10 +1002,10 @@ export function BlogArticlePage({ lang }: { lang: Lang }) {
           </div>
           <div className="overflow-hidden rounded-md bg-white shadow-industrial">
             <Image
-              src={asset("/images/viking-finished-separator-roll-900.webp")}
-              alt="Finished AGM separator roll"
-              width={900}
-              height={675}
+              src={asset(heroImage.src)}
+              alt={heroImage.alt}
+              width={heroImage.width}
+              height={heroImage.height}
               priority
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="aspect-[4/3] w-full object-cover"
@@ -452,9 +1023,10 @@ export function BlogArticlePage({ lang }: { lang: Lang }) {
               </p>
               <div className="mt-5 grid gap-3 text-sm font-semibold text-graphite">
                 {[
-                  [t.sections[0].eyebrow, "#definition"],
-                  [t.sections[1].eyebrow, "#function"],
-                  [t.sections[2].eyebrow, "#parameters"],
+                  ...t.sections.map((section, index) => [
+                    section.eyebrow,
+                    `#${sectionIds[index]}`
+                  ]),
                   [t.formats.eyebrow, "#formats"],
                   [t.checklist.eyebrow, "#buyer-checklist"]
                 ].map(([label, href]) => (
@@ -481,7 +1053,7 @@ export function BlogArticlePage({ lang }: { lang: Lang }) {
               {t.sections.map((section, index) => (
                 <section
                   key={section.eyebrow}
-                  id={index === 0 ? "definition" : index === 1 ? "function" : "parameters"}
+                  id={sectionIds[index]}
                   className="scroll-mt-28 border-t border-line pt-10"
                 >
                   <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
@@ -495,22 +1067,47 @@ export function BlogArticlePage({ lang }: { lang: Lang }) {
               ))}
             </div>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {t.parameters.map(([title, text]) => (
-                <div
-                  key={title}
-                  className="rounded-md border border-line bg-frost p-5"
-                >
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-1 shrink-0 text-signal" size={18} />
-                    <div>
-                      <h3 className="font-bold text-ink">{title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-steel">{text}</p>
+            {page === "keyTechnicalParameters" ? (
+              <div className="mt-8 overflow-hidden rounded-md border border-line">
+                <table className="w-full border-collapse text-left text-sm">
+                  <thead className="bg-frost text-ink">
+                    <tr>
+                      <th className="w-1/3 px-4 py-3 font-bold">
+                        {lang === "zh" ? "参数" : "Parameter"}
+                      </th>
+                      <th className="px-4 py-3 font-bold">
+                        {lang === "zh" ? "买家沟通重点" : "Buyer-friendly meaning"}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-line">
+                    {t.parameters.map(([title, text]) => (
+                      <tr key={title} className="bg-white align-top">
+                        <td className="px-4 py-4 font-bold text-ink">{title}</td>
+                        <td className="px-4 py-4 leading-6 text-steel">{text}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {t.parameters.map(([title, text]) => (
+                  <div
+                    key={title}
+                    className="rounded-md border border-line bg-frost p-5"
+                  >
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-1 shrink-0 text-signal" size={18} />
+                      <div>
+                        <h3 className="font-bold text-ink">{title}</h3>
+                        <p className="mt-2 text-sm leading-6 text-steel">{text}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </article>
         </div>
       </section>
@@ -892,7 +1489,13 @@ function QuickContactDock({ lang }: { lang: Lang }) {
           aria-label={aria}
           className="group relative flex h-12 w-12 items-center justify-center rounded-md bg-signal text-white shadow-industrial transition hover:bg-ink focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink"
         >
-          <span className="pointer-events-none absolute right-14 hidden min-w-max translate-x-2 rounded-md bg-ink px-3 py-2 text-xs font-bold text-white opacity-0 shadow-industrial transition group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 sm:block">
+          <span
+            className={`pointer-events-none absolute right-14 min-w-max rounded-md bg-ink px-3 py-2 text-xs font-bold text-white shadow-industrial transition ${
+              copiedContact === id
+                ? "translate-x-0 opacity-100"
+                : "hidden translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 sm:block"
+            }`}
+          >
             {copiedContact === id ? labels.copied : `${label}: ${value}`}
           </span>
           <Icon size={22} />

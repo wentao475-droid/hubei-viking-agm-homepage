@@ -1973,7 +1973,11 @@ function QuickActions({ lang }: { lang: Lang }) {
         className="group relative flex h-12 w-12 items-center justify-center rounded-md bg-signal text-white shadow-industrial transition hover:bg-ink"
       >
         <PhoneIcon />
-        <span className="pointer-events-none absolute right-14 top-1/2 hidden -translate-y-1/2 whitespace-nowrap rounded-md bg-ink px-3 py-2 text-xs font-bold text-white shadow-sm group-hover:block group-focus:block">
+        <span
+          className={`pointer-events-none absolute right-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-ink px-3 py-2 text-xs font-bold text-white shadow-sm ${
+            copied === "phone" ? "block" : "hidden group-hover:block group-focus:block"
+          }`}
+        >
           {copied === "phone" ? ui.copied : contactInfo.phone}
         </span>
       </button>
@@ -1984,7 +1988,11 @@ function QuickActions({ lang }: { lang: Lang }) {
         className="group relative flex h-12 w-12 items-center justify-center rounded-md bg-signal text-white shadow-industrial transition hover:bg-ink"
       >
         <MailIcon />
-        <span className="pointer-events-none absolute right-14 top-1/2 hidden -translate-y-1/2 whitespace-nowrap rounded-md bg-ink px-3 py-2 text-xs font-bold text-white shadow-sm group-hover:block group-focus:block">
+        <span
+          className={`pointer-events-none absolute right-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-ink px-3 py-2 text-xs font-bold text-white shadow-sm ${
+            copied === "email" ? "block" : "hidden group-hover:block group-focus:block"
+          }`}
+        >
           {copied === "email" ? ui.copied : contactInfo.email}
         </span>
       </button>
