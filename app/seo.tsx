@@ -686,21 +686,6 @@ export function StructuredData({ lang }: { lang: Lang }) {
         areaServed: "Worldwide",
         url,
         inLanguage: current.language
-      },
-      {
-        "@type": "Product",
-        "@id": `${SITE_URL}/#agm-separator-product`,
-        name: "AGM glass fiber separator",
-        alternateName: "AGM separator roll",
-        image: PREVIEW_IMAGE,
-        description: current.serviceDescription,
-        brand: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        manufacturer: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        category: "Battery separator"
       }
     ]
   };
@@ -732,28 +717,6 @@ export function AgmSeparatorStructuredData({ lang }: { lang: Lang }) {
           width: 900,
           height: 675
         }
-      },
-      {
-        "@type": "Product",
-        "@id": `${url}#product`,
-        name: current.productName,
-        alternateName:
-          lang === "zh"
-            ? ["AGM 电池隔板", "AGM 玻璃纤维隔板", "VRLA 电池隔板"]
-            : [
-                "AGM battery separator",
-                "AGM glass fiber separator",
-                "VRLA battery separator"
-              ],
-        image: PREVIEW_IMAGE,
-        description: current.serviceDescription,
-        brand: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        manufacturer: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        category: "Battery separator"
       },
       {
         "@type": "Service",
@@ -816,28 +779,6 @@ export function AgmSeparatorRollsStructuredData({ lang }: { lang: Lang }) {
         }
       },
       {
-        "@type": "Product",
-        "@id": `${url}#product`,
-        name: current.productName,
-        alternateName:
-          lang === "zh"
-            ? ["AGM 电池隔板卷材", "AGM 玻璃纤维隔板卷材", "VRLA 电池隔板卷材"]
-            : [
-                "AGM separator rolls",
-                "AGM battery separator rolls",
-                "VRLA battery separator rolls"
-              ],
-        image: PREVIEW_IMAGE,
-        description: current.serviceDescription,
-        brand: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        manufacturer: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        category: "Battery separator"
-      },
-      {
         "@type": "Service",
         "@id": `${url}#service`,
         name: current.productName,
@@ -896,28 +837,6 @@ export function AgmSeparatorSheetsStructuredData({ lang }: { lang: Lang }) {
           width: 900,
           height: 675
         }
-      },
-      {
-        "@type": "Product",
-        "@id": `${url}#product`,
-        name: current.productName,
-        alternateName:
-          lang === "zh"
-            ? ["AGM 电池隔板片材", "预裁切 AGM 隔板", "VRLA 电池隔板片材"]
-            : [
-                "AGM separator sheets",
-                "AGM battery separator sheets",
-                "Pre-cut AGM separator"
-              ],
-        image: SHEETS_PREVIEW_IMAGE,
-        description: current.serviceDescription,
-        brand: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        manufacturer: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        category: "Battery separator"
       },
       {
         "@type": "Service",

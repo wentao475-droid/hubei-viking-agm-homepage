@@ -53,7 +53,7 @@ type ProductContent = {
 };
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/";
+const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/__forms.html";
 const staticFormFallback =
   process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const contactInfo = {
@@ -68,42 +68,44 @@ const sharedMessages = {
     copied: "Copied",
     copyPhone: "Copy phone number",
     copyEmail: "Copy email address",
+    openWechat: "View WeChat QR code",
     backToTop: "Back to top",
     fields: {
       name: "Name",
+      contact: "Email / WhatsApp / Phone",
       company: "Company",
       email: "Email",
-      country: "Country",
-      application: "Battery Application",
+      interestedProduct: "Interested Product",
       message: "Message"
     },
     placeholders: {
       name: "Your full name",
+      contact: "Email, WhatsApp or phone number",
       company: "Company name",
       email: "name@company.com",
-      country: "Country / region",
-      application: "VRLA, UPS, telecom, motorcycle..."
+      interestedProduct: "AGM separator rolls, sheets, or not sure yet"
     }
   },
   zh: {
     copied: "已复制",
     copyPhone: "复制电话号码",
     copyEmail: "复制邮箱地址",
+    openWechat: "查看微信二维码",
     backToTop: "返回顶部",
     fields: {
       name: "姓名",
+      contact: "微信或手机号",
       company: "公司",
       email: "邮箱",
-      country: "国家/地区",
-      application: "电池应用",
-      message: "留言"
+      interestedProduct: "感兴趣产品",
+      message: "补充说明"
     },
     placeholders: {
       name: "您的姓名",
+      contact: "微信号或手机号",
       company: "公司名称",
       email: "name@company.com",
-      country: "国家或地区",
-      application: "VRLA、UPS、通信、摩托车等"
+      interestedProduct: "AGM 隔板卷材、片材或暂不确定"
     }
   }
 } as const;
@@ -123,6 +125,81 @@ const commonRelated = {
     ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]
   ] as LinkItem[]
 };
+
+const leadCaptureCopy = {
+  en: {
+    heroPrompt:
+      "Leave your email or WhatsApp. We will help confirm the right AGM separator specification.",
+    formText:
+      "Leave your contact information first. Our team will follow up for thickness, width, quantity and application details.",
+    checklist: [
+      "Name and contact information are enough to start",
+      "Our team will help confirm the right specification",
+      "Thickness, width and quantity can be discussed later"
+    ],
+    messagePlaceholder:
+      "Optional: battery application, estimated quantity, sample needs or technical questions",
+    required: "Please leave your name and contact information before submitting.",
+    success:
+      "Thank you. We will contact you soon to confirm your AGM separator requirements.",
+    emailFallback:
+      "Your email client has been opened with the contact details. Please send the email to complete your inquiry.",
+    faqEyebrow: "FAQ",
+    faqTitle: "You can contact us before the specification is final",
+    faq: [
+      [
+        "Do I need to know the exact specification before contacting you?",
+        "No. You can leave your contact information first. Our team can help review thickness, width, format and application details."
+      ],
+      [
+        "Do you provide samples?",
+        "Sample discussion is available after confirming the product form and basic application."
+      ],
+      [
+        "Can you customize thickness or width?",
+        "Thickness, width, roll format and sheet size can be discussed according to customer requirements."
+      ],
+      [
+        "What information helps you reply faster?",
+        "Product type, battery application and estimated quantity are helpful, but they are not required for first contact."
+      ]
+    ]
+  },
+  zh: {
+    heroPrompt: "留下微信或手机号，我们会协助确认合适的 AGM 隔板规格。",
+    formText:
+      "先留下联系方式即可，我们会进一步沟通厚度、宽度、数量和应用需求。",
+    checklist: [
+      "留下姓名和微信或手机号即可开始沟通",
+      "我们会协助确认合适的 AGM 隔板规格",
+      "厚度、宽度和数量可以后续沟通"
+    ],
+    messagePlaceholder: "可选：电池应用、预计数量、样品需求或技术问题",
+    required: "请先填写姓名和微信或手机号。",
+    success: "感谢您留下联系方式，我们会尽快联系您确认 AGM 隔板需求。",
+    emailFallback: "已为您打开邮件客户端并填入联系方式，请发送邮件完成询盘。",
+    faqEyebrow: "常见问题",
+    faqTitle: "不清楚具体规格，也可以先联系",
+    faq: [
+      [
+        "不清楚具体规格可以联系吗？",
+        "可以。您只需留下微信或手机号，我们会根据电池应用、产品形式和使用需求，协助确认合适的 AGM 隔板规格。"
+      ],
+      [
+        "是否提供样品？",
+        "可以根据产品形式和基本应用需求进行样品沟通。"
+      ],
+      [
+        "是否可以定制厚度或宽度？",
+        "厚度、宽度、卷材形式和片材尺寸都可以根据客户需求沟通。"
+      ],
+      [
+        "哪些信息有助于更快回复？",
+        "产品形式、电池应用和预计数量会有帮助，但首次联系时不是必填。"
+      ]
+    ]
+  }
+} as const;
 
 const footerCopy = {
   en: {
@@ -206,6 +283,22 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
             "AGM separator sheets",
             900,
             675
+          ],
+          [
+            "Raw material and production follow-up",
+            "Additional production evidence slot for raw material feeding and line-side process confirmation.",
+            "/images/evidence/factory-raw-material-feed-01.webp",
+            "AGM separator raw material feeding and production follow-up",
+            1200,
+            900
+          ],
+          [
+            "Packing and shipment preparation",
+            "Additional evidence slot for export packing, pallet handling and shipment preparation.",
+            "/images/evidence/shipping-pallet-01.webp",
+            "AGM separator packing and shipment preparation",
+            1200,
+            900
           ]
         ]
       },
@@ -324,6 +417,22 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
             "AGM 隔板片材",
             900,
             675
+          ],
+          [
+            "原料与生产跟进",
+            "新增证据图片位，用于展示原料进入生产线和现场过程确认。",
+            "/images/evidence/factory-raw-material-feed-01.webp",
+            "AGM 隔板原料进入生产线与生产跟进",
+            1200,
+            900
+          ],
+          [
+            "包装与出运准备",
+            "新增证据图片位，用于展示出口包装、托盘搬运和出运准备。",
+            "/images/evidence/shipping-pallet-01.webp",
+            "AGM 隔板包装与出运准备",
+            1200,
+            900
           ]
         ]
       },
@@ -445,6 +554,30 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
             "AGM separator production and roll handling",
             1200,
             900
+          ],
+          [
+            "Batch roll inventory",
+            "Additional evidence slot for finished roll storage and batch supply review.",
+            "/images/evidence/agm-separator-roll-warehouse-01.webp",
+            "Finished AGM separator rolls in warehouse",
+            1200,
+            900
+          ],
+          [
+            "Roll end-face condition",
+            "Additional evidence slot for winding condition, roll edge and end-face review.",
+            "/images/evidence/agm-separator-roll-end-face-01.webp",
+            "AGM separator roll end-face condition",
+            1200,
+            900
+          ],
+          [
+            "Roll packing method",
+            "Additional evidence slot for roll protection, labeling, palletizing and export packing.",
+            "/images/evidence/agm-separator-roll-packaging-01.webp",
+            "AGM separator roll packaging",
+            1200,
+            900
           ]
         ]
       },
@@ -561,6 +694,30 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
             "车间能力和卷材处理细节可在规格和包装沟通中确认。",
             "/images/agm-factory-capability-1200.webp",
             "AGM 隔板生产与卷材处理",
+            1200,
+            900
+          ],
+          [
+            "批量卷材库存",
+            "新增证据图片位，用于展示成品卷材仓储和批量供应能力。",
+            "/images/evidence/agm-separator-roll-warehouse-01.webp",
+            "AGM 隔板成品卷材库存",
+            1200,
+            900
+          ],
+          [
+            "卷材端面状态",
+            "新增证据图片位，用于展示收卷状态、卷边和端面细节。",
+            "/images/evidence/agm-separator-roll-end-face-01.webp",
+            "AGM 隔板卷材端面状态",
+            1200,
+            900
+          ],
+          [
+            "卷材包装方式",
+            "新增证据图片位，用于展示卷材防护、标签、托盘和出口包装。",
+            "/images/evidence/agm-separator-roll-packaging-01.webp",
+            "AGM 隔板卷材包装",
             1200,
             900
           ]
@@ -680,6 +837,22 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
             "AGM separator roll and sheets",
             900,
             675
+          ],
+          [
+            "Sheet edge and thickness detail",
+            "Additional evidence slot for sheet edge condition, thickness feel and surface review.",
+            "/images/evidence/agm-separator-sheets-detail-01.webp",
+            "AGM separator sheet edge and thickness detail",
+            1200,
+            900
+          ],
+          [
+            "Sheet packing and sample support",
+            "Additional evidence slot for sheet packing, sample preparation and small-batch discussion.",
+            "/images/evidence/agm-separator-sheets-packaging-01.webp",
+            "AGM separator sheet packaging and sample support",
+            1200,
+            900
           ]
         ]
       },
@@ -798,6 +971,22 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
             "AGM 隔板卷材与片材",
             900,
             675
+          ],
+          [
+            "片材边缘与厚度细节",
+            "新增证据图片位，用于展示片材边缘状态、厚度感和表面状态。",
+            "/images/evidence/agm-separator-sheets-detail-01.webp",
+            "AGM 隔板片材边缘与厚度细节",
+            1200,
+            900
+          ],
+          [
+            "片材包装与样品支持",
+            "新增证据图片位，用于展示片材包装、样品准备和小批量沟通。",
+            "/images/evidence/agm-separator-sheets-packaging-01.webp",
+            "AGM 隔板片材包装与样品支持",
+            1200,
+            900
           ]
         ]
       },
@@ -1157,6 +1346,38 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
             "AGM separator production follow-up",
             1200,
             900
+          ],
+          [
+            "Thickness testing",
+            "Additional evidence slot for thickness measurement and dimensional stability review.",
+            "/images/evidence/quality-thickness-test-01.webp",
+            "AGM separator thickness testing",
+            1200,
+            900
+          ],
+          [
+            "Basis weight testing",
+            "Additional evidence slot for basis weight, sample weight and batch consistency review.",
+            "/images/evidence/quality-basis-weight-test-01.webp",
+            "AGM separator basis weight testing",
+            1200,
+            900
+          ],
+          [
+            "Acid absorption testing",
+            "Additional evidence slot for acid absorption behavior and electrolyte-retention discussion.",
+            "/images/evidence/quality-acid-absorption-test-01.webp",
+            "AGM separator acid absorption testing",
+            1200,
+            900
+          ],
+          [
+            "Electrical resistance testing",
+            "Additional evidence slot for resistance testing and battery performance requirement review.",
+            "/images/evidence/quality-electrical-resistance-test-01.webp",
+            "AGM separator electrical resistance testing",
+            1200,
+            900
           ]
         ]
       },
@@ -1273,6 +1494,38 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
             "过程控制、样品评估和约定检测项目支持连续供应沟通。",
             "/images/agm-factory-capability-1200.webp",
             "AGM 隔板生产过程跟进",
+            1200,
+            900
+          ],
+          [
+            "厚度检测",
+            "新增证据图片位，用于展示厚度测量和尺寸稳定性评估。",
+            "/images/evidence/quality-thickness-test-01.webp",
+            "AGM 隔板厚度检测",
+            1200,
+            900
+          ],
+          [
+            "克重检测",
+            "新增证据图片位，用于展示克重、样品称量和批次一致性评估。",
+            "/images/evidence/quality-basis-weight-test-01.webp",
+            "AGM 隔板克重检测",
+            1200,
+            900
+          ],
+          [
+            "吸酸测试",
+            "新增证据图片位，用于展示吸酸表现和电解液保持能力沟通。",
+            "/images/evidence/quality-acid-absorption-test-01.webp",
+            "AGM 隔板吸酸测试",
+            1200,
+            900
+          ],
+          [
+            "电阻测试",
+            "新增证据图片位，用于展示电阻测试和电池性能要求评估。",
+            "/images/evidence/quality-electrical-resistance-test-01.webp",
+            "AGM 隔板电阻测试",
             1200,
             900
           ]
@@ -1485,6 +1738,7 @@ export function ProductPage({
 }) {
   const t = content[page][lang];
   const ui = sharedMessages[lang];
+  const lead = leadCaptureCopy[lang];
   const [formState, setFormState] = useState<
     "idle" | "error" | "success" | "failure" | "emailFallback"
   >("idle");
@@ -1498,7 +1752,7 @@ export function ProductPage({
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const required = ["name", "company", "email", "country", "application"];
+    const required = ["name", "contact"];
     const valid = required.every((field) =>
       String(formData.get(field) || "").trim()
     );
@@ -1587,6 +1841,10 @@ export function ProductPage({
                 <ArrowRight size={18} />
               </a>
             </div>
+            <p className="mt-5 inline-flex max-w-2xl items-center gap-2 rounded-md border border-signal/15 bg-white/86 px-4 py-3 text-sm font-bold leading-6 text-graphite shadow-sm">
+              <CheckIcon size={17} className="shrink-0 text-signal" />
+              {lead.heroPrompt}
+            </p>
             <div className="mt-9 flex flex-wrap gap-3">
               {t.hero.proof.map((item) => (
                 <span
@@ -1777,6 +2035,27 @@ export function ProductPage({
         </div>
       </section>
 
+      <section className="px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
+              {lead.faqEyebrow}
+            </p>
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-ink sm:text-4xl">
+              {lead.faqTitle}
+            </h2>
+          </div>
+          <div className="grid gap-4">
+            {lead.faq.map(([question, answer]) => (
+              <article key={question} className="rounded-md border border-line bg-white p-5">
+                <h3 className="font-bold text-ink">{question}</h3>
+                <p className="mt-2 text-sm leading-6 text-steel">{answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="bg-ink px-4 py-24 text-white sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div id="inquiry-checklist">
@@ -1787,10 +2066,10 @@ export function ProductPage({
               {t.inquiry.title}
             </h2>
             <p className="mt-5 text-base leading-8 text-white/78">
-              {t.inquiry.text}
+              {lead.formText}
             </p>
             <div className="mt-8 grid gap-3">
-              {t.inquiry.checklist.map((item) => (
+              {lead.checklist.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-3 rounded-md border border-white/12 bg-white/7 p-4 font-semibold"
@@ -1805,6 +2084,7 @@ export function ProductPage({
           <form
             name="inquiry"
             method="POST"
+            action={asset(formEndpoint)}
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={submitInquiry}
@@ -1818,26 +2098,51 @@ export function ProductPage({
               </label>
             </p>
             <div className="grid gap-5 sm:grid-cols-2">
-              {(["name", "company", "email", "country"] as const).map((field) => (
-                <label key={field} className="grid gap-2">
-                  <span className="font-bold">{ui.fields[field]}</span>
-                  <input
-                    required
-                    name={field}
-                    type={field === "email" ? "email" : "text"}
-                    placeholder={ui.placeholders[field]}
-                    className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
-                  />
-                </label>
-              ))}
+              <label className="grid gap-2">
+                <span className="font-bold">{ui.fields.name}</span>
+                <input
+                  required
+                  name="name"
+                  type="text"
+                  placeholder={ui.placeholders.name}
+                  className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
+                />
+              </label>
+              <label className="grid gap-2">
+                <span className="font-bold">{ui.fields.contact}</span>
+                <input
+                  required
+                  name="contact"
+                  type="text"
+                  placeholder={ui.placeholders.contact}
+                  className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
+                />
+              </label>
+              <label className="grid gap-2">
+                <span className="font-bold">{ui.fields.company}</span>
+                <input
+                  name="company"
+                  type="text"
+                  placeholder={ui.placeholders.company}
+                  className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
+                />
+              </label>
+              <label className="grid gap-2">
+                <span className="font-bold">{ui.fields.email}</span>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder={ui.placeholders.email}
+                  className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
+                />
+              </label>
             </div>
             <label className="mt-5 grid gap-2">
-              <span className="font-bold">{ui.fields.application}</span>
+              <span className="font-bold">{ui.fields.interestedProduct}</span>
               <input
-                required
-                name="application"
+                name="interestedProduct"
                 type="text"
-                placeholder={ui.placeholders.application}
+                placeholder={ui.placeholders.interestedProduct}
                 className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
               />
             </label>
@@ -1846,7 +2151,7 @@ export function ProductPage({
               <textarea
                 name="message"
                 rows={6}
-                placeholder={t.inquiry.placeholder}
+                placeholder={lead.messagePlaceholder}
                 className="resize-none rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
               />
             </label>
@@ -1859,11 +2164,11 @@ export function ProductPage({
                 }`}
               >
                 {formState === "success"
-                  ? t.inquiry.success
+                  ? lead.success
                   : formState === "emailFallback"
-                    ? t.inquiry.emailFallback
+                    ? lead.emailFallback
                     : formState === "error"
-                      ? t.inquiry.required
+                      ? lead.required
                       : t.inquiry.failure}
               </div>
             )}
@@ -1924,7 +2229,10 @@ function Footer({
               loading="lazy"
               className="mx-auto h-28 w-28 object-contain"
             />
-            <p className="mt-3 text-center text-sm font-semibold text-ink">
+            <p
+              id="wechat-qr"
+              className="mt-3 scroll-mt-28 text-center text-sm font-semibold text-ink"
+            >
               {copy.wechat}
             </p>
           </div>
@@ -1964,8 +2272,26 @@ function QuickActions({ lang }: { lang: Lang }) {
     }
   }
 
+  function scrollToWechat() {
+    document.getElementById("wechat-qr")?.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
+
   return (
     <div className="fixed bottom-5 right-4 z-40 flex flex-col gap-2 sm:bottom-8 sm:right-6">
+      <button
+        type="button"
+        aria-label={ui.openWechat}
+        onClick={scrollToWechat}
+        className="group relative flex h-12 w-12 items-center justify-center rounded-md bg-signal text-white shadow-industrial transition hover:bg-ink"
+      >
+        <span className="text-xs font-black">微</span>
+        <span className="pointer-events-none absolute right-14 top-1/2 hidden -translate-y-1/2 whitespace-nowrap rounded-md bg-ink px-3 py-2 text-xs font-bold text-white shadow-sm group-hover:block group-focus:block">
+          {ui.openWechat}
+        </span>
+      </button>
       <button
         type="button"
         aria-label={`${ui.copyPhone}: ${contactInfo.phone}`}
@@ -2014,27 +2340,27 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
       ? {
           subject: "湖北维京官网询盘",
           name: "姓名",
+          contact: "联系方式",
           company: "公司",
           email: "邮箱",
-          country: "国家/地区",
-          application: "电池应用",
+          interestedProduct: "感兴趣产品",
           message: "留言"
         }
       : {
           subject: "Viking AGM website inquiry",
           name: "Name",
+          contact: "Contact",
           company: "Company",
           email: "Email",
-          country: "Country",
-          application: "Battery Application",
+          interestedProduct: "Interested product",
           message: "Message"
         };
   const lines = [
     `${labels.name}: ${formData.get("name") || ""}`,
+    `${labels.contact}: ${formData.get("contact") || ""}`,
     `${labels.company}: ${formData.get("company") || ""}`,
     `${labels.email}: ${formData.get("email") || ""}`,
-    `${labels.country}: ${formData.get("country") || ""}`,
-    `${labels.application}: ${formData.get("application") || ""}`,
+    `${labels.interestedProduct}: ${formData.get("interestedProduct") || ""}`,
     `${labels.message}: ${formData.get("message") || ""}`
   ];
 

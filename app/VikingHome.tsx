@@ -163,37 +163,37 @@ const copy = {
     },
       form: {
         eyebrow: "Inquiry",
-        title: "Request a Quote",
+        title: "Leave Your Contact",
         text:
-          "Share the separator details your project needs. Thickness, width, roll diameter, quantity, battery application and sample requirements help us respond with a more useful specification discussion.",
+          "Leave your contact information first. Our team will follow up for thickness, width, quantity and application details.",
         hints: [
-          "Target thickness and width",
-          "Roll diameter or packing requirement",
-          "Quantity, application and sample needs"
+          "Email, WhatsApp or phone is enough to start",
+          "Our team will help confirm the right specification",
+          "Thickness, width and quantity can be discussed later"
         ],
         fields: {
         name: "Name",
+        contact: "Email / WhatsApp / Phone",
         company: "Company",
         email: "Email",
-        country: "Country",
-        application: "Battery Application",
+        interestedProduct: "Interested Product",
         message: "Message"
       },
       placeholders: {
         name: "Your full name",
+        contact: "Email, WhatsApp or phone number",
         company: "Company name",
         email: "name@company.com",
-        country: "Country / region",
-        application: "VRLA, UPS, motorcycle, automotive...",
-        message: "Thickness, width, roll diameter, quantity, sample needs or technical questions"
+        interestedProduct: "AGM separator rolls, sheets, or not sure yet",
+        message: "Optional: battery application, quantity, sample needs or technical questions"
       },
-      submit: "Send Inquiry",
+      submit: "Send Contact",
       submitting: "Sending...",
       success:
-        "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
-      required: "Please complete all required fields before submitting.",
+        "Thank you. We will contact you soon to confirm your AGM separator requirements.",
+      required: "Please leave your name and contact information before submitting.",
       emailFallback:
-        "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry.",
+        "Your email client has been opened with the contact details. Please send the email to complete your inquiry.",
       failure:
         "Sorry, the inquiry could not be sent right now. Please try again later."
     },
@@ -328,32 +328,32 @@ const copy = {
     },
       form: {
         eyebrow: "询盘",
-        title: "获取报价",
+        title: "留下联系方式",
         text:
-          "请尽量提供项目所需的隔板信息。厚度、宽度、卷径、数量、电池应用和样品需求越清楚，我们越能给出有效的规格沟通。",
-        hints: ["目标厚度与宽度", "卷径或包装要求", "数量、应用与样品需求"],
+          "先留下联系方式即可，我们会进一步沟通厚度、宽度、数量和应用需求。",
+        hints: ["微信或手机号即可开始沟通", "我们会协助确认合适的 AGM 隔板规格", "厚度、宽度和数量可后续沟通"],
         fields: {
         name: "姓名",
+        contact: "微信或手机号",
         company: "公司",
         email: "邮箱",
-        country: "国家/地区",
-        application: "电池应用",
-        message: "留言"
+        interestedProduct: "感兴趣产品",
+        message: "补充说明"
       },
       placeholders: {
         name: "您的姓名",
+        contact: "微信号或手机号",
         company: "公司名称",
         email: "name@company.com",
-        country: "国家或地区",
-        application: "VRLA、UPS、摩托车、汽车等",
-        message: "厚度、宽度、卷径、数量、样品需求或技术问题"
+        interestedProduct: "AGM 隔板卷材、片材或暂不确定",
+        message: "可选：电池应用、数量、样品需求或技术问题"
       },
-      submit: "发送询盘",
+      submit: "提交联系方式",
       submitting: "发送中...",
-      success: "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
-      required: "请先填写所有必填字段。",
+      success: "感谢您留下联系方式，我们会尽快联系您确认 AGM 隔板需求。",
+      required: "请先填写姓名和微信或手机号。",
       emailFallback:
-        "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。",
+        "已为您打开邮件客户端并填入联系方式，请发送邮件完成询盘。",
       failure: "抱歉，询盘暂时未能发送，请稍后再试。"
     },
     footer: {
@@ -396,7 +396,7 @@ const contactInfo = {
   phone: "18907186665",
   email: "vikingsales@vikingagm.com"
 };
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/";
+const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/__forms.html";
 const staticFormFallback =
   process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const inquiryEmail =
@@ -434,7 +434,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const required = ["name", "company", "email", "country", "application"];
+    const required = ["name", "contact"];
     const valid = required.every((field) =>
       String(formData.get(field) || "").trim()
     );
@@ -860,6 +860,98 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
       </section>
 
       <section className="px-4 py-24 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow={lang === "zh" ? "现场证据" : "Evidence Details"}
+          title={
+            lang === "zh"
+              ? "后续可替换的生产、检测与包装图片位"
+              : "Replaceable production, testing and packing evidence slots"
+          }
+          text={
+            lang === "zh"
+              ? "这些图片位用于补充原料、收卷、检测和出运细节。当前先使用现有素材占位，后续可按同名文件直接替换真实图片。"
+              : "These slots add raw-material, roll-finishing, testing and packing detail. They use current images for now and can be replaced later with real photos using the same filenames."
+          }
+        />
+        <div className="mx-auto mt-12 grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {(
+            lang === "zh"
+              ? [
+                  [
+                    "原料进入生产线",
+                    "用于展示原料准备、上料和生产线前端状态。",
+                    "/images/evidence/factory-raw-material-feed-01.webp",
+                    "AGM 隔板原料进入生产线"
+                  ],
+                  [
+                    "收卷与后处理",
+                    "用于展示收卷、分切或卷材处理现场。",
+                    "/images/evidence/factory-roll-finishing-01.webp",
+                    "AGM 隔板收卷与后处理"
+                  ],
+                  [
+                    "具体检测项目",
+                    "用于展示厚度、克重、吸酸或电阻等检测过程。",
+                    "/images/evidence/quality-thickness-test-01.webp",
+                    "AGM 隔板厚度检测"
+                  ],
+                  [
+                    "包装与出运",
+                    "用于展示托盘、缠膜、纸箱或发货准备。",
+                    "/images/evidence/shipping-pallet-01.webp",
+                    "AGM 隔板包装与出运"
+                  ]
+                ]
+              : [
+                  [
+                    "Raw material feed",
+                    "Reserved for raw material preparation, feeding and line-start evidence.",
+                    "/images/evidence/factory-raw-material-feed-01.webp",
+                    "AGM separator raw material feeding"
+                  ],
+                  [
+                    "Roll finishing",
+                    "Reserved for winding, slitting or roll-handling evidence.",
+                    "/images/evidence/factory-roll-finishing-01.webp",
+                    "AGM separator roll finishing"
+                  ],
+                  [
+                    "Specific test item",
+                    "Reserved for thickness, basis weight, acid absorption or resistance testing.",
+                    "/images/evidence/quality-thickness-test-01.webp",
+                    "AGM separator thickness testing"
+                  ],
+                  [
+                    "Packing and shipment",
+                    "Reserved for pallet, wrapping, carton or shipment preparation evidence.",
+                    "/images/evidence/shipping-pallet-01.webp",
+                    "AGM separator packing and shipment"
+                  ]
+                ]
+          ).map(([title, text, src, alt]) => (
+            <article
+              key={title}
+              className="overflow-hidden rounded-md border border-line bg-white shadow-sm"
+            >
+              <Image
+                src={asset(src)}
+                alt={alt}
+                width={1200}
+                height={900}
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+              />
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-ink">{title}</h3>
+                <p className="mt-2 text-sm leading-6 text-steel">{text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <CertificationBanner lang={lang} />
 
@@ -963,7 +1055,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
           <form
             name="inquiry"
             method="POST"
-            action="/"
+            action={asset(formEndpoint)}
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={submitInquiry}
@@ -979,15 +1071,14 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               <Input name="name" label={t.form.fields.name} placeholder={t.form.placeholders.name} required />
-              <Input name="company" label={t.form.fields.company} placeholder={t.form.placeholders.company} required />
-              <Input name="email" type="email" label={t.form.fields.email} placeholder={t.form.placeholders.email} required />
-              <Input name="country" label={t.form.fields.country} placeholder={t.form.placeholders.country} required />
+              <Input name="contact" label={t.form.fields.contact} placeholder={t.form.placeholders.contact} required />
+              <Input name="company" label={t.form.fields.company} placeholder={t.form.placeholders.company} />
+              <Input name="email" type="email" label={t.form.fields.email} placeholder={t.form.placeholders.email} />
               <div className="sm:col-span-2">
                 <Input
-                  name="application"
-                  label={t.form.fields.application}
-                  placeholder={t.form.placeholders.application}
-                  required
+                  name="interestedProduct"
+                  label={t.form.fields.interestedProduct}
+                  placeholder={t.form.placeholders.interestedProduct}
                 />
               </div>
               <label className="sm:col-span-2">
@@ -1085,7 +1176,10 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
                     loading="lazy"
                     className="mx-auto h-28 w-28 rounded-sm bg-white object-contain"
                   />
-                  <p className="mt-3 text-center text-sm font-semibold leading-6 text-graphite">
+                  <p
+                    id={src === "/images/qrcode_for_logo.jpg" ? "wechat-qr" : undefined}
+                    className="mt-3 scroll-mt-28 text-center text-sm font-semibold leading-6 text-graphite"
+                  >
                     {label}
                   </p>
                 </div>
@@ -1126,16 +1220,20 @@ function QuickContactDock({ lang }: { lang: Lang }) {
     lang === "zh"
       ? {
           phone: "电话",
+          wechat: "微信",
           email: "邮箱",
           copyPhone: "复制电话",
+          openWechat: "查看微信二维码",
           copyEmail: "复制邮箱",
           backTop: "返回顶部",
           copied: "已复制"
         }
       : {
           phone: "TEL",
+          wechat: "WeChat",
           email: "E-mail",
           copyPhone: "Copy phone",
+          openWechat: "View WeChat QR code",
           copyEmail: "Copy email",
           backTop: "Back to top",
           copied: "Copied"
@@ -1176,8 +1274,26 @@ function QuickContactDock({ lang }: { lang: Lang }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  function scrollToWechat() {
+    document.getElementById("wechat-qr")?.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
+
   return (
     <div className="fixed bottom-5 right-4 z-40 flex flex-col gap-2 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2">
+      <button
+        type="button"
+        onClick={scrollToWechat}
+        aria-label={labels.openWechat}
+        className="group relative flex h-12 w-12 items-center justify-center rounded-md bg-signal text-white shadow-industrial transition hover:bg-ink focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink"
+      >
+        <span className="pointer-events-none absolute right-14 hidden min-w-max translate-x-2 rounded-md bg-ink px-3 py-2 text-xs font-bold text-white opacity-0 shadow-industrial transition group-hover:translate-x-0 group-hover:opacity-100 group-focus:translate-x-0 group-focus:opacity-100 sm:block">
+          {labels.openWechat}
+        </span>
+        <span className="text-xs font-black">{lang === "zh" ? "微" : "W"}</span>
+      </button>
       {items.map(({ id, label, value, aria, Icon }) => (
         <button
           key={id}
@@ -1349,28 +1465,28 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
       ? {
           subject: "网站询盘 - 湖北维京科技",
           name: "姓名",
+          contact: "联系方式",
           company: "公司",
           email: "邮箱",
-          country: "国家/地区",
-          application: "电池应用",
+          interestedProduct: "感兴趣产品",
           message: "留言"
         }
       : {
           subject: "Website inquiry - Viking AGM",
           name: "Name",
+          contact: "Contact",
           company: "Company",
           email: "Email",
-          country: "Country / region",
-          application: "Battery application",
+          interestedProduct: "Interested product",
           message: "Message"
         };
 
   const fields = [
     ["name", labels.name],
+    ["contact", labels.contact],
     ["company", labels.company],
     ["email", labels.email],
-    ["country", labels.country],
-    ["application", labels.application],
+    ["interestedProduct", labels.interestedProduct],
     ["message", labels.message]
   ] as const;
 
