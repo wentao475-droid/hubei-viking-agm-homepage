@@ -10,7 +10,10 @@ export type ProductPageKind =
   | "agmSeparatorRolls"
   | "agmSeparatorSheets"
   | "agmSeparatorTesting"
-  | "agmSeparatorVrlaApplication";
+  | "agmSeparatorVrlaApplication"
+  | "agmSeparatorUpsApplication"
+  | "agmSeparatorMotorcycleApplication"
+  | "agmSeparatorEnergyStorageApplication";
 
 type IconProps = { size?: number; className?: string };
 type LinkItem = [string, string];
@@ -74,7 +77,6 @@ const sharedMessages = {
       name: "Name",
       contact: "Email / WhatsApp / Phone",
       company: "Company",
-      email: "Email",
       interestedProduct: "Interested Product",
       message: "Message"
     },
@@ -82,7 +84,6 @@ const sharedMessages = {
       name: "Your full name",
       contact: "Email, WhatsApp or phone number",
       company: "Company name",
-      email: "name@company.com",
       interestedProduct: "AGM separator rolls, sheets, or not sure yet"
     }
   },
@@ -96,7 +97,6 @@ const sharedMessages = {
       name: "姓名",
       contact: "微信或手机号",
       company: "公司",
-      email: "邮箱",
       interestedProduct: "感兴趣产品",
       message: "补充说明"
     },
@@ -104,7 +104,6 @@ const sharedMessages = {
       name: "您的姓名",
       contact: "微信号或手机号",
       company: "公司名称",
-      email: "name@company.com",
       interestedProduct: "AGM 隔板卷材、片材或暂不确定"
     }
   }
@@ -1284,6 +1283,772 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
       footer: footerCopy.zh
     }
   },
+  agmSeparatorUpsApplication: {
+    en: {
+      homePath: "/",
+      languagePath: "/zh/applications/agm-separator-for-ups-battery/",
+      quote: "Request a Quote",
+      hero: {
+        eyebrow: "UPS Battery Application",
+        title: "AGM Separator for UPS VRLA Batteries",
+        subtitle:
+          "Application-focused AGM separator discussion for UPS, standby power and backup VRLA lead-acid battery manufacturing.",
+        primary: "Discuss UPS Battery Requirements",
+        secondary: "Send Contact Information",
+        proof: ["UPS and standby power", "Roll or sheet discussion", "Specification support"],
+        image: {
+          src: "/images/applications/ups-vrla-battery-application-1200.webp",
+          alt: "AGM separator discussion for UPS VRLA battery applications",
+          width: 1200,
+          height: 900
+        }
+      },
+      overview: {
+        eyebrow: "Application Focus",
+        title: "Separator requirements should match UPS battery design and standby use",
+        paragraphs: [
+          "UPS VRLA batteries are commonly used for standby power and backup systems. Separator discussion should consider the battery structure, expected operating environment and production process.",
+          "For UPS battery projects, buyers often review separator thickness, width, acid absorption behavior, electrical resistance and consistency before sample or order confirmation.",
+          "If the exact specification is not final, you can leave your contact information first. Our team can help review whether roll material, sheet pieces or a custom discussion is more suitable."
+        ]
+      },
+      parameters: {
+        eyebrow: "Specification Discussion",
+        title: "Key points for UPS VRLA battery separator sourcing",
+        text:
+          "UPS battery separator requirements should be confirmed with the customer battery design, test standards and production workflow.",
+        items: [
+          ["Thickness and width", "Confirmed according to plate design, cell structure and production process."],
+          ["Acid absorption", "Reviewed with electrolyte retention needs and customer test methods."],
+          ["Electrical resistance", "Discussed together with battery performance and agreed testing conditions."],
+          ["Roll or sheet format", "Selected according to line-side feeding, cutting or assembly workflow."],
+          ["Batch consistency", "Important for customers planning repeated standby battery production."],
+          ["Packing method", "Packing and shipment requirements can be confirmed before order arrangement."]
+        ]
+      },
+      forms: {
+        eyebrow: "Product Format",
+        title: "Roll and sheet options for UPS battery production",
+        items: [
+          [
+            "AGM separator rolls for production lines",
+            "Roll supply can support line-side feeding, slitting and production planning for UPS battery manufacturers.",
+            "/images/viking-finished-separator-roll-900.webp",
+            "AGM separator rolls for UPS battery production",
+            900,
+            675
+          ],
+          [
+            "AGM separator sheets for sample review",
+            "Pre-cut sheets can support assembly trials, sample comparison and battery model discussion.",
+            "/images/sheets1-900.webp",
+            "AGM separator sheets for UPS battery sample review",
+            900,
+            675
+          ],
+          [
+            "UPS standby power application discussion",
+            "Application image slot for UPS and backup power battery separator sourcing.",
+            "/images/applications/ups-vrla-battery-application-1200.webp",
+            "UPS VRLA battery application discussion",
+            1200,
+            900
+          ],
+          [
+            "Quality testing support",
+            "Testing items can be discussed before sample or order arrangement.",
+            "/images/evidence/quality-electrical-resistance-test-01.webp",
+            "AGM separator electrical resistance testing for UPS battery discussion",
+            1200,
+            900
+          ]
+        ]
+      },
+      applications: {
+        eyebrow: "UPS Battery Uses",
+        title: "Common standby power directions buyers discuss",
+        items: [
+          "UPS backup batteries",
+          "Standby power systems",
+          "Data center backup power",
+          "Security and emergency power",
+          "Telecom backup cabinets",
+          "Industrial control backup batteries"
+        ]
+      },
+      quality: {
+        eyebrow: "Quality Considerations",
+        title: "Testing expectations should be confirmed before samples",
+        text:
+          "UPS battery projects may require stable separator parameters and clear quality communication. Final test items should follow customer requirements.",
+        cards: [
+          ["Dimensional consistency", "Thickness and width should be reviewed against agreed requirements."],
+          ["Absorption and resistance", "Acid absorption and electrical resistance can be discussed with test conditions."],
+          ["Sample comparison", "Existing samples, drawings or target values help make discussion more accurate."]
+        ]
+      },
+      related: {
+        eyebrow: "Related Pages",
+        title: "Continue with VRLA, product and quality details",
+        items: [
+          ["VRLA Battery Applications", "/applications/agm-separator-for-vrla-battery/"],
+          ["AGM Separator Product", "/products/agm-separator/"],
+          ["AGM Separator Rolls", "/products/agm-separator-rolls/"],
+          ["AGM Separator Sheets", "/products/agm-separator-sheets/"],
+          ["AGM Separator Testing", "/quality-control/agm-separator-testing/"]
+        ]
+      },
+      inquiry: {
+        eyebrow: "Inquiry",
+        title: "Send your UPS battery separator requirements",
+        text:
+          "Leave your contact first. We will help confirm the suitable AGM separator specification for UPS or standby battery projects.",
+        checklist: ["UPS or standby battery application", "Roll or sheet format", "Target thickness or width if available", "Sample or quantity needs"],
+        placeholder:
+          "Optional: UPS battery type, roll or sheet need, sample quantity, target thickness or technical questions",
+        submit: "Send Contact",
+        submitting: "Sending...",
+        required: "Please leave your name and contact information before submitting.",
+        success:
+          "Thank you. We will contact you soon to confirm your AGM separator requirements.",
+        failure:
+          "Sorry, the inquiry could not be sent right now. Please try again later.",
+        emailFallback:
+          "Your email client has been opened with the contact details. Please send the email to complete your inquiry."
+      },
+      footer: footerCopy.en
+    },
+    zh: {
+      homePath: "/zh/",
+      languagePath: "/applications/agm-separator-for-ups-battery/",
+      quote: "获取报价",
+      hero: {
+        eyebrow: "UPS 电池应用",
+        title: "用于 UPS VRLA 电池的 AGM 隔板",
+        subtitle:
+          "面向 UPS、备用电源和后备电源 VRLA 铅酸电池生产，沟通 AGM 隔板卷材、片材和规格要求。",
+        primary: "沟通 UPS 电池需求",
+        secondary: "留下联系方式",
+        proof: ["UPS 与备用电源", "卷材或片材沟通", "规格协助确认"],
+        image: {
+          src: "/images/applications/ups-vrla-battery-application-1200.webp",
+          alt: "UPS VRLA 电池应用 AGM 隔板沟通",
+          width: 1200,
+          height: 900
+        }
+      },
+      overview: {
+        eyebrow: "应用重点",
+        title: "隔板需求应结合 UPS 电池结构和备用电源场景确认",
+        paragraphs: [
+          "UPS VRLA 电池常用于备用电源和后备系统。隔板沟通应结合电池结构、使用环境和生产工艺进行。",
+          "UPS 电池项目通常会在样品或订单确认前沟通隔板厚度、宽度、吸酸表现、电阻和批次一致性。",
+          "如果具体规格尚未确定，也可以先留下联系方式。我们会协助判断更适合沟通卷材、片材还是定制规格。"
+        ]
+      },
+      parameters: {
+        eyebrow: "规格沟通",
+        title: "UPS VRLA 电池隔板采购的关键沟通点",
+        text:
+          "UPS 电池隔板要求应结合客户电池设计、测试标准和生产流程确认。",
+        items: [
+          ["厚度和宽度", "根据极板设计、电池结构和生产工艺确认。"],
+          ["吸酸性能", "结合电解液保持需求和客户测试方法沟通。"],
+          ["电阻", "与电池性能和约定测试条件共同讨论。"],
+          ["卷材或片材形式", "根据连续上料、裁切或装配流程选择。"],
+          ["批次一致性", "对持续生产备用电池的客户较为重要。"],
+          ["包装方式", "包装和出运要求可在订单安排前确认。"]
+        ]
+      },
+      forms: {
+        eyebrow: "产品形式",
+        title: "面向 UPS 电池生产的卷材和片材选择",
+        items: [
+          [
+            "用于生产线的 AGM 隔板卷材",
+            "卷材供应可支持 UPS 电池生产企业的连续上料、分切和生产计划。",
+            "/images/viking-finished-separator-roll-900.webp",
+            "用于 UPS 电池生产的 AGM 隔板卷材",
+            900,
+            675
+          ],
+          [
+            "用于样品评估的 AGM 隔板片材",
+            "预裁切片材可支持装配试样、样品对比和电池型号沟通。",
+            "/images/sheets1-900.webp",
+            "用于 UPS 电池样品评估的 AGM 隔板片材",
+            900,
+            675
+          ],
+          [
+            "UPS 备用电源应用沟通",
+            "用于 UPS 和后备电源电池隔板采购的应用图片位。",
+            "/images/applications/ups-vrla-battery-application-1200.webp",
+            "UPS VRLA 电池应用沟通",
+            1200,
+            900
+          ],
+          [
+            "质量检测支持",
+            "检测项目可在样品或订单安排前沟通确认。",
+            "/images/evidence/quality-electrical-resistance-test-01.webp",
+            "UPS 电池隔板电阻检测沟通",
+            1200,
+            900
+          ]
+        ]
+      },
+      applications: {
+        eyebrow: "UPS 电池用途",
+        title: "买家常见沟通的备用电源方向",
+        items: ["UPS 后备电池", "备用电源系统", "数据中心后备电源", "安防和应急电源", "通信后备机柜", "工业控制备用电池"]
+      },
+      quality: {
+        eyebrow: "质量关注点",
+        title: "样品前应确认检测期望",
+        text:
+          "UPS 电池项目通常关注稳定的隔板参数和清晰的质量沟通。最终检测项目应以客户要求为准。",
+        cards: [
+          ["尺寸一致性", "厚度和宽度应根据约定要求评估。"],
+          ["吸酸与电阻", "吸酸性能和电阻可结合测试条件沟通。"],
+          ["样品对比", "现有样品、图纸或目标值有助于提高沟通准确性。"]
+        ]
+      },
+      related: {
+        eyebrow: "相关页面",
+        title: "继续查看 VRLA、产品和质量信息",
+        items: [
+          ["VRLA 电池应用", "/zh/applications/agm-separator-for-vrla-battery/"],
+          ["AGM 隔板产品", "/zh/products/agm-separator/"],
+          ["AGM 隔板卷材", "/zh/products/agm-separator-rolls/"],
+          ["AGM 隔板片材", "/zh/products/agm-separator-sheets/"],
+          ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]
+        ]
+      },
+      inquiry: {
+        eyebrow: "询盘",
+        title: "发送 UPS 电池隔板需求",
+        text:
+          "先留下联系方式即可，我们会协助确认适合 UPS 或备用电池项目的 AGM 隔板规格。",
+        checklist: ["UPS 或备用电池应用", "卷材或片材形式", "已有目标厚度或宽度", "样品或数量需求"],
+        placeholder: "可选：UPS 电池类型、卷材或片材需求、样品数量、目标厚度或技术问题",
+        submit: "提交联系方式",
+        submitting: "发送中...",
+        required: "请先填写姓名和微信或手机号。",
+        success: "感谢您留下联系方式，我们会尽快联系您确认 AGM 隔板需求。",
+        failure: "抱歉，询盘暂时未能发送，请稍后再试。",
+        emailFallback:
+          "已为您打开邮件客户端并填入联系方式，请发送邮件完成询盘。"
+      },
+      footer: footerCopy.zh
+    }
+  },
+  agmSeparatorMotorcycleApplication: {
+    en: {
+      homePath: "/",
+      languagePath: "/zh/applications/agm-separator-for-motorcycle-battery/",
+      quote: "Request a Quote",
+      hero: {
+        eyebrow: "Motorcycle Battery Application",
+        title: "AGM Separator for Motorcycle Starting Batteries",
+        subtitle:
+          "AGM separator discussion for compact motorcycle VRLA and starting battery production, including roll, sheet and sample requirements.",
+        primary: "Discuss Motorcycle Battery Needs",
+        secondary: "Send Contact Information",
+        proof: ["Starting battery application", "Compact battery discussion", "Sample support"],
+        image: {
+          src: "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+          alt: "AGM separator discussion for motorcycle battery applications",
+          width: 1200,
+          height: 900
+        }
+      },
+      overview: {
+        eyebrow: "Application Focus",
+        title: "Motorcycle batteries need separator discussion around compact structure",
+        paragraphs: [
+          "Motorcycle starting batteries often use compact internal structures and require separator discussion according to plate size, assembly method and battery model.",
+          "For this application, buyers commonly discuss separator thickness, sheet size or roll width, handling performance, acid absorption and electrical resistance.",
+          "If the final battery model is still under review, leave your contact first. We can help confirm what information is useful for sample or quotation discussion."
+        ]
+      },
+      parameters: {
+        eyebrow: "Specification Discussion",
+        title: "Key points for motorcycle battery separator sourcing",
+        text:
+          "Motorcycle battery separator requirements should be reviewed with the customer battery model, plate design and assembly workflow.",
+        items: [
+          ["Sheet size or roll width", "Confirmed according to compact battery design and cutting workflow."],
+          ["Thickness", "Reviewed with plate spacing, compression and assembly needs."],
+          ["Handling strength", "Discussed for cutting, placement and production handling."],
+          ["Acid absorption", "Confirmed according to battery design and customer testing method."],
+          ["Electrical resistance", "Discussed with target performance and agreed test conditions."],
+          ["Sample review", "Sample discussion can start before every parameter is finalized."]
+        ]
+      },
+      forms: {
+        eyebrow: "Product Format",
+        title: "Separator forms for compact battery assembly",
+        items: [
+          [
+            "Pre-cut sheets for assembly trials",
+            "Sheet pieces can support motorcycle battery model review and sample assembly discussion.",
+            "/images/sheets1-900.webp",
+            "AGM separator sheets for motorcycle battery assembly",
+            900,
+            675
+          ],
+          [
+            "Roll material for in-house cutting",
+            "Roll supply can support customers who cut separator material according to battery model needs.",
+            "/images/viking-finished-separator-roll-900.webp",
+            "AGM separator roll for motorcycle battery production",
+            900,
+            675
+          ],
+          [
+            "Motorcycle starting battery application",
+            "Application image slot for compact motorcycle VRLA battery separator sourcing.",
+            "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+            "Motorcycle VRLA battery application discussion",
+            1200,
+            900
+          ],
+          [
+            "Sheet edge and detail review",
+            "Sheet details can be reviewed during sample and specification confirmation.",
+            "/images/evidence/agm-separator-sheets-detail-01.webp",
+            "AGM separator sheet detail for motorcycle battery discussion",
+            1200,
+            900
+          ]
+        ]
+      },
+      applications: {
+        eyebrow: "Motorcycle Battery Uses",
+        title: "Common starting battery directions buyers discuss",
+        items: ["Motorcycle starting batteries", "Scooter batteries", "Compact VRLA batteries", "Small engine batteries", "Replacement battery production", "Sample model development"]
+      },
+      quality: {
+        eyebrow: "Quality Considerations",
+        title: "Compact battery projects need careful size and handling review",
+        text:
+          "Motorcycle battery separator discussion often starts from dimensions, handling and sample confirmation. Final test items should follow customer requirements.",
+        cards: [
+          ["Dimension review", "Sheet height, width or roll width should match battery model needs."],
+          ["Handling review", "Separator condition during cutting and assembly can be discussed."],
+          ["Testing discussion", "Thickness, absorption and resistance can be reviewed with target requirements."]
+        ]
+      },
+      related: {
+        eyebrow: "Related Pages",
+        title: "Continue with VRLA, product and quality details",
+        items: [
+          ["VRLA Battery Applications", "/applications/agm-separator-for-vrla-battery/"],
+          ["AGM Separator Sheets", "/products/agm-separator-sheets/"],
+          ["AGM Separator Rolls", "/products/agm-separator-rolls/"],
+          ["AGM Separator Product", "/products/agm-separator/"],
+          ["AGM Separator Testing", "/quality-control/agm-separator-testing/"]
+        ]
+      },
+      inquiry: {
+        eyebrow: "Inquiry",
+        title: "Send your motorcycle battery separator needs",
+        text:
+          "Leave your contact first. We will help confirm the suitable AGM separator format for motorcycle battery production or samples.",
+        checklist: ["Motorcycle battery model", "Sheet size or roll width if available", "Sample needs", "Production or trial quantity"],
+        placeholder:
+          "Optional: motorcycle battery model, sheet size, roll width, sample needs or technical questions",
+        submit: "Send Contact",
+        submitting: "Sending...",
+        required: "Please leave your name and contact information before submitting.",
+        success:
+          "Thank you. We will contact you soon to confirm your AGM separator requirements.",
+        failure:
+          "Sorry, the inquiry could not be sent right now. Please try again later.",
+        emailFallback:
+          "Your email client has been opened with the contact details. Please send the email to complete your inquiry."
+      },
+      footer: footerCopy.en
+    },
+    zh: {
+      homePath: "/zh/",
+      languagePath: "/applications/agm-separator-for-motorcycle-battery/",
+      quote: "获取报价",
+      hero: {
+        eyebrow: "摩托车电池应用",
+        title: "用于摩托车启动电池的 AGM 隔板",
+        subtitle:
+          "面向紧凑型摩托车 VRLA 电池和启动电池生产，沟通 AGM 隔板卷材、片材和样品需求。",
+        primary: "沟通摩托车电池需求",
+        secondary: "留下联系方式",
+        proof: ["启动电池应用", "紧凑型电池沟通", "样品沟通支持"],
+        image: {
+          src: "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+          alt: "摩托车电池应用 AGM 隔板沟通",
+          width: 1200,
+          height: 900
+        }
+      },
+      overview: {
+        eyebrow: "应用重点",
+        title: "摩托车电池隔板沟通应关注紧凑结构",
+        paragraphs: [
+          "摩托车启动电池通常结构较紧凑，隔板需求应结合极板尺寸、装配方式和电池型号确认。",
+          "该应用下，买家常沟通隔板厚度、片材尺寸或卷材宽度、操作性能、吸酸性能和电阻。",
+          "如果最终电池型号仍在评估，也可以先留下联系方式。我们会协助确认样品或报价沟通需要哪些信息。"
+        ]
+      },
+      parameters: {
+        eyebrow: "规格沟通",
+        title: "摩托车电池隔板采购的关键沟通点",
+        text:
+          "摩托车电池隔板要求应结合客户电池型号、极板设计和装配流程评估。",
+        items: [
+          ["片材尺寸或卷材宽度", "根据紧凑型电池设计和裁切流程确认。"],
+          ["厚度", "结合极板间距、压缩和装配需求评估。"],
+          ["操作强度", "围绕裁切、放置和生产操作进行沟通。"],
+          ["吸酸性能", "根据电池设计和客户测试方法确认。"],
+          ["电阻", "结合目标性能和约定测试条件沟通。"],
+          ["样品评估", "即使参数未完全确定，也可以先开始样品沟通。"]
+        ]
+      },
+      forms: {
+        eyebrow: "产品形式",
+        title: "面向紧凑型电池装配的隔板形式",
+        items: [
+          [
+            "用于装配试样的预裁切片材",
+            "片材可支持摩托车电池型号评估和样品装配沟通。",
+            "/images/sheets1-900.webp",
+            "用于摩托车电池装配的 AGM 隔板片材",
+            900,
+            675
+          ],
+          [
+            "用于厂内裁切的卷材",
+            "卷材供应可支持客户按电池型号自行裁切隔板材料。",
+            "/images/viking-finished-separator-roll-900.webp",
+            "用于摩托车电池生产的 AGM 隔板卷材",
+            900,
+            675
+          ],
+          [
+            "摩托车启动电池应用",
+            "用于紧凑型摩托车 VRLA 电池隔板采购的应用图片位。",
+            "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+            "摩托车 VRLA 电池应用沟通",
+            1200,
+            900
+          ],
+          [
+            "片材边缘与细节评估",
+            "片材细节可在样品和规格确认时评估。",
+            "/images/evidence/agm-separator-sheets-detail-01.webp",
+            "摩托车电池隔板片材细节沟通",
+            1200,
+            900
+          ]
+        ]
+      },
+      applications: {
+        eyebrow: "摩托车电池用途",
+        title: "买家常见沟通的启动电池方向",
+        items: ["摩托车启动电池", "踏板车电池", "紧凑型 VRLA 电池", "小型发动机电池", "替换电池生产", "样品型号开发"]
+      },
+      quality: {
+        eyebrow: "质量关注点",
+        title: "紧凑型电池项目需要关注尺寸和操作表现",
+        text:
+          "摩托车电池隔板沟通常从尺寸、操作和样品确认开始。最终检测项目应以客户要求为准。",
+        cards: [
+          ["尺寸评估", "片材高度、宽度或卷材宽度应匹配电池型号需求。"],
+          ["操作评估", "可沟通隔板在裁切和装配过程中的状态。"],
+          ["检测沟通", "厚度、吸酸和电阻可结合目标要求评估。"]
+        ]
+      },
+      related: {
+        eyebrow: "相关页面",
+        title: "继续查看 VRLA、产品和质量信息",
+        items: [
+          ["VRLA 电池应用", "/zh/applications/agm-separator-for-vrla-battery/"],
+          ["AGM 隔板片材", "/zh/products/agm-separator-sheets/"],
+          ["AGM 隔板卷材", "/zh/products/agm-separator-rolls/"],
+          ["AGM 隔板产品", "/zh/products/agm-separator/"],
+          ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]
+        ]
+      },
+      inquiry: {
+        eyebrow: "询盘",
+        title: "发送摩托车电池隔板需求",
+        text:
+          "先留下联系方式即可，我们会协助确认适合摩托车电池生产或样品的 AGM 隔板形式。",
+        checklist: ["摩托车电池型号", "已有片材尺寸或卷材宽度", "样品需求", "试产或生产数量"],
+        placeholder: "可选：摩托车电池型号、片材尺寸、卷材宽度、样品需求或技术问题",
+        submit: "提交联系方式",
+        submitting: "发送中...",
+        required: "请先填写姓名和微信或手机号。",
+        success: "感谢您留下联系方式，我们会尽快联系您确认 AGM 隔板需求。",
+        failure: "抱歉，询盘暂时未能发送，请稍后再试。",
+        emailFallback:
+          "已为您打开邮件客户端并填入联系方式，请发送邮件完成询盘。"
+      },
+      footer: footerCopy.zh
+    }
+  },
+  agmSeparatorEnergyStorageApplication: {
+    en: {
+      homePath: "/",
+      languagePath: "/zh/applications/agm-separator-for-energy-storage-battery/",
+      quote: "Request a Quote",
+      hero: {
+        eyebrow: "Energy Storage Battery Application",
+        title: "AGM Separator for Lead-Acid Energy Storage Batteries",
+        subtitle:
+          "AGM separator discussion for lead-acid energy storage, backup power and reserve power VRLA battery projects.",
+        primary: "Discuss Energy Storage Battery Needs",
+        secondary: "Send Contact Information",
+        proof: ["Backup energy storage", "Stable supply discussion", "Quality review support"],
+        image: {
+          src: "/images/applications/energy-storage-lead-acid-battery-application-1200.webp",
+          alt: "AGM separator discussion for lead-acid energy storage battery applications",
+          width: 1200,
+          height: 900
+        }
+      },
+      overview: {
+        eyebrow: "Application Focus",
+        title: "Energy storage battery projects need stable separator communication",
+        paragraphs: [
+          "Lead-acid energy storage and backup power battery projects often require repeated supply, stable specification communication and quality review before sample or order confirmation.",
+          "Separator discussion should consider battery design, operating conditions, expected testing items and whether the customer needs roll material, sheet pieces or custom size support.",
+          "If the target specification is not final, leave your contact first. We will help confirm the useful information for AGM separator sample or quotation discussion."
+        ]
+      },
+      parameters: {
+        eyebrow: "Specification Discussion",
+        title: "Key points for energy storage battery separator sourcing",
+        text:
+          "Energy storage lead-acid battery projects should align separator requirements with battery structure, production workflow and customer quality expectations.",
+        items: [
+          ["Thickness and basis weight", "Reviewed with battery structure, compression and electrolyte retention needs."],
+          ["Acid absorption", "Discussed according to customer testing method and battery design."],
+          ["Electrical resistance", "Confirmed together with performance goals and agreed test conditions."],
+          ["Consistency", "Important for buyers planning repeated or project-based supply."],
+          ["Roll or sheet format", "Selected according to production workflow, cutting and assembly needs."],
+          ["Packing and shipment", "Export packing and batch delivery requirements can be discussed before order."]
+        ]
+      },
+      forms: {
+        eyebrow: "Product Format",
+        title: "Separator supply for backup and storage battery projects",
+        items: [
+          [
+            "Roll supply for repeated production",
+            "AGM separator rolls can support customers that need in-house cutting and steady production planning.",
+            "/images/evidence/agm-separator-roll-warehouse-01.webp",
+            "AGM separator roll supply for energy storage battery production",
+            1200,
+            900
+          ],
+          [
+            "Sheet supply for samples and assembly",
+            "Pre-cut sheets can support battery model review, sample comparison and trial assembly.",
+            "/images/sheets1-900.webp",
+            "AGM separator sheets for energy storage battery samples",
+            900,
+            675
+          ],
+          [
+            "Energy storage battery application",
+            "Application image slot for lead-acid energy storage and backup power battery separator sourcing.",
+            "/images/applications/energy-storage-lead-acid-battery-application-1200.webp",
+            "Lead-acid energy storage battery application discussion",
+            1200,
+            900
+          ],
+          [
+            "Packing and shipment preparation",
+            "Packing method and export shipment preparation can be discussed before order arrangement.",
+            "/images/evidence/shipping-pallet-01.webp",
+            "AGM separator packing for energy storage battery projects",
+            1200,
+            900
+          ]
+        ]
+      },
+      applications: {
+        eyebrow: "Energy Storage Uses",
+        title: "Common backup and reserve power directions buyers discuss",
+        items: ["Lead-acid energy storage batteries", "Backup power batteries", "Reserve power systems", "Telecom backup power", "Solar backup lead-acid batteries", "Industrial standby batteries"]
+      },
+      quality: {
+        eyebrow: "Quality Considerations",
+        title: "Stable supply should be supported by clear quality discussion",
+        text:
+          "Energy storage battery projects may require consistency across batches. Test items and acceptance values should be confirmed according to customer standards.",
+        cards: [
+          ["Lot-to-lot discussion", "Repeated supply should keep agreed specification communication clear."],
+          ["Testing requirements", "Thickness, basis weight, absorption and resistance can be reviewed as required."],
+          ["Delivery planning", "Packing, quantity and shipment schedule can be discussed with the order plan."]
+        ]
+      },
+      related: {
+        eyebrow: "Related Pages",
+        title: "Continue with VRLA, product and quality details",
+        items: [
+          ["VRLA Battery Applications", "/applications/agm-separator-for-vrla-battery/"],
+          ["AGM Separator Product", "/products/agm-separator/"],
+          ["AGM Separator Rolls", "/products/agm-separator-rolls/"],
+          ["AGM Separator Sheets", "/products/agm-separator-sheets/"],
+          ["AGM Separator Testing", "/quality-control/agm-separator-testing/"]
+        ]
+      },
+      inquiry: {
+        eyebrow: "Inquiry",
+        title: "Send your energy storage battery separator needs",
+        text:
+          "Leave your contact first. We will help confirm the suitable AGM separator specification for lead-acid energy storage or backup power projects.",
+        checklist: ["Energy storage or backup power application", "Roll or sheet format", "Target specification if available", "Sample or order planning needs"],
+        placeholder:
+          "Optional: energy storage battery application, roll or sheet need, sample quantity, target specification or technical questions",
+        submit: "Send Contact",
+        submitting: "Sending...",
+        required: "Please leave your name and contact information before submitting.",
+        success:
+          "Thank you. We will contact you soon to confirm your AGM separator requirements.",
+        failure:
+          "Sorry, the inquiry could not be sent right now. Please try again later.",
+        emailFallback:
+          "Your email client has been opened with the contact details. Please send the email to complete your inquiry."
+      },
+      footer: footerCopy.en
+    },
+    zh: {
+      homePath: "/zh/",
+      languagePath: "/applications/agm-separator-for-energy-storage-battery/",
+      quote: "获取报价",
+      hero: {
+        eyebrow: "储能电池应用",
+        title: "用于铅酸储能电池的 AGM 隔板",
+        subtitle:
+          "面向铅酸储能、后备电源和备用电源 VRLA 电池项目，沟通 AGM 隔板卷材、片材和规格要求。",
+        primary: "沟通储能电池需求",
+        secondary: "留下联系方式",
+        proof: ["后备储能应用", "稳定供应沟通", "质量评估支持"],
+        image: {
+          src: "/images/applications/energy-storage-lead-acid-battery-application-1200.webp",
+          alt: "铅酸储能电池应用 AGM 隔板沟通",
+          width: 1200,
+          height: 900
+        }
+      },
+      overview: {
+        eyebrow: "应用重点",
+        title: "储能电池项目需要稳定的隔板规格沟通",
+        paragraphs: [
+          "铅酸储能和后备电源电池项目通常关注持续供货、稳定规格沟通和样品或订单前的质量评估。",
+          "隔板沟通应结合电池设计、使用条件、预期检测项目，以及客户需要卷材、片材还是定制尺寸支持。",
+          "如果目标规格还未最终确定，也可以先留下联系方式。我们会协助确认 AGM 隔板样品或报价沟通所需信息。"
+        ]
+      },
+      parameters: {
+        eyebrow: "规格沟通",
+        title: "储能电池隔板采购的关键沟通点",
+        text:
+          "铅酸储能电池项目应结合电池结构、生产流程和客户质量期望确认隔板要求。",
+        items: [
+          ["厚度和克重", "结合电池结构、压缩和电解液保持需求评估。"],
+          ["吸酸性能", "根据客户测试方法和电池设计沟通。"],
+          ["电阻", "结合性能目标和约定测试条件确认。"],
+          ["一致性", "对项目型或重复供应买家较为重要。"],
+          ["卷材或片材形式", "根据生产流程、裁切和装配需求选择。"],
+          ["包装和出运", "出口包装和批量交付要求可在订单前沟通。"]
+        ]
+      },
+      forms: {
+        eyebrow: "产品形式",
+        title: "面向后备和储能电池项目的隔板供应",
+        items: [
+          [
+            "面向持续生产的卷材供应",
+            "AGM 隔板卷材可支持需要厂内裁切和稳定生产计划的客户。",
+            "/images/evidence/agm-separator-roll-warehouse-01.webp",
+            "用于储能电池生产的 AGM 隔板卷材供应",
+            1200,
+            900
+          ],
+          [
+            "面向样品和装配的片材供应",
+            "预裁切片材可支持电池型号评估、样品对比和试装配。",
+            "/images/sheets1-900.webp",
+            "用于储能电池样品的 AGM 隔板片材",
+            900,
+            675
+          ],
+          [
+            "储能电池应用",
+            "用于铅酸储能和后备电源电池隔板采购的应用图片位。",
+            "/images/applications/energy-storage-lead-acid-battery-application-1200.webp",
+            "铅酸储能电池应用沟通",
+            1200,
+            900
+          ],
+          [
+            "包装与出运准备",
+            "包装方式和出口发运准备可在订单安排前沟通。",
+            "/images/evidence/shipping-pallet-01.webp",
+            "储能电池项目 AGM 隔板包装",
+            1200,
+            900
+          ]
+        ]
+      },
+      applications: {
+        eyebrow: "储能电池用途",
+        title: "买家常见沟通的后备和备用电源方向",
+        items: ["铅酸储能电池", "后备电源电池", "备用电源系统", "通信后备电源", "太阳能后备铅酸电池", "工业备用电池"]
+      },
+      quality: {
+        eyebrow: "质量关注点",
+        title: "稳定供应需要清晰的质量沟通支持",
+        text:
+          "储能电池项目可能关注不同批次的一致性。测试项目和验收值应根据客户标准确认。",
+        cards: [
+          ["批次沟通", "重复供应应保持约定规格沟通清晰。"],
+          ["检测要求", "厚度、克重、吸酸和电阻可按要求评估。"],
+          ["交付计划", "包装、数量和发运周期可结合订单计划沟通。"]
+        ]
+      },
+      related: {
+        eyebrow: "相关页面",
+        title: "继续查看 VRLA、产品和质量信息",
+        items: [
+          ["VRLA 电池应用", "/zh/applications/agm-separator-for-vrla-battery/"],
+          ["AGM 隔板产品", "/zh/products/agm-separator/"],
+          ["AGM 隔板卷材", "/zh/products/agm-separator-rolls/"],
+          ["AGM 隔板片材", "/zh/products/agm-separator-sheets/"],
+          ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]
+        ]
+      },
+      inquiry: {
+        eyebrow: "询盘",
+        title: "发送储能电池隔板需求",
+        text:
+          "先留下联系方式即可，我们会协助确认适合铅酸储能或后备电源项目的 AGM 隔板规格。",
+        checklist: ["储能或后备电源应用", "卷材或片材形式", "已有目标规格", "样品或订单计划"],
+        placeholder: "可选：储能电池应用、卷材或片材需求、样品数量、目标规格或技术问题",
+        submit: "提交联系方式",
+        submitting: "发送中...",
+        required: "请先填写姓名和微信或手机号。",
+        success: "感谢您留下联系方式，我们会尽快联系您确认 AGM 隔板需求。",
+        failure: "抱歉，询盘暂时未能发送，请稍后再试。",
+        emailFallback:
+          "已为您打开邮件客户端并填入联系方式，请发送邮件完成询盘。"
+      },
+      footer: footerCopy.zh
+    }
+  },
   agmSeparatorTesting: {
     en: {
       homePath: "/",
@@ -2127,15 +2892,6 @@ export function ProductPage({
                   className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
                 />
               </label>
-              <label className="grid gap-2">
-                <span className="font-bold">{ui.fields.email}</span>
-                <input
-                  name="email"
-                  type="email"
-                  placeholder={ui.placeholders.email}
-                  className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
-                />
-              </label>
             </div>
             <label className="mt-5 grid gap-2">
               <span className="font-bold">{ui.fields.interestedProduct}</span>
@@ -2342,7 +3098,6 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
           name: "姓名",
           contact: "联系方式",
           company: "公司",
-          email: "邮箱",
           interestedProduct: "感兴趣产品",
           message: "留言"
         }
@@ -2351,7 +3106,6 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
           name: "Name",
           contact: "Contact",
           company: "Company",
-          email: "Email",
           interestedProduct: "Interested product",
           message: "Message"
         };
@@ -2359,7 +3113,6 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
     `${labels.name}: ${formData.get("name") || ""}`,
     `${labels.contact}: ${formData.get("contact") || ""}`,
     `${labels.company}: ${formData.get("company") || ""}`,
-    `${labels.email}: ${formData.get("email") || ""}`,
     `${labels.interestedProduct}: ${formData.get("interestedProduct") || ""}`,
     `${labels.message}: ${formData.get("message") || ""}`
   ];

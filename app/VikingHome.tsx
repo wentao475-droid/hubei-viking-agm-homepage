@@ -175,7 +175,6 @@ const copy = {
         name: "Name",
         contact: "Email / WhatsApp / Phone",
         company: "Company",
-        email: "Email",
         interestedProduct: "Interested Product",
         message: "Message"
       },
@@ -183,7 +182,6 @@ const copy = {
         name: "Your full name",
         contact: "Email, WhatsApp or phone number",
         company: "Company name",
-        email: "name@company.com",
         interestedProduct: "AGM separator rolls, sheets, or not sure yet",
         message: "Optional: battery application, quantity, sample needs or technical questions"
       },
@@ -336,7 +334,6 @@ const copy = {
         name: "姓名",
         contact: "微信或手机号",
         company: "公司",
-        email: "邮箱",
         interestedProduct: "感兴趣产品",
         message: "补充说明"
       },
@@ -344,7 +341,6 @@ const copy = {
         name: "您的姓名",
         contact: "微信号或手机号",
         company: "公司名称",
-        email: "name@company.com",
         interestedProduct: "AGM 隔板卷材、片材或暂不确定",
         message: "可选：电池应用、数量、样品需求或技术问题"
       },
@@ -1073,7 +1069,6 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
               <Input name="name" label={t.form.fields.name} placeholder={t.form.placeholders.name} required />
               <Input name="contact" label={t.form.fields.contact} placeholder={t.form.placeholders.contact} required />
               <Input name="company" label={t.form.fields.company} placeholder={t.form.placeholders.company} />
-              <Input name="email" type="email" label={t.form.fields.email} placeholder={t.form.placeholders.email} />
               <div className="sm:col-span-2">
                 <Input
                   name="interestedProduct"
@@ -1467,7 +1462,6 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
           name: "姓名",
           contact: "联系方式",
           company: "公司",
-          email: "邮箱",
           interestedProduct: "感兴趣产品",
           message: "留言"
         }
@@ -1476,7 +1470,6 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
           name: "Name",
           contact: "Contact",
           company: "Company",
-          email: "Email",
           interestedProduct: "Interested product",
           message: "Message"
         };
@@ -1485,7 +1478,6 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
     ["name", labels.name],
     ["contact", labels.contact],
     ["company", labels.company],
-    ["email", labels.email],
     ["interestedProduct", labels.interestedProduct],
     ["message", labels.message]
   ] as const;

@@ -6,6 +6,12 @@ const outDir = join(root, "out");
 const requiredFiles = [
   "index.html",
   "zh/index.html",
+  "applications/agm-separator-for-ups-battery/index.html",
+  "zh/applications/agm-separator-for-ups-battery/index.html",
+  "applications/agm-separator-for-motorcycle-battery/index.html",
+  "zh/applications/agm-separator-for-motorcycle-battery/index.html",
+  "applications/agm-separator-for-energy-storage-battery/index.html",
+  "zh/applications/agm-separator-for-energy-storage-battery/index.html",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -73,6 +79,21 @@ if (
   pass("sitemap.xml lists both public pages");
 } else {
   fail("sitemap.xml does not list both public pages");
+}
+
+const p0ApplicationUrls = [
+  "https://www.vikingagm.com/applications/agm-separator-for-ups-battery/",
+  "https://www.vikingagm.com/zh/applications/agm-separator-for-ups-battery/",
+  "https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/",
+  "https://www.vikingagm.com/zh/applications/agm-separator-for-motorcycle-battery/",
+  "https://www.vikingagm.com/applications/agm-separator-for-energy-storage-battery/",
+  "https://www.vikingagm.com/zh/applications/agm-separator-for-energy-storage-battery/"
+];
+
+if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
+  pass("sitemap.xml lists P0 application pages");
+} else {
+  fail("sitemap.xml is missing one or more P0 application pages");
 }
 
 if (robots.includes("Sitemap: https://www.vikingagm.com/sitemap.xml")) {

@@ -18,6 +18,24 @@ const applicationsNavItems = {
       description:
         "Application-focused separator discussion for VRLA lead-acid batteries.",
       href: "/applications/agm-separator-for-vrla-battery/"
+    },
+    {
+      title: "UPS Battery Separator",
+      description:
+        "AGM separator discussion for UPS and standby VRLA batteries.",
+      href: "/applications/agm-separator-for-ups-battery/"
+    },
+    {
+      title: "Motorcycle Battery Separator",
+      description:
+        "Separator format discussion for compact motorcycle starting batteries.",
+      href: "/applications/agm-separator-for-motorcycle-battery/"
+    },
+    {
+      title: "Energy Storage Battery Separator",
+      description:
+        "AGM separator discussion for lead-acid storage and backup power batteries.",
+      href: "/applications/agm-separator-for-energy-storage-battery/"
     }
   ],
   zh: [
@@ -30,6 +48,21 @@ const applicationsNavItems = {
       title: "VRLA 电池 AGM 隔板应用",
       description: "面向 VRLA 铅酸电池应用的隔板选型说明。",
       href: "/zh/applications/agm-separator-for-vrla-battery/"
+    },
+    {
+      title: "UPS 电池 AGM 隔板",
+      description: "面向 UPS 和备用电源 VRLA 电池的隔板沟通。",
+      href: "/zh/applications/agm-separator-for-ups-battery/"
+    },
+    {
+      title: "摩托车电池 AGM 隔板",
+      description: "面向紧凑型摩托车启动电池的隔板形式沟通。",
+      href: "/zh/applications/agm-separator-for-motorcycle-battery/"
+    },
+    {
+      title: "储能电池 AGM 隔板",
+      description: "面向铅酸储能和后备电源电池的隔板沟通。",
+      href: "/zh/applications/agm-separator-for-energy-storage-battery/"
     }
   ]
 } as const;

@@ -5,6 +5,9 @@ export const SITE_URL = "https://www.vikingagm.com";
 const PREVIEW_IMAGE = `${SITE_URL}/images/viking-finished-separator-roll-900.webp`;
 const SHEETS_PREVIEW_IMAGE = `${SITE_URL}/images/sheets1-900.webp`;
 const QUALITY_PREVIEW_IMAGE = `${SITE_URL}/images/agm-quality-control-1200.webp`;
+const UPS_APPLICATION_IMAGE = `${SITE_URL}/images/applications/ups-vrla-battery-application-1200.webp`;
+const MOTORCYCLE_APPLICATION_IMAGE = `${SITE_URL}/images/applications/motorcycle-vrla-battery-application-1200.webp`;
+const ENERGY_STORAGE_APPLICATION_IMAGE = `${SITE_URL}/images/applications/energy-storage-lead-acid-battery-application-1200.webp`;
 
 const homeSeo = {
   en: {
@@ -276,6 +279,168 @@ const agmSeparatorVrlaApplicationSeo = {
   }
 } as const;
 
+const agmSeparatorUpsApplicationSeo = {
+  en: {
+    path: "/applications/agm-separator-for-ups-battery/",
+    alternatePath: "/zh/applications/agm-separator-for-ups-battery/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator for UPS VRLA Batteries",
+    description:
+      "AGM separator discussion for UPS, standby power and backup VRLA lead-acid battery production. Send your contact for roll, sheet or specification support.",
+    keywords: [
+      "AGM separator for UPS battery",
+      "UPS VRLA battery separator",
+      "standby battery separator",
+      "backup power battery separator",
+      "AGM battery separator"
+    ],
+    pageName: "AGM Separator for UPS Battery Applications",
+    serviceDescription:
+      "Application-focused AGM glass fiber separator discussion for UPS, standby power and backup VRLA lead-acid battery manufacturing.",
+    serviceType: "AGM separator for UPS VRLA battery applications",
+    image: UPS_APPLICATION_IMAGE,
+    breadcrumbs: ["Home", "Applications", "AGM Separator for UPS Battery"]
+  },
+  zh: {
+    path: "/zh/applications/agm-separator-for-ups-battery/",
+    alternatePath: "/applications/agm-separator-for-ups-battery/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "UPS VRLA 电池 AGM 隔板 | 湖北维京AGM",
+    description:
+      "面向 UPS、备用电源和后备电源 VRLA 铅酸电池生产，沟通 AGM 隔板卷材、片材和规格要求。",
+    keywords: [
+      "UPS 电池 AGM 隔板",
+      "UPS VRLA 电池隔板",
+      "备用电源电池隔板",
+      "后备电源电池隔板",
+      "AGM 电池隔板"
+    ],
+    pageName: "用于 UPS 电池应用的 AGM 隔板",
+    serviceDescription:
+      "面向 UPS、备用电源和后备电源 VRLA 铅酸电池制造的 AGM 玻璃纤维隔板应用沟通。",
+    serviceType: "UPS VRLA 电池应用 AGM 隔板",
+    image: UPS_APPLICATION_IMAGE,
+    breadcrumbs: ["首页", "应用", "UPS 电池 AGM 隔板"]
+  }
+} as const;
+
+const agmSeparatorMotorcycleApplicationSeo = {
+  en: {
+    path: "/applications/agm-separator-for-motorcycle-battery/",
+    alternatePath: "/zh/applications/agm-separator-for-motorcycle-battery/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator for Motorcycle Starting Batteries",
+    description:
+      "AGM separator discussion for compact motorcycle VRLA and starting battery production, including roll, sheet and sample requirements.",
+    keywords: [
+      "AGM separator for motorcycle battery",
+      "motorcycle battery separator",
+      "motorcycle VRLA battery separator",
+      "starter battery separator",
+      "AGM separator sheets"
+    ],
+    pageName: "AGM Separator for Motorcycle Battery Applications",
+    serviceDescription:
+      "Application-focused AGM glass fiber separator discussion for motorcycle starting batteries and compact VRLA lead-acid battery production.",
+    serviceType: "AGM separator for motorcycle battery applications",
+    image: MOTORCYCLE_APPLICATION_IMAGE,
+    breadcrumbs: ["Home", "Applications", "AGM Separator for Motorcycle Battery"]
+  },
+  zh: {
+    path: "/zh/applications/agm-separator-for-motorcycle-battery/",
+    alternatePath: "/applications/agm-separator-for-motorcycle-battery/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "摩托车启动电池 AGM 隔板 | 湖北维京AGM",
+    description:
+      "面向紧凑型摩托车 VRLA 电池和启动电池生产，沟通 AGM 隔板卷材、片材和样品需求。",
+    keywords: [
+      "摩托车电池 AGM 隔板",
+      "摩托车 VRLA 电池隔板",
+      "启动电池隔板",
+      "AGM 隔板片材",
+      "AGM 电池隔板"
+    ],
+    pageName: "用于摩托车电池应用的 AGM 隔板",
+    serviceDescription:
+      "面向摩托车启动电池和紧凑型 VRLA 铅酸电池生产的 AGM 玻璃纤维隔板应用沟通。",
+    serviceType: "摩托车电池应用 AGM 隔板",
+    image: MOTORCYCLE_APPLICATION_IMAGE,
+    breadcrumbs: ["首页", "应用", "摩托车电池 AGM 隔板"]
+  }
+} as const;
+
+const agmSeparatorEnergyStorageApplicationSeo = {
+  en: {
+    path: "/applications/agm-separator-for-energy-storage-battery/",
+    alternatePath: "/zh/applications/agm-separator-for-energy-storage-battery/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator for Lead-Acid Energy Storage Batteries",
+    description:
+      "AGM separator discussion for lead-acid energy storage, backup power and reserve power VRLA battery projects.",
+    keywords: [
+      "AGM separator for energy storage battery",
+      "lead acid energy storage battery separator",
+      "backup power battery separator",
+      "reserve power battery separator",
+      "VRLA battery separator"
+    ],
+    pageName: "AGM Separator for Energy Storage Battery Applications",
+    serviceDescription:
+      "Application-focused AGM glass fiber separator discussion for lead-acid energy storage, backup power and reserve power VRLA battery projects.",
+    serviceType: "AGM separator for lead-acid energy storage battery applications",
+    image: ENERGY_STORAGE_APPLICATION_IMAGE,
+    breadcrumbs: ["Home", "Applications", "AGM Separator for Energy Storage Battery"]
+  },
+  zh: {
+    path: "/zh/applications/agm-separator-for-energy-storage-battery/",
+    alternatePath: "/applications/agm-separator-for-energy-storage-battery/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "铅酸储能电池 AGM 隔板 | 湖北维京AGM",
+    description:
+      "面向铅酸储能、后备电源和备用电源 VRLA 电池项目，沟通 AGM 隔板卷材、片材和规格要求。",
+    keywords: [
+      "储能电池 AGM 隔板",
+      "铅酸储能电池隔板",
+      "后备电源电池隔板",
+      "备用电源电池隔板",
+      "VRLA 电池隔板"
+    ],
+    pageName: "用于储能电池应用的 AGM 隔板",
+    serviceDescription:
+      "面向铅酸储能、后备电源和备用电源 VRLA 电池项目的 AGM 玻璃纤维隔板应用沟通。",
+    serviceType: "铅酸储能电池应用 AGM 隔板",
+    image: ENERGY_STORAGE_APPLICATION_IMAGE,
+    breadcrumbs: ["首页", "应用", "储能电池 AGM 隔板"]
+  }
+} as const;
+
+type ApplicationDetailSeo = {
+  path: string;
+  locale: string;
+  language: string;
+  siteName: string;
+  title: string;
+  description: string;
+  keywords: readonly string[];
+  pageName: string;
+  serviceDescription: string;
+  serviceType: string;
+  image: string;
+  breadcrumbs: readonly string[];
+};
+
 const whatIsAgmSeparatorSeo = {
   en: {
     path: "/blog/what-is-agm-separator/",
@@ -522,6 +687,63 @@ export function buildAgmSeparatorVrlaApplicationMetadata(
       height: 675
     }
   });
+}
+
+function buildApplicationDetailMetadata(
+  lang: Lang,
+  current: ApplicationDetailSeo,
+  enPath: string,
+  zhPath: string
+): Metadata {
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath,
+    zhPath,
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: current.image,
+      width: 1200,
+      height: 900
+    }
+  });
+}
+
+export function buildAgmSeparatorUpsApplicationMetadata(
+  lang: Lang
+): Metadata {
+  return buildApplicationDetailMetadata(
+    lang,
+    agmSeparatorUpsApplicationSeo[lang],
+    "/applications/agm-separator-for-ups-battery/",
+    "/zh/applications/agm-separator-for-ups-battery/"
+  );
+}
+
+export function buildAgmSeparatorMotorcycleApplicationMetadata(
+  lang: Lang
+): Metadata {
+  return buildApplicationDetailMetadata(
+    lang,
+    agmSeparatorMotorcycleApplicationSeo[lang],
+    "/applications/agm-separator-for-motorcycle-battery/",
+    "/zh/applications/agm-separator-for-motorcycle-battery/"
+  );
+}
+
+export function buildAgmSeparatorEnergyStorageApplicationMetadata(
+  lang: Lang
+): Metadata {
+  return buildApplicationDetailMetadata(
+    lang,
+    agmSeparatorEnergyStorageApplicationSeo[lang],
+    "/applications/agm-separator-for-energy-storage-battery/",
+    "/zh/applications/agm-separator-for-energy-storage-battery/"
+  );
 }
 
 export function buildWhatIsAgmSeparatorMetadata(lang: Lang): Metadata {
@@ -995,6 +1217,110 @@ export function AgmSeparatorVrlaApplicationStructuredData({
   };
 
   return <JsonLd data={data} />;
+}
+
+function ApplicationDetailStructuredData({
+  lang,
+  current
+}: {
+  lang: Lang;
+  current: ApplicationDetailSeo;
+}) {
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: current.image,
+          width: 1200,
+          height: 900
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: current.pageName,
+        description: current.serviceDescription,
+        serviceType: current.serviceType,
+        image: current.image,
+        provider: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        areaServed: "Worldwide",
+        url,
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}#applications`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorUpsApplicationStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  return (
+    <ApplicationDetailStructuredData
+      lang={lang}
+      current={agmSeparatorUpsApplicationSeo[lang]}
+    />
+  );
+}
+
+export function AgmSeparatorMotorcycleApplicationStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  return (
+    <ApplicationDetailStructuredData
+      lang={lang}
+      current={agmSeparatorMotorcycleApplicationSeo[lang]}
+    />
+  );
+}
+
+export function AgmSeparatorEnergyStorageApplicationStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  return (
+    <ApplicationDetailStructuredData
+      lang={lang}
+      current={agmSeparatorEnergyStorageApplicationSeo[lang]}
+    />
+  );
 }
 
 export function WhatIsAgmSeparatorStructuredData({ lang }: { lang: Lang }) {
