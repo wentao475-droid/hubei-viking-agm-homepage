@@ -3,9 +3,18 @@ out/
 node_modules/
 .npm-cache/
 
+.DS_Store
+**/.DS_Store
+
 *.log
 .env*
 !.env.example
 
 dist/
 coverage/
+
+# Local-only CMS tools. The public site uses content/site-content.json and
+# public/images/cms/ at build time, but the editor itself stays off GitHub.
+scripts/cms-server.mjs
+scripts/export-site-content.mjs
+docs/local-cms.md

@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "cms": "node scripts/cms-server.mjs",
+    "cms:export": "node scripts/export-site-content.mjs",
     "build": "next build",
     "build:volcengine": "npm run build && npm run verify:static",
     "verify:static": "node scripts/verify-static-export.mjs",
@@ -14,7 +16,8 @@
   "dependencies": {
     "next": "^14.2.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sharp": "^0.35.2"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",

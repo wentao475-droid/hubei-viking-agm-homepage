@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useState } from "react";
+import { homeContent } from "./cms-content";
 import { SiteHeader } from "./SiteHeader";
 
 export type Lang = "en" | "zh";
@@ -45,7 +46,13 @@ const copy = {
         "Focused manufacturing and stable supply of AGM glass fiber separators for lead-acid battery producers.",
       quote: "Request a Quote",
       products: "View Products",
-      proof: ["AGM glass fiber separator", "Process-controlled production", "Export-ready supply"]
+      proof: ["AGM glass fiber separator", "Process-controlled production", "Export-ready supply"],
+      image: {
+        src: "/images/agm-hero-production-1600.webp",
+        alt: "AGM separator production line",
+        width: 1600,
+        height: 1000
+      }
     },
     stats: [
       { value: "AGM", label: "Glass fiber separator manufacturing" },
@@ -61,6 +68,12 @@ const copy = {
         "Viking Technology has passed ISO9001:2015 quality management system certification. Products can be customized according to customer requirements and are widely used in lead-acid battery applications."
       ],
       imageLabel: "Hubei Viking Technology office and manufacturing base",
+      image: {
+        src: "/images/viking-company-building-900.webp",
+        alt: "Hubei Viking Technology office and manufacturing base",
+        width: 900,
+        height: 675
+      },
       cards: [
         ["Established in 2015", "Registered capital of RMB 30 million and a long-term focus on AGM separator manufacturing."],
         ["65 mu production site", "Located in Ezhou Economic and Technological Development Zone, Hubei Province."],
@@ -82,8 +95,8 @@ const copy = {
         ["Consistent Quality", "Lot-to-lot control for customers requiring dependable mass production supply."]
       ],
       images: [
-        ["Finished separator roll", "AGM separator rolls prepared for battery production and converting lines."],
-        ["Separator sheets", "Precision-cut separator sheets for specification review and sample discussion."]
+        ["Finished separator roll", "AGM separator rolls prepared for battery production and converting lines.", "/images/viking-finished-separator-roll-900.webp"],
+        ["Separator sheets", "Precision-cut separator sheets for specification review and sample discussion.", "/images/viking-separator-sheets-900.webp"]
       ]
     },
     applications: {
@@ -107,7 +120,13 @@ const copy = {
         ["Line-side monitoring", "Equipment and production readings make process follow-up more concrete."],
         ["Packaging and shipment", "Finished rolls can be discussed by size, packing method and export schedule."],
         ["Custom specifications", "Thickness, width, roll format and application-oriented requirements can be reviewed."]
-      ]
+      ],
+      image: {
+        src: "/images/agm-factory-capability-1200.webp",
+        alt: "AGM separator manufacturing floor",
+        width: 1200,
+        height: 900
+      }
     },
     process: {
       eyebrow: "Manufacturing Process",
@@ -124,7 +143,13 @@ const copy = {
         "Quality analysis",
         "Product release",
         "Customer follow-up"
-      ]
+      ],
+      image: {
+        src: "/images/manufacturing-process-1400.webp",
+        alt: "AGM separator manufacturing process flowchart",
+        width: 1400,
+        height: 1000
+      }
     },
     quality: {
       eyebrow: "Quality Control",
@@ -136,7 +161,13 @@ const copy = {
         "Incoming and in-process checks",
         "Finished-product quality analysis",
         "Release and customer follow-up"
-      ]
+      ],
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM separator quality control testing",
+        width: 1200,
+        height: 900
+      }
     },
     certifications: {
       eyebrow: "Certifications & Compliance",
@@ -205,7 +236,17 @@ const copy = {
         Products: ["AGM Separator Rolls", "Custom Thickness", "Custom Width"],
         Applications: ["VRLA", "UPS", "Automotive", "Energy Storage"],
         Contact: ["Request a Quote", "Technical Inquiry", "Company Brochure"]
-      }
+      },
+      logo: {
+        src: "/images/viking-logo-footer-320.webp",
+        alt: "Viking Technology logo",
+        width: 320,
+        height: 320
+      },
+      qrImages: [
+        ["Official WeChat account", "/images/qrcode_for_logo.jpg"],
+        ["Mobile website", "/images/website-logo-180.webp"]
+      ]
     }
   },
   zh: {
@@ -224,7 +265,13 @@ const copy = {
         "专注为铅酸电池生产企业提供 AGM 玻璃纤维隔板制造与稳定供货。",
       quote: "获取报价",
       products: "查看产品",
-      proof: ["AGM 玻璃纤维隔板", "生产过程控制", "具备出口供应能力"]
+      proof: ["AGM 玻璃纤维隔板", "生产过程控制", "具备出口供应能力"],
+      image: {
+        src: "/images/agm-hero-production-1600.webp",
+        alt: "AGM 隔板生产线",
+        width: 1600,
+        height: 1000
+      }
     },
     stats: [
       { value: "AGM", label: "玻璃纤维隔板制造" },
@@ -240,6 +287,12 @@ const copy = {
         "维京科技始终坚持以客户满意为核心，以稳定品质、准时交付和持续改进为目标，致力于为客户提供可靠的产品与高效的服务，成为客户值得信赖的长期合作伙伴。"
       ],
       imageLabel: "湖北维京科技办公及制造基地",
+      image: {
+        src: "/images/viking-company-building-900.webp",
+        alt: "湖北维京科技办公及制造基地",
+        width: 900,
+        height: 675
+      },
       cards: [
         ["2015年成立", "注册资本3000万元，长期专注AGM隔板相关产品。"],
         ["65亩厂区", "位于湖北省鄂州市经济技术开发区。"],
@@ -261,8 +314,8 @@ const copy = {
         ["品质一致", "通过批次控制满足客户连续生产需求。"]
       ],
       images: [
-        ["成品隔板卷", "适用于电池生产和转化工序的 AGM 隔板卷材。"],
-        ["隔板切片", "用于规格评估、样品沟通和电池装配确认的精切片材。"]
+        ["成品隔板卷", "适用于电池生产和转化工序的 AGM 隔板卷材。", "/images/viking-finished-separator-roll-900.webp"],
+        ["隔板切片", "用于规格评估、样品沟通和电池装配确认的精切片材。", "/images/viking-separator-sheets-900.webp"]
       ]
     },
     applications: {
@@ -280,7 +333,13 @@ const copy = {
         ["现场过程监控", "设备与生产读数让过程跟进更具体。"],
         ["包装与出运", "可围绕卷径、包装方式和出口节奏进行确认。"],
         ["规格定制", "可沟通厚度、宽度、卷径及不同应用要求。"]
-      ]
+      ],
+      image: {
+        src: "/images/agm-factory-capability-1200.webp",
+        alt: "AGM 隔板生产车间",
+        width: 1200,
+        height: 900
+      }
     },
     process: {
       eyebrow: "制造流程",
@@ -297,14 +356,26 @@ const copy = {
         "质量分析",
         "产品出厂",
         "客户跟进"
-      ]
+      ],
+      image: {
+        src: "/images/manufacturing-process-1400.webp",
+        alt: "AGM 隔板制造流程图",
+        width: 1400,
+        height: 1000
+      }
     },
     quality: {
       eyebrow: "质量控制",
       title: "证照、检测与出厂闭环",
       text:
         "质量保障以闭环方式呈现：资质材料、过程检验、成品分析、出厂控制和客户反馈，帮助客户更清楚评估合作基础。",
-      items: ["资质材料可供核验", "来料与过程检验", "成品质量分析", "出厂与客户跟进"]
+      items: ["资质材料可供核验", "来料与过程检验", "成品质量分析", "出厂与客户跟进"],
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM 隔板质量检测",
+        width: 1200,
+        height: 900
+      }
     },
     certifications: {
       eyebrow: "资质认证",
@@ -362,7 +433,17 @@ const copy = {
         产品: ["AGM 隔板卷材", "定制厚度", "定制宽度"],
         应用: ["VRLA", "UPS", "汽车", "储能"],
         联系: ["获取报价", "技术询盘", "公司宣传册"]
-      }
+      },
+      logo: {
+        src: "/images/viking-logo-footer-320.webp",
+        alt: "维京科技 logo",
+        width: 320,
+        height: 320
+      },
+      qrImages: [
+        ["官方微信公众号", "/images/qrcode_for_logo.jpg"],
+        ["移动官网", "/images/website-logo-180.webp"]
+      ]
     }
   }
 } as const;
@@ -389,7 +470,7 @@ const capabilityIcons = [Factory, ClipboardCheck, Truck, Layers3];
 const whyIcons = [BadgeCheck, Truck, PackageCheck, Globe2];
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const contactInfo = {
-  phone: "18907186665",
+  phone: "18171518528",
   email: "vikingsales@vikingagm.com"
 };
 const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/__forms.html";
@@ -417,7 +498,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
     "idle" | "error" | "success" | "failure" | "emailFallback"
   >("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const t = copy[lang];
+  const t = homeContent(lang, copy[lang]);
   const footerColumns = Object.entries(t.footer.columns) as Array<
     [string, readonly string[]]
   >;
@@ -491,8 +572,8 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
 
       <section className="relative min-h-[720px] pt-20">
         <Image
-          src={asset("/images/agm-hero-production-1600.webp")}
-          alt="AGM separator production line"
+          src={asset(t.hero.image.src)}
+          alt={t.hero.image.alt}
           fill
           priority
           sizes="100vw"
@@ -593,10 +674,10 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
 
           <div className="rounded-md border border-line bg-white p-4 shadow-industrial">
             <Image
-              src={asset("/images/viking-company-building-900.webp")}
-              alt={t.company.imageLabel}
-              width={900}
-              height={675}
+              src={asset(t.company.image.src)}
+              alt={t.company.image.alt}
+              width={t.company.image.width}
+              height={t.company.image.height}
               sizes="(min-width: 1024px) 42vw, 100vw"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-md object-cover"
@@ -653,17 +734,13 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
           })}
         </div>
         <div className="mx-auto mt-10 grid max-w-7xl gap-5 md:grid-cols-2">
-          {t.values.images.map(([title, text], index) => (
+          {t.values.images.map(([title, text, src]) => (
             <article
               key={title}
               className="overflow-hidden rounded-md border border-line bg-white shadow-sm"
             >
               <Image
-                src={asset(
-                  index === 0
-                    ? "/images/viking-finished-separator-roll-900.webp"
-                    : "/images/viking-separator-sheets-900.webp"
-                )}
+                src={asset(src)}
                 alt={title}
                 width={900}
                 height={675}
@@ -745,8 +822,8 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
           </div>
 
           <EvidenceImageSlot
-            src={asset("/images/manufacturing-process-1400.webp")}
-            alt="AGM separator manufacturing process flowchart"
+            src={asset(t.process.image.src)}
+            alt={t.process.image.alt}
             eyebrow={t.process.eyebrow}
             title={t.process.title}
             note={
@@ -766,8 +843,8 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <EvidenceImageSlot
-            src={asset("/images/agm-factory-capability-1200.webp")}
-            alt="AGM separator manufacturing floor"
+            src={asset(t.factory.image.src)}
+            alt={t.factory.image.alt}
             eyebrow="Hubei Viking Technology"
             title="AGM separator manufacturing and roll finishing"
             note={
@@ -837,10 +914,10 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
 
           <div className="relative overflow-hidden rounded-md bg-ink shadow-industrial">
             <Image
-              src={asset("/images/agm-quality-control-1200.webp")}
-              alt="AGM separator quality control testing"
-              width={1200}
-              height={900}
+              src={asset(t.quality.image.src)}
+              alt={t.quality.image.alt}
+              width={t.quality.image.width}
+              height={t.quality.image.height}
               sizes="(min-width: 1024px) 45vw, 100vw"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
@@ -1128,10 +1205,10 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             <div className="flex items-center gap-4">
               <span className="flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-md border border-line bg-white p-2">
                 <Image
-                  src={asset("/images/viking-logo-footer-320.webp")}
-                  alt="Viking Technology logo"
-                  width={320}
-                  height={320}
+                  src={asset(t.footer.logo.src)}
+                  alt={t.footer.logo.alt}
+                  width={t.footer.logo.width}
+                  height={t.footer.logo.height}
                   loading="lazy"
                   className="h-full w-full object-contain"
                 />
@@ -1156,8 +1233,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             )}
             <div className="mt-6 grid max-w-md gap-4 sm:grid-cols-2">
               {[
-                [t.footer.wechat, "/images/qrcode_for_logo.jpg"],
-                [t.footer.mobile, "/images/website-logo-180.webp"]
+                ...t.footer.qrImages
               ].map(([label, src]) => (
                 <div
                   key={label}

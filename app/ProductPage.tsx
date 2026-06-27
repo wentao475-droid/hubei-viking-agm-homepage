@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useState } from "react";
+import { productContent } from "./cms-content";
 import { SiteHeader } from "./SiteHeader";
 import type { Lang } from "./VikingHome";
 
@@ -60,7 +61,7 @@ const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/__forms.html";
 const staticFormFallback =
   process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const contactInfo = {
-  phone: "18907186665",
+  phone: "18171518528",
   email: "vikingsales@vikingagm.com"
 };
 const inquiryEmail =
@@ -2501,7 +2502,7 @@ export function ProductPage({
   lang: Lang;
   page?: ProductPageKind;
 }) {
-  const t = content[page][lang];
+  const t = productContent(page, lang, content[page][lang]);
   const ui = sharedMessages[lang];
   const lead = leadCaptureCopy[lang];
   const [formState, setFormState] = useState<

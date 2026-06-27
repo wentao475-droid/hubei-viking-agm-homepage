@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { seoContent } from "./cms-content";
 import type { Lang } from "./VikingHome";
 
 export const SITE_URL = "https://www.vikingagm.com";
@@ -577,7 +578,7 @@ const howToChooseAgmSeparatorSeo = {
 } as const;
 
 export function buildHomeMetadata(lang: Lang): Metadata {
-  const current = homeSeo[lang];
+  const current = seoContent("home", lang, homeSeo[lang]);
 
   return buildMetadata({
     title: current.title,
@@ -593,7 +594,7 @@ export function buildHomeMetadata(lang: Lang): Metadata {
 }
 
 export function buildAgmSeparatorMetadata(lang: Lang): Metadata {
-  const current = agmSeparatorSeo[lang];
+  const current = seoContent("agmSeparator", lang, agmSeparatorSeo[lang]);
 
   return buildMetadata({
     title: current.title,
@@ -609,7 +610,7 @@ export function buildAgmSeparatorMetadata(lang: Lang): Metadata {
 }
 
 export function buildAgmSeparatorRollsMetadata(lang: Lang): Metadata {
-  const current = agmSeparatorRollsSeo[lang];
+  const current = seoContent("agmSeparatorRolls", lang, agmSeparatorRollsSeo[lang]);
 
   return buildMetadata({
     title: current.title,
@@ -625,7 +626,7 @@ export function buildAgmSeparatorRollsMetadata(lang: Lang): Metadata {
 }
 
 export function buildAgmSeparatorSheetsMetadata(lang: Lang): Metadata {
-  const current = agmSeparatorSheetsSeo[lang];
+  const current = seoContent("agmSeparatorSheets", lang, agmSeparatorSheetsSeo[lang]);
 
   return buildMetadata({
     title: current.title,
@@ -646,7 +647,7 @@ export function buildAgmSeparatorSheetsMetadata(lang: Lang): Metadata {
 }
 
 export function buildAgmSeparatorTestingMetadata(lang: Lang): Metadata {
-  const current = agmSeparatorTestingSeo[lang];
+  const current = seoContent("agmSeparatorTesting", lang, agmSeparatorTestingSeo[lang]);
 
   return buildMetadata({
     title: current.title,
@@ -669,7 +670,11 @@ export function buildAgmSeparatorTestingMetadata(lang: Lang): Metadata {
 export function buildAgmSeparatorVrlaApplicationMetadata(
   lang: Lang
 ): Metadata {
-  const current = agmSeparatorVrlaApplicationSeo[lang];
+  const current = seoContent(
+    "agmSeparatorVrlaApplication",
+    lang,
+    agmSeparatorVrlaApplicationSeo[lang]
+  );
 
   return buildMetadata({
     title: current.title,
@@ -718,7 +723,11 @@ export function buildAgmSeparatorUpsApplicationMetadata(
 ): Metadata {
   return buildApplicationDetailMetadata(
     lang,
-    agmSeparatorUpsApplicationSeo[lang],
+    seoContent(
+      "agmSeparatorUpsApplication",
+      lang,
+      agmSeparatorUpsApplicationSeo[lang]
+    ),
     "/applications/agm-separator-for-ups-battery/",
     "/zh/applications/agm-separator-for-ups-battery/"
   );
@@ -729,7 +738,11 @@ export function buildAgmSeparatorMotorcycleApplicationMetadata(
 ): Metadata {
   return buildApplicationDetailMetadata(
     lang,
-    agmSeparatorMotorcycleApplicationSeo[lang],
+    seoContent(
+      "agmSeparatorMotorcycleApplication",
+      lang,
+      agmSeparatorMotorcycleApplicationSeo[lang]
+    ),
     "/applications/agm-separator-for-motorcycle-battery/",
     "/zh/applications/agm-separator-for-motorcycle-battery/"
   );
@@ -740,14 +753,18 @@ export function buildAgmSeparatorEnergyStorageApplicationMetadata(
 ): Metadata {
   return buildApplicationDetailMetadata(
     lang,
-    agmSeparatorEnergyStorageApplicationSeo[lang],
+    seoContent(
+      "agmSeparatorEnergyStorageApplication",
+      lang,
+      agmSeparatorEnergyStorageApplicationSeo[lang]
+    ),
     "/applications/agm-separator-for-energy-storage-battery/",
     "/zh/applications/agm-separator-for-energy-storage-battery/"
   );
 }
 
 export function buildWhatIsAgmSeparatorMetadata(lang: Lang): Metadata {
-  const current = whatIsAgmSeparatorSeo[lang];
+  const current = seoContent("whatIsAgmSeparator", lang, whatIsAgmSeparatorSeo[lang]);
 
   return buildMetadata({
     title: current.title,
@@ -768,7 +785,11 @@ export function buildWhatIsAgmSeparatorMetadata(lang: Lang): Metadata {
 }
 
 export function buildKeyTechnicalParametersMetadata(lang: Lang): Metadata {
-  const current = keyTechnicalParametersSeo[lang];
+  const current = seoContent(
+    "keyTechnicalParameters",
+    lang,
+    keyTechnicalParametersSeo[lang]
+  );
 
   return buildMetadata({
     title: current.title,
@@ -789,7 +810,11 @@ export function buildKeyTechnicalParametersMetadata(lang: Lang): Metadata {
 }
 
 export function buildHowToChooseAgmSeparatorMetadata(lang: Lang): Metadata {
-  const current = howToChooseAgmSeparatorSeo[lang];
+  const current = seoContent(
+    "howToChooseAgmSeparator",
+    lang,
+    howToChooseAgmSeparatorSeo[lang]
+  );
 
   return buildMetadata({
     title: current.title,
@@ -878,7 +903,7 @@ function buildMetadata({
 }
 
 export function StructuredData({ lang }: { lang: Lang }) {
-  const current = homeSeo[lang];
+  const current = seoContent("home", lang, homeSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
   const data = {
     "@context": "https://schema.org",
@@ -916,7 +941,7 @@ export function StructuredData({ lang }: { lang: Lang }) {
 }
 
 export function AgmSeparatorStructuredData({ lang }: { lang: Lang }) {
-  const current = agmSeparatorSeo[lang];
+  const current = seoContent("agmSeparator", lang, agmSeparatorSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
   const homePath = lang === "zh" ? "/zh/" : "/";
   const data = {
@@ -976,7 +1001,7 @@ export function AgmSeparatorStructuredData({ lang }: { lang: Lang }) {
 }
 
 export function AgmSeparatorRollsStructuredData({ lang }: { lang: Lang }) {
-  const current = agmSeparatorRollsSeo[lang];
+  const current = seoContent("agmSeparatorRolls", lang, agmSeparatorRollsSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
   const homePath = lang === "zh" ? "/zh/" : "/";
   const data = {
@@ -1036,7 +1061,7 @@ export function AgmSeparatorRollsStructuredData({ lang }: { lang: Lang }) {
 }
 
 export function AgmSeparatorSheetsStructuredData({ lang }: { lang: Lang }) {
-  const current = agmSeparatorSheetsSeo[lang];
+  const current = seoContent("agmSeparatorSheets", lang, agmSeparatorSheetsSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
   const homePath = lang === "zh" ? "/zh/" : "/";
   const data = {
@@ -1096,7 +1121,7 @@ export function AgmSeparatorSheetsStructuredData({ lang }: { lang: Lang }) {
 }
 
 export function AgmSeparatorTestingStructuredData({ lang }: { lang: Lang }) {
-  const current = agmSeparatorTestingSeo[lang];
+  const current = seoContent("agmSeparatorTesting", lang, agmSeparatorTestingSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
   const homePath = lang === "zh" ? "/zh/" : "/";
   const data = {
@@ -1160,7 +1185,11 @@ export function AgmSeparatorVrlaApplicationStructuredData({
 }: {
   lang: Lang;
 }) {
-  const current = agmSeparatorVrlaApplicationSeo[lang];
+  const current = seoContent(
+    "agmSeparatorVrlaApplication",
+    lang,
+    agmSeparatorVrlaApplicationSeo[lang]
+  );
   const url = `${SITE_URL}${current.path}`;
   const homePath = lang === "zh" ? "/zh/" : "/";
   const data = {
@@ -1292,7 +1321,11 @@ export function AgmSeparatorUpsApplicationStructuredData({
   return (
     <ApplicationDetailStructuredData
       lang={lang}
-      current={agmSeparatorUpsApplicationSeo[lang]}
+      current={seoContent(
+        "agmSeparatorUpsApplication",
+        lang,
+        agmSeparatorUpsApplicationSeo[lang]
+      )}
     />
   );
 }
@@ -1305,7 +1338,11 @@ export function AgmSeparatorMotorcycleApplicationStructuredData({
   return (
     <ApplicationDetailStructuredData
       lang={lang}
-      current={agmSeparatorMotorcycleApplicationSeo[lang]}
+      current={seoContent(
+        "agmSeparatorMotorcycleApplication",
+        lang,
+        agmSeparatorMotorcycleApplicationSeo[lang]
+      )}
     />
   );
 }
@@ -1318,13 +1355,17 @@ export function AgmSeparatorEnergyStorageApplicationStructuredData({
   return (
     <ApplicationDetailStructuredData
       lang={lang}
-      current={agmSeparatorEnergyStorageApplicationSeo[lang]}
+      current={seoContent(
+        "agmSeparatorEnergyStorageApplication",
+        lang,
+        agmSeparatorEnergyStorageApplicationSeo[lang]
+      )}
     />
   );
 }
 
 export function WhatIsAgmSeparatorStructuredData({ lang }: { lang: Lang }) {
-  const current = whatIsAgmSeparatorSeo[lang];
+  const current = seoContent("whatIsAgmSeparator", lang, whatIsAgmSeparatorSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
   const homePath = lang === "zh" ? "/zh/" : "/";
   const data = {
@@ -1398,7 +1439,11 @@ export function KeyTechnicalParametersStructuredData({
 }: {
   lang: Lang;
 }) {
-  const current = keyTechnicalParametersSeo[lang];
+  const current = seoContent(
+    "keyTechnicalParameters",
+    lang,
+    keyTechnicalParametersSeo[lang]
+  );
   const url = `${SITE_URL}${current.path}`;
   const homePath = lang === "zh" ? "/zh/" : "/";
   const data = {
@@ -1473,7 +1518,11 @@ export function HowToChooseAgmSeparatorStructuredData({
 }: {
   lang: Lang;
 }) {
-  const current = howToChooseAgmSeparatorSeo[lang];
+  const current = seoContent(
+    "howToChooseAgmSeparator",
+    lang,
+    howToChooseAgmSeparatorSeo[lang]
+  );
   const url = `${SITE_URL}${current.path}`;
   const homePath = lang === "zh" ? "/zh/" : "/";
   const data = {
@@ -1556,7 +1605,7 @@ function organizationData(lang: Lang, description: string) {
     url: SITE_URL,
     logo: `${SITE_URL}/images/banner-logo-header.webp`,
     email: "vikingsales@vikingagm.com",
-    telephone: "+86-18907186665",
+    telephone: "+86-18171518528",
     foundingDate: "2015-12",
     address: {
       "@type": "PostalAddress",

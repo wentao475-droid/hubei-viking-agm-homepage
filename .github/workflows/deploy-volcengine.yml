@@ -1,0 +1,57 @@
+name: Deploy to Volcengine ECS
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "volcengine-production"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      REMOTE_PATH: /var/www/hubei-viking-agm
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ""
+
+      - name: Prepare SSH key
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.VOLCENGINE_SSH_KEY }}" > ~/.ssh/volcengine_ecs_key
+          chmod 600 ~/.ssh/volcengine_ecs_key
+          ssh-keyscan -H "${{ secrets.VOLCENGINE_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy static files
+        run: |
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/volcengine_ecs_key" \
+            out/ \
+            "${{ secrets.VOLCENGINE_USER }}@${{ secrets.VOLCENGINE_HOST }}:${REMOTE_PATH}/"
+
+      - name: Reload Nginx
+        run: |
+          ssh -i ~/.ssh/volcengine_ecs_key \
+            "${{ secrets.VOLCENGINE_USER }}@${{ secrets.VOLCENGINE_HOST }}" \
+            "nginx -t && systemctl reload nginx"

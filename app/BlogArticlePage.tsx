@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useState } from "react";
+import { articleContent } from "./cms-content";
 import { SiteHeader } from "./SiteHeader";
 import type { Lang } from "./VikingHome";
 
@@ -26,7 +27,7 @@ type IconName =
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const contactInfo = {
-  phone: "18907186665",
+  phone: "18171518528",
   email: "vikingsales@vikingagm.com"
 };
 const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/";
@@ -871,12 +872,13 @@ export function BlogArticlePage({
     "idle" | "error" | "success" | "failure" | "emailFallback"
   >("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const t =
+  const defaultArticle =
     page === "keyTechnicalParameters"
       ? keyTechnicalCopy[lang]
       : page === "howToChooseAgmSeparator"
         ? howToChooseCopy[lang]
         : articleCopy[lang];
+  const t = articleContent(page, lang, defaultArticle);
   const sectionIds =
     page === "keyTechnicalParameters"
       ? [
