@@ -1052,7 +1052,7 @@
             [
               "Finished AGM separator roll",
               "Roll supply supports battery factories that require continuous material feeding, further slitting or internal sheet preparation.",
-              "/images/viking-finished-separator-roll-900.webp",
+              "/images/cms/agm-separator-rolls-forms-1-image-1782575911620-optimized.webp",
               "Finished AGM separator roll",
               900,
               675
@@ -1068,7 +1068,7 @@
             [
               "Batch roll inventory",
               "Additional evidence slot for finished roll storage and batch supply review.",
-              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "/images/cms/agm-separator-rolls-forms-3-image-1782576351541-optimized.webp",
               "Finished AGM separator rolls in warehouse",
               1200,
               900
@@ -1076,7 +1076,7 @@
             [
               "Roll end-face condition",
               "Additional evidence slot for winding condition, roll edge and end-face review.",
-              "/images/evidence/agm-separator-roll-end-face-01.webp",
+              "/images/cms/agm-separator-rolls-forms-4-image-1782575798661-optimized.webp",
               "AGM separator roll end-face condition",
               1200,
               900
@@ -1084,7 +1084,7 @@
             [
               "Roll packing method",
               "Additional evidence slot for roll protection, labeling, palletizing and export packing.",
-              "/images/evidence/agm-separator-roll-packaging-01.webp",
+              "/images/cms/agm-separator-rolls-forms-5-image-1782576179040-optimized.webp",
               "AGM separator roll packaging",
               1200,
               900
@@ -1242,7 +1242,7 @@
             [
               "AGM 隔板成品卷",
               "卷材供应适合需要连续上料、进一步分切或厂内准备片材的电池工厂。",
-              "/images/viking-finished-separator-roll-900.webp",
+              "/images/cms/agm-separator-rolls-forms-1-image-1782575911620-optimized.webp",
               "AGM 隔板成品卷",
               900,
               675
@@ -1258,7 +1258,7 @@
             [
               "批量卷材库存",
               "新增证据图片位，用于展示成品卷材仓储和批量供应能力。",
-              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "/images/cms/agm-separator-rolls-forms-3-image-1782576351541-optimized.webp",
               "AGM 隔板成品卷材库存",
               1200,
               900
@@ -1266,7 +1266,7 @@
             [
               "卷材端面状态",
               "新增证据图片位，用于展示收卷状态、卷边和端面细节。",
-              "/images/evidence/agm-separator-roll-end-face-01.webp",
+              "/images/cms/agm-separator-rolls-forms-4-image-1782575798661-optimized.webp",
               "AGM 隔板卷材端面状态",
               1200,
               900
@@ -1274,7 +1274,7 @@
             [
               "卷材包装方式",
               "新增证据图片位，用于展示卷材防护、标签、托盘和出口包装。",
-              "/images/evidence/agm-separator-roll-packaging-01.webp",
+              "/images/cms/agm-separator-rolls-forms-5-image-1782576179040-optimized.webp",
               "AGM 隔板卷材包装",
               1200,
               900
@@ -1430,7 +1430,7 @@
             [
               "Pre-cut AGM separator sheets",
               "Sheet pieces support direct assembly, sample comparison and customized battery model discussions.",
-              "/images/sheets1-900.webp",
+              "/images/cms/agm-separator-sheets-forms-1-image-1782618269564-optimized.webp",
               "Pre-cut AGM separator sheets",
               900,
               675
@@ -1438,7 +1438,7 @@
             [
               "Roll and sheet preparation",
               "Roll material and prepared sheets can be reviewed together when confirming production workflow.",
-              "/images/sheets2-cropped-900.webp",
+              "/images/cms/agm-separator-sheets-forms-image-card-2.webp",
               "AGM separator roll and sheets",
               900,
               675
@@ -1454,7 +1454,7 @@
             [
               "Sheet packing and sample support",
               "Additional evidence slot for sheet packing, sample preparation and small-batch discussion.",
-              "/images/evidence/agm-separator-sheets-packaging-01.webp",
+              "/images/cms/agm-separator-sheets-forms-4-image-1782618282942-optimized.webp",
               "AGM separator sheet packaging and sample support",
               1200,
               900
@@ -1612,7 +1612,7 @@
             [
               "预裁切 AGM 隔板片材",
               "片材支持直接装配、样品对比和定制电池型号沟通。",
-              "/images/sheets1-900.webp",
+              "/images/cms/agm-separator-sheets-forms-1-image-1782618269564-optimized.webp",
               "预裁切 AGM 隔板片材",
               900,
               675
@@ -1620,7 +1620,7 @@
             [
               "卷材与片材准备",
               "确认生产流程时，可同时评估卷材和准备好的片材形式。",
-              "/images/sheets2-cropped-900.webp",
+              "/images/cms/agm-separator-sheets-forms-image-card-2.webp",
               "AGM 隔板卷材与片材",
               900,
               675
@@ -1636,7 +1636,7 @@
             [
               "片材包装与样品支持",
               "新增证据图片位，用于展示片材包装、样品准备和小批量沟通。",
-              "/images/evidence/agm-separator-sheets-packaging-01.webp",
+              "/images/cms/agm-separator-sheets-forms-4-image-1782618282942-optimized.webp",
               "AGM 隔板片材包装与样品支持",
               1200,
               900
@@ -2124,7 +2124,7 @@
             [
               "AGM separator rolls for production lines",
               "Roll supply can support line-side feeding, slitting and production planning for UPS battery manufacturers.",
-              "/images/viking-finished-separator-roll-900.webp",
+              "/images/cms/agm-separator-ups-application-forms-image-card-1.webp",
               "AGM separator rolls for UPS battery production",
               900,
               675
@@ -2132,7 +2132,7 @@
             [
               "AGM separator sheets for sample review",
               "Pre-cut sheets can support assembly trials, sample comparison and battery model discussion.",
-              "/images/sheets1-900.webp",
+              "/images/cms/agm-separator-ups-application-forms-image-card-2.webp",
               "AGM separator sheets for UPS battery sample review",
               900,
               675
@@ -2305,7 +2305,7 @@
             [
               "用于生产线的 AGM 隔板卷材",
               "卷材供应可支持 UPS 电池生产企业的连续上料、分切和生产计划。",
-              "/images/viking-finished-separator-roll-900.webp",
+              "/images/cms/agm-separator-ups-application-forms-image-card-1.webp",
               "用于 UPS 电池生产的 AGM 隔板卷材",
               900,
               675
@@ -2313,7 +2313,7 @@
             [
               "用于样品评估的 AGM 隔板片材",
               "预裁切片材可支持装配试样、样品对比和电池型号沟通。",
-              "/images/sheets1-900.webp",
+              "/images/cms/agm-separator-ups-application-forms-image-card-2.webp",
               "用于 UPS 电池样品评估的 AGM 隔板片材",
               900,
               675
@@ -2496,7 +2496,7 @@
             [
               "Roll material for in-house cutting",
               "Roll supply can support customers who cut separator material according to battery model needs.",
-              "/images/viking-finished-separator-roll-900.webp",
+              "/images/cms/agm-separator-motorcycle-application-forms-image-card-2.webp",
               "AGM separator roll for motorcycle battery production",
               900,
               675
@@ -2512,7 +2512,7 @@
             [
               "Sheet edge and detail review",
               "Sheet details can be reviewed during sample and specification confirmation.",
-              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "/images/cms/agm-separator-motorcycle-application-forms-image-card-4.webp",
               "AGM separator sheet detail for motorcycle battery discussion",
               1200,
               900
@@ -2677,7 +2677,7 @@
             [
               "用于厂内裁切的卷材",
               "卷材供应可支持客户按电池型号自行裁切隔板材料。",
-              "/images/viking-finished-separator-roll-900.webp",
+              "/images/cms/agm-separator-motorcycle-application-forms-image-card-2.webp",
               "用于摩托车电池生产的 AGM 隔板卷材",
               900,
               675
@@ -2693,7 +2693,7 @@
             [
               "片材边缘与细节评估",
               "片材细节可在样品和规格确认时评估。",
-              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "/images/cms/agm-separator-motorcycle-application-forms-image-card-4.webp",
               "摩托车电池隔板片材细节沟通",
               1200,
               900
@@ -2876,7 +2876,7 @@
             [
               "Packing and shipment preparation",
               "Packing method and export shipment preparation can be discussed before order arrangement.",
-              "/images/evidence/shipping-pallet-01.webp",
+              "/images/cms/agm-separator-energy-storage-application-forms-image-card-4.webp",
               "AGM separator packing for energy storage battery projects",
               1200,
               900
@@ -3057,7 +3057,7 @@
             [
               "包装与出运准备",
               "包装方式和出口发运准备可在订单安排前沟通。",
-              "/images/evidence/shipping-pallet-01.webp",
+              "/images/cms/agm-separator-energy-storage-application-forms-image-card-4.webp",
               "储能电池项目 AGM 隔板包装",
               1200,
               900
@@ -3232,7 +3232,7 @@
             [
               "Thickness testing",
               "Additional evidence slot for thickness measurement and dimensional stability review.",
-              "/images/evidence/quality-thickness-test-01.webp",
+              "/images/cms/agm-separator-testing-forms-image-card-3.webp",
               "AGM separator thickness testing",
               1200,
               900
@@ -3240,7 +3240,7 @@
             [
               "Basis weight testing",
               "Additional evidence slot for basis weight, sample weight and batch consistency review.",
-              "/images/evidence/quality-basis-weight-test-01.webp",
+              "/images/cms/agm-separator-testing-forms-image-card-4.webp",
               "AGM separator basis weight testing",
               1200,
               900
@@ -3248,7 +3248,7 @@
             [
               "Acid absorption testing",
               "Additional evidence slot for acid absorption behavior and electrolyte-retention discussion.",
-              "/images/evidence/quality-acid-absorption-test-01.webp",
+              "/images/cms/agm-separator-testing-forms-image-card-5.webp",
               "AGM separator acid absorption testing",
               1200,
               900
@@ -3256,7 +3256,7 @@
             [
               "Electrical resistance testing",
               "Additional evidence slot for resistance testing and battery performance requirement review.",
-              "/images/evidence/quality-electrical-resistance-test-01.webp",
+              "/images/cms/agm-separator-testing-forms-image-card-6.webp",
               "AGM separator electrical resistance testing",
               1200,
               900
@@ -3430,7 +3430,7 @@
             [
               "厚度检测",
               "新增证据图片位，用于展示厚度测量和尺寸稳定性评估。",
-              "/images/evidence/quality-thickness-test-01.webp",
+              "/images/cms/agm-separator-testing-forms-image-card-3.webp",
               "AGM 隔板厚度检测",
               1200,
               900
@@ -3438,7 +3438,7 @@
             [
               "克重检测",
               "新增证据图片位，用于展示克重、样品称量和批次一致性评估。",
-              "/images/evidence/quality-basis-weight-test-01.webp",
+              "/images/cms/agm-separator-testing-forms-image-card-4.webp",
               "AGM 隔板克重检测",
               1200,
               900
@@ -3446,7 +3446,7 @@
             [
               "吸酸测试",
               "新增证据图片位，用于展示吸酸表现和电解液保持能力沟通。",
-              "/images/evidence/quality-acid-absorption-test-01.webp",
+              "/images/cms/agm-separator-testing-forms-image-card-5.webp",
               "AGM 隔板吸酸测试",
               1200,
               900
@@ -3454,7 +3454,7 @@
             [
               "电阻测试",
               "新增证据图片位，用于展示电阻测试和电池性能要求评估。",
-              "/images/evidence/quality-electrical-resistance-test-01.webp",
+              "/images/cms/agm-separator-testing-forms-image-card-6.webp",
               "AGM 隔板电阻测试",
               1200,
               900
