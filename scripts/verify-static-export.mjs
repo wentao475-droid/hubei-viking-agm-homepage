@@ -59,6 +59,12 @@ const indexHtml = readOutFile("index.html");
 const zhHtml = readOutFile("zh/index.html");
 const sitemap = readOutFile("sitemap.xml");
 const robots = readOutFile("robots.txt");
+const sitemapUrlBlocks = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(
+  (match) => match[1]
+);
+const sitemapUrls = sitemapUrlBlocks
+  .map((block) => block.match(/<loc>(.*?)<\/loc>/)?.[1])
+  .filter(Boolean);
 
 if (indexHtml.includes("https://www.vikingagm.com")) {
   pass("English homepage keeps www canonical URLs");
@@ -94,6 +100,51 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   pass("sitemap.xml lists P0 application pages");
 } else {
   fail("sitemap.xml is missing one or more P0 application pages");
+}
+
+if (sitemapUrls.length === 24) {
+  pass("sitemap.xml lists the expected English and Chinese public URLs");
+} else {
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 24`);
+}
+
+const sitemapMetadataComplete = sitemapUrlBlocks.every(
+  (block) =>
+    block.includes("<lastmod>") &&
+    block.includes("<changefreq>") &&
+    block.includes("<priority>")
+);
+
+if (sitemapMetadataComplete) {
+  pass("sitemap.xml includes lastmod, changefreq and priority for each URL");
+} else {
+  fail("sitemap.xml is missing URL metadata");
+}
+
+const xDefaultTargets = sitemapUrlBlocks
+  .map((block) => block.match(/hreflang="x-default" href="(.*?)"/)?.[1])
+  .filter(Boolean);
+const xDefaultTargetsEnglish = xDefaultTargets.every(
+  (url) => !new URL(url).pathname.startsWith("/zh/")
+);
+
+if (xDefaultTargetsEnglish) {
+  pass("sitemap.xml x-default alternates point to English default URLs");
+} else {
+  fail("sitemap.xml has x-default alternates pointing to localized URLs");
+}
+
+const missingSitemapTargets = sitemapUrls.filter((url) => {
+  const path = new URL(url).pathname;
+  const file = path === "/" ? "index.html" : join(path.slice(1), "index.html");
+
+  return !existsSync(join(outDir, file));
+});
+
+if (missingSitemapTargets.length === 0) {
+  pass("all sitemap URLs have matching static HTML files");
+} else {
+  fail(`sitemap.xml points to missing pages: ${missingSitemapTargets.join(", ")}`);
 }
 
 if (robots.includes("Sitemap: https://www.vikingagm.com/sitemap.xml")) {
