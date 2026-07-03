@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { FormEvent, useState } from "react";
 import { productContent } from "./cms-content";
+import { productFaqCopy } from "./seo-faq";
 import { SiteHeader } from "./SiteHeader";
 import type { Lang } from "./VikingHome";
 
@@ -57,7 +58,7 @@ type ProductContent = {
 };
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/__forms.html";
+const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/api/inquiry";
 const staticFormFallback =
   process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const contactInfo = {
@@ -144,26 +145,7 @@ const leadCaptureCopy = {
       "Thank you. We will contact you soon to confirm your AGM separator requirements.",
     emailFallback:
       "Your email client has been opened with the contact details. Please send the email to complete your inquiry.",
-    faqEyebrow: "FAQ",
-    faqTitle: "You can contact us before the specification is final",
-    faq: [
-      [
-        "Do I need to know the exact specification before contacting you?",
-        "No. You can leave your contact information first. Our team can help review thickness, width, format and application details."
-      ],
-      [
-        "Do you provide samples?",
-        "Sample discussion is available after confirming the product form and basic application."
-      ],
-      [
-        "Can you customize thickness or width?",
-        "Thickness, width, roll format and sheet size can be discussed according to customer requirements."
-      ],
-      [
-        "What information helps you reply faster?",
-        "Product type, battery application and estimated quantity are helpful, but they are not required for first contact."
-      ]
-    ]
+    ...productFaqCopy.en
   },
   zh: {
     heroPrompt: "留下微信或手机号，我们会协助确认合适的 AGM 隔板规格。",
@@ -178,26 +160,7 @@ const leadCaptureCopy = {
     required: "请先填写姓名和微信或手机号。",
     success: "感谢您留下联系方式，我们会尽快联系您确认 AGM 隔板需求。",
     emailFallback: "已为您打开邮件客户端并填入联系方式，请发送邮件完成询盘。",
-    faqEyebrow: "常见问题",
-    faqTitle: "不清楚具体规格，也可以先联系",
-    faq: [
-      [
-        "不清楚具体规格可以联系吗？",
-        "可以。您只需留下微信或手机号，我们会根据电池应用、产品形式和使用需求，协助确认合适的 AGM 隔板规格。"
-      ],
-      [
-        "是否提供样品？",
-        "可以根据产品形式和基本应用需求进行样品沟通。"
-      ],
-      [
-        "是否可以定制厚度或宽度？",
-        "厚度、宽度、卷材形式和片材尺寸都可以根据客户需求沟通。"
-      ],
-      [
-        "哪些信息有助于更快回复？",
-        "产品形式、电池应用和预计数量会有帮助，但首次联系时不是必填。"
-      ]
-    ]
+    ...productFaqCopy.zh
   }
 } as const;
 
@@ -252,16 +215,16 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
       },
       parameters: {
         eyebrow: "Key Parameters",
-        title: "Technical values confirmed by application and customer requirements",
+        title: "AGM battery separator parameters buyers usually confirm",
         text:
-          "Technical parameters should be reviewed together with the battery application, production process and acceptance requirements before order confirmation.",
+          "For VRLA lead-acid battery production, AGM separator selection usually starts with thickness, width, basis weight, acid absorption, electrical resistance and handling strength. These values should be reviewed together with the battery application, assembly process and acceptance requirements before order confirmation.",
         items: [
-          ["Thickness", "Confirmed according to battery plate design and assembly process."],
-          ["Width", "Roll width or sheet width can be discussed based on production line requirements."],
-          ["Basis weight", "Reviewed together with electrolyte retention and separator structure."],
-          ["Acid absorption", "Confirmed according to battery application requirements."],
-          ["Electrical resistance", "Reviewed with battery performance and test conditions."],
-          ["Porosity and strength", "Porosity, tensile strength and handling performance can be checked as required."]
+          ["Thickness", "Connected with plate design, compression behavior and assembly process requirements."],
+          ["Width or sheet size", "Roll width, slitting direction or pre-cut sheet size can be discussed based on production workflow."],
+          ["Basis weight", "Reviewed together with separator structure, electrolyte retention and customer test method."],
+          ["Acid absorption", "Discussed according to battery application, electrolyte retention needs and agreed test requirements."],
+          ["Electrical resistance", "Reviewed with battery performance targets, test conditions and internal-resistance expectations."],
+          ["Porosity and strength", "Porosity, tensile strength and handling performance can be checked for converting and assembly needs."]
         ]
       },
       forms: {
@@ -386,16 +349,16 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
       },
       parameters: {
         eyebrow: "关键参数",
-        title: "技术指标根据应用场景和客户要求确认",
+        title: "采购 AGM 电池隔板时通常需要确认的参数",
         text:
-          "技术参数需结合电池应用、生产工艺和验收要求进行评估，并在订单确认前沟通确定。",
+          "用于 VRLA 铅酸电池生产的 AGM 隔板，通常需要结合厚度、宽度、克重、吸酸性能、电阻和操作强度进行沟通。这些指标应与电池应用、装配工艺和验收要求一起确认。",
         items: [
-          ["厚度", "目标厚度根据电池极板设计和装配工艺要求确认。"],
-          ["宽度", "卷材宽度或片材宽度可根据客户生产线需求沟通。"],
-          ["克重", "克重需结合电解液保持能力和隔板结构进行评估。"],
-          ["吸酸性能", "吸酸表现应根据电池应用要求进行确认。"],
-          ["电阻", "电阻要求需结合电池性能目标和测试条件沟通。"],
-          ["孔隙率与强度", "孔隙率、拉伸强度和操作性能可按要求检测。"]
+          ["厚度", "与极板设计、压缩表现和装配工艺要求相关，需要结合电池结构确认。"],
+          ["宽度或片材尺寸", "卷材宽度、分切方向或预裁切片材尺寸可根据生产流程沟通。"],
+          ["克重", "需结合隔板结构、电解液保持能力和客户测试方法进行评估。"],
+          ["吸酸性能", "根据电池应用、电解液保持需求和约定测试要求进行沟通。"],
+          ["电阻", "需结合电池性能目标、测试条件和内阻要求进行确认。"],
+          ["孔隙率与强度", "孔隙率、拉伸强度和操作性能可围绕分切、转化和装配需求检测。"]
         ]
       },
       forms: {
@@ -2530,6 +2493,7 @@ export function ProductPage({
 
     formData.set("form-name", "inquiry");
     formData.set("language", lang);
+    formData.set("page_url", window.location.href);
 
     if (staticFormFallback) {
       setFormState("idle");
@@ -2851,8 +2815,6 @@ export function ProductPage({
             name="inquiry"
             method="POST"
             action={asset(formEndpoint)}
-            data-netlify="true"
-            netlify-honeypot="bot-field"
             onSubmit={submitInquiry}
             className="rounded-md bg-white p-6 text-ink shadow-industrial sm:p-8"
           >

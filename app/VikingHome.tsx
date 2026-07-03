@@ -25,6 +25,7 @@ type IconName =
   | "top"
   | "truck"
   | "x";
+type FooterLink = readonly [string, string];
 
 const copy = {
   en: {
@@ -192,7 +193,7 @@ const copy = {
         ["Export-ready communication", "Clear technical and commercial responses for international buyers."]
       ]
     },
-      form: {
+    form: {
         eyebrow: "Inquiry",
         title: "Leave Your Contact",
         text:
@@ -226,16 +227,55 @@ const copy = {
       failure:
         "Sorry, the inquiry could not be sent right now. Please try again later."
     },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Common questions before requesting AGM separator support",
+      items: [
+        [
+          "Can you customize AGM separator thickness or width?",
+          "Yes. Thickness, width, roll format and sheet size can be discussed according to the customer battery design and production process."
+        ],
+        [
+          "Do you provide samples before bulk orders?",
+          "Sample discussion is available after confirming the product form, target application and basic specification direction."
+        ],
+        [
+          "Which battery applications do your AGM separators support?",
+          "Our AGM glass fiber separators are discussed for VRLA, UPS, motorcycle, automotive and energy storage lead-acid battery applications."
+        ],
+        [
+          "What information should I send for a quotation?",
+          "Battery application, roll or sheet format, target thickness, width or sheet size, estimated quantity and test requirements are helpful."
+        ]
+      ]
+    },
     footer: {
       description:
         "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
       wechat: "Official WeChat account",
       mobile: "Mobile website",
       columns: {
-        Company: ["About Manufacturing", "Quality Control", "Export Support"],
-        Products: ["AGM Separator Rolls", "Custom Thickness", "Custom Width"],
-        Applications: ["VRLA", "UPS", "Automotive", "Energy Storage"],
-        Contact: ["Request a Quote", "Technical Inquiry", "Company Brochure"]
+        Company: [
+          ["About Manufacturing", "/#company"],
+          ["Quality Control", "/quality-control/agm-separator-testing/"],
+          ["Export Support", "/#contact"]
+        ],
+        Products: [
+          ["AGM Separator Rolls", "/products/agm-separator-rolls/"],
+          ["Custom Thickness", "/products/agm-separator/"],
+          ["Custom Width", "/products/agm-separator/"]
+        ],
+        Applications: [
+          ["VRLA", "/applications/agm-separator-for-vrla-battery/"],
+          ["UPS", "/applications/agm-separator-for-ups-battery/"],
+          ["Automotive", "/applications/agm-separator-for-vrla-battery/"],
+          ["Energy Storage", "/applications/agm-separator-for-energy-storage-battery/"]
+        ],
+        Contact: [
+          ["Request a Quote", "/#contact"],
+          ["Technical Inquiry", "/#contact"],
+          ["Company Brochure", "/#contact"]
+        ]
       },
       logo: {
         src: "/images/viking-logo-footer-320.webp",
@@ -423,16 +463,55 @@ const copy = {
         "已为您打开邮件客户端并填入联系方式，请发送邮件完成询盘。",
       failure: "抱歉，询盘暂时未能发送，请稍后再试。"
     },
+    faq: {
+      eyebrow: "常见问题",
+      title: "询价 AGM 隔板前的常见问题",
+      items: [
+        [
+          "是否可以定制 AGM 隔板厚度或宽度？",
+          "可以。厚度、宽度、卷材形式和片材尺寸都可以结合客户电池设计和生产工艺沟通。"
+        ],
+        [
+          "批量采购前是否可以沟通样品？",
+          "可以在确认产品形式、目标应用和基本规格方向后进行样品沟通。"
+        ],
+        [
+          "AGM 隔板适用于哪些电池应用？",
+          "可围绕 VRLA、UPS、摩托车、汽车启动和储能等铅酸电池应用沟通 AGM 玻璃纤维隔板。"
+        ],
+        [
+          "询价时需要提供哪些信息？",
+          "电池应用、卷材或片材形式、目标厚度、宽度或片材尺寸、预计数量和检测要求会有帮助。"
+        ]
+      ]
+    },
     footer: {
       description:
         "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
       wechat: "官方微信公众号",
       mobile: "移动官网",
       columns: {
-        公司: ["制造能力", "质量控制", "出口支持"],
-        产品: ["AGM 隔板卷材", "定制厚度", "定制宽度"],
-        应用: ["VRLA", "UPS", "汽车", "储能"],
-        联系: ["获取报价", "技术询盘", "公司宣传册"]
+        公司: [
+          ["制造能力", "/zh/#company"],
+          ["质量控制", "/zh/quality-control/agm-separator-testing/"],
+          ["出口支持", "/zh/#contact"]
+        ],
+        产品: [
+          ["AGM 隔板卷材", "/zh/products/agm-separator-rolls/"],
+          ["定制厚度", "/zh/products/agm-separator/"],
+          ["定制宽度", "/zh/products/agm-separator/"]
+        ],
+        应用: [
+          ["VRLA", "/zh/applications/agm-separator-for-vrla-battery/"],
+          ["UPS", "/zh/applications/agm-separator-for-ups-battery/"],
+          ["汽车", "/zh/applications/agm-separator-for-vrla-battery/"],
+          ["储能", "/zh/applications/agm-separator-for-energy-storage-battery/"]
+        ],
+        联系: [
+          ["获取报价", "/zh/#contact"],
+          ["技术询盘", "/zh/#contact"],
+          ["公司宣传册", "/zh/#contact"]
+        ]
       },
       logo: {
         src: "/images/viking-logo-footer-320.webp",
@@ -473,7 +552,7 @@ const contactInfo = {
   phone: "18171518528",
   email: "vikingsales@vikingagm.com"
 };
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/__forms.html";
+const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/api/inquiry";
 const staticFormFallback =
   process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const inquiryEmail =
@@ -500,7 +579,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const t = homeContent(lang, copy[lang]);
   const footerColumns = Object.entries(t.footer.columns) as Array<
-    [string, readonly string[]]
+    [string, readonly FooterLink[]]
   >;
 
   async function submitInquiry(event: FormEvent<HTMLFormElement>) {
@@ -523,6 +602,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
 
     formData.set("form-name", "inquiry");
     formData.set("language", lang);
+    formData.set("page_url", window.location.href);
 
     if (staticFormFallback) {
       setFormState("idle");
@@ -549,7 +629,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
       });
 
       if (!response.ok) {
-        throw new Error("Netlify Forms submission failed");
+        throw new Error("Inquiry submission failed");
       }
 
       setFormState("success");
@@ -1077,6 +1157,30 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
         </div>
       </section>
 
+      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
+              {t.faq.eyebrow}
+            </p>
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-ink sm:text-4xl">
+              {t.faq.title}
+            </h2>
+          </div>
+          <div className="grid gap-4">
+            {t.faq.items.map(([question, answer]) => (
+              <article
+                key={question}
+                className="rounded-md border border-line bg-frost p-5"
+              >
+                <h3 className="font-bold text-ink">{question}</h3>
+                <p className="mt-2 text-sm leading-6 text-steel">{answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="bg-ink px-4 py-24 text-white sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
@@ -1129,8 +1233,6 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             name="inquiry"
             method="POST"
             action={asset(formEndpoint)}
-            data-netlify="true"
-            netlify-honeypot="bot-field"
             onSubmit={submitInquiry}
             className="rounded-md bg-white p-5 text-ink shadow-industrial sm:p-7"
           >
@@ -1263,13 +1365,13 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
               <div key={title}>
                 <h3 className="font-bold text-ink">{title}</h3>
                 <div className="mt-4 grid gap-2">
-                  {links.map((link) => (
+                  {links.map(([label, href]) => (
                     <a
-                      key={link}
-                      href="#contact"
+                      key={`${title}-${label}`}
+                      href={asset(href)}
                       className="text-sm text-steel transition hover:text-signal"
                     >
-                      {link}
+                      {label}
                     </a>
                   ))}
                 </div>

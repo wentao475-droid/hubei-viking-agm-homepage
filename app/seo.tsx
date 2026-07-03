@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { seoContent } from "./cms-content";
+import { productFaqCopy } from "./seo-faq";
 import type { Lang } from "./VikingHome";
 
 export const SITE_URL = "https://www.vikingagm.com";
@@ -17,9 +18,9 @@ const homeSeo = {
     language: "en",
     siteName: "Viking AGM",
     alternateSiteName: "Hubei Viking AGM",
-    title: "Viking AGM | AGM Glass Fiber Separator Manufacturer",
+    title: "AGM Battery Separator Manufacturer | VRLA & Energy Storage | Viking AGM",
     description:
-      "Hubei Viking Technology manufactures AGM glass fiber separators for VRLA, UPS, motorcycle, automotive and energy storage lead-acid battery applications.",
+      "Hubei Viking Technology manufactures ISO9001 certified AGM glass fiber separators for VRLA, UPS, motorcycle, automotive and energy storage lead-acid batteries. Request a quote.",
     keywords: [
       "AGM glass fiber separator",
       "AGM battery separator manufacturer",
@@ -38,7 +39,7 @@ const homeSeo = {
     language: "zh-CN",
     siteName: "湖北维京AGM",
     alternateSiteName: "维京AGM",
-    title: "湖北维京AGM | AGM 玻璃纤维隔板专业制造商",
+    title: "铅酸电池隔板厂家 | AGM隔板生产厂家 | 湖北维京AGM",
     description:
       "湖北维京科技有限公司专注 AGM 玻璃纤维隔板研发、生产与销售，服务 VRLA、UPS、汽车、摩托车及储能铅酸电池应用。",
     keywords: [
@@ -62,7 +63,7 @@ const agmSeparatorSeo = {
     locale: "en_US",
     language: "en",
     siteName: "Viking AGM",
-    title: "AGM Separator Manufacturer for VRLA Lead-Acid Batteries",
+    title: "AGM Battery Separator for VRLA Lead-Acid Batteries | Viking AGM",
     description:
       "AGM glass fiber separators for VRLA lead-acid batteries, available in roll or sheet type. Send your thickness, width and battery application for quotation.",
     keywords: [
@@ -385,7 +386,7 @@ const agmSeparatorEnergyStorageApplicationSeo = {
     locale: "en_US",
     language: "en",
     siteName: "Viking AGM",
-    title: "AGM Separator for Lead-Acid Energy Storage Batteries",
+    title: "AGM Separator for Energy Storage Batteries | Viking AGM",
     description:
       "AGM separator discussion for lead-acid energy storage, backup power and reserve power VRLA battery projects.",
     keywords: [
@@ -979,6 +980,7 @@ export function AgmSeparatorStructuredData({ lang }: { lang: Lang }) {
         url,
         inLanguage: current.language
       },
+      faqPageData(url, lang),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
@@ -1039,6 +1041,7 @@ export function AgmSeparatorRollsStructuredData({ lang }: { lang: Lang }) {
         url,
         inLanguage: current.language
       },
+      faqPageData(url, lang),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
@@ -1099,6 +1102,7 @@ export function AgmSeparatorSheetsStructuredData({ lang }: { lang: Lang }) {
         url,
         inLanguage: current.language
       },
+      faqPageData(url, lang),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
@@ -1159,6 +1163,7 @@ export function AgmSeparatorTestingStructuredData({ lang }: { lang: Lang }) {
         url,
         inLanguage: current.language
       },
+      faqPageData(url, lang),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
@@ -1227,6 +1232,7 @@ export function AgmSeparatorVrlaApplicationStructuredData({
         url,
         inLanguage: current.language
       },
+      faqPageData(url, lang),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
@@ -1292,6 +1298,7 @@ function ApplicationDetailStructuredData({
         url,
         inLanguage: current.language
       },
+      faqPageData(url, lang),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
@@ -1606,6 +1613,13 @@ function organizationData(lang: Lang, description: string) {
     logo: `${SITE_URL}/images/banner-logo-header.webp`,
     email: "vikingsales@vikingagm.com",
     telephone: "+86-18171518528",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+86-18171518528",
+      email: "vikingsales@vikingagm.com",
+      contactType: "sales",
+      availableLanguage: ["en", "zh-CN"]
+    },
     foundingDate: "2015-12",
     address: {
       "@type": "PostalAddress",
@@ -1614,6 +1628,23 @@ function organizationData(lang: Lang, description: string) {
       addressCountry: "CN"
     },
     description
+  };
+}
+
+function faqPageData(url: string, lang: Lang) {
+  const copy = productFaqCopy[lang];
+
+  return {
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: copy.faq.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer
+      }
+    }))
   };
 }
 

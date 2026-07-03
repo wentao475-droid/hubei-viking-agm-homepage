@@ -270,25 +270,64 @@
         "mobile": "Mobile website",
         "columns": {
           "Company": [
-            "About Manufacturing",
-            "Quality Control",
-            "Export Support"
+            [
+              "About Manufacturing",
+              "/#company"
+            ],
+            [
+              "Quality Control",
+              "/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Export Support",
+              "/#contact"
+            ]
           ],
           "Products": [
-            "AGM Separator Rolls",
-            "Custom Thickness",
-            "Custom Width"
+            [
+              "AGM Separator Rolls",
+              "/products/agm-separator-rolls/"
+            ],
+            [
+              "Custom Thickness",
+              "/products/agm-separator/"
+            ],
+            [
+              "Custom Width",
+              "/products/agm-separator/"
+            ]
           ],
           "Applications": [
-            "VRLA",
-            "UPS",
-            "Automotive",
-            "Energy Storage"
+            [
+              "VRLA",
+              "/applications/agm-separator-for-vrla-battery/"
+            ],
+            [
+              "UPS",
+              "/applications/agm-separator-for-ups-battery/"
+            ],
+            [
+              "Automotive",
+              "/applications/agm-separator-for-vrla-battery/"
+            ],
+            [
+              "Energy Storage",
+              "/applications/agm-separator-for-energy-storage-battery/"
+            ]
           ],
           "Contact": [
-            "Request a Quote",
-            "Technical Inquiry",
-            "Company Brochure"
+            [
+              "Request a Quote",
+              "/#contact"
+            ],
+            [
+              "Technical Inquiry",
+              "/#contact"
+            ],
+            [
+              "Company Brochure",
+              "/#contact"
+            ]
           ]
         },
         "logo": {
@@ -579,25 +618,64 @@
         "mobile": "移动官网",
         "columns": {
           "公司": [
-            "制造能力",
-            "质量控制",
-            "出口支持"
+            [
+              "制造能力",
+              "/zh/#company"
+            ],
+            [
+              "质量控制",
+              "/zh/quality-control/agm-separator-testing/"
+            ],
+            [
+              "出口支持",
+              "/zh/#contact"
+            ]
           ],
           "产品": [
-            "AGM 隔板卷材",
-            "定制厚度",
-            "定制宽度"
+            [
+              "AGM 隔板卷材",
+              "/zh/products/agm-separator-rolls/"
+            ],
+            [
+              "定制厚度",
+              "/zh/products/agm-separator/"
+            ],
+            [
+              "定制宽度",
+              "/zh/products/agm-separator/"
+            ]
           ],
           "应用": [
-            "VRLA",
-            "UPS",
-            "汽车",
-            "储能"
+            [
+              "VRLA",
+              "/zh/applications/agm-separator-for-vrla-battery/"
+            ],
+            [
+              "UPS",
+              "/zh/applications/agm-separator-for-ups-battery/"
+            ],
+            [
+              "汽车",
+              "/zh/applications/agm-separator-for-vrla-battery/"
+            ],
+            [
+              "储能",
+              "/zh/applications/agm-separator-for-energy-storage-battery/"
+            ]
           ],
           "联系": [
-            "获取报价",
-            "技术询盘",
-            "公司宣传册"
+            [
+              "获取报价",
+              "/zh/#contact"
+            ],
+            [
+              "技术询盘",
+              "/zh/#contact"
+            ],
+            [
+              "公司宣传册",
+              "/zh/#contact"
+            ]
           ]
         },
         "logo": {
@@ -654,32 +732,32 @@
         },
         "parameters": {
           "eyebrow": "Key Parameters",
-          "title": "Technical values confirmed by application and customer requirements",
-          "text": "Technical parameters should be reviewed together with the battery application, production process and acceptance requirements before order confirmation.",
+          "title": "AGM battery separator parameters buyers usually confirm",
+          "text": "For VRLA lead-acid battery production, AGM separator selection usually starts with thickness, width, basis weight, acid absorption, electrical resistance and handling strength. These values should be reviewed together with the battery application, assembly process and acceptance requirements before order confirmation.",
           "items": [
             [
               "Thickness",
-              "Confirmed according to battery plate design and assembly process."
+              "Connected with plate design, compression behavior and assembly process requirements."
             ],
             [
-              "Width",
-              "Roll width or sheet width can be discussed based on production line requirements."
+              "Width or sheet size",
+              "Roll width, slitting direction or pre-cut sheet size can be discussed based on production workflow."
             ],
             [
               "Basis weight",
-              "Reviewed together with electrolyte retention and separator structure."
+              "Reviewed together with separator structure, electrolyte retention and customer test method."
             ],
             [
               "Acid absorption",
-              "Confirmed according to battery application requirements."
+              "Discussed according to battery application, electrolyte retention needs and agreed test requirements."
             ],
             [
               "Electrical resistance",
-              "Reviewed with battery performance and test conditions."
+              "Reviewed with battery performance targets, test conditions and internal-resistance expectations."
             ],
             [
               "Porosity and strength",
-              "Porosity, tensile strength and handling performance can be checked as required."
+              "Porosity, tensile strength and handling performance can be checked for converting and assembly needs."
             ]
           ]
         },
@@ -836,32 +914,32 @@
         },
         "parameters": {
           "eyebrow": "关键参数",
-          "title": "技术指标根据应用场景和客户要求确认",
-          "text": "技术参数需结合电池应用、生产工艺和验收要求进行评估，并在订单确认前沟通确定。",
+          "title": "采购 AGM 电池隔板时通常需要确认的参数",
+          "text": "用于 VRLA 铅酸电池生产的 AGM 隔板，通常需要结合厚度、宽度、克重、吸酸性能、电阻和操作强度进行沟通。这些指标应与电池应用、装配工艺和验收要求一起确认。",
           "items": [
             [
               "厚度",
-              "目标厚度根据电池极板设计和装配工艺要求确认。"
+              "与极板设计、压缩表现和装配工艺要求相关，需要结合电池结构确认。"
             ],
             [
-              "宽度",
-              "卷材宽度或片材宽度可根据客户生产线需求沟通。"
+              "宽度或片材尺寸",
+              "卷材宽度、分切方向或预裁切片材尺寸可根据生产流程沟通。"
             ],
             [
               "克重",
-              "克重需结合电解液保持能力和隔板结构进行评估。"
+              "需结合隔板结构、电解液保持能力和客户测试方法进行评估。"
             ],
             [
               "吸酸性能",
-              "吸酸表现应根据电池应用要求进行确认。"
+              "根据电池应用、电解液保持需求和约定测试要求进行沟通。"
             ],
             [
               "电阻",
-              "电阻要求需结合电池性能目标和测试条件沟通。"
+              "需结合电池性能目标、测试条件和内阻要求进行确认。"
             ],
             [
               "孔隙率与强度",
-              "孔隙率、拉伸强度和操作性能可按要求检测。"
+              "孔隙率、拉伸强度和操作性能可围绕分切、转化和装配需求检测。"
             ]
           ]
         },
@@ -4597,8 +4675,8 @@
         "language": "en",
         "siteName": "Viking AGM",
         "alternateSiteName": "Hubei Viking AGM",
-        "title": "Viking AGM | AGM Glass Fiber Separator Manufacturer",
-        "description": "Hubei Viking Technology manufactures AGM glass fiber separators for VRLA, UPS, motorcycle, automotive and energy storage lead-acid battery applications.",
+        "title": "AGM Battery Separator Manufacturer | VRLA & Energy Storage | Viking AGM",
+        "description": "Hubei Viking Technology manufactures ISO9001 certified AGM glass fiber separators for VRLA, UPS, motorcycle, automotive and energy storage lead-acid batteries. Request a quote.",
         "keywords": [
           "AGM glass fiber separator",
           "AGM battery separator manufacturer",
@@ -4616,7 +4694,7 @@
         "language": "zh-CN",
         "siteName": "湖北维京AGM",
         "alternateSiteName": "维京AGM",
-        "title": "湖北维京AGM | AGM 玻璃纤维隔板专业制造商",
+        "title": "铅酸电池隔板厂家 | AGM隔板生产厂家 | 湖北维京AGM",
         "description": "湖北维京科技有限公司专注 AGM 玻璃纤维隔板研发、生产与销售，服务 VRLA、UPS、汽车、摩托车及储能铅酸电池应用。",
         "keywords": [
           "AGM 玻璃纤维隔板",
@@ -4637,7 +4715,7 @@
         "locale": "en_US",
         "language": "en",
         "siteName": "Viking AGM",
-        "title": "AGM Separator Manufacturer for VRLA Lead-Acid Batteries",
+        "title": "AGM Battery Separator for VRLA Lead-Acid Batteries | Viking AGM",
         "description": "AGM glass fiber separators for VRLA lead-acid batteries, available in roll or sheet type. Send your thickness, width and battery application for quotation.",
         "keywords": [
           "AGM separator",
@@ -4981,7 +5059,7 @@
         "locale": "en_US",
         "language": "en",
         "siteName": "Viking AGM",
-        "title": "AGM Separator for Lead-Acid Energy Storage Batteries",
+        "title": "AGM Separator for Energy Storage Batteries | Viking AGM",
         "description": "AGM separator discussion for lead-acid energy storage, backup power and reserve power VRLA battery projects.",
         "keywords": [
           "AGM separator for energy storage battery",

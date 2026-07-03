@@ -1,0 +1,15 @@
+[Unit]
+Description=Viking AGM inquiry API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/viking-agm-inquiry
+EnvironmentFile=/opt/viking-agm-inquiry/.env
+ExecStart=/usr/bin/node /opt/viking-agm-inquiry/index.js
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target

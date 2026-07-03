@@ -30,7 +30,7 @@ const contactInfo = {
   phone: "18171518528",
   email: "vikingsales@vikingagm.com"
 };
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/";
+const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/api/inquiry";
 const staticFormFallback =
   process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const inquiryEmail =
@@ -912,6 +912,9 @@ export function BlogArticlePage({
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
+    formData.set("form-name", "inquiry");
+    formData.set("language", lang);
+    formData.set("page_url", window.location.href);
     const required = ["name", "company", "email", "country", "application"];
     const missingRequired = required.some(
       (field) => !String(formData.get(field) || "").trim()
@@ -1233,9 +1236,7 @@ export function BlogArticlePage({
           <form
             name="inquiry"
             method="POST"
-            action="/"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
+            action={asset(formEndpoint)}
             onSubmit={submitInquiry}
             className="rounded-md bg-white p-5 text-ink shadow-industrial sm:p-7"
           >
