@@ -22,6 +22,15 @@ Set real values for:
 - `SMTP_FROM`
 - `INQUIRY_TO`
 - optionally `FEISHU_WEBHOOK_URL`
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD`
+- `ADMIN_SESSION_SECRET`
+
+Generate a strong admin session secret:
+
+```bash
+openssl rand -hex 32
+```
 
 The SQLite database defaults to:
 
@@ -67,7 +76,7 @@ systemctl status viking-agm-inquiry
 
 ## 3. Configure Nginx reverse proxy
 
-Add the included Nginx snippet inside the existing `server` block for `vikingagm.com`:
+Add the included Nginx snippet inside both existing `server` blocks for `vikingagm.com` if you have HTTP and HTTPS blocks:
 
 ```bash
 cat /opt/viking-agm-inquiry/nginx/inquiry-api-location.conf
@@ -78,6 +87,15 @@ The location block is:
 ```nginx
 location /api/inquiry {
     proxy_pass http://127.0.0.1:3001/api/inquiry;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+location /admin {
+    proxy_pass http://127.0.0.1:3001/admin;
     proxy_http_version 1.1;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
@@ -115,3 +133,19 @@ If SMTP is not configured yet, the API still stores the inquiry and returns `202
 sqlite3 /var/lib/viking-agm/inquiries.db \
   "select id,name,contact,company,notification_status,created_at from inquiries order by id desc limit 10;"
 ```
+
+## 6. Admin dashboard
+
+After setting the admin environment variables and adding the `/admin` Nginx proxy, restart the API:
+
+```bash
+systemctl restart viking-agm-inquiry
+```
+
+Open:
+
+```txt
+https://www.vikingagm.com/admin
+```
+
+The dashboard supports search, status filtering, lead details, and marking leads as `new` or `handled`.
