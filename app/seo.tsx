@@ -1635,10 +1635,10 @@ function organizationData(lang: Lang, description: string) {
     url: SITE_URL,
     logo: `${SITE_URL}/images/banner-logo-header.webp`,
     email: "vikingsales@vikingagm.com",
-    telephone: "+86-18171518528",
+    telephone: "+86 18171518528",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+86-18171518528",
+      telephone: "+86 18171518528",
       email: "vikingsales@vikingagm.com",
       contactType: "sales",
       availableLanguage: ["en", "zh-CN"]

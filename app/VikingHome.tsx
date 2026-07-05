@@ -572,7 +572,7 @@ const capabilityIcons = [Factory, ClipboardCheck, Truck, Layers3];
 const whyIcons = [BadgeCheck, Truck, PackageCheck, Globe2];
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const contactInfo = {
-  phone: "18171518528",
+  phone: "+86 18171518528",
   email: "vikingsales@vikingagm.com"
 };
 const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/api/inquiry";

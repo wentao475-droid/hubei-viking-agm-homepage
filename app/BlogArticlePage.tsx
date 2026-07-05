@@ -28,7 +28,7 @@ type IconName =
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const icpLicense = process.env.NEXT_PUBLIC_ICP_LICENSE || "鄂ICP备2026033781号";
 const contactInfo = {
-  phone: "18171518528",
+  phone: "+86 18171518528",
   email: "vikingsales@vikingagm.com"
 };
 const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/api/inquiry";

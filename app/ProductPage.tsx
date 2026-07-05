@@ -63,7 +63,7 @@ const icpLicense = process.env.NEXT_PUBLIC_ICP_LICENSE || "鄂ICP备2026033781�
 const staticFormFallback =
   process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const contactInfo = {
-  phone: "18171518528",
+  phone: "+86 18171518528",
   email: "vikingsales@vikingagm.com"
 };
 const inquiryEmail =
