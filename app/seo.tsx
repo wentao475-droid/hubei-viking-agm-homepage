@@ -10,6 +10,8 @@ const QUALITY_PREVIEW_IMAGE = `${SITE_URL}/images/agm-quality-control-1200.webp`
 const UPS_APPLICATION_IMAGE = `${SITE_URL}/images/applications/ups-vrla-battery-application-1200.webp`;
 const MOTORCYCLE_APPLICATION_IMAGE = `${SITE_URL}/images/applications/motorcycle-vrla-battery-application-1200.webp`;
 const ENERGY_STORAGE_APPLICATION_IMAGE = `${SITE_URL}/images/applications/energy-storage-lead-acid-battery-application-1200.webp`;
+const HOME_VIDEO_URL = `${SITE_URL}/videos/viking-agm-promo-720p.mp4`;
+const HOME_VIDEO_POSTER = `${SITE_URL}/images/viking-agm-promo-poster.webp`;
 
 const homeSeo = {
   en: {
@@ -934,6 +936,27 @@ export function StructuredData({ lang }: { lang: Lang }) {
         areaServed: "Worldwide",
         url,
         inLanguage: current.language
+      },
+      {
+        "@type": "VideoObject",
+        "@id": `${url}#factory-overview-video`,
+        name:
+          lang === "zh"
+            ? "1 分钟了解维京 AGM 隔板生产能力"
+            : "Watch the 1-minute Viking AGM factory overview",
+        description:
+          lang === "zh"
+            ? "湖北维京 AGM 隔板生产、卷材处理、质量检测和包装出运现场宣传片。"
+            : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
+        thumbnailUrl: [HOME_VIDEO_POSTER],
+        uploadDate: "2026-07-01",
+        duration: "PT1M3S",
+        contentUrl: HOME_VIDEO_URL,
+        embedUrl: url,
+        inLanguage: current.language,
+        publisher: {
+          "@id": `${SITE_URL}/#organization`
+        }
       }
     ]
   };

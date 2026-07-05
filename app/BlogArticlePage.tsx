@@ -26,6 +26,7 @@ type IconName =
   | "x";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const icpLicense = process.env.NEXT_PUBLIC_ICP_LICENSE || "鄂ICP备2026033781号";
 const contactInfo = {
   phone: "18171518528",
   email: "vikingsales@vikingagm.com"
@@ -1373,6 +1374,19 @@ export function BlogArticlePage({
               </div>
             ))}
           </div>
+        </div>
+        <div className="mx-auto mt-10 max-w-7xl border-t border-line pt-6 text-sm text-steel">
+          <div>
+            © 2026 Hubei Viking Technology Co., Ltd. {lang === "zh" ? "保留所有权利。" : "All rights reserved."}
+          </div>
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex font-semibold transition hover:text-signal"
+          >
+            {icpLicense}
+          </a>
         </div>
       </footer>
       <QuickContactDock lang={lang} />

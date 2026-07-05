@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import Image from "next/image";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { homeContent } from "./cms-content";
 import { SiteHeader } from "./SiteHeader";
 
@@ -20,6 +20,7 @@ type IconName =
   | "menu"
   | "package"
   | "phone"
+  | "play"
   | "send"
   | "shield"
   | "top"
@@ -54,6 +55,16 @@ const copy = {
         width: 1600,
         height: 1000
       }
+    },
+    video: {
+      eyebrow: "Factory Overview",
+      title: "Watch the 1-minute Viking AGM factory overview",
+      text:
+        "A quick look at AGM separator production, roll handling, quality control and packing scenes for buyer review.",
+      duration: "1 min factory video",
+      play: "Play video",
+      close: "Close video",
+      aria: "Play Viking AGM factory overview video"
     },
     stats: [
       { value: "AGM", label: "Glass fiber separator manufacturing" },
@@ -313,6 +324,16 @@ const copy = {
         height: 1000
       }
     },
+    video: {
+      eyebrow: "工厂视频",
+      title: "1 分钟了解维京 AGM 隔板生产能力",
+      text:
+        "快速查看 AGM 隔板生产、卷材处理、质量检测和包装出运等现场画面，便于客户初步了解工厂能力。",
+      duration: "1 分钟工厂宣传片",
+      play: "播放视频",
+      close: "关闭视频",
+      aria: "播放维京 AGM 工厂宣传片"
+    },
     stats: [
       { value: "AGM", label: "玻璃纤维隔板制造" },
       { value: "OEM", label: "支持卷材规格沟通" },
@@ -538,10 +559,12 @@ const Layers3 = makeIcon("layers");
 const Mail = makeIcon("mail");
 const PackageCheck = makeIcon("package");
 const Phone = makeIcon("phone");
+const Play = makeIcon("play");
 const Send = makeIcon("send");
 const ShieldCheck = makeIcon("shield");
 const ArrowUp = makeIcon("top");
 const Truck = makeIcon("truck");
+const X = makeIcon("x");
 
 const icons = [Layers3, ShieldCheck, BadgeCheck, Factory, PackageCheck];
 const applicationIcons = [ShieldCheck, Globe2, Layers3, Truck, Factory];
@@ -557,7 +580,7 @@ const staticFormFallback =
   process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const inquiryEmail =
   process.env.NEXT_PUBLIC_INQUIRY_EMAIL || contactInfo.email;
-const icpLicense = process.env.NEXT_PUBLIC_ICP_LICENSE || "";
+const icpLicense = process.env.NEXT_PUBLIC_ICP_LICENSE || "鄂ICP备2026033781号";
 const certificationImages = [
   "/images/certification-1-900.webp",
   "/images/certification-2-900.webp",
@@ -566,6 +589,10 @@ const certificationImages = [
   "/images/certification-5-900.webp"
 ];
 const useEvidenceImagePlaceholders = true;
+const promoVideo = {
+  src: "/videos/viking-agm-promo-720p.mp4",
+  poster: "/images/viking-agm-promo-poster.webp"
+};
 
 function asset(path: string) {
   return `${basePath}${path}`;
@@ -577,10 +604,40 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
     "idle" | "error" | "success" | "failure" | "emailFallback"
   >("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const t = homeContent(lang, copy[lang]);
   const footerColumns = Object.entries(t.footer.columns) as Array<
     [string, readonly FooterLink[]]
   >;
+
+  function closeVideo() {
+    videoRef.current?.pause();
+    setIsVideoOpen(false);
+  }
+
+  useEffect(() => {
+    if (!isVideoOpen) {
+      return;
+    }
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        videoRef.current?.pause();
+        setIsVideoOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isVideoOpen]);
 
   async function submitInquiry(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -722,6 +779,91 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
           ))}
         </div>
       </section>
+
+      <section className="px-4 pt-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl overflow-hidden rounded-md border border-line bg-white shadow-industrial lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
+              {t.video.eyebrow}
+            </p>
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-ink sm:text-4xl">
+              {t.video.title}
+            </h2>
+            <p className="mt-5 text-base leading-8 text-steel">{t.video.text}</p>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={() => setIsVideoOpen(true)}
+                aria-label={t.video.aria}
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-signal px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-ink"
+              >
+                <Play size={17} />
+                {t.video.play}
+              </button>
+              <span className="rounded-md border border-line bg-frost px-3 py-2 text-sm font-semibold text-graphite">
+                {t.video.duration}
+              </span>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => setIsVideoOpen(true)}
+            aria-label={t.video.aria}
+            className="group relative aspect-video overflow-hidden bg-white text-left lg:self-center"
+          >
+            <Image
+              src={asset(promoVideo.poster)}
+              alt={t.video.title}
+              fill
+              sizes="(min-width: 1024px) 54vw, 100vw"
+              loading="lazy"
+              className="object-contain transition duration-500 group-hover:scale-[1.01]"
+            />
+            <span className="absolute inset-0 bg-gradient-to-t from-ink/18 via-transparent to-transparent" />
+            <span className="absolute bottom-4 left-4 inline-flex items-center gap-3 rounded-md border border-white/70 bg-white/92 px-4 py-3 text-sm font-bold text-ink shadow-sm transition group-hover:bg-signal group-hover:text-white sm:bottom-5 sm:left-5">
+              <span className="flex h-10 w-10 items-center justify-center rounded-md bg-signal text-white group-hover:bg-white group-hover:text-signal">
+                <Play size={18} />
+              </span>
+              {t.video.play}
+            </span>
+          </button>
+        </div>
+      </section>
+
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/82 px-4 py-6 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t.video.title}
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) {
+              closeVideo();
+            }
+          }}
+        >
+          <div className="relative w-full max-w-5xl rounded-md border border-white/15 bg-ink p-3 shadow-industrial sm:p-4">
+            <button
+              type="button"
+              onClick={closeVideo}
+              aria-label={t.video.close}
+              className="absolute -top-12 right-0 inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white transition hover:bg-white hover:text-ink"
+            >
+              <X size={20} />
+            </button>
+            <video
+              ref={videoRef}
+              src={asset(promoVideo.src)}
+              poster={asset(promoVideo.poster)}
+              controls
+              preload="metadata"
+              playsInline
+              autoPlay
+              className="aspect-video w-full rounded-md bg-black"
+            />
+          </div>
+        </div>
+      )}
 
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
@@ -1784,6 +1926,13 @@ function iconPath(name: IconName) {
       return (
         <>
           <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z" />
+        </>
+      );
+    case "play":
+      return (
+        <>
+          <circle cx="12" cy="12" r="9" />
+          <path d="m10 8 6 4-6 4V8Z" />
         </>
       );
     case "send":
