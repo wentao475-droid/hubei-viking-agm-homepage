@@ -580,6 +580,53 @@ const howToChooseAgmSeparatorSeo = {
   }
 } as const;
 
+const agmSeparatorManufacturingQualityDeliverySeo = {
+  en: {
+    path: "/blog/agm-separator-manufacturing-quality-delivery/",
+    alternatePath: "/zh/blog/agm-separator-manufacturing-quality-delivery/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title:
+      "AGM Separator Manufacturing: Production, Quality Control and Reliable Delivery",
+    description:
+      "See how Hubei Viking manages AGM separator production, inspection and delivery for stable VRLA lead-acid battery separator supply.",
+    keywords: [
+      "AGM separator manufacturing",
+      "AGM separator factory",
+      "AGM separator quality control",
+      "AGM separator delivery",
+      "VRLA battery separator supplier"
+    ],
+    pageName:
+      "AGM Separator Manufacturing: Production, Quality Control and Reliable Delivery",
+    articleDescription:
+      "A factory-focused article explaining how Hubei Viking manages AGM separator production, quality control and delivery communication for reliable VRLA lead-acid battery separator supply.",
+    breadcrumbs: ["Home", "Resources", "AGM Separator Manufacturing"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-manufacturing-quality-delivery/",
+    alternatePath: "/blog/agm-separator-manufacturing-quality-delivery/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "湖北维京 AGM 隔板：生产、检测与稳定交付 | 湖北维京AGM",
+    description:
+      "了解湖北维京如何围绕 AGM 隔板生产、质量检测和交付配合，为 VRLA 铅酸电池客户提供稳定供应。",
+    keywords: [
+      "AGM 隔板制造",
+      "AGM 隔板工厂",
+      "AGM 隔板质量检测",
+      "AGM 隔板稳定交付",
+      "VRLA 电池隔板供应商"
+    ],
+    pageName: "湖北维京 AGM 隔板：生产、检测与稳定交付",
+    articleDescription:
+      "介绍湖北维京如何围绕 AGM 隔板生产、质量控制和交付配合，为 VRLA 铅酸电池客户提供稳定供应。",
+    breadcrumbs: ["首页", "资料", "AGM 隔板生产与交付"]
+  }
+} as const;
+
 export function buildHomeMetadata(lang: Lang): Metadata {
   const current = seoContent("home", lang, homeSeo[lang]);
 
@@ -837,6 +884,33 @@ export function buildHowToChooseAgmSeparatorMetadata(lang: Lang): Metadata {
   });
 }
 
+export function buildAgmSeparatorManufacturingQualityDeliveryMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "agmSeparatorManufacturingQualityDelivery",
+    lang,
+    agmSeparatorManufacturingQualityDeliverySeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/agm-separator-manufacturing-quality-delivery/",
+    zhPath: "/zh/blog/agm-separator-manufacturing-quality-delivery/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
+      width: 1600,
+      height: 1000
+    }
+  });
+}
+
 function buildMetadata({
   title,
   description,
@@ -949,7 +1023,7 @@ export function StructuredData({ lang }: { lang: Lang }) {
             ? "湖北维京 AGM 隔板生产、卷材处理、质量检测和包装出运现场宣传片。"
             : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
         thumbnailUrl: [HOME_VIDEO_POSTER],
-        uploadDate: "2026-07-01",
+        uploadDate: "2026-07-01T00:00:00+08:00",
         duration: "PT1M3S",
         contentUrl: HOME_VIDEO_URL,
         embedUrl: url,
@@ -1597,6 +1671,86 @@ export function HowToChooseAgmSeparatorStructuredData({
           "AGM separator sourcing",
           "custom AGM separator",
           "AGM separator supplier",
+          "VRLA lead-acid battery"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorManufacturingQualityDeliveryStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmSeparatorManufacturingQualityDelivery",
+    lang,
+    agmSeparatorManufacturingQualityDeliverySeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const image = `${SITE_URL}/images/agm-hero-production-1600.webp`;
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: image,
+          width: 1600,
+          height: 1000
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image,
+        url,
+        mainEntityOfPage: {
+          "@id": `${url}#webpage`
+        },
+        author: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        publisher: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        about: [
+          "AGM separator manufacturing",
+          "AGM separator quality control",
+          "AGM separator delivery",
           "VRLA lead-acid battery"
         ],
         inLanguage: current.language

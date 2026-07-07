@@ -71,6 +71,12 @@ const pages = [
     zh: "/zh/blog/how-to-choose-agm-separator/",
     priority: "0.75",
     changefreq: "monthly"
+  },
+  {
+    en: "/blog/agm-separator-manufacturing-quality-delivery/",
+    zh: "/zh/blog/agm-separator-manufacturing-quality-delivery/",
+    priority: "0.75",
+    changefreq: "monthly"
   }
 ];
 

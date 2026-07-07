@@ -24,6 +24,12 @@ const resourcesNavItems = {
       description:
         "A practical buyer checklist for comparing separator requirements.",
       href: "/blog/how-to-choose-agm-separator/"
+    },
+    {
+      title: "AGM Separator Manufacturing",
+      description:
+        "Production, quality control and reliable delivery at Hubei Viking.",
+      href: "/blog/agm-separator-manufacturing-quality-delivery/"
     }
   ],
   zh: [
@@ -41,6 +47,11 @@ const resourcesNavItems = {
       title: "如何选择 AGM 隔板",
       description: "面向买家的隔板需求沟通和供应商比较清单。",
       href: "/zh/blog/how-to-choose-agm-separator/"
+    },
+    {
+      title: "AGM 隔板生产与交付",
+      description: "湖北维京的生产、检测与稳定交付说明。",
+      href: "/zh/blog/agm-separator-manufacturing-quality-delivery/"
     }
   ]
 } as const;
