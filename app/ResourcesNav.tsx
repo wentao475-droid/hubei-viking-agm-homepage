@@ -30,6 +30,12 @@ const resourcesNavItems = {
       description:
         "Production, quality control and reliable delivery at Hubei Viking.",
       href: "/blog/agm-separator-manufacturing-quality-delivery/"
+    },
+    {
+      title: "Why AGM Separator Consistency Matters",
+      description:
+        "Conductivity support, compression fit and batch consistency for VRLA projects.",
+      href: "/blog/agm-separator-performance-consistency/"
     }
   ],
   zh: [
@@ -52,6 +58,11 @@ const resourcesNavItems = {
       title: "AGM 隔板生产与交付",
       description: "湖北维京的生产、检测与稳定交付说明。",
       href: "/zh/blog/agm-separator-manufacturing-quality-delivery/"
+    },
+    {
+      title: "AGM 隔板为什么影响电池稳定性？",
+      description: "从导通相关表现、受压贴合和批次一致性进行判断。",
+      href: "/zh/blog/agm-separator-performance-consistency/"
     }
   ]
 } as const;

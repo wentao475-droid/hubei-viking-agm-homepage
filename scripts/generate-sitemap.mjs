@@ -77,6 +77,12 @@ const pages = [
     zh: "/zh/blog/agm-separator-manufacturing-quality-delivery/",
     priority: "0.75",
     changefreq: "monthly"
+  },
+  {
+    en: "/blog/agm-separator-performance-consistency/",
+    zh: "/zh/blog/agm-separator-performance-consistency/",
+    priority: "0.75",
+    changefreq: "monthly"
   }
 ];
 

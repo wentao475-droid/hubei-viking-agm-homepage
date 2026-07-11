@@ -627,6 +627,51 @@ const agmSeparatorManufacturingQualityDeliverySeo = {
   }
 } as const;
 
+const agmSeparatorPerformanceConsistencySeo = {
+  en: {
+    path: "/blog/agm-separator-performance-consistency/",
+    alternatePath: "/zh/blog/agm-separator-performance-consistency/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "Why AGM Separator Consistency Matters for VRLA Batteries | Viking AGM",
+    description:
+      "Learn why AGM separator conductivity support, fit under compression and batch consistency matter for VRLA lead-acid battery assembly and supply.",
+    keywords: [
+      "AGM separator consistency",
+      "AGM separator selection",
+      "AGM separator conductivity",
+      "AGM separator quality control",
+      "VRLA battery separator supplier"
+    ],
+    pageName: "Why AGM Separator Consistency Matters for VRLA Batteries",
+    articleDescription:
+      "A practical buyer guide to AGM separator conductivity support, compression fit and batch consistency for VRLA lead-acid battery projects.",
+    breadcrumbs: ["Home", "Resources", "AGM Separator Consistency"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-performance-consistency/",
+    alternatePath: "/blog/agm-separator-performance-consistency/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板为什么影响电池稳定性？| 湖北维京AGM",
+    description:
+      "从导通相关表现、受压贴合和批次一致性，了解 AGM 隔板如何影响 VRLA 铅酸电池装配与后续稳定配套。",
+    keywords: [
+      "AGM 隔板稳定性",
+      "AGM 隔板选型",
+      "AGM 隔板导通",
+      "AGM 隔板批次一致性",
+      "VRLA 电池隔板供应商"
+    ],
+    pageName: "同样是 AGM 隔板，为什么有的电池更稳？",
+    articleDescription:
+      "面向采购和技术团队，说明 AGM 隔板的导通相关表现、受压贴合和批次一致性为何影响 VRLA 铅酸电池项目的后续配套。",
+    breadcrumbs: ["首页", "资料", "AGM 隔板稳定性"]
+  }
+} as const;
+
 export function buildHomeMetadata(lang: Lang): Metadata {
   const current = seoContent("home", lang, homeSeo[lang]);
 
@@ -907,6 +952,33 @@ export function buildAgmSeparatorManufacturingQualityDeliveryMetadata(
       url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
       width: 1600,
       height: 1000
+    }
+  });
+}
+
+export function buildAgmSeparatorPerformanceConsistencyMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "agmSeparatorPerformanceConsistency",
+    lang,
+    agmSeparatorPerformanceConsistencySeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/agm-separator-performance-consistency/",
+    zhPath: "/zh/blog/agm-separator-performance-consistency/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: QUALITY_PREVIEW_IMAGE,
+      width: 1200,
+      height: 900
     }
   });
 }
@@ -1752,6 +1824,76 @@ export function AgmSeparatorManufacturingQualityDeliveryStructuredData({
           "AGM separator quality control",
           "AGM separator delivery",
           "VRLA lead-acid battery"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorPerformanceConsistencyStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmSeparatorPerformanceConsistency",
+    lang,
+    agmSeparatorPerformanceConsistencySeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: QUALITY_PREVIEW_IMAGE,
+          width: 1200,
+          height: 900
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: QUALITY_PREVIEW_IMAGE,
+        url,
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "AGM separator selection",
+          "AGM separator batch consistency",
+          "VRLA lead-acid battery assembly"
         ],
         inLanguage: current.language
       },

@@ -11,7 +11,8 @@ type BlogArticleKind =
   | "whatIsAgmSeparator"
   | "keyTechnicalParameters"
   | "howToChooseAgmSeparator"
-  | "agmSeparatorManufacturingQualityDelivery";
+  | "agmSeparatorManufacturingQualityDelivery"
+  | "agmSeparatorPerformanceConsistency";
 type IconName =
   | "arrow"
   | "check"
@@ -1104,6 +1105,247 @@ const manufacturingDeliveryCopy = {
   }
 } as const;
 
+const performanceConsistencyCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/agm-separator-performance-consistency/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request a Quote",
+    hero: {
+      eyebrow: "AGM Separator Selection",
+      title: "Why Do Some Lead-Acid Batteries Run More Consistently Than Others?",
+      subtitle:
+        "For AGM separator sourcing, thickness matters, but conductivity support, fit under compression and batch consistency often decide what happens after samples move into assembly.",
+      primary: "Discuss Your Battery Application",
+      secondary: "View Buyer Checklist",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM separator quality inspection at Hubei Viking",
+        width: 1200,
+        height: 900
+      }
+    },
+    intro: [
+      "In a VRLA lead-acid battery project, AGM separator is rarely the most expensive material, but it can affect whether assembly runs smoothly, whether batches remain consistent and how much rework a team needs later.",
+      "Thickness, price and delivery time are useful starting points. The more important question is whether the separator can be matched consistently to the battery design and production process after sampling moves into volume supply."
+    ],
+    sections: [
+      {
+        eyebrow: "Conductivity Support",
+        title: "Charging and discharging consistency depends on more than one visible parameter",
+        text:
+          "AGM separator is both a physical barrier and an electrolyte-retention structure. Its absorption behavior, internal structure and electrical-resistance-related performance need to be evaluated together with the battery design. A sample may be workable with manual adjustment, while continuous assembly can reveal differences in compression, fit and operating consistency."
+      },
+      {
+        eyebrow: "Fit Under Compression",
+        title: "Stable fit makes assembly easier to control",
+        text:
+          "Separator stability affects more than conductivity support. During assembly and later charge-discharge cycles, internal battery components remain under changing pressure and contact conditions. When fit and structural support are less consistent, teams may spend more time adjusting assembly conditions and handling variation."
+      },
+      {
+        eyebrow: "Batch Consistency",
+        title: "The real risk in procurement is often variation between batches",
+        text:
+          "A first sample can meet the target while later batches introduce differences in thickness, dimensions or other agreed characteristics. In volume projects, those differences can increase adjustment work, communication cost and uncertainty in the production line. The value of a separator supplier is not one attractive sample, but repeatable supply within confirmed requirements."
+      },
+      {
+        eyebrow: "Buyer Questions",
+        title: "Ask about application matching, not only price",
+        text:
+          "A practical supplier conversation should cover the battery application, intended separator format, dimensions, test focus, packing and the path from trial samples to volume delivery. These basic questions help buyers understand whether a supplier can support a stable working relationship rather than simply quote one product."
+      },
+      {
+        eyebrow: "Viking Approach",
+        title: "The goal is to make the next production step easier",
+        text:
+          "Hubei Viking focuses on AGM separator supply for VRLA lead-acid battery applications. We can discuss rolls, sheets, thickness, width, sheet size and packing around the actual project. Our attention is not limited to dispatching one batch; it is to make sampling, assembly and later supply coordination clearer and more manageable."
+      }
+    ],
+    parameters: [
+      ["Battery application", "Confirm the battery type, production workflow and performance focus before selecting a separator direction."],
+      ["Absorption and structure", "Review relevant material behavior with the battery design and agreed test conditions rather than relying on thickness alone."],
+      ["Compression and fit", "Discuss plate design, assembly method and the fit expected during continuous production."],
+      ["Batch control", "Confirm the key characteristics and acceptable ranges that matter to your line before moving from samples to volume supply."],
+      ["Format and packing", "Clarify roll or sheet form, width or sheet size, packing method and handling needs."],
+      ["Supply coordination", "Align trial samples, quantity, delivery rhythm and feedback process for the next stage."]
+    ],
+    formats: {
+      eyebrow: "Manufacturing and Inspection",
+      title: "Review the factory evidence behind a stable supply discussion",
+      items: [
+        [
+          "Process and quality attention",
+          "Production control and inspection provide the practical basis for reviewing consistency before material moves into customer sampling or delivery.",
+          "/images/agm-quality-control-1200.webp",
+          "AGM separator inspection at Hubei Viking"
+        ],
+        [
+          "Roll handling and shipment readiness",
+          "Warehouse and shipment preparation are part of the supply chain discussion, alongside the material specification itself.",
+          "/images/evidence/agm-separator-roll-warehouse-01.webp",
+          "AGM separator roll warehouse at Hubei Viking"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "AGM Separator Buyer Checklist",
+      title: "Four questions worth confirming before comparing quotations",
+      text:
+        "A useful comparison looks beyond a single thickness or price. Bring these points into the first supplier discussion to reduce uncertainty later in sampling and volume assembly.",
+      items: [
+        "Which battery application is this separator intended for?",
+        "How will consistency be reviewed from samples to later batches?",
+        "Can roll, sheet, dimensions and packing be matched to the assembly process?",
+        "How will sampling, feedback and volume delivery be coordinated?"
+      ]
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with product and technical information",
+      items: [
+        ["AGM Separator Product", "/products/agm-separator/"],
+        ["Key Technical Parameters", "/blog/key-technical-parameters-of-agm-separator/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["How to Choose AGM Separator", "/blog/how-to-choose-agm-separator/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Discuss AGM separator fit and supply requirements",
+      text:
+        "Share your battery application, separator format, dimensions, quantity and any test or packing considerations. We can discuss the next step for specification review and quotation.",
+      checklist: ["Battery application", "Roll or sheet format", "Dimensions and quantity", "Quality, packing or delivery requirements"],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        application: "VRLA, UPS, motorcycle, automotive, energy storage...",
+        message: "Product form, dimensions, application, quantity, quality focus, packing and delivery requirements"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/agm-separator-performance-consistency/",
+    brandName: articleCopy.zh.brandName,
+    quote: "获取报价",
+    hero: {
+      eyebrow: "AGM 隔板选型",
+      title: "同样是 AGM 隔板，为什么有的电池更稳，有的后期问题更多？",
+      subtitle:
+        "厚度是基础，但导通相关表现、受压贴合和批次一致性，往往更能决定隔板从打样到批量装配后的实际配套效果。",
+      primary: "沟通电池应用",
+      secondary: "查看采购清单",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "湖北维京 AGM 隔板质量检测",
+        width: 1200,
+        height: 900
+      }
+    },
+    intro: [
+      "在 VRLA 铅酸电池项目里，AGM 隔板通常不是最贵的材料，却经常影响后续装配顺不顺、批次稳不稳、返工多不多。",
+      "厚度、价格和交期是选型的起点，但更需要判断的是：这款隔板能否在样品之后，持续匹配电池设计和实际生产流程。"
+    ],
+    sections: [
+      {
+        eyebrow: "导通相关表现",
+        title: "充放电是否更顺，不能只看一个可见参数",
+        text:
+          "AGM 隔板既是隔离层，也是吸附并保持电解液的结构。吸液、内部结构和电阻等相关表现，需要结合电池设计一起评估。样品阶段可以通过人工调整完成装配，不代表连续装配时仍能保持相同的受压、贴合和运行一致性。"
+      },
+      {
+        eyebrow: "受压贴合",
+        title: "贴合稳定，装配过程才更容易控制",
+        text:
+          "隔板稳定性不只影响导通相关表现，也关系到结构贴合。装配过程和后续充放电中，电池内部部件持续处于变化的压力和接触条件下。贴合和结构支撑的一致性不足时，团队往往需要投入更多时间调整装配条件、处理波动。"
+      },
+      {
+        eyebrow: "批次一致性",
+        title: "采购真正担心的，往往是后续批次的波动",
+        text:
+          "第一次样品符合要求，不代表后续批次不会在厚度、尺寸或双方确认的其他关键表现上产生差异。对于批量项目，这类差异会增加调机、沟通和生产安排的不确定性。供应商的价值不在于一次样品好看，而在于能否围绕确认要求持续稳定地供货。"
+      },
+      {
+        eyebrow: "采购沟通",
+        title: "比起只问价格，更应该先问应用匹配",
+        text:
+          "一次务实的供应商沟通，应覆盖电池应用、隔板形式、尺寸、测试关注点、包装，以及从打样走向批量的配合方式。这些问题并不复杂，却能帮助采购和技术团队判断供应商是否能支持长期、稳定的配套关系。"
+      },
+      {
+        eyebrow: "维京关注点",
+        title: "目标是让客户的下一步生产更顺畅",
+        text:
+          "湖北维京专注 VRLA 铅酸电池用 AGM 隔板制造，可围绕卷材、片材、厚度、宽度、片材尺寸和包装方式进行沟通。我们关注的不只是发出一批产品，也希望让客户后续的打样、装配和批量协同更清楚、更易于管理。"
+      }
+    ],
+    parameters: [
+      ["电池应用", "选型前先确认电池类型、生产流程和性能关注点。"],
+      ["吸液与结构", "结合电池设计和双方确认的测试条件评估相关材料表现，而不只看厚度。"],
+      ["受压与贴合", "沟通极板设计、装配方式和连续生产中的贴合要求。"],
+      ["批次控制", "从样品走向批量前，确认生产线真正关心的关键特性和可接受范围。"],
+      ["形式与包装", "明确卷材或片材、宽度或片材尺寸、包装方式和搬运需求。"],
+      ["供货协同", "提前对齐打样、数量、交付节奏和反馈流程。"]
+    ],
+    formats: {
+      eyebrow: "生产与检测",
+      title: "用真实制造和检测场景支持稳定供应沟通",
+      items: [
+        [
+          "过程与质量关注",
+          "生产过程控制和检测把关，是材料进入客户打样或交付前评估一致性的实际基础。",
+          "/images/agm-quality-control-1200.webp",
+          "湖北维京 AGM 隔板质量检测"
+        ],
+        [
+          "卷材处理与出运准备",
+          "仓储和出运准备也是供应链沟通的一部分，需要与产品规格一起确认。",
+          "/images/evidence/agm-separator-roll-warehouse-01.webp",
+          "湖北维京 AGM 隔板卷材仓储"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "AGM 隔板采购清单",
+      title: "比较报价前，建议先确认这 4 件事",
+      text:
+        "有价值的比较不止看单一厚度或单次价格。首次与供应商沟通时先把这些内容说清，可以减少后续打样和批量装配中的不确定性。",
+      items: [
+        "这款隔板更适合什么电池应用？",
+        "从样品到后续批次，一致性如何确认？",
+        "卷材、片材、尺寸和包装能否匹配装配流程？",
+        "打样、反馈与批量交付如何协同？"
+      ]
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续查看产品和技术信息",
+      items: [
+        ["AGM 隔板产品", "/zh/products/agm-separator/"],
+        ["AGM 隔板技术参数", "/zh/blog/key-technical-parameters-of-agm-separator/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["如何选择 AGM 隔板", "/zh/blog/how-to-choose-agm-separator/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "沟通 AGM 隔板配套与供货需求",
+      text:
+        "请提供电池应用、隔板形式、尺寸、数量，以及测试、包装或交付方面的考虑，我们可以继续沟通规格评审与报价下一步。",
+      checklist: ["电池应用", "卷材或片材形式", "尺寸与数量", "质量、包装或交付要求"],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        application: "VRLA、UPS、摩托车、汽车、储能等",
+        message: "产品形式、尺寸、应用方向、数量、质量关注点、包装和交付要求"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 function asset(path: string) {
   return `${basePath}${path}`;
 }
@@ -1126,7 +1368,9 @@ export function BlogArticlePage({
         ? howToChooseCopy[lang]
         : page === "agmSeparatorManufacturingQualityDelivery"
           ? manufacturingDeliveryCopy[lang]
-        : articleCopy[lang];
+          : page === "agmSeparatorPerformanceConsistency"
+            ? performanceConsistencyCopy[lang]
+          : articleCopy[lang];
   const t = articleContent(page, lang, defaultArticle);
   const sectionIds =
     page === "keyTechnicalParameters"
@@ -1148,6 +1392,8 @@ export function BlogArticlePage({
           ]
         : page === "agmSeparatorManufacturingQualityDelivery"
           ? ["company", "factory", "quality", "delivery"]
+          : page === "agmSeparatorPerformanceConsistency"
+            ? ["conductivity", "fit", "consistency", "buyer-questions", "viking-approach"]
       : ["definition", "function", "parameters"];
   const heroImage =
     "image" in t.hero
