@@ -672,6 +672,51 @@ const agmSeparatorPerformanceConsistencySeo = {
   }
 } as const;
 
+const agmSeparatorExportSupplyReadinessSeo = {
+  en: {
+    path: "/blog/agm-separator-export-supply-readiness/",
+    alternatePath: "/zh/blog/agm-separator-export-supply-readiness/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "Lead-Acid Battery Exports Recovered in May. Is Your AGM Separator Supply Ready?",
+    description:
+      "May 2026 lead-acid battery export data and a practical buyer guide to AGM separator batch consistency, supply coordination and delivery readiness.",
+    keywords: [
+      "lead-acid battery export data",
+      "AGM separator supply",
+      "AGM separator batch consistency",
+      "AGM separator delivery",
+      "VRLA battery separator supplier"
+    ],
+    pageName: "Lead-Acid Battery Exports Recovered in May. Is Your AGM Separator Supply Ready?",
+    articleDescription:
+      "A practical industry article connecting May 2026 lead-acid battery export data with AGM separator batch consistency, supply coordination and delivery readiness for export-oriented battery projects.",
+    breadcrumbs: ["Home", "Resources", "AGM Separator Export Supply"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-export-supply-readiness/",
+    alternatePath: "/blog/agm-separator-export-supply-readiness/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "海外销量回升了，AGM 隔板配套跟得上吗？| 湖北维京AGM",
+    description:
+      "从 2026 年 5 月铅酸蓄电池出口数据，看 AGM 隔板批次一致性、供货协同和交付准备为何会在出口型项目中变得更重要。",
+    keywords: [
+      "铅酸蓄电池出口数据",
+      "AGM 隔板供应",
+      "AGM 隔板批次一致性",
+      "AGM 隔板交付",
+      "VRLA 电池隔板供应商"
+    ],
+    pageName: "海外销量回升了，AGM 隔板配套跟得上吗？",
+    articleDescription:
+      "结合 2026 年 5 月铅酸蓄电池出口数据，面向出口型电池项目说明 AGM 隔板批次一致性、供货协同和交付准备的重要性。",
+    breadcrumbs: ["首页", "资料", "AGM 隔板出口配套"]
+  }
+} as const;
+
 export function buildHomeMetadata(lang: Lang): Metadata {
   const current = seoContent("home", lang, homeSeo[lang]);
 
@@ -972,6 +1017,33 @@ export function buildAgmSeparatorPerformanceConsistencyMetadata(
     path: current.path,
     enPath: "/blog/agm-separator-performance-consistency/",
     zhPath: "/zh/blog/agm-separator-performance-consistency/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: QUALITY_PREVIEW_IMAGE,
+      width: 1200,
+      height: 900
+    }
+  });
+}
+
+export function buildAgmSeparatorExportSupplyReadinessMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "agmSeparatorExportSupplyReadiness",
+    lang,
+    agmSeparatorExportSupplyReadinessSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/agm-separator-export-supply-readiness/",
+    zhPath: "/zh/blog/agm-separator-export-supply-readiness/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -1894,6 +1966,77 @@ export function AgmSeparatorPerformanceConsistencyStructuredData({
           "AGM separator selection",
           "AGM separator batch consistency",
           "VRLA lead-acid battery assembly"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorExportSupplyReadinessStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmSeparatorExportSupplyReadiness",
+    lang,
+    agmSeparatorExportSupplyReadinessSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: QUALITY_PREVIEW_IMAGE,
+          width: 1200,
+          height: 900
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: QUALITY_PREVIEW_IMAGE,
+        url,
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "lead-acid battery exports",
+          "AGM separator supply",
+          "AGM separator batch consistency",
+          "VRLA lead-acid battery"
         ],
         inLanguage: current.language
       },

@@ -4665,6 +4665,700 @@
           "mobile": "移动官网"
         }
       }
+    },
+    "agmSeparatorManufacturingQualityDelivery": {
+      "en": {
+        "nav": {
+          "company": "Company",
+          "products": "Products",
+          "applications": "Applications",
+          "quality": "Quality",
+          "resources": "Resources",
+          "contact": "Contact"
+        },
+        "language": "中文",
+        "homePath": "/",
+        "languagePath": "/zh/blog/agm-separator-manufacturing-quality-delivery/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Request a Quote",
+        "hero": {
+          "eyebrow": "AGM Separator Manufacturing",
+          "title": "AGM Separator Manufacturing: Production, Quality Control and Reliable Delivery",
+          "subtitle": "How Hubei Viking turns stable AGM separator production, inspection and delivery into everyday manufacturing discipline.",
+          "primary": "Discuss Separator Requirements",
+          "secondary": "View Delivery Checklist",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "AGM separator manufacturing line at Hubei Viking",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "In the lead-acid battery industry, stability is not a slogan. It is built through daily production control, inspection discipline and reliable delivery follow-up.",
+          "Hubei Viking focuses on AGM glass fiber separator manufacturing and serves battery customers with a real factory, stable quality and practical communication."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Company Introduction",
+            "title": "Focused AGM separator manufacturing for VRLA battery customers",
+            "text": "AGM separators are widely used in VRLA lead-acid batteries, where they separate plates and help absorb and retain electrolyte. For battery producers, the separator is not a simple accessory; it affects assembly fit, stability and batch consistency. Viking keeps its attention on AGM separator manufacturing so the product, production process and service can be improved around practical customer requirements."
+          },
+          {
+            "eyebrow": "Real Factory",
+            "title": "A visible manufacturing base is the starting point of trust",
+            "text": "Manufacturing confidence comes from the site: the factory area, workshop, production line, warehouse and daily operating order. Viking uses real factory scenes and actual production capability as the basis for supplier discussion, so cooperation is supported by visible manufacturing execution rather than brochure language alone."
+          },
+          {
+            "eyebrow": "Quality Control",
+            "title": "Stable quality is the basic respect for B2B customers",
+            "text": "For AGM separators, customers care about specific questions: whether the product is stable, whether batches are consistent, whether dimensions match and whether later production will be easier to manage. Viking pays attention to process details and inspection before delivery, aiming to reduce customer communication cost, trial-and-error cost and concern about batch variation."
+          },
+          {
+            "eyebrow": "Reliable Supply",
+            "title": "Stable supply is the long-term answer",
+            "text": "Long-term cooperation depends not only on one qualified batch, but on repeated delivery discipline. Viking supports specification discussion, roll or sheet format confirmation, packing communication and delivery follow-up so customers can plan procurement and production with fewer uncertainties."
+          }
+        ],
+        "parameters": [
+          [
+            "Focused product category",
+            "AGM glass fiber separator rolls and sheets for VRLA lead-acid battery applications."
+          ],
+          [
+            "Manufacturing evidence",
+            "Factory, workshop, roll handling, warehouse and shipment scenes are used for practical supplier review."
+          ],
+          [
+            "Quality attention",
+            "Process control and inspection help improve consistency before delivery."
+          ],
+          [
+            "Specification discussion",
+            "Thickness, width, roll format, sheet size, packing and application requirements can be reviewed with customers."
+          ],
+          [
+            "Delivery communication",
+            "Batch supply, packing method and shipment schedule can be discussed around production needs."
+          ],
+          [
+            "Practical service",
+            "Communication stays focused on real specifications, application direction and next steps for quotation."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Production and Delivery Evidence",
+          "title": "From factory capability to packing follow-up",
+          "items": [
+            [
+              "Production and quality control",
+              "AGM separator manufacturing requires stable process management and inspection discipline before material is released for customer review or delivery.",
+              "/images/agm-quality-control-1200.webp",
+              "AGM separator quality control at Hubei Viking"
+            ],
+            [
+              "Roll storage and shipment preparation",
+              "Finished rolls and shipment scenes help buyers understand packing, warehouse handling and delivery readiness.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGM separator shipment preparation"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Supplier Discussion Checklist",
+          "title": "Information that helps production and delivery communication",
+          "text": "If you are looking for an AGM separator supplier, these details help both sides confirm the product direction and delivery expectations faster.",
+          "items": [
+            "Battery application",
+            "Roll or sheet format",
+            "Thickness and width",
+            "Target quantity",
+            "Packing requirements",
+            "Expected delivery schedule"
+          ]
+        },
+        "related": {
+          "eyebrow": "Related Pages",
+          "title": "Continue with product, testing and buyer guides",
+          "items": [
+            [
+              "AGM Separator Product",
+              "/products/agm-separator/"
+            ],
+            [
+              "AGM Separator Testing",
+              "/quality-control/agm-separator-testing/"
+            ],
+            [
+              "What Is AGM Separator?",
+              "/blog/what-is-agm-separator/"
+            ],
+            [
+              "How to Choose AGM Separator",
+              "/blog/how-to-choose-agm-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Inquiry",
+          "title": "Contact Hubei Viking for AGM separator supply",
+          "text": "Share your application, roll or sheet format, dimensions, quantity and packing needs. Our team can discuss the next step for specification review and quotation.",
+          "checklist": [
+            "AGM separator rolls or sheets",
+            "Thickness, width or sheet size",
+            "Battery application direction",
+            "Packing and delivery requirements"
+          ],
+          "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+          },
+          "placeholders": {
+            "name": "Your full name",
+            "company": "Company name",
+            "email": "name@company.com",
+            "country": "Country / region",
+            "application": "VRLA, UPS, motorcycle, automotive, energy storage...",
+            "message": "Product form, thickness, width or sheet size, quantity, packing and delivery requirements"
+          },
+          "submit": "Send Inquiry",
+          "submitting": "Sending...",
+          "required": "Please complete all required fields before submitting.",
+          "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+          "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+          "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+        },
+        "footer": {
+          "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+          "wechat": "Official WeChat account",
+          "mobile": "Mobile website"
+        }
+      },
+      "zh": {
+        "nav": {
+          "company": "公司",
+          "products": "产品",
+          "applications": "应用",
+          "quality": "质量",
+          "resources": "资料",
+          "contact": "联系"
+        },
+        "language": "EN",
+        "homePath": "/zh/",
+        "languagePath": "/blog/agm-separator-manufacturing-quality-delivery/",
+        "brandName": "湖北维京科技有限公司",
+        "quote": "获取报价",
+        "hero": {
+          "eyebrow": "AGM 隔板制造",
+          "title": "湖北维京 AGM 隔板：生产、检测与稳定交付",
+          "subtitle": "一家传统工厂，如何把 AGM 隔板生产、检测与交付中的稳定性做到日常。",
+          "primary": "沟通隔板需求",
+          "secondary": "查看交付清单",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "湖北维京 AGM 隔板生产线",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "在铅酸蓄电池行业，稳定从来不是一句口号，而是从生产、检测到交付的持续兑现。",
+          "湖北维京专注 AGM 玻璃纤维隔板制造，以真实工厂、稳定品质与务实服务，回应每一次合作的信任。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "企业介绍",
+            "title": "专注 AGM 隔板制造，服务 VRLA 铅酸电池客户",
+            "text": "AGM 隔板广泛应用于 VRLA 阀控式铅酸蓄电池中，承担隔离极板、吸附并保持电解液的重要作用。它不是普通辅材，而是影响电池装配适配性、使用稳定性与一致性的关键部分。湖北维京长期聚焦 AGM 隔板制造，持续围绕客户需求优化产品、生产与服务。"
+          },
+          {
+            "eyebrow": "真实工厂",
+            "title": "真实工厂，是信任的起点",
+            "text": "制造业的底气来自现场。从厂区到车间，从生产线到仓储，每一个环节是否清晰、稳定、有序，都会影响客户对供应商的判断。维京坚持以真实工厂、真实生产、真实交付作为基础，让合作落到看得见的制造能力与执行能力上。"
+          },
+          {
+            "eyebrow": "品质稳定",
+            "title": "品质稳定，是最基本的尊重",
+            "text": "对于 AGM 隔板来说，客户关心的是产品是否稳定、批次是否一致、尺寸是否匹配、后续使用是否更省心。维京重视质量控制，从生产细节管理到检测环节把关，持续关注产品一致性与可靠性，希望把问题尽量解决在交付之前。"
+          },
+          {
+            "eyebrow": "稳定供应",
+            "title": "稳定供应，才是长期的答案",
+            "text": "长期合作依靠的不只是某一次合格，而是一次又一次把交付做到位。维京围绕规格沟通、卷材或片材形式确认、包装方式、批次供应和交付节奏与客户配合，帮助客户减少采购和生产安排中的不确定性。"
+          }
+        ],
+        "parameters": [
+          [
+            "专注产品",
+            "面向 VRLA 铅酸电池应用的 AGM 玻璃纤维隔板卷材和片材。"
+          ],
+          [
+            "制造证据",
+            "以厂区、车间、卷材处理、仓储和出运场景支持客户供应商评估。"
+          ],
+          [
+            "质量关注",
+            "通过过程控制和检测把关，帮助提升交付前的一致性。"
+          ],
+          [
+            "规格沟通",
+            "可围绕厚度、宽度、卷材形式、片材尺寸、包装和应用要求进行确认。"
+          ],
+          [
+            "交付配合",
+            "围绕批量供应、包装方式和出运节奏进行实际沟通。"
+          ],
+          [
+            "务实服务",
+            "沟通聚焦真实规格、应用方向和报价下一步。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "生产与交付证据",
+          "title": "从生产能力到包装出运",
+          "items": [
+            [
+              "生产与质量控制",
+              "AGM 隔板制造需要稳定的过程管理和检测把关，材料放行前应尽量完成必要确认。",
+              "/images/agm-quality-control-1200.webp",
+              "湖北维京 AGM 隔板质量检测"
+            ],
+            [
+              "卷材仓储与出运准备",
+              "成品卷材和出运场景有助于客户了解包装、仓储处理和交付准备情况。",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGM 隔板出运准备"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "供应商沟通清单",
+          "title": "有助于生产与交付沟通的信息",
+          "text": "如果您正在寻找 AGM 隔板供应商，以下信息可以帮助双方更快确认产品方向和交付预期。",
+          "items": [
+            "电池应用",
+            "卷材或片材形式",
+            "厚度和宽度",
+            "目标数量",
+            "包装要求",
+            "期望交期"
+          ]
+        },
+        "related": {
+          "eyebrow": "相关页面",
+          "title": "继续查看产品、检测与采购指南",
+          "items": [
+            [
+              "AGM 隔板产品",
+              "/zh/products/agm-separator/"
+            ],
+            [
+              "AGM 隔板检测",
+              "/zh/quality-control/agm-separator-testing/"
+            ],
+            [
+              "什么是 AGM 隔板？",
+              "/zh/blog/what-is-agm-separator/"
+            ],
+            [
+              "如何选择 AGM 隔板",
+              "/zh/blog/how-to-choose-agm-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "询盘",
+          "title": "联系湖北维京沟通 AGM 隔板供应",
+          "text": "请提供您的应用方向、卷材或片材形式、尺寸、数量和包装需求，我们可以继续沟通规格评审与报价下一步。",
+          "checklist": [
+            "AGM 隔板卷材或片材",
+            "厚度、宽度或片材尺寸",
+            "电池应用方向",
+            "包装与交付要求"
+          ],
+          "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+          },
+          "placeholders": {
+            "name": "您的姓名",
+            "company": "公司名称",
+            "email": "name@company.com",
+            "country": "国家或地区",
+            "application": "VRLA、UPS、摩托车、汽车、储能等",
+            "message": "产品形式、厚度、宽度或片材尺寸、数量、包装和交付要求"
+          },
+          "submit": "发送询盘",
+          "submitting": "发送中...",
+          "required": "请先填写所有必填字段。",
+          "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+          "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+          "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+        },
+        "footer": {
+          "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+          "wechat": "官方微信公众号",
+          "mobile": "移动官网"
+        }
+      }
+    },
+    "agmSeparatorPerformanceConsistency": {
+      "en": {
+        "nav": {
+          "company": "Company",
+          "products": "Products",
+          "applications": "Applications",
+          "quality": "Quality",
+          "resources": "Resources",
+          "contact": "Contact"
+        },
+        "language": "中文",
+        "homePath": "/",
+        "languagePath": "/zh/blog/agm-separator-performance-consistency/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Request a Quote",
+        "hero": {
+          "eyebrow": "AGM Separator Selection",
+          "title": "Why Do Some Lead-Acid Batteries Run More Consistently Than Others?",
+          "subtitle": "For AGM separator sourcing, thickness matters, but conductivity support, fit under compression and batch consistency often decide what happens after samples move into assembly.",
+          "primary": "Discuss Your Battery Application",
+          "secondary": "View Buyer Checklist",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGM separator quality inspection at Hubei Viking",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "intro": [
+          "In a VRLA lead-acid battery project, AGM separator is rarely the most expensive material, but it can affect whether assembly runs smoothly, whether batches remain consistent and how much rework a team needs later.",
+          "Thickness, price and delivery time are useful starting points. The more important question is whether the separator can be matched consistently to the battery design and production process after sampling moves into volume supply."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Conductivity Support",
+            "title": "Charging and discharging consistency depends on more than one visible parameter",
+            "text": "AGM separator is both a physical barrier and an electrolyte-retention structure. Its absorption behavior, internal structure and electrical-resistance-related performance need to be evaluated together with the battery design. A sample may be workable with manual adjustment, while continuous assembly can reveal differences in compression, fit and operating consistency."
+          },
+          {
+            "eyebrow": "Fit Under Compression",
+            "title": "Stable fit makes assembly easier to control",
+            "text": "Separator stability affects more than conductivity support. During assembly and later charge-discharge cycles, internal battery components remain under changing pressure and contact conditions. When fit and structural support are less consistent, teams may spend more time adjusting assembly conditions and handling variation."
+          },
+          {
+            "eyebrow": "Batch Consistency",
+            "title": "The real risk in procurement is often variation between batches",
+            "text": "A first sample can meet the target while later batches introduce differences in thickness, dimensions or other agreed characteristics. In volume projects, those differences can increase adjustment work, communication cost and uncertainty in the production line. The value of a separator supplier is not one attractive sample, but repeatable supply within confirmed requirements."
+          },
+          {
+            "eyebrow": "Buyer Questions",
+            "title": "Ask about application matching, not only price",
+            "text": "A practical supplier conversation should cover the battery application, intended separator format, dimensions, test focus, packing and the path from trial samples to volume delivery. These basic questions help buyers understand whether a supplier can support a stable working relationship rather than simply quote one product."
+          },
+          {
+            "eyebrow": "Viking Approach",
+            "title": "The goal is to make the next production step easier",
+            "text": "Hubei Viking focuses on AGM separator supply for VRLA lead-acid battery applications. We can discuss rolls, sheets, thickness, width, sheet size and packing around the actual project. Our attention is not limited to dispatching one batch; it is to make sampling, assembly and later supply coordination clearer and more manageable."
+          }
+        ],
+        "parameters": [
+          [
+            "Battery application",
+            "Confirm the battery type, production workflow and performance focus before selecting a separator direction."
+          ],
+          [
+            "Absorption and structure",
+            "Review relevant material behavior with the battery design and agreed test conditions rather than relying on thickness alone."
+          ],
+          [
+            "Compression and fit",
+            "Discuss plate design, assembly method and the fit expected during continuous production."
+          ],
+          [
+            "Batch control",
+            "Confirm the key characteristics and acceptable ranges that matter to your line before moving from samples to volume supply."
+          ],
+          [
+            "Format and packing",
+            "Clarify roll or sheet form, width or sheet size, packing method and handling needs."
+          ],
+          [
+            "Supply coordination",
+            "Align trial samples, quantity, delivery rhythm and feedback process for the next stage."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Manufacturing and Inspection",
+          "title": "Review the factory evidence behind a stable supply discussion",
+          "items": [
+            [
+              "Process and quality attention",
+              "Production control and inspection provide the practical basis for reviewing consistency before material moves into customer sampling or delivery.",
+              "/images/agm-quality-control-1200.webp",
+              "AGM separator inspection at Hubei Viking"
+            ],
+            [
+              "Roll handling and shipment readiness",
+              "Warehouse and shipment preparation are part of the supply chain discussion, alongside the material specification itself.",
+              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "AGM separator roll warehouse at Hubei Viking"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "AGM Separator Buyer Checklist",
+          "title": "Four questions worth confirming before comparing quotations",
+          "text": "A useful comparison looks beyond a single thickness or price. Bring these points into the first supplier discussion to reduce uncertainty later in sampling and volume assembly.",
+          "items": [
+            "Which battery application is this separator intended for?",
+            "How will consistency be reviewed from samples to later batches?",
+            "Can roll, sheet, dimensions and packing be matched to the assembly process?",
+            "How will sampling, feedback and volume delivery be coordinated?"
+          ]
+        },
+        "related": {
+          "eyebrow": "Related Pages",
+          "title": "Continue with product and technical information",
+          "items": [
+            [
+              "AGM Separator Product",
+              "/products/agm-separator/"
+            ],
+            [
+              "Key Technical Parameters",
+              "/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGM Separator Testing",
+              "/quality-control/agm-separator-testing/"
+            ],
+            [
+              "How to Choose AGM Separator",
+              "/blog/how-to-choose-agm-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Inquiry",
+          "title": "Discuss AGM separator fit and supply requirements",
+          "text": "Share your battery application, separator format, dimensions, quantity and any test or packing considerations. We can discuss the next step for specification review and quotation.",
+          "checklist": [
+            "Battery application",
+            "Roll or sheet format",
+            "Dimensions and quantity",
+            "Quality, packing or delivery requirements"
+          ],
+          "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+          },
+          "placeholders": {
+            "name": "Your full name",
+            "company": "Company name",
+            "email": "name@company.com",
+            "country": "Country / region",
+            "application": "VRLA, UPS, motorcycle, automotive, energy storage...",
+            "message": "Product form, dimensions, application, quantity, quality focus, packing and delivery requirements"
+          },
+          "submit": "Send Inquiry",
+          "submitting": "Sending...",
+          "required": "Please complete all required fields before submitting.",
+          "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+          "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+          "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+        },
+        "footer": {
+          "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+          "wechat": "Official WeChat account",
+          "mobile": "Mobile website"
+        }
+      },
+      "zh": {
+        "nav": {
+          "company": "公司",
+          "products": "产品",
+          "applications": "应用",
+          "quality": "质量",
+          "resources": "资料",
+          "contact": "联系"
+        },
+        "language": "EN",
+        "homePath": "/zh/",
+        "languagePath": "/blog/agm-separator-performance-consistency/",
+        "brandName": "湖北维京科技有限公司",
+        "quote": "获取报价",
+        "hero": {
+          "eyebrow": "AGM 隔板选型",
+          "title": "同样是 AGM 隔板，为什么有的电池更稳，有的后期问题更多？",
+          "subtitle": "厚度是基础，但导通相关表现、受压贴合和批次一致性，往往更能决定隔板从打样到批量装配后的实际配套效果。",
+          "primary": "沟通电池应用",
+          "secondary": "查看采购清单",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "湖北维京 AGM 隔板质量检测",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "intro": [
+          "在 VRLA 铅酸电池项目里，AGM 隔板通常不是最贵的材料，却经常影响后续装配顺不顺、批次稳不稳、返工多不多。",
+          "厚度、价格和交期是选型的起点，但更需要判断的是：这款隔板能否在样品之后，持续匹配电池设计和实际生产流程。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "导通相关表现",
+            "title": "充放电是否更顺，不能只看一个可见参数",
+            "text": "AGM 隔板既是隔离层，也是吸附并保持电解液的结构。吸液、内部结构和电阻等相关表现，需要结合电池设计一起评估。样品阶段可以通过人工调整完成装配，不代表连续装配时仍能保持相同的受压、贴合和运行一致性。"
+          },
+          {
+            "eyebrow": "受压贴合",
+            "title": "贴合稳定，装配过程才更容易控制",
+            "text": "隔板稳定性不只影响导通相关表现，也关系到结构贴合。装配过程和后续充放电中，电池内部部件持续处于变化的压力和接触条件下。贴合和结构支撑的一致性不足时，团队往往需要投入更多时间调整装配条件、处理波动。"
+          },
+          {
+            "eyebrow": "批次一致性",
+            "title": "采购真正担心的，往往是后续批次的波动",
+            "text": "第一次样品符合要求，不代表后续批次不会在厚度、尺寸或双方确认的其他关键表现上产生差异。对于批量项目，这类差异会增加调机、沟通和生产安排的不确定性。供应商的价值不在于一次样品好看，而在于能否围绕确认要求持续稳定地供货。"
+          },
+          {
+            "eyebrow": "采购沟通",
+            "title": "比起只问价格，更应该先问应用匹配",
+            "text": "一次务实的供应商沟通，应覆盖电池应用、隔板形式、尺寸、测试关注点、包装，以及从打样走向批量的配合方式。这些问题并不复杂，却能帮助采购和技术团队判断供应商是否能支持长期、稳定的配套关系。"
+          },
+          {
+            "eyebrow": "维京关注点",
+            "title": "目标是让客户的下一步生产更顺畅",
+            "text": "湖北维京专注 VRLA 铅酸电池用 AGM 隔板制造，可围绕卷材、片材、厚度、宽度、片材尺寸和包装方式进行沟通。我们关注的不只是发出一批产品，也希望让客户后续的打样、装配和批量协同更清楚、更易于管理。"
+          }
+        ],
+        "parameters": [
+          [
+            "电池应用",
+            "选型前先确认电池类型、生产流程和性能关注点。"
+          ],
+          [
+            "吸液与结构",
+            "结合电池设计和双方确认的测试条件评估相关材料表现，而不只看厚度。"
+          ],
+          [
+            "受压与贴合",
+            "沟通极板设计、装配方式和连续生产中的贴合要求。"
+          ],
+          [
+            "批次控制",
+            "从样品走向批量前，确认生产线真正关心的关键特性和可接受范围。"
+          ],
+          [
+            "形式与包装",
+            "明确卷材或片材、宽度或片材尺寸、包装方式和搬运需求。"
+          ],
+          [
+            "供货协同",
+            "提前对齐打样、数量、交付节奏和反馈流程。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "生产与检测",
+          "title": "用真实制造和检测场景支持稳定供应沟通",
+          "items": [
+            [
+              "过程与质量关注",
+              "生产过程控制和检测把关，是材料进入客户打样或交付前评估一致性的实际基础。",
+              "/images/agm-quality-control-1200.webp",
+              "湖北维京 AGM 隔板质量检测"
+            ],
+            [
+              "卷材处理与出运准备",
+              "仓储和出运准备也是供应链沟通的一部分，需要与产品规格一起确认。",
+              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "湖北维京 AGM 隔板卷材仓储"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "AGM 隔板采购清单",
+          "title": "比较报价前，建议先确认这 4 件事",
+          "text": "有价值的比较不止看单一厚度或单次价格。首次与供应商沟通时先把这些内容说清，可以减少后续打样和批量装配中的不确定性。",
+          "items": [
+            "这款隔板更适合什么电池应用？",
+            "从样品到后续批次，一致性如何确认？",
+            "卷材、片材、尺寸和包装能否匹配装配流程？",
+            "打样、反馈与批量交付如何协同？"
+          ]
+        },
+        "related": {
+          "eyebrow": "相关页面",
+          "title": "继续查看产品和技术信息",
+          "items": [
+            [
+              "AGM 隔板产品",
+              "/zh/products/agm-separator/"
+            ],
+            [
+              "AGM 隔板技术参数",
+              "/zh/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGM 隔板检测",
+              "/zh/quality-control/agm-separator-testing/"
+            ],
+            [
+              "如何选择 AGM 隔板",
+              "/zh/blog/how-to-choose-agm-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "询盘",
+          "title": "沟通 AGM 隔板配套与供货需求",
+          "text": "请提供电池应用、隔板形式、尺寸、数量，以及测试、包装或交付方面的考虑，我们可以继续沟通规格评审与报价下一步。",
+          "checklist": [
+            "电池应用",
+            "卷材或片材形式",
+            "尺寸与数量",
+            "质量、包装或交付要求"
+          ],
+          "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+          },
+          "placeholders": {
+            "name": "您的姓名",
+            "company": "公司名称",
+            "email": "name@company.com",
+            "country": "国家或地区",
+            "application": "VRLA、UPS、摩托车、汽车、储能等",
+            "message": "产品形式、尺寸、应用方向、数量、质量关注点、包装和交付要求"
+          },
+          "submit": "发送询盘",
+          "submitting": "发送中...",
+          "required": "请先填写所有必填字段。",
+          "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+          "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+          "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+        },
+        "footer": {
+          "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+          "wechat": "官方微信公众号",
+          "mobile": "移动官网"
+        }
+      }
     }
   },
   "seo": {
@@ -5245,6 +5939,102 @@
           "首页",
           "资料",
           "如何选择 AGM 隔板"
+        ]
+      }
+    },
+    "agmSeparatorManufacturingQualityDelivery": {
+      "en": {
+        "path": "/blog/agm-separator-manufacturing-quality-delivery/",
+        "alternatePath": "/zh/blog/agm-separator-manufacturing-quality-delivery/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "AGM Separator Manufacturing: Production, Quality Control and Reliable Delivery",
+        "description": "See how Hubei Viking manages AGM separator production, inspection and delivery for stable VRLA lead-acid battery separator supply.",
+        "keywords": [
+          "AGM separator manufacturing",
+          "AGM separator factory",
+          "AGM separator quality control",
+          "AGM separator delivery",
+          "VRLA battery separator supplier"
+        ],
+        "pageName": "AGM Separator Manufacturing: Production, Quality Control and Reliable Delivery",
+        "articleDescription": "A factory-focused article explaining how Hubei Viking manages AGM separator production, quality control and delivery communication for reliable VRLA lead-acid battery separator supply.",
+        "breadcrumbs": [
+          "Home",
+          "Resources",
+          "AGM Separator Manufacturing"
+        ]
+      },
+      "zh": {
+        "path": "/zh/blog/agm-separator-manufacturing-quality-delivery/",
+        "alternatePath": "/blog/agm-separator-manufacturing-quality-delivery/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "湖北维京 AGM 隔板：生产、检测与稳定交付 | 湖北维京AGM",
+        "description": "了解湖北维京如何围绕 AGM 隔板生产、质量检测和交付配合，为 VRLA 铅酸电池客户提供稳定供应。",
+        "keywords": [
+          "AGM 隔板制造",
+          "AGM 隔板工厂",
+          "AGM 隔板质量检测",
+          "AGM 隔板稳定交付",
+          "VRLA 电池隔板供应商"
+        ],
+        "pageName": "湖北维京 AGM 隔板：生产、检测与稳定交付",
+        "articleDescription": "介绍湖北维京如何围绕 AGM 隔板生产、质量控制和交付配合，为 VRLA 铅酸电池客户提供稳定供应。",
+        "breadcrumbs": [
+          "首页",
+          "资料",
+          "AGM 隔板生产与交付"
+        ]
+      }
+    },
+    "agmSeparatorPerformanceConsistency": {
+      "en": {
+        "path": "/blog/agm-separator-performance-consistency/",
+        "alternatePath": "/zh/blog/agm-separator-performance-consistency/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "Why AGM Separator Consistency Matters for VRLA Batteries | Viking AGM",
+        "description": "Learn why AGM separator conductivity support, fit under compression and batch consistency matter for VRLA lead-acid battery assembly and supply.",
+        "keywords": [
+          "AGM separator consistency",
+          "AGM separator selection",
+          "AGM separator conductivity",
+          "AGM separator quality control",
+          "VRLA battery separator supplier"
+        ],
+        "pageName": "Why AGM Separator Consistency Matters for VRLA Batteries",
+        "articleDescription": "A practical buyer guide to AGM separator conductivity support, compression fit and batch consistency for VRLA lead-acid battery projects.",
+        "breadcrumbs": [
+          "Home",
+          "Resources",
+          "AGM Separator Consistency"
+        ]
+      },
+      "zh": {
+        "path": "/zh/blog/agm-separator-performance-consistency/",
+        "alternatePath": "/blog/agm-separator-performance-consistency/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "AGM 隔板为什么影响电池稳定性？| 湖北维京AGM",
+        "description": "从导通相关表现、受压贴合和批次一致性，了解 AGM 隔板如何影响 VRLA 铅酸电池装配与后续稳定配套。",
+        "keywords": [
+          "AGM 隔板稳定性",
+          "AGM 隔板选型",
+          "AGM 隔板导通",
+          "AGM 隔板批次一致性",
+          "VRLA 电池隔板供应商"
+        ],
+        "pageName": "同样是 AGM 隔板，为什么有的电池更稳？",
+        "articleDescription": "面向采购和技术团队，说明 AGM 隔板的导通相关表现、受压贴合和批次一致性为何影响 VRLA 铅酸电池项目的后续配套。",
+        "breadcrumbs": [
+          "首页",
+          "资料",
+          "AGM 隔板稳定性"
         ]
       }
     }

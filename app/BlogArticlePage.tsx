@@ -12,7 +12,8 @@ type BlogArticleKind =
   | "keyTechnicalParameters"
   | "howToChooseAgmSeparator"
   | "agmSeparatorManufacturingQualityDelivery"
-  | "agmSeparatorPerformanceConsistency";
+  | "agmSeparatorPerformanceConsistency"
+  | "agmSeparatorExportSupplyReadiness";
 type IconName =
   | "arrow"
   | "check"
@@ -1346,6 +1347,264 @@ const performanceConsistencyCopy = {
   }
 } as const;
 
+const exportSupplyReadinessCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/agm-separator-export-supply-readiness/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request a Quote",
+    hero: {
+      eyebrow: "AGM Separator Supply",
+      title: "Lead-Acid Battery Exports Recovered in May. Is Your AGM Separator Supply Ready?",
+      subtitle:
+        "A May 2026 export rebound is a useful reminder: when order pace changes, delivery coordination, batch consistency and specification communication become more sensitive.",
+      primary: "Discuss Supply Requirements",
+      secondary: "View Buyer Checklist",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM separator quality inspection at Hubei Viking",
+        width: 1200,
+        height: 900
+      }
+    },
+    intro: [
+      "China exported 20.6522 million lead-acid batteries in May 2026, up 7.73% month on month and 2.8% year on year. From January to May, cumulative exports were 85.9478 million units, down 8.86% year on year.",
+      "The data points to a monthly improvement, while the cumulative picture remained under pressure. For battery manufacturers and export-oriented supply chains, this is less a market forecast than a practical reminder to review whether delivery, batch control and technical coordination can keep up when order rhythm changes."
+    ],
+    sections: [
+      {
+        eyebrow: "Export Snapshot",
+        title: "A monthly recovery does not remove supply-chain pressure",
+        text:
+          "A positive monthly export movement suggests that overseas demand has not disappeared. At the same time, the year-to-date decline means buyers should read the data with context. When demand becomes less predictable, production teams need to be ready for tighter schedules and more frequent changes in purchasing plans."
+      },
+      {
+        eyebrow: "When Orders Move Faster",
+        title: "The first issue to surface is often not price",
+        text:
+          "When order volume or delivery pace increases, questions that were previously manageable can become operational risks: whether material lead time is dependable, whether later batches remain within agreed requirements, whether specifications are clear and whether a supplier can coordinate quickly when conditions change."
+      },
+      {
+        eyebrow: "Why AGM Separator Matters",
+        title: "Separator fit and consistency affect the wider assembly process",
+        text:
+          "AGM separator is not the most visible battery component, but it is connected with assembly fit, batch consistency and later production stability. Under a steady order rhythm, teams may have time to resolve variation through additional adjustment or communication. Under tighter delivery conditions, the same issues can turn into lower assembly efficiency, more coordination work and greater delivery risk."
+      },
+      {
+        eyebrow: "Export Project Priorities",
+        title: "Four supply questions matter before comparing a single quotation",
+        text:
+          "Export-oriented projects benefit from confirming four basics early: whether batches can be supplied consistently, whether specifications are communicated clearly, whether supply can continue at the required pace and whether the response path is clear if an issue needs attention. These questions are often more useful for long-term planning than a one-time price comparison."
+      },
+      {
+        eyebrow: "Viking Supply Coordination",
+        title: "Keep the next production step predictable",
+        text:
+          "Hubei Viking focuses on AGM separator manufacturing for VRLA lead-acid battery applications. We can discuss rolls, sheets, thickness, width, sheet size and packing based on the actual project. The goal is not only to confirm one available product, but to make batch supply, delivery planning and communication more predictable as requirements develop."
+      }
+    ],
+    parameters: [
+      ["May 2026 exports", "20.6522 million lead-acid batteries exported, up 7.73% month on month and 2.8% year on year."],
+      ["January-May 2026 exports", "85.9478 million units cumulatively, down 8.86% year on year."],
+      ["Batch consistency", "Confirm the characteristics and acceptable ranges that matter before moving from samples to volume supply."],
+      ["Specification clarity", "Align roll or sheet type, dimensions, packing and application requirements before delivery pressure increases."],
+      ["Supply continuity", "Discuss expected quantity, delivery rhythm and feedback process around the production plan."],
+      ["Response coordination", "Agree on a practical communication path for sampling, batch follow-up and exceptions."]
+    ],
+    formats: {
+      eyebrow: "Supply Readiness Evidence",
+      title: "Quality review and shipment preparation support export coordination",
+      items: [
+        [
+          "Quality control before delivery",
+          "Process control and inspection help create a clearer basis for confirming material requirements before samples or batch deliveries move forward.",
+          "/images/agm-quality-control-1200.webp",
+          "AGM separator quality control at Hubei Viking"
+        ],
+        [
+          "Warehouse and shipment preparation",
+          "Roll handling, packing and shipment readiness are part of the supply discussion alongside the separator specification itself.",
+          "/images/evidence/shipping-pallet-01.webp",
+          "AGM separator shipment preparation"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "Export Supply Checklist",
+      title: "Four points to confirm before export demand becomes more urgent",
+      text:
+        "For export-oriented battery projects, use these questions to assess whether an AGM separator supplier can support the next stage of production and delivery planning.",
+      items: [
+        "Can later batches remain within confirmed requirements?",
+        "Are product form, dimensions and packing requirements clear?",
+        "Can supply continue at the expected delivery rhythm?",
+        "Is there a clear communication path for sampling and batch follow-up?"
+      ]
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with product, quality and supply information",
+      items: [
+        ["AGM Separator Product", "/products/agm-separator/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["Key Technical Parameters", "/blog/key-technical-parameters-of-agm-separator/"],
+        ["Production, Quality Control and Delivery", "/blog/agm-separator-manufacturing-quality-delivery/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Discuss AGM separator supply for export-oriented projects",
+      text:
+        "Share your battery application, separator format, dimensions, quantity, packing and expected delivery schedule. We can discuss the next step for specification review and quotation.",
+      checklist: ["Battery application", "Roll or sheet format", "Dimensions and quantity", "Packing and delivery requirements"],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        application: "VRLA, UPS, motorcycle, automotive, energy storage...",
+        message: "Product form, dimensions, application, quantity, packing and expected delivery schedule"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/agm-separator-export-supply-readiness/",
+    brandName: articleCopy.zh.brandName,
+    quote: "获取报价",
+    hero: {
+      eyebrow: "AGM 隔板供应",
+      title: "海外销量回升了，AGM 隔板配套跟得上吗？",
+      subtitle:
+        "2026 年 5 月出口量环比回升，提醒采购与技术团队：订单节奏变化时，交期、批次一致性和规格沟通会重新变得更敏感。",
+      primary: "沟通供货需求",
+      secondary: "查看采购清单",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "湖北维京 AGM 隔板质量检测",
+        width: 1200,
+        height: 900
+      }
+    },
+    intro: [
+      "2026 年 5 月，中国铅酸蓄电池出口量为 2065.22 万只，环比上升 7.73%，同比上升 2.8%；1-5 月累计出口量为 8594.78 万只，同比下降 8.86%。",
+      "这组数据反映的是单月边际回升，而累计表现仍承压。对电池制造企业和出口配套链路来说，与其将它理解为市场预测，不如把它作为一次供应链复盘：订单节奏变化时，交期、批次控制和技术沟通是否跟得上。"
+    ],
+    sections: [
+      {
+        eyebrow: "出口数据",
+        title: "单月回升，不等于供应链压力已经消失",
+        text:
+          "单月出口量的正向变化说明海外需求并未消失，但累计出口同比仍下降，也提醒我们需要结合全年的节奏看待数据。当需求更难预测时，生产和采购团队更要为交期收紧、采购计划调整等情况预留准备。"
+      },
+      {
+        eyebrow: "订单节奏变化",
+        title: "最先被放大的，往往不是价格",
+        text:
+          "订单量或交付节奏加快时，原来还能消化的问题可能迅速变成风险：交期是否可靠、后续批次能否保持在确认范围内、规格沟通是否清楚、供应商能否在条件变化时及时协同。"
+      },
+      {
+        eyebrow: "AGM 隔板配套",
+        title: "隔板适配与一致性，会影响更广的装配环节",
+        text:
+          "AGM 隔板虽然不是电池中最显眼的部分，却关系到装配适配、批次一致性和后续生产稳定性。订单节奏平稳时，一些波动还能靠额外调整和沟通消化；交付更紧时，同样的问题就可能转化为装配效率下降、协同成本上升和更高的交付风险。"
+      },
+      {
+        eyebrow: "出口项目重点",
+        title: "比较单次报价前，更值得先确认这 4 件事",
+        text:
+          "出口型项目应尽早确认四项基础：批次能否稳定供货、规格是否沟通清楚、供货能否按需要的节奏持续，以及出现问题时是否有明确的协同路径。对于长期配套，这些问题通常比一次性的报价比较更有价值。"
+      },
+      {
+        eyebrow: "维京供货配合",
+        title: "让下一步生产与交付更可预期",
+        text:
+          "湖北维京专注 VRLA 铅酸电池用 AGM 隔板制造，可围绕卷材、片材、厚度、宽度、片材尺寸和包装方式进行实际沟通。我们的目标不只是确认某一款产品是否可供，更希望随着项目推进，让批次供应、交期安排和沟通配合保持在可预期范围内。"
+      }
+    ],
+    parameters: [
+      ["2026 年 5 月出口", "出口量 2065.22 万只，环比上升 7.73%，同比上升 2.8%。"],
+      ["2026 年 1-5 月累计出口", "累计出口量 8594.78 万只，同比下降 8.86%。"],
+      ["批次一致性", "从样品走向批量前，确认生产线真正关心的特性和可接受范围。"],
+      ["规格清晰度", "在交付压力增加前，对齐卷材或片材、尺寸、包装和应用要求。"],
+      ["持续供货", "围绕生产计划沟通目标数量、交付节奏和反馈流程。"],
+      ["协同响应", "为打样、批次跟进和异常情况提前建立务实的沟通路径。"]
+    ],
+    formats: {
+      eyebrow: "供应准备证据",
+      title: "检测与出运准备，支持出口配套协同",
+      items: [
+        [
+          "交付前的质量确认",
+          "过程控制和检测把关，有助于在样品或批量交付前更清楚地确认材料要求。",
+          "/images/agm-quality-control-1200.webp",
+          "湖北维京 AGM 隔板质量检测"
+        ],
+        [
+          "仓储与出运准备",
+          "卷材处理、包装和出运准备，需要与隔板规格一起纳入供应沟通。",
+          "/images/evidence/shipping-pallet-01.webp",
+          "湖北维京 AGM 隔板出运准备"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "出口配套清单",
+      title: "出口需求变紧前，建议先确认这 4 件事",
+      text:
+        "对于出口型电池项目，可用这些问题评估 AGM 隔板供应商是否能支持下一阶段的生产与交付安排。",
+      items: [
+        "后续批次能否保持在确认要求内？",
+        "产品形式、尺寸和包装要求是否已沟通清楚？",
+        "供货能否按预期交付节奏持续？",
+        "打样和批次跟进是否有明确沟通路径？"
+      ]
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续查看产品、质量与供应信息",
+      items: [
+        ["AGM 隔板产品", "/zh/products/agm-separator/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["AGM 隔板技术参数", "/zh/blog/key-technical-parameters-of-agm-separator/"],
+        ["AGM 隔板生产、检测与交付", "/zh/blog/agm-separator-manufacturing-quality-delivery/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "沟通出口型项目的 AGM 隔板供货需求",
+      text:
+        "请提供电池应用、隔板形式、尺寸、数量、包装和期望交期，我们可以继续沟通规格评审与报价下一步。",
+      checklist: ["电池应用", "卷材或片材形式", "尺寸与数量", "包装与交付要求"],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        application: "VRLA、UPS、摩托车、汽车、储能等",
+        message: "产品形式、尺寸、应用方向、数量、包装和期望交期"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
+const exportSupplySourceCopy = {
+  en: {
+    eyebrow: "Data Source and Note",
+    title: "Public trade statistics for industry discussion",
+    text:
+      "May 2026 lead-acid battery export figures are based on publicly reported customs statistics, cited by Shanghai Metals Market and public market-information republishing. This article is for industry information only and does not constitute a market forecast or business advice.",
+    linkLabel: "View public data reference"
+  },
+  zh: {
+    eyebrow: "数据来源与说明",
+    title: "用于行业交流的公开贸易数据",
+    text:
+      "2026 年 5 月铅酸蓄电池出口数据来自公开海关统计，并参考上海有色网相关公开信息及其公开转载内容。本文仅作行业信息交流，不构成市场预测或经营建议。",
+    linkLabel: "查看公开数据参考"
+  }
+} as const;
+
 function asset(path: string) {
   return `${basePath}${path}`;
 }
@@ -1370,7 +1629,13 @@ export function BlogArticlePage({
           ? manufacturingDeliveryCopy[lang]
           : page === "agmSeparatorPerformanceConsistency"
             ? performanceConsistencyCopy[lang]
+            : page === "agmSeparatorExportSupplyReadiness"
+              ? exportSupplyReadinessCopy[lang]
           : articleCopy[lang];
+  const sourceNote =
+    page === "agmSeparatorExportSupplyReadiness"
+      ? exportSupplySourceCopy[lang]
+      : null;
   const t = articleContent(page, lang, defaultArticle);
   const sectionIds =
     page === "keyTechnicalParameters"
@@ -1394,6 +1659,8 @@ export function BlogArticlePage({
           ? ["company", "factory", "quality", "delivery"]
           : page === "agmSeparatorPerformanceConsistency"
             ? ["conductivity", "fit", "consistency", "buyer-questions", "viking-approach"]
+            : page === "agmSeparatorExportSupplyReadiness"
+              ? ["export-snapshot", "order-pace", "agm-supply", "export-priorities", "viking-supply"]
       : ["definition", "function", "parameters"];
   const heroImage =
     "image" in t.hero
@@ -1671,6 +1938,24 @@ export function BlogArticlePage({
       </section>
 
       <section className="bg-white px-4 py-24 sm:px-6 lg:px-8">
+        {sourceNote && (
+          <div className="mx-auto mb-20 max-w-5xl rounded-md border border-line bg-frost p-6 shadow-sm sm:p-8">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
+              {sourceNote.eyebrow}
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-ink">{sourceNote.title}</h2>
+            <p className="mt-4 text-sm leading-7 text-steel">{sourceNote.text}</p>
+            <a
+              href="https://goodsfu.10jqka.com.cn/20260622/c677605919.shtml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-signal transition hover:text-ink"
+            >
+              {sourceNote.linkLabel}
+              <ArrowRight size={16} />
+            </a>
+          </div>
+        )}
         <SectionHeading eyebrow={t.related.eyebrow} title={t.related.title} />
         <div className="mx-auto mt-10 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {t.related.items.map(([title, href]) => (

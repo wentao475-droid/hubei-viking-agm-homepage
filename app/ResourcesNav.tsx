@@ -36,6 +36,12 @@ const resourcesNavItems = {
       description:
         "Conductivity support, compression fit and batch consistency for VRLA projects.",
       href: "/blog/agm-separator-performance-consistency/"
+    },
+    {
+      title: "AGM Separator Supply for Export Projects",
+      description:
+        "May export data and practical supply-readiness questions for battery projects.",
+      href: "/blog/agm-separator-export-supply-readiness/"
     }
   ],
   zh: [
@@ -63,6 +69,11 @@ const resourcesNavItems = {
       title: "AGM 隔板为什么影响电池稳定性？",
       description: "从导通相关表现、受压贴合和批次一致性进行判断。",
       href: "/zh/blog/agm-separator-performance-consistency/"
+    },
+    {
+      title: "出口项目的 AGM 隔板配套",
+      description: "从出口数据看批次一致性、供货协同和交付准备。",
+      href: "/zh/blog/agm-separator-export-supply-readiness/"
     }
   ]
 } as const;

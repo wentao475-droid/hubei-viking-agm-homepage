@@ -83,6 +83,12 @@ const pages = [
     zh: "/zh/blog/agm-separator-performance-consistency/",
     priority: "0.75",
     changefreq: "monthly"
+  },
+  {
+    en: "/blog/agm-separator-export-supply-readiness/",
+    zh: "/zh/blog/agm-separator-export-supply-readiness/",
+    priority: "0.75",
+    changefreq: "monthly"
   }
 ];
 

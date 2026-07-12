@@ -22,6 +22,12 @@ const adminSessionSecret = process.env.ADMIN_SESSION_SECRET || "";
 const adminConfigured = Boolean(adminUsername && adminPassword && adminSessionSecret);
 const adminCookieName = "viking_agm_admin";
 const adminSessionTtlMs = 8 * 60 * 60 * 1000;
+const inquiryRateLimitWindowMs = positiveIntegerEnv(
+  "INQUIRY_RATE_LIMIT_WINDOW_MS",
+  10 * 60 * 1000
+);
+const inquiryRateLimitMax = positiveIntegerEnv("INQUIRY_RATE_LIMIT_MAX", 10);
+const inquiryRateLimits = new Map();
 
 fs.mkdirSync(path.dirname(dbPath), { recursive: true });
 
@@ -125,7 +131,7 @@ const mailer = smtpConfigured
   : null;
 
 app.disable("x-powered-by");
-app.set("trust proxy", true);
+app.set("trust proxy", "loopback");
 app.use(express.urlencoded({ extended: false, limit: "32kb" }));
 app.use(express.json({ limit: "32kb" }));
 
@@ -134,6 +140,8 @@ app.get("/health", (_request, response) => {
 });
 
 app.post("/api/inquiry", async (request, response) => {
+  response.setHeader("Cache-Control", "no-store");
+
   if (!isAllowedOrigin(request)) {
     response.status(403).json({ ok: false, error: "forbidden_origin" });
     return;
@@ -142,6 +150,10 @@ app.post("/api/inquiry", async (request, response) => {
   const body = normalizeInquiry(request.body || {});
   if (String(request.body?.["bot-field"] || "").trim()) {
     response.status(204).end();
+    return;
+  }
+
+  if (isInquiryRateLimited(request, response)) {
     return;
   }
 
@@ -321,6 +333,38 @@ function parseList(value) {
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean);
+}
+
+function positiveIntegerEnv(name, fallback) {
+  const value = Number.parseInt(String(process.env[name] || ""), 10);
+  return Number.isFinite(value) && value > 0 ? value : fallback;
+}
+
+function isInquiryRateLimited(request, response) {
+  const now = Date.now();
+  const ip = request.ip || "unknown";
+  const current = inquiryRateLimits.get(ip);
+
+  if (!current || now >= current.resetAt) {
+    inquiryRateLimits.set(ip, { count: 1, resetAt: now + inquiryRateLimitWindowMs });
+  } else if (current.count >= inquiryRateLimitMax) {
+    const retryAfterSeconds = Math.max(1, Math.ceil((current.resetAt - now) / 1000));
+    response.setHeader("Retry-After", String(retryAfterSeconds));
+    response.status(429).json({ ok: false, error: "rate_limited" });
+    return true;
+  } else {
+    current.count += 1;
+  }
+
+  if (inquiryRateLimits.size > 1000) {
+    for (const [key, entry] of inquiryRateLimits) {
+      if (now >= entry.resetAt) {
+        inquiryRateLimits.delete(key);
+      }
+    }
+  }
+
+  return false;
 }
 
 function ensureColumn(name, definition) {
