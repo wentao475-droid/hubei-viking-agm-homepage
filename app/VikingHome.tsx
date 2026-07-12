@@ -590,7 +590,8 @@ const certificationImages = [
 ];
 const useEvidenceImagePlaceholders = true;
 const promoVideo = {
-  src: "/videos/viking-agm-promo-720p.mp4",
+  desktop: "/videos/viking-agm-promo-720p.mp4",
+  mobile: "/videos/viking-agm-promo-480p.mp4",
   poster: "/images/viking-agm-promo-poster.webp"
 };
 
@@ -853,14 +854,20 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             </button>
             <video
               ref={videoRef}
-              src={asset(promoVideo.src)}
               poster={asset(promoVideo.poster)}
               controls
               preload="metadata"
               playsInline
               autoPlay
               className="aspect-video w-full rounded-md bg-black"
-            />
+            >
+              <source
+                media="(max-width: 767px)"
+                src={asset(promoVideo.mobile)}
+                type="video/mp4"
+              />
+              <source src={asset(promoVideo.desktop)} type="video/mp4" />
+            </video>
           </div>
         </div>
       )}

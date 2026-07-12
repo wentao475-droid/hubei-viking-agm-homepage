@@ -15,7 +15,8 @@ const requiredFiles = [
   "404.html",
   "sitemap.xml",
   "robots.txt",
-  "favicon.ico"
+  "favicon.ico",
+  "videos/viking-agm-promo-480p.mp4"
 ];
 
 function pass(message) {
@@ -119,6 +120,33 @@ if (sitemapMetadataComplete) {
   pass("sitemap.xml includes lastmod, changefreq and priority for each URL");
 } else {
   fail("sitemap.xml is missing URL metadata");
+}
+
+const expectedSitemapLastmod = [
+  ["https://www.vikingagm.com/", "2026-07-05"],
+  [
+    "https://www.vikingagm.com/blog/agm-separator-manufacturing-quality-delivery/",
+    "2026-07-07"
+  ],
+  [
+    "https://www.vikingagm.com/blog/agm-separator-performance-consistency/",
+    "2026-07-10"
+  ],
+  [
+    "https://www.vikingagm.com/blog/agm-separator-export-supply-readiness/",
+    "2026-07-11"
+  ]
+];
+
+const staleLastmod = expectedSitemapLastmod.filter(([url, date]) => {
+  const block = sitemapUrlBlocks.find((entry) => entry.includes(`<loc>${url}</loc>`));
+  return !block?.includes(`<lastmod>${date}</lastmod>`);
+});
+
+if (staleLastmod.length === 0) {
+  pass("sitemap.xml uses current dates for recently updated pages");
+} else {
+  fail(`sitemap.xml has stale dates: ${staleLastmod.map(([url]) => url).join(", ")}`);
 }
 
 const xDefaultTargets = sitemapUrlBlocks

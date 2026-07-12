@@ -84,6 +84,22 @@ https://www.vikingagm.com/robots.txt
 
 Also verify the footer displays the ICP license and links to `https://beian.miit.gov.cn/`.
 
+## Nginx static caching
+
+For the current ECS deployment, copy the cache include file and add it inside the HTTPS `server` block, alongside the existing security-header include:
+
+```bash
+cp /opt/viking-agm-inquiry/nginx/static-cache.conf /etc/nginx/snippets/viking-agm-static-cache.conf
+```
+
+```nginx
+include /etc/nginx/snippets/viking-agm-static-cache.conf;
+```
+
+The configuration caches hashed Next.js assets for 30 days and images/videos for 7 days. HTML is deliberately not cached by this rule so new SEO metadata and pages remain current.
+
+For overseas acceleration, configure a Volcengine CDN domain after confirming the origin and HTTPS certificate. Use the same cache policy: long cache for `/_next/static/`, 7 days for images/video, and a short cache or no forced cache for HTML.
+
 ## Search engine follow-up
 
 After the CDN cutover is stable:

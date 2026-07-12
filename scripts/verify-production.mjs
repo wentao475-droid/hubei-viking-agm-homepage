@@ -3,16 +3,16 @@ import { resolve4, resolveCname } from "node:dns/promises";
 const siteUrl = process.env.SITE_URL || "https://www.vikingagm.com";
 const expectedHost = new URL(siteUrl).hostname;
 const checks = [
-  { path: "/", expectType: "text/html", expectText: "Hubei Viking Technology" },
-  { path: "/zh/", expectType: "text/html", expectText: "AGM" },
+  { path: "/", expectTypes: ["text/html"], expectText: "Hubei Viking Technology" },
+  { path: "/zh/", expectTypes: ["text/html"], expectText: "AGM" },
   {
     path: "/sitemap.xml",
-    expectType: "application/xml",
+    expectTypes: ["application/xml", "text/xml"],
     expectText: "https://www.vikingagm.com/zh/"
   },
   {
     path: "/robots.txt",
-    expectType: "text/plain",
+    expectTypes: ["text/plain"],
     expectText: "Sitemap: https://www.vikingagm.com/sitemap.xml"
   }
 ];
@@ -30,7 +30,7 @@ function fail(message) {
   process.exitCode = 1;
 }
 
-async function checkUrl({ path, expectType, expectText }) {
+async function checkUrl({ path, expectTypes, expectText }) {
   const url = new URL(path, siteUrl);
   const response = await fetch(url, {
     headers: {
@@ -44,7 +44,7 @@ async function checkUrl({ path, expectType, expectText }) {
   }
 
   const contentType = response.headers.get("content-type") || "";
-  if (!contentType.includes(expectType)) {
+  if (!expectTypes.some((type) => contentType.includes(type))) {
     fail(`${url.href} content-type is ${contentType || "missing"}`);
   } else {
     pass(`${url.href} content-type is ${contentType}`);

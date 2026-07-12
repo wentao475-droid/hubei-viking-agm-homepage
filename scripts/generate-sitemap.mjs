@@ -2,93 +2,111 @@ import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const SITE_URL = "https://www.vikingagm.com";
-const LAST_MODIFIED = "2026-06-30";
-
 const pages = [
-  { en: "/", zh: "/zh/", priority: "1.0", changefreq: "weekly" },
+  {
+    en: "/",
+    zh: "/zh/",
+    priority: "1.0",
+    changefreq: "weekly",
+    lastmod: "2026-07-05"
+  },
   {
     en: "/products/agm-separator/",
     zh: "/zh/products/agm-separator/",
     priority: "0.9",
-    changefreq: "weekly"
+    changefreq: "weekly",
+    lastmod: "2026-07-05"
   },
   {
     en: "/products/agm-separator-rolls/",
     zh: "/zh/products/agm-separator-rolls/",
     priority: "0.9",
-    changefreq: "weekly"
+    changefreq: "weekly",
+    lastmod: "2026-07-05"
   },
   {
     en: "/products/agm-separator-sheets/",
     zh: "/zh/products/agm-separator-sheets/",
     priority: "0.9",
-    changefreq: "weekly"
+    changefreq: "weekly",
+    lastmod: "2026-07-05"
   },
   {
     en: "/quality-control/agm-separator-testing/",
     zh: "/zh/quality-control/agm-separator-testing/",
     priority: "0.8",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-06-11"
   },
   {
     en: "/applications/agm-separator-for-vrla-battery/",
     zh: "/zh/applications/agm-separator-for-vrla-battery/",
     priority: "0.85",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-06-11"
   },
   {
     en: "/applications/agm-separator-for-ups-battery/",
     zh: "/zh/applications/agm-separator-for-ups-battery/",
     priority: "0.85",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-06-24"
   },
   {
     en: "/applications/agm-separator-for-motorcycle-battery/",
     zh: "/zh/applications/agm-separator-for-motorcycle-battery/",
     priority: "0.85",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-06-24"
   },
   {
     en: "/applications/agm-separator-for-energy-storage-battery/",
     zh: "/zh/applications/agm-separator-for-energy-storage-battery/",
     priority: "0.85",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-06-24"
   },
   {
     en: "/blog/what-is-agm-separator/",
     zh: "/zh/blog/what-is-agm-separator/",
     priority: "0.75",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-06-11"
   },
   {
     en: "/blog/key-technical-parameters-of-agm-separator/",
     zh: "/zh/blog/key-technical-parameters-of-agm-separator/",
     priority: "0.75",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-06-13"
   },
   {
     en: "/blog/how-to-choose-agm-separator/",
     zh: "/zh/blog/how-to-choose-agm-separator/",
     priority: "0.75",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-06-13"
   },
   {
     en: "/blog/agm-separator-manufacturing-quality-delivery/",
     zh: "/zh/blog/agm-separator-manufacturing-quality-delivery/",
     priority: "0.75",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-07-07"
   },
   {
     en: "/blog/agm-separator-performance-consistency/",
     zh: "/zh/blog/agm-separator-performance-consistency/",
     priority: "0.75",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-07-10"
   },
   {
     en: "/blog/agm-separator-export-supply-readiness/",
     zh: "/zh/blog/agm-separator-export-supply-readiness/",
     priority: "0.75",
-    changefreq: "monthly"
+    changefreq: "monthly",
+    lastmod: "2026-07-11"
   }
 ];
 
@@ -102,7 +120,7 @@ function urlEntry(path, alternate) {
 
   return `  <url>
     <loc>${absolute(path)}</loc>
-    <lastmod>${LAST_MODIFIED}</lastmod>
+    <lastmod>${alternate.lastmod}</lastmod>
     <changefreq>${alternate.changefreq}</changefreq>
     <priority>${alternate.priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${absolute(en)}" />
