@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { articleContent } from "./cms-content";
+import { InquiryForm } from "./InquiryForm";
 import { SiteHeader } from "./SiteHeader";
 import type { Lang } from "./VikingHome";
 
@@ -34,11 +35,6 @@ const contactInfo = {
   phone: "+86 18171518528",
   email: "vikingsales@vikingagm.com"
 };
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/api/inquiry";
-const staticFormFallback =
-  process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
-const inquiryEmail =
-  process.env.NEXT_PUBLIC_INQUIRY_EMAIL || contactInfo.email;
 
 const ArrowRight = makeIcon("arrow");
 const CheckCircle2 = makeIcon("check");
@@ -1616,10 +1612,6 @@ export function BlogArticlePage({
   lang: Lang;
   page?: BlogArticleKind;
 }) {
-  const [formState, setFormState] = useState<
-    "idle" | "error" | "success" | "failure" | "emailFallback"
-  >("idle");
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const defaultArticle =
     page === "keyTechnicalParameters"
       ? keyTechnicalCopy[lang]
@@ -1672,70 +1664,13 @@ export function BlogArticlePage({
           height: 675
         };
 
-  async function submitInquiry(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    formData.set("form-name", "inquiry");
-    formData.set("language", lang);
-    formData.set("page_url", window.location.href);
-    const required = ["name", "company", "email", "country", "application"];
-    const missingRequired = required.some(
-      (field) => !String(formData.get(field) || "").trim()
-    );
-
-    if (missingRequired) {
-      setFormState("error");
-      return;
-    }
-
-    setIsSubmitting(true);
-    setFormState("idle");
-
-    try {
-      if (staticFormFallback) {
-        const mailto = buildInquiryMailto(formData, lang);
-        window.location.href = mailto;
-        setFormState("emailFallback");
-        form.reset();
-        return;
-      }
-
-      const response = await fetch(asset(formEndpoint), {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams(formData as unknown as Record<string, string>)
-      });
-
-      if (!response.ok) {
-        throw new Error("Form submission failed");
-      }
-
-      setFormState("success");
-      form.reset();
-    } catch {
-      try {
-        const mailto = buildInquiryMailto(formData, lang);
-        window.location.href = mailto;
-        setFormState("emailFallback");
-        form.reset();
-      } catch {
-        setFormState("failure");
-      }
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
-
   return (
     <main className="min-h-screen bg-frost text-ink">
       <SiteHeader
         lang={lang}
         homePath={t.homePath}
         languagePath={t.languagePath}
-        quoteLabel={t.quote}
+        quoteLabel={lang === "zh" ? "申请样品" : "Request Sample"}
       />
 
       <section className="relative overflow-hidden bg-white px-4 pb-20 pt-32 sm:px-6 sm:pt-36 lg:px-8">
@@ -1757,7 +1692,9 @@ export function BlogArticlePage({
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-ink"
               >
-                {t.hero.primary}
+                {lang === "zh"
+                  ? "申请样品与规格匹配"
+                  : "Request a Sample & Specification Match"}
                 <Send size={18} />
               </a>
               <a
@@ -1971,6 +1908,60 @@ export function BlogArticlePage({
         </div>
       </section>
 
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
+          <a
+            href={asset(
+              lang === "zh"
+                ? "/zh/request-agm-separator-sample/"
+                : "/request-agm-separator-sample/"
+            )}
+            className="group rounded-md border border-signal/25 bg-signal p-6 text-white shadow-sm transition hover:bg-ink"
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/65">
+              {lang === "zh" ? "采购下一步" : "Sourcing Next Step"}
+            </p>
+            <h2 className="mt-3 text-xl font-bold">
+              {lang === "zh"
+                ? "申请样品与规格匹配"
+                : "Request a Sample & Specification Match"}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-white/75">
+              {lang === "zh"
+                ? "按清单提供电池应用、产品形式和已有尺寸，开始样品沟通。"
+                : "Use the buyer checklist to share your application, product form and available dimensions."}
+            </p>
+            <ArrowRight
+              size={18}
+              className="mt-5 transition group-hover:translate-x-1"
+            />
+          </a>
+          <a
+            href={asset("/downloads/viking-agm-technical-capability.pdf")}
+            download
+            className="group rounded-md border border-line bg-white p-6 text-ink transition hover:border-signal"
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-signal">
+              {lang === "zh" ? "技术资料" : "Technical Reference"}
+            </p>
+            <h2 className="mt-3 text-xl font-bold">
+              {lang === "zh"
+                ? "下载维京 AGM 技术能力 PDF"
+                : "Download the Viking AGM Capability PDF"}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-steel">
+              {lang === "zh"
+                ? "查看产品形式、质量检查、包装和规格沟通要点。"
+                : "Review product forms, quality checks, packing and specification information."}
+            </p>
+            <ArrowRight
+              size={18}
+              className="mt-5 text-signal transition group-hover:translate-x-1"
+            />
+          </a>
+        </div>
+      </section>
+
       <section id="contact" className="bg-ink px-4 py-24 text-white sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div id="inquiry-checklist">
@@ -2015,77 +2006,15 @@ export function BlogArticlePage({
             </div>
           </div>
 
-          <form
-            name="inquiry"
-            method="POST"
-            action={asset(formEndpoint)}
-            onSubmit={submitInquiry}
-            className="rounded-md bg-white p-5 text-ink shadow-industrial sm:p-7"
-          >
-            <input type="hidden" name="form-name" value="inquiry" />
-            <input type="hidden" name="language" value={lang} />
-            <p className="hidden">
-              <label>
-                Do not fill this out:
-                <input name="bot-field" tabIndex={-1} autoComplete="off" />
-              </label>
-            </p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Input name="name" label={t.inquiry.fields.name} placeholder={t.inquiry.placeholders.name} required />
-              <Input name="company" label={t.inquiry.fields.company} placeholder={t.inquiry.placeholders.company} required />
-              <Input name="email" type="email" label={t.inquiry.fields.email} placeholder={t.inquiry.placeholders.email} required />
-              <Input name="country" label={t.inquiry.fields.country} placeholder={t.inquiry.placeholders.country} required />
-              <div className="sm:col-span-2">
-                <Input
-                  name="application"
-                  label={t.inquiry.fields.application}
-                  placeholder={t.inquiry.placeholders.application}
-                  required
-                />
-              </div>
-              <label className="sm:col-span-2">
-                <span className="text-sm font-bold text-graphite">
-                  {t.inquiry.fields.message}
-                </span>
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder={t.inquiry.placeholders.message}
-                  className="mt-2 w-full resize-none rounded-md border border-line bg-frost px-4 py-3 text-sm outline-none transition placeholder:text-steel/70 focus:border-signal focus:bg-white"
-                />
-              </label>
-            </div>
-
-            {formState !== "idle" && (
-              <div
-                aria-live="polite"
-                className={`mt-5 rounded-md px-4 py-3 text-sm font-semibold ${
-                  formState === "success"
-                    ? "bg-emerald-50 text-emerald-700"
-                    : formState === "failure"
-                      ? "bg-rose-50 text-rose-700"
-                      : "bg-amber-50 text-amber-800"
-                }`}
-              >
-                {formState === "success"
-                  ? t.inquiry.success
-                  : formState === "failure"
-                    ? t.inquiry.failure
-                    : formState === "emailFallback"
-                      ? t.inquiry.emailFallback
-                      : t.inquiry.required}
-              </div>
-            )}
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white transition hover:bg-ink disabled:cursor-not-allowed disabled:bg-steel sm:w-auto"
-            >
-              {isSubmitting ? t.inquiry.submitting : t.inquiry.submit}
-              <Send size={18} />
-            </button>
-          </form>
+          <InquiryForm
+            lang={lang}
+            defaultInterestedProduct={
+              lang === "zh"
+                ? "AGM 隔板样品与规格匹配"
+                : "AGM separator sample and specification match"
+            }
+            messagePlaceholder={t.inquiry.placeholders.message}
+          />
         </div>
       </section>
 
@@ -2194,33 +2123,6 @@ function SectionHeading({
       </h2>
       {text && <p className="mt-5 text-base leading-8 text-steel">{text}</p>}
     </div>
-  );
-}
-
-function Input({
-  name,
-  label,
-  placeholder,
-  type = "text",
-  required = false
-}: {
-  name: string;
-  label: string;
-  placeholder: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <label>
-      <span className="text-sm font-bold text-graphite">{label}</span>
-      <input
-        name={name}
-        type={type}
-        required={required}
-        placeholder={placeholder}
-        className="mt-2 w-full rounded-md border border-line bg-frost px-4 py-3 text-sm outline-none transition placeholder:text-steel/70 focus:border-signal focus:bg-white"
-      />
-    </label>
   );
 }
 
@@ -2357,44 +2259,6 @@ async function copyToClipboard(value: string) {
   } catch {
     return false;
   }
-}
-
-function buildInquiryMailto(formData: FormData, lang: Lang) {
-  const labels =
-    lang === "zh"
-      ? {
-          subject: "AGM 隔板资料询盘 - 湖北维京AGM",
-          name: "姓名",
-          company: "公司",
-          email: "邮箱",
-          country: "国家/地区",
-          application: "电池应用",
-          message: "留言"
-        }
-      : {
-          subject: "AGM separator guide inquiry - Viking AGM",
-          name: "Name",
-          company: "Company",
-          email: "Email",
-          country: "Country / region",
-          application: "Battery application",
-          message: "Message"
-        };
-  const fields = [
-    ["name", labels.name],
-    ["company", labels.company],
-    ["email", labels.email],
-    ["country", labels.country],
-    ["application", labels.application],
-    ["message", labels.message]
-  ] as const;
-  const body = fields
-    .map(([key, label]) => `${label}: ${String(formData.get(key) || "").trim()}`)
-    .join("\n");
-
-  return `mailto:${inquiryEmail}?subject=${encodeURIComponent(
-    labels.subject
-  )}&body=${encodeURIComponent(body)}`;
 }
 
 function makeIcon(name: IconName) {

@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily Viking AGM inquiry database backup
+
+[Timer]
+OnCalendar=*-*-* 02:20:00 Asia/Shanghai
+Persistent=true
+RandomizedDelaySec=15m
+
+[Install]
+WantedBy=timers.target

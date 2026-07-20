@@ -18,6 +18,13 @@ const pages = [
     lastmod: "2026-07-05"
   },
   {
+    en: "/request-agm-separator-sample/",
+    zh: "/zh/request-agm-separator-sample/",
+    priority: "0.9",
+    changefreq: "weekly",
+    lastmod: "2026-07-16"
+  },
+  {
     en: "/products/agm-separator-rolls/",
     zh: "/zh/products/agm-separator-rolls/",
     priority: "0.9",

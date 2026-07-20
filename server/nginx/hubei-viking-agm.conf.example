@@ -1,0 +1,42 @@
+# Canonical host: https://www.vikingagm.com
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name vikingagm.com www.vikingagm.com 14.103.18.68;
+    return 301 https://www.vikingagm.com$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name vikingagm.com;
+
+    ssl_certificate /etc/letsencrypt/live/vikingagm.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/vikingagm.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    return 301 https://www.vikingagm.com$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name www.vikingagm.com;
+
+    root /var/www/hubei-viking-agm-current;
+    index index.html;
+
+    ssl_certificate /etc/letsencrypt/live/vikingagm.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/vikingagm.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    include /etc/nginx/snippets/viking-agm-security-headers.conf;
+    include /etc/nginx/snippets/viking-agm-inquiry-locations.conf;
+    include /etc/nginx/snippets/viking-agm-static-cache.conf;
+
+    location / {
+        try_files $uri $uri/ /404.html;
+    }
+}

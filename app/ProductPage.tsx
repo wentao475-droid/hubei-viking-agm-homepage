@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { productContent } from "./cms-content";
+import { InquiryForm } from "./InquiryForm";
 import { productFaqCopy } from "./seo-faq";
 import { SiteHeader } from "./SiteHeader";
 import type { Lang } from "./VikingHome";
@@ -58,16 +59,11 @@ type ProductContent = {
 };
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/api/inquiry";
 const icpLicense = process.env.NEXT_PUBLIC_ICP_LICENSE || "鄂ICP备2026033781号";
-const staticFormFallback =
-  process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
 const contactInfo = {
   phone: "+86 18171518528",
   email: "vikingsales@vikingagm.com"
 };
-const inquiryEmail =
-  process.env.NEXT_PUBLIC_INQUIRY_EMAIL || contactInfo.email;
 
 const sharedMessages = {
   en: {
@@ -2467,71 +2463,20 @@ export function ProductPage({
   page?: ProductPageKind;
 }) {
   const t = productContent(page, lang, content[page][lang]);
-  const ui = sharedMessages[lang];
   const lead = leadCaptureCopy[lang];
-  const [formState, setFormState] = useState<
-    "idle" | "error" | "success" | "failure" | "emailFallback"
-  >("idle");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  async function submitInquiry(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (isSubmitting) {
-      return;
-    }
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    const required = ["name", "contact"];
-    const valid = required.every((field) =>
-      String(formData.get(field) || "").trim()
-    );
-
-    if (!valid) {
-      setFormState("error");
-      return;
-    }
-
-    formData.set("form-name", "inquiry");
-    formData.set("language", lang);
-    formData.set("page_url", window.location.href);
-
-    if (staticFormFallback) {
-      setFormState("idle");
-      window.location.href = buildInquiryMailto(formData, lang);
-      setFormState("emailFallback");
-      return;
-    }
-
-    const body = new URLSearchParams();
-    formData.forEach((value, key) => {
-      if (typeof value === "string") {
-        body.append(key, value);
-      }
-    });
-
-    setIsSubmitting(true);
-    setFormState("idle");
-
-    try {
-      const response = await fetch(formEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString()
-      });
-
-      if (!response.ok) {
-        throw new Error("Form submission failed");
-      }
-
-      setFormState("success");
-      form.reset();
-    } catch {
-      setFormState("failure");
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
+  const applicationPage = page.endsWith("Application");
+  const defaultProduct =
+    page === "agmSeparatorRolls"
+      ? lang === "zh"
+        ? "AGM 隔板卷材"
+        : "AGM separator rolls"
+      : page === "agmSeparatorSheets"
+        ? lang === "zh"
+          ? "AGM 隔板片材"
+          : "AGM separator sheets"
+        : lang === "zh"
+          ? "AGM 隔板样品与规格匹配"
+          : "AGM separator sample and specification match";
 
   return (
     <main className="min-h-screen overflow-hidden bg-frost text-ink">
@@ -2539,7 +2484,7 @@ export function ProductPage({
         lang={lang}
         homePath={t.homePath}
         languagePath={t.languagePath}
-        quoteLabel={t.quote}
+        quoteLabel={lang === "zh" ? "申请样品" : "Request Sample"}
       />
 
       <section className="relative overflow-hidden pt-20">
@@ -2561,7 +2506,9 @@ export function ProductPage({
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white shadow-industrial transition hover:bg-ink"
               >
-                {t.hero.primary}
+                {lang === "zh"
+                  ? "申请样品与规格匹配"
+                  : "Request a Sample & Specification Match"}
                 <SendIcon size={18} />
               </a>
               <a
@@ -2787,6 +2734,60 @@ export function ProductPage({
         </div>
       </section>
 
+      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
+          <a
+            href={asset(
+              lang === "zh"
+                ? "/zh/request-agm-separator-sample/"
+                : "/request-agm-separator-sample/"
+            )}
+            className="group rounded-md border border-signal/25 bg-signal p-6 text-white shadow-sm transition hover:bg-ink"
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/65">
+              {lang === "zh" ? "下一步" : "Next Step"}
+            </p>
+            <h2 className="mt-3 text-2xl font-bold">
+              {lang === "zh"
+                ? "申请样品与规格匹配"
+                : "Request a Sample & Specification Match"}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-white/75">
+              {lang === "zh"
+                ? "查看需要准备的信息、样品沟通流程和真实生产检测证据。"
+                : "Review the information checklist, sample discussion path and production evidence."}
+            </p>
+            <ArrowRight
+              size={18}
+              className="mt-5 transition group-hover:translate-x-1"
+            />
+          </a>
+          <a
+            href={asset("/downloads/viking-agm-technical-capability.pdf")}
+            download
+            className="group rounded-md border border-line bg-frost p-6 text-ink transition hover:border-signal hover:bg-white"
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-signal">
+              {lang === "zh" ? "采购资料" : "Buyer Reference"}
+            </p>
+            <h2 className="mt-3 text-2xl font-bold">
+              {lang === "zh"
+                ? "下载维京 AGM 技术能力 PDF"
+                : "Download the Viking AGM Capability PDF"}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-steel">
+              {lang === "zh"
+                ? "中英文资料，包含产品形式、应用沟通、质量检查和包装说明。"
+                : "A bilingual overview of product forms, application discussion, quality checks and packing."}
+            </p>
+            <ArrowRight
+              size={18}
+              className="mt-5 text-signal transition group-hover:translate-x-1"
+            />
+          </a>
+        </div>
+      </section>
+
       <section id="contact" className="bg-ink px-4 py-24 text-white sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div id="inquiry-checklist">
@@ -2812,95 +2813,13 @@ export function ProductPage({
             </div>
           </div>
 
-          <form
-            name="inquiry"
-            method="POST"
-            action={asset(formEndpoint)}
-            onSubmit={submitInquiry}
-            className="rounded-md bg-white p-6 text-ink shadow-industrial sm:p-8"
-          >
-            <input type="hidden" name="form-name" value="inquiry" />
-            <input type="hidden" name="language" value={lang} />
-            <p className="hidden">
-              <label>
-                Do not fill this out: <input name="bot-field" />
-              </label>
-            </p>
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label className="grid gap-2">
-                <span className="font-bold">{ui.fields.name}</span>
-                <input
-                  required
-                  name="name"
-                  type="text"
-                  placeholder={ui.placeholders.name}
-                  className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
-                />
-              </label>
-              <label className="grid gap-2">
-                <span className="font-bold">{ui.fields.contact}</span>
-                <input
-                  required
-                  name="contact"
-                  type="text"
-                  placeholder={ui.placeholders.contact}
-                  className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
-                />
-              </label>
-              <label className="grid gap-2">
-                <span className="font-bold">{ui.fields.company}</span>
-                <input
-                  name="company"
-                  type="text"
-                  placeholder={ui.placeholders.company}
-                  className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
-                />
-              </label>
-            </div>
-            <label className="mt-5 grid gap-2">
-              <span className="font-bold">{ui.fields.interestedProduct}</span>
-              <input
-                name="interestedProduct"
-                type="text"
-                placeholder={ui.placeholders.interestedProduct}
-                className="rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
-              />
-            </label>
-            <label className="mt-5 grid gap-2">
-              <span className="font-bold">{ui.fields.message}</span>
-              <textarea
-                name="message"
-                rows={6}
-                placeholder={lead.messagePlaceholder}
-                className="resize-none rounded-md border border-line bg-frost px-4 py-3 outline-none transition focus:border-signal focus:bg-white"
-              />
-            </label>
-            {formState !== "idle" && (
-              <div
-                className={`mt-5 rounded-md px-4 py-3 text-sm font-semibold ${
-                  formState === "success" || formState === "emailFallback"
-                    ? "bg-emerald-50 text-emerald-700"
-                    : "bg-rose-50 text-rose-700"
-                }`}
-              >
-                {formState === "success"
-                  ? lead.success
-                  : formState === "emailFallback"
-                    ? lead.emailFallback
-                    : formState === "error"
-                      ? lead.required
-                      : t.inquiry.failure}
-              </div>
-            )}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="mt-7 inline-flex items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 font-bold text-white shadow-sm transition hover:bg-ink disabled:cursor-not-allowed disabled:opacity-70"
-            >
-              {isSubmitting ? t.inquiry.submitting : t.inquiry.submit}
-              <SendIcon size={18} />
-            </button>
-          </form>
+          <InquiryForm
+            lang={lang}
+            defaultApplication={applicationPage ? t.hero.title : ""}
+            defaultInterestedProduct={defaultProduct}
+            messagePlaceholder={lead.messagePlaceholder}
+            className="sm:p-8"
+          />
         </div>
       </section>
 
@@ -3062,36 +2981,4 @@ function QuickActions({ lang }: { lang: Lang }) {
       </button>
     </div>
   );
-}
-
-function buildInquiryMailto(formData: FormData, lang: Lang) {
-  const labels =
-    lang === "zh"
-      ? {
-          subject: "湖北维京官网询盘",
-          name: "姓名",
-          contact: "联系方式",
-          company: "公司",
-          interestedProduct: "感兴趣产品",
-          message: "留言"
-        }
-      : {
-          subject: "Viking AGM website inquiry",
-          name: "Name",
-          contact: "Contact",
-          company: "Company",
-          interestedProduct: "Interested product",
-          message: "Message"
-        };
-  const lines = [
-    `${labels.name}: ${formData.get("name") || ""}`,
-    `${labels.contact}: ${formData.get("contact") || ""}`,
-    `${labels.company}: ${formData.get("company") || ""}`,
-    `${labels.interestedProduct}: ${formData.get("interestedProduct") || ""}`,
-    `${labels.message}: ${formData.get("message") || ""}`
-  ];
-
-  return `mailto:${inquiryEmail}?subject=${encodeURIComponent(
-    labels.subject
-  )}&body=${encodeURIComponent(lines.join("\n"))}`;
 }

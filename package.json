@@ -10,8 +10,12 @@
     "cms": "node scripts/cms-server.mjs",
     "cms:export": "node scripts/export-site-content.mjs",
     "seo:sitemap": "node scripts/generate-sitemap.mjs",
+    "postprocess:static": "node scripts/postprocess-static-export.mjs",
+    "verify:content": "node scripts/verify-content-registry.mjs",
+    "verify:assets": "node scripts/verify-public-assets.mjs",
     "build": "next build",
-    "build:volcengine": "npm run seo:sitemap && npm run build && npm run verify:static",
+    "build:volcengine": "npm run verify:content && npm run verify:assets && npm run seo:sitemap && npm run build && npm run postprocess:static && npm run verify:static",
+    "build:pages": "npm run verify:content && npm run verify:assets && npm run seo:sitemap && npm run build && npm run postprocess:static",
     "verify:static": "node scripts/verify-static-export.mjs",
     "verify:prod": "node scripts/verify-production.mjs",
     "start": "next start"

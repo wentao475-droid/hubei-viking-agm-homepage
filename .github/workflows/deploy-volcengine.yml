@@ -16,7 +16,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      REMOTE_PATH: /var/www/hubei-viking-agm
+      REMOTE_RELEASES_PATH: /var/www/hubei-viking-agm-releases
+      REMOTE_CURRENT_PATH: /var/www/hubei-viking-agm-current
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,23 +36,60 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ""
 
-      - name: Prepare SSH key
+      - name: Prepare SSH key and pinned host identity
         shell: bash
+        env:
+          KNOWN_HOSTS: ${{ secrets.VOLCENGINE_KNOWN_HOSTS }}
         run: |
+          test -n "${KNOWN_HOSTS}" || {
+            echo "VOLCENGINE_KNOWN_HOSTS is required."
+            exit 1
+          }
           mkdir -p ~/.ssh
           printf '%s\n' "${{ secrets.VOLCENGINE_SSH_KEY }}" > ~/.ssh/volcengine_ecs_key
-          chmod 600 ~/.ssh/volcengine_ecs_key
-          ssh-keyscan -H "${{ secrets.VOLCENGINE_HOST }}" >> ~/.ssh/known_hosts
+          printf '%s\n' "${KNOWN_HOSTS}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/volcengine_ecs_key ~/.ssh/known_hosts
 
-      - name: Deploy static files
+      - name: Prepare atomic release
+        run: |
+          ssh -i ~/.ssh/volcengine_ecs_key \
+            "${{ secrets.VOLCENGINE_USER }}@${{ secrets.VOLCENGINE_HOST }}" \
+            "set -e
+            mkdir -p '${REMOTE_RELEASES_PATH}'
+            rm -rf '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}'
+            mkdir -p '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}'
+            if [ -L '${REMOTE_CURRENT_PATH}' ]; then
+              cp -al \"\$(readlink -f '${REMOTE_CURRENT_PATH}')/.\" '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/'
+            elif [ -d /var/www/hubei-viking-agm ]; then
+              cp -al /var/www/hubei-viking-agm/. '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/'
+            fi"
+
+      - name: Deploy static files to release
         run: |
           rsync -az --delete \
             -e "ssh -i ~/.ssh/volcengine_ecs_key" \
             out/ \
-            "${{ secrets.VOLCENGINE_USER }}@${{ secrets.VOLCENGINE_HOST }}:${REMOTE_PATH}/"
+            "${{ secrets.VOLCENGINE_USER }}@${{ secrets.VOLCENGINE_HOST }}:${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/"
 
-      - name: Reload Nginx
+      - name: Validate and activate release
         run: |
           ssh -i ~/.ssh/volcengine_ecs_key \
             "${{ secrets.VOLCENGINE_USER }}@${{ secrets.VOLCENGINE_HOST }}" \
-            "nginx -t && systemctl reload nginx"
+            "set -e
+            test -s '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/index.html'
+            test -s '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/zh/index.html'
+            test -s '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/request-agm-separator-sample/index.html'
+            test -s '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/zh/request-agm-separator-sample/index.html'
+            test -s '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/downloads/viking-agm-technical-capability.pdf'
+            test -s '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}/sitemap.xml'
+            ln -sfn '${REMOTE_RELEASES_PATH}/${GITHUB_SHA}' '${REMOTE_CURRENT_PATH}.tmp'
+            mv -Tf '${REMOTE_CURRENT_PATH}.tmp' '${REMOTE_CURRENT_PATH}'
+            nginx -t
+            systemctl reload nginx
+            curl --fail --silent --show-error http://127.0.0.1:3001/health
+            curl --fail --silent --show-error --resolve www.vikingagm.com:443:127.0.0.1 https://www.vikingagm.com/ >/dev/null
+            curl --fail --silent --show-error --resolve www.vikingagm.com:443:127.0.0.1 https://www.vikingagm.com/zh/ >/dev/null
+            curl --fail --silent --show-error --resolve www.vikingagm.com:443:127.0.0.1 https://www.vikingagm.com/request-agm-separator-sample/ >/dev/null
+            curl --fail --silent --show-error --resolve www.vikingagm.com:443:127.0.0.1 https://www.vikingagm.com/downloads/viking-agm-technical-capability.pdf >/dev/null
+            curl --fail --silent --show-error --resolve www.vikingagm.com:443:127.0.0.1 https://www.vikingagm.com/sitemap.xml >/dev/null
+            ls -1dt '${REMOTE_RELEASES_PATH}'/* | tail -n +6 | xargs -r rm -rf"

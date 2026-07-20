@@ -6,6 +6,21 @@ const checks = [
   { path: "/", expectTypes: ["text/html"], expectText: "Hubei Viking Technology" },
   { path: "/zh/", expectTypes: ["text/html"], expectText: "AGM" },
   {
+    path: "/request-agm-separator-sample/",
+    expectTypes: ["text/html"],
+    expectText: "Request a Sample"
+  },
+  {
+    path: "/zh/request-agm-separator-sample/",
+    expectTypes: ["text/html"],
+    expectText: "申请样品"
+  },
+  {
+    path: "/downloads/viking-agm-technical-capability.pdf",
+    expectTypes: ["application/pdf"],
+    expectText: "%PDF"
+  },
+  {
     path: "/sitemap.xml",
     expectTypes: ["application/xml", "text/xml"],
     expectText: "https://www.vikingagm.com/zh/"
@@ -80,4 +95,29 @@ for (const check of checks) {
   } catch (error) {
     fail(`${new URL(check.path, siteUrl).href} check failed: ${error.message}`);
   }
+}
+
+try {
+  const apexResponse = await fetch("https://vikingagm.com/redirect-check?source=prod", {
+    redirect: "manual",
+    headers: {
+      "User-Agent": "vikingagm-production-check/1.0"
+    }
+  });
+  const location = apexResponse.headers.get("location");
+
+  if (
+    apexResponse.status === 301 &&
+    location === "https://www.vikingagm.com/redirect-check?source=prod"
+  ) {
+    pass("apex HTTPS preserves path and query while redirecting to www");
+  } else {
+    fail(
+      `apex HTTPS redirect returned ${apexResponse.status} with location ${
+        location || "missing"
+      }`
+    );
+  }
+} catch (error) {
+  fail(`apex HTTPS redirect check failed: ${error.message}`);
 }

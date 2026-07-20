@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { seoContent } from "./cms-content";
 import { productFaqCopy } from "./seo-faq";
+import { sampleRequestFaq } from "./sample-request-copy";
 import type { Lang } from "./VikingHome";
 
 export const SITE_URL = "https://www.vikingagm.com";
@@ -55,6 +56,51 @@ const homeSeo = {
     serviceName: "AGM 玻璃纤维隔板制造",
     serviceDescription:
       "面向铅酸电池生产企业提供 AGM 隔板卷材和片材，支持过程控制、质量检测和定制规格沟通。"
+  }
+} as const;
+
+const sampleRequestSeo = {
+  en: {
+    path: "/request-agm-separator-sample/",
+    alternatePath: "/zh/request-agm-separator-sample/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "Request AGM Separator Samples and Specification Matching | Viking AGM",
+    description:
+      "Request AGM separator samples for VRLA, UPS, motorcycle, automotive and energy storage batteries. Share your application, thickness, width and roll or sheet requirements.",
+    keywords: [
+      "AGM separator sample",
+      "AGM separator specification matching",
+      "VRLA battery separator sample",
+      "AGM separator rolls and sheets",
+      "AGM separator manufacturer"
+    ],
+    pageName: "AGM Separator Sample and Specification Matching",
+    serviceDescription:
+      "Application-based review of AGM separator roll or sheet requirements before sample, technical review or quotation discussion.",
+    breadcrumbs: ["Home", "Request AGM Separator Sample"]
+  },
+  zh: {
+    path: "/zh/request-agm-separator-sample/",
+    alternatePath: "/request-agm-separator-sample/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "申请 AGM 隔板样品与规格匹配 | 湖北维京AGM",
+    description:
+      "申请用于 VRLA、UPS、摩托车、汽车和储能电池的 AGM 隔板样品。可提供电池应用、厚度、宽度及卷材或片材需求。",
+    keywords: [
+      "AGM 隔板样品",
+      "AGM 隔板规格匹配",
+      "VRLA 电池隔板样品",
+      "AGM 隔板卷材片材",
+      "AGM 隔板制造商"
+    ],
+    pageName: "AGM 隔板样品与规格匹配",
+    serviceDescription:
+      "在样品、技术评审或报价沟通前，按电池应用评审 AGM 隔板卷材或片材需求。",
+    breadcrumbs: ["首页", "申请 AGM 隔板样品"]
   }
 } as const;
 
@@ -733,6 +779,27 @@ export function buildHomeMetadata(lang: Lang): Metadata {
   });
 }
 
+export function buildSampleRequestMetadata(lang: Lang): Metadata {
+  const current = sampleRequestSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/request-agm-separator-sample/",
+    zhPath: "/zh/request-agm-separator-sample/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
+      width: 1600,
+      height: 1000
+    }
+  });
+}
+
 export function buildAgmSeparatorMetadata(lang: Lang): Metadata {
   const current = seoContent("agmSeparator", lang, agmSeparatorSeo[lang]);
 
@@ -1175,6 +1242,72 @@ export function StructuredData({ lang }: { lang: Lang }) {
         publisher: {
           "@id": `${SITE_URL}/#organization`
         }
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function SampleRequestStructuredData({ lang }: { lang: Lang }) {
+  const current = sampleRequestSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
+          width: 1600,
+          height: 1000
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#sample-service`,
+        name: current.pageName,
+        description: current.serviceDescription,
+        serviceType: "AGM separator sample and specification review",
+        provider: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        areaServed: "Worldwide",
+        url,
+        inLanguage: current.language
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        mainEntity: sampleRequestFaq[lang].map(([question, answer]) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: answer
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item: index === 0 ? `${SITE_URL}${homePath}` : url
+        }))
       }
     ]
   };

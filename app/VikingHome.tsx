@@ -1,8 +1,9 @@
 ﻿"use client";
 
 import Image from "next/image";
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { homeContent } from "./cms-content";
+import { InquiryForm } from "./InquiryForm";
 import { SiteHeader } from "./SiteHeader";
 
 export type Lang = "en" | "zh";
@@ -283,9 +284,9 @@ const copy = {
           ["Energy Storage", "/applications/agm-separator-for-energy-storage-battery/"]
         ],
         Contact: [
-          ["Request a Quote", "/#contact"],
+          ["Request a Sample", "/request-agm-separator-sample/"],
           ["Technical Inquiry", "/#contact"],
-          ["Company Brochure", "/#contact"]
+          ["Technical Capability PDF", "/downloads/viking-agm-technical-capability.pdf"]
         ]
       },
       logo: {
@@ -529,9 +530,9 @@ const copy = {
           ["储能", "/zh/applications/agm-separator-for-energy-storage-battery/"]
         ],
         联系: [
-          ["获取报价", "/zh/#contact"],
+          ["申请样品", "/zh/request-agm-separator-sample/"],
           ["技术询盘", "/zh/#contact"],
-          ["公司宣传册", "/zh/#contact"]
+          ["技术能力 PDF", "/downloads/viking-agm-technical-capability.pdf"]
         ]
       },
       logo: {
@@ -575,11 +576,6 @@ const contactInfo = {
   phone: "+86 18171518528",
   email: "vikingsales@vikingagm.com"
 };
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "/api/inquiry";
-const staticFormFallback =
-  process.env.NEXT_PUBLIC_STATIC_FORM_FALLBACK === "true";
-const inquiryEmail =
-  process.env.NEXT_PUBLIC_INQUIRY_EMAIL || contactInfo.email;
 const icpLicense = process.env.NEXT_PUBLIC_ICP_LICENSE || "鄂ICP备2026033781号";
 const certificationImages = [
   "/images/certification-1-900.webp",
@@ -601,10 +597,6 @@ function asset(path: string) {
 
 export function VikingHome({ initialLang }: { initialLang: Lang }) {
   const lang = initialLang;
-  const [formState, setFormState] = useState<
-    "idle" | "error" | "success" | "failure" | "emailFallback"
-  >("idle");
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const t = homeContent(lang, copy[lang]);
@@ -640,72 +632,13 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
     };
   }, [isVideoOpen]);
 
-  async function submitInquiry(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (isSubmitting) {
-      return;
-    }
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    const required = ["name", "contact"];
-    const valid = required.every((field) =>
-      String(formData.get(field) || "").trim()
-    );
-
-    if (!valid) {
-      setFormState("error");
-      return;
-    }
-
-    formData.set("form-name", "inquiry");
-    formData.set("language", lang);
-    formData.set("page_url", window.location.href);
-
-    if (staticFormFallback) {
-      setFormState("idle");
-      window.location.href = buildInquiryMailto(formData, lang);
-      setFormState("emailFallback");
-      return;
-    }
-
-    const body = new URLSearchParams();
-    formData.forEach((value, key) => {
-      if (typeof value === "string") {
-        body.append(key, value);
-      }
-    });
-
-    setIsSubmitting(true);
-    setFormState("idle");
-
-    try {
-      const response = await fetch(formEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString()
-      });
-
-      if (!response.ok) {
-        throw new Error("Inquiry submission failed");
-      }
-
-      setFormState("success");
-      form.reset();
-    } catch {
-      setFormState("failure");
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
-
   return (
     <main className="min-h-screen overflow-hidden bg-frost text-ink">
       <SiteHeader
         lang={lang}
         homePath={lang === "zh" ? "/zh/" : "/"}
         languagePath={lang === "en" ? "/zh/" : "/"}
-        quoteLabel={t.hero.quote}
+        quoteLabel={lang === "zh" ? "申请样品" : "Request Sample"}
       />
 
       <section className="relative min-h-[720px] pt-20">
@@ -741,7 +674,9 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white shadow-industrial transition hover:bg-ink"
               >
-                {t.hero.quote}
+                {lang === "zh"
+                  ? "申请样品与规格匹配"
+                  : "Request a Sample & Specification Match"}
                 <Send size={18} />
               </a>
               <a
@@ -1057,8 +992,8 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             title={t.process.title}
             note={
               lang === "zh"
-                ? "制造流程高清图或重新设计流程图素材位"
-                : "Manufacturing workflow visual slot reserved"
+                ? "AGM 隔板制造流程"
+                : "AGM separator manufacturing workflow"
             }
             replacement="public/images/manufacturing-process-1400.webp"
             icon="clipboard"
@@ -1078,8 +1013,8 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             title="AGM separator manufacturing and roll finishing"
             note={
               lang === "zh"
-                ? "生产线、检测设备与包装现场高清素材位"
-                : "Production line, testing and packing image slot reserved"
+                ? "AGM 隔板生产与卷材后处理现场"
+                : "AGM separator production and roll-finishing operations"
             }
             replacement="public/images/agm-factory-capability-1200.webp"
             icon="factory"
@@ -1166,13 +1101,13 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
           eyebrow={lang === "zh" ? "现场证据" : "Evidence Details"}
           title={
             lang === "zh"
-              ? "后续可替换的生产、检测与包装图片位"
-              : "Replaceable production, testing and packing evidence slots"
+              ? "生产、检测与包装现场"
+              : "Production, testing and shipment evidence"
           }
           text={
             lang === "zh"
-              ? "这些图片位用于补充原料、收卷、检测和出运细节。当前先使用现有素材占位，后续可按同名文件直接替换真实图片。"
-              : "These slots add raw-material, roll-finishing, testing and packing detail. They use current images for now and can be replaced later with real photos using the same filenames."
+              ? "以下图片展示原料上料、卷材后处理、厚度检测和包装出运等实际环节。"
+              : "These images show raw-material feeding, roll finishing, thickness inspection and shipment preparation in the manufacturing workflow."
           }
         />
         <div className="mx-auto mt-12 grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -1181,25 +1116,25 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
               ? [
                   [
                     "原料进入生产线",
-                    "用于展示原料准备、上料和生产线前端状态。",
+                    "原料准备和上料按生产安排进入制造流程。",
                     "/images/evidence/factory-raw-material-feed-01.webp",
                     "AGM 隔板原料进入生产线"
                   ],
                   [
                     "收卷与后处理",
-                    "用于展示收卷、分切或卷材处理现场。",
+                    "卷材完成收卷后进入分切、整理和后续规格处理。",
                     "/images/evidence/factory-roll-finishing-01.webp",
                     "AGM 隔板收卷与后处理"
                   ],
                   [
-                    "具体检测项目",
-                    "用于展示厚度、克重、吸酸或电阻等检测过程。",
+                    "厚度检测",
+                    "厚度检测用于核对隔板尺寸状态，并按客户确认的要求记录检测结果。",
                     "/images/evidence/quality-thickness-test-01.webp",
                     "AGM 隔板厚度检测"
                   ],
                   [
                     "包装与出运",
-                    "用于展示托盘、缠膜、纸箱或发货准备。",
+                    "产品按确认的卷材或片材形式完成包装，并进行托盘和出运准备。",
                     "/images/evidence/shipping-pallet-01.webp",
                     "AGM 隔板包装与出运"
                   ]
@@ -1207,25 +1142,25 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
               : [
                   [
                     "Raw material feed",
-                    "Reserved for raw material preparation, feeding and line-start evidence.",
+                    "Prepared raw materials enter the manufacturing workflow according to the production plan.",
                     "/images/evidence/factory-raw-material-feed-01.webp",
                     "AGM separator raw material feeding"
                   ],
                   [
                     "Roll finishing",
-                    "Reserved for winding, slitting or roll-handling evidence.",
+                    "Finished rolls move through winding, slitting and specification handling.",
                     "/images/evidence/factory-roll-finishing-01.webp",
                     "AGM separator roll finishing"
                   ],
                   [
-                    "Specific test item",
-                    "Reserved for thickness, basis weight, acid absorption or resistance testing.",
+                    "Thickness inspection",
+                    "Thickness checks help verify dimensional condition against the requirements confirmed with the customer.",
                     "/images/evidence/quality-thickness-test-01.webp",
                     "AGM separator thickness testing"
                   ],
                   [
                     "Packing and shipment",
-                    "Reserved for pallet, wrapping, carton or shipment preparation evidence.",
+                    "Rolls or sheets are packed to the confirmed format and prepared for palletized shipment.",
                     "/images/evidence/shipping-pallet-01.webp",
                     "AGM separator packing and shipment"
                   ]
@@ -1378,75 +1313,15 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             </div>
           </div>
 
-          <form
-            name="inquiry"
-            method="POST"
-            action={asset(formEndpoint)}
-            onSubmit={submitInquiry}
-            className="rounded-md bg-white p-5 text-ink shadow-industrial sm:p-7"
-          >
-            <input type="hidden" name="form-name" value="inquiry" />
-            <input type="hidden" name="language" value={lang} />
-            <p className="hidden">
-              <label>
-                Do not fill this out:
-                <input name="bot-field" tabIndex={-1} autoComplete="off" />
-              </label>
-            </p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Input name="name" label={t.form.fields.name} placeholder={t.form.placeholders.name} required />
-              <Input name="contact" label={t.form.fields.contact} placeholder={t.form.placeholders.contact} required />
-              <Input name="company" label={t.form.fields.company} placeholder={t.form.placeholders.company} />
-              <div className="sm:col-span-2">
-                <Input
-                  name="interestedProduct"
-                  label={t.form.fields.interestedProduct}
-                  placeholder={t.form.placeholders.interestedProduct}
-                />
-              </div>
-              <label className="sm:col-span-2">
-                <span className="text-sm font-bold text-graphite">
-                  {t.form.fields.message}
-                </span>
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder={t.form.placeholders.message}
-                  className="mt-2 w-full resize-none rounded-md border border-line bg-frost px-4 py-3 text-sm outline-none transition placeholder:text-steel/70 focus:border-signal focus:bg-white"
-                />
-              </label>
-            </div>
-
-            {formState !== "idle" && (
-              <div
-                aria-live="polite"
-                className={`mt-5 rounded-md px-4 py-3 text-sm font-semibold ${
-                  formState === "success"
-                    ? "bg-emerald-50 text-emerald-700"
-                    : formState === "failure"
-                      ? "bg-rose-50 text-rose-700"
-                    : "bg-amber-50 text-amber-800"
-                }`}
-              >
-                {formState === "success"
-                  ? t.form.success
-                  : formState === "failure"
-                    ? t.form.failure
-                    : formState === "emailFallback"
-                      ? t.form.emailFallback
-                    : t.form.required}
-              </div>
-            )}
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white transition hover:bg-ink disabled:cursor-not-allowed disabled:bg-steel sm:w-auto"
-            >
-              {isSubmitting ? t.form.submitting : t.form.submit}
-              <Send size={18} />
-            </button>
-          </form>
+          <InquiryForm
+            lang={lang}
+            defaultInterestedProduct={
+              lang === "zh"
+                ? "AGM 隔板样品与规格匹配"
+                : "AGM separator sample and specification match"
+            }
+            messagePlaceholder={t.form.placeholders.message}
+          />
         </div>
       </section>
 
@@ -1781,43 +1656,6 @@ async function copyToClipboard(value: string) {
   }
 }
 
-function buildInquiryMailto(formData: FormData, lang: Lang) {
-  const labels =
-    lang === "zh"
-      ? {
-          subject: "网站询盘 - 湖北维京科技",
-          name: "姓名",
-          contact: "联系方式",
-          company: "公司",
-          interestedProduct: "感兴趣产品",
-          message: "留言"
-        }
-      : {
-          subject: "Website inquiry - Viking AGM",
-          name: "Name",
-          contact: "Contact",
-          company: "Company",
-          interestedProduct: "Interested product",
-          message: "Message"
-        };
-
-  const fields = [
-    ["name", labels.name],
-    ["contact", labels.contact],
-    ["company", labels.company],
-    ["interestedProduct", labels.interestedProduct],
-    ["message", labels.message]
-  ] as const;
-
-  const body = fields
-    .map(([key, label]) => `${label}: ${String(formData.get(key) || "").trim()}`)
-    .join("\n");
-
-  return `mailto:${inquiryEmail}?subject=${encodeURIComponent(
-    labels.subject
-  )}&body=${encodeURIComponent(body)}`;
-}
-
 function makeIcon(name: IconName) {
   return function Icon({ size = 20, className = "" }: IconProps) {
     return (
@@ -2074,32 +1912,5 @@ function EvidenceImageSlot({
         </p>
       </div>
     </div>
-  );
-}
-
-function Input({
-  name,
-  label,
-  placeholder,
-  type = "text",
-  required = false
-}: {
-  name: string;
-  label: string;
-  placeholder: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <label>
-      <span className="text-sm font-bold text-graphite">{label}</span>
-      <input
-        name={name}
-        type={type}
-        required={required}
-        placeholder={placeholder}
-        className="mt-2 w-full rounded-md border border-line bg-frost px-4 py-3 text-sm outline-none transition placeholder:text-steel/70 focus:border-signal focus:bg-white"
-      />
-    </label>
   );
 }

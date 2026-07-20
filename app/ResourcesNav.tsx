@@ -8,6 +8,18 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const resourcesNavItems = {
   en: [
     {
+      title: "Request a Sample",
+      description:
+        "Share your battery application, dimensions and roll or sheet requirements.",
+      href: "/request-agm-separator-sample/"
+    },
+    {
+      title: "Technical Capability PDF",
+      description:
+        "Download a bilingual overview of product forms, quality checks and packing.",
+      href: "/downloads/viking-agm-technical-capability.pdf"
+    },
+    {
       title: "What Is AGM Separator?",
       description:
         "A practical buyer guide for VRLA lead-acid battery applications.",
@@ -45,6 +57,16 @@ const resourcesNavItems = {
     }
   ],
   zh: [
+    {
+      title: "申请样品与规格匹配",
+      description: "提供电池应用、尺寸及卷材或片材需求，开始规格评审。",
+      href: "/zh/request-agm-separator-sample/"
+    },
+    {
+      title: "技术能力 PDF",
+      description: "下载包含产品形式、质量检查和包装说明的中英文资料。",
+      href: "/downloads/viking-agm-technical-capability.pdf"
+    },
     {
       title: "什么是 AGM 隔板？",
       description: "面向 VRLA 铅酸电池买家的实用入门说明。",

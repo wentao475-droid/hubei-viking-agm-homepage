@@ -317,16 +317,16 @@
           ],
           "Contact": [
             [
-              "Request a Quote",
-              "/#contact"
+              "Request a Sample",
+              "/request-agm-separator-sample/"
             ],
             [
               "Technical Inquiry",
               "/#contact"
             ],
             [
-              "Company Brochure",
-              "/#contact"
+              "Technical Capability PDF",
+              "/downloads/viking-agm-technical-capability.pdf"
             ]
           ]
         },
@@ -344,6 +344,37 @@
           [
             "Mobile website",
             "/images/website-logo-180.webp"
+          ]
+        ]
+      },
+      "video": {
+        "eyebrow": "Factory Overview",
+        "title": "Watch the 1-minute Viking AGM factory overview",
+        "text": "A quick look at AGM separator production, roll handling, quality control and packing scenes for buyer review.",
+        "duration": "1 min factory video",
+        "play": "Play video",
+        "close": "Close video",
+        "aria": "Play Viking AGM factory overview video"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Common questions before requesting AGM separator support",
+        "items": [
+          [
+            "Can you customize AGM separator thickness or width?",
+            "Yes. Thickness, width, roll format and sheet size can be discussed according to the customer battery design and production process."
+          ],
+          [
+            "Do you provide samples before bulk orders?",
+            "Sample discussion is available after confirming the product form, target application and basic specification direction."
+          ],
+          [
+            "Which battery applications do your AGM separators support?",
+            "Our AGM glass fiber separators are discussed for VRLA, UPS, motorcycle, automotive and energy storage lead-acid battery applications."
+          ],
+          [
+            "What information should I send for a quotation?",
+            "Battery application, roll or sheet format, target thickness, width or sheet size, estimated quantity and test requirements are helpful."
           ]
         ]
       }
@@ -665,16 +696,16 @@
           ],
           "联系": [
             [
-              "获取报价",
-              "/zh/#contact"
+              "申请样品",
+              "/zh/request-agm-separator-sample/"
             ],
             [
               "技术询盘",
               "/zh/#contact"
             ],
             [
-              "公司宣传册",
-              "/zh/#contact"
+              "技术能力 PDF",
+              "/downloads/viking-agm-technical-capability.pdf"
             ]
           ]
         },
@@ -692,6 +723,37 @@
           [
             "移动官网",
             "/images/website-logo-180.webp"
+          ]
+        ]
+      },
+      "video": {
+        "eyebrow": "工厂视频",
+        "title": "1 分钟了解维京 AGM 隔板生产能力",
+        "text": "快速查看 AGM 隔板生产、卷材处理、质量检测和包装出运等现场画面，便于客户初步了解工厂能力。",
+        "duration": "1 分钟工厂宣传片",
+        "play": "播放视频",
+        "close": "关闭视频",
+        "aria": "播放维京 AGM 工厂宣传片"
+      },
+      "faq": {
+        "eyebrow": "常见问题",
+        "title": "询价 AGM 隔板前的常见问题",
+        "items": [
+          [
+            "是否可以定制 AGM 隔板厚度或宽度？",
+            "可以。厚度、宽度、卷材形式和片材尺寸都可以结合客户电池设计和生产工艺沟通。"
+          ],
+          [
+            "批量采购前是否可以沟通样品？",
+            "可以在确认产品形式、目标应用和基本规格方向后进行样品沟通。"
+          ],
+          [
+            "AGM 隔板适用于哪些电池应用？",
+            "可围绕 VRLA、UPS、摩托车、汽车启动和储能等铅酸电池应用沟通 AGM 玻璃纤维隔板。"
+          ],
+          [
+            "询价时需要提供哪些信息？",
+            "电池应用、卷材或片材形式、目标厚度、宽度或片材尺寸、预计数量和检测要求会有帮助。"
           ]
         ]
       }
@@ -5359,6 +5421,356 @@
           "mobile": "移动官网"
         }
       }
+    },
+    "agmSeparatorExportSupplyReadiness": {
+      "en": {
+        "nav": {
+          "company": "Company",
+          "products": "Products",
+          "applications": "Applications",
+          "quality": "Quality",
+          "resources": "Resources",
+          "contact": "Contact"
+        },
+        "language": "中文",
+        "homePath": "/",
+        "languagePath": "/zh/blog/agm-separator-export-supply-readiness/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Request a Quote",
+        "hero": {
+          "eyebrow": "AGM Separator Supply",
+          "title": "Lead-Acid Battery Exports Recovered in May. Is Your AGM Separator Supply Ready?",
+          "subtitle": "A May 2026 export rebound is a useful reminder: when order pace changes, delivery coordination, batch consistency and specification communication become more sensitive.",
+          "primary": "Discuss Supply Requirements",
+          "secondary": "View Buyer Checklist",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGM separator quality inspection at Hubei Viking",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "intro": [
+          "China exported 20.6522 million lead-acid batteries in May 2026, up 7.73% month on month and 2.8% year on year. From January to May, cumulative exports were 85.9478 million units, down 8.86% year on year.",
+          "The data points to a monthly improvement, while the cumulative picture remained under pressure. For battery manufacturers and export-oriented supply chains, this is less a market forecast than a practical reminder to review whether delivery, batch control and technical coordination can keep up when order rhythm changes."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Export Snapshot",
+            "title": "A monthly recovery does not remove supply-chain pressure",
+            "text": "A positive monthly export movement suggests that overseas demand has not disappeared. At the same time, the year-to-date decline means buyers should read the data with context. When demand becomes less predictable, production teams need to be ready for tighter schedules and more frequent changes in purchasing plans."
+          },
+          {
+            "eyebrow": "When Orders Move Faster",
+            "title": "The first issue to surface is often not price",
+            "text": "When order volume or delivery pace increases, questions that were previously manageable can become operational risks: whether material lead time is dependable, whether later batches remain within agreed requirements, whether specifications are clear and whether a supplier can coordinate quickly when conditions change."
+          },
+          {
+            "eyebrow": "Why AGM Separator Matters",
+            "title": "Separator fit and consistency affect the wider assembly process",
+            "text": "AGM separator is not the most visible battery component, but it is connected with assembly fit, batch consistency and later production stability. Under a steady order rhythm, teams may have time to resolve variation through additional adjustment or communication. Under tighter delivery conditions, the same issues can turn into lower assembly efficiency, more coordination work and greater delivery risk."
+          },
+          {
+            "eyebrow": "Export Project Priorities",
+            "title": "Four supply questions matter before comparing a single quotation",
+            "text": "Export-oriented projects benefit from confirming four basics early: whether batches can be supplied consistently, whether specifications are communicated clearly, whether supply can continue at the required pace and whether the response path is clear if an issue needs attention. These questions are often more useful for long-term planning than a one-time price comparison."
+          },
+          {
+            "eyebrow": "Viking Supply Coordination",
+            "title": "Keep the next production step predictable",
+            "text": "Hubei Viking focuses on AGM separator manufacturing for VRLA lead-acid battery applications. We can discuss rolls, sheets, thickness, width, sheet size and packing based on the actual project. The goal is not only to confirm one available product, but to make batch supply, delivery planning and communication more predictable as requirements develop."
+          }
+        ],
+        "parameters": [
+          [
+            "May 2026 exports",
+            "20.6522 million lead-acid batteries exported, up 7.73% month on month and 2.8% year on year."
+          ],
+          [
+            "January-May 2026 exports",
+            "85.9478 million units cumulatively, down 8.86% year on year."
+          ],
+          [
+            "Batch consistency",
+            "Confirm the characteristics and acceptable ranges that matter before moving from samples to volume supply."
+          ],
+          [
+            "Specification clarity",
+            "Align roll or sheet type, dimensions, packing and application requirements before delivery pressure increases."
+          ],
+          [
+            "Supply continuity",
+            "Discuss expected quantity, delivery rhythm and feedback process around the production plan."
+          ],
+          [
+            "Response coordination",
+            "Agree on a practical communication path for sampling, batch follow-up and exceptions."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Supply Readiness Evidence",
+          "title": "Quality review and shipment preparation support export coordination",
+          "items": [
+            [
+              "Quality control before delivery",
+              "Process control and inspection help create a clearer basis for confirming material requirements before samples or batch deliveries move forward.",
+              "/images/agm-quality-control-1200.webp",
+              "AGM separator quality control at Hubei Viking"
+            ],
+            [
+              "Warehouse and shipment preparation",
+              "Roll handling, packing and shipment readiness are part of the supply discussion alongside the separator specification itself.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGM separator shipment preparation"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Export Supply Checklist",
+          "title": "Four points to confirm before export demand becomes more urgent",
+          "text": "For export-oriented battery projects, use these questions to assess whether an AGM separator supplier can support the next stage of production and delivery planning.",
+          "items": [
+            "Can later batches remain within confirmed requirements?",
+            "Are product form, dimensions and packing requirements clear?",
+            "Can supply continue at the expected delivery rhythm?",
+            "Is there a clear communication path for sampling and batch follow-up?"
+          ]
+        },
+        "related": {
+          "eyebrow": "Related Pages",
+          "title": "Continue with product, quality and supply information",
+          "items": [
+            [
+              "AGM Separator Product",
+              "/products/agm-separator/"
+            ],
+            [
+              "AGM Separator Testing",
+              "/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Key Technical Parameters",
+              "/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Production, Quality Control and Delivery",
+              "/blog/agm-separator-manufacturing-quality-delivery/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Inquiry",
+          "title": "Discuss AGM separator supply for export-oriented projects",
+          "text": "Share your battery application, separator format, dimensions, quantity, packing and expected delivery schedule. We can discuss the next step for specification review and quotation.",
+          "checklist": [
+            "Battery application",
+            "Roll or sheet format",
+            "Dimensions and quantity",
+            "Packing and delivery requirements"
+          ],
+          "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+          },
+          "placeholders": {
+            "name": "Your full name",
+            "company": "Company name",
+            "email": "name@company.com",
+            "country": "Country / region",
+            "application": "VRLA, UPS, motorcycle, automotive, energy storage...",
+            "message": "Product form, dimensions, application, quantity, packing and expected delivery schedule"
+          },
+          "submit": "Send Inquiry",
+          "submitting": "Sending...",
+          "required": "Please complete all required fields before submitting.",
+          "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+          "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+          "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+        },
+        "footer": {
+          "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+          "wechat": "Official WeChat account",
+          "mobile": "Mobile website"
+        }
+      },
+      "zh": {
+        "nav": {
+          "company": "公司",
+          "products": "产品",
+          "applications": "应用",
+          "quality": "质量",
+          "resources": "资料",
+          "contact": "联系"
+        },
+        "language": "EN",
+        "homePath": "/zh/",
+        "languagePath": "/blog/agm-separator-export-supply-readiness/",
+        "brandName": "湖北维京科技有限公司",
+        "quote": "获取报价",
+        "hero": {
+          "eyebrow": "AGM 隔板供应",
+          "title": "海外销量回升了，AGM 隔板配套跟得上吗？",
+          "subtitle": "2026 年 5 月出口量环比回升，提醒采购与技术团队：订单节奏变化时，交期、批次一致性和规格沟通会重新变得更敏感。",
+          "primary": "沟通供货需求",
+          "secondary": "查看采购清单",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "湖北维京 AGM 隔板质量检测",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "intro": [
+          "2026 年 5 月，中国铅酸蓄电池出口量为 2065.22 万只，环比上升 7.73%，同比上升 2.8%；1-5 月累计出口量为 8594.78 万只，同比下降 8.86%。",
+          "这组数据反映的是单月边际回升，而累计表现仍承压。对电池制造企业和出口配套链路来说，与其将它理解为市场预测，不如把它作为一次供应链复盘：订单节奏变化时，交期、批次控制和技术沟通是否跟得上。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "出口数据",
+            "title": "单月回升，不等于供应链压力已经消失",
+            "text": "单月出口量的正向变化说明海外需求并未消失，但累计出口同比仍下降，也提醒我们需要结合全年的节奏看待数据。当需求更难预测时，生产和采购团队更要为交期收紧、采购计划调整等情况预留准备。"
+          },
+          {
+            "eyebrow": "订单节奏变化",
+            "title": "最先被放大的，往往不是价格",
+            "text": "订单量或交付节奏加快时，原来还能消化的问题可能迅速变成风险：交期是否可靠、后续批次能否保持在确认范围内、规格沟通是否清楚、供应商能否在条件变化时及时协同。"
+          },
+          {
+            "eyebrow": "AGM 隔板配套",
+            "title": "隔板适配与一致性，会影响更广的装配环节",
+            "text": "AGM 隔板虽然不是电池中最显眼的部分，却关系到装配适配、批次一致性和后续生产稳定性。订单节奏平稳时，一些波动还能靠额外调整和沟通消化；交付更紧时，同样的问题就可能转化为装配效率下降、协同成本上升和更高的交付风险。"
+          },
+          {
+            "eyebrow": "出口项目重点",
+            "title": "比较单次报价前，更值得先确认这 4 件事",
+            "text": "出口型项目应尽早确认四项基础：批次能否稳定供货、规格是否沟通清楚、供货能否按需要的节奏持续，以及出现问题时是否有明确的协同路径。对于长期配套，这些问题通常比一次性的报价比较更有价值。"
+          },
+          {
+            "eyebrow": "维京供货配合",
+            "title": "让下一步生产与交付更可预期",
+            "text": "湖北维京专注 VRLA 铅酸电池用 AGM 隔板制造，可围绕卷材、片材、厚度、宽度、片材尺寸和包装方式进行实际沟通。我们的目标不只是确认某一款产品是否可供，更希望随着项目推进，让批次供应、交期安排和沟通配合保持在可预期范围内。"
+          }
+        ],
+        "parameters": [
+          [
+            "2026 年 5 月出口",
+            "出口量 2065.22 万只，环比上升 7.73%，同比上升 2.8%。"
+          ],
+          [
+            "2026 年 1-5 月累计出口",
+            "累计出口量 8594.78 万只，同比下降 8.86%。"
+          ],
+          [
+            "批次一致性",
+            "从样品走向批量前，确认生产线真正关心的特性和可接受范围。"
+          ],
+          [
+            "规格清晰度",
+            "在交付压力增加前，对齐卷材或片材、尺寸、包装和应用要求。"
+          ],
+          [
+            "持续供货",
+            "围绕生产计划沟通目标数量、交付节奏和反馈流程。"
+          ],
+          [
+            "协同响应",
+            "为打样、批次跟进和异常情况提前建立务实的沟通路径。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "供应准备证据",
+          "title": "检测与出运准备，支持出口配套协同",
+          "items": [
+            [
+              "交付前的质量确认",
+              "过程控制和检测把关，有助于在样品或批量交付前更清楚地确认材料要求。",
+              "/images/agm-quality-control-1200.webp",
+              "湖北维京 AGM 隔板质量检测"
+            ],
+            [
+              "仓储与出运准备",
+              "卷材处理、包装和出运准备，需要与隔板规格一起纳入供应沟通。",
+              "/images/evidence/shipping-pallet-01.webp",
+              "湖北维京 AGM 隔板出运准备"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "出口配套清单",
+          "title": "出口需求变紧前，建议先确认这 4 件事",
+          "text": "对于出口型电池项目，可用这些问题评估 AGM 隔板供应商是否能支持下一阶段的生产与交付安排。",
+          "items": [
+            "后续批次能否保持在确认要求内？",
+            "产品形式、尺寸和包装要求是否已沟通清楚？",
+            "供货能否按预期交付节奏持续？",
+            "打样和批次跟进是否有明确沟通路径？"
+          ]
+        },
+        "related": {
+          "eyebrow": "相关页面",
+          "title": "继续查看产品、质量与供应信息",
+          "items": [
+            [
+              "AGM 隔板产品",
+              "/zh/products/agm-separator/"
+            ],
+            [
+              "AGM 隔板检测",
+              "/zh/quality-control/agm-separator-testing/"
+            ],
+            [
+              "AGM 隔板技术参数",
+              "/zh/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGM 隔板生产、检测与交付",
+              "/zh/blog/agm-separator-manufacturing-quality-delivery/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "询盘",
+          "title": "沟通出口型项目的 AGM 隔板供货需求",
+          "text": "请提供电池应用、隔板形式、尺寸、数量、包装和期望交期，我们可以继续沟通规格评审与报价下一步。",
+          "checklist": [
+            "电池应用",
+            "卷材或片材形式",
+            "尺寸与数量",
+            "包装与交付要求"
+          ],
+          "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+          },
+          "placeholders": {
+            "name": "您的姓名",
+            "company": "公司名称",
+            "email": "name@company.com",
+            "country": "国家或地区",
+            "application": "VRLA、UPS、摩托车、汽车、储能等",
+            "message": "产品形式、尺寸、应用方向、数量、包装和期望交期"
+          },
+          "submit": "发送询盘",
+          "submitting": "发送中...",
+          "required": "请先填写所有必填字段。",
+          "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+          "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+          "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+        },
+        "footer": {
+          "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+          "wechat": "官方微信公众号",
+          "mobile": "移动官网"
+        }
+      }
     }
   },
   "seo": {
@@ -6035,6 +6447,54 @@
           "首页",
           "资料",
           "AGM 隔板稳定性"
+        ]
+      }
+    },
+    "agmSeparatorExportSupplyReadiness": {
+      "en": {
+        "path": "/blog/agm-separator-export-supply-readiness/",
+        "alternatePath": "/zh/blog/agm-separator-export-supply-readiness/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "Lead-Acid Battery Exports Recovered in May. Is Your AGM Separator Supply Ready?",
+        "description": "May 2026 lead-acid battery export data and a practical buyer guide to AGM separator batch consistency, supply coordination and delivery readiness.",
+        "keywords": [
+          "lead-acid battery export data",
+          "AGM separator supply",
+          "AGM separator batch consistency",
+          "AGM separator delivery",
+          "VRLA battery separator supplier"
+        ],
+        "pageName": "Lead-Acid Battery Exports Recovered in May. Is Your AGM Separator Supply Ready?",
+        "articleDescription": "A practical industry article connecting May 2026 lead-acid battery export data with AGM separator batch consistency, supply coordination and delivery readiness for export-oriented battery projects.",
+        "breadcrumbs": [
+          "Home",
+          "Resources",
+          "AGM Separator Export Supply"
+        ]
+      },
+      "zh": {
+        "path": "/zh/blog/agm-separator-export-supply-readiness/",
+        "alternatePath": "/blog/agm-separator-export-supply-readiness/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "海外销量回升了，AGM 隔板配套跟得上吗？| 湖北维京AGM",
+        "description": "从 2026 年 5 月铅酸蓄电池出口数据，看 AGM 隔板批次一致性、供货协同和交付准备为何会在出口型项目中变得更重要。",
+        "keywords": [
+          "铅酸蓄电池出口数据",
+          "AGM 隔板供应",
+          "AGM 隔板批次一致性",
+          "AGM 隔板交付",
+          "VRLA 电池隔板供应商"
+        ],
+        "pageName": "海外销量回升了，AGM 隔板配套跟得上吗？",
+        "articleDescription": "结合 2026 年 5 月铅酸蓄电池出口数据，面向出口型电池项目说明 AGM 隔板批次一致性、供货协同和交付准备的重要性。",
+        "breadcrumbs": [
+          "首页",
+          "资料",
+          "AGM 隔板出口配套"
         ]
       }
     }

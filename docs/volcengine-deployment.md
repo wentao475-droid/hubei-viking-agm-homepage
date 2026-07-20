@@ -1,109 +1,153 @@
-# Volcengine TOS + CDN deployment
+# Volcengine ECS Production Deployment
 
-This project is a static Next.js export. Netlify can remain as a backup, but the China-facing production path should use Volcengine TOS plus Volcengine CDN after ICP filing is approved.
+The production site is a static Next.js export served by Nginx on the Volcengine ECS instance. `www.vikingagm.com` is the canonical host.
 
-## Build output
-
-Build and verify the static export:
-
-```bash
-npm run build:volcengine
-```
-
-Upload the contents of `out/` to the TOS bucket root. Do not upload the `out/` directory itself as a nested folder.
-
-Required files after upload:
+## Production architecture
 
 ```text
-/
-/index.html
-/zh/index.html
-/404.html
-/robots.txt
-/sitemap.xml
-/_next/static/...
-/images/...
+GitHub main push
+  -> build and verify static export
+  -> upload to a versioned release directory
+  -> validate required files
+  -> atomically switch /var/www/hubei-viking-agm-current
+  -> reload Nginx
+  -> verify homepage, Chinese homepage, sitemap and API health
 ```
 
-## Environment values
+GitHub Pages is a manual backup preview only. It does not run for every `main` push.
 
-Use `.env.example` as the template.
+## Required GitHub secrets
+
+- `VOLCENGINE_HOST`
+- `VOLCENGINE_USER`
+- `VOLCENGINE_SSH_KEY`
+- `VOLCENGINE_KNOWN_HOSTS`
+
+Use the host fingerprint verification process in `docs/inquiry-api-deployment.md`.
+
+## One-time atomic deployment migration
+
+Before the first release-directory deployment, create a compatibility symlink:
 
 ```bash
-NEXT_PUBLIC_ICP_LICENSE="鄂ICP备xxxxxxxx号"
-NEXT_PUBLIC_FORM_ENDPOINT="/"
-NEXT_PUBLIC_STATIC_FORM_FALLBACK="true"
-NEXT_PUBLIC_INQUIRY_EMAIL="vikingsales@vikingagm.com"
+ln -sfn /var/www/hubei-viking-agm /var/www/hubei-viking-agm-current
 ```
 
-For the Netlify backup build, keep `NEXT_PUBLIC_STATIC_FORM_FALLBACK=false` so Netlify Forms can continue to receive inquiries.
+The first workflow run will use the existing site as a hard-link base, upload the new build into:
 
-For the Volcengine static build, set `NEXT_PUBLIC_STATIC_FORM_FALLBACK=true` unless a dedicated form API has been configured. The static fallback opens the visitor's email client with the inquiry details because TOS static hosting does not process Netlify Forms submissions.
+```text
+/var/www/hubei-viking-agm-releases/<git-sha>/
+```
 
-## Volcengine console setup
+It then switches:
 
-1. Complete ICP filing for `vikingagm.com`.
-2. Create a TOS bucket in a mainland China region.
-3. Upload all files from `out/` to the bucket root.
-4. Enable static website hosting:
-   - Home page: `index.html`
-   - 404 page: `404.html`
-5. Configure CDN for `www.vikingagm.com`:
-   - Acceleration type: website/static content acceleration.
-   - Origin: the TOS static website endpoint.
-   - Origin host: the same TOS website endpoint host.
-   - HTTPS: enabled with a certificate covering `www.vikingagm.com`.
-   - HTTP to HTTPS: enabled.
-6. In TrafficRoute DNS, point `www` to the CDN-assigned CNAME.
-7. Keep the root domain redirecting to `https://www.vikingagm.com/`.
+```text
+/var/www/hubei-viking-agm-current
+```
 
-Do not keep `www.vikingagm.com` pointing to both Netlify and Volcengine at the same time. During final cutover, use only the Volcengine CDN CNAME.
+to the validated release. The five newest releases are retained.
 
-## Verification
+## Canonical Nginx configuration
 
-Before switching DNS:
+After the API files have been deployed to `/opt/viking-agm-inquiry`, install the complete site template:
 
 ```bash
+cp /etc/nginx/sites-available/hubei-viking-agm \
+  /etc/nginx/sites-available/hubei-viking-agm.backup-$(date +%Y%m%d-%H%M%S)
+
+cp /opt/viking-agm-inquiry/nginx/hubei-viking-agm.conf.example \
+  /etc/nginx/sites-available/hubei-viking-agm
+
+nginx -t
+systemctl reload nginx
+```
+
+This configuration:
+
+- redirects all HTTP requests to `https://www.vikingagm.com$request_uri`;
+- redirects HTTPS apex-domain requests to the same path and query on `www`;
+- serves only `www.vikingagm.com` from the current release symlink;
+- keeps `/api/inquiry` and `/admin` behind the Express service;
+- applies security headers and static cache rules.
+
+Verify canonical redirects:
+
+```bash
+curl -sSI http://vikingagm.com/test/path?source=http | grep -E "HTTP/|Location:"
+curl -sSI https://vikingagm.com/test/path?source=https | grep -E "HTTP/|Location:"
+```
+
+Both must return `301` and preserve `/test/path?source=...` on `https://www.vikingagm.com`.
+
+## Automatic static deployment
+
+`.github/workflows/deploy-volcengine.yml` remains the only automatic production website workflow on `main`.
+
+The deployment fails before activation if any of these are missing:
+
+- English homepage;
+- Chinese homepage;
+- sitemap;
+- API health.
+
+Because activation is a symlink switch, visitors should not see a partially uploaded site.
+
+## Local verification
+
+```bash
+npm ci
 npm run build:volcengine
+npm audit --omit=dev
+npm audit --omit=dev --prefix server
 ```
 
-After switching DNS:
+The static build checks:
+
+- content/route/SEO/sitemap consistency;
+- referenced public assets;
+- English and Chinese `lang` values;
+- required pages and public files;
+- canonical and sitemap metadata.
+
+## Cache policy
+
+The Nginx cache snippet uses:
+
+- `/_next/static/`: 30 days, immutable;
+- images: 7 days;
+- videos: 7 days;
+- PDF downloads: 7 days;
+- HTML: no forced long cache.
+
+Check a deployed asset:
+
+```bash
+curl -sSI https://www.vikingagm.com/videos/viking-agm-promo-480p.mp4 | \
+  grep -E "Cache-Control|Expires"
+```
+
+## Production verification
 
 ```bash
 npm run verify:prod
 ```
 
-Manual checks from mainland China networks:
+Manual URLs:
 
 ```text
 https://www.vikingagm.com/
 https://www.vikingagm.com/zh/
+https://www.vikingagm.com/request-agm-separator-sample/
+https://www.vikingagm.com/zh/request-agm-separator-sample/
+https://www.vikingagm.com/downloads/viking-agm-technical-capability.pdf
 https://www.vikingagm.com/sitemap.xml
-https://www.vikingagm.com/robots.txt
+https://www.vikingagm.com/admin
 ```
 
-Also verify the footer displays the ICP license and links to `https://beian.miit.gov.cn/`.
+After adding or materially updating public pages, resubmit:
 
-## Nginx static caching
-
-For the current ECS deployment, copy the cache include file and add it inside the HTTPS `server` block, alongside the existing security-header include:
-
-```bash
-cp /opt/viking-agm-inquiry/nginx/static-cache.conf /etc/nginx/snippets/viking-agm-static-cache.conf
+```text
+https://www.vikingagm.com/sitemap.xml
 ```
 
-```nginx
-include /etc/nginx/snippets/viking-agm-static-cache.conf;
-```
-
-The configuration caches hashed Next.js assets for 30 days and images/videos for 7 days. HTML is deliberately not cached by this rule so new SEO metadata and pages remain current.
-
-For overseas acceleration, configure a Volcengine CDN domain after confirming the origin and HTTPS certificate. Use the same cache policy: long cache for `/_next/static/`, 7 days for images/video, and a short cache or no forced cache for HTML.
-
-## Search engine follow-up
-
-After the CDN cutover is stable:
-
-1. Resubmit `https://www.vikingagm.com/sitemap.xml` in Google Search Console.
-2. Resubmit `https://www.vikingagm.com/sitemap.xml` in Bing Webmaster Tools.
-3. Resubmit or reverify the site in Baidu Search Resource Platform if requested.
+to Google Search Console, Bing Webmaster Tools and Baidu Search Resource Platform.

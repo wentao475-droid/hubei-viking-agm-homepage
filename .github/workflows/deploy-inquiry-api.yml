@@ -1,0 +1,92 @@
+name: Deploy Inquiry API to Volcengine ECS
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "server/**"
+      - ".github/workflows/deploy-inquiry-api.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "volcengine-inquiry-api"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: server/package-lock.json
+
+      - name: Verify API package
+        run: |
+          npm ci --omit=dev --prefix server
+          npm audit --omit=dev --prefix server
+          node --check server/index.js
+          node --check server/admin-ui.js
+
+      - name: Prepare SSH key and pinned host identity
+        shell: bash
+        env:
+          KNOWN_HOSTS: ${{ secrets.VOLCENGINE_KNOWN_HOSTS }}
+        run: |
+          test -n "${KNOWN_HOSTS}" || {
+            echo "VOLCENGINE_KNOWN_HOSTS is required."
+            exit 1
+          }
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.VOLCENGINE_SSH_KEY }}" > ~/.ssh/volcengine_ecs_key
+          printf '%s\n' "${KNOWN_HOSTS}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/volcengine_ecs_key ~/.ssh/known_hosts
+
+      - name: Deploy API files
+        run: |
+          rsync -az --delete \
+            --exclude ".env" \
+            --exclude "node_modules/" \
+            --exclude "*.db" \
+            --exclude "backups/" \
+            -e "ssh -i ~/.ssh/volcengine_ecs_key" \
+            server/ \
+            "${{ secrets.VOLCENGINE_USER }}@${{ secrets.VOLCENGINE_HOST }}:/opt/viking-agm-inquiry/"
+
+      - name: Install and restart API
+        run: |
+          ssh -i ~/.ssh/volcengine_ecs_key \
+            "${{ secrets.VOLCENGINE_USER }}@${{ secrets.VOLCENGINE_HOST }}" \
+            'set -e
+            id -u vikingagm >/dev/null 2>&1 || useradd --system --home /nonexistent --shell /usr/sbin/nologin vikingagm
+            cd /opt/viking-agm-inquiry
+            test -f .env
+            chown root:vikingagm .env
+            chmod 640 .env
+            npm ci --omit=dev
+            chmod 750 backup/*.sh
+            mkdir -p /var/lib/viking-agm
+            chown -R vikingagm:vikingagm /var/lib/viking-agm
+            cp systemd/viking-agm-inquiry.service /etc/systemd/system/
+            cp systemd/viking-agm-inquiry-backup.service /etc/systemd/system/
+            cp systemd/viking-agm-inquiry-backup.timer /etc/systemd/system/
+            cp nginx/rate-limit.conf /etc/nginx/conf.d/viking-agm-rate-limit.conf
+            cp nginx/security-headers.conf /etc/nginx/snippets/viking-agm-security-headers.conf
+            cp nginx/static-cache.conf /etc/nginx/snippets/viking-agm-static-cache.conf
+            cp nginx/inquiry-api-location.conf /etc/nginx/snippets/viking-agm-inquiry-locations.conf
+            systemctl daemon-reload
+            systemctl enable --now viking-agm-inquiry
+            systemctl enable --now viking-agm-inquiry-backup.timer
+            systemctl restart viking-agm-inquiry
+            nginx -t
+            systemctl reload nginx
+            curl --fail --silent --show-error http://127.0.0.1:3001/health
+            test "$(curl --silent --output /dev/null --write-out "%{http_code}" http://127.0.0.1:3001/admin)" = "200"'

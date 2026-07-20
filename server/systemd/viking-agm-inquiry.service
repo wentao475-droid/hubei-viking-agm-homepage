@@ -9,7 +9,21 @@ EnvironmentFile=/opt/viking-agm-inquiry/.env
 ExecStart=/usr/bin/node /opt/viking-agm-inquiry/index.js
 Restart=always
 RestartSec=5
-User=root
+User=vikingagm
+Group=vikingagm
+UMask=0027
+StateDirectory=viking-agm
+StateDirectoryMode=0750
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
 
 [Install]
 WantedBy=multi-user.target

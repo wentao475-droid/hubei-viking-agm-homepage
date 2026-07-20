@@ -6,6 +6,8 @@ const outDir = join(root, "out");
 const requiredFiles = [
   "index.html",
   "zh/index.html",
+  "request-agm-separator-sample/index.html",
+  "zh/request-agm-separator-sample/index.html",
   "applications/agm-separator-for-ups-battery/index.html",
   "zh/applications/agm-separator-for-ups-battery/index.html",
   "applications/agm-separator-for-motorcycle-battery/index.html",
@@ -79,6 +81,18 @@ if (zhHtml.includes("https://www.vikingagm.com/zh/")) {
   fail("Chinese homepage does not contain https://www.vikingagm.com/zh/");
 }
 
+if (indexHtml.includes('<html lang="en"')) {
+  pass("English homepage declares lang=en");
+} else {
+  fail("English homepage does not declare lang=en");
+}
+
+if (zhHtml.includes('<html lang="zh-CN"')) {
+  pass("Chinese homepage declares lang=zh-CN");
+} else {
+  fail("Chinese homepage does not declare lang=zh-CN");
+}
+
 if (
   sitemap.includes("https://www.vikingagm.com/") &&
   sitemap.includes("https://www.vikingagm.com/zh/")
@@ -103,10 +117,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 30) {
+if (sitemapUrls.length === 32) {
   pass("sitemap.xml lists the expected English and Chinese public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 30`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 32`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -135,6 +149,10 @@ const expectedSitemapLastmod = [
   [
     "https://www.vikingagm.com/blog/agm-separator-export-supply-readiness/",
     "2026-07-11"
+  ],
+  [
+    "https://www.vikingagm.com/request-agm-separator-sample/",
+    "2026-07-16"
   ]
 ];
 
