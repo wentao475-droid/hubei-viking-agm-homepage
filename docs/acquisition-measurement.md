@@ -32,22 +32,20 @@ Track only:
 2. sample requests;
 3. source channel;
 4. first response time;
-5. leads reaching `quoted`.
+5. leads reaching grade `B`, with quotation progress recorded in notes.
 
 Use the admin CSV export for the weekly review. Do not judge a channel before the UTM and lead-stage data are complete.
 
 ## Lead handling
 
-Suggested stage meaning:
+Grade meaning:
 
-| Stage | Definition |
+| Grade | Definition |
 |---|---|
-| `new` | Not reviewed |
-| `contacted` | First response sent or contact attempted |
-| `qualified` | Application and buyer need are credible |
-| `sample` | Sample or specification evaluation is active |
-| `quoted` | Commercial quotation sent |
-| `won` | Order or confirmed commercial outcome |
-| `lost` | Not progressing |
+| `A` | High-value customer with an order or active service relationship |
+| `B` | Credible buyer in negotiation, sampling or quotation |
+| `C` | Confirmed lost or no longer progressing |
+| `D` | Valid inquiry awaiting first contact or qualification |
+| `E` | Test, duplicate, unrelated solicitation or other invalid inquiry |
 
-Record the next follow-up date and a short note whenever a lead moves stage.
+Only authenticated sales users move leads to A, B or C. Automatic classification is limited to D and high-confidence E. Record the next follow-up date and a short note whenever a lead changes grade.

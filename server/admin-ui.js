@@ -1,11 +1,9 @@
-const leadStatuses = [
-  ["new", "New"],
-  ["contacted", "Contacted"],
-  ["qualified", "Qualified"],
-  ["sample", "Sample"],
-  ["quoted", "Quoted"],
-  ["won", "Won"],
-  ["lost", "Lost"]
+const leadGrades = [
+  ["A", "A · Serving / 服务中"],
+  ["B", "B · Negotiating / 洽谈中"],
+  ["C", "C · Lost / 已流失"],
+  ["D", "D · To contact / 待联系"],
+  ["E", "E · Invalid / 无效"]
 ];
 
 export function renderAdminUnavailable() {
@@ -52,7 +50,7 @@ export function renderLoginPage(error = "") {
 }
 
 export function renderAdminPage() {
-  const statusOptions = leadStatuses
+  const gradeOptions = leadGrades
     .map(([value, label]) => `<option value="${value}">${label}</option>`)
     .join("");
 
@@ -67,7 +65,7 @@ export function renderAdminPage() {
             <p class="timezone-note">Times shown in Asia/Shanghai</p>
           </div>
           <div class="topbar-actions">
-            <a class="secondary-button" href="/admin/api/inquiries.csv">Export CSV</a>
+            <a id="export-csv" class="secondary-button" href="/admin/api/inquiries.csv?grade=work">Export CSV</a>
             <form method="POST" action="/admin/logout">
               <button class="ghost-button" type="submit">Logout</button>
             </form>
@@ -75,10 +73,11 @@ export function renderAdminPage() {
         </header>
 
         <section class="stats-grid" aria-label="Inquiry summary">
-          <article class="stat-card"><span>Total</span><strong id="stat-total">-</strong></article>
-          <article class="stat-card"><span>New</span><strong id="stat-new">-</strong></article>
-          <article class="stat-card"><span>Qualified+</span><strong id="stat-qualified">-</strong></article>
-          <article class="stat-card"><span>Today</span><strong id="stat-today">-</strong></article>
+          <button type="button" class="stat-card" data-grade="A"><span>A · 服务中</span><strong id="stat-A">-</strong></button>
+          <button type="button" class="stat-card" data-grade="B"><span>B · 洽谈中</span><strong id="stat-B">-</strong></button>
+          <button type="button" class="stat-card" data-grade="C"><span>C · 已流失</span><strong id="stat-C">-</strong></button>
+          <button type="button" class="stat-card" data-grade="D"><span>D · 待联系</span><strong id="stat-D">-</strong></button>
+          <button type="button" class="stat-card" data-grade="E"><span>E · 无效</span><strong id="stat-E">-</strong></button>
         </section>
 
         <section class="panel">
@@ -88,15 +87,24 @@ export function renderAdminPage() {
               <input id="search" type="search" placeholder="Name, company, contact, message, UTM..." />
             </label>
             <label class="filter-field">
-              <span>Status</span>
-              <select id="status-filter">
-                <option value="">All</option>
-                ${statusOptions}
+              <span>Lead grade</span>
+              <select id="grade-filter">
+                <option value="work" selected>A/B/D · Work queue</option>
+                <option value="all">All grades</option>
+                ${gradeOptions}
               </select>
             </label>
           </div>
 
-          <div id="status-message" class="status-message">Loading inquiries...</div>
+          <div class="list-meta">
+            <div id="status-message" class="status-message">Loading inquiries...</div>
+            <div id="bulk-actions" class="bulk-actions" hidden>
+              <strong id="selected-count">0 selected</strong>
+              <select id="bulk-grade" aria-label="Bulk lead grade">${gradeOptions}</select>
+              <button id="apply-bulk-grade" class="primary-button" type="button">Apply grade</button>
+              <button id="clear-selection" class="secondary-button" type="button">Clear</button>
+            </div>
+          </div>
           <div id="inquiry-list" class="inquiry-list"></div>
           <div class="pagination">
             <button id="prev-page" class="secondary-button" type="button">Previous</button>
@@ -114,7 +122,7 @@ export function renderAdminPage() {
         </aside>
       </main>
       <script>
-        window.VIKING_LEAD_STATUSES = ${JSON.stringify(leadStatuses)};
+        window.VIKING_LEAD_GRADES = ${JSON.stringify(leadGrades)};
         ${adminClientScript()}
       </script>
     `
@@ -273,17 +281,21 @@ function renderShell({ title, body }) {
       }
       .stats-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 14px;
         margin-bottom: 18px;
       }
       .stat-card {
+        width: 100%;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: #fff;
         padding: 18px;
         box-shadow: 0 8px 24px rgba(23, 32, 51, 0.06);
+        color: inherit;
+        text-align: left;
       }
+      .stat-card:hover, .stat-card.active { border-color: var(--signal); background: #f8fbff; }
       .stat-card span { color: var(--steel); font-size: 13px; font-weight: 800; }
       .stat-card strong { display: block; margin-top: 8px; color: var(--ink); font-size: 30px; }
       .panel {
@@ -307,6 +319,20 @@ function renderShell({ title, body }) {
         padding: 12px 14px;
         font-weight: 700;
       }
+      .list-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .bulk-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .bulk-actions[hidden] { display: none; }
+      .bulk-actions select { width: min(260px, 32vw); padding: 10px 12px; }
+      .bulk-actions strong { color: var(--graphite); white-space: nowrap; }
       .inquiry-list {
         margin-top: 14px;
         overflow: hidden;
@@ -315,7 +341,7 @@ function renderShell({ title, body }) {
       }
       .table-head, .inquiry-row {
         display: grid;
-        grid-template-columns: 150px 1.1fr 1fr 1fr 1fr 120px;
+        grid-template-columns: 34px 140px 1.1fr 1fr 1.15fr 1fr 110px;
         gap: 14px;
         align-items: center;
       }
@@ -335,9 +361,11 @@ function renderShell({ title, body }) {
         padding: 14px;
         color: var(--graphite);
         text-align: left;
+        cursor: pointer;
       }
-      .inquiry-row:hover { background: #f8fbff; }
-      .cell-main { color: var(--ink); font-weight: 900; }
+      .inquiry-row:hover, .inquiry-row.selected { background: #f8fbff; }
+      .row-check, .select-all { width: 18px; height: 18px; margin: 0; accent-color: var(--signal); }
+      .cell-main { display: block; color: var(--ink); font-weight: 900; overflow-wrap: anywhere; }
       .cell-sub {
         margin-top: 4px;
         color: var(--steel);
@@ -355,13 +383,11 @@ function renderShell({ title, body }) {
         font-size: 12px;
         font-weight: 900;
       }
-      .badge.new { background: #e8f4ff; color: var(--signal); }
-      .badge.contacted { background: #f2f4f7; color: var(--graphite); }
-      .badge.qualified { background: #fff7e6; color: #9a5b00; }
-      .badge.sample { background: #f4edff; color: #6b35a5; }
-      .badge.quoted { background: #e6f7ff; color: #075985; }
-      .badge.won, .badge.sent { background: #ecfdf3; color: #166534; }
-      .badge.lost, .badge.failed { background: #fef2f2; color: #991b1b; }
+      .badge.grade-a, .badge.sent { background: #ecfdf3; color: #166534; }
+      .badge.grade-b { background: #fff7e6; color: #9a5b00; }
+      .badge.grade-c, .badge.failed { background: #fef2f2; color: #991b1b; }
+      .badge.grade-d { background: #e8f4ff; color: var(--signal); }
+      .badge.grade-e { background: #f2f4f7; color: var(--steel); }
       .badge.pending { background: #fff7e6; color: #9a5b00; }
       .badge.skipped { background: #f2f4f7; color: var(--steel); }
       .pagination {
@@ -419,6 +445,14 @@ function renderShell({ title, body }) {
       .message-box, .follow-up-box { margin-top: 12px; }
       .follow-up-box { display: grid; gap: 12px; background: #fff; }
       .detail-actions { display: flex; gap: 10px; margin-top: 14px; }
+      .inline-link {
+        border: 0;
+        background: transparent;
+        color: var(--signal);
+        padding: 0;
+        font-weight: 800;
+        text-decoration: underline;
+      }
 
       @media (max-width: 860px) {
         .admin-shell { padding: 18px; }
@@ -426,10 +460,14 @@ function renderShell({ title, body }) {
         .topbar-actions { flex-direction: column; align-items: stretch; }
         .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .toolbar { grid-template-columns: 1fr; }
+        .list-meta { align-items: stretch; flex-direction: column; }
+        .bulk-actions { align-items: stretch; flex-direction: column; }
+        .bulk-actions select { width: 100%; }
         .table-head { display: none; }
         .inquiry-list { border: 0; display: grid; gap: 12px; }
         .inquiry-row { display: block; border: 1px solid var(--line); border-radius: 8px; }
         .inquiry-row > span { display: block; margin-top: 10px; }
+        .inquiry-row .row-check { display: inline-block; margin: 0 0 4px; }
         .drawer-panel { inset: 0; width: 100%; border-radius: 0; }
         .detail-grid { grid-template-columns: 1fr; }
       }
@@ -441,17 +479,23 @@ function renderShell({ title, body }) {
 
 function adminClientScript() {
   return `
-const state = { page: 1, totalPages: 1, q: "", status: "" };
-const statuses = window.VIKING_LEAD_STATUSES;
+const state = { page: 1, totalPages: 1, q: "", grade: "work", selected: new Set() };
+const grades = window.VIKING_LEAD_GRADES;
 const list = document.getElementById("inquiry-list");
 const statusMessage = document.getElementById("status-message");
 const search = document.getElementById("search");
-const statusFilter = document.getElementById("status-filter");
+const gradeFilter = document.getElementById("grade-filter");
 const prevPage = document.getElementById("prev-page");
 const nextPage = document.getElementById("next-page");
 const pageLabel = document.getElementById("page-label");
 const drawer = document.getElementById("detail-drawer");
 const detailContent = document.getElementById("detail-content");
+const bulkActions = document.getElementById("bulk-actions");
+const selectedCount = document.getElementById("selected-count");
+const bulkGrade = document.getElementById("bulk-grade");
+const applyBulkGrade = document.getElementById("apply-bulk-grade");
+const clearSelection = document.getElementById("clear-selection");
+const exportCsv = document.getElementById("export-csv");
 let searchTimer;
 
 document.querySelectorAll("[data-close-detail]").forEach((node) => {
@@ -467,10 +511,29 @@ search.addEventListener("input", () => {
   }, 240);
 });
 
-statusFilter.addEventListener("change", () => {
-  state.status = statusFilter.value;
+gradeFilter.addEventListener("change", () => {
+  state.grade = gradeFilter.value;
   state.page = 1;
   loadInquiries();
+});
+
+document.querySelectorAll(".stat-card[data-grade]").forEach((card) => {
+  card.addEventListener("click", () => {
+    state.grade = card.dataset.grade;
+    gradeFilter.value = state.grade;
+    state.page = 1;
+    loadInquiries();
+  });
+});
+
+applyBulkGrade.addEventListener("click", applyBulkGradeChange);
+clearSelection.addEventListener("click", () => {
+  state.selected.clear();
+  syncSelectionUi();
+  list.querySelectorAll(".row-check").forEach((checkbox) => {
+    checkbox.checked = false;
+    checkbox.closest(".inquiry-row")?.classList.remove("selected");
+  });
 });
 
 prevPage.addEventListener("click", () => {
@@ -494,7 +557,7 @@ async function loadInquiries() {
   const params = new URLSearchParams({
     page: String(state.page),
     q: state.q,
-    status: state.status
+    grade: state.grade
   });
   const response = await fetch("/admin/api/inquiries?" + params.toString());
   if (!response.ok) {
@@ -503,19 +566,27 @@ async function loadInquiries() {
   }
   const data = await response.json();
   state.totalPages = data.totalPages;
+  state.selected.clear();
   renderStats(data.stats);
   renderList(data.inquiries);
+  syncSelectionUi();
   statusMessage.textContent = data.total ? data.total + " inquiry records" : "No inquiries found";
   pageLabel.textContent = "Page " + data.page + " / " + data.totalPages;
   prevPage.disabled = data.page <= 1;
   nextPage.disabled = data.page >= data.totalPages;
+  exportCsv.href = "/admin/api/inquiries.csv?" + new URLSearchParams({
+    q: state.q,
+    grade: state.grade
+  }).toString();
+  document.querySelectorAll(".stat-card[data-grade]").forEach((card) => {
+    card.classList.toggle("active", card.dataset.grade === state.grade);
+  });
 }
 
 function renderStats(stats) {
-  document.getElementById("stat-total").textContent = stats.total;
-  document.getElementById("stat-new").textContent = stats.new;
-  document.getElementById("stat-qualified").textContent = stats.qualified;
-  document.getElementById("stat-today").textContent = stats.today;
+  grades.forEach(([grade]) => {
+    document.getElementById("stat-" + grade).textContent = stats[grade] || 0;
+  });
 }
 
 function renderList(inquiries) {
@@ -524,23 +595,72 @@ function renderList(inquiries) {
     return;
   }
   list.innerHTML = [
-    '<div class="table-head"><span>Time</span><span>Lead</span><span>Company</span><span>Product / Application</span><span>Source</span><span>Status</span></div>',
+    '<div class="table-head"><input class="select-all" type="checkbox" aria-label="Select page" /><span>Time</span><span>Lead</span><span>Company</span><span>Product / Application</span><span>Source</span><span>Grade</span></div>',
     ...inquiries.map((item) => {
       const product = item.interested_product || item.application || "-";
       const source = item.utm_source || item.referrer || item.landing_page || item.page_url || "-";
-      return '<button type="button" class="inquiry-row" data-id="' + item.id + '">' +
+      return '<div class="inquiry-row" role="button" tabindex="0" data-id="' + item.id + '">' +
+        '<input class="row-check" type="checkbox" aria-label="Select inquiry #' + item.id + '" value="' + item.id + '" />' +
         '<span><span class="cell-main">' + formatDate(item.created_at) + '</span><span class="cell-sub">#' + item.id + '</span></span>' +
         '<span><span class="cell-main">' + escapeHtml(item.name || "-") + '</span><span class="cell-sub">' + escapeHtml(item.contact || item.email || "-") + '</span></span>' +
         '<span><span class="cell-main">' + escapeHtml(item.company || "-") + '</span><span class="cell-sub">' + escapeHtml(item.country || "") + '</span></span>' +
         '<span><span class="cell-main">' + escapeHtml(product) + '</span><span class="cell-sub">' + escapeHtml((item.message || "").slice(0, 90)) + '</span></span>' +
         '<span><span class="cell-main">' + escapeHtml(compactSource(source)) + '</span><span class="cell-sub">' + escapeHtml(compactUrl(item.page_url)) + '</span></span>' +
-        '<span><span class="badge ' + item.status + '">' + statusLabel(item.status) + '</span></span>' +
-      '</button>';
+        '<span><span class="badge ' + gradeClass(item.lead_grade) + '">' + gradeLabel(item.lead_grade) + '</span></span>' +
+      '</div>';
     })
   ].join("");
   list.querySelectorAll(".inquiry-row").forEach((row) => {
-    row.addEventListener("click", () => openDetail(row.dataset.id));
+    row.addEventListener("click", (event) => {
+      if (event.target.matches("input")) return;
+      openDetail(row.dataset.id);
+    });
+    row.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.target.matches("input")) {
+        openDetail(row.dataset.id);
+      }
+    });
   });
+  list.querySelectorAll(".row-check").forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      const id = Number(checkbox.value);
+      if (checkbox.checked) state.selected.add(id);
+      else state.selected.delete(id);
+      checkbox.closest(".inquiry-row")?.classList.toggle("selected", checkbox.checked);
+      syncSelectionUi();
+    });
+  });
+  list.querySelector(".select-all")?.addEventListener("change", (event) => {
+    list.querySelectorAll(".row-check").forEach((checkbox) => {
+      checkbox.checked = event.target.checked;
+      checkbox.dispatchEvent(new Event("change"));
+    });
+  });
+}
+
+function syncSelectionUi() {
+  const count = state.selected.size;
+  bulkActions.hidden = count === 0;
+  selectedCount.textContent = count + " selected";
+}
+
+async function applyBulkGradeChange() {
+  if (!state.selected.size || state.selected.size > 100) return;
+  applyBulkGrade.disabled = true;
+  applyBulkGrade.textContent = "Applying...";
+  const response = await fetch("/admin/api/inquiries/bulk-grade", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      ids: Array.from(state.selected),
+      lead_grade: bulkGrade.value
+    })
+  });
+  applyBulkGrade.disabled = false;
+  applyBulkGrade.textContent = response.ok ? "Applied" : "Apply failed";
+  if (!response.ok) return;
+  await loadInquiries();
+  applyBulkGrade.textContent = "Apply grade";
 }
 
 async function openDetail(id) {
@@ -562,12 +682,12 @@ function closeDetail() {
 }
 
 function renderDetail(item) {
-  const statusOptions = statuses.map(([value, label]) =>
-    '<option value="' + value + '"' + (item.status === value ? ' selected' : '') + '>' + label + '</option>'
+  const gradeOptions = grades.map(([value, label]) =>
+    '<option value="' + value + '"' + (item.lead_grade === value ? ' selected' : '') + '>' + label + '</option>'
   ).join('');
   detailContent.innerHTML =
     '<h2 id="detail-title" class="detail-title">' + escapeHtml(item.name || "Inquiry #" + item.id) + '</h2>' +
-    '<span class="badge ' + item.status + '">' + statusLabel(item.status) + '</span> ' +
+    '<span class="badge ' + gradeClass(item.lead_grade) + '">' + gradeLabel(item.lead_grade) + '</span> ' +
     '<span class="badge ' + item.notification_status + '">' + escapeHtml(item.notification_status) + '</span>' +
     '<div class="detail-grid">' +
       detailItem("Created", formatDate(item.created_at)) +
@@ -588,6 +708,9 @@ function renderDetail(item) {
       detailItem("UTM term", item.utm_term) +
       detailItem("Email notification", item.email_notification_status) +
       detailItem("Feishu notification", item.feishu_notification_status) +
+      detailItem("Classification source", item.classification_source) +
+      detailItem("Classification reason", reasonLabel(item.classification_reason)) +
+      duplicateDetail(item.duplicate_of_id) +
       detailItem("IP", item.ip_address) +
       detailItem("User agent", item.user_agent) +
     '</div>' +
@@ -595,12 +718,15 @@ function renderDetail(item) {
     (item.email_notification_error ? '<div class="message-box"><span>Email error</span><p>' + escapeHtml(item.email_notification_error) + '</p></div>' : '') +
     (item.feishu_notification_error ? '<div class="message-box"><span>Feishu error</span><p>' + escapeHtml(item.feishu_notification_error) + '</p></div>' : '') +
     '<div class="follow-up-box">' +
-      '<label><span>Lead stage</span><select id="lead-status">' + statusOptions + '</select></label>' +
+      '<label><span>Lead grade / 线索等级</span><select id="lead-grade">' + gradeOptions + '</select></label>' +
       '<label><span>Next follow-up</span><input id="next-follow-up" type="datetime-local" value="' + escapeHtml(toDateTimeLocal(item.next_follow_up_at)) + '" /></label>' +
       '<label><span>Internal notes</span><textarea id="lead-notes" placeholder="Call notes, sample requirement, quotation context...">' + escapeHtml(item.notes || "") + '</textarea></label>' +
       '<div class="detail-actions"><button class="primary-button" type="button" id="save-follow-up">Save follow-up</button></div>' +
     '</div>';
   document.getElementById("save-follow-up").addEventListener("click", () => saveFollowUp(item.id));
+  document.querySelector("[data-duplicate-id]")?.addEventListener("click", (event) => {
+    openDetail(event.currentTarget.dataset.duplicateId);
+  });
 }
 
 async function saveFollowUp(id) {
@@ -611,7 +737,7 @@ async function saveFollowUp(id) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      status: document.getElementById("lead-status").value,
+      lead_grade: document.getElementById("lead-grade").value,
       notes: document.getElementById("lead-notes").value,
       next_follow_up_at: document.getElementById("next-follow-up").value
     })
@@ -628,8 +754,31 @@ function detailItem(label, value) {
   return '<div class="detail-item"><span>' + escapeHtml(label) + '</span><strong>' + escapeHtml(value || "-") + '</strong></div>';
 }
 
-function statusLabel(value) {
-  return statuses.find(([status]) => status === value)?.[1] || value || "-";
+function duplicateDetail(id) {
+  if (!id) return detailItem("Duplicate of", "-");
+  return '<div class="detail-item"><span>Duplicate of</span><strong><button type="button" class="inline-link" data-duplicate-id="' + id + '">Open inquiry #' + id + '</button></strong></div>';
+}
+
+function gradeLabel(value) {
+  return grades.find(([grade]) => grade === value)?.[1] || value || "-";
+}
+
+function gradeClass(value) {
+  return "grade-" + String(value || "D").toLowerCase();
+}
+
+function reasonLabel(value) {
+  const labels = {
+    duplicate_submission: "Duplicate submission / 重复提交",
+    internal_test: "Internal test / 内部测试",
+    unrelated_solicitation: "Unrelated solicitation / 无关推广",
+    historical_test: "Historical test / 历史测试",
+    historical_unrelated_solicitation: "Historical solicitation / 历史推广",
+    legacy_status_mapping: "Migrated from legacy status / 旧状态迁移",
+    manual_invalid: "Marked invalid manually / 人工标记无效",
+    manual_override: "Adjusted manually / 人工调整"
+  };
+  return labels[value] || value || "-";
 }
 
 function escapeHtml(value) {

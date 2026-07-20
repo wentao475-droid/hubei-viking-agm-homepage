@@ -11,6 +11,13 @@ import {
   renderAdminUnavailable,
   renderLoginPage
 } from "./admin-ui.js";
+import {
+  classifyInquiry,
+  createMessageFingerprint,
+  normalizeContactIdentity,
+  normalizeTestContacts
+} from "./inquiry-classifier.js";
+import { applyLeadGradeMigration } from "./lead-grade-migration.js";
 
 dotenv.config();
 
@@ -45,14 +52,19 @@ const inquiryRateLimitWindowMs = positiveIntegerEnv(
 );
 const inquiryRateLimitMax = positiveIntegerEnv("INQUIRY_RATE_LIMIT_MAX", 10);
 const inquiryRateLimits = new Map();
-const leadStatuses = new Set([
-  "new",
-  "contacted",
-  "qualified",
-  "sample",
-  "quoted",
-  "won",
-  "lost"
+const leadGrades = new Set(["A", "B", "C", "D", "E"]);
+const inquiryTestContacts = normalizeTestContacts(
+  process.env.INQUIRY_TEST_CONTACTS
+);
+const legacyStatusGrades = new Map([
+  ["won", "A"],
+  ["qualified", "B"],
+  ["sample", "B"],
+  ["quoted", "B"],
+  ["lost", "C"],
+  ["new", "D"],
+  ["contacted", "D"],
+  ["handled", "D"]
 ]);
 
 fs.mkdirSync(path.dirname(dbPath), { recursive: true });
@@ -91,6 +103,13 @@ db.exec(`
     notes TEXT,
     next_follow_up_at TEXT,
     handled_at TEXT,
+    lead_grade TEXT NOT NULL DEFAULT 'D',
+    classification_source TEXT NOT NULL DEFAULT 'automatic',
+    classification_reason TEXT,
+    duplicate_of_id INTEGER,
+    classified_at TEXT,
+    contact_identity TEXT,
+    message_fingerprint TEXT,
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
   );
 `);
@@ -126,6 +145,8 @@ db.exec(`
     AND email_notification_status = 'pending';
 `);
 
+applyLeadGradeMigration(db);
+
 const insertInquiry = db.prepare(`
   INSERT INTO inquiries (
     name,
@@ -146,7 +167,17 @@ const insertInquiry = db.prepare(`
     utm_content,
     utm_term,
     ip_address,
-    user_agent
+    user_agent,
+    lead_grade,
+    classification_source,
+    classification_reason,
+    duplicate_of_id,
+    classified_at,
+    contact_identity,
+    message_fingerprint,
+    notification_status,
+    email_notification_status,
+    feishu_notification_status
   ) VALUES (
     @name,
     @contact,
@@ -166,8 +197,29 @@ const insertInquiry = db.prepare(`
     @utm_content,
     @utm_term,
     @ip_address,
-    @user_agent
+    @user_agent,
+    @lead_grade,
+    @classification_source,
+    @classification_reason,
+    @duplicate_of_id,
+    CURRENT_TIMESTAMP,
+    @contact_identity,
+    @message_fingerprint,
+    @notification_status,
+    @email_notification_status,
+    @feishu_notification_status
   )
+`);
+
+const duplicateInquiry = db.prepare(`
+  SELECT id
+  FROM inquiries
+  WHERE contact_identity = @contact_identity
+    AND message_fingerprint = @message_fingerprint
+    AND message_fingerprint <> ''
+    AND datetime(created_at) >= datetime('now', '-30 days')
+  ORDER BY datetime(created_at) ASC, id ASC
+  LIMIT 1
 `);
 
 const updateEmailNotification = db.prepare(`
@@ -194,8 +246,11 @@ const updateAggregateNotification = db.prepare(`
 const inquiryStats = db.prepare(`
   SELECT
     COUNT(*) AS total,
-    SUM(CASE WHEN status = 'new' THEN 1 ELSE 0 END) AS new_count,
-    SUM(CASE WHEN status IN ('qualified', 'sample', 'quoted', 'won') THEN 1 ELSE 0 END) AS qualified_count,
+    SUM(CASE WHEN lead_grade = 'A' THEN 1 ELSE 0 END) AS grade_a,
+    SUM(CASE WHEN lead_grade = 'B' THEN 1 ELSE 0 END) AS grade_b,
+    SUM(CASE WHEN lead_grade = 'C' THEN 1 ELSE 0 END) AS grade_c,
+    SUM(CASE WHEN lead_grade = 'D' THEN 1 ELSE 0 END) AS grade_d,
+    SUM(CASE WHEN lead_grade = 'E' THEN 1 ELSE 0 END) AS grade_e,
     SUM(
       CASE
         WHEN date(datetime(created_at, '+8 hours')) = date('now', '+8 hours')
@@ -214,11 +269,35 @@ const inquiryById = db.prepare(`
 
 const updateInquiry = db.prepare(`
   UPDATE inquiries
-  SET status = @status,
+  SET lead_grade = @lead_grade,
+      classification_source = 'manual',
+      classification_reason = @classification_reason,
+      duplicate_of_id = CASE
+        WHEN @lead_grade = 'E' THEN duplicate_of_id
+        ELSE NULL
+      END,
+      classified_at = CURRENT_TIMESTAMP,
       notes = @notes,
       next_follow_up_at = @next_follow_up_at,
       handled_at = CASE
-        WHEN @status = 'new' THEN NULL
+        WHEN @lead_grade = 'D' THEN NULL
+        ELSE COALESCE(handled_at, CURRENT_TIMESTAMP)
+      END
+  WHERE id = @id
+`);
+
+const bulkUpdateInquiryGrade = db.prepare(`
+  UPDATE inquiries
+  SET lead_grade = @lead_grade,
+      classification_source = 'manual',
+      classification_reason = @classification_reason,
+      duplicate_of_id = CASE
+        WHEN @lead_grade = 'E' THEN duplicate_of_id
+        ELSE NULL
+      END,
+      classified_at = CURRENT_TIMESTAMP,
+      handled_at = CASE
+        WHEN @lead_grade = 'D' THEN NULL
         ELSE COALESCE(handled_at, CURRENT_TIMESTAMP)
       END
   WHERE id = @id
@@ -276,16 +355,49 @@ app.post("/api/inquiry", (request, response) => {
     ip_address: request.ip || "",
     user_agent: clean(request.get("user-agent"), 500)
   };
-  const result = insertInquiry.run(record);
-  const inquiry = { id: Number(result.lastInsertRowid), ...record };
+  const contactIdentity = normalizeContactIdentity(record);
+  const messageFingerprint = createMessageFingerprint(record.message);
+  const duplicate =
+    contactIdentity && messageFingerprint
+      ? duplicateInquiry.get({
+          contact_identity: contactIdentity,
+          message_fingerprint: messageFingerprint
+        })
+      : null;
+  const classification = classifyInquiry({
+    inquiry: record,
+    duplicateOfId: duplicate?.id || null,
+    testContacts: inquiryTestContacts
+  });
+  const skipNotifications = classification.lead_grade === "E";
+  const storedRecord = {
+    ...record,
+    ...classification,
+    contact_identity: contactIdentity,
+    message_fingerprint: messageFingerprint,
+    notification_status: skipNotifications ? "skipped" : "pending",
+    email_notification_status: skipNotifications ? "skipped" : "pending",
+    feishu_notification_status: skipNotifications
+      ? "skipped"
+      : feishuWebhook
+        ? "pending"
+        : "skipped"
+  };
+  const result = insertInquiry.run(storedRecord);
+  const inquiry = { id: Number(result.lastInsertRowid), ...storedRecord };
 
   response.status(202).json({ ok: true, id: inquiry.id });
 
-  setImmediate(() => {
-    processInquiryNotifications(inquiry).catch((error) => {
-      console.error(`Inquiry #${inquiry.id} notification processing failed`, error);
+  if (!skipNotifications) {
+    setImmediate(() => {
+      processInquiryNotifications(inquiry).catch((error) => {
+        console.error(
+          `Inquiry #${inquiry.id} notification processing failed`,
+          error
+        );
+      });
     });
-  });
+  }
 });
 
 app.use("/admin", (_request, response, next) => {
@@ -335,9 +447,12 @@ app.post("/admin/logout", (request, response) => {
 });
 
 app.get("/admin/api/inquiries.csv", requireAdmin, (request, response) => {
-  const status = normalizeStatusFilter(request.query.status);
+  const grade = normalizeGradeFilter(
+    request.query.grade ?? request.query.status,
+    "work"
+  );
   const q = clean(request.query.q);
-  const { whereSql, params } = buildInquiryFilter({ status, q });
+  const { whereSql, params } = buildInquiryFilter({ grade, q });
   const rows = db
     .prepare(`
       SELECT *
@@ -350,6 +465,11 @@ app.get("/admin/api/inquiries.csv", requireAdmin, (request, response) => {
   const columns = [
     "id",
     "created_at",
+    "lead_grade",
+    "classification_source",
+    "classification_reason",
+    "duplicate_of_id",
+    "classified_at",
     "status",
     "name",
     "contact",
@@ -394,9 +514,12 @@ app.get("/admin/api/inquiries", requireAdmin, (request, response) => {
   );
   const pageSize = 20;
   const offset = (page - 1) * pageSize;
-  const status = normalizeStatusFilter(request.query.status);
+  const grade = normalizeGradeFilter(
+    request.query.grade ?? request.query.status,
+    "work"
+  );
   const q = clean(request.query.q);
-  const { whereSql, params } = buildInquiryFilter({ status, q });
+  const { whereSql, params } = buildInquiryFilter({ grade, q });
   const total = db
     .prepare(`SELECT COUNT(*) AS count FROM inquiries ${whereSql}`)
     .get(params).count;
@@ -418,6 +541,10 @@ app.get("/admin/api/inquiries", requireAdmin, (request, response) => {
         referrer,
         utm_source,
         notification_status,
+        lead_grade,
+        classification_source,
+        classification_reason,
+        duplicate_of_id,
         status,
         next_follow_up_at,
         created_at
@@ -439,6 +566,38 @@ app.get("/admin/api/inquiries", requireAdmin, (request, response) => {
   });
 });
 
+app.post("/admin/api/inquiries/bulk-grade", requireAdmin, (request, response) => {
+  const leadGrade = normalizeLeadGrade(
+    request.body?.lead_grade ?? request.body?.grade ?? request.body?.status
+  );
+  const ids = Array.isArray(request.body?.ids)
+    ? [...new Set(request.body.ids.map(Number).filter(Number.isInteger))]
+    : [];
+
+  if (!leadGrade) {
+    response.status(400).json({ ok: false, error: "invalid_grade" });
+    return;
+  }
+  if (ids.length === 0 || ids.length > 100) {
+    response.status(400).json({ ok: false, error: "invalid_selection" });
+    return;
+  }
+
+  const updateMany = db.transaction((selectedIds) => {
+    let changes = 0;
+    for (const id of selectedIds) {
+      changes += bulkUpdateInquiryGrade.run({
+        id,
+        lead_grade: leadGrade,
+        classification_reason: manualClassificationReason(leadGrade)
+      }).changes;
+    }
+    return changes;
+  });
+
+  response.json({ ok: true, updated: updateMany(ids) });
+});
+
 app.get("/admin/api/inquiries/:id", requireAdmin, (request, response) => {
   const inquiry = inquiryById.get(Number(request.params.id));
   if (!inquiry) {
@@ -451,16 +610,19 @@ app.get("/admin/api/inquiries/:id", requireAdmin, (request, response) => {
 
 app.post("/admin/api/inquiries/:id/update", requireAdmin, (request, response) => {
   const id = Number(request.params.id);
-  const status = normalizeLeadStatus(request.body?.status);
+  const leadGrade = normalizeLeadGrade(
+    request.body?.lead_grade ?? request.body?.grade ?? request.body?.status
+  );
 
-  if (!status) {
-    response.status(400).json({ ok: false, error: "invalid_status" });
+  if (!leadGrade) {
+    response.status(400).json({ ok: false, error: "invalid_grade" });
     return;
   }
 
   const result = updateInquiry.run({
     id,
-    status,
+    lead_grade: leadGrade,
+    classification_reason: manualClassificationReason(leadGrade),
     notes: clean(request.body?.notes, 5000),
     next_follow_up_at:
       clean(request.body?.next_follow_up_at, 30) || null
@@ -476,21 +638,24 @@ app.post("/admin/api/inquiries/:id/update", requireAdmin, (request, response) =>
 app.post("/admin/api/inquiries/:id/status", requireAdmin, (request, response) => {
   const id = Number(request.params.id);
   const existing = inquiryById.get(id);
-  const status = normalizeLeadStatus(request.body?.status);
+  const leadGrade = normalizeLeadGrade(
+    request.body?.lead_grade ?? request.body?.grade ?? request.body?.status
+  );
 
   if (!existing) {
     response.status(404).json({ ok: false, error: "not_found" });
     return;
   }
 
-  if (!status) {
-    response.status(400).json({ ok: false, error: "invalid_status" });
+  if (!leadGrade) {
+    response.status(400).json({ ok: false, error: "invalid_grade" });
     return;
   }
 
   updateInquiry.run({
     id,
-    status,
+    lead_grade: leadGrade,
+    classification_reason: manualClassificationReason(leadGrade),
     notes: existing.notes || "",
     next_follow_up_at: existing.next_follow_up_at || null
   });
@@ -505,13 +670,15 @@ app.listen(port, "127.0.0.1", () => {
   console.log(`Viking AGM inquiry API listening on 127.0.0.1:${port}`);
 });
 
-function buildInquiryFilter({ status, q }) {
+function buildInquiryFilter({ grade, q }) {
   const where = [];
   const params = {};
 
-  if (status) {
-    where.push("status = @status");
-    params.status = status;
+  if (grade === "work") {
+    where.push("lead_grade IN ('A', 'B', 'D')");
+  } else if (leadGrades.has(grade)) {
+    where.push("lead_grade = @grade");
+    params.grade = grade;
   }
 
   if (q) {
@@ -530,6 +697,7 @@ function buildInquiryFilter({ status, q }) {
       utm_source LIKE @q OR
       utm_medium LIKE @q OR
       utm_campaign LIKE @q OR
+      classification_reason LIKE @q OR
       notes LIKE @q
     )`);
     params.q = `%${q}%`;
@@ -692,21 +860,43 @@ function safeEqual(value, expected) {
   );
 }
 
-function normalizeStatusFilter(value) {
-  const status = clean(value, 30);
-  return leadStatuses.has(status) ? status : "";
+function normalizeGradeFilter(value, fallback = "all") {
+  const raw = clean(value, 30);
+  if (!raw) {
+    return fallback;
+  }
+  if (raw.toLowerCase() === "work") {
+    return "work";
+  }
+  if (raw.toLowerCase() === "all") {
+    return "all";
+  }
+
+  return normalizeLeadGrade(raw) || fallback;
 }
 
-function normalizeLeadStatus(value) {
-  const status = clean(value, 30);
-  return leadStatuses.has(status) ? status : "";
+function normalizeLeadGrade(value) {
+  const raw = clean(value, 30);
+  const grade = raw.toUpperCase();
+  if (leadGrades.has(grade)) {
+    return grade;
+  }
+
+  return legacyStatusGrades.get(raw.toLowerCase()) || "";
+}
+
+function manualClassificationReason(leadGrade) {
+  return leadGrade === "E" ? "manual_invalid" : "manual_override";
 }
 
 function normalizeStats(stats) {
   return {
     total: Number(stats?.total || 0),
-    new: Number(stats?.new_count || 0),
-    qualified: Number(stats?.qualified_count || 0),
+    A: Number(stats?.grade_a || 0),
+    B: Number(stats?.grade_b || 0),
+    C: Number(stats?.grade_c || 0),
+    D: Number(stats?.grade_d || 0),
+    E: Number(stats?.grade_e || 0),
     today: Number(stats?.today_count || 0)
   };
 }

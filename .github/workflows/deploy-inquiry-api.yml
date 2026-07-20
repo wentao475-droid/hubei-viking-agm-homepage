@@ -33,8 +33,11 @@ jobs:
         run: |
           npm ci --omit=dev --prefix server
           npm audit --omit=dev --prefix server
+          npm test --prefix server
           node --check server/index.js
           node --check server/admin-ui.js
+          node --check server/inquiry-classifier.js
+          node --check server/lead-grade-migration.js
 
       - name: Prepare SSH key and pinned host identity
         shell: bash
@@ -83,7 +86,12 @@ jobs:
             cp nginx/static-cache.conf /etc/nginx/snippets/viking-agm-static-cache.conf
             cp nginx/inquiry-api-location.conf /etc/nginx/snippets/viking-agm-inquiry-locations.conf
             systemctl daemon-reload
-            systemctl enable --now viking-agm-inquiry
+            systemctl enable viking-agm-inquiry
+            if [ -f /var/lib/viking-agm/inquiries.db ]; then
+              systemctl start viking-agm-inquiry-backup.service
+              latest_backup="$(ls -1t /var/lib/viking-agm/backups/inquiries-*.db.gz | head -1)"
+              /opt/viking-agm-inquiry/backup/verify-backup.sh "$latest_backup"
+            fi
             systemctl enable --now viking-agm-inquiry-backup.timer
             systemctl restart viking-agm-inquiry
             nginx -t

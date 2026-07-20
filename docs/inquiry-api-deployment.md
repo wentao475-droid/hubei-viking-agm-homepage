@@ -70,6 +70,7 @@ Required production values:
 
 ```text
 INQUIRY_ALLOWED_ORIGINS=https://www.vikingagm.com,https://vikingagm.com
+INQUIRY_TEST_CONTACTS=your-internal-test-address@example.net
 SMTP_HOST=...
 SMTP_PORT=465
 SMTP_SECURE=true
@@ -94,12 +95,13 @@ openssl rand -hex 32
 
 It:
 
-1. audits and syntax-checks the API;
+1. runs tests, audits and syntax-checks the API;
 2. synchronizes code while excluding `.env`, databases and `node_modules`;
 3. installs production dependencies;
 4. installs systemd, Nginx and backup files;
-5. restarts the API;
-6. verifies `/health` and `/admin`.
+5. creates and restores a verified SQLite backup before migration;
+6. restarts the API and applies idempotent schema migrations;
+7. verifies `/health` and `/admin`.
 
 The workflow preserves the existing `.env` and SQLite database.
 
@@ -113,6 +115,8 @@ The public form requires only:
 Optional fields include company, country, application, product form, message and attribution data.
 
 The API stores the inquiry first and returns HTTP `202` immediately. SMTP and Feishu notifications run asynchronously with a timeout and limited retry. Notification failure does not make the visitor resubmit the form.
+
+New inquiries are classified locally. High-confidence tests, exact 30-day duplicates and unrelated sales solicitations enter grade `E`, remain stored for audit, and skip email and Feishu notifications. All other submissions enter grade `D`; the classifier never assigns `A`, `B` or `C`.
 
 Tracked attribution fields:
 
@@ -133,13 +137,17 @@ Open:
 https://www.vikingagm.com/admin
 ```
 
-Lead stages:
+Lead grades:
 
 ```text
-new -> contacted -> qualified -> sample -> quoted -> won/lost
+A = serving customer
+B = negotiating, sampling or quoting
+C = confirmed lost
+D = valid inquiry requiring contact or qualification
+E = test, duplicate, unrelated solicitation or other invalid inquiry
 ```
 
-The dashboard supports search, stage filtering, notes, next follow-up date, notification diagnostics and CSV export. Display and daily statistics use `Asia/Shanghai`.
+The default work queue shows grades A, B and D. C and E have separate filters. The dashboard supports search, single and bulk grading (up to 100 records), notes, next follow-up date, duplicate links, notification diagnostics and CSV export. Reclassifying an E lead does not resend the original notification. Display and daily statistics use `Asia/Shanghai`.
 
 ## Nginx
 
@@ -166,14 +174,14 @@ curl -i http://127.0.0.1:3001/health
 
 curl -i -X POST https://www.vikingagm.com/api/inquiry \
   -H "Content-Type: application/x-www-form-urlencoded" \
-  --data "name=DeployTest&contact=deploy@example.com&company=TestCo&message=Deployment check"
+  --data "name=BatteryBuyer&contact=buyer@customer-domain.com&company=BatteryCo&application=VRLA&message=Please recommend an AGM separator sample"
 ```
 
 The public POST should return `202 Accepted`. Confirm the row:
 
 ```bash
 sqlite3 /var/lib/viking-agm/inquiries.db \
-  "select id,name,contact,status,email_notification_status,feishu_notification_status,created_at from inquiries order by id desc limit 5;"
+  "select id,name,contact,lead_grade,classification_reason,duplicate_of_id,email_notification_status,created_at from inquiries order by id desc limit 5;"
 ```
 
 ## Daily SQLite backup
