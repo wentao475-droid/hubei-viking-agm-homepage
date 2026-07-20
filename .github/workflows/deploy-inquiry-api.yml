@@ -75,6 +75,7 @@ jobs:
             chown root:vikingagm .env
             chmod 640 .env
             npm ci --omit=dev
+            chown root:vikingagm backup/*.sh
             chmod 750 backup/*.sh
             mkdir -p /var/lib/viking-agm
             chown -R vikingagm:vikingagm /var/lib/viking-agm
@@ -88,7 +89,11 @@ jobs:
             systemctl daemon-reload
             systemctl enable viking-agm-inquiry
             if [ -f /var/lib/viking-agm/inquiries.db ]; then
-              systemctl start viking-agm-inquiry-backup.service
+              if ! systemctl start viking-agm-inquiry-backup.service; then
+                systemctl status viking-agm-inquiry-backup.service --no-pager -l || true
+                journalctl -u viking-agm-inquiry-backup.service -n 80 --no-pager || true
+                exit 1
+              fi
               latest_backup="$(ls -1t /var/lib/viking-agm/backups/inquiries-*.db.gz | head -1)"
               /opt/viking-agm-inquiry/backup/verify-backup.sh "$latest_backup"
             fi
