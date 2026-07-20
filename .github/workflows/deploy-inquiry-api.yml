@@ -88,5 +88,28 @@ jobs:
             systemctl restart viking-agm-inquiry
             nginx -t
             systemctl reload nginx
-            curl --fail --silent --show-error http://127.0.0.1:3001/health
-            test "$(curl --silent --output /dev/null --write-out "%{http_code}" http://127.0.0.1:3001/admin)" = "200"'
+
+            wait_for_status() {
+              url="$1"
+              expected_status="$2"
+              attempts=15
+
+              while [ "$attempts" -gt 0 ]; do
+                actual_status="$(curl --silent --output /dev/null --write-out "%{http_code}" "$url" || true)"
+                if [ "$actual_status" = "$expected_status" ]; then
+                  return 0
+                fi
+
+                attempts=$((attempts - 1))
+                sleep 1
+              done
+
+              echo "Timed out waiting for $url to return HTTP $expected_status." >&2
+              systemctl status viking-agm-inquiry --no-pager -l || true
+              journalctl -u viking-agm-inquiry -n 80 --no-pager || true
+              return 1
+            }
+
+            wait_for_status http://127.0.0.1:3001/health 200
+            wait_for_status http://127.0.0.1:3001/admin 200
+            curl --fail --silent --show-error http://127.0.0.1:3001/health'
