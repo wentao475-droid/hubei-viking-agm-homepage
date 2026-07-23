@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { homeContent } from "./cms-content";
 import { InquiryForm } from "./InquiryForm";
 import { SiteHeader } from "./SiteHeader";
+import { SocialLinks } from "./SocialLinks";
 
 export type Lang = "en" | "zh";
 type IconProps = { size?: number; className?: string };
@@ -1357,6 +1358,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
                 {icpLicense}
               </a>
             )}
+            <SocialLinks lang={lang} />
             <div className="mt-6 grid max-w-md gap-4 sm:grid-cols-2">
               {[
                 ...t.footer.qrImages

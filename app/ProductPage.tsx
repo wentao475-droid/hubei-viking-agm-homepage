@@ -6,6 +6,7 @@ import { productContent } from "./cms-content";
 import { InquiryForm } from "./InquiryForm";
 import { productFaqCopy } from "./seo-faq";
 import { SiteHeader } from "./SiteHeader";
+import { SocialLinks } from "./SocialLinks";
 import type { Lang } from "./VikingHome";
 
 export type ProductPageKind =
@@ -2856,6 +2857,7 @@ function Footer({
             <p className="mt-4 max-w-xl leading-7 text-graphite">
               {copy.description}
             </p>
+            <SocialLinks lang={lang} />
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">

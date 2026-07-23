@@ -5,6 +5,7 @@ import { useState } from "react";
 import { articleContent } from "./cms-content";
 import { InquiryForm } from "./InquiryForm";
 import { SiteHeader } from "./SiteHeader";
+import { SocialLinks } from "./SocialLinks";
 import type { Lang } from "./VikingHome";
 
 type IconProps = { size?: number; className?: string };
@@ -14,7 +15,8 @@ type BlogArticleKind =
   | "howToChooseAgmSeparator"
   | "agmSeparatorManufacturingQualityDelivery"
   | "agmSeparatorPerformanceConsistency"
-  | "agmSeparatorExportSupplyReadiness";
+  | "agmSeparatorExportSupplyReadiness"
+  | "upsVrlaTechnologySelection";
 type IconName =
   | "arrow"
   | "check"
@@ -1584,6 +1586,286 @@ const exportSupplyReadinessCopy = {
   }
 } as const;
 
+const upsVrlaTechnologySelectionCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/why-ups-projects-still-use-vrla-batteries/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request a Sample",
+    hero: {
+      eyebrow: "UPS Battery Technology Selection",
+      title: "Why Many UPS Projects Still Use VRLA Batteries",
+      subtitle:
+        "New battery technologies deserve attention, but real UPS projects still depend on system compatibility, maintenance capability, supply continuity and long-term operational control.",
+      primary: "Discuss UPS Separator Requirements",
+      secondary: "View the Buyer Checklist",
+      image: {
+        src: "/images/applications/ups-vrla-battery-application-1200.webp",
+        alt: "AGM separator roll for UPS VRLA battery applications",
+        width: 900,
+        height: 675
+      }
+    },
+    intro: [
+      "Lithium-ion, sodium-ion and other emerging battery technologies are receiving more attention in UPS projects. Their development does not mean that every existing data-room, backup-power or retrofit project should immediately move away from valve-regulated lead-acid batteries.",
+      "The practical decision is not simply which chemistry is newer. Project teams need to review whether the battery system matches the existing UPS, charging strategy, installation space, maintenance capability, replacement process and supply plan."
+    ],
+    sections: [
+      {
+        eyebrow: "01 · A Mature System",
+        title: "Why VRLA still has a practical role in UPS projects",
+        text:
+          "Many installed UPS systems, maintenance procedures and replacement plans were developed around VRLA batteries. For these projects, a familiar operating model, established service capability and predictable replacement process can remain valuable. This does not make VRLA the right answer for every project; it explains why technical maturity and implementation risk still matter alongside energy density and new-technology interest."
+      },
+      {
+        eyebrow: "02 · System Compatibility",
+        title: "Changing battery chemistry affects more than the battery itself",
+        text:
+          "A battery-technology change can affect charging logic, battery management, cabinet layout, ventilation, protection settings, maintenance procedures and staff training. New installations may be designed around a different chemistry from the beginning. Retrofit and installed-base projects need a more detailed review because a battery replacement can create changes across the wider UPS system."
+      },
+      {
+        eyebrow: "03 · Operational Stability",
+        title: "The useful question is whether the complete system can be operated reliably",
+        text:
+          "Safety and reliability are system outcomes rather than simple labels attached to one battery chemistry. The technical route, equipment match, installation quality, monitoring, operating environment and maintenance capability all contribute to long-term performance. A project should therefore compare complete operating requirements instead of assuming that either a newer or a more established route is automatically better."
+      },
+      {
+        eyebrow: "04 · AGM Separator Role",
+        title: "When a UPS project uses VRLA, separator fit remains important",
+        text:
+          "In a VRLA battery, the AGM separator helps retain electrolyte, separate the plates and support ionic movement through its porous glass-fiber structure. Its thickness, absorption-related behavior, compression fit and batch consistency need to match the battery design and assembly process. Separator selection should therefore be evaluated together with the battery manufacturer's confirmed technical requirements."
+      },
+      {
+        eyebrow: "05 · Procurement Review",
+        title: "UPS battery buyers need more than a thickness and price comparison",
+        text:
+          "A sample can appear acceptable while later batches create additional adjustment or communication. Before volume supply, procurement and technical teams should confirm the application, roll or sheet format, dimensions, agreed quality characteristics, packing method and batch-control expectations. The objective is not to make one sample look convincing, but to keep later assembly and delivery manageable."
+      },
+      {
+        eyebrow: "06 · Viking Coordination",
+        title: "Match the separator to the current UPS battery project",
+        text:
+          "Hubei Viking manufactures AGM separator rolls and sheets for VRLA lead-acid battery applications. For UPS projects that continue to use VRLA, we can review application information, thickness, width or sheet size, sample requirements, packing and expected supply rhythm. The battery manufacturer remains responsible for final design validation, while our role is to make separator specification and supply communication clearer."
+      }
+    ],
+    parameters: [
+      ["UPS system fit", "Confirm the existing UPS, charging approach and battery design before changing the battery system."],
+      ["Operating capability", "Review monitoring, maintenance procedures, training and the response path for abnormal conditions."],
+      ["Separator specification", "Match thickness, width or sheet size and agreed quality characteristics to the battery design."],
+      ["Compression and fit", "Discuss plate design and assembly conditions that affect separator fit under compression."],
+      ["Batch consistency", "Define the characteristics and acceptable ranges that matter from sample review to volume supply."],
+      ["Supply coordination", "Align product form, packing, quantity, delivery rhythm and technical feedback before batch orders."]
+    ],
+    formats: {
+      eyebrow: "Manufacturing Evidence",
+      title: "Production, inspection and delivery all support stable project coordination",
+      items: [
+        [
+          "AGM separator roll production",
+          "Roll production and finishing need to follow the confirmed product form, dimensions and handling requirements for the battery project.",
+          "/images/cms/agm-separator-ups-application-forms-image-card-1.webp",
+          "AGM separator roll production at Hubei Viking"
+        ],
+        [
+          "Quality inspection",
+          "Inspection provides a practical basis for reviewing agreed separator characteristics before samples or later batches are supplied.",
+          "/images/cms/agm-separator-ups-application-forms-image-card-2.webp",
+          "AGM separator quality inspection at Hubei Viking"
+        ],
+        [
+          "Packing and delivery preparation",
+          "Packing format, labeling and shipment preparation should be confirmed together with the separator specification.",
+          "/images/evidence/shipping-pallet-01.webp",
+          "AGM separator packing and shipment preparation"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "UPS Project Buyer Checklist",
+      title: "Six points to confirm when the project continues with VRLA",
+      text:
+        "Use this checklist to move the discussion from a general product request to a separator specification that can be reviewed against the actual UPS battery project.",
+      items: [
+        "UPS battery application and model",
+        "Target thickness and width or sheet size",
+        "Roll or sheet supply format",
+        "Required quality characteristics and test conditions",
+        "Sample validation and batch-control expectations",
+        "Packing, quantity and delivery rhythm"
+      ]
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with UPS, VRLA and separator quality information",
+      items: [
+        ["AGM Separator for UPS Batteries", "/applications/agm-separator-for-ups-battery/"],
+        ["AGM Separator for VRLA Batteries", "/applications/agm-separator-for-vrla-battery/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["Why AGM Separator Consistency Matters", "/blog/agm-separator-performance-consistency/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Discuss AGM separator matching for your UPS battery project",
+      text:
+        "Share the UPS battery application, current separator specification, roll or sheet format, dimensions and sample requirements. We can continue with specification review and supply discussion.",
+      checklist: [
+        "UPS battery application or model",
+        "Current thickness and dimensions",
+        "Roll or sheet requirement",
+        "Sample, packing and supply expectations"
+      ],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        application: "UPS backup battery, data room, telecom backup...",
+        message:
+          "Current separator specification, roll/sheet format, dimensions, sample quantity, packing and supply requirements"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/why-ups-projects-still-use-vrla-batteries/",
+    brandName: articleCopy.zh.brandName,
+    quote: "申请样品",
+    hero: {
+      eyebrow: "UPS 电池技术选型",
+      title: "UPS 机房都在谈锂电、钠电，为什么很多项目还在继续用 VRLA？",
+      subtitle:
+        "新技术路线值得关注，但真实 UPS 项目仍需评估系统匹配、运维能力、供应连续性和长期运行的可控程度。",
+      primary: "沟通 UPS 隔板需求",
+      secondary: "查看采购确认清单",
+      image: {
+        src: "/images/applications/ups-vrla-battery-application-1200.webp",
+        alt: "用于 UPS VRLA 电池应用的 AGM 隔板卷材",
+        width: 900,
+        height: 675
+      }
+    },
+    intro: [
+      "锂电、钠电及其他新型电池技术正在获得更多 UPS 项目的关注，但这并不意味着所有存量机房、备电改造和既有系统都应立即离开阀控式铅酸电池体系。",
+      "真实项目需要判断的并不只是技术路线是否更新，还包括电池体系与现有 UPS、充电策略、安装空间、运维能力、更换流程和供应计划是否匹配。"
+    ],
+    sections: [
+      {
+        eyebrow: "01 · 成熟体系",
+        title: "为什么 VRLA 在 UPS 项目中仍有现实位置",
+        text:
+          "许多既有 UPS 系统、维护流程和更换方案本来就是围绕 VRLA 电池建立的。对这些项目来说，熟悉的运行方式、已有服务能力和可预期的更换流程仍具有现实价值。这并不代表 VRLA 适合所有项目，而是说明技术成熟度和实施风险需要与能量密度、新技术关注度一起评估。"
+      },
+      {
+        eyebrow: "02 · 系统匹配",
+        title: "切换电池路线影响的不只是电池本身",
+        text:
+          "电池技术路线变化可能同时影响充电逻辑、电池管理、机柜布局、通风、保护设置、维护流程和人员培训。新建项目可以从设计阶段围绕新体系规划；改造项目和存量系统则需要更细致的评估，因为一次电池替换可能带来整套 UPS 系统的连锁调整。"
+      },
+      {
+        eyebrow: "03 · 运行稳定",
+        title: "真正要判断的是整套系统能否长期稳定运行",
+        text:
+          "安全与可靠性是系统层面的结果，不能只用某一种电池材料来简单概括。技术路线、设备匹配、安装质量、监控能力、运行环境和维护条件都会影响长期表现。因此，项目应比较完整的运行要求，而不是默认更新的路线或更成熟的路线一定更好。"
+      },
+      {
+        eyebrow: "04 · AGM 隔板",
+        title: "当 UPS 项目继续使用 VRLA，隔板匹配仍然重要",
+        text:
+          "在 VRLA 电池中，AGM 隔板通过多孔玻璃纤维结构帮助保持电解液、隔离极板并支持离子传导。其厚度、吸液相关表现、受压贴合和批次一致性需要匹配电池设计与装配工艺，因此隔板选型应结合电池制造商已经确认的技术要求进行评估。"
+      },
+      {
+        eyebrow: "05 · 采购确认",
+        title: "UPS 电池采购不能只比较厚度和价格",
+        text:
+          "样品可以达到初步要求，后续批次却可能增加调整和沟通工作。进入批量供应前，采购和技术团队应确认电池应用、卷材或片材形式、尺寸、双方约定的质量特性、包装方式和批次控制要求。目标不是让一次样品看起来合格，而是让后续装配和交付保持可管理。"
+      },
+      {
+        eyebrow: "06 · 维京配套",
+        title: "围绕当前 UPS 电池项目匹配 AGM 隔板",
+        text:
+          "湖北维京面向 VRLA 铅酸电池应用生产 AGM 隔板卷材和片材。对于继续使用 VRLA 的 UPS 项目，我们可以沟通电池应用、厚度、宽度或片材尺寸、样品要求、包装和预期供货节奏。电池制造商负责最终设计验证，维京的工作是让隔板规格和供应沟通更加清晰。"
+      }
+    ],
+    parameters: [
+      ["UPS 系统匹配", "改变电池体系前，确认现有 UPS、充电方式和电池设计是否适配。"],
+      ["运行与运维能力", "评估监控、维护流程、人员培训和异常情况的响应方式。"],
+      ["隔板规格", "将厚度、宽度或片材尺寸及约定质量特性与电池设计对应。"],
+      ["受压与贴合", "沟通极板设计及装配条件对隔板受压贴合的实际要求。"],
+      ["批次一致性", "从样品评审到批量供应，明确真正需要控制的特性和接受范围。"],
+      ["供货协同", "提前对齐产品形式、包装、数量、交付节奏和技术反馈流程。"]
+    ],
+    formats: {
+      eyebrow: "制造与交付证据",
+      title: "生产、检测和交付共同支持稳定的项目协同",
+      items: [
+        [
+          "AGM 隔板卷材生产",
+          "卷材生产和整理需要按照项目确认的产品形式、尺寸及搬运要求执行。",
+          "/images/cms/agm-separator-ups-application-forms-image-card-1.webp",
+          "湖北维京 AGM 隔板卷材生产"
+        ],
+        [
+          "质量检测",
+          "检测为样品及后续批次的约定特性评审提供实际依据。",
+          "/images/cms/agm-separator-ups-application-forms-image-card-2.webp",
+          "湖北维京 AGM 隔板质量检测"
+        ],
+        [
+          "包装与出运准备",
+          "包装形式、标签和出运准备应与隔板规格一并确认。",
+          "/images/evidence/shipping-pallet-01.webp",
+          "AGM 隔板包装与出运准备"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "UPS 项目采购清单",
+      title: "项目继续使用 VRLA 时，建议确认这六点",
+      text:
+        "通过这份清单，把泛泛的产品询问转化为可以结合实际 UPS 电池项目评审的隔板规格。",
+      items: [
+        "UPS 电池应用和型号",
+        "目标厚度及宽度或片材尺寸",
+        "卷材或片材供应形式",
+        "质量特性和测试条件",
+        "样品验证及批次控制要求",
+        "包装、数量和交付节奏"
+      ]
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续查看 UPS、VRLA 与隔板质量信息",
+      items: [
+        ["UPS 电池用 AGM 隔板", "/zh/applications/agm-separator-for-ups-battery/"],
+        ["VRLA 电池用 AGM 隔板", "/zh/applications/agm-separator-for-vrla-battery/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["AGM 隔板一致性为什么重要", "/zh/blog/agm-separator-performance-consistency/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "沟通 UPS 电池项目的 AGM 隔板匹配需求",
+      text:
+        "请提供 UPS 电池应用、现有隔板规格、卷材或片材形式、尺寸和样品要求，我们可以继续进行规格评审与供货沟通。",
+      checklist: [
+        "UPS 电池应用或型号",
+        "现有厚度与尺寸",
+        "卷材或片材需求",
+        "样品、包装和供货要求"
+      ],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        application: "UPS 备电、数据机房、通信备电等",
+        message: "现有隔板规格、卷材或片材形式、尺寸、样品数量、包装和供货要求"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -1623,6 +1905,8 @@ export function BlogArticlePage({
             ? performanceConsistencyCopy[lang]
             : page === "agmSeparatorExportSupplyReadiness"
               ? exportSupplyReadinessCopy[lang]
+              : page === "upsVrlaTechnologySelection"
+                ? upsVrlaTechnologySelectionCopy[lang]
           : articleCopy[lang];
   const sourceNote =
     page === "agmSeparatorExportSupplyReadiness"
@@ -1653,6 +1937,8 @@ export function BlogArticlePage({
             ? ["conductivity", "fit", "consistency", "buyer-questions", "viking-approach"]
             : page === "agmSeparatorExportSupplyReadiness"
               ? ["export-snapshot", "order-pace", "agm-supply", "export-priorities", "viking-supply"]
+              : page === "upsVrlaTechnologySelection"
+                ? ["mature-system", "system-fit", "operational-stability", "separator-role", "procurement-review", "viking-coordination"]
       : ["definition", "function", "parameters"];
   const heroImage =
     "image" in t.hero
@@ -1823,7 +2109,11 @@ export function BlogArticlePage({
           eyebrow={t.formats.eyebrow}
           title={t.formats.title}
         />
-        <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2">
+        <div
+          className={`mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2 ${
+            page === "upsVrlaTechnologySelection" ? "lg:grid-cols-3" : ""
+          }`}
+        >
           {t.formats.items.map(([title, text, src, alt]) => (
             <article
               key={title}
@@ -2040,6 +2330,7 @@ export function BlogArticlePage({
             <p className="mt-5 max-w-md text-sm leading-7 text-steel">
               {t.footer.description}
             </p>
+            <SocialLinks lang={lang} />
             <div className="mt-6 grid max-w-md gap-4 sm:grid-cols-2">
               {[
                 [t.footer.wechat, "/images/qrcode_for_logo.jpg"],

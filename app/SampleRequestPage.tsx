@@ -2,6 +2,7 @@ import Image from "next/image";
 import { InquiryForm } from "./InquiryForm";
 import { SiteHeader } from "./SiteHeader";
 import { sampleRequestFaq } from "./sample-request-copy";
+import { SocialLinks } from "./SocialLinks";
 import type { Lang } from "./VikingHome";
 
 type IconProps = { size?: number; className?: string };
@@ -418,6 +419,7 @@ export function SampleRequestPage({ lang }: { lang: Lang }) {
             <div>
               <p className="font-bold text-ink">Hubei Viking Technology Co., Ltd.</p>
               <p className="mt-1 text-sm text-steel">{t.footer}</p>
+              <SocialLinks lang={lang} />
             </div>
           </div>
           <a

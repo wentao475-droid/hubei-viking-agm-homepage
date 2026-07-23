@@ -14,6 +14,8 @@ const requiredFiles = [
   "zh/applications/agm-separator-for-motorcycle-battery/index.html",
   "applications/agm-separator-for-energy-storage-battery/index.html",
   "zh/applications/agm-separator-for-energy-storage-battery/index.html",
+  "blog/why-ups-projects-still-use-vrla-batteries/index.html",
+  "zh/blog/why-ups-projects-still-use-vrla-batteries/index.html",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -60,6 +62,12 @@ if (process.exitCode) {
 
 const indexHtml = readOutFile("index.html");
 const zhHtml = readOutFile("zh/index.html");
+const upsVrlaArticleHtml = readOutFile(
+  "blog/why-ups-projects-still-use-vrla-batteries/index.html"
+);
+const zhUpsVrlaArticleHtml = readOutFile(
+  "zh/blog/why-ups-projects-still-use-vrla-batteries/index.html"
+);
 const sitemap = readOutFile("sitemap.xml");
 const robots = readOutFile("robots.txt");
 const sitemapUrlBlocks = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(
@@ -68,6 +76,48 @@ const sitemapUrlBlocks = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(
 const sitemapUrls = sitemapUrlBlocks
   .map((block) => block.match(/<loc>(.*?)<\/loc>/)?.[1])
   .filter(Boolean);
+const socialProfileUrls = [
+  "https://www.tiktok.com/@vikingagm",
+  "https://www.linkedin.com/company/viking-agm/"
+];
+
+const pagesMissingSocialLinks = sitemapUrls.filter((url) => {
+  const path = new URL(url).pathname;
+  const file = path === "/" ? "index.html" : join(path.slice(1), "index.html");
+  const html = readOutFile(file);
+
+  return !socialProfileUrls.every((profileUrl) =>
+    html.includes(`href="${profileUrl}"`)
+  );
+});
+
+if (pagesMissingSocialLinks.length === 0) {
+  pass("all public pages include TikTok and LinkedIn footer links");
+} else {
+  fail(
+    `public pages are missing social links: ${pagesMissingSocialLinks.join(", ")}`
+  );
+}
+
+if (
+  socialProfileUrls.every((profileUrl) => indexHtml.includes(profileUrl)) &&
+  indexHtml.includes('target="_blank"') &&
+  indexHtml.includes('rel="noopener noreferrer"')
+) {
+  pass("social links use safe external-link attributes");
+} else {
+  fail("social links are missing URLs or safe external-link attributes");
+}
+
+if (
+  indexHtml.includes(
+    `"sameAs":["${socialProfileUrls[0]}","${socialProfileUrls[1]}"]`
+  )
+) {
+  pass("Organization structured data identifies official social profiles");
+} else {
+  fail("Organization structured data is missing official social profiles");
+}
 
 if (indexHtml.includes("https://www.vikingagm.com")) {
   pass("English homepage keeps www canonical URLs");
@@ -94,6 +144,34 @@ if (zhHtml.includes('<html lang="zh-CN"')) {
 }
 
 if (
+  upsVrlaArticleHtml.includes(
+    "https://www.vikingagm.com/blog/why-ups-projects-still-use-vrla-batteries/"
+  ) &&
+  zhUpsVrlaArticleHtml.includes(
+    "https://www.vikingagm.com/zh/blog/why-ups-projects-still-use-vrla-batteries/"
+  ) &&
+  upsVrlaArticleHtml.includes('"@type":"BlogPosting"') &&
+  upsVrlaArticleHtml.includes('"datePublished":"2026-07-23"') &&
+  zhUpsVrlaArticleHtml.includes('"@type":"BlogPosting"') &&
+  zhUpsVrlaArticleHtml.includes('"datePublished":"2026-07-23"')
+) {
+  pass("UPS VRLA articles include canonical URLs and BlogPosting dates");
+} else {
+  fail("UPS VRLA articles are missing canonical or BlogPosting metadata");
+}
+
+const wechatPlaceholders = ["点赞", "在看", "转发", "滑动", ">图片<"];
+if (
+  wechatPlaceholders.every(
+    (placeholder) => !zhUpsVrlaArticleHtml.includes(placeholder)
+  )
+) {
+  pass("Chinese UPS VRLA article excludes WeChat-only placeholders");
+} else {
+  fail("Chinese UPS VRLA article still contains WeChat-only placeholders");
+}
+
+if (
   sitemap.includes("https://www.vikingagm.com/") &&
   sitemap.includes("https://www.vikingagm.com/zh/")
 ) {
@@ -117,10 +195,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 32) {
+if (sitemapUrls.length === 34) {
   pass("sitemap.xml lists the expected English and Chinese public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 32`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 34`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -153,6 +231,10 @@ const expectedSitemapLastmod = [
   [
     "https://www.vikingagm.com/request-agm-separator-sample/",
     "2026-07-16"
+  ],
+  [
+    "https://www.vikingagm.com/blog/why-ups-projects-still-use-vrla-batteries/",
+    "2026-07-23"
   ]
 ];
 

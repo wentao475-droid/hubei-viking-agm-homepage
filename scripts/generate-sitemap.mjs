@@ -114,6 +114,13 @@ const pages = [
     priority: "0.75",
     changefreq: "monthly",
     lastmod: "2026-07-11"
+  },
+  {
+    en: "/blog/why-ups-projects-still-use-vrla-batteries/",
+    zh: "/zh/blog/why-ups-projects-still-use-vrla-batteries/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-07-23"
   }
 ];
 

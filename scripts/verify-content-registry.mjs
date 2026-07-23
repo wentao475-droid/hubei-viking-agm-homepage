@@ -23,6 +23,10 @@ const articles = [
   [
     "agmSeparatorExportSupplyReadiness",
     "agm-separator-export-supply-readiness"
+  ],
+  [
+    "upsVrlaTechnologySelection",
+    "why-ups-projects-still-use-vrla-batteries"
   ]
 ];
 

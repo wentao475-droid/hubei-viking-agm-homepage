@@ -54,6 +54,12 @@ const resourcesNavItems = {
       description:
         "May export data and practical supply-readiness questions for battery projects.",
       href: "/blog/agm-separator-export-supply-readiness/"
+    },
+    {
+      title: "Why UPS Projects Still Use VRLA",
+      description:
+        "System compatibility, operating requirements and AGM separator selection.",
+      href: "/blog/why-ups-projects-still-use-vrla-batteries/"
     }
   ],
   zh: [
@@ -96,6 +102,11 @@ const resourcesNavItems = {
       title: "出口项目的 AGM 隔板配套",
       description: "从出口数据看批次一致性、供货协同和交付准备。",
       href: "/zh/blog/agm-separator-export-supply-readiness/"
+    },
+    {
+      title: "为什么 UPS 项目仍在使用 VRLA？",
+      description: "从系统匹配、运维条件和 AGM 隔板选型进行判断。",
+      href: "/zh/blog/why-ups-projects-still-use-vrla-batteries/"
     }
   ]
 } as const;

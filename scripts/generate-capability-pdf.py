@@ -56,6 +56,42 @@ def fit_image(path, max_width, max_height):
     return item
 
 
+def image_triptych(paths):
+    main_image = fit_image(paths[0], 78 * mm, 31 * mm)
+    supporting_images = Table(
+        [[
+            fit_image(paths[1], 38 * mm, 23 * mm),
+            fit_image(paths[2], 38 * mm, 23 * mm),
+        ]],
+        colWidths=[39 * mm, 39 * mm],
+        style=TableStyle(
+            [
+                ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                ("LEFTPADDING", (0, 0), (-1, -1), 0),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+                ("TOPPADDING", (0, 0), (-1, -1), 0),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+            ]
+        ),
+    )
+    return Table(
+        [[main_image], [supporting_images]],
+        colWidths=[78 * mm],
+        style=TableStyle(
+            [
+                ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                ("LEFTPADDING", (0, 0), (-1, -1), 0),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+                ("TOPPADDING", (0, 0), (-1, -1), 0),
+                ("BOTTOMPADDING", (0, 0), (-1, 0), 2 * mm),
+                ("BOTTOMPADDING", (0, 1), (-1, 1), 0),
+            ]
+        ),
+    )
+
+
 def header_footer(canvas, doc):
     canvas.saveState()
     page = canvas.getPageNumber()
@@ -113,6 +149,14 @@ def build_styles():
             leading=21,
             textColor=INK,
             spaceAfter=3 * mm,
+        ),
+        "contact_heading": ParagraphStyle(
+            "contact_heading",
+            parent=styles["Heading2"],
+            fontName="VikingSans",
+            fontSize=16,
+            leading=21,
+            textColor=WHITE,
         ),
         "body": ParagraphStyle(
             "body",
@@ -252,7 +296,7 @@ def build_pdf():
             Spacer(1, 8 * mm),
             fit_image("public/images/banner-logo-header.webp", 115 * mm, 32 * mm),
             Spacer(1, 8 * mm),
-            fit_image("public/images/agm-hero-production-1600.webp", 174 * mm, 82 * mm),
+            fit_image("public/images/capability/factory-overview.jpg", 174 * mm, 82 * mm),
             Spacer(1, 11 * mm),
             Paragraph("AGM Separator Technical Capability", styles["cover_title"]),
             Paragraph("AGM 隔板技术能力概览", styles["cover_title"]),
@@ -284,7 +328,7 @@ def build_pdf():
         section_header(
             styles,
             "01 / Product Forms",
-            "AGM separator rolls and sheets / AGM 隔板卷材与片材",
+            "AGM separator sheets and rolls / AGM 隔板片材与卷材",
             "Product form should match the battery design and production workflow. "
             "产品形式应结合电池设计与生产流程共同确认。",
         )
@@ -293,24 +337,36 @@ def build_pdf():
         [
             [
                 [
-                    fit_image("public/images/viking-finished-separator-roll-900.webp", 78 * mm, 50 * mm),
-                    Spacer(1, 3 * mm),
-                    Paragraph("AGM Separator Rolls / AGM 隔板卷材", styles["heading"]),
-                    Paragraph(
-                        "For continuous production, converting or in-house cutting. "
-                        "Width, thickness, roll length, core and packing can be discussed.<br/>"
-                        "适用于连续生产、分切或厂内裁切，可沟通宽度、厚度、卷长、芯管与包装。",
-                        styles["body"],
+                    image_triptych(
+                        [
+                            "public/images/capability/agm-sheets-cutting.jpg",
+                            "public/images/capability/agm-sheets-packed.jpg",
+                            "public/images/capability/agm-sheets-stacked.jpg",
+                        ]
                     ),
-                ],
-                [
-                    fit_image("public/images/viking-separator-sheets-900.webp", 78 * mm, 50 * mm),
                     Spacer(1, 3 * mm),
                     Paragraph("AGM Separator Sheets / AGM 隔板片材", styles["heading"]),
                     Paragraph(
                         "Pre-cut format for direct assembly, sample review and battery-model discussion. "
                         "Sheet height, width, thickness and packing quantity should be confirmed.<br/>"
                         "预裁切形式适用于直接装配、样品评审和电池型号沟通，应确认片材长宽、厚度与包装数量。",
+                        styles["body"],
+                    ),
+                ],
+                [
+                    image_triptych(
+                        [
+                            "public/images/capability/agm-roll-winding.jpg",
+                            "public/images/capability/agm-roll-finished.jpg",
+                            "public/images/capability/agm-roll-production.jpg",
+                        ]
+                    ),
+                    Spacer(1, 3 * mm),
+                    Paragraph("AGM Separator Rolls / AGM 隔板卷材", styles["heading"]),
+                    Paragraph(
+                        "For continuous production, converting or in-house cutting. "
+                        "Width, thickness, roll length, core and packing can be discussed.<br/>"
+                        "适用于连续生产、分切或厂内裁切，可沟通宽度、厚度、卷长、芯管与包装。",
                         styles["body"],
                     ),
                 ],
@@ -369,7 +425,7 @@ def build_pdf():
     )
     story.extend(
         [
-            fit_image("public/images/evidence/agm-separator-roll-end-face-01.webp", 174 * mm, 68 * mm),
+            fit_image("public/images/capability/agm-roll-production.jpg", 174 * mm, 68 * mm),
             Spacer(1, 7 * mm),
             bullet_cards(
                 styles,
@@ -397,7 +453,7 @@ def build_pdf():
     )
     story.extend(
         [
-            fit_image("public/images/agm-quality-control-1200.webp", 174 * mm, 76 * mm),
+            fit_image("public/images/capability/production-line.jpg", 174 * mm, 76 * mm),
             Spacer(1, 7 * mm),
             bullet_cards(
                 styles,
@@ -426,12 +482,12 @@ def build_pdf():
     delivery_table = Table(
         [
             [
-                fit_image("public/images/evidence/agm-separator-roll-warehouse-01.webp", 82 * mm, 62 * mm),
-                fit_image("public/images/evidence/shipping-pallet-01.webp", 82 * mm, 62 * mm),
+                fit_image("public/images/capability/factory-overview.jpg", 82 * mm, 62 * mm),
+                fit_image("public/images/capability/finished-goods.jpg", 82 * mm, 62 * mm),
             ],
             [
-                Paragraph("Roll storage and batch preparation / 卷材仓储与批次准备", styles["small"]),
-                Paragraph("Pallet packing and delivery preparation / 托盘包装与交付准备", styles["small"]),
+                Paragraph("Production and batch preparation / 生产与批次准备", styles["small"]),
+                Paragraph("Finished goods and delivery preparation / 成品与交付准备", styles["small"]),
             ],
         ],
         colWidths=[85 * mm, 85 * mm],
@@ -512,7 +568,7 @@ def build_pdf():
             Spacer(1, 4 * mm),
             Table(
                 [
-                    [Paragraph("Hubei Viking Technology Co., Ltd.<br/>湖北维京科技有限公司", styles["heading"])],
+                    [Paragraph("Hubei Viking Technology Co., Ltd.<br/>湖北维京科技有限公司", styles["contact_heading"])],
                     [Paragraph("<b>Email</b>  vikingsales@vikingagm.com", styles["body"])],
                     [Paragraph("<b>Telephone</b>  +86 18171518528", styles["body"])],
                     [Paragraph("<b>Website</b>  https://www.vikingagm.com", styles["body"])],

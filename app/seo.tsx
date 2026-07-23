@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { seoContent } from "./cms-content";
 import { productFaqCopy } from "./seo-faq";
 import { sampleRequestFaq } from "./sample-request-copy";
+import { socialProfileUrls } from "./SocialLinks";
 import type { Lang } from "./VikingHome";
 
 export const SITE_URL = "https://www.vikingagm.com";
@@ -763,6 +764,51 @@ const agmSeparatorExportSupplyReadinessSeo = {
   }
 } as const;
 
+const upsVrlaTechnologySelectionSeo = {
+  en: {
+    path: "/blog/why-ups-projects-still-use-vrla-batteries/",
+    alternatePath: "/zh/blog/why-ups-projects-still-use-vrla-batteries/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "Why Many UPS Projects Still Use VRLA Batteries | Viking AGM",
+    description:
+      "A practical UPS battery selection guide covering VRLA system compatibility, operating requirements and AGM separator specification matching.",
+    keywords: [
+      "UPS VRLA battery selection",
+      "AGM separator for UPS battery",
+      "UPS backup battery",
+      "VRLA battery system compatibility",
+      "AGM separator supplier"
+    ],
+    pageName: "Why Many UPS Projects Still Use VRLA Batteries",
+    articleDescription:
+      "A technology-neutral guide for UPS battery project teams reviewing VRLA system compatibility, operating requirements and AGM separator specification matching.",
+    breadcrumbs: ["Home", "Resources", "UPS VRLA Battery Selection"]
+  },
+  zh: {
+    path: "/zh/blog/why-ups-projects-still-use-vrla-batteries/",
+    alternatePath: "/blog/why-ups-projects-still-use-vrla-batteries/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "UPS 机房为什么仍在使用 VRLA 铅酸电池？| 湖北维京AGM",
+    description:
+      "从系统匹配、运维能力和长期稳定性，了解部分 UPS 项目继续使用 VRLA 电池时为何仍需重视 AGM 隔板规格与批次一致性。",
+    keywords: [
+      "UPS VRLA 电池选型",
+      "UPS 电池 AGM 隔板",
+      "UPS 备用电源电池",
+      "VRLA 电池系统匹配",
+      "AGM 隔板供应商"
+    ],
+    pageName: "UPS 机房为什么仍在使用 VRLA 铅酸电池？",
+    articleDescription:
+      "面向 UPS 电池项目采购和技术团队，从系统匹配、运维条件与长期稳定性说明 VRLA 技术路线及 AGM 隔板规格确认要点。",
+    breadcrumbs: ["首页", "资料", "UPS VRLA 电池选型"]
+  }
+} as const;
+
 export function buildHomeMetadata(lang: Lang): Metadata {
   const current = seoContent("home", lang, homeSeo[lang]);
 
@@ -1118,6 +1164,33 @@ export function buildAgmSeparatorExportSupplyReadinessMetadata(
       url: QUALITY_PREVIEW_IMAGE,
       width: 1200,
       height: 900
+    }
+  });
+}
+
+export function buildUpsVrlaTechnologySelectionMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "upsVrlaTechnologySelection",
+    lang,
+    upsVrlaTechnologySelectionSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/why-ups-projects-still-use-vrla-batteries/",
+    zhPath: "/zh/blog/why-ups-projects-still-use-vrla-batteries/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: UPS_APPLICATION_IMAGE,
+      width: 900,
+      height: 675
     }
   });
 }
@@ -2194,6 +2267,79 @@ export function AgmSeparatorExportSupplyReadinessStructuredData({
   return <JsonLd data={data} />;
 }
 
+export function UpsVrlaTechnologySelectionStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "upsVrlaTechnologySelection",
+    lang,
+    upsVrlaTechnologySelectionSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: UPS_APPLICATION_IMAGE,
+          width: 900,
+          height: 675
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: UPS_APPLICATION_IMAGE,
+        url,
+        datePublished: "2026-07-23",
+        dateModified: "2026-07-23",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "UPS battery technology selection",
+          "VRLA lead-acid batteries",
+          "AGM separator for UPS batteries",
+          "AGM separator specification matching"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
 function organizationData(lang: Lang, description: string) {
   return {
     "@type": "Organization",
@@ -2206,6 +2352,7 @@ function organizationData(lang: Lang, description: string) {
         : ["Hubei Viking Technology Co., Ltd.", "Hubei Viking AGM", "湖北维京AGM"],
     url: SITE_URL,
     logo: `${SITE_URL}/images/banner-logo-header.webp`,
+    sameAs: [socialProfileUrls.tiktok, socialProfileUrls.linkedin],
     email: "vikingsales@vikingagm.com",
     telephone: "+86 18171518528",
     contactPoint: {
