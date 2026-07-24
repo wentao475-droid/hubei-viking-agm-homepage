@@ -25,6 +25,13 @@ const pages = [
     lastmod: "2026-07-16"
   },
   {
+    en: "/resources/",
+    zh: "/zh/resources/",
+    priority: "0.8",
+    changefreq: "weekly",
+    lastmod: "2026-07-24"
+  },
+  {
     en: "/products/agm-separator-rolls/",
     zh: "/zh/products/agm-separator-rolls/",
     priority: "0.9",

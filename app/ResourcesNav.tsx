@@ -1,119 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Lang } from "./VikingHome";
+import {
+  getArticlesByCategory,
+  getResourceCategoryPath,
+  getResourcesPath,
+  localizeHref,
+  localizeText,
+  resourceActions,
+  resourceCategoryCopy,
+  resourceCategoryOrder
+} from "./resourceCatalog";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-const resourcesNavItems = {
-  en: [
-    {
-      title: "Request a Sample",
-      description:
-        "Share your battery application, dimensions and roll or sheet requirements.",
-      href: "/request-agm-separator-sample/"
-    },
-    {
-      title: "Technical Capability PDF",
-      description:
-        "Download a bilingual overview of product forms, quality checks and packing.",
-      href: "/downloads/viking-agm-technical-capability.pdf"
-    },
-    {
-      title: "What Is AGM Separator?",
-      description:
-        "A practical buyer guide for VRLA lead-acid battery applications.",
-      href: "/blog/what-is-agm-separator/"
-    },
-    {
-      title: "Key Technical Parameters",
-      description:
-        "Thickness, basis weight, acid absorption, resistance, porosity and strength.",
-      href: "/blog/key-technical-parameters-of-agm-separator/"
-    },
-    {
-      title: "How to Choose AGM Separator",
-      description:
-        "A practical buyer checklist for comparing separator requirements.",
-      href: "/blog/how-to-choose-agm-separator/"
-    },
-    {
-      title: "AGM Separator Manufacturing",
-      description:
-        "Production, quality control and reliable delivery at Hubei Viking.",
-      href: "/blog/agm-separator-manufacturing-quality-delivery/"
-    },
-    {
-      title: "Why AGM Separator Consistency Matters",
-      description:
-        "Conductivity support, compression fit and batch consistency for VRLA projects.",
-      href: "/blog/agm-separator-performance-consistency/"
-    },
-    {
-      title: "AGM Separator Supply for Export Projects",
-      description:
-        "May export data and practical supply-readiness questions for battery projects.",
-      href: "/blog/agm-separator-export-supply-readiness/"
-    },
-    {
-      title: "Why UPS Projects Still Use VRLA",
-      description:
-        "System compatibility, operating requirements and AGM separator selection.",
-      href: "/blog/why-ups-projects-still-use-vrla-batteries/"
-    }
-  ],
-  zh: [
-    {
-      title: "申请样品与规格匹配",
-      description: "提供电池应用、尺寸及卷材或片材需求，开始规格评审。",
-      href: "/zh/request-agm-separator-sample/"
-    },
-    {
-      title: "技术能力 PDF",
-      description: "下载包含产品形式、质量检查和包装说明的中英文资料。",
-      href: "/downloads/viking-agm-technical-capability.pdf"
-    },
-    {
-      title: "什么是 AGM 隔板？",
-      description: "面向 VRLA 铅酸电池买家的实用入门说明。",
-      href: "/zh/blog/what-is-agm-separator/"
-    },
-    {
-      title: "AGM 隔板技术参数",
-      description: "厚度、克重、吸酸性能、电阻、孔隙率和强度说明。",
-      href: "/zh/blog/key-technical-parameters-of-agm-separator/"
-    },
-    {
-      title: "如何选择 AGM 隔板",
-      description: "面向买家的隔板需求沟通和供应商比较清单。",
-      href: "/zh/blog/how-to-choose-agm-separator/"
-    },
-    {
-      title: "AGM 隔板生产与交付",
-      description: "湖北维京的生产、检测与稳定交付说明。",
-      href: "/zh/blog/agm-separator-manufacturing-quality-delivery/"
-    },
-    {
-      title: "AGM 隔板为什么影响电池稳定性？",
-      description: "从导通相关表现、受压贴合和批次一致性进行判断。",
-      href: "/zh/blog/agm-separator-performance-consistency/"
-    },
-    {
-      title: "出口项目的 AGM 隔板配套",
-      description: "从出口数据看批次一致性、供货协同和交付准备。",
-      href: "/zh/blog/agm-separator-export-supply-readiness/"
-    },
-    {
-      title: "为什么 UPS 项目仍在使用 VRLA？",
-      description: "从系统匹配、运维条件和 AGM 隔板选型进行判断。",
-      href: "/zh/blog/why-ups-projects-still-use-vrla-batteries/"
-    }
-  ]
-} as const;
-
-const resourcesNavEyebrow = {
-  en: "Resource",
-  zh: "资料"
+const resourcesNavCopy = {
+  en: {
+    start: "Start here",
+    browse: "Browse by topic",
+    viewAll: "View all resources",
+    viewAllDescription: "Explore all buyer guides, manufacturing notes and industry articles."
+  },
+  zh: {
+    start: "采购入口",
+    browse: "按主题浏览",
+    viewAll: "查看全部资料",
+    viewAllDescription: "集中查看采购指南、生产质量说明和行业应用文章。"
+  }
 } as const;
 
 function asset(path: string) {
@@ -128,12 +42,34 @@ export function ResourcesNavDropdown({
   label: string;
 }) {
   const [open, setOpen] = useState(false);
-  const items = resourcesNavItems[lang];
+  const containerRef = useRef<HTMLDivElement>(null);
+  const t = resourcesNavCopy[lang];
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const closeOnOutsideClick = (event: PointerEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", closeOnOutsideClick);
+    return () => document.removeEventListener("pointerdown", closeOnOutsideClick);
+  }, [open]);
 
   return (
     <div
-      className="group relative"
+      ref={containerRef}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
+      onFocus={() => setOpen(true)}
       onKeyDown={(event) => {
         if (event.key === "Escape") {
           setOpen(false);
@@ -144,45 +80,109 @@ export function ResourcesNavDropdown({
         type="button"
         aria-haspopup="true"
         aria-expanded={open}
-        onClick={() => setOpen((current) => !current)}
-        className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-medium text-graphite transition hover:text-signal focus:outline-none focus:text-signal"
+        aria-controls="resources-navigation-panel"
+        onClick={() => setOpen(true)}
+        className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-medium text-graphite transition hover:text-signal focus:text-signal focus:outline-none"
       >
         {label}
         <span
           aria-hidden="true"
           className={`text-xs transition ${
             open ? "rotate-180 text-signal" : "text-steel"
-          } group-hover:rotate-180 group-hover:text-signal group-focus-within:rotate-180 group-focus-within:text-signal`}
+          }`}
         >
           ▲
         </span>
       </button>
+
       <div
-        className={`absolute left-1/2 top-full z-50 w-80 max-w-[calc(100vw-2rem)] -translate-x-1/2 pt-4 transition ${
+        id="resources-navigation-panel"
+        className={`absolute left-1/2 top-full z-50 w-[min(820px,calc(100vw-2rem))] -translate-x-1/2 pt-4 transition ${
           open
             ? "visible translate-y-0 opacity-100"
             : "invisible -translate-y-1 opacity-0"
-        } group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100`}
+        }`}
       >
-        <div className="grid gap-2 rounded-md border border-line bg-white p-2 shadow-industrial">
-          {items.map((item) => (
-            <a
-              key={item.href}
-              href={asset(item.href)}
-              onClick={() => setOpen(false)}
-              className="block rounded-md border border-transparent p-4 transition hover:border-signal/20 hover:bg-frost focus:border-signal/30 focus:bg-frost focus:outline-none"
-            >
-              <span className="text-xs font-bold uppercase tracking-[0.16em] text-signal">
-                {resourcesNavEyebrow[lang]}
-              </span>
-              <span className="mt-2 block text-sm font-bold leading-6 text-ink">
-                {item.title}
-              </span>
-              <span className="mt-1 block text-xs leading-5 text-steel">
-                {item.description}
-              </span>
-            </a>
-          ))}
+        <div className="max-h-[calc(100vh-6.5rem)] overflow-y-auto rounded-md border border-line bg-white p-3 shadow-industrial">
+          <div className="grid gap-3 lg:grid-cols-[250px_1fr]">
+            <section className="rounded-md bg-ink p-4 text-white">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-sky-200">
+                {t.start}
+              </p>
+              <div className="mt-3 divide-y divide-white/12">
+                {resourceActions.map((item) => (
+                  <a
+                    key={item.id}
+                    href={asset(localizeHref(item.href, lang))}
+                    onClick={() => setOpen(false)}
+                    className="group/action block py-3 first:pt-1 last:pb-1 focus:outline-none"
+                  >
+                    <span className="flex items-center justify-between gap-3 text-sm font-bold leading-6 text-white transition group-hover/action:text-sky-200 group-focus/action:text-sky-200">
+                      {localizeText(item.title, lang)}
+                      <span aria-hidden="true" className="shrink-0">
+                        →
+                      </span>
+                    </span>
+                    <span className="mt-1 block text-xs leading-5 text-white/62">
+                      {localizeText(item.description, lang)}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </section>
+
+            <section className="p-2">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-signal">
+                {t.browse}
+              </p>
+              <div className="mt-4 grid gap-5 sm:grid-cols-3">
+                {resourceCategoryOrder.map((category) => (
+                  <div key={category}>
+                    <a
+                      href={asset(getResourceCategoryPath(category, lang))}
+                      onClick={() => setOpen(false)}
+                      className="text-sm font-bold text-ink transition hover:text-signal focus:text-signal focus:outline-none"
+                    >
+                      {localizeText(resourceCategoryCopy[category].title, lang)}
+                    </a>
+                    <div className="mt-2 grid gap-1">
+                      {getArticlesByCategory(category).map((article) => (
+                        <a
+                          key={article.id}
+                          href={asset(localizeHref(article.href, lang))}
+                          onClick={() => setOpen(false)}
+                          className="rounded-md px-2 py-2 text-xs font-semibold leading-5 text-graphite transition hover:bg-frost hover:text-signal focus:bg-frost focus:text-signal focus:outline-none"
+                        >
+                          {localizeText(article.title, lang)}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href={asset(getResourcesPath(lang))}
+                onClick={() => setOpen(false)}
+                className="mt-4 flex items-center justify-between gap-4 border-t border-line px-2 pt-4 focus:outline-none"
+              >
+                <span>
+                  <span className="block text-sm font-bold text-ink transition hover:text-signal">
+                    {t.viewAll}
+                  </span>
+                  <span className="mt-1 block text-xs leading-5 text-steel">
+                    {t.viewAllDescription}
+                  </span>
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-frost text-signal"
+                >
+                  →
+                </span>
+              </a>
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -198,26 +198,58 @@ export function ResourcesNavMobileGroup({
   label: string;
   onNavigate?: () => void;
 }) {
+  const t = resourcesNavCopy[lang];
+
   return (
     <div className="rounded-md border border-line bg-frost p-2">
       <div className="px-2 py-1 text-xs font-bold uppercase tracking-[0.16em] text-steel">
         {label}
       </div>
-      <div className="mt-1 grid gap-2">
-        {resourcesNavItems[lang].map((item) => (
+      <div className="mt-1 grid gap-1">
+        {resourceActions.map((item, index) => (
           <a
-            key={item.href}
-            href={asset(item.href)}
+            key={item.id}
+            href={asset(localizeHref(item.href, lang))}
             onClick={onNavigate}
-            className="block rounded-md bg-white px-3 py-3 text-sm font-semibold text-ink shadow-sm transition hover:text-signal"
+            className={`flex items-center justify-between gap-3 rounded-md px-3 py-3 text-sm font-semibold transition ${
+              index === 0
+                ? "bg-signal text-white"
+                : "bg-white text-ink hover:text-signal"
+            }`}
           >
-            <span className="block">{item.title}</span>
-            <span className="mt-1 block text-xs font-normal leading-5 text-steel">
-              {item.description}
-            </span>
+            {localizeText(item.title, lang)}
+            <span aria-hidden="true">→</span>
           </a>
         ))}
       </div>
+
+      <div className="mt-3 border-t border-line px-1 pt-3">
+        <p className="px-2 text-[11px] font-bold uppercase tracking-[0.14em] text-steel">
+          {t.browse}
+        </p>
+        <div className="mt-1 grid">
+          {resourceCategoryOrder.map((category) => (
+            <a
+              key={category}
+              href={asset(getResourceCategoryPath(category, lang))}
+              onClick={onNavigate}
+              className="flex items-center justify-between gap-3 rounded-md px-2 py-2.5 text-sm font-semibold text-graphite transition hover:bg-white hover:text-signal"
+            >
+              {localizeText(resourceCategoryCopy[category].title, lang)}
+              <span aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <a
+        href={asset(getResourcesPath(lang))}
+        onClick={onNavigate}
+        className="mt-2 flex items-center justify-between gap-3 rounded-md border border-line bg-white px-3 py-3 text-sm font-bold text-signal"
+      >
+        {t.viewAll}
+        <span aria-hidden="true">→</span>
+      </a>
     </div>
   );
 }

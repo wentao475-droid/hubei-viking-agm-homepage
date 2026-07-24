@@ -10,6 +10,10 @@ const sitemapSource = readFileSync(
   join(root, "scripts/generate-sitemap.mjs"),
   "utf8"
 );
+const resourceCatalogSource = readFileSync(
+  join(root, "app/resourceCatalog.ts"),
+  "utf8"
+);
 
 const articles = [
   ["whatIsAgmSeparator", "what-is-agm-separator"],
@@ -50,7 +54,23 @@ for (const [key, slug] of articles) {
       sitemapSource.includes(`/zh/blog/${slug}/`),
     `${key} is registered in the sitemap`
   );
+  check(
+    resourceCatalogSource.includes(`/blog/${slug}/`) &&
+      resourceCatalogSource.includes(`/zh/blog/${slug}/`),
+    `${key} is registered in the resource catalog`
+  );
 }
+
+check(
+  existsSync(join(root, "app/resources/page.tsx")) &&
+    existsSync(join(root, "app/zh/resources/page.tsx")),
+  "resource hub has both route files"
+);
+check(
+  sitemapSource.includes('en: "/resources/"') &&
+    sitemapSource.includes('zh: "/zh/resources/"'),
+  "resource hub is registered in the sitemap"
+);
 
 if (failed) {
   process.exit(1);

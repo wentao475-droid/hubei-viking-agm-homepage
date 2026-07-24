@@ -3,6 +3,12 @@ import { seoContent } from "./cms-content";
 import { productFaqCopy } from "./seo-faq";
 import { sampleRequestFaq } from "./sample-request-copy";
 import { socialProfileUrls } from "./SocialLinks";
+import {
+  getResourcesPath,
+  localizeHref,
+  localizeText,
+  resourceArticles
+} from "./resourceCatalog";
 import type { Lang } from "./VikingHome";
 
 export const SITE_URL = "https://www.vikingagm.com";
@@ -57,6 +63,45 @@ const homeSeo = {
     serviceName: "AGM 玻璃纤维隔板制造",
     serviceDescription:
       "面向铅酸电池生产企业提供 AGM 隔板卷材和片材，支持过程控制、质量检测和定制规格沟通。"
+  }
+} as const;
+
+const resourcesHubSeo = {
+  en: {
+    path: "/resources/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator Buyer Guides & Technical Resources | Viking AGM",
+    description:
+      "Browse AGM separator buyer guides, technical parameters, manufacturing notes and VRLA battery application articles from Hubei Viking.",
+    keywords: [
+      "AGM separator resources",
+      "AGM separator buyer guide",
+      "AGM separator technical parameters",
+      "VRLA battery separator guide",
+      "AGM separator manufacturing"
+    ],
+    pageName: "AGM Separator Resource Center",
+    breadcrumbs: ["Home", "Resources"]
+  },
+  zh: {
+    path: "/zh/resources/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板采购指南与技术资料中心 | 湖北维京AGM",
+    description:
+      "集中查看 AGM 隔板采购指南、技术参数、生产质量说明和 VRLA 铅酸电池应用文章。",
+    keywords: [
+      "AGM 隔板资料",
+      "AGM 隔板采购指南",
+      "AGM 隔板技术参数",
+      "VRLA 电池隔板",
+      "AGM 隔板生产"
+    ],
+    pageName: "AGM 隔板资料中心",
+    breadcrumbs: ["首页", "资料中心"]
   }
 } as const;
 
@@ -822,6 +867,27 @@ export function buildHomeMetadata(lang: Lang): Metadata {
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.serviceName
+  });
+}
+
+export function buildResourcesHubMetadata(lang: Lang): Metadata {
+  const current = resourcesHubSeo[lang];
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/resources/",
+    zhPath: "/zh/resources/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
+      width: 1600,
+      height: 1000
+    }
   });
 }
 
@@ -1878,7 +1944,7 @@ export function WhatIsAgmSeparatorStructuredData({ lang }: { lang: Lang }) {
             index === 0
               ? `${SITE_URL}${homePath}`
               : index === 1
-                ? `${SITE_URL}${homePath}`
+                ? `${SITE_URL}${getResourcesPath(lang)}`
                 : url
         }))
       }
@@ -1957,7 +2023,7 @@ export function KeyTechnicalParametersStructuredData({
             index === 0
               ? `${SITE_URL}${homePath}`
               : index === 1
-                ? `${SITE_URL}${homePath}`
+                ? `${SITE_URL}${getResourcesPath(lang)}`
                 : url
         }))
       }
@@ -2036,7 +2102,7 @@ export function HowToChooseAgmSeparatorStructuredData({
             index === 0
               ? `${SITE_URL}${homePath}`
               : index === 1
-                ? `${SITE_URL}${homePath}`
+                ? `${SITE_URL}${getResourcesPath(lang)}`
                 : url
         }))
       }
@@ -2116,7 +2182,7 @@ export function AgmSeparatorManufacturingQualityDeliveryStructuredData({
             index === 0
               ? `${SITE_URL}${homePath}`
               : index === 1
-                ? `${SITE_URL}${homePath}`
+                ? `${SITE_URL}${getResourcesPath(lang)}`
                 : url
         }))
       }
@@ -2186,7 +2252,7 @@ export function AgmSeparatorPerformanceConsistencyStructuredData({
             index === 0
               ? `${SITE_URL}${homePath}`
               : index === 1
-                ? `${SITE_URL}${homePath}`
+                ? `${SITE_URL}${getResourcesPath(lang)}`
                 : url
         }))
       }
@@ -2257,7 +2323,7 @@ export function AgmSeparatorExportSupplyReadinessStructuredData({
             index === 0
               ? `${SITE_URL}${homePath}`
               : index === 1
-                ? `${SITE_URL}${homePath}`
+                ? `${SITE_URL}${getResourcesPath(lang)}`
                 : url
         }))
       }
@@ -2330,8 +2396,60 @@ export function UpsVrlaTechnologySelectionStructuredData({
             index === 0
               ? `${SITE_URL}${homePath}`
               : index === 1
-                ? `${SITE_URL}${homePath}`
+                ? `${SITE_URL}${getResourcesPath(lang)}`
                 : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function ResourcesHubStructuredData({ lang }: { lang: Lang }) {
+  const current = resourcesHubSeo[lang];
+  const url = `${SITE_URL}${current.path}`;
+
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.pageName,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        mainEntity: {
+          "@id": `${url}#resources`
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#resources`,
+        name: current.pageName,
+        numberOfItems: resourceArticles.length,
+        itemListElement: resourceArticles.map((article, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${SITE_URL}${localizeHref(article.href, lang)}`,
+          name: localizeText(article.title, lang)
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${lang === "zh" ? "/zh/" : "/"}`
+              : url
         }))
       }
     ]

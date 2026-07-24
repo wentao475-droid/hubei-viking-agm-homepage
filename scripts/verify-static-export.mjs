@@ -6,6 +6,8 @@ const outDir = join(root, "out");
 const requiredFiles = [
   "index.html",
   "zh/index.html",
+  "resources/index.html",
+  "zh/resources/index.html",
   "request-agm-separator-sample/index.html",
   "zh/request-agm-separator-sample/index.html",
   "applications/agm-separator-for-ups-battery/index.html",
@@ -62,6 +64,8 @@ if (process.exitCode) {
 
 const indexHtml = readOutFile("index.html");
 const zhHtml = readOutFile("zh/index.html");
+const resourcesHtml = readOutFile("resources/index.html");
+const zhResourcesHtml = readOutFile("zh/resources/index.html");
 const upsVrlaArticleHtml = readOutFile(
   "blog/why-ups-projects-still-use-vrla-batteries/index.html"
 );
@@ -117,6 +121,39 @@ if (
   pass("Organization structured data identifies official social profiles");
 } else {
   fail("Organization structured data is missing official social profiles");
+}
+
+const resourceArticlePaths = [
+  "/blog/what-is-agm-separator/",
+  "/blog/key-technical-parameters-of-agm-separator/",
+  "/blog/how-to-choose-agm-separator/",
+  "/blog/agm-separator-manufacturing-quality-delivery/",
+  "/blog/agm-separator-performance-consistency/",
+  "/blog/agm-separator-export-supply-readiness/",
+  "/blog/why-ups-projects-still-use-vrla-batteries/"
+];
+
+if (
+  resourceArticlePaths.every(
+    (path) =>
+      resourcesHtml.includes(`href="${path}"`) &&
+      zhResourcesHtml.includes(`href="/zh${path}"`)
+  )
+) {
+  pass("resource hubs list all English and Chinese articles");
+} else {
+  fail("resource hubs are missing one or more registered articles");
+}
+
+if (
+  resourcesHtml.includes('"@type":"CollectionPage"') &&
+  resourcesHtml.includes('"@type":"ItemList"') &&
+  zhResourcesHtml.includes('"@type":"CollectionPage"') &&
+  zhResourcesHtml.includes('"@type":"ItemList"')
+) {
+  pass("resource hubs include collection structured data");
+} else {
+  fail("resource hubs are missing collection structured data");
 }
 
 if (indexHtml.includes("https://www.vikingagm.com")) {
@@ -195,10 +232,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 34) {
+if (sitemapUrls.length === 36) {
   pass("sitemap.xml lists the expected English and Chinese public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 34`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 36`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -235,6 +272,10 @@ const expectedSitemapLastmod = [
   [
     "https://www.vikingagm.com/blog/why-ups-projects-still-use-vrla-batteries/",
     "2026-07-23"
+  ],
+  [
+    "https://www.vikingagm.com/resources/",
+    "2026-07-24"
   ]
 ];
 

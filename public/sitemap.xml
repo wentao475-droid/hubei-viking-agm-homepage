@@ -56,6 +56,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/request-agm-separator-sample/" />
   </url>
   <url>
+    <loc>https://www.vikingagm.com/resources/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/resources/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/resources/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/resources/" />
+  </url>
+  <url>
+    <loc>https://www.vikingagm.com/zh/resources/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/resources/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/resources/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/resources/" />
+  </url>
+  <url>
     <loc>https://www.vikingagm.com/products/agm-separator-rolls/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
