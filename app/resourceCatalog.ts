@@ -163,6 +163,23 @@ export const resourceArticles: ResourceArticle[] = [
     }
   },
   {
+    id: "agm-glass-fiber-vs-pvc-separator",
+    category: "buyerGuides",
+    publishedAt: "2026-07-26",
+    title: {
+      en: "AGM Glass Fiber vs PVC Separators",
+      zh: "AGM 玻璃纤维隔板与 PVC 隔板"
+    },
+    description: {
+      en: "Compare battery systems, electrolyte conditions, assembly requirements and replacement boundaries.",
+      zh: "对比电池体系、电解液状态、装配要求和材料替换边界。"
+    },
+    href: {
+      en: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+      zh: "/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+    }
+  },
+  {
     id: "manufacturing-quality-delivery",
     category: "manufacturingQuality",
     publishedAt: "2026-07-07",

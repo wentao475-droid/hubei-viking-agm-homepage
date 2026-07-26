@@ -16,7 +16,8 @@ type BlogArticleKind =
   | "agmSeparatorManufacturingQualityDelivery"
   | "agmSeparatorPerformanceConsistency"
   | "agmSeparatorExportSupplyReadiness"
-  | "upsVrlaTechnologySelection";
+  | "upsVrlaTechnologySelection"
+  | "agmGlassFiberVsPvcSeparator";
 type IconName =
   | "arrow"
   | "check"
@@ -1866,6 +1867,399 @@ const upsVrlaTechnologySelectionCopy = {
   }
 } as const;
 
+const agmGlassFiberVsPvcSeparatorCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request a Sample",
+    hero: {
+      eyebrow: "Battery Separator Selection",
+      title: "AGM Glass Fiber vs PVC Battery Separators",
+      subtitle:
+        "Both separate positive and negative plates, but they support different electrolyte-management, battery-design and assembly requirements.",
+      primary: "Discuss Your Battery Design",
+      secondary: "Compare the Two Separator Types",
+      image: {
+        src: "/images/evidence/agm-separator-roll-end-face-01.webp",
+        alt: "AGM glass fiber separator roll manufactured by Hubei Viking",
+        width: 900,
+        height: 675
+      }
+    },
+    intro: [
+      "Asking whether AGM or PVC is the better battery separator starts with the wrong comparison. The material route needs to match the battery structure, electrolyte condition and assembly design.",
+      "In this article, PVC battery separator means a microporous PVC or PVC-silica separator used in lead-acid batteries, not an ordinary rigid PVC sheet. Hubei Viking manufactures AGM glass fiber separators for VRLA batteries; the PVC discussion is provided to help buyers identify the correct material route."
+    ],
+    comparison: {
+      eyebrow: "Quick Comparison",
+      title: "The main differences are connected with the battery system",
+      columns: ["Comparison point", "AGM glass fiber separator", "Microporous PVC separator"],
+      rows: [
+        [
+          "Material structure",
+          "A porous nonwoven mat mainly formed from ultra-fine glass fibers.",
+          "A microporous membrane based on PVC or PVC-silica, often with ribs or a defined surface profile."
+        ],
+        [
+          "Common battery system",
+          "VRLA-AGM valve-regulated lead-acid batteries.",
+          "Flooded industrial lead-acid batteries and selected gel or application-specific designs."
+        ],
+        [
+          "Electrolyte condition",
+          "The separator absorbs and retains the electrolyte.",
+          "The electrolyte normally remains free-flowing or is immobilized by a separate gel system."
+        ],
+        [
+          "Primary role",
+          "Plate separation, electrolyte retention, ionic transport, oxygen transfer and plate-group constraint.",
+          "Plate separation, ionic transport, plate spacing and provision of acid volume between plates."
+        ],
+        [
+          "Assembly focus",
+          "Thickness under compression, recovery, absorption behavior and uniformity.",
+          "Backweb and overall thickness, rib height and direction, pore structure, wettability and mechanical strength."
+        ],
+        [
+          "Direct replacement",
+          "Normally not a direct substitute for PVC without battery-system validation.",
+          "Normally not a direct substitute for AGM without battery-system validation."
+        ]
+      ]
+    },
+    sections: [
+      {
+        eyebrow: "01 · Electrolyte Management",
+        title: "Start by understanding how the electrolyte is held inside the battery",
+        text:
+          "In a typical flooded lead-acid battery, the plates are immersed in electrolyte that can move freely. A microporous separator prevents plate contact while retaining ion-conducting paths and the required spacing between electrodes. In a VRLA-AGM battery, the electrolyte is absorbed and immobilized in the porous glass-fiber network, so the separator becomes part of the electrolyte-management system."
+      },
+      {
+        eyebrow: "02 · AGM Structure",
+        title: "AGM performance depends on absorption and compression together",
+        text:
+          "AGM stands for Absorbent Glass Mat. Its fiber network retains electrolyte, supports ionic movement and provides gas pathways used by the VRLA oxygen-recombination process. Once installed between the plates, compression changes separator thickness, contact and local electrolyte distribution. Natural thickness alone is therefore not enough to evaluate fit."
+      },
+      {
+        eyebrow: "03 · PVC Profile",
+        title: "Microporous PVC selection depends on pore structure and surface profile",
+        text:
+          "A microporous PVC separator does not perform the same whole-mat absorption function as AGM, but it still needs chemical resistance and open ionic pathways. Ribs can maintain electrode spacing and acid volume, while profile direction and dimensions affect positioning and assembly. A PVC specification may therefore need backweb thickness, total thickness, rib geometry, porosity, resistance, wettability and delivery format."
+      },
+      {
+        eyebrow: "04 · Replacement Boundary",
+        title: "Similar dimensions do not make the two materials interchangeable",
+        text:
+          "A VRLA-AGM battery is designed around electrolyte quantity, plate-group compression, oxygen recombination and valve-regulated operation. Flooded or gel designs using microporous separators make different assumptions about acid volume, plate spacing and maintenance. Changing separator material can require review of acid filling, group dimensions, housing space, charging conditions and validation tests."
+      },
+      {
+        eyebrow: "05 · Buyer Review",
+        title: "Select the separator by following the battery project, not the material name",
+        text:
+          "First confirm whether the project is VRLA-AGM, flooded or gel. Then define the separator function, assembly process, roll or sheet requirement and the characteristics that must remain stable in later batches. This approach is more useful than comparing one thickness, price or electrical-resistance value without the wider battery design."
+      },
+      {
+        eyebrow: "06 · Viking Coordination",
+        title: "For confirmed VRLA-AGM projects, start with specification matching",
+        text:
+          "Hubei Viking focuses on AGM glass fiber separator rolls and sheets for VRLA lead-acid batteries. When the battery route is confirmed as VRLA-AGM, we can review the application, target thickness, roll width or sheet size, project stage, sample needs and packing requirements before discussing continued supply."
+      }
+    ],
+    parameters: [
+      ["Battery system", "Confirm VRLA-AGM, flooded or gel before comparing separator materials."],
+      ["Electrolyte condition", "Define whether the separator must retain electrolyte or work with free or gelled acid."],
+      ["Assembly process", "Share plate-group design, compression conditions and roll or sheet handling."],
+      ["Dimensions", "Provide target thickness, width, sheet size and any existing reference sample."],
+      ["Validation stage", "Clarify whether the project is in design, sampling, trial assembly or volume production."],
+      ["Batch priorities", "Identify the absorption, fit, handling or consistency concern that matters most."]
+    ],
+    formats: {
+      eyebrow: "Viking AGM Supply Forms",
+      title: "Real AGM roll and sheet formats for VRLA battery projects",
+      items: [
+        [
+          "AGM separator rolls",
+          "Roll width, thickness, winding and packing should be reviewed against the customer's feeding, slitting or cutting process.",
+          "/images/evidence/agm-separator-roll-end-face-01.webp",
+          "AGM glass fiber separator roll end face"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheet dimensions, edge condition, stacking and packing should match direct assembly and sample-validation needs.",
+          "/images/evidence/agm-separator-sheets-detail-01.webp",
+          "AGM glass fiber separator sheets"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "Specification Matching Checklist",
+      title: "Prepare six details before requesting an AGM sample",
+      text:
+        "If the project has confirmed a VRLA-AGM battery structure, these details provide a practical starting point for sample and specification review.",
+      items: [
+        "Battery application and battery system",
+        "Target thickness and reference specification",
+        "Roll or sheet requirement",
+        "Roll width or sheet dimensions",
+        "Current project and validation stage",
+        "Main absorption, fit or consistency concern"
+      ]
+    },
+    references: {
+      eyebrow: "Technical References",
+      title: "Sources used for the material and application comparison",
+      text:
+        "These references provide background on lead-acid battery separator functions, AGM electrolyte retention and separator-profile considerations.",
+      items: [
+        [
+          "Battery Council International: About Battery Separators",
+          "https://batterycouncil.org/battery-facts-and-applications/about-battery-separators/"
+        ],
+        [
+          "Battery Council International: Glossary of Common Battery Terms",
+          "https://batterycouncil.org/wp-content/uploads/2024/12/BCIS-101-BCI-Glossary-of-Common-Battery-Terms-012425.pdf"
+        ],
+        [
+          "Journal of Power Sources: Essential characteristics for separators in valve-regulated lead-acid batteries",
+          "https://doi.org/10.1016/S0378-7753(02)00315-4"
+        ],
+        [
+          "Journal of Power Sources: Separator profile selection for optimal battery performance",
+          "https://www.sciencedirect.com/science/article/abs/pii/S0378775307024421"
+        ],
+        [
+          "Amer-Sil: Industrial lead-acid battery separators",
+          "https://amer-sil.com/products/products-separators"
+        ]
+      ]
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with AGM fundamentals, selection and testing",
+      items: [
+        ["AGM Separator Product", "/products/agm-separator/"],
+        ["What Is an AGM Separator?", "/blog/what-is-agm-separator/"],
+        ["How to Choose an AGM Separator", "/blog/how-to-choose-agm-separator/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Confirm the AGM separator specification for your VRLA project",
+      text:
+        "Share the battery application, target thickness, roll or sheet format, dimensions and current project stage. We can first review whether the requirement matches Viking's AGM separator supply scope.",
+      checklist: [
+        "VRLA battery application",
+        "Target thickness and dimensions",
+        "Roll or sheet format",
+        "Sample and validation stage"
+      ],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        application: "VRLA, UPS, motorcycle, automotive, energy storage...",
+        message:
+          "Battery system, target thickness, roll/sheet format, width or sheet size, project stage and current technical concern"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    brandName: articleCopy.zh.brandName,
+    quote: "申请样品",
+    hero: {
+      eyebrow: "电池隔板选型",
+      title: "AGM 玻璃纤维隔板和 PVC 电池隔板，差别不只在材料",
+      subtitle:
+        "两者都能隔开正负极板，但进入不同电池结构后，承担的电解液管理、装配和长期配套任务并不相同。",
+      primary: "沟通电池设计",
+      secondary: "查看两类隔板对比",
+      image: {
+        src: "/images/evidence/agm-separator-roll-end-face-01.webp",
+        alt: "湖北维京生产的 AGM 玻璃纤维隔板卷材",
+        width: 900,
+        height: 675
+      }
+    },
+    intro: [
+      "讨论 AGM 隔板和 PVC 隔板哪个更好，首先要回到电池结构、电解液状态和装配设计。脱离具体项目比较材料名称，很容易把选型方向带偏。",
+      "本文所说的 PVC 电池隔板，主要指铅酸电池使用的微孔 PVC 或 PVC-silica 隔板，并非普通硬质 PVC 板材。湖北维京专注 VRLA 电池用 AGM 玻璃纤维隔板，文中的 PVC 内容用于帮助买家识别正确材料路线。"
+    ],
+    comparison: {
+      eyebrow: "快速对比",
+      title: "主要差异来自两者服务的电池体系",
+      columns: ["对比项", "AGM 玻璃纤维隔板", "微孔 PVC 电池隔板"],
+      rows: [
+        [
+          "材料结构",
+          "以超细玻璃纤维构成的多孔无纺材料为主。",
+          "以 PVC 或 PVC-silica 体系形成的微孔膜为主，常带筋条或特定表面结构。"
+        ],
+        [
+          "常见电池体系",
+          "VRLA-AGM 阀控密封铅酸电池。",
+          "富液式工业铅酸电池，也可见于部分胶体或特定设计。"
+        ],
+        [
+          "电解液状态",
+          "电解液被隔板吸附并保持。",
+          "电解液通常保持自由流动，或由独立胶体体系固定。"
+        ],
+        [
+          "主要作用",
+          "隔离、吸液、离子传导、氧传输和极群约束。",
+          "隔离、离子传导、保持极板间距和留出极板间酸液空间。"
+        ],
+        [
+          "装配重点",
+          "受压后的厚度、回弹、吸液表现和均匀性。",
+          "底膜与总厚度、筋条高度和方向、孔结构、润湿性及机械强度。"
+        ],
+        [
+          "直接替换",
+          "通常不能在未验证电池系统的情况下直接替换 PVC。",
+          "通常不能在未验证电池系统的情况下直接替换 AGM。"
+        ]
+      ]
+    },
+    sections: [
+      {
+        eyebrow: "01 · 电解液管理",
+        title: "先看电解液如何保持在电池内部",
+        text:
+          "典型富液式铅酸电池中，极板浸在可以自由流动的电解液里。微孔隔板阻止极板接触，同时保留离子通道和必要的极板间距。VRLA-AGM 电池中，电解液被玻璃纤维多孔网络吸附并保持，隔板因此成为电解液管理体系的一部分。"
+      },
+      {
+        eyebrow: "02 · AGM 结构",
+        title: "AGM 的关键在于吸液与受压状态共同作用",
+        text:
+          "AGM 是 Absorbent Glass Mat 的缩写。纤维网络用于保持电解液、支持离子移动，并为 VRLA 电池的氧复合过程提供气体通道。隔板装入极群后，受压会改变厚度、接触状态和局部电解液分布，因此只看自然状态厚度不足以判断配套效果。"
+      },
+      {
+        eyebrow: "03 · PVC 型面",
+        title: "微孔 PVC 的重点是孔结构与表面型面",
+        text:
+          "微孔 PVC 不承担 AGM 那样的整体吸液任务，但仍需要耐受电池内部环境并保留离子通道。筋条可以维持极板间距和酸液空间，其方向和尺寸也会影响定位与装配。PVC 规格往往需要同时确认底膜厚度、总厚度、筋条、孔结构、电阻、润湿性和交付形式。"
+      },
+      {
+        eyebrow: "04 · 替换边界",
+        title: "尺寸接近，不代表两种材料可以直接互换",
+        text:
+          "VRLA-AGM 电池围绕加酸量、极群压缩、氧复合和阀控运行设计；使用微孔隔板的富液式或胶体电池，对酸液体积、极板间距和维护方式有不同假设。改变隔板材料可能需要重新确认加酸、极群尺寸、壳体空间、充电条件和验证项目。"
+      },
+      {
+        eyebrow: "05 · 采购确认",
+        title: "沿着电池项目选择隔板，而不是只比较材料名称",
+        text:
+          "首先确认项目属于 VRLA-AGM、富液式还是胶体体系，再明确隔板在设计中的任务、装配流程、卷材或片材要求，以及后续批次必须保持稳定的特性。这样的比较，比脱离电池结构只看一个厚度、价格或电阻数值更有实际意义。"
+      },
+      {
+        eyebrow: "06 · 维京配套",
+        title: "已确定 VRLA-AGM 路线的项目，可以先做规格匹配",
+        text:
+          "湖北维京专注 VRLA 铅酸电池用 AGM 玻璃纤维隔板卷材和片材。项目已确定采用 VRLA-AGM 体系后，可以提供电池应用、目标厚度、卷材宽度或片材尺寸、项目阶段、样品和包装需求，再进一步沟通持续供货。"
+      }
+    ],
+    parameters: [
+      ["电池体系", "比较材料前先确认 VRLA-AGM、富液式或胶体结构。"],
+      ["电解液状态", "明确隔板是否需要吸附电解液，或与自由、胶体酸液配合。"],
+      ["装配流程", "提供极群设计、受压条件及卷材或片材的使用方式。"],
+      ["尺寸信息", "提供目标厚度、宽度、片材尺寸及已有参考样品。"],
+      ["验证阶段", "说明项目处于设计、打样、试装还是批量生产阶段。"],
+      ["批次重点", "明确最关注的吸液、贴合、搬运或一致性问题。"]
+    ],
+    formats: {
+      eyebrow: "维京 AGM 供应形式",
+      title: "面向 VRLA 电池项目的真实 AGM 卷材和片材",
+      items: [
+        [
+          "AGM 隔板卷材",
+          "卷材宽度、厚度、卷绕和包装应与客户的上料、分切或裁切流程对应。",
+          "/images/evidence/agm-separator-roll-end-face-01.webp",
+          "AGM 玻璃纤维隔板卷材端面"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材尺寸、边缘、堆叠和包装应匹配直接装配与样品验证需求。",
+          "/images/evidence/agm-separator-sheets-detail-01.webp",
+          "AGM 玻璃纤维隔板片材"
+        ]
+      ]
+    },
+    checklist: {
+      eyebrow: "规格匹配清单",
+      title: "申请 AGM 样品前，建议准备六项信息",
+      text:
+        "如果项目已经确认采用 VRLA-AGM 电池结构，这些信息可以作为样品和规格评审的实际起点。",
+      items: [
+        "电池应用和电池体系",
+        "目标厚度和参考规格",
+        "卷材或片材需求",
+        "卷材宽度或片材尺寸",
+        "当前项目和验证阶段",
+        "主要吸液、贴合或一致性问题"
+      ]
+    },
+    references: {
+      eyebrow: "技术参考",
+      title: "材料与应用对比的参考资料",
+      text:
+        "以下资料用于说明铅酸电池隔板功能、AGM 电解液保持和隔板型面的技术背景。",
+      items: [
+        [
+          "Battery Council International：About Battery Separators",
+          "https://batterycouncil.org/battery-facts-and-applications/about-battery-separators/"
+        ],
+        [
+          "Battery Council International：电池术语表",
+          "https://batterycouncil.org/wp-content/uploads/2024/12/BCIS-101-BCI-Glossary-of-Common-Battery-Terms-012425.pdf"
+        ],
+        [
+          "Journal of Power Sources：VRLA 电池隔板的关键特性",
+          "https://doi.org/10.1016/S0378-7753(02)00315-4"
+        ],
+        [
+          "Journal of Power Sources：隔板型面对电池性能的影响",
+          "https://www.sciencedirect.com/science/article/abs/pii/S0378775307024421"
+        ],
+        [
+          "Amer-Sil：工业铅酸电池隔板",
+          "https://amer-sil.com/products/products-separators"
+        ]
+      ]
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续查看 AGM 基础、选型与检测信息",
+      items: [
+        ["AGM 隔板产品", "/zh/products/agm-separator/"],
+        ["什么是 AGM 隔板？", "/zh/blog/what-is-agm-separator/"],
+        ["如何选择 AGM 隔板", "/zh/blog/how-to-choose-agm-separator/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "确认当前 VRLA 项目的 AGM 隔板规格",
+      text:
+        "请提供电池应用、目标厚度、卷材或片材形式、尺寸和当前项目阶段。我们会先判断需求是否符合维京 AGM 隔板的供应范围。",
+      checklist: ["VRLA 电池应用", "目标厚度和尺寸", "卷材或片材形式", "样品和验证阶段"],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        application: "VRLA、UPS、摩托车、汽车、储能等",
+        message: "电池体系、目标厚度、卷材或片材、宽度或片材尺寸、项目阶段和当前技术问题"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -1907,6 +2301,8 @@ export function BlogArticlePage({
               ? exportSupplyReadinessCopy[lang]
               : page === "upsVrlaTechnologySelection"
                 ? upsVrlaTechnologySelectionCopy[lang]
+                : page === "agmGlassFiberVsPvcSeparator"
+                  ? agmGlassFiberVsPvcSeparatorCopy[lang]
           : articleCopy[lang];
   const sourceNote =
     page === "agmSeparatorExportSupplyReadiness"
@@ -1939,6 +2335,8 @@ export function BlogArticlePage({
               ? ["export-snapshot", "order-pace", "agm-supply", "export-priorities", "viking-supply"]
               : page === "upsVrlaTechnologySelection"
                 ? ["mature-system", "system-fit", "operational-stability", "separator-role", "procurement-review", "viking-coordination"]
+                : page === "agmGlassFiberVsPvcSeparator"
+                  ? ["electrolyte-management", "agm-structure", "pvc-profile", "replacement-boundary", "buyer-review", "viking-coordination"]
       : ["definition", "function", "parameters"];
   const heroImage =
     "image" in t.hero
@@ -2015,6 +2413,9 @@ export function BlogArticlePage({
               </p>
               <div className="mt-5 grid gap-3 text-sm font-semibold text-graphite">
                 {[
+                  ...("comparison" in t
+                    ? [[t.comparison.eyebrow, "#comparison"]]
+                    : []),
                   ...t.sections.map((section, index) => [
                     section.eyebrow,
                     `#${sectionIds[index]}`
@@ -2040,6 +2441,75 @@ export function BlogArticlePage({
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+
+            {"comparison" in t && (
+              <section
+                id="comparison"
+                className="mt-10 scroll-mt-28 border-t border-line pt-10"
+              >
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
+                  {t.comparison.eyebrow}
+                </p>
+                <h2 className="mt-3 text-3xl font-bold leading-tight text-ink">
+                  {t.comparison.title}
+                </h2>
+
+                <div className="mt-7 hidden overflow-hidden rounded-md border border-line md:block">
+                  <table className="w-full table-fixed border-collapse text-left text-sm">
+                    <thead className="bg-ink text-white">
+                      <tr>
+                        {t.comparison.columns.map((column, index) => (
+                          <th
+                            key={column}
+                            className={`px-4 py-4 font-bold ${
+                              index === 0 ? "w-1/4" : ""
+                            }`}
+                          >
+                            {column}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-line">
+                      {t.comparison.rows.map(([point, agm, pvc]) => (
+                        <tr key={point} className="align-top">
+                          <th className="bg-frost px-4 py-4 font-bold text-ink">
+                            {point}
+                          </th>
+                          <td className="px-4 py-4 leading-6 text-steel">{agm}</td>
+                          <td className="px-4 py-4 leading-6 text-steel">{pvc}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="mt-7 grid gap-4 md:hidden">
+                  {t.comparison.rows.map(([point, agm, pvc]) => (
+                    <article
+                      key={point}
+                      className="rounded-md border border-line bg-frost p-5"
+                    >
+                      <h3 className="font-bold text-ink">{point}</h3>
+                      <dl className="mt-4 grid gap-4">
+                        <div>
+                          <dt className="text-xs font-bold uppercase tracking-[0.14em] text-signal">
+                            {t.comparison.columns[1]}
+                          </dt>
+                          <dd className="mt-2 text-sm leading-6 text-steel">{agm}</dd>
+                        </div>
+                        <div className="border-t border-line pt-4">
+                          <dt className="text-xs font-bold uppercase tracking-[0.14em] text-copper">
+                            {t.comparison.columns[2]}
+                          </dt>
+                          <dd className="mt-2 text-sm leading-6 text-steel">{pvc}</dd>
+                        </div>
+                      </dl>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
 
             <div className="mt-10 grid gap-10">
               {t.sections.map((section, index) => (
@@ -2181,6 +2651,35 @@ export function BlogArticlePage({
               {sourceNote.linkLabel}
               <ArrowRight size={16} />
             </a>
+          </div>
+        )}
+        {"references" in t && (
+          <div className="mx-auto mb-20 max-w-5xl rounded-md border border-line bg-frost p-6 shadow-sm sm:p-8">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
+              {t.references.eyebrow}
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-ink">
+              {t.references.title}
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-steel">
+              {t.references.text}
+            </p>
+            <ol className="mt-6 grid gap-3">
+              {t.references.items.map(([label, href], index) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 rounded-md border border-line bg-white px-4 py-3 text-sm font-bold leading-6 text-ink transition hover:border-signal hover:text-signal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2"
+                  >
+                    <span className="text-signal">{index + 1}.</span>
+                    <span>{label}</span>
+                    <ArrowRight className="ml-auto mt-1 shrink-0" size={16} />
+                  </a>
+                </li>
+              ))}
+            </ol>
           </div>
         )}
         <SectionHeading eyebrow={t.related.eyebrow} title={t.related.title} />

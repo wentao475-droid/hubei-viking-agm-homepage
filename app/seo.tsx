@@ -13,6 +13,7 @@ import type { Lang } from "./VikingHome";
 
 export const SITE_URL = "https://www.vikingagm.com";
 const PREVIEW_IMAGE = `${SITE_URL}/images/viking-finished-separator-roll-900.webp`;
+const AGM_ROLL_END_FACE_IMAGE = `${SITE_URL}/images/evidence/agm-separator-roll-end-face-01.webp`;
 const SHEETS_PREVIEW_IMAGE = `${SITE_URL}/images/sheets1-900.webp`;
 const QUALITY_PREVIEW_IMAGE = `${SITE_URL}/images/agm-quality-control-1200.webp`;
 const UPS_APPLICATION_IMAGE = `${SITE_URL}/images/applications/ups-vrla-battery-application-1200.webp`;
@@ -854,6 +855,53 @@ const upsVrlaTechnologySelectionSeo = {
   }
 } as const;
 
+const agmGlassFiberVsPvcSeparatorSeo = {
+  en: {
+    path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    alternatePath: "/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Glass Fiber vs PVC Battery Separators | Viking AGM",
+    description:
+      "Compare AGM glass fiber and microporous PVC battery separators by battery design, electrolyte management, assembly requirements and sourcing fit.",
+    keywords: [
+      "AGM glass fiber separator",
+      "PVC battery separator",
+      "microporous PVC separator",
+      "VRLA AGM battery separator",
+      "flooded lead-acid battery separator",
+      "battery separator comparison"
+    ],
+    pageName: "AGM Glass Fiber vs PVC Battery Separators",
+    articleDescription:
+      "A practical buyer guide comparing AGM glass fiber and microporous PVC battery separators by electrolyte condition, battery structure, assembly requirements and replacement boundaries.",
+    breadcrumbs: ["Home", "Resources", "AGM vs PVC Battery Separators"]
+  },
+  zh: {
+    path: "/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    alternatePath: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 玻璃纤维隔板和 PVC 电池隔板有什么区别？| 湖北维京AGM",
+    description:
+      "从电池结构、电解液状态、装配要求和选型边界，对比 AGM 玻璃纤维隔板与微孔 PVC 电池隔板的主要区别。",
+    keywords: [
+      "AGM 玻璃纤维隔板",
+      "PVC 电池隔板",
+      "微孔 PVC 隔板",
+      "VRLA AGM 电池隔板",
+      "富液式铅酸电池隔板",
+      "电池隔板对比"
+    ],
+    pageName: "AGM 玻璃纤维隔板和 PVC 电池隔板有什么区别？",
+    articleDescription:
+      "面向采购和技术团队，从电解液状态、电池结构、装配要求与替换边界，对比 AGM 玻璃纤维隔板和微孔 PVC 电池隔板。",
+    breadcrumbs: ["首页", "资料", "AGM 与 PVC 电池隔板对比"]
+  }
+} as const;
+
 export function buildHomeMetadata(lang: Lang): Metadata {
   const current = seoContent("home", lang, homeSeo[lang]);
 
@@ -1255,6 +1303,33 @@ export function buildUpsVrlaTechnologySelectionMetadata(
     imageAlt: current.pageName,
     image: {
       url: UPS_APPLICATION_IMAGE,
+      width: 900,
+      height: 675
+    }
+  });
+}
+
+export function buildAgmGlassFiberVsPvcSeparatorMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "agmGlassFiberVsPvcSeparator",
+    lang,
+    agmGlassFiberVsPvcSeparatorSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    zhPath: "/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: AGM_ROLL_END_FACE_IMAGE,
       width: 900,
       height: 675
     }
@@ -2382,6 +2457,80 @@ export function UpsVrlaTechnologySelectionStructuredData({
           "VRLA lead-acid batteries",
           "AGM separator for UPS batteries",
           "AGM separator specification matching"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${getResourcesPath(lang)}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmGlassFiberVsPvcSeparatorStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmGlassFiberVsPvcSeparator",
+    lang,
+    agmGlassFiberVsPvcSeparatorSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: AGM_ROLL_END_FACE_IMAGE,
+          width: 900,
+          height: 675
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: AGM_ROLL_END_FACE_IMAGE,
+        url,
+        datePublished: "2026-07-26",
+        dateModified: "2026-07-26",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "AGM glass fiber battery separators",
+          "microporous PVC battery separators",
+          "VRLA lead-acid batteries",
+          "flooded lead-acid batteries",
+          "battery separator selection"
         ],
         inLanguage: current.language
       },

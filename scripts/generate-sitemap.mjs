@@ -29,7 +29,7 @@ const pages = [
     zh: "/zh/resources/",
     priority: "0.8",
     changefreq: "weekly",
-    lastmod: "2026-07-24"
+    lastmod: "2026-07-26"
   },
   {
     en: "/products/agm-separator-rolls/",
@@ -128,6 +128,13 @@ const pages = [
     priority: "0.75",
     changefreq: "monthly",
     lastmod: "2026-07-23"
+  },
+  {
+    en: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    zh: "/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-07-26"
   }
 ];
 

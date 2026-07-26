@@ -37,10 +37,28 @@ const copy = {
       contact: "Email, WhatsApp or phone number",
       company: "Company name (optional)",
       country: "Country or region (optional)",
-      application: "UPS, energy storage, motorcycle, VRLA...",
-      interestedProduct: "Rolls, sheets, or not sure yet",
+      application: "Select a battery application (optional)",
+      interestedProduct: "Select a product format (optional)",
       message:
         "Optional: thickness, width, sheet size, quantity, sample or test requirements"
+    },
+    options: {
+      applications: [
+        ["UPS / standby power", "UPS / Standby power"],
+        ["Energy storage battery", "Energy storage battery"],
+        ["Motorcycle battery", "Motorcycle starting battery"],
+        ["Automotive starting battery", "Automotive starting battery"],
+        ["Telecom backup power", "Telecom backup power"],
+        ["E-bike battery", "E-bike / light electric vehicle"],
+        ["Other VRLA lead-acid battery", "Other VRLA lead-acid battery"],
+        ["Not sure", "Not sure yet"]
+      ],
+      productFormats: [
+        ["AGM separator rolls", "AGM separator rolls"],
+        ["AGM separator sheets", "AGM separator sheets"],
+        ["Rolls and sheets", "Rolls and sheets"],
+        ["Not sure", "Not sure yet"]
+      ]
     },
     submit: "Request Sample & Specification Match",
     submitting: "Sending...",
@@ -70,9 +88,27 @@ const copy = {
       contact: "邮箱、微信号或手机号",
       company: "公司名称（选填）",
       country: "国家或地区（选填）",
-      application: "UPS、储能、摩托车、VRLA 等",
-      interestedProduct: "卷材、片材或暂不确定",
+      application: "请选择电池应用（选填）",
+      interestedProduct: "请选择产品形式（选填）",
       message: "选填：厚度、宽度、片材尺寸、数量、样品或检测需求"
+    },
+    options: {
+      applications: [
+        ["UPS / standby power", "UPS / 备用电源"],
+        ["Energy storage battery", "储能电池"],
+        ["Motorcycle battery", "摩托车启动电池"],
+        ["Automotive starting battery", "汽车启动电池"],
+        ["Telecom backup power", "通信后备电源"],
+        ["E-bike battery", "电动车电池"],
+        ["Other VRLA lead-acid battery", "其他 VRLA 铅酸电池"],
+        ["Not sure", "暂不确定"]
+      ],
+      productFormats: [
+        ["AGM separator rolls", "AGM 隔板卷材"],
+        ["AGM separator sheets", "AGM 隔板片材"],
+        ["Rolls and sheets", "卷材和片材"],
+        ["Not sure", "暂不确定"]
+      ]
     },
     submit: "申请样品与规格匹配",
     submitting: "发送中...",
@@ -205,17 +241,19 @@ export function InquiryForm({
           label={t.fields.country}
           placeholder={t.placeholders.country}
         />
-        <Field
+        <SelectField
           name="application"
           label={t.fields.application}
           placeholder={t.placeholders.application}
-          defaultValue={defaultApplication}
+          options={t.options.applications}
+          defaultValue={resolveApplicationDefault(defaultApplication)}
         />
-        <Field
+        <SelectField
           name="interestedProduct"
           label={t.fields.interestedProduct}
           placeholder={t.placeholders.interestedProduct}
-          defaultValue={defaultInterestedProduct}
+          options={t.options.productFormats}
+          defaultValue={resolveProductFormatDefault(defaultInterestedProduct)}
         />
         <label className="sm:col-span-2">
           <span className="text-sm font-bold text-graphite">{t.fields.message}</span>
@@ -299,6 +337,96 @@ function Field({
       />
     </label>
   );
+}
+
+function SelectField({
+  name,
+  label,
+  placeholder,
+  options,
+  defaultValue = ""
+}: {
+  name: string;
+  label: string;
+  placeholder: string;
+  options: ReadonlyArray<readonly [value: string, label: string]>;
+  defaultValue?: string;
+}) {
+  return (
+    <label>
+      <span className="text-sm font-bold text-graphite">{label}</span>
+      <select
+        name={name}
+        defaultValue={defaultValue}
+        className="mt-2 w-full cursor-pointer rounded-md border border-line bg-frost px-4 py-3 text-sm text-ink outline-none transition focus:border-signal focus:bg-white"
+      >
+        <option value="">{placeholder}</option>
+        {options.map(([value, optionLabel]) => (
+          <option key={value} value={value}>
+            {optionLabel}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+function resolveApplicationDefault(value: string) {
+  const normalized = value.toLowerCase();
+
+  if (normalized.includes("ups") || normalized.includes("备用")) {
+    return "UPS / standby power";
+  }
+  if (normalized.includes("energy storage") || normalized.includes("储能")) {
+    return "Energy storage battery";
+  }
+  if (normalized.includes("motorcycle") || normalized.includes("摩托")) {
+    return "Motorcycle battery";
+  }
+  if (normalized.includes("automotive") || normalized.includes("汽车")) {
+    return "Automotive starting battery";
+  }
+  if (normalized.includes("telecom") || normalized.includes("通信")) {
+    return "Telecom backup power";
+  }
+  if (
+    normalized.includes("e-bike") ||
+    normalized.includes("electric vehicle") ||
+    normalized.includes("电动车")
+  ) {
+    return "E-bike battery";
+  }
+  if (normalized.includes("vrla") || normalized.includes("铅酸")) {
+    return "Other VRLA lead-acid battery";
+  }
+  if (normalized.includes("not sure") || normalized.includes("暂不确定")) {
+    return "Not sure";
+  }
+
+  return "";
+}
+
+function resolveProductFormatDefault(value: string) {
+  const normalized = value.toLowerCase();
+  const includesRoll =
+    normalized.includes("roll") || normalized.includes("卷材");
+  const includesSheet =
+    normalized.includes("sheet") || normalized.includes("片材");
+
+  if (includesRoll && includesSheet) {
+    return "Rolls and sheets";
+  }
+  if (includesRoll) {
+    return "AGM separator rolls";
+  }
+  if (includesSheet) {
+    return "AGM separator sheets";
+  }
+  if (normalized.includes("not sure") || normalized.includes("暂不确定")) {
+    return "Not sure";
+  }
+
+  return "";
 }
 
 function appendAttribution(formData: FormData, lang: Lang) {

@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://www.vikingagm.com/resources/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/resources/" />
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://www.vikingagm.com/zh/resources/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/resources/" />
@@ -324,5 +324,23 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/blog/why-ups-projects-still-use-vrla-batteries/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/blog/why-ups-projects-still-use-vrla-batteries/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/blog/why-ups-projects-still-use-vrla-batteries/" />
+  </url>
+  <url>
+    <loc>https://www.vikingagm.com/blog/agm-glass-fiber-vs-pvc-battery-separator/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/blog/agm-glass-fiber-vs-pvc-battery-separator/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/blog/agm-glass-fiber-vs-pvc-battery-separator/" />
+  </url>
+  <url>
+    <loc>https://www.vikingagm.com/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/blog/agm-glass-fiber-vs-pvc-battery-separator/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/blog/agm-glass-fiber-vs-pvc-battery-separator/" />
   </url>
 </urlset>

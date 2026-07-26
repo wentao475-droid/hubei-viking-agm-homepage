@@ -31,6 +31,10 @@ const articles = [
   [
     "upsVrlaTechnologySelection",
     "why-ups-projects-still-use-vrla-batteries"
+  ],
+  [
+    "agmGlassFiberVsPvcSeparator",
+    "agm-glass-fiber-vs-pvc-battery-separator"
   ]
 ];
 

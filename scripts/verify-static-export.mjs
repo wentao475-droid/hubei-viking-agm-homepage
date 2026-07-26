@@ -18,6 +18,8 @@ const requiredFiles = [
   "zh/applications/agm-separator-for-energy-storage-battery/index.html",
   "blog/why-ups-projects-still-use-vrla-batteries/index.html",
   "zh/blog/why-ups-projects-still-use-vrla-batteries/index.html",
+  "blog/agm-glass-fiber-vs-pvc-battery-separator/index.html",
+  "zh/blog/agm-glass-fiber-vs-pvc-battery-separator/index.html",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -72,6 +74,12 @@ const upsVrlaArticleHtml = readOutFile(
 const zhUpsVrlaArticleHtml = readOutFile(
   "zh/blog/why-ups-projects-still-use-vrla-batteries/index.html"
 );
+const agmVsPvcArticleHtml = readOutFile(
+  "blog/agm-glass-fiber-vs-pvc-battery-separator/index.html"
+);
+const zhAgmVsPvcArticleHtml = readOutFile(
+  "zh/blog/agm-glass-fiber-vs-pvc-battery-separator/index.html"
+);
 const sitemap = readOutFile("sitemap.xml");
 const robots = readOutFile("robots.txt");
 const sitemapUrlBlocks = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(
@@ -123,6 +131,20 @@ if (
   fail("Organization structured data is missing official social profiles");
 }
 
+const inquiryFormsUseSelects = [indexHtml, zhHtml].every(
+  (html) =>
+    /<select[^>]+name="application"/.test(html) &&
+    /<select[^>]+name="interestedProduct"/.test(html) &&
+    html.includes('value="UPS / standby power"') &&
+    html.includes('value="AGM separator rolls"')
+);
+
+if (inquiryFormsUseSelects) {
+  pass("inquiry forms use battery application and product format selects");
+} else {
+  fail("inquiry forms are missing battery application or product format selects");
+}
+
 const resourceArticlePaths = [
   "/blog/what-is-agm-separator/",
   "/blog/key-technical-parameters-of-agm-separator/",
@@ -130,7 +152,8 @@ const resourceArticlePaths = [
   "/blog/agm-separator-manufacturing-quality-delivery/",
   "/blog/agm-separator-performance-consistency/",
   "/blog/agm-separator-export-supply-readiness/",
-  "/blog/why-ups-projects-still-use-vrla-batteries/"
+  "/blog/why-ups-projects-still-use-vrla-batteries/",
+  "/blog/agm-glass-fiber-vs-pvc-battery-separator/"
 ];
 
 if (
@@ -209,6 +232,40 @@ if (
 }
 
 if (
+  agmVsPvcArticleHtml.includes(
+    "https://www.vikingagm.com/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+  ) &&
+  zhAgmVsPvcArticleHtml.includes(
+    "https://www.vikingagm.com/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+  ) &&
+  agmVsPvcArticleHtml.includes('"@type":"BlogPosting"') &&
+  agmVsPvcArticleHtml.includes('"datePublished":"2026-07-26"') &&
+  zhAgmVsPvcArticleHtml.includes('"@type":"BlogPosting"') &&
+  zhAgmVsPvcArticleHtml.includes('"datePublished":"2026-07-26"')
+) {
+  pass("AGM vs PVC articles include canonical URLs and BlogPosting dates");
+} else {
+  fail("AGM vs PVC articles are missing canonical or BlogPosting metadata");
+}
+
+if (
+  agmVsPvcArticleHtml.includes("AGM glass fiber separator") &&
+  agmVsPvcArticleHtml.includes("Microporous PVC separator") &&
+  agmVsPvcArticleHtml.includes(
+    "https://batterycouncil.org/battery-facts-and-applications/about-battery-separators/"
+  ) &&
+  zhAgmVsPvcArticleHtml.includes("AGM 玻璃纤维隔板") &&
+  zhAgmVsPvcArticleHtml.includes("微孔 PVC 隔板") &&
+  wechatPlaceholders.every(
+    (placeholder) => !zhAgmVsPvcArticleHtml.includes(placeholder)
+  )
+) {
+  pass("AGM vs PVC comparison and reference content is present");
+} else {
+  fail("AGM vs PVC article content or references are incomplete");
+}
+
+if (
   sitemap.includes("https://www.vikingagm.com/") &&
   sitemap.includes("https://www.vikingagm.com/zh/")
 ) {
@@ -232,10 +289,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 36) {
+if (sitemapUrls.length === 38) {
   pass("sitemap.xml lists the expected English and Chinese public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 36`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 38`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -274,8 +331,12 @@ const expectedSitemapLastmod = [
     "2026-07-23"
   ],
   [
+    "https://www.vikingagm.com/blog/agm-glass-fiber-vs-pvc-battery-separator/",
+    "2026-07-26"
+  ],
+  [
     "https://www.vikingagm.com/resources/",
-    "2026-07-24"
+    "2026-07-26"
   ]
 ];
 

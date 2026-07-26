@@ -156,7 +156,8 @@ const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "manufacturingDeliveryCopy",
   "performanceConsistencyCopy",
   "exportSupplyReadinessCopy",
-  "upsVrlaTechnologySelectionCopy"
+  "upsVrlaTechnologySelectionCopy",
+  "agmGlassFiberVsPvcSeparatorCopy"
 ]);
 const seoConstants = collectConstants("app/seo.tsx", [
   "homeSeo",
@@ -174,7 +175,8 @@ const seoConstants = collectConstants("app/seo.tsx", [
   "agmSeparatorManufacturingQualityDeliverySeo",
   "agmSeparatorPerformanceConsistencySeo",
   "agmSeparatorExportSupplyReadinessSeo",
-  "upsVrlaTechnologySelectionSeo"
+  "upsVrlaTechnologySelectionSeo",
+  "agmGlassFiberVsPvcSeparatorSeo"
 ]);
 
 const content = {
@@ -191,7 +193,9 @@ const content = {
     agmSeparatorExportSupplyReadiness:
       articleConstants.exportSupplyReadinessCopy,
     upsVrlaTechnologySelection:
-      articleConstants.upsVrlaTechnologySelectionCopy
+      articleConstants.upsVrlaTechnologySelectionCopy,
+    agmGlassFiberVsPvcSeparator:
+      articleConstants.agmGlassFiberVsPvcSeparatorCopy
   },
   seo: {
     home: seoConstants.homeSeo,
@@ -215,7 +219,9 @@ const content = {
     agmSeparatorExportSupplyReadiness:
       seoConstants.agmSeparatorExportSupplyReadinessSeo,
     upsVrlaTechnologySelection:
-      seoConstants.upsVrlaTechnologySelectionSeo
+      seoConstants.upsVrlaTechnologySelectionSeo,
+    agmGlassFiberVsPvcSeparator:
+      seoConstants.agmGlassFiberVsPvcSeparatorSeo
   }
 };
 
