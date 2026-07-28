@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import type { SiteLocale } from "./locales";
 import { ProductNavDropdown, ProductNavMobileGroup } from "./ProductNav";
 import { QualityNavDropdown, QualityNavMobileGroup } from "./QualityNav";
 import { ResourcesNavDropdown, ResourcesNavMobileGroup } from "./ResourcesNav";
@@ -10,7 +12,6 @@ import {
   ApplicationsNavMobileGroup
 } from "./ApplicationsNav";
 
-type Lang = "en" | "zh";
 type IconProps = { size?: number; className?: string };
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -24,7 +25,6 @@ const headerCopy = {
     applications: "Applications",
     contact: "Contact",
     companyName: "Hubei Viking Technology Co., Ltd.",
-    language: "中文",
     menuOpen: "Open navigation menu",
     menuClose: "Close navigation menu"
   },
@@ -36,9 +36,19 @@ const headerCopy = {
     applications: "应用",
     contact: "联系",
     companyName: "湖北维京科技有限公司",
-    language: "EN",
     menuOpen: "打开导航菜单",
     menuClose: "关闭导航菜单"
+  },
+  vi: {
+    company: "Công ty",
+    products: "Sản phẩm",
+    quality: "Chất lượng",
+    resources: "Tài liệu",
+    applications: "Ứng dụng",
+    contact: "Liên hệ",
+    companyName: "Công ty TNHH Công nghệ Hubei Viking",
+    menuOpen: "Mở menu điều hướng",
+    menuClose: "Đóng menu điều hướng"
   }
 } as const;
 
@@ -113,7 +123,7 @@ export function SiteHeader({
   languagePath,
   quoteLabel
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   homePath: string;
   languagePath: string;
   quoteLabel: string;
@@ -121,7 +131,6 @@ export function SiteHeader({
   const [menuOpen, setMenuOpen] = useState(false);
   const t = headerCopy[lang];
   const homeHref = asset(homePath);
-  const languageHref = asset(languagePath);
 
   const navItemsBeforeProducts = [[t.company, `${homeHref}#company`]] as const;
   const navItemsAfterResources = [[t.contact, "#contact"]] as const;
@@ -164,8 +173,12 @@ export function SiteHeader({
             </a>
           ))}
           <ProductNavDropdown lang={lang} label={t.products} />
-          <QualityNavDropdown lang={lang} label={t.quality} />
-          <ResourcesNavDropdown lang={lang} label={t.resources} />
+          {lang !== "vi" && (
+            <>
+              <QualityNavDropdown lang={lang} label={t.quality} />
+              <ResourcesNavDropdown lang={lang} label={t.resources} />
+            </>
+          )}
           <ApplicationsNavDropdown lang={lang} label={t.applications} />
           {navItemsAfterResources.map(([label, href]) => (
             <a
@@ -179,12 +192,7 @@ export function SiteHeader({
         </nav>
 
         <div className="hidden shrink-0 items-center gap-2 lg:flex xl:gap-3">
-          <a
-            href={languageHref}
-            className="whitespace-nowrap rounded-md border border-line bg-white px-3 py-2 text-sm font-semibold text-graphite transition hover:border-signal hover:text-signal"
-          >
-            {t.language}
-          </a>
+          <LanguageSwitcher lang={lang} alternatePath={languagePath} />
           <a
             href="#contact"
             className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md bg-signal px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-ink xl:px-5 xl:py-3"
@@ -195,12 +203,11 @@ export function SiteHeader({
         </div>
 
         <div className="flex shrink-0 items-center gap-2 lg:hidden">
-          <a
-            href={languageHref}
-            className="inline-flex h-10 min-w-12 items-center justify-center rounded-md border border-line bg-white px-3 text-sm font-semibold text-graphite transition hover:border-signal hover:text-signal"
-          >
-            {t.language}
-          </a>
+          <LanguageSwitcher
+            lang={lang}
+            alternatePath={languagePath}
+            compact
+          />
           <button
             aria-label={menuOpen ? t.menuClose : t.menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
@@ -230,16 +237,20 @@ export function SiteHeader({
               label={t.products}
               onNavigate={() => setMenuOpen(false)}
             />
-            <QualityNavMobileGroup
-              lang={lang}
-              label={t.quality}
-              onNavigate={() => setMenuOpen(false)}
-            />
-            <ResourcesNavMobileGroup
-              lang={lang}
-              label={t.resources}
-              onNavigate={() => setMenuOpen(false)}
-            />
+            {lang !== "vi" && (
+              <>
+                <QualityNavMobileGroup
+                  lang={lang}
+                  label={t.quality}
+                  onNavigate={() => setMenuOpen(false)}
+                />
+                <ResourcesNavMobileGroup
+                  lang={lang}
+                  label={t.resources}
+                  onNavigate={() => setMenuOpen(false)}
+                />
+              </>
+            )}
             <ApplicationsNavMobileGroup
               lang={lang}
               label={t.applications}

@@ -6,23 +6,26 @@ const pages = [
   {
     en: "/",
     zh: "/zh/",
+    vi: "/vi/",
     priority: "1.0",
     changefreq: "weekly",
-    lastmod: "2026-07-05"
+    lastmod: "2026-07-28"
   },
   {
     en: "/products/agm-separator/",
     zh: "/zh/products/agm-separator/",
+    vi: "/vi/products/agm-separator/",
     priority: "0.9",
     changefreq: "weekly",
-    lastmod: "2026-07-05"
+    lastmod: "2026-07-28"
   },
   {
     en: "/request-agm-separator-sample/",
     zh: "/zh/request-agm-separator-sample/",
+    vi: "/vi/request-agm-separator-sample/",
     priority: "0.9",
     changefreq: "weekly",
-    lastmod: "2026-07-16"
+    lastmod: "2026-07-28"
   },
   {
     en: "/resources/",
@@ -69,9 +72,10 @@ const pages = [
   {
     en: "/applications/agm-separator-for-motorcycle-battery/",
     zh: "/zh/applications/agm-separator-for-motorcycle-battery/",
+    vi: "/vi/applications/agm-separator-for-motorcycle-battery/",
     priority: "0.85",
     changefreq: "monthly",
-    lastmod: "2026-06-24"
+    lastmod: "2026-07-28"
   },
   {
     en: "/applications/agm-separator-for-energy-storage-battery/",
@@ -143,24 +147,23 @@ function absolute(path) {
 }
 
 function urlEntry(path, alternate) {
-  const zh = path.startsWith("/zh/") ? path : alternate.zh;
-  const en = path.startsWith("/zh/") ? alternate.en : path;
-
+  const viAlternate = alternate.vi
+    ? `\n    <xhtml:link rel="alternate" hreflang="vi-VN" href="${absolute(alternate.vi)}" />`
+    : "";
   return `  <url>
     <loc>${absolute(path)}</loc>
     <lastmod>${alternate.lastmod}</lastmod>
     <changefreq>${alternate.changefreq}</changefreq>
     <priority>${alternate.priority}</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="${absolute(en)}" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="${absolute(zh)}" />
+    <xhtml:link rel="alternate" hreflang="en" href="${absolute(alternate.en)}" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="${absolute(alternate.zh)}" />${viAlternate}
     <xhtml:link rel="alternate" hreflang="x-default" href="${absolute(alternate.en)}" />
   </url>`;
 }
 
-const entries = pages.flatMap((page) => [
-  urlEntry(page.en, page),
-  urlEntry(page.zh, page)
-]);
+const entries = pages.flatMap((page) =>
+  [page.en, page.zh, page.vi].filter(Boolean).map((path) => urlEntry(path, page))
+);
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

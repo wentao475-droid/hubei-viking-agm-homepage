@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -64,12 +64,27 @@ const applicationsNavItems = {
       description: "面向铅酸储能和后备电源电池的隔板沟通。",
       href: "/zh/applications/agm-separator-for-energy-storage-battery/"
     }
+  ],
+  vi: [
+    {
+      title: "Tổng quan ứng dụng",
+      description:
+        "Các ứng dụng ắc quy axit-chì chính sử dụng vật liệu tấm ngăn AGM.",
+      href: "/vi/#applications"
+    },
+    {
+      title: "Tấm ngăn AGM cho ắc quy xe máy",
+      description:
+        "Trao đổi về kích thước và dạng tấm ngăn cho ắc quy khởi động xe máy.",
+      href: "/vi/applications/agm-separator-for-motorcycle-battery/"
+    }
   ]
 } as const;
 
 const applicationsNavEyebrow = {
   en: "Application",
-  zh: "应用"
+  zh: "应用",
+  vi: "Ứng dụng"
 } as const;
 
 function asset(path: string) {
@@ -80,7 +95,7 @@ export function ApplicationsNavDropdown({
   lang,
   label
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   label: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -150,7 +165,7 @@ export function ApplicationsNavMobileGroup({
   label,
   onNavigate
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   label: string;
   onNavigate?: () => void;
 }) {

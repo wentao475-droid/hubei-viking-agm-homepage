@@ -1,10 +1,10 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
 
 type InquiryFormProps = {
-  lang: Lang;
+  lang: SiteLocale;
   className?: string;
   defaultApplication?: string;
   defaultInterestedProduct?: string;
@@ -119,6 +119,57 @@ const copy = {
     email: "发送邮件",
     phone: "电话或消息联系",
     subject: "AGM 隔板样品与规格匹配申请 - 湖北维京"
+  },
+  vi: {
+    fields: {
+      name: "Họ và tên",
+      contact: "Email / WhatsApp / Điện thoại",
+      company: "Công ty",
+      country: "Quốc gia / Khu vực",
+      application: "Ứng dụng ắc quy",
+      interestedProduct: "Dạng sản phẩm",
+      message: "Thông số hoặc yêu cầu mẫu"
+    },
+    placeholders: {
+      name: "Họ và tên của bạn",
+      contact: "Email, WhatsApp hoặc số điện thoại",
+      company: "Tên công ty (không bắt buộc)",
+      country: "Quốc gia hoặc khu vực (không bắt buộc)",
+      application: "Chọn ứng dụng ắc quy (không bắt buộc)",
+      interestedProduct: "Chọn dạng sản phẩm (không bắt buộc)",
+      message:
+        "Không bắt buộc: độ dày, chiều rộng, kích thước tấm, số lượng, yêu cầu mẫu hoặc thử nghiệm"
+    },
+    options: {
+      applications: [
+        ["UPS / standby power", "UPS / Nguồn điện dự phòng"],
+        ["Energy storage battery", "Ắc quy lưu trữ năng lượng"],
+        ["Motorcycle battery", "Ắc quy khởi động xe máy"],
+        ["Automotive starting battery", "Ắc quy khởi động ô tô"],
+        ["Telecom backup power", "Nguồn dự phòng viễn thông"],
+        ["E-bike battery", "Ắc quy xe điện nhẹ"],
+        ["Other VRLA lead-acid battery", "Ắc quy axit-chì VRLA khác"],
+        ["Not sure", "Chưa xác định"]
+      ],
+      productFormats: [
+        ["AGM separator rolls", "Tấm ngăn AGM dạng cuộn"],
+        ["AGM separator sheets", "Tấm ngăn AGM dạng tấm"],
+        ["Rolls and sheets", "Dạng cuộn và dạng tấm"],
+        ["Not sure", "Chưa xác định"]
+      ]
+    },
+    submit: "Yêu cầu mẫu và đối chiếu thông số",
+    submitting: "Đang gửi...",
+    required: "Vui lòng nhập họ tên và ít nhất một phương thức liên hệ.",
+    success:
+      "Cảm ơn bạn. Yêu cầu đã được lưu và đội ngũ của chúng tôi sẽ liên hệ để xác nhận bước tiếp theo.",
+    failure:
+      "Không thể gửi biểu mẫu trực tuyến. Vui lòng liên hệ trực tiếp qua email hoặc điện thoại.",
+    emailFallback:
+      "Ứng dụng email đã được mở. Vui lòng gửi email đã chuẩn bị để hoàn tất yêu cầu.",
+    email: "Gửi email",
+    phone: "Gọi điện hoặc nhắn tin",
+    subject: "Yêu cầu mẫu và đối chiếu thông số tấm ngăn AGM - Viking AGM"
   }
 } as const;
 
@@ -374,32 +425,57 @@ function SelectField({
 function resolveApplicationDefault(value: string) {
   const normalized = value.toLowerCase();
 
-  if (normalized.includes("ups") || normalized.includes("备用")) {
+  if (
+    normalized.includes("ups") ||
+    normalized.includes("备用") ||
+    normalized.includes("dự phòng")
+  ) {
     return "UPS / standby power";
   }
-  if (normalized.includes("energy storage") || normalized.includes("储能")) {
+  if (
+    normalized.includes("energy storage") ||
+    normalized.includes("储能") ||
+    normalized.includes("lưu trữ")
+  ) {
     return "Energy storage battery";
   }
-  if (normalized.includes("motorcycle") || normalized.includes("摩托")) {
+  if (
+    normalized.includes("motorcycle") ||
+    normalized.includes("摩托") ||
+    normalized.includes("xe máy")
+  ) {
     return "Motorcycle battery";
   }
-  if (normalized.includes("automotive") || normalized.includes("汽车")) {
+  if (
+    normalized.includes("automotive") ||
+    normalized.includes("汽车") ||
+    normalized.includes("ô tô")
+  ) {
     return "Automotive starting battery";
   }
-  if (normalized.includes("telecom") || normalized.includes("通信")) {
+  if (
+    normalized.includes("telecom") ||
+    normalized.includes("通信") ||
+    normalized.includes("viễn thông")
+  ) {
     return "Telecom backup power";
   }
   if (
     normalized.includes("e-bike") ||
     normalized.includes("electric vehicle") ||
-    normalized.includes("电动车")
+    normalized.includes("电动车") ||
+    normalized.includes("xe điện")
   ) {
     return "E-bike battery";
   }
   if (normalized.includes("vrla") || normalized.includes("铅酸")) {
     return "Other VRLA lead-acid battery";
   }
-  if (normalized.includes("not sure") || normalized.includes("暂不确定")) {
+  if (
+    normalized.includes("not sure") ||
+    normalized.includes("暂不确定") ||
+    normalized.includes("chưa xác định")
+  ) {
     return "Not sure";
   }
 
@@ -409,9 +485,13 @@ function resolveApplicationDefault(value: string) {
 function resolveProductFormatDefault(value: string) {
   const normalized = value.toLowerCase();
   const includesRoll =
-    normalized.includes("roll") || normalized.includes("卷材");
+    normalized.includes("roll") ||
+    normalized.includes("卷材") ||
+    normalized.includes("cuộn");
   const includesSheet =
-    normalized.includes("sheet") || normalized.includes("片材");
+    normalized.includes("sheet") ||
+    normalized.includes("片材") ||
+    normalized.includes("tấm");
 
   if (includesRoll && includesSheet) {
     return "Rolls and sheets";
@@ -422,14 +502,18 @@ function resolveProductFormatDefault(value: string) {
   if (includesSheet) {
     return "AGM separator sheets";
   }
-  if (normalized.includes("not sure") || normalized.includes("暂不确定")) {
+  if (
+    normalized.includes("not sure") ||
+    normalized.includes("暂不确定") ||
+    normalized.includes("chưa xác định")
+  ) {
     return "Not sure";
   }
 
   return "";
 }
 
-function appendAttribution(formData: FormData, lang: Lang) {
+function appendAttribution(formData: FormData, lang: SiteLocale) {
   const currentUrl = new URL(window.location.href);
   const firstTouch = ensureFirstTouch();
 
@@ -481,7 +565,7 @@ function ensureFirstTouch() {
   return firstTouch;
 }
 
-function buildInquiryMailto(formData: FormData, lang: Lang) {
+function buildInquiryMailto(formData: FormData, lang: SiteLocale) {
   const t = copy[lang];
   const labels =
     lang === "zh"
@@ -494,6 +578,16 @@ function buildInquiryMailto(formData: FormData, lang: Lang) {
           interestedProduct: "产品形式",
           message: "规格或样品说明"
         }
+      : lang === "vi"
+        ? {
+            name: "Họ và tên",
+            contact: "Liên hệ",
+            company: "Công ty",
+            country: "Quốc gia / Khu vực",
+            application: "Ứng dụng ắc quy",
+            interestedProduct: "Dạng sản phẩm",
+            message: "Thông số hoặc yêu cầu mẫu"
+          }
       : {
           name: "Name",
           contact: "Contact",

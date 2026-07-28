@@ -1,4 +1,4 @@
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
 
 export const sampleRequestFaq = {
   en: [
@@ -36,5 +36,23 @@ export const sampleRequestFaq = {
       "提交表单是否代表确认生产订单？",
       "不是。提交后将进入技术和商务沟通，用于确认应用、规格方向及合适的下一步安排。"
     ]
+  ],
+  vi: [
+    [
+      "Tôi có thể yêu cầu mẫu khi chưa hoàn thiện mọi thông số không?",
+      "Có. Hãy bắt đầu với ứng dụng ắc quy, lựa chọn dạng cuộn hoặc tấm và các kích thước đã biết. Những thông số còn lại có thể được xem xét trong quá trình trao đổi."
+    ],
+    [
+      "Thông tin nào hữu ích cho việc đối chiếu quy cách?",
+      "Ứng dụng ắc quy, độ dày mục tiêu, chiều rộng cuộn hoặc kích thước tấm, dạng sản phẩm, bản vẽ hoặc mẫu tham chiếu và hạng mục thử nghiệm đều hữu ích."
+    ],
+    [
+      "Có thể trao đổi yêu cầu đóng gói cùng với mẫu không?",
+      "Có. Lõi cuộn, đóng gói tấm, nhãn và các yêu cầu đóng gói khác có thể được trao đổi cùng quy cách sản phẩm."
+    ],
+    [
+      "Gửi biểu mẫu có nghĩa là xác nhận đơn hàng sản xuất không?",
+      "Không. Biểu mẫu bắt đầu quá trình trao đổi kỹ thuật và thương mại để hai bên xác nhận ứng dụng, hướng quy cách và bước tiếp theo phù hợp."
+    ]
   ]
-} satisfies Record<Lang, string[][]>;
+} satisfies Record<SiteLocale, string[][]>;

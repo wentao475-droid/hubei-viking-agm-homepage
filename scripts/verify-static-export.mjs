@@ -6,14 +6,18 @@ const outDir = join(root, "out");
 const requiredFiles = [
   "index.html",
   "zh/index.html",
+  "vi/index.html",
   "resources/index.html",
   "zh/resources/index.html",
   "request-agm-separator-sample/index.html",
   "zh/request-agm-separator-sample/index.html",
+  "vi/request-agm-separator-sample/index.html",
+  "vi/products/agm-separator/index.html",
   "applications/agm-separator-for-ups-battery/index.html",
   "zh/applications/agm-separator-for-ups-battery/index.html",
   "applications/agm-separator-for-motorcycle-battery/index.html",
   "zh/applications/agm-separator-for-motorcycle-battery/index.html",
+  "vi/applications/agm-separator-for-motorcycle-battery/index.html",
   "applications/agm-separator-for-energy-storage-battery/index.html",
   "zh/applications/agm-separator-for-energy-storage-battery/index.html",
   "blog/why-ups-projects-still-use-vrla-batteries/index.html",
@@ -66,6 +70,14 @@ if (process.exitCode) {
 
 const indexHtml = readOutFile("index.html");
 const zhHtml = readOutFile("zh/index.html");
+const viHtml = readOutFile("vi/index.html");
+const viProductHtml = readOutFile("vi/products/agm-separator/index.html");
+const viMotorcycleHtml = readOutFile(
+  "vi/applications/agm-separator-for-motorcycle-battery/index.html"
+);
+const viSampleHtml = readOutFile(
+  "vi/request-agm-separator-sample/index.html"
+);
 const resourcesHtml = readOutFile("resources/index.html");
 const zhResourcesHtml = readOutFile("zh/resources/index.html");
 const upsVrlaArticleHtml = readOutFile(
@@ -131,7 +143,7 @@ if (
   fail("Organization structured data is missing official social profiles");
 }
 
-const inquiryFormsUseSelects = [indexHtml, zhHtml].every(
+const inquiryFormsUseSelects = [indexHtml, zhHtml, viHtml, viSampleHtml].every(
   (html) =>
     /<select[^>]+name="application"/.test(html) &&
     /<select[^>]+name="interestedProduct"/.test(html) &&
@@ -201,6 +213,47 @@ if (zhHtml.includes('<html lang="zh-CN"')) {
   pass("Chinese homepage declares lang=zh-CN");
 } else {
   fail("Chinese homepage does not declare lang=zh-CN");
+}
+
+if (viHtml.includes('<html lang="vi"')) {
+  pass("Vietnamese homepage declares lang=vi");
+} else {
+  fail("Vietnamese homepage does not declare lang=vi");
+}
+
+const vietnamesePages = [
+  [viHtml, "/vi/"],
+  [viProductHtml, "/vi/products/agm-separator/"],
+  [
+    viMotorcycleHtml,
+    "/vi/applications/agm-separator-for-motorcycle-battery/"
+  ],
+  [viSampleHtml, "/vi/request-agm-separator-sample/"]
+];
+
+const vietnameseSeoComplete = vietnamesePages.every(([html, path]) =>
+  [
+    `https://www.vikingagm.com${path}`,
+    'hrefLang="vi-VN"',
+    '"inLanguage":"vi-VN"',
+    "vi_VN"
+  ].every((value) => html.includes(value))
+);
+
+if (vietnameseSeoComplete) {
+  pass("Vietnamese pages include canonical, hreflang and localized metadata");
+} else {
+  fail("one or more Vietnamese pages have incomplete localized metadata");
+}
+
+if (
+  viHtml.includes('value="Motorcycle battery"') &&
+  viHtml.includes('value="AGM separator rolls"') &&
+  /name="language"\s+value="vi"/.test(viHtml)
+) {
+  pass("Vietnamese inquiry forms submit canonical values and language=vi");
+} else {
+  fail("Vietnamese inquiry form values are not canonical or language is missing");
 }
 
 if (
@@ -289,10 +342,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 38) {
-  pass("sitemap.xml lists the expected English and Chinese public URLs");
+if (sitemapUrls.length === 42) {
+  pass("sitemap.xml lists the expected English, Chinese and Vietnamese public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 38`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 42`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -309,7 +362,20 @@ if (sitemapMetadataComplete) {
 }
 
 const expectedSitemapLastmod = [
-  ["https://www.vikingagm.com/", "2026-07-05"],
+  ["https://www.vikingagm.com/", "2026-07-28"],
+  ["https://www.vikingagm.com/vi/", "2026-07-28"],
+  [
+    "https://www.vikingagm.com/vi/products/agm-separator/",
+    "2026-07-28"
+  ],
+  [
+    "https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/",
+    "2026-07-28"
+  ],
+  [
+    "https://www.vikingagm.com/vi/request-agm-separator-sample/",
+    "2026-07-28"
+  ],
   [
     "https://www.vikingagm.com/blog/agm-separator-manufacturing-quality-delivery/",
     "2026-07-07"
@@ -321,10 +387,6 @@ const expectedSitemapLastmod = [
   [
     "https://www.vikingagm.com/blog/agm-separator-export-supply-readiness/",
     "2026-07-11"
-  ],
-  [
-    "https://www.vikingagm.com/request-agm-separator-sample/",
-    "2026-07-16"
   ],
   [
     "https://www.vikingagm.com/blog/why-ups-projects-still-use-vrla-batteries/",

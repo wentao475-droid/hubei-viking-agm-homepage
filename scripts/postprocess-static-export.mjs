@@ -10,7 +10,11 @@ for (const file of walk(outDir)) {
   }
 
   const outputPath = relative(outDir, file).replaceAll("\\", "/");
-  const expectedLanguage = outputPath.startsWith("zh/") ? "zh-CN" : "en";
+  const expectedLanguage = outputPath.startsWith("zh/")
+    ? "zh-CN"
+    : outputPath.startsWith("vi/")
+      ? "vi"
+      : "en";
   const source = readFileSync(file, "utf8");
   const result = source.replace(
     /<html\s+lang="[^"]*"/,

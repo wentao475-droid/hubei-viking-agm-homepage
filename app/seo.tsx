@@ -9,7 +9,7 @@ import {
   localizeText,
   resourceArticles
 } from "./resourceCatalog";
-import type { Lang } from "./VikingHome";
+import type { Lang, SiteLocale } from "./locales";
 
 export const SITE_URL = "https://www.vikingagm.com";
 const PREVIEW_IMAGE = `${SITE_URL}/images/viking-finished-separator-roll-900.webp`;
@@ -64,6 +64,26 @@ const homeSeo = {
     serviceName: "AGM 玻璃纤维隔板制造",
     serviceDescription:
       "面向铅酸电池生产企业提供 AGM 隔板卷材和片材，支持过程控制、质量检测和定制规格沟通。"
+  },
+  vi: {
+    path: "/vi/",
+    locale: "vi_VN",
+    language: "vi-VN",
+    siteName: "Viking AGM",
+    alternateSiteName: "Hubei Viking AGM",
+    title: "Nhà sản xuất tấm ngăn AGM cho ắc quy VRLA | Viking AGM",
+    description:
+      "Viking AGM sản xuất tấm ngăn sợi thủy tinh AGM dạng cuộn và tấm cho ắc quy VRLA, UPS, xe máy và lưu trữ năng lượng. Gửi yêu cầu để đối chiếu thông số.",
+    keywords: [
+      "tấm ngăn AGM",
+      "nhà sản xuất tấm ngăn AGM",
+      "tấm ngăn sợi thủy tinh AGM",
+      "tấm ngăn ắc quy VRLA",
+      "tấm ngăn ắc quy chì axit"
+    ],
+    serviceName: "Sản xuất tấm ngăn sợi thủy tinh AGM",
+    serviceDescription:
+      "Cung cấp tấm ngăn AGM dạng cuộn và dạng tấm cho nhà sản xuất ắc quy chì axit, hỗ trợ xác nhận quy cách, kiểm soát chất lượng và yêu cầu đóng gói."
   }
 } as const;
 
@@ -148,6 +168,27 @@ const sampleRequestSeo = {
     serviceDescription:
       "在样品、技术评审或报价沟通前，按电池应用评审 AGM 隔板卷材或片材需求。",
     breadcrumbs: ["首页", "申请 AGM 隔板样品"]
+  },
+  vi: {
+    path: "/vi/request-agm-separator-sample/",
+    alternatePath: "/request-agm-separator-sample/",
+    locale: "vi_VN",
+    language: "vi-VN",
+    siteName: "Viking AGM",
+    title: "Yêu cầu mẫu tấm ngăn AGM và đối chiếu thông số | Viking AGM",
+    description:
+      "Yêu cầu mẫu tấm ngăn AGM cho ắc quy VRLA, UPS và xe máy. Cung cấp ứng dụng, độ dày, chiều rộng và yêu cầu dạng cuộn hoặc dạng tấm.",
+    keywords: [
+      "mẫu tấm ngăn AGM",
+      "đối chiếu thông số tấm ngăn AGM",
+      "mẫu tấm ngăn ắc quy VRLA",
+      "tấm ngăn AGM dạng cuộn",
+      "tấm ngăn AGM dạng tấm"
+    ],
+    pageName: "Mẫu tấm ngăn AGM và đối chiếu thông số",
+    serviceDescription:
+      "Xem xét yêu cầu tấm ngăn AGM dạng cuộn hoặc dạng tấm theo ứng dụng trước khi gửi mẫu, trao đổi kỹ thuật hoặc báo giá.",
+    breadcrumbs: ["Trang chủ", "Yêu cầu mẫu tấm ngăn AGM"]
   }
 } as const;
 
@@ -193,6 +234,27 @@ const agmSeparatorSeo = {
     serviceDescription:
       "用于 VRLA 铅酸电池的 AGM 玻璃纤维隔板，可按卷材和片材形式与客户沟通规格。",
     breadcrumbs: ["首页", "产品", "AGM 隔板"]
+  },
+  vi: {
+    path: "/vi/products/agm-separator/",
+    alternatePath: "/products/agm-separator/",
+    locale: "vi_VN",
+    language: "vi-VN",
+    siteName: "Viking AGM",
+    title: "Tấm ngăn sợi thủy tinh AGM cho ắc quy VRLA | Viking AGM",
+    description:
+      "Tấm ngăn sợi thủy tinh AGM cho ắc quy chì axit VRLA, có dạng cuộn và dạng tấm. Gửi độ dày, chiều rộng và ứng dụng để đối chiếu thông số.",
+    keywords: [
+      "tấm ngăn AGM",
+      "tấm ngăn ắc quy AGM",
+      "tấm ngăn sợi thủy tinh AGM",
+      "tấm ngăn ắc quy VRLA",
+      "nhà sản xuất tấm ngăn AGM"
+    ],
+    productName: "Tấm ngăn AGM cho ắc quy chì axit VRLA",
+    serviceDescription:
+      "Tấm ngăn sợi thủy tinh AGM dạng cuộn và dạng tấm cho ắc quy chì axit VRLA, hỗ trợ đối chiếu thông số theo yêu cầu của khách hàng.",
+    breadcrumbs: ["Trang chủ", "Sản phẩm", "Tấm ngăn AGM"]
   }
 } as const;
 
@@ -471,6 +533,29 @@ const agmSeparatorMotorcycleApplicationSeo = {
     serviceType: "摩托车电池应用 AGM 隔板",
     image: MOTORCYCLE_APPLICATION_IMAGE,
     breadcrumbs: ["首页", "应用", "摩托车电池 AGM 隔板"]
+  },
+  vi: {
+    path: "/vi/applications/agm-separator-for-motorcycle-battery/",
+    alternatePath: "/applications/agm-separator-for-motorcycle-battery/",
+    locale: "vi_VN",
+    language: "vi-VN",
+    siteName: "Viking AGM",
+    title: "Tấm ngăn AGM cho ắc quy xe máy | Viking AGM",
+    description:
+      "Tấm ngăn AGM cho ắc quy khởi động xe máy và ắc quy VRLA nhỏ gọn, hỗ trợ xác nhận dạng cuộn, dạng tấm, kích thước và yêu cầu mẫu.",
+    keywords: [
+      "tấm ngăn AGM cho ắc quy xe máy",
+      "tấm ngăn ắc quy xe máy",
+      "tấm ngăn ắc quy VRLA xe máy",
+      "tấm ngăn ắc quy khởi động",
+      "tấm ngăn AGM dạng tấm"
+    ],
+    pageName: "Tấm ngăn AGM cho ứng dụng ắc quy xe máy",
+    serviceDescription:
+      "Đối chiếu tấm ngăn sợi thủy tinh AGM cho ắc quy khởi động xe máy và sản xuất ắc quy chì axit VRLA nhỏ gọn.",
+    serviceType: "Tấm ngăn AGM cho ứng dụng ắc quy xe máy",
+    image: MOTORCYCLE_APPLICATION_IMAGE,
+    breadcrumbs: ["Trang chủ", "Ứng dụng", "Tấm ngăn AGM cho ắc quy xe máy"]
   }
 } as const;
 
@@ -902,7 +987,7 @@ const agmGlassFiberVsPvcSeparatorSeo = {
   }
 } as const;
 
-export function buildHomeMetadata(lang: Lang): Metadata {
+export function buildHomeMetadata(lang: SiteLocale): Metadata {
   const current = seoContent("home", lang, homeSeo[lang]);
 
   return buildMetadata({
@@ -912,6 +997,7 @@ export function buildHomeMetadata(lang: Lang): Metadata {
     path: current.path,
     enPath: "/",
     zhPath: "/zh/",
+    viPath: "/vi/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.serviceName
@@ -939,7 +1025,7 @@ export function buildResourcesHubMetadata(lang: Lang): Metadata {
   });
 }
 
-export function buildSampleRequestMetadata(lang: Lang): Metadata {
+export function buildSampleRequestMetadata(lang: SiteLocale): Metadata {
   const current = sampleRequestSeo[lang];
 
   return buildMetadata({
@@ -949,6 +1035,7 @@ export function buildSampleRequestMetadata(lang: Lang): Metadata {
     path: current.path,
     enPath: "/request-agm-separator-sample/",
     zhPath: "/zh/request-agm-separator-sample/",
+    viPath: "/vi/request-agm-separator-sample/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -960,7 +1047,7 @@ export function buildSampleRequestMetadata(lang: Lang): Metadata {
   });
 }
 
-export function buildAgmSeparatorMetadata(lang: Lang): Metadata {
+export function buildAgmSeparatorMetadata(lang: SiteLocale): Metadata {
   const current = seoContent("agmSeparator", lang, agmSeparatorSeo[lang]);
 
   return buildMetadata({
@@ -970,6 +1057,7 @@ export function buildAgmSeparatorMetadata(lang: Lang): Metadata {
     path: current.path,
     enPath: "/products/agm-separator/",
     zhPath: "/zh/products/agm-separator/",
+    viPath: "/vi/products/agm-separator/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName
@@ -1062,10 +1150,11 @@ export function buildAgmSeparatorVrlaApplicationMetadata(
 }
 
 function buildApplicationDetailMetadata(
-  lang: Lang,
+  lang: SiteLocale,
   current: ApplicationDetailSeo,
   enPath: string,
-  zhPath: string
+  zhPath: string,
+  viPath?: string
 ): Metadata {
   return buildMetadata({
     title: current.title,
@@ -1074,6 +1163,7 @@ function buildApplicationDetailMetadata(
     path: current.path,
     enPath,
     zhPath,
+    viPath,
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -1101,7 +1191,7 @@ export function buildAgmSeparatorUpsApplicationMetadata(
 }
 
 export function buildAgmSeparatorMotorcycleApplicationMetadata(
-  lang: Lang
+  lang: SiteLocale
 ): Metadata {
   return buildApplicationDetailMetadata(
     lang,
@@ -1111,7 +1201,8 @@ export function buildAgmSeparatorMotorcycleApplicationMetadata(
       agmSeparatorMotorcycleApplicationSeo[lang]
     ),
     "/applications/agm-separator-for-motorcycle-battery/",
-    "/zh/applications/agm-separator-for-motorcycle-battery/"
+    "/zh/applications/agm-separator-for-motorcycle-battery/",
+    "/vi/applications/agm-separator-for-motorcycle-battery/"
   );
 }
 
@@ -1343,6 +1434,7 @@ function buildMetadata({
   path,
   enPath,
   zhPath,
+  viPath,
   locale,
   siteName,
   imageAlt,
@@ -1358,6 +1450,7 @@ function buildMetadata({
   path: string;
   enPath: string;
   zhPath: string;
+  viPath?: string;
   locale: string;
   siteName: string;
   imageAlt: string;
@@ -1376,6 +1469,7 @@ function buildMetadata({
       languages: {
         en: enPath,
         "zh-CN": zhPath,
+        ...(viPath ? { "vi-VN": viPath } : {}),
         "x-default": enPath
       }
     },
@@ -1404,7 +1498,7 @@ function buildMetadata({
   };
 }
 
-export function StructuredData({ lang }: { lang: Lang }) {
+export function StructuredData({ lang }: { lang: SiteLocale }) {
   const current = seoContent("home", lang, homeSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
   const data = {
@@ -1442,11 +1536,15 @@ export function StructuredData({ lang }: { lang: Lang }) {
         name:
           lang === "zh"
             ? "1 分钟了解维京 AGM 隔板生产能力"
-            : "Watch the 1-minute Viking AGM factory overview",
+            : lang === "vi"
+              ? "Tổng quan 1 phút về nhà máy tấm ngăn AGM Viking"
+              : "Watch the 1-minute Viking AGM factory overview",
         description:
           lang === "zh"
             ? "湖北维京 AGM 隔板生产、卷材处理、质量检测和包装出运现场宣传片。"
-            : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
+            : lang === "vi"
+              ? "Video một phút giới thiệu sản xuất tấm ngăn AGM, xử lý cuộn, kiểm soát chất lượng và đóng gói tại Viking AGM."
+              : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
         thumbnailUrl: [HOME_VIDEO_POSTER],
         uploadDate: "2026-07-01T00:00:00+08:00",
         duration: "PT1M3S",
@@ -1463,10 +1561,10 @@ export function StructuredData({ lang }: { lang: Lang }) {
   return <JsonLd data={data} />;
 }
 
-export function SampleRequestStructuredData({ lang }: { lang: Lang }) {
+export function SampleRequestStructuredData({ lang }: { lang: SiteLocale }) {
   const current = sampleRequestSeo[lang];
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : "/";
+  const homePath = lang === "zh" ? "/zh/" : lang === "vi" ? "/vi/" : "/";
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -1529,10 +1627,10 @@ export function SampleRequestStructuredData({ lang }: { lang: Lang }) {
   return <JsonLd data={data} />;
 }
 
-export function AgmSeparatorStructuredData({ lang }: { lang: Lang }) {
+export function AgmSeparatorStructuredData({ lang }: { lang: SiteLocale }) {
   const current = seoContent("agmSeparator", lang, agmSeparatorSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : "/";
+  const homePath = lang === "zh" ? "/zh/" : lang === "vi" ? "/vi/" : "/";
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -1846,11 +1944,11 @@ function ApplicationDetailStructuredData({
   lang,
   current
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   current: ApplicationDetailSeo;
 }) {
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : "/";
+  const homePath = lang === "zh" ? "/zh/" : lang === "vi" ? "/vi/" : "/";
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -1928,7 +2026,7 @@ export function AgmSeparatorUpsApplicationStructuredData({
 export function AgmSeparatorMotorcycleApplicationStructuredData({
   lang
 }: {
-  lang: Lang;
+  lang: SiteLocale;
 }) {
   return (
     <ApplicationDetailStructuredData
@@ -2607,7 +2705,7 @@ export function ResourcesHubStructuredData({ lang }: { lang: Lang }) {
   return <JsonLd data={data} />;
 }
 
-function organizationData(lang: Lang, description: string) {
+function organizationData(lang: SiteLocale, description: string) {
   return {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -2616,7 +2714,9 @@ function organizationData(lang: Lang, description: string) {
     alternateName:
       lang === "zh"
         ? ["湖北维京科技有限公司", "维京AGM", "Viking AGM"]
-        : ["Hubei Viking Technology Co., Ltd.", "Hubei Viking AGM", "湖北维京AGM"],
+        : lang === "vi"
+          ? ["Hubei Viking Technology Co., Ltd.", "Viking AGM Việt Nam", "湖北维京AGM"]
+          : ["Hubei Viking Technology Co., Ltd.", "Hubei Viking AGM", "湖北维京AGM"],
     url: SITE_URL,
     logo: `${SITE_URL}/images/banner-logo-header.webp`,
     sameAs: [socialProfileUrls.tiktok, socialProfileUrls.linkedin],
@@ -2627,7 +2727,7 @@ function organizationData(lang: Lang, description: string) {
       telephone: "+86 18171518528",
       email: "vikingsales@vikingagm.com",
       contactType: "sales",
-      availableLanguage: ["en", "zh-CN"]
+      availableLanguage: ["en", "zh-CN", "vi-VN"]
     },
     foundingDate: "2015-12",
     address: {
@@ -2640,7 +2740,7 @@ function organizationData(lang: Lang, description: string) {
   };
 }
 
-function faqPageData(url: string, lang: Lang) {
+function faqPageData(url: string, lang: SiteLocale) {
   const copy = productFaqCopy[lang];
 
   return {

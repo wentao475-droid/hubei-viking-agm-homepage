@@ -148,7 +148,10 @@ function collectConstants(path, names) {
 }
 
 const home = collectConstants("app/VikingHome.tsx", ["copy"]).copy;
-const productConstants = collectConstants("app/ProductPage.tsx", ["content"]);
+const productConstants = collectConstants("app/ProductPage.tsx", [
+  "content",
+  "viContent"
+]);
 const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "articleCopy",
   "keyTechnicalCopy",
@@ -161,6 +164,7 @@ const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
 ]);
 const seoConstants = collectConstants("app/seo.tsx", [
   "homeSeo",
+  "sampleRequestSeo",
   "agmSeparatorSeo",
   "agmSeparatorRollsSeo",
   "agmSeparatorSheetsSeo",
@@ -179,9 +183,17 @@ const seoConstants = collectConstants("app/seo.tsx", [
   "agmGlassFiberVsPvcSeparatorSeo"
 ]);
 
+const products = structuredClone(productConstants.content);
+for (const [page, value] of Object.entries(productConstants.viContent)) {
+  products[page] = {
+    ...products[page],
+    vi: value
+  };
+}
+
 const content = {
   home,
-  products: productConstants.content,
+  products,
   articles: {
     whatIsAgmSeparator: articleConstants.articleCopy,
     keyTechnicalParameters: articleConstants.keyTechnicalCopy,
@@ -199,6 +211,7 @@ const content = {
   },
   seo: {
     home: seoConstants.homeSeo,
+    sampleRequest: seoConstants.sampleRequestSeo,
     agmSeparator: seoConstants.agmSeparatorSeo,
     agmSeparatorRolls: seoConstants.agmSeparatorRollsSeo,
     agmSeparatorSheets: seoConstants.agmSeparatorSheetsSeo,

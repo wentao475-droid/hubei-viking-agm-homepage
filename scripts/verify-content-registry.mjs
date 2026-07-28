@@ -76,11 +76,55 @@ check(
   "resource hub is registered in the sitemap"
 );
 
+const vietnamesePages = [
+  {
+    key: "home",
+    route: "app/vi/page.tsx",
+    path: "/vi/",
+    content: content.home?.vi,
+    seo: content.seo?.home?.vi
+  },
+  {
+    key: "agmSeparator",
+    route: "app/vi/products/agm-separator/page.tsx",
+    path: "/vi/products/agm-separator/",
+    content: content.products?.agmSeparator?.vi,
+    seo: content.seo?.agmSeparator?.vi
+  },
+  {
+    key: "agmSeparatorMotorcycleApplication",
+    route:
+      "app/vi/applications/agm-separator-for-motorcycle-battery/page.tsx",
+    path: "/vi/applications/agm-separator-for-motorcycle-battery/",
+    content: content.products?.agmSeparatorMotorcycleApplication?.vi,
+    seo: content.seo?.agmSeparatorMotorcycleApplication?.vi
+  },
+  {
+    key: "sampleRequest",
+    route: "app/vi/request-agm-separator-sample/page.tsx",
+    path: "/vi/request-agm-separator-sample/",
+    content: content.home?.vi,
+    seo: content.seo?.sampleRequest?.vi
+  }
+];
+
+for (const page of vietnamesePages) {
+  check(Boolean(page.content), `${page.key} has Vietnamese page content`);
+  check(Boolean(page.seo), `${page.key} has Vietnamese SEO content`);
+  check(existsSync(join(root, page.route)), `${page.key} has a Vietnamese route`);
+  check(
+    sitemapSource.includes(`vi: "${page.path}"`),
+    `${page.key} is registered as Vietnamese in the sitemap`
+  );
+}
+
 if (failed) {
   process.exit(1);
 }
 
-console.log(`PASS content registry is complete for ${articles.length} bilingual articles`);
+console.log(
+  `PASS content registry is complete for ${articles.length} bilingual articles and ${vietnamesePages.length} Vietnamese pages`
+);
 
 function check(condition, message) {
   if (condition) {

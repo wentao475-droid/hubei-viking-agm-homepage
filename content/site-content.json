@@ -757,6 +757,365 @@
           ]
         ]
       }
+    },
+    "vi": {
+      "nav": {
+        "company": "Công ty",
+        "products": "Sản phẩm",
+        "applications": "Ứng dụng",
+        "quality": "Chất lượng",
+        "contact": "Liên hệ"
+      },
+      "language": "EN",
+      "hero": {
+        "badge": "Viking AGM · Nhà sản xuất",
+        "title": [
+          "Nhà sản xuất chuyên nghiệp",
+          "tấm ngăn sợi thủy tinh AGM"
+        ],
+        "subtitle": "Tập trung sản xuất và cung cấp ổn định tấm ngăn sợi thủy tinh AGM cho các nhà sản xuất ắc quy axit-chì.",
+        "quote": "Yêu cầu báo giá",
+        "products": "Xem sản phẩm",
+        "proof": [
+          "Tấm ngăn sợi thủy tinh AGM",
+          "Kiểm soát quy trình sản xuất",
+          "Hỗ trợ cung ứng xuất khẩu"
+        ],
+        "image": {
+          "src": "/images/agm-hero-production-1600.webp",
+          "alt": "Dây chuyền sản xuất tấm ngăn AGM",
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      "video": {
+        "eyebrow": "Tổng quan nhà máy",
+        "title": "Xem nhà máy Viking AGM trong 1 phút",
+        "text": "Hình ảnh thực tế về sản xuất tấm ngăn AGM, xử lý cuộn, kiểm tra chất lượng và chuẩn bị đóng gói để người mua đánh giá.",
+        "duration": "Video nhà máy 1 phút",
+        "play": "Phát video",
+        "close": "Đóng video",
+        "aria": "Phát video tổng quan nhà máy Viking AGM"
+      },
+      "stats": [
+        {
+          "value": "AGM",
+          "label": "Sản xuất tấm ngăn sợi thủy tinh"
+        },
+        {
+          "value": "OEM",
+          "label": "Trao đổi quy cách cuộn và tấm"
+        },
+        {
+          "value": "QC",
+          "label": "Kiểm tra và theo dõi quy trình"
+        }
+      ],
+      "company": {
+        "eyebrow": "Tổng quan công ty",
+        "title": "Nhà sản xuất tấm ngăn AGM định hướng công nghệ tại Hồ Bắc",
+        "text": [
+          "Công ty TNHH Công nghệ Hubei Viking được thành lập vào tháng 12 năm 2015 với vốn đăng ký 30 triệu NDT. Nhà máy đặt tại Khu phát triển kinh tế và công nghệ Ngạc Châu, tỉnh Hồ Bắc, trên diện tích khoảng 65 mẫu Trung Quốc, tập trung nghiên cứu, sản xuất và kinh doanh tấm ngăn sợi thủy tinh siêu mịn.",
+          "Công ty chủ yếu sản xuất các sản phẩm tấm ngăn AGM với công suất hằng năm khoảng 4.000 tấn. Nhiều dây chuyền sản xuất AGM cùng hệ thống kiểm soát quy trình, kiểm tra và quản lý chất lượng hỗ trợ cung ứng theo lô.",
+          "Viking Technology đã đạt chứng nhận hệ thống quản lý chất lượng ISO9001:2015. Quy cách sản phẩm có thể được trao đổi theo yêu cầu khách hàng và ứng dụng ắc quy axit-chì."
+        ],
+        "imageLabel": "Văn phòng và cơ sở sản xuất của Hubei Viking Technology",
+        "image": {
+          "src": "/images/viking-company-building-900.webp",
+          "alt": "Văn phòng và cơ sở sản xuất của Hubei Viking Technology",
+          "width": 900,
+          "height": 675
+        },
+        "cards": [
+          [
+            "Thành lập năm 2015",
+            "Vốn đăng ký 30 triệu NDT và tập trung lâu dài vào sản xuất tấm ngăn AGM."
+          ],
+          [
+            "Khu sản xuất khoảng 65 mẫu",
+            "Đặt tại Khu phát triển kinh tế và công nghệ Ngạc Châu, tỉnh Hồ Bắc."
+          ],
+          [
+            "Công suất khoảng 4.000 tấn/năm",
+            "Nhiều dây chuyền sản xuất AGM hỗ trợ cung ứng ổn định theo lô."
+          ],
+          [
+            "Chứng nhận ISO9001:2015",
+            "Hệ thống quản lý chất lượng hỗ trợ quá trình đánh giá nhà cung cấp."
+          ],
+          [
+            "Sản xuất theo quy cách",
+            "Có thể trao đổi độ dày, chiều rộng và dạng sản phẩm theo ứng dụng."
+          ]
+        ]
+      },
+      "values": {
+        "eyebrow": "Giá trị sản phẩm",
+        "title": "Hướng đến hiệu suất ắc quy ổn định",
+        "text": "Tấm ngăn AGM được phát triển với trọng tâm là khả năng hút axit, đặc tính nén và tính nhất quán giữa các lô, được hỗ trợ bằng kiểm soát từ nguyên liệu đến khi xuất xưởng.",
+        "items": [
+          [
+            "Khả năng hút axit cao",
+            "Hấp thụ điện phân nhanh và giữ phân bố tương đối đồng đều trên vật liệu."
+          ],
+          [
+            "Điện trở thấp",
+            "Được thiết kế để hỗ trợ dẫn dòng và hiệu suất của ắc quy."
+          ],
+          [
+            "Độ dày ổn định",
+            "Kiểm soát độ dày giúp lắp ráp bản cực và quản lý độ nén."
+          ],
+          [
+            "Độ bền kéo phù hợp",
+            "Hỗ trợ quá trình xẻ cuộn, cắt và lắp ráp trên dây chuyền."
+          ],
+          [
+            "Chất lượng nhất quán",
+            "Kiểm soát giữa các lô cho nhu cầu sản xuất hàng loạt."
+          ]
+        ],
+        "images": [
+          [
+            "Cuộn tấm ngăn thành phẩm",
+            "Cuộn AGM chuẩn bị cho dây chuyền sản xuất và gia công ắc quy.",
+            "/images/viking-finished-separator-roll-900.webp"
+          ],
+          [
+            "Tấm ngăn cắt sẵn",
+            "Tấm cắt theo quy cách để đánh giá mẫu và trao đổi lắp ráp.",
+            "/images/viking-separator-sheets-900.webp"
+          ]
+        ]
+      },
+      "applications": {
+        "eyebrow": "Ứng dụng",
+        "title": "Vật liệu tấm ngăn cho các phân khúc ắc quy axit-chì chính",
+        "items": [
+          "Ắc quy VRLA",
+          "Ắc quy UPS",
+          "Ắc quy xe máy",
+          "Ắc quy khởi động ô tô",
+          "Hệ thống lưu trữ năng lượng"
+        ]
+      },
+      "factory": {
+        "eyebrow": "Năng lực sản xuất",
+        "title": "Bằng chứng sản xuất để người mua đánh giá",
+        "text": "Thiết bị xưởng, theo dõi trên dây chuyền và năng lực xử lý cuộn giúp khách hàng hiểu rõ hơn cách vật liệu được sản xuất, kiểm tra và chuẩn bị giao hàng.",
+        "items": [
+          [
+            "Sản xuất liên tục dạng cuộn",
+            "Hình ảnh dây chuyền hỗ trợ trao đổi về cung ứng vật liệu liên tục."
+          ],
+          [
+            "Theo dõi tại dây chuyền",
+            "Thiết bị và thông số sản xuất giúp việc theo dõi quy trình cụ thể hơn."
+          ],
+          [
+            "Đóng gói và giao hàng",
+            "Có thể trao đổi kích thước cuộn, phương án đóng gói và lịch xuất hàng."
+          ],
+          [
+            "Quy cách theo yêu cầu",
+            "Có thể xem xét độ dày, chiều rộng, dạng cuộn và yêu cầu theo ứng dụng."
+          ]
+        ],
+        "image": {
+          "src": "/images/agm-factory-capability-1200.webp",
+          "alt": "Xưởng sản xuất tấm ngăn AGM",
+          "width": 1200,
+          "height": 900
+        }
+      },
+      "process": {
+        "eyebrow": "Quy trình sản xuất",
+        "title": "Từ lựa chọn nguyên liệu đến theo dõi khách hàng",
+        "text": "Quy trình kết nối lựa chọn nguyên liệu, chuẩn bị bột sợi, tạo hình, kiểm tra, phân tích chất lượng và theo dõi khách hàng.",
+        "steps": [
+          "Lựa chọn nguyên liệu",
+          "Kiểm tra đầu vào",
+          "Xử lý sợi và nước",
+          "Chuẩn bị bột sợi",
+          "Tạo hình, sấy và ghép",
+          "Xẻ cuộn và cố định",
+          "Phân tích chất lượng",
+          "Xuất xưởng",
+          "Theo dõi khách hàng"
+        ],
+        "image": {
+          "src": "/images/manufacturing-process-1400.webp",
+          "alt": "Sơ đồ quy trình sản xuất tấm ngăn AGM",
+          "width": 1400,
+          "height": 1000
+        }
+      },
+      "quality": {
+        "eyebrow": "Kiểm soát chất lượng",
+        "title": "Chứng nhận, kiểm tra và quy trình xuất xưởng",
+        "text": "Bảo đảm chất lượng gồm tài liệu chứng nhận, kiểm tra trong quá trình, phân tích thành phẩm, kiểm soát xuất xưởng và phản hồi khách hàng.",
+        "items": [
+          "Tài liệu chứng nhận để đánh giá",
+          "Kiểm tra đầu vào và trong quá trình",
+          "Phân tích chất lượng thành phẩm",
+          "Xuất xưởng và theo dõi khách hàng"
+        ],
+        "image": {
+          "src": "/images/agm-quality-control-1200.webp",
+          "alt": "Kiểm tra chất lượng tấm ngăn AGM",
+          "width": 1200,
+          "height": 900
+        }
+      },
+      "certifications": {
+        "eyebrow": "Chứng nhận và tuân thủ",
+        "title": "Tài liệu phục vụ đánh giá nhà cung cấp",
+        "text": "Giấy phép kinh doanh và tài liệu chứng nhận có thể được cung cấp để người mua đánh giá. Tên, số và thời hạn cụ thể được xác nhận theo tài liệu gốc.",
+        "items": [
+          "Tài liệu giấy phép kinh doanh",
+          "Tài liệu chứng nhận hệ thống quản lý",
+          "Tài liệu công nhận sản phẩm hoặc doanh nghiệp",
+          "Tài liệu chi tiết theo yêu cầu"
+        ],
+        "note": "Tài liệu gốc có thể được cung cấp để xác nhận chi tiết trong quá trình đánh giá nhà cung cấp."
+      },
+      "why": {
+        "eyebrow": "Vì sao chọn chúng tôi",
+        "title": "Đối tác sản xuất thực tế cho doanh nghiệp ắc quy quốc tế",
+        "items": [
+          [
+            "Kinh nghiệm sản xuất",
+            "Tập trung vào vật liệu tấm ngăn AGM cho ứng dụng ắc quy axit-chì."
+          ],
+          [
+            "Kế hoạch giao hàng",
+            "Lịch sản xuất và đóng gói được trao đổi theo nhu cầu đơn hàng."
+          ],
+          [
+            "Hỗ trợ OEM / quy cách riêng",
+            "Trao đổi theo loại ắc quy, quy trình và dạng cuộn."
+          ],
+          [
+            "Giao tiếp xuất khẩu",
+            "Phản hồi kỹ thuật và thương mại rõ ràng cho người mua quốc tế."
+          ]
+        ]
+      },
+      "form": {
+        "eyebrow": "Yêu cầu",
+        "title": "Để lại thông tin liên hệ",
+        "text": "Bạn chỉ cần để lại thông tin liên hệ. Đội ngũ sẽ tiếp tục trao đổi về độ dày, chiều rộng, số lượng và ứng dụng.",
+        "hints": [
+          "Email, WhatsApp hoặc điện thoại là đủ để bắt đầu",
+          "Chúng tôi hỗ trợ xác nhận quy cách phù hợp",
+          "Độ dày, chiều rộng và số lượng có thể trao đổi sau"
+        ],
+        "fields": {
+          "name": "Họ và tên",
+          "contact": "Email / WhatsApp / Điện thoại",
+          "company": "Công ty",
+          "interestedProduct": "Sản phẩm quan tâm",
+          "message": "Nội dung"
+        },
+        "placeholders": {
+          "name": "Họ và tên của bạn",
+          "contact": "Email, WhatsApp hoặc số điện thoại",
+          "company": "Tên công ty",
+          "interestedProduct": "Tấm ngăn AGM dạng cuộn, dạng tấm hoặc chưa xác định",
+          "message": "Không bắt buộc: ứng dụng ắc quy, số lượng, yêu cầu mẫu hoặc câu hỏi kỹ thuật"
+        },
+        "submit": "Gửi thông tin liên hệ",
+        "submitting": "Đang gửi...",
+        "success": "Cảm ơn bạn. Chúng tôi sẽ liên hệ để xác nhận yêu cầu tấm ngăn AGM.",
+        "required": "Vui lòng nhập họ tên và thông tin liên hệ.",
+        "emailFallback": "Ứng dụng email đã được mở với thông tin đã chuẩn bị. Vui lòng gửi email để hoàn tất.",
+        "failure": "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau hoặc liên hệ trực tiếp."
+      },
+      "faq": {
+        "eyebrow": "Câu hỏi thường gặp",
+        "title": "Các câu hỏi trước khi yêu cầu hỗ trợ tấm ngăn AGM",
+        "items": [
+          [
+            "Có thể trao đổi độ dày hoặc chiều rộng theo yêu cầu không?",
+            "Có. Độ dày, chiều rộng, dạng cuộn và kích thước tấm có thể được xem xét theo thiết kế ắc quy và quy trình sản xuất."
+          ],
+          [
+            "Có thể yêu cầu mẫu trước đơn hàng số lượng lớn không?",
+            "Có thể trao đổi mẫu sau khi xác nhận dạng sản phẩm, ứng dụng và hướng quy cách cơ bản."
+          ],
+          [
+            "Tấm ngăn AGM phù hợp với những ứng dụng nào?",
+            "Có thể trao đổi cho ắc quy axit-chì VRLA, UPS, xe máy, khởi động ô tô và lưu trữ năng lượng."
+          ],
+          [
+            "Cần cung cấp thông tin gì để nhận báo giá?",
+            "Ứng dụng, dạng cuộn hoặc tấm, độ dày, chiều rộng hoặc kích thước tấm, số lượng dự kiến và yêu cầu thử nghiệm sẽ hữu ích."
+          ]
+        ]
+      },
+      "footer": {
+        "description": "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
+        "wechat": "Tài khoản WeChat chính thức",
+        "mobile": "Website di động",
+        "columns": {
+          "Công ty": [
+            [
+              "Giới thiệu sản xuất",
+              "/vi/#company"
+            ],
+            [
+              "Liên hệ",
+              "/vi/#contact"
+            ]
+          ],
+          "Sản phẩm": [
+            [
+              "Tấm ngăn AGM",
+              "/vi/products/agm-separator/"
+            ],
+            [
+              "Dạng cuộn và tấm",
+              "/vi/products/agm-separator/"
+            ]
+          ],
+          "Ứng dụng": [
+            [
+              "Ắc quy xe máy",
+              "/vi/applications/agm-separator-for-motorcycle-battery/"
+            ]
+          ],
+          "Liên hệ": [
+            [
+              "Yêu cầu mẫu",
+              "/vi/request-agm-separator-sample/"
+            ],
+            [
+              "Yêu cầu kỹ thuật",
+              "/vi/#contact"
+            ],
+            [
+              "Hồ sơ kỹ thuật EN/ZH",
+              "/downloads/viking-agm-technical-capability.pdf"
+            ]
+          ]
+        },
+        "logo": {
+          "src": "/images/viking-logo-footer-320.webp",
+          "alt": "Logo Viking Technology",
+          "width": 320,
+          "height": 320
+        },
+        "qrImages": [
+          [
+            "Tài khoản WeChat chính thức",
+            "/images/qrcode_for_logo.jpg"
+          ],
+          [
+            "Website di động",
+            "/images/website-logo-180.webp"
+          ]
+        ]
+      }
     }
   },
   "products": {
@@ -1119,6 +1478,179 @@
           "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
           "wechat": "官方微信公众号",
           "mobile": "移动官网"
+        }
+      },
+      "vi": {
+        "homePath": "/vi/",
+        "languagePath": "/products/agm-separator/",
+        "quote": "Yêu cầu báo giá",
+        "hero": {
+          "eyebrow": "Sản phẩm tấm ngăn AGM",
+          "title": "Tấm ngăn sợi thủy tinh AGM cho ắc quy VRLA",
+          "subtitle": "Tấm ngăn AGM dạng cuộn hoặc tấm cho các nhà sản xuất và đối tác thương mại ắc quy axit-chì VRLA.",
+          "primary": "Yêu cầu mẫu tấm ngăn AGM",
+          "secondary": "Gửi quy cách cần thiết",
+          "proof": [
+            "Trao đổi dạng cuộn và tấm",
+            "Xác nhận theo yêu cầu khách hàng",
+            "Liên hệ trực tiếp với nhà máy"
+          ],
+          "image": {
+            "src": "/images/viking-finished-separator-roll-900.webp",
+            "alt": "Cuộn tấm ngăn sợi thủy tinh AGM thành phẩm",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "Tổng quan sản phẩm",
+          "title": "Vật liệu tấm ngăn gắn với thiết kế và hiệu suất ắc quy",
+          "paragraphs": [
+            "Tấm ngăn AGM là vật liệu sợi thủy tinh dùng trong ắc quy axit-chì VRLA. Vật liệu giúp cách ly bản cực dương và âm, đồng thời giữ chất điện phân trong cấu trúc ắc quy.",
+            "Đối với nhà sản xuất ắc quy, lựa chọn tấm ngăn liên quan đến thiết kế bản cực, khả năng giữ điện phân, điện trở trong, quy trình lắp ráp và hiệu suất lâu dài.",
+            "Chúng tôi cung cấp dạng cuộn và tấm. Độ dày, chiều rộng, kích thước tấm và đóng gói có thể được trao đổi theo thiết kế ắc quy và quy trình sản xuất."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Thông số chính",
+          "title": "Các thông số người mua thường cần xác nhận",
+          "text": "Việc lựa chọn tấm ngăn AGM cho ắc quy VRLA thường xem xét đồng thời độ dày, chiều rộng, định lượng, khả năng hút axit, điện trở và độ bền thao tác.",
+          "items": [
+            [
+              "Độ dày",
+              "Cần được xem xét cùng khoảng cách bản cực, độ nén và yêu cầu lắp ráp."
+            ],
+            [
+              "Chiều rộng hoặc kích thước tấm",
+              "Có thể trao đổi chiều rộng cuộn, hướng xẻ hoặc kích thước cắt sẵn."
+            ],
+            [
+              "Định lượng",
+              "Được đánh giá cùng cấu trúc vật liệu, khả năng giữ điện phân và phương pháp thử."
+            ],
+            [
+              "Khả năng hút axit",
+              "Xác nhận theo ứng dụng, nhu cầu giữ điện phân và điều kiện thử đã thống nhất."
+            ],
+            [
+              "Điện trở",
+              "Xem xét với mục tiêu hiệu suất ắc quy và điều kiện thử."
+            ],
+            [
+              "Độ rỗng và độ bền",
+              "Có thể kiểm tra theo nhu cầu gia công, cắt và lắp ráp."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Dạng sản phẩm",
+          "title": "Có thể trao đổi quy cách dạng cuộn và dạng tấm",
+          "items": [
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "Có thể trao đổi độ dày, chiều rộng, đường kính cuộn, cách đóng gói và kế hoạch sản xuất.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Cuộn tấm ngăn AGM thành phẩm",
+              900,
+              675
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "Tấm cắt sẵn hỗ trợ đánh giá mẫu, xác nhận quy cách và yêu cầu lắp ráp.",
+              "/images/viking-separator-sheets-900.webp",
+              "Tấm ngăn AGM cắt sẵn",
+              900,
+              675
+            ],
+            [
+              "Theo dõi sản xuất",
+              "Hình ảnh nguyên liệu và dây chuyền giúp trao đổi cụ thể hơn về quá trình sản xuất.",
+              "/images/evidence/factory-raw-material-feed-01.webp",
+              "Nguyên liệu tấm ngăn AGM vào dây chuyền",
+              1200,
+              900
+            ],
+            [
+              "Chuẩn bị đóng gói và giao hàng",
+              "Có thể xem xét cách đóng gói, pallet và chuẩn bị xuất hàng.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "Đóng gói và chuẩn bị giao tấm ngăn AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Ứng dụng",
+          "title": "Dùng cho các phân khúc ắc quy axit-chì VRLA chính",
+          "items": [
+            "Ắc quy UPS",
+            "Nguồn dự phòng viễn thông",
+            "Ắc quy xe máy",
+            "Ắc quy khởi động ô tô",
+            "Ắc quy lưu trữ năng lượng"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Ghi chú chất lượng",
+          "title": "Hạng mục kiểm tra theo yêu cầu đã xác nhận",
+          "text": "Hạng mục thử nghiệm và giá trị chấp nhận cần được hai bên xác nhận trước khi sản xuất và giao hàng.",
+          "cards": [
+            [
+              "Kiểm tra đầu vào và quy trình",
+              "Tình trạng vật liệu và quy trình có thể được xem xét khi trao đổi đơn hàng."
+            ],
+            [
+              "Kiểm tra thành phẩm",
+              "Các thông số thành phẩm được kiểm tra theo hạng mục đã thống nhất."
+            ],
+            [
+              "Xác nhận yêu cầu",
+              "Giá trị chấp nhận cần được xác nhận trước khi sản xuất."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Trang liên quan",
+          "title": "Tiếp tục xem ứng dụng và yêu cầu mẫu",
+          "items": [
+            [
+              "Sản phẩm tấm ngăn AGM",
+              "/vi/products/agm-separator/"
+            ],
+            [
+              "Ứng dụng ắc quy xe máy",
+              "/vi/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Yêu cầu mẫu",
+              "/vi/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Yêu cầu",
+          "title": "Gửi yêu cầu tấm ngăn AGM của bạn",
+          "text": "Nếu bạn đang phát triển mẫu ắc quy mới hoặc đánh giá nhà cung cấp, hãy gửi độ dày, chiều rộng, dạng cuộn hoặc tấm và ứng dụng.",
+          "checklist": [
+            "Độ dày và chiều rộng mục tiêu",
+            "Dạng cuộn hoặc kích thước tấm",
+            "Ứng dụng và mẫu ắc quy",
+            "Số lượng và yêu cầu mẫu",
+            "Yêu cầu thử nghiệm hoặc đóng gói"
+          ],
+          "placeholder": "Độ dày, chiều rộng, dạng cuộn hoặc tấm, số lượng, yêu cầu mẫu và thử nghiệm",
+          "submit": "Gửi yêu cầu",
+          "submitting": "Đang gửi...",
+          "required": "Vui lòng nhập họ tên và thông tin liên hệ.",
+          "success": "Cảm ơn bạn. Chúng tôi sẽ xem xét và liên hệ lại.",
+          "failure": "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau.",
+          "emailFallback": "Ứng dụng email đã được mở với nội dung yêu cầu. Vui lòng gửi email để hoàn tất."
+        },
+        "footer": {
+          "description": "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
+          "wechat": "Tài khoản WeChat chính thức",
+          "mobile": "Website di động"
         }
       }
     },
@@ -2919,6 +3451,179 @@
           "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
           "wechat": "官方微信公众号",
           "mobile": "移动官网"
+        }
+      },
+      "vi": {
+        "homePath": "/vi/",
+        "languagePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "quote": "Yêu cầu báo giá",
+        "hero": {
+          "eyebrow": "Ứng dụng ắc quy xe máy",
+          "title": "Tấm ngăn AGM cho ắc quy khởi động xe máy",
+          "subtitle": "Trao đổi tấm ngăn AGM cho ắc quy VRLA xe máy có cấu trúc nhỏ gọn, bao gồm dạng cuộn, dạng tấm và yêu cầu mẫu.",
+          "primary": "Trao đổi nhu cầu ắc quy xe máy",
+          "secondary": "Gửi thông tin liên hệ",
+          "proof": [
+            "Ứng dụng ắc quy khởi động",
+            "Đối chiếu kích thước nhỏ gọn",
+            "Hỗ trợ trao đổi mẫu"
+          ],
+          "image": {
+            "src": "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+            "alt": "Tấm ngăn AGM cho ứng dụng ắc quy xe máy",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "Trọng tâm ứng dụng",
+          "title": "Ắc quy xe máy cần đối chiếu tấm ngăn theo cấu trúc nhỏ gọn",
+          "paragraphs": [
+            "Ắc quy khởi động xe máy thường có cấu trúc bên trong nhỏ gọn. Yêu cầu tấm ngăn cần được xác nhận theo kích thước bản cực, phương pháp lắp ráp và mẫu ắc quy.",
+            "Người mua thường trao đổi về độ dày, kích thước tấm hoặc chiều rộng cuộn, độ bền thao tác, khả năng hút axit và điện trở.",
+            "Nếu mẫu ắc quy cuối cùng vẫn đang được xem xét, bạn có thể gửi thông tin liên hệ trước để xác nhận dữ liệu cần thiết cho mẫu hoặc báo giá."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Trao đổi quy cách",
+          "title": "Điểm cần xác nhận khi mua tấm ngăn cho ắc quy xe máy",
+          "text": "Yêu cầu cần được xem xét cùng mẫu ắc quy, thiết kế bản cực và quy trình lắp ráp của khách hàng.",
+          "items": [
+            [
+              "Kích thước tấm hoặc chiều rộng cuộn",
+              "Xác nhận theo thiết kế nhỏ gọn và quy trình cắt."
+            ],
+            [
+              "Độ dày",
+              "Xem xét theo khoảng cách bản cực, độ nén và nhu cầu lắp ráp."
+            ],
+            [
+              "Độ bền thao tác",
+              "Trao đổi cho quá trình cắt, đặt tấm và sản xuất."
+            ],
+            [
+              "Khả năng hút axit",
+              "Xác nhận theo thiết kế ắc quy và phương pháp thử."
+            ],
+            [
+              "Điện trở",
+              "Trao đổi theo mục tiêu hiệu suất và điều kiện thử."
+            ],
+            [
+              "Đánh giá mẫu",
+              "Có thể bắt đầu trao đổi mẫu trước khi hoàn thiện mọi thông số."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Dạng sản phẩm",
+          "title": "Dạng tấm ngăn cho lắp ráp ắc quy nhỏ gọn",
+          "items": [
+            [
+              "Tấm cắt sẵn cho lắp ráp thử",
+              "Tấm cắt sẵn hỗ trợ đánh giá mẫu ắc quy xe máy và lắp ráp thử.",
+              "/images/sheets1-900.webp",
+              "Tấm ngăn AGM cho lắp ráp ắc quy xe máy",
+              900,
+              675
+            ],
+            [
+              "Cuộn cho khách hàng tự cắt",
+              "Dạng cuộn phù hợp với khách hàng cắt vật liệu theo nhu cầu mẫu ắc quy.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Cuộn tấm ngăn AGM cho sản xuất ắc quy xe máy",
+              900,
+              675
+            ],
+            [
+              "Ứng dụng ắc quy khởi động xe máy",
+              "Hình ảnh ứng dụng hỗ trợ trao đổi về cấu trúc ắc quy VRLA nhỏ gọn.",
+              "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+              "Ứng dụng ắc quy xe máy VRLA",
+              1200,
+              900
+            ],
+            [
+              "Chi tiết mép tấm",
+              "Chi tiết tấm có thể được xem xét trong quá trình xác nhận mẫu và quy cách.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "Chi tiết tấm ngăn AGM cho ắc quy xe máy",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Ứng dụng xe máy",
+          "title": "Các hướng ắc quy khởi động thường được trao đổi",
+          "items": [
+            "Ắc quy khởi động xe máy",
+            "Ắc quy xe tay ga",
+            "Ắc quy VRLA nhỏ gọn",
+            "Ắc quy động cơ nhỏ",
+            "Sản xuất ắc quy thay thế",
+            "Phát triển mẫu thử"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Yếu tố chất lượng",
+          "title": "Dự án nhỏ gọn cần xem xét kỹ kích thước và thao tác",
+          "text": "Trao đổi thường bắt đầu từ kích thước, khả năng thao tác và xác nhận mẫu. Hạng mục thử nghiệm cuối cùng theo yêu cầu khách hàng.",
+          "cards": [
+            [
+              "Xem xét kích thước",
+              "Chiều dài, chiều rộng tấm hoặc chiều rộng cuộn cần phù hợp mẫu ắc quy."
+            ],
+            [
+              "Xem xét thao tác",
+              "Có thể trao đổi tình trạng tấm ngăn trong quá trình cắt và lắp ráp."
+            ],
+            [
+              "Trao đổi thử nghiệm",
+              "Độ dày, khả năng hút axit và điện trở được xem xét theo yêu cầu mục tiêu."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Trang liên quan",
+          "title": "Tiếp tục xem sản phẩm và yêu cầu mẫu",
+          "items": [
+            [
+              "Sản phẩm tấm ngăn AGM",
+              "/vi/products/agm-separator/"
+            ],
+            [
+              "Ứng dụng ắc quy xe máy",
+              "/vi/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Yêu cầu mẫu",
+              "/vi/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Yêu cầu",
+          "title": "Gửi nhu cầu tấm ngăn cho ắc quy xe máy",
+          "text": "Để lại thông tin liên hệ. Chúng tôi sẽ hỗ trợ xác nhận dạng AGM phù hợp cho sản xuất hoặc thử mẫu ắc quy xe máy.",
+          "checklist": [
+            "Mẫu ắc quy xe máy",
+            "Kích thước tấm hoặc chiều rộng cuộn nếu có",
+            "Yêu cầu mẫu",
+            "Số lượng thử hoặc sản xuất"
+          ],
+          "placeholder": "Không bắt buộc: mẫu ắc quy, kích thước tấm, chiều rộng cuộn, yêu cầu mẫu hoặc câu hỏi kỹ thuật",
+          "submit": "Gửi thông tin liên hệ",
+          "submitting": "Đang gửi...",
+          "required": "Vui lòng nhập họ tên và thông tin liên hệ.",
+          "success": "Cảm ơn bạn. Chúng tôi sẽ liên hệ để xác nhận yêu cầu.",
+          "failure": "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau.",
+          "emailFallback": "Ứng dụng email đã được mở với thông tin liên hệ. Vui lòng gửi email để hoàn tất."
+        },
+        "footer": {
+          "description": "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
+          "wechat": "Tài khoản WeChat chính thức",
+          "mobile": "Website di động"
         }
       }
     },
@@ -6688,6 +7393,92 @@
         ],
         "serviceName": "AGM 玻璃纤维隔板制造",
         "serviceDescription": "面向铅酸电池生产企业提供 AGM 隔板卷材和片材，支持过程控制、质量检测和定制规格沟通。"
+      },
+      "vi": {
+        "path": "/vi/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM",
+        "alternateSiteName": "Hubei Viking AGM",
+        "title": "Nhà sản xuất tấm ngăn AGM cho ắc quy VRLA | Viking AGM",
+        "description": "Viking AGM sản xuất tấm ngăn sợi thủy tinh AGM dạng cuộn và tấm cho ắc quy VRLA, UPS, xe máy và lưu trữ năng lượng. Gửi yêu cầu để đối chiếu thông số.",
+        "keywords": [
+          "tấm ngăn AGM",
+          "nhà sản xuất tấm ngăn AGM",
+          "tấm ngăn sợi thủy tinh AGM",
+          "tấm ngăn ắc quy VRLA",
+          "tấm ngăn ắc quy chì axit"
+        ],
+        "serviceName": "Sản xuất tấm ngăn sợi thủy tinh AGM",
+        "serviceDescription": "Cung cấp tấm ngăn AGM dạng cuộn và dạng tấm cho nhà sản xuất ắc quy chì axit, hỗ trợ xác nhận quy cách, kiểm soát chất lượng và yêu cầu đóng gói."
+      }
+    },
+    "sampleRequest": {
+      "en": {
+        "path": "/request-agm-separator-sample/",
+        "alternatePath": "/zh/request-agm-separator-sample/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "Request AGM Separator Samples and Specification Matching | Viking AGM",
+        "description": "Request AGM separator samples for VRLA, UPS, motorcycle, automotive and energy storage batteries. Share your application, thickness, width and roll or sheet requirements.",
+        "keywords": [
+          "AGM separator sample",
+          "AGM separator specification matching",
+          "VRLA battery separator sample",
+          "AGM separator rolls and sheets",
+          "AGM separator manufacturer"
+        ],
+        "pageName": "AGM Separator Sample and Specification Matching",
+        "serviceDescription": "Application-based review of AGM separator roll or sheet requirements before sample, technical review or quotation discussion.",
+        "breadcrumbs": [
+          "Home",
+          "Request AGM Separator Sample"
+        ]
+      },
+      "zh": {
+        "path": "/zh/request-agm-separator-sample/",
+        "alternatePath": "/request-agm-separator-sample/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "申请 AGM 隔板样品与规格匹配 | 湖北维京AGM",
+        "description": "申请用于 VRLA、UPS、摩托车、汽车和储能电池的 AGM 隔板样品。可提供电池应用、厚度、宽度及卷材或片材需求。",
+        "keywords": [
+          "AGM 隔板样品",
+          "AGM 隔板规格匹配",
+          "VRLA 电池隔板样品",
+          "AGM 隔板卷材片材",
+          "AGM 隔板制造商"
+        ],
+        "pageName": "AGM 隔板样品与规格匹配",
+        "serviceDescription": "在样品、技术评审或报价沟通前，按电池应用评审 AGM 隔板卷材或片材需求。",
+        "breadcrumbs": [
+          "首页",
+          "申请 AGM 隔板样品"
+        ]
+      },
+      "vi": {
+        "path": "/vi/request-agm-separator-sample/",
+        "alternatePath": "/request-agm-separator-sample/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM",
+        "title": "Yêu cầu mẫu tấm ngăn AGM và đối chiếu thông số | Viking AGM",
+        "description": "Yêu cầu mẫu tấm ngăn AGM cho ắc quy VRLA, UPS và xe máy. Cung cấp ứng dụng, độ dày, chiều rộng và yêu cầu dạng cuộn hoặc dạng tấm.",
+        "keywords": [
+          "mẫu tấm ngăn AGM",
+          "đối chiếu thông số tấm ngăn AGM",
+          "mẫu tấm ngăn ắc quy VRLA",
+          "tấm ngăn AGM dạng cuộn",
+          "tấm ngăn AGM dạng tấm"
+        ],
+        "pageName": "Mẫu tấm ngăn AGM và đối chiếu thông số",
+        "serviceDescription": "Xem xét yêu cầu tấm ngăn AGM dạng cuộn hoặc dạng tấm theo ứng dụng trước khi gửi mẫu, trao đổi kỹ thuật hoặc báo giá.",
+        "breadcrumbs": [
+          "Trang chủ",
+          "Yêu cầu mẫu tấm ngăn AGM"
+        ]
       }
     },
     "agmSeparator": {
@@ -6735,6 +7526,29 @@
           "首页",
           "产品",
           "AGM 隔板"
+        ]
+      },
+      "vi": {
+        "path": "/vi/products/agm-separator/",
+        "alternatePath": "/products/agm-separator/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM",
+        "title": "Tấm ngăn sợi thủy tinh AGM cho ắc quy VRLA | Viking AGM",
+        "description": "Tấm ngăn sợi thủy tinh AGM cho ắc quy chì axit VRLA, có dạng cuộn và dạng tấm. Gửi độ dày, chiều rộng và ứng dụng để đối chiếu thông số.",
+        "keywords": [
+          "tấm ngăn AGM",
+          "tấm ngăn ắc quy AGM",
+          "tấm ngăn sợi thủy tinh AGM",
+          "tấm ngăn ắc quy VRLA",
+          "nhà sản xuất tấm ngăn AGM"
+        ],
+        "productName": "Tấm ngăn AGM cho ắc quy chì axit VRLA",
+        "serviceDescription": "Tấm ngăn sợi thủy tinh AGM dạng cuộn và dạng tấm cho ắc quy chì axit VRLA, hỗ trợ đối chiếu thông số theo yêu cầu của khách hàng.",
+        "breadcrumbs": [
+          "Trang chủ",
+          "Sản phẩm",
+          "Tấm ngăn AGM"
         ]
       }
     },
@@ -7031,6 +7845,31 @@
           "首页",
           "应用",
           "摩托车电池 AGM 隔板"
+        ]
+      },
+      "vi": {
+        "path": "/vi/applications/agm-separator-for-motorcycle-battery/",
+        "alternatePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM",
+        "title": "Tấm ngăn AGM cho ắc quy xe máy | Viking AGM",
+        "description": "Tấm ngăn AGM cho ắc quy khởi động xe máy và ắc quy VRLA nhỏ gọn, hỗ trợ xác nhận dạng cuộn, dạng tấm, kích thước và yêu cầu mẫu.",
+        "keywords": [
+          "tấm ngăn AGM cho ắc quy xe máy",
+          "tấm ngăn ắc quy xe máy",
+          "tấm ngăn ắc quy VRLA xe máy",
+          "tấm ngăn ắc quy khởi động",
+          "tấm ngăn AGM dạng tấm"
+        ],
+        "pageName": "Tấm ngăn AGM cho ứng dụng ắc quy xe máy",
+        "serviceDescription": "Đối chiếu tấm ngăn sợi thủy tinh AGM cho ắc quy khởi động xe máy và sản xuất ắc quy chì axit VRLA nhỏ gọn.",
+        "serviceType": "Tấm ngăn AGM cho ứng dụng ắc quy xe máy",
+        "image": "https://www.vikingagm.com/images/applications/motorcycle-vrla-battery-application-1200.webp",
+        "breadcrumbs": [
+          "Trang chủ",
+          "Ứng dụng",
+          "Tấm ngăn AGM cho ắc quy xe máy"
         ]
       }
     },

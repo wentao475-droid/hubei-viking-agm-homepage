@@ -3,56 +3,92 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.vikingagm.com/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/" />
   </url>
   <url>
     <loc>https://www.vikingagm.com/zh/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/" />
+  </url>
+  <url>
+    <loc>https://www.vikingagm.com/vi/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/" />
   </url>
   <url>
     <loc>https://www.vikingagm.com/products/agm-separator/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/products/agm-separator/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/products/agm-separator/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/products/agm-separator/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/products/agm-separator/" />
   </url>
   <url>
     <loc>https://www.vikingagm.com/zh/products/agm-separator/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/products/agm-separator/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/products/agm-separator/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/products/agm-separator/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/products/agm-separator/" />
+  </url>
+  <url>
+    <loc>https://www.vikingagm.com/vi/products/agm-separator/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/products/agm-separator/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/products/agm-separator/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/products/agm-separator/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/products/agm-separator/" />
   </url>
   <url>
     <loc>https://www.vikingagm.com/request-agm-separator-sample/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/request-agm-separator-sample/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/request-agm-separator-sample/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/request-agm-separator-sample/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/request-agm-separator-sample/" />
   </url>
   <url>
     <loc>https://www.vikingagm.com/zh/request-agm-separator-sample/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/request-agm-separator-sample/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/request-agm-separator-sample/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/request-agm-separator-sample/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/request-agm-separator-sample/" />
+  </url>
+  <url>
+    <loc>https://www.vikingagm.com/vi/request-agm-separator-sample/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/request-agm-separator-sample/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/request-agm-separator-sample/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/request-agm-separator-sample/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/request-agm-separator-sample/" />
   </url>
   <url>
@@ -165,20 +201,32 @@
   </url>
   <url>
     <loc>https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/applications/agm-separator-for-motorcycle-battery/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/" />
   </url>
   <url>
     <loc>https://www.vikingagm.com/zh/applications/agm-separator-for-motorcycle-battery/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/applications/agm-separator-for-motorcycle-battery/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/" />
+  </url>
+  <url>
+    <loc>https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.vikingagm.com/zh/applications/agm-separator-for-motorcycle-battery/" />
+    <xhtml:link rel="alternate" hreflang="vi-VN" href="https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/" />
   </url>
   <url>

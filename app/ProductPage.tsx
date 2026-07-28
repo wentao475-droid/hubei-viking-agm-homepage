@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 import { productContent } from "./cms-content";
 import { InquiryForm } from "./InquiryForm";
+import type { Lang, SiteLocale } from "./locales";
 import { productFaqCopy } from "./seo-faq";
 import { SiteHeader } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
-import type { Lang } from "./VikingHome";
 
 export type ProductPageKind =
   | "agmSeparator"
@@ -106,6 +106,26 @@ const sharedMessages = {
       company: "公司名称",
       interestedProduct: "AGM 隔板卷材、片材或暂不确定"
     }
+  },
+  vi: {
+    copied: "Đã sao chép",
+    copyPhone: "Sao chép số điện thoại",
+    copyEmail: "Sao chép email",
+    openWechat: "Xem mã QR WeChat",
+    backToTop: "Về đầu trang",
+    fields: {
+      name: "Họ và tên",
+      contact: "Email / WhatsApp / Điện thoại",
+      company: "Công ty",
+      interestedProduct: "Sản phẩm quan tâm",
+      message: "Nội dung"
+    },
+    placeholders: {
+      name: "Họ và tên của bạn",
+      contact: "Email, WhatsApp hoặc số điện thoại",
+      company: "Tên công ty",
+      interestedProduct: "Tấm ngăn AGM dạng cuộn, dạng tấm hoặc chưa xác định"
+    }
   }
 } as const;
 
@@ -122,6 +142,14 @@ const commonRelated = {
     ["AGM 隔板卷材", "/zh/products/agm-separator-rolls/"],
     ["AGM 隔板片材", "/zh/products/agm-separator-sheets/"],
     ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]
+  ] as LinkItem[],
+  vi: [
+    ["Sản phẩm tấm ngăn AGM", "/vi/products/agm-separator/"],
+    [
+      "Ứng dụng ắc quy xe máy",
+      "/vi/applications/agm-separator-for-motorcycle-battery/"
+    ],
+    ["Yêu cầu mẫu", "/vi/request-agm-separator-sample/"]
   ] as LinkItem[]
 };
 
@@ -159,6 +187,25 @@ const leadCaptureCopy = {
     success: "感谢您留下联系方式，我们会尽快联系您确认 AGM 隔板需求。",
     emailFallback: "已为您打开邮件客户端并填入联系方式，请发送邮件完成询盘。",
     ...productFaqCopy.zh
+  },
+  vi: {
+    heroPrompt:
+      "Để lại email, WhatsApp hoặc số điện thoại. Chúng tôi sẽ hỗ trợ xác nhận quy cách tấm ngăn AGM phù hợp.",
+    formText:
+      "Hãy để lại thông tin liên hệ trước. Đội ngũ sẽ tiếp tục trao đổi về độ dày, chiều rộng, số lượng và ứng dụng.",
+    checklist: [
+      "Họ tên và thông tin liên hệ là đủ để bắt đầu",
+      "Chúng tôi hỗ trợ xác nhận quy cách phù hợp",
+      "Độ dày, chiều rộng và số lượng có thể trao đổi sau"
+    ],
+    messagePlaceholder:
+      "Không bắt buộc: ứng dụng ắc quy, số lượng dự kiến, yêu cầu mẫu hoặc câu hỏi kỹ thuật",
+    required: "Vui lòng nhập họ tên và thông tin liên hệ.",
+    success:
+      "Cảm ơn bạn. Chúng tôi sẽ liên hệ để xác nhận yêu cầu tấm ngăn AGM.",
+    emailFallback:
+      "Ứng dụng email đã được mở với thông tin liên hệ. Vui lòng gửi email để hoàn tất yêu cầu.",
+    ...productFaqCopy.vi
   }
 } as const;
 
@@ -174,6 +221,12 @@ const footerCopy = {
       "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
     wechat: "官方微信公众号",
     mobile: "移动官网"
+  },
+  vi: {
+    description:
+      "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
+    wechat: "Tài khoản WeChat chính thức",
+    mobile: "Website di động"
   }
 } as const;
 
@@ -2312,8 +2365,290 @@ const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
   }
 };
 
+const viContent: Partial<Record<ProductPageKind, ProductContent>> = {
+  agmSeparator: {
+    homePath: "/vi/",
+    languagePath: "/products/agm-separator/",
+    quote: "Yêu cầu báo giá",
+    hero: {
+      eyebrow: "Sản phẩm tấm ngăn AGM",
+      title: "Tấm ngăn sợi thủy tinh AGM cho ắc quy VRLA",
+      subtitle:
+        "Tấm ngăn AGM dạng cuộn hoặc tấm cho các nhà sản xuất và đối tác thương mại ắc quy axit-chì VRLA.",
+      primary: "Yêu cầu mẫu tấm ngăn AGM",
+      secondary: "Gửi quy cách cần thiết",
+      proof: [
+        "Trao đổi dạng cuộn và tấm",
+        "Xác nhận theo yêu cầu khách hàng",
+        "Liên hệ trực tiếp với nhà máy"
+      ],
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "Cuộn tấm ngăn sợi thủy tinh AGM thành phẩm",
+        width: 900,
+        height: 675
+      }
+    },
+    overview: {
+      eyebrow: "Tổng quan sản phẩm",
+      title: "Vật liệu tấm ngăn gắn với thiết kế và hiệu suất ắc quy",
+      paragraphs: [
+        "Tấm ngăn AGM là vật liệu sợi thủy tinh dùng trong ắc quy axit-chì VRLA. Vật liệu giúp cách ly bản cực dương và âm, đồng thời giữ chất điện phân trong cấu trúc ắc quy.",
+        "Đối với nhà sản xuất ắc quy, lựa chọn tấm ngăn liên quan đến thiết kế bản cực, khả năng giữ điện phân, điện trở trong, quy trình lắp ráp và hiệu suất lâu dài.",
+        "Chúng tôi cung cấp dạng cuộn và tấm. Độ dày, chiều rộng, kích thước tấm và đóng gói có thể được trao đổi theo thiết kế ắc quy và quy trình sản xuất."
+      ]
+    },
+    parameters: {
+      eyebrow: "Thông số chính",
+      title: "Các thông số người mua thường cần xác nhận",
+      text:
+        "Việc lựa chọn tấm ngăn AGM cho ắc quy VRLA thường xem xét đồng thời độ dày, chiều rộng, định lượng, khả năng hút axit, điện trở và độ bền thao tác.",
+      items: [
+        ["Độ dày", "Cần được xem xét cùng khoảng cách bản cực, độ nén và yêu cầu lắp ráp."],
+        ["Chiều rộng hoặc kích thước tấm", "Có thể trao đổi chiều rộng cuộn, hướng xẻ hoặc kích thước cắt sẵn."],
+        ["Định lượng", "Được đánh giá cùng cấu trúc vật liệu, khả năng giữ điện phân và phương pháp thử."],
+        ["Khả năng hút axit", "Xác nhận theo ứng dụng, nhu cầu giữ điện phân và điều kiện thử đã thống nhất."],
+        ["Điện trở", "Xem xét với mục tiêu hiệu suất ắc quy và điều kiện thử."],
+        ["Độ rỗng và độ bền", "Có thể kiểm tra theo nhu cầu gia công, cắt và lắp ráp."]
+      ]
+    },
+    forms: {
+      eyebrow: "Dạng sản phẩm",
+      title: "Có thể trao đổi quy cách dạng cuộn và dạng tấm",
+      items: [
+        [
+          "Tấm ngăn AGM dạng cuộn",
+          "Có thể trao đổi độ dày, chiều rộng, đường kính cuộn, cách đóng gói và kế hoạch sản xuất.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Cuộn tấm ngăn AGM thành phẩm",
+          900,
+          675
+        ],
+        [
+          "Tấm ngăn AGM dạng tấm",
+          "Tấm cắt sẵn hỗ trợ đánh giá mẫu, xác nhận quy cách và yêu cầu lắp ráp.",
+          "/images/viking-separator-sheets-900.webp",
+          "Tấm ngăn AGM cắt sẵn",
+          900,
+          675
+        ],
+        [
+          "Theo dõi sản xuất",
+          "Hình ảnh nguyên liệu và dây chuyền giúp trao đổi cụ thể hơn về quá trình sản xuất.",
+          "/images/evidence/factory-raw-material-feed-01.webp",
+          "Nguyên liệu tấm ngăn AGM vào dây chuyền",
+          1200,
+          900
+        ],
+        [
+          "Chuẩn bị đóng gói và giao hàng",
+          "Có thể xem xét cách đóng gói, pallet và chuẩn bị xuất hàng.",
+          "/images/evidence/shipping-pallet-01.webp",
+          "Đóng gói và chuẩn bị giao tấm ngăn AGM",
+          1200,
+          900
+        ]
+      ]
+    },
+    applications: {
+      eyebrow: "Ứng dụng",
+      title: "Dùng cho các phân khúc ắc quy axit-chì VRLA chính",
+      items: [
+        "Ắc quy UPS",
+        "Nguồn dự phòng viễn thông",
+        "Ắc quy xe máy",
+        "Ắc quy khởi động ô tô",
+        "Ắc quy lưu trữ năng lượng"
+      ]
+    },
+    quality: {
+      eyebrow: "Ghi chú chất lượng",
+      title: "Hạng mục kiểm tra theo yêu cầu đã xác nhận",
+      text:
+        "Hạng mục thử nghiệm và giá trị chấp nhận cần được hai bên xác nhận trước khi sản xuất và giao hàng.",
+      cards: [
+        ["Kiểm tra đầu vào và quy trình", "Tình trạng vật liệu và quy trình có thể được xem xét khi trao đổi đơn hàng."],
+        ["Kiểm tra thành phẩm", "Các thông số thành phẩm được kiểm tra theo hạng mục đã thống nhất."],
+        ["Xác nhận yêu cầu", "Giá trị chấp nhận cần được xác nhận trước khi sản xuất."]
+      ]
+    },
+    related: {
+      eyebrow: "Trang liên quan",
+      title: "Tiếp tục xem ứng dụng và yêu cầu mẫu",
+      items: commonRelated.vi
+    },
+    inquiry: {
+      eyebrow: "Yêu cầu",
+      title: "Gửi yêu cầu tấm ngăn AGM của bạn",
+      text:
+        "Nếu bạn đang phát triển mẫu ắc quy mới hoặc đánh giá nhà cung cấp, hãy gửi độ dày, chiều rộng, dạng cuộn hoặc tấm và ứng dụng.",
+      checklist: [
+        "Độ dày và chiều rộng mục tiêu",
+        "Dạng cuộn hoặc kích thước tấm",
+        "Ứng dụng và mẫu ắc quy",
+        "Số lượng và yêu cầu mẫu",
+        "Yêu cầu thử nghiệm hoặc đóng gói"
+      ],
+      placeholder:
+        "Độ dày, chiều rộng, dạng cuộn hoặc tấm, số lượng, yêu cầu mẫu và thử nghiệm",
+      submit: "Gửi yêu cầu",
+      submitting: "Đang gửi...",
+      required: "Vui lòng nhập họ tên và thông tin liên hệ.",
+      success: "Cảm ơn bạn. Chúng tôi sẽ xem xét và liên hệ lại.",
+      failure: "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau.",
+      emailFallback:
+        "Ứng dụng email đã được mở với nội dung yêu cầu. Vui lòng gửi email để hoàn tất."
+    },
+    footer: footerCopy.vi
+  },
+  agmSeparatorMotorcycleApplication: {
+    homePath: "/vi/",
+    languagePath: "/applications/agm-separator-for-motorcycle-battery/",
+    quote: "Yêu cầu báo giá",
+    hero: {
+      eyebrow: "Ứng dụng ắc quy xe máy",
+      title: "Tấm ngăn AGM cho ắc quy khởi động xe máy",
+      subtitle:
+        "Trao đổi tấm ngăn AGM cho ắc quy VRLA xe máy có cấu trúc nhỏ gọn, bao gồm dạng cuộn, dạng tấm và yêu cầu mẫu.",
+      primary: "Trao đổi nhu cầu ắc quy xe máy",
+      secondary: "Gửi thông tin liên hệ",
+      proof: [
+        "Ứng dụng ắc quy khởi động",
+        "Đối chiếu kích thước nhỏ gọn",
+        "Hỗ trợ trao đổi mẫu"
+      ],
+      image: {
+        src: "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+        alt: "Tấm ngăn AGM cho ứng dụng ắc quy xe máy",
+        width: 1200,
+        height: 900
+      }
+    },
+    overview: {
+      eyebrow: "Trọng tâm ứng dụng",
+      title: "Ắc quy xe máy cần đối chiếu tấm ngăn theo cấu trúc nhỏ gọn",
+      paragraphs: [
+        "Ắc quy khởi động xe máy thường có cấu trúc bên trong nhỏ gọn. Yêu cầu tấm ngăn cần được xác nhận theo kích thước bản cực, phương pháp lắp ráp và mẫu ắc quy.",
+        "Người mua thường trao đổi về độ dày, kích thước tấm hoặc chiều rộng cuộn, độ bền thao tác, khả năng hút axit và điện trở.",
+        "Nếu mẫu ắc quy cuối cùng vẫn đang được xem xét, bạn có thể gửi thông tin liên hệ trước để xác nhận dữ liệu cần thiết cho mẫu hoặc báo giá."
+      ]
+    },
+    parameters: {
+      eyebrow: "Trao đổi quy cách",
+      title: "Điểm cần xác nhận khi mua tấm ngăn cho ắc quy xe máy",
+      text:
+        "Yêu cầu cần được xem xét cùng mẫu ắc quy, thiết kế bản cực và quy trình lắp ráp của khách hàng.",
+      items: [
+        ["Kích thước tấm hoặc chiều rộng cuộn", "Xác nhận theo thiết kế nhỏ gọn và quy trình cắt."],
+        ["Độ dày", "Xem xét theo khoảng cách bản cực, độ nén và nhu cầu lắp ráp."],
+        ["Độ bền thao tác", "Trao đổi cho quá trình cắt, đặt tấm và sản xuất."],
+        ["Khả năng hút axit", "Xác nhận theo thiết kế ắc quy và phương pháp thử."],
+        ["Điện trở", "Trao đổi theo mục tiêu hiệu suất và điều kiện thử."],
+        ["Đánh giá mẫu", "Có thể bắt đầu trao đổi mẫu trước khi hoàn thiện mọi thông số."]
+      ]
+    },
+    forms: {
+      eyebrow: "Dạng sản phẩm",
+      title: "Dạng tấm ngăn cho lắp ráp ắc quy nhỏ gọn",
+      items: [
+        [
+          "Tấm cắt sẵn cho lắp ráp thử",
+          "Tấm cắt sẵn hỗ trợ đánh giá mẫu ắc quy xe máy và lắp ráp thử.",
+          "/images/sheets1-900.webp",
+          "Tấm ngăn AGM cho lắp ráp ắc quy xe máy",
+          900,
+          675
+        ],
+        [
+          "Cuộn cho khách hàng tự cắt",
+          "Dạng cuộn phù hợp với khách hàng cắt vật liệu theo nhu cầu mẫu ắc quy.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Cuộn tấm ngăn AGM cho sản xuất ắc quy xe máy",
+          900,
+          675
+        ],
+        [
+          "Ứng dụng ắc quy khởi động xe máy",
+          "Hình ảnh ứng dụng hỗ trợ trao đổi về cấu trúc ắc quy VRLA nhỏ gọn.",
+          "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+          "Ứng dụng ắc quy xe máy VRLA",
+          1200,
+          900
+        ],
+        [
+          "Chi tiết mép tấm",
+          "Chi tiết tấm có thể được xem xét trong quá trình xác nhận mẫu và quy cách.",
+          "/images/evidence/agm-separator-sheets-detail-01.webp",
+          "Chi tiết tấm ngăn AGM cho ắc quy xe máy",
+          1200,
+          900
+        ]
+      ]
+    },
+    applications: {
+      eyebrow: "Ứng dụng xe máy",
+      title: "Các hướng ắc quy khởi động thường được trao đổi",
+      items: [
+        "Ắc quy khởi động xe máy",
+        "Ắc quy xe tay ga",
+        "Ắc quy VRLA nhỏ gọn",
+        "Ắc quy động cơ nhỏ",
+        "Sản xuất ắc quy thay thế",
+        "Phát triển mẫu thử"
+      ]
+    },
+    quality: {
+      eyebrow: "Yếu tố chất lượng",
+      title: "Dự án nhỏ gọn cần xem xét kỹ kích thước và thao tác",
+      text:
+        "Trao đổi thường bắt đầu từ kích thước, khả năng thao tác và xác nhận mẫu. Hạng mục thử nghiệm cuối cùng theo yêu cầu khách hàng.",
+      cards: [
+        ["Xem xét kích thước", "Chiều dài, chiều rộng tấm hoặc chiều rộng cuộn cần phù hợp mẫu ắc quy."],
+        ["Xem xét thao tác", "Có thể trao đổi tình trạng tấm ngăn trong quá trình cắt và lắp ráp."],
+        ["Trao đổi thử nghiệm", "Độ dày, khả năng hút axit và điện trở được xem xét theo yêu cầu mục tiêu."]
+      ]
+    },
+    related: {
+      eyebrow: "Trang liên quan",
+      title: "Tiếp tục xem sản phẩm và yêu cầu mẫu",
+      items: commonRelated.vi
+    },
+    inquiry: {
+      eyebrow: "Yêu cầu",
+      title: "Gửi nhu cầu tấm ngăn cho ắc quy xe máy",
+      text:
+        "Để lại thông tin liên hệ. Chúng tôi sẽ hỗ trợ xác nhận dạng AGM phù hợp cho sản xuất hoặc thử mẫu ắc quy xe máy.",
+      checklist: [
+        "Mẫu ắc quy xe máy",
+        "Kích thước tấm hoặc chiều rộng cuộn nếu có",
+        "Yêu cầu mẫu",
+        "Số lượng thử hoặc sản xuất"
+      ],
+      placeholder:
+        "Không bắt buộc: mẫu ắc quy, kích thước tấm, chiều rộng cuộn, yêu cầu mẫu hoặc câu hỏi kỹ thuật",
+      submit: "Gửi thông tin liên hệ",
+      submitting: "Đang gửi...",
+      required: "Vui lòng nhập họ tên và thông tin liên hệ.",
+      success: "Cảm ơn bạn. Chúng tôi sẽ liên hệ để xác nhận yêu cầu.",
+      failure: "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau.",
+      emailFallback:
+        "Ứng dụng email đã được mở với thông tin liên hệ. Vui lòng gửi email để hoàn tất."
+    },
+    footer: footerCopy.vi
+  }
+};
+
 function asset(path: string) {
   return `${basePath}${path}`;
+}
+
+function localeText(
+  lang: SiteLocale,
+  en: string,
+  zh: string,
+  vi: string
+) {
+  return lang === "zh" ? zh : lang === "vi" ? vi : en;
 }
 
 function CheckIcon({ size = 18, className = "" }: IconProps) {
@@ -2460,24 +2795,37 @@ export function ProductPage({
   lang,
   page = "agmSeparator"
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   page?: ProductPageKind;
 }) {
-  const t = productContent(page, lang, content[page][lang]);
+  const defaults =
+    lang === "vi" ? viContent[page] : content[page][lang as Lang];
+
+  if (!defaults) {
+    throw new Error(`Missing ${lang} content for product page "${page}"`);
+  }
+
+  const t = productContent(page, lang, defaults);
   const lead = leadCaptureCopy[lang];
   const applicationPage = page.endsWith("Application");
   const defaultProduct =
     page === "agmSeparatorRolls"
       ? lang === "zh"
         ? "AGM 隔板卷材"
-        : "AGM separator rolls"
+        : lang === "vi"
+          ? "Tấm ngăn AGM dạng cuộn"
+          : "AGM separator rolls"
       : page === "agmSeparatorSheets"
         ? lang === "zh"
           ? "AGM 隔板片材"
-          : "AGM separator sheets"
+          : lang === "vi"
+            ? "Tấm ngăn AGM dạng tấm"
+            : "AGM separator sheets"
         : lang === "zh"
           ? "AGM 隔板样品与规格匹配"
-          : "AGM separator sample and specification match";
+          : lang === "vi"
+            ? "Yêu cầu mẫu và đối chiếu thông số tấm ngăn AGM"
+            : "AGM separator sample and specification match";
 
   return (
     <main className="min-h-screen overflow-hidden bg-frost text-ink">
@@ -2485,7 +2833,7 @@ export function ProductPage({
         lang={lang}
         homePath={t.homePath}
         languagePath={t.languagePath}
-        quoteLabel={lang === "zh" ? "申请样品" : "Request Sample"}
+        quoteLabel={localeText(lang, "Request Sample", "申请样品", "Yêu cầu mẫu")}
       />
 
       <section className="relative overflow-hidden pt-20">
@@ -2507,9 +2855,12 @@ export function ProductPage({
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white shadow-industrial transition hover:bg-ink"
               >
-                {lang === "zh"
-                  ? "申请样品与规格匹配"
-                  : "Request a Sample & Specification Match"}
+                {localeText(
+                  lang,
+                  "Request a Sample & Specification Match",
+                  "申请样品与规格匹配",
+                  "Yêu cầu mẫu và đối chiếu thông số"
+                )}
                 <SendIcon size={18} />
               </a>
               <a
@@ -2741,22 +3092,30 @@ export function ProductPage({
             href={asset(
               lang === "zh"
                 ? "/zh/request-agm-separator-sample/"
-                : "/request-agm-separator-sample/"
+                : lang === "vi"
+                  ? "/vi/request-agm-separator-sample/"
+                  : "/request-agm-separator-sample/"
             )}
             className="group rounded-md border border-signal/25 bg-signal p-6 text-white shadow-sm transition hover:bg-ink"
           >
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/65">
-              {lang === "zh" ? "下一步" : "Next Step"}
+              {localeText(lang, "Next Step", "下一步", "Bước tiếp theo")}
             </p>
             <h2 className="mt-3 text-2xl font-bold">
-              {lang === "zh"
-                ? "申请样品与规格匹配"
-                : "Request a Sample & Specification Match"}
+              {localeText(
+                lang,
+                "Request a Sample & Specification Match",
+                "申请样品与规格匹配",
+                "Yêu cầu mẫu và đối chiếu thông số"
+              )}
             </h2>
             <p className="mt-3 text-sm leading-7 text-white/75">
-              {lang === "zh"
-                ? "查看需要准备的信息、样品沟通流程和真实生产检测证据。"
-                : "Review the information checklist, sample discussion path and production evidence."}
+              {localeText(
+                lang,
+                "Review the information checklist, sample discussion path and production evidence.",
+                "查看需要准备的信息、样品沟通流程和真实生产检测证据。",
+                "Xem danh sách thông tin, quy trình trao đổi mẫu và bằng chứng sản xuất."
+              )}
             </p>
             <ArrowRight
               size={18}
@@ -2769,17 +3128,23 @@ export function ProductPage({
             className="group rounded-md border border-line bg-frost p-6 text-ink transition hover:border-signal hover:bg-white"
           >
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-signal">
-              {lang === "zh" ? "采购资料" : "Buyer Reference"}
+              {localeText(lang, "Buyer Reference", "采购资料", "Tài liệu người mua")}
             </p>
             <h2 className="mt-3 text-2xl font-bold">
-              {lang === "zh"
-                ? "下载维京 AGM 技术能力 PDF"
-                : "Download the Viking AGM Capability PDF"}
+              {localeText(
+                lang,
+                "Download the Viking AGM Capability PDF",
+                "下载维京 AGM 技术能力 PDF",
+                "Tải hồ sơ năng lực Viking AGM (EN/ZH)"
+              )}
             </h2>
             <p className="mt-3 text-sm leading-7 text-steel">
-              {lang === "zh"
-                ? "中英文资料，包含产品形式、应用沟通、质量检查和包装说明。"
-                : "A bilingual overview of product forms, application discussion, quality checks and packing."}
+              {localeText(
+                lang,
+                "A bilingual overview of product forms, application discussion, quality checks and packing.",
+                "中英文资料，包含产品形式、应用沟通、质量检查和包装说明。",
+                "Tài liệu tiếng Anh và tiếng Trung về dạng sản phẩm, ứng dụng, kiểm tra chất lượng và đóng gói."
+              )}
             </p>
             <ArrowRight
               size={18}
@@ -2834,7 +3199,7 @@ function Footer({
   lang,
   copy
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   copy: ProductContent["footer"];
 }) {
   return (
@@ -2894,7 +3259,13 @@ function Footer({
       </div>
       <div className="mx-auto mt-10 max-w-7xl border-t border-line pt-6 text-sm text-steel">
         <div>
-          © 2026 Hubei Viking Technology Co., Ltd. {lang === "zh" ? "保留所有权利。" : "All rights reserved."}
+          © 2026 Hubei Viking Technology Co., Ltd.{" "}
+          {localeText(
+            lang,
+            "All rights reserved.",
+            "保留所有权利。",
+            "Bảo lưu mọi quyền."
+          )}
         </div>
         <a
           href="https://beian.miit.gov.cn/"
@@ -2909,7 +3280,7 @@ function Footer({
   );
 }
 
-function QuickActions({ lang }: { lang: Lang }) {
+function QuickActions({ lang }: { lang: SiteLocale }) {
   const ui = sharedMessages[lang];
   const [copied, setCopied] = useState<"phone" | "email" | null>(null);
 
@@ -2931,7 +3302,7 @@ function QuickActions({ lang }: { lang: Lang }) {
   }
 
   return (
-    <div className="fixed bottom-5 right-4 z-40 flex flex-col gap-2 sm:bottom-8 sm:right-6">
+    <div className="fixed bottom-5 right-4 z-40 hidden flex-col gap-2 sm:bottom-8 sm:right-6 sm:flex">
       <button
         type="button"
         aria-label={ui.openWechat}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -42,19 +42,28 @@ const productNavItems = {
       description: "用于 VRLA 电池装配和样品确认的预裁切片材供应。",
       href: "/zh/products/agm-separator-sheets/"
     }
+  ],
+  vi: [
+    {
+      title: "Tấm ngăn sợi thủy tinh AGM",
+      description:
+        "Dạng cuộn và tấm cho các ứng dụng ắc quy axit-chì VRLA.",
+      href: "/vi/products/agm-separator/"
+    }
   ]
 } as const;
 
 const productNavEyebrow = {
   en: "Product page",
-  zh: "产品页面"
+  zh: "产品页面",
+  vi: "Sản phẩm"
 } as const;
 
 function asset(path: string) {
   return `${basePath}${path}`;
 }
 
-export function productPagePath(lang: Lang) {
+export function productPagePath(lang: SiteLocale) {
   return asset(productNavItems[lang][0].href);
 }
 
@@ -62,7 +71,7 @@ export function ProductNavDropdown({
   lang,
   label
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   label: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -132,7 +141,7 @@ export function ProductNavMobileGroup({
   label,
   onNavigate
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   label: string;
   onNavigate?: () => void;
 }) {

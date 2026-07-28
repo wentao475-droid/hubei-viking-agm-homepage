@@ -4,10 +4,11 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { homeContent } from "./cms-content";
 import { InquiryForm } from "./InquiryForm";
+import type { Lang, SiteLocale } from "./locales";
 import { SiteHeader } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
 
-export type Lang = "en" | "zh";
+export type { Lang } from "./locales";
 type IconProps = { size?: number; className?: string };
 type IconName =
   | "arrow"
@@ -547,6 +548,343 @@ const copy = {
         ["移动官网", "/images/website-logo-180.webp"]
       ]
     }
+  },
+  vi: {
+    nav: {
+      company: "Công ty",
+      products: "Sản phẩm",
+      applications: "Ứng dụng",
+      quality: "Chất lượng",
+      contact: "Liên hệ"
+    },
+    language: "EN",
+    hero: {
+      badge: "Viking AGM · Nhà sản xuất",
+      title: ["Nhà sản xuất chuyên nghiệp", "tấm ngăn sợi thủy tinh AGM"],
+      subtitle:
+        "Tập trung sản xuất và cung cấp ổn định tấm ngăn sợi thủy tinh AGM cho các nhà sản xuất ắc quy axit-chì.",
+      quote: "Yêu cầu báo giá",
+      products: "Xem sản phẩm",
+      proof: [
+        "Tấm ngăn sợi thủy tinh AGM",
+        "Kiểm soát quy trình sản xuất",
+        "Hỗ trợ cung ứng xuất khẩu"
+      ],
+      image: {
+        src: "/images/agm-hero-production-1600.webp",
+        alt: "Dây chuyền sản xuất tấm ngăn AGM",
+        width: 1600,
+        height: 1000
+      }
+    },
+    video: {
+      eyebrow: "Tổng quan nhà máy",
+      title: "Xem nhà máy Viking AGM trong 1 phút",
+      text:
+        "Hình ảnh thực tế về sản xuất tấm ngăn AGM, xử lý cuộn, kiểm tra chất lượng và chuẩn bị đóng gói để người mua đánh giá.",
+      duration: "Video nhà máy 1 phút",
+      play: "Phát video",
+      close: "Đóng video",
+      aria: "Phát video tổng quan nhà máy Viking AGM"
+    },
+    stats: [
+      { value: "AGM", label: "Sản xuất tấm ngăn sợi thủy tinh" },
+      { value: "OEM", label: "Trao đổi quy cách cuộn và tấm" },
+      { value: "QC", label: "Kiểm tra và theo dõi quy trình" }
+    ],
+    company: {
+      eyebrow: "Tổng quan công ty",
+      title: "Nhà sản xuất tấm ngăn AGM định hướng công nghệ tại Hồ Bắc",
+      text: [
+        "Công ty TNHH Công nghệ Hubei Viking được thành lập vào tháng 12 năm 2015 với vốn đăng ký 30 triệu NDT. Nhà máy đặt tại Khu phát triển kinh tế và công nghệ Ngạc Châu, tỉnh Hồ Bắc, trên diện tích khoảng 65 mẫu Trung Quốc, tập trung nghiên cứu, sản xuất và kinh doanh tấm ngăn sợi thủy tinh siêu mịn.",
+        "Công ty chủ yếu sản xuất các sản phẩm tấm ngăn AGM với công suất hằng năm khoảng 4.000 tấn. Nhiều dây chuyền sản xuất AGM cùng hệ thống kiểm soát quy trình, kiểm tra và quản lý chất lượng hỗ trợ cung ứng theo lô.",
+        "Viking Technology đã đạt chứng nhận hệ thống quản lý chất lượng ISO9001:2015. Quy cách sản phẩm có thể được trao đổi theo yêu cầu khách hàng và ứng dụng ắc quy axit-chì."
+      ],
+      imageLabel: "Văn phòng và cơ sở sản xuất của Hubei Viking Technology",
+      image: {
+        src: "/images/viking-company-building-900.webp",
+        alt: "Văn phòng và cơ sở sản xuất của Hubei Viking Technology",
+        width: 900,
+        height: 675
+      },
+      cards: [
+        [
+          "Thành lập năm 2015",
+          "Vốn đăng ký 30 triệu NDT và tập trung lâu dài vào sản xuất tấm ngăn AGM."
+        ],
+        [
+          "Khu sản xuất khoảng 65 mẫu",
+          "Đặt tại Khu phát triển kinh tế và công nghệ Ngạc Châu, tỉnh Hồ Bắc."
+        ],
+        [
+          "Công suất khoảng 4.000 tấn/năm",
+          "Nhiều dây chuyền sản xuất AGM hỗ trợ cung ứng ổn định theo lô."
+        ],
+        [
+          "Chứng nhận ISO9001:2015",
+          "Hệ thống quản lý chất lượng hỗ trợ quá trình đánh giá nhà cung cấp."
+        ],
+        [
+          "Sản xuất theo quy cách",
+          "Có thể trao đổi độ dày, chiều rộng và dạng sản phẩm theo ứng dụng."
+        ]
+      ]
+    },
+    values: {
+      eyebrow: "Giá trị sản phẩm",
+      title: "Hướng đến hiệu suất ắc quy ổn định",
+      text:
+        "Tấm ngăn AGM được phát triển với trọng tâm là khả năng hút axit, đặc tính nén và tính nhất quán giữa các lô, được hỗ trợ bằng kiểm soát từ nguyên liệu đến khi xuất xưởng.",
+      items: [
+        [
+          "Khả năng hút axit cao",
+          "Hấp thụ điện phân nhanh và giữ phân bố tương đối đồng đều trên vật liệu."
+        ],
+        [
+          "Điện trở thấp",
+          "Được thiết kế để hỗ trợ dẫn dòng và hiệu suất của ắc quy."
+        ],
+        [
+          "Độ dày ổn định",
+          "Kiểm soát độ dày giúp lắp ráp bản cực và quản lý độ nén."
+        ],
+        [
+          "Độ bền kéo phù hợp",
+          "Hỗ trợ quá trình xẻ cuộn, cắt và lắp ráp trên dây chuyền."
+        ],
+        [
+          "Chất lượng nhất quán",
+          "Kiểm soát giữa các lô cho nhu cầu sản xuất hàng loạt."
+        ]
+      ],
+      images: [
+        [
+          "Cuộn tấm ngăn thành phẩm",
+          "Cuộn AGM chuẩn bị cho dây chuyền sản xuất và gia công ắc quy.",
+          "/images/viking-finished-separator-roll-900.webp"
+        ],
+        [
+          "Tấm ngăn cắt sẵn",
+          "Tấm cắt theo quy cách để đánh giá mẫu và trao đổi lắp ráp.",
+          "/images/viking-separator-sheets-900.webp"
+        ]
+      ]
+    },
+    applications: {
+      eyebrow: "Ứng dụng",
+      title: "Vật liệu tấm ngăn cho các phân khúc ắc quy axit-chì chính",
+      items: [
+        "Ắc quy VRLA",
+        "Ắc quy UPS",
+        "Ắc quy xe máy",
+        "Ắc quy khởi động ô tô",
+        "Hệ thống lưu trữ năng lượng"
+      ]
+    },
+    factory: {
+      eyebrow: "Năng lực sản xuất",
+      title: "Bằng chứng sản xuất để người mua đánh giá",
+      text:
+        "Thiết bị xưởng, theo dõi trên dây chuyền và năng lực xử lý cuộn giúp khách hàng hiểu rõ hơn cách vật liệu được sản xuất, kiểm tra và chuẩn bị giao hàng.",
+      items: [
+        [
+          "Sản xuất liên tục dạng cuộn",
+          "Hình ảnh dây chuyền hỗ trợ trao đổi về cung ứng vật liệu liên tục."
+        ],
+        [
+          "Theo dõi tại dây chuyền",
+          "Thiết bị và thông số sản xuất giúp việc theo dõi quy trình cụ thể hơn."
+        ],
+        [
+          "Đóng gói và giao hàng",
+          "Có thể trao đổi kích thước cuộn, phương án đóng gói và lịch xuất hàng."
+        ],
+        [
+          "Quy cách theo yêu cầu",
+          "Có thể xem xét độ dày, chiều rộng, dạng cuộn và yêu cầu theo ứng dụng."
+        ]
+      ],
+      image: {
+        src: "/images/agm-factory-capability-1200.webp",
+        alt: "Xưởng sản xuất tấm ngăn AGM",
+        width: 1200,
+        height: 900
+      }
+    },
+    process: {
+      eyebrow: "Quy trình sản xuất",
+      title: "Từ lựa chọn nguyên liệu đến theo dõi khách hàng",
+      text:
+        "Quy trình kết nối lựa chọn nguyên liệu, chuẩn bị bột sợi, tạo hình, kiểm tra, phân tích chất lượng và theo dõi khách hàng.",
+      steps: [
+        "Lựa chọn nguyên liệu",
+        "Kiểm tra đầu vào",
+        "Xử lý sợi và nước",
+        "Chuẩn bị bột sợi",
+        "Tạo hình, sấy và ghép",
+        "Xẻ cuộn và cố định",
+        "Phân tích chất lượng",
+        "Xuất xưởng",
+        "Theo dõi khách hàng"
+      ],
+      image: {
+        src: "/images/manufacturing-process-1400.webp",
+        alt: "Sơ đồ quy trình sản xuất tấm ngăn AGM",
+        width: 1400,
+        height: 1000
+      }
+    },
+    quality: {
+      eyebrow: "Kiểm soát chất lượng",
+      title: "Chứng nhận, kiểm tra và quy trình xuất xưởng",
+      text:
+        "Bảo đảm chất lượng gồm tài liệu chứng nhận, kiểm tra trong quá trình, phân tích thành phẩm, kiểm soát xuất xưởng và phản hồi khách hàng.",
+      items: [
+        "Tài liệu chứng nhận để đánh giá",
+        "Kiểm tra đầu vào và trong quá trình",
+        "Phân tích chất lượng thành phẩm",
+        "Xuất xưởng và theo dõi khách hàng"
+      ],
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "Kiểm tra chất lượng tấm ngăn AGM",
+        width: 1200,
+        height: 900
+      }
+    },
+    certifications: {
+      eyebrow: "Chứng nhận và tuân thủ",
+      title: "Tài liệu phục vụ đánh giá nhà cung cấp",
+      text:
+        "Giấy phép kinh doanh và tài liệu chứng nhận có thể được cung cấp để người mua đánh giá. Tên, số và thời hạn cụ thể được xác nhận theo tài liệu gốc.",
+      items: [
+        "Tài liệu giấy phép kinh doanh",
+        "Tài liệu chứng nhận hệ thống quản lý",
+        "Tài liệu công nhận sản phẩm hoặc doanh nghiệp",
+        "Tài liệu chi tiết theo yêu cầu"
+      ],
+      note:
+        "Tài liệu gốc có thể được cung cấp để xác nhận chi tiết trong quá trình đánh giá nhà cung cấp."
+    },
+    why: {
+      eyebrow: "Vì sao chọn chúng tôi",
+      title: "Đối tác sản xuất thực tế cho doanh nghiệp ắc quy quốc tế",
+      items: [
+        [
+          "Kinh nghiệm sản xuất",
+          "Tập trung vào vật liệu tấm ngăn AGM cho ứng dụng ắc quy axit-chì."
+        ],
+        [
+          "Kế hoạch giao hàng",
+          "Lịch sản xuất và đóng gói được trao đổi theo nhu cầu đơn hàng."
+        ],
+        [
+          "Hỗ trợ OEM / quy cách riêng",
+          "Trao đổi theo loại ắc quy, quy trình và dạng cuộn."
+        ],
+        [
+          "Giao tiếp xuất khẩu",
+          "Phản hồi kỹ thuật và thương mại rõ ràng cho người mua quốc tế."
+        ]
+      ]
+    },
+    form: {
+      eyebrow: "Yêu cầu",
+      title: "Để lại thông tin liên hệ",
+      text:
+        "Bạn chỉ cần để lại thông tin liên hệ. Đội ngũ sẽ tiếp tục trao đổi về độ dày, chiều rộng, số lượng và ứng dụng.",
+      hints: [
+        "Email, WhatsApp hoặc điện thoại là đủ để bắt đầu",
+        "Chúng tôi hỗ trợ xác nhận quy cách phù hợp",
+        "Độ dày, chiều rộng và số lượng có thể trao đổi sau"
+      ],
+      fields: {
+        name: "Họ và tên",
+        contact: "Email / WhatsApp / Điện thoại",
+        company: "Công ty",
+        interestedProduct: "Sản phẩm quan tâm",
+        message: "Nội dung"
+      },
+      placeholders: {
+        name: "Họ và tên của bạn",
+        contact: "Email, WhatsApp hoặc số điện thoại",
+        company: "Tên công ty",
+        interestedProduct: "Tấm ngăn AGM dạng cuộn, dạng tấm hoặc chưa xác định",
+        message:
+          "Không bắt buộc: ứng dụng ắc quy, số lượng, yêu cầu mẫu hoặc câu hỏi kỹ thuật"
+      },
+      submit: "Gửi thông tin liên hệ",
+      submitting: "Đang gửi...",
+      success:
+        "Cảm ơn bạn. Chúng tôi sẽ liên hệ để xác nhận yêu cầu tấm ngăn AGM.",
+      required: "Vui lòng nhập họ tên và thông tin liên hệ.",
+      emailFallback:
+        "Ứng dụng email đã được mở với thông tin đã chuẩn bị. Vui lòng gửi email để hoàn tất.",
+      failure:
+        "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau hoặc liên hệ trực tiếp."
+    },
+    faq: {
+      eyebrow: "Câu hỏi thường gặp",
+      title: "Các câu hỏi trước khi yêu cầu hỗ trợ tấm ngăn AGM",
+      items: [
+        [
+          "Có thể trao đổi độ dày hoặc chiều rộng theo yêu cầu không?",
+          "Có. Độ dày, chiều rộng, dạng cuộn và kích thước tấm có thể được xem xét theo thiết kế ắc quy và quy trình sản xuất."
+        ],
+        [
+          "Có thể yêu cầu mẫu trước đơn hàng số lượng lớn không?",
+          "Có thể trao đổi mẫu sau khi xác nhận dạng sản phẩm, ứng dụng và hướng quy cách cơ bản."
+        ],
+        [
+          "Tấm ngăn AGM phù hợp với những ứng dụng nào?",
+          "Có thể trao đổi cho ắc quy axit-chì VRLA, UPS, xe máy, khởi động ô tô và lưu trữ năng lượng."
+        ],
+        [
+          "Cần cung cấp thông tin gì để nhận báo giá?",
+          "Ứng dụng, dạng cuộn hoặc tấm, độ dày, chiều rộng hoặc kích thước tấm, số lượng dự kiến và yêu cầu thử nghiệm sẽ hữu ích."
+        ]
+      ]
+    },
+    footer: {
+      description:
+        "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
+      wechat: "Tài khoản WeChat chính thức",
+      mobile: "Website di động",
+      columns: {
+        "Công ty": [
+          ["Giới thiệu sản xuất", "/vi/#company"],
+          ["Liên hệ", "/vi/#contact"]
+        ],
+        "Sản phẩm": [
+          ["Tấm ngăn AGM", "/vi/products/agm-separator/"],
+          ["Dạng cuộn và tấm", "/vi/products/agm-separator/"]
+        ],
+        "Ứng dụng": [
+          [
+            "Ắc quy xe máy",
+            "/vi/applications/agm-separator-for-motorcycle-battery/"
+          ]
+        ],
+        "Liên hệ": [
+          ["Yêu cầu mẫu", "/vi/request-agm-separator-sample/"],
+          ["Yêu cầu kỹ thuật", "/vi/#contact"],
+          [
+            "Hồ sơ kỹ thuật EN/ZH",
+            "/downloads/viking-agm-technical-capability.pdf"
+          ]
+        ]
+      },
+      logo: {
+        src: "/images/viking-logo-footer-320.webp",
+        alt: "Logo Viking Technology",
+        width: 320,
+        height: 320
+      },
+      qrImages: [
+        ["Tài khoản WeChat chính thức", "/images/qrcode_for_logo.jpg"],
+        ["Website di động", "/images/website-logo-180.webp"]
+      ]
+    }
   }
 } as const;
 
@@ -596,7 +934,16 @@ function asset(path: string) {
   return `${basePath}${path}`;
 }
 
-export function VikingHome({ initialLang }: { initialLang: Lang }) {
+function localeText(
+  lang: SiteLocale,
+  en: string,
+  zh: string,
+  vi: string
+) {
+  return lang === "zh" ? zh : lang === "vi" ? vi : en;
+}
+
+export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
   const lang = initialLang;
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -637,9 +984,14 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
     <main className="min-h-screen overflow-hidden bg-frost text-ink">
       <SiteHeader
         lang={lang}
-        homePath={lang === "zh" ? "/zh/" : "/"}
+        homePath={lang === "zh" ? "/zh/" : lang === "vi" ? "/vi/" : "/"}
         languagePath={lang === "en" ? "/zh/" : "/"}
-        quoteLabel={lang === "zh" ? "申请样品" : "Request Sample"}
+        quoteLabel={localeText(
+          lang,
+          "Request Sample",
+          "申请样品",
+          "Yêu cầu mẫu"
+        )}
       />
 
       <section className="relative min-h-[720px] pt-20">
@@ -655,7 +1007,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(245,247,250,0.25),rgba(245,247,250,0.9))]" />
 
         <div className="relative mx-auto grid min-h-[640px] max-w-7xl content-center px-4 py-20 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="min-w-0 max-w-3xl">
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-md border border-line bg-white/88 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-signal shadow-sm">
               <Factory size={16} />
               <span className="truncate">{t.hero.badge}</span>
@@ -675,9 +1027,12 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white shadow-industrial transition hover:bg-ink"
               >
-                {lang === "zh"
-                  ? "申请样品与规格匹配"
-                  : "Request a Sample & Specification Match"}
+                {localeText(
+                  lang,
+                  "Request a Sample & Specification Match",
+                  "申请样品与规格匹配",
+                  "Yêu cầu mẫu và đối chiếu thông số"
+                )}
                 <Send size={18} />
               </a>
               <a
@@ -856,7 +1211,14 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
                       ["4000吨", "年产能约"],
                       ["ISO9001", "质量体系"]
                     ]
-                  : [
+                  : lang === "vi"
+                    ? [
+                        ["2015", "Thành lập"],
+                        ["65 mẫu", "Khu sản xuất"],
+                        ["4.000 tấn", "Công suất năm"],
+                        ["ISO9001", "Hệ thống chất lượng"]
+                      ]
+                    : [
                       ["2015", "Established"],
                       ["65 mu", "Production site"],
                       ["4,000 tons", "Annual capacity"],
@@ -925,11 +1287,18 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             href={asset(
               lang === "zh"
                 ? "/zh/products/agm-separator/"
-                : "/products/agm-separator/"
+                : lang === "vi"
+                  ? "/vi/products/agm-separator/"
+                  : "/products/agm-separator/"
             )}
             className="inline-flex items-center justify-center gap-2 rounded-md border border-signal bg-white px-5 py-3 text-sm font-bold text-signal transition hover:bg-signal hover:text-white"
           >
-            {lang === "zh" ? "了解 AGM 隔板产品" : "Learn more about AGM separator"}
+            {localeText(
+              lang,
+              "Learn more about AGM separator",
+              "了解 AGM 隔板产品",
+              "Tìm hiểu sản phẩm tấm ngăn AGM"
+            )}
             <ArrowRight size={16} />
           </a>
         </div>
@@ -992,9 +1361,12 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             eyebrow={t.process.eyebrow}
             title={t.process.title}
             note={
-              lang === "zh"
-                ? "AGM 隔板制造流程"
-                : "AGM separator manufacturing workflow"
+              localeText(
+                lang,
+                "AGM separator manufacturing workflow",
+                "AGM 隔板制造流程",
+                "Quy trình sản xuất tấm ngăn AGM"
+              )
             }
             replacement="public/images/manufacturing-process-1400.webp"
             icon="clipboard"
@@ -1013,9 +1385,12 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             eyebrow="Hubei Viking Technology"
             title="AGM separator manufacturing and roll finishing"
             note={
-              lang === "zh"
-                ? "AGM 隔板生产与卷材后处理现场"
-                : "AGM separator production and roll-finishing operations"
+              localeText(
+                lang,
+                "AGM separator production and roll-finishing operations",
+                "AGM 隔板生产与卷材后处理现场",
+                "Sản xuất và hoàn thiện cuộn tấm ngăn AGM"
+              )
             }
             replacement="public/images/agm-factory-capability-1200.webp"
             icon="factory"
@@ -1099,17 +1474,19 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
 
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow={lang === "zh" ? "现场证据" : "Evidence Details"}
-          title={
-            lang === "zh"
-              ? "生产、检测与包装现场"
-              : "Production, testing and shipment evidence"
-          }
-          text={
-            lang === "zh"
-              ? "以下图片展示原料上料、卷材后处理、厚度检测和包装出运等实际环节。"
-              : "These images show raw-material feeding, roll finishing, thickness inspection and shipment preparation in the manufacturing workflow."
-          }
+          eyebrow={localeText(lang, "Evidence Details", "现场证据", "Bằng chứng thực tế")}
+          title={localeText(
+            lang,
+            "Production, testing and shipment evidence",
+            "生产、检测与包装现场",
+            "Sản xuất, kiểm tra và chuẩn bị giao hàng"
+          )}
+          text={localeText(
+            lang,
+            "These images show raw-material feeding, roll finishing, thickness inspection and shipment preparation in the manufacturing workflow.",
+            "以下图片展示原料上料、卷材后处理、厚度检测和包装出运等实际环节。",
+            "Các hình ảnh cho thấy quá trình cấp nguyên liệu, hoàn thiện cuộn, kiểm tra độ dày và chuẩn bị đóng gói giao hàng."
+          )}
         />
         <div className="mx-auto mt-12 grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-4">
           {(
@@ -1140,7 +1517,34 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
                     "AGM 隔板包装与出运"
                   ]
                 ]
-              : [
+              : lang === "vi"
+                ? [
+                    [
+                      "Cấp nguyên liệu",
+                      "Nguyên liệu đã chuẩn bị được đưa vào quy trình theo kế hoạch sản xuất.",
+                      "/images/evidence/factory-raw-material-feed-01.webp",
+                      "Cấp nguyên liệu cho dây chuyền tấm ngăn AGM"
+                    ],
+                    [
+                      "Hoàn thiện cuộn",
+                      "Cuộn thành phẩm được chuyển qua công đoạn cuốn, xẻ và xử lý quy cách.",
+                      "/images/evidence/factory-roll-finishing-01.webp",
+                      "Hoàn thiện cuộn tấm ngăn AGM"
+                    ],
+                    [
+                      "Kiểm tra độ dày",
+                      "Kiểm tra độ dày giúp đối chiếu kích thước với yêu cầu đã xác nhận.",
+                      "/images/evidence/quality-thickness-test-01.webp",
+                      "Kiểm tra độ dày tấm ngăn AGM"
+                    ],
+                    [
+                      "Đóng gói và giao hàng",
+                      "Cuộn hoặc tấm được đóng gói theo dạng đã thống nhất và chuẩn bị lên pallet.",
+                      "/images/evidence/shipping-pallet-01.webp",
+                      "Đóng gói và giao hàng tấm ngăn AGM"
+                    ]
+                  ]
+                : [
                   [
                     "Raw material feed",
                     "Prepared raw materials enter the manufacturing workflow according to the production plan.",
@@ -1319,7 +1723,9 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
             defaultInterestedProduct={
               lang === "zh"
                 ? "AGM 隔板样品与规格匹配"
-                : "AGM separator sample and specification match"
+                : lang === "vi"
+                  ? "Yêu cầu mẫu và đối chiếu thông số tấm ngăn AGM"
+                  : "AGM separator sample and specification match"
             }
             messagePlaceholder={t.form.placeholders.message}
           />
@@ -1411,7 +1817,7 @@ export function VikingHome({ initialLang }: { initialLang: Lang }) {
   );
 }
 
-function QuickContactDock({ lang }: { lang: Lang }) {
+function QuickContactDock({ lang }: { lang: SiteLocale }) {
   const [copiedContact, setCopiedContact] = useState<"phone" | "email" | null>(
     null
   );
@@ -1427,7 +1833,18 @@ function QuickContactDock({ lang }: { lang: Lang }) {
           backTop: "返回顶部",
           copied: "已复制"
         }
-      : {
+      : lang === "vi"
+        ? {
+            phone: "Điện thoại",
+            wechat: "WeChat",
+            email: "Email",
+            copyPhone: "Sao chép số điện thoại",
+            openWechat: "Xem mã QR WeChat",
+            copyEmail: "Sao chép email",
+            backTop: "Về đầu trang",
+            copied: "Đã sao chép"
+          }
+        : {
           phone: "TEL",
           wechat: "WeChat",
           email: "E-mail",
@@ -1481,7 +1898,7 @@ function QuickContactDock({ lang }: { lang: Lang }) {
   }
 
   return (
-    <div className="fixed bottom-5 right-4 z-40 flex flex-col gap-2 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2">
+    <div className="fixed bottom-5 right-4 z-40 hidden flex-col gap-2 sm:top-1/2 sm:flex sm:-translate-y-1/2">
       <button
         type="button"
         onClick={scrollToWechat}
@@ -1528,7 +1945,7 @@ function QuickContactDock({ lang }: { lang: Lang }) {
   );
 }
 
-function CertificationBanner({ lang }: { lang: Lang }) {
+function CertificationBanner({ lang }: { lang: SiteLocale }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeImage = certificationImages[activeIndex];
   const labels =
@@ -1539,7 +1956,14 @@ function CertificationBanner({ lang }: { lang: Lang }) {
           item: "资质材料",
           counter: "张"
         }
-      : {
+      : lang === "vi"
+        ? {
+            previous: "Tài liệu trước",
+            next: "Tài liệu tiếp theo",
+            item: "Tài liệu chứng nhận",
+            counter: "trên"
+          }
+        : {
           previous: "Previous qualification material",
           next: "Next qualification material",
           item: "Qualification material",
@@ -1620,10 +2044,10 @@ function CopyContactButton({
 }: {
   label: string;
   value: string;
-  lang: Lang;
+  lang: SiteLocale;
 }) {
   const [copied, setCopied] = useState(false);
-  const copiedLabel = lang === "zh" ? "已复制" : "Copied";
+  const copiedLabel = localeText(lang, "Copied", "已复制", "Đã sao chép");
 
   async function copyValue() {
     const didCopy = await copyToClipboard(value);

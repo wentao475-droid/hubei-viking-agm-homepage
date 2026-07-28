@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { InquiryForm } from "./InquiryForm";
+import type { SiteLocale } from "./locales";
 import { SiteHeader } from "./SiteHeader";
 import { sampleRequestFaq } from "./sample-request-copy";
 import { SocialLinks } from "./SocialLinks";
-import type { Lang } from "./VikingHome";
 
 type IconProps = { size?: number; className?: string };
 
@@ -176,6 +176,124 @@ const pageCopy = {
         "可选：电池应用、目标厚度、卷材宽度或片材尺寸、样品数量、技术要求或包装需求"
     },
     footer: "面向铅酸电池项目提供 AGM 玻璃纤维隔板制造、质量评审和供货协同。"
+  },
+  vi: {
+    homePath: "/vi/",
+    languagePath: "/request-agm-separator-sample/",
+    eyebrow: "Đánh giá mẫu và thông số",
+    title: "Yêu cầu mẫu tấm ngăn AGM và đối chiếu thông số",
+    subtitle:
+      "Chia sẻ ứng dụng ắc quy và thông tin tấm ngăn hiện có. Viking AGM có thể hỗ trợ xem xét hướng cuộn hoặc tấm phù hợp trước khi trao đổi mẫu hay báo giá.",
+    primary: "Bắt đầu yêu cầu mẫu",
+    secondary: "Tải hồ sơ kỹ thuật EN/ZH",
+    proof: [
+      "Dạng cuộn và dạng tấm",
+      "Trao đổi theo ứng dụng",
+      "Yêu cầu kiểm tra và đóng gói"
+    ],
+    requirements: {
+      eyebrow: "Danh sách thông tin",
+      title: "Nên cung cấp gì cho lần đánh giá đầu tiên",
+      text:
+        "Bạn không cần hoàn thiện mọi thông số trước khi liên hệ. Hãy gửi thông tin hiện có và đánh dấu rõ những mục vẫn đang xem xét.",
+      items: [
+        [
+          "Ứng dụng ắc quy",
+          "VRLA, UPS, xe máy, ô tô, lưu trữ năng lượng hoặc ứng dụng axit-chì khác."
+        ],
+        [
+          "Dạng sản phẩm",
+          "Vật liệu dạng cuộn, tấm cắt sẵn hoặc yêu cầu so sánh cả hai dạng."
+        ],
+        [
+          "Kích thước",
+          "Độ dày mục tiêu, chiều rộng cuộn, chiều dài và chiều rộng tấm hoặc bản vẽ hiện có."
+        ],
+        [
+          "Tài liệu kỹ thuật",
+          "Giá trị mục tiêu, tiêu chuẩn khách hàng, hạng mục thử nghiệm hoặc mẫu tham chiếu nếu có."
+        ],
+        [
+          "Số lượng và đóng gói",
+          "Số lượng mẫu, kế hoạch thử hoặc sản xuất, lõi cuộn, nhãn và yêu cầu đóng gói."
+        ]
+      ]
+    },
+    process: {
+      eyebrow: "Bước tiếp theo",
+      title: "Quy trình thực tế từ yêu cầu đến trao đổi mẫu",
+      items: [
+        [
+          "1",
+          "Đánh giá ứng dụng",
+          "Xem xét ứng dụng ắc quy, dạng sản phẩm và thông tin quy cách hiện có."
+        ],
+        [
+          "2",
+          "Xác nhận thông tin còn thiếu",
+          "Trao đổi thêm về kích thước, mẫu tham chiếu, hạng mục thử nghiệm hoặc đóng gói cần làm rõ."
+        ],
+        [
+          "3",
+          "Trao đổi bước tiếp theo",
+          "Hai bên thảo luận hướng mẫu, đánh giá kỹ thuật hoặc báo giá dựa trên nội dung đã xác nhận."
+        ]
+      ]
+    },
+    evidence: {
+      eyebrow: "Bằng chứng sản xuất",
+      title: "Xem sản xuất, kiểm tra và chuẩn bị giao hàng",
+      items: [
+        {
+          title: "Năng lực sản xuất",
+          text:
+            "Sản xuất tấm ngăn AGM và xử lý cuộn hỗ trợ trao đổi quy cách và cung ứng theo lô.",
+          src: "/images/agm-factory-capability-1200.webp",
+          alt: "Năng lực sản xuất tấm ngăn AGM của Viking"
+        },
+        {
+          title: "Kiểm tra chất lượng",
+          text:
+            "Yêu cầu kiểm tra có thể được xác nhận theo ứng dụng và hạng mục đã thống nhất.",
+          src: "/images/agm-quality-control-1200.webp",
+          alt: "Kiểm tra chất lượng tấm ngăn AGM tại Viking Technology"
+        },
+        {
+          title: "Đóng gói và giao hàng",
+          text:
+            "Dạng cuộn, tấm, nhãn và pallet có thể được xem xét trước khi sắp xếp mẫu hoặc đơn hàng.",
+          src: "/images/evidence/shipping-pallet-01.webp",
+          alt: "Đóng gói pallet tấm ngăn AGM để giao hàng"
+        }
+      ]
+    },
+    download: {
+      eyebrow: "Tài liệu cho người mua",
+      title: "Tải tổng quan năng lực kỹ thuật Viking AGM",
+      text:
+        "Tài liệu tiếng Anh và tiếng Trung giới thiệu dạng sản phẩm, ứng dụng, kiểm tra chất lượng, đóng gói và thông tin cần thiết để đối chiếu quy cách.",
+      button: "Tải PDF EN/ZH"
+    },
+    faq: {
+      eyebrow: "Câu hỏi thường gặp",
+      title: "Câu hỏi trước khi yêu cầu mẫu"
+    },
+    form: {
+      eyebrow: "Bắt đầu trao đổi",
+      title: "Gửi thông tin bạn đang có",
+      text:
+        "Họ tên và thông tin liên hệ là đủ để bắt đầu. Ứng dụng, dạng sản phẩm và kích thước giúp chúng tôi chuẩn bị phản hồi phù hợp hơn.",
+      hints: [
+        "Ứng dụng ắc quy",
+        "Dạng cuộn hoặc dạng tấm",
+        "Độ dày, chiều rộng hoặc kích thước tấm",
+        "Yêu cầu mẫu, thử nghiệm và đóng gói"
+      ],
+      message:
+        "Không bắt buộc: ứng dụng ắc quy, độ dày mục tiêu, chiều rộng cuộn hoặc kích thước tấm, số lượng mẫu, yêu cầu kỹ thuật hoặc đóng gói"
+    },
+    footer:
+      "Sản xuất tấm ngăn sợi thủy tinh AGM, đánh giá chất lượng và phối hợp cung ứng cho các dự án ắc quy axit-chì."
   }
 } as const;
 
@@ -183,7 +301,7 @@ function asset(path: string) {
   return `${basePath}${path}`;
 }
 
-export function SampleRequestPage({ lang }: { lang: Lang }) {
+export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
   const t = pageCopy[lang];
 
   return (
@@ -192,7 +310,13 @@ export function SampleRequestPage({ lang }: { lang: Lang }) {
         lang={lang}
         homePath={t.homePath}
         languagePath={t.languagePath}
-        quoteLabel={lang === "zh" ? "申请样品" : "Request Sample"}
+        quoteLabel={
+          lang === "zh"
+            ? "申请样品"
+            : lang === "vi"
+              ? "Yêu cầu mẫu"
+              : "Request Sample"
+        }
       />
 
       <section className="relative overflow-hidden pt-20">
@@ -201,7 +325,9 @@ export function SampleRequestPage({ lang }: { lang: Lang }) {
           alt={
             lang === "zh"
               ? "湖北维京 AGM 隔板生产线"
-              : "Viking AGM separator production line"
+              : lang === "vi"
+                ? "Dây chuyền sản xuất tấm ngăn AGM của Viking"
+                : "Viking AGM separator production line"
           }
           fill
           priority
@@ -398,7 +524,9 @@ export function SampleRequestPage({ lang }: { lang: Lang }) {
             defaultInterestedProduct={
               lang === "zh"
                 ? "AGM 隔板样品与规格匹配"
-                : "AGM separator sample and specification match"
+                : lang === "vi"
+                  ? "Yêu cầu mẫu và đối chiếu thông số tấm ngăn AGM"
+                  : "AGM separator sample and specification match"
             }
             messagePlaceholder={t.form.message}
             className="sm:p-8"
@@ -426,7 +554,11 @@ export function SampleRequestPage({ lang }: { lang: Lang }) {
             href={asset(t.homePath)}
             className="inline-flex items-center gap-2 text-sm font-bold text-signal transition hover:text-ink"
           >
-            {lang === "zh" ? "返回首页" : "Back to homepage"}
+            {lang === "zh"
+              ? "返回首页"
+              : lang === "vi"
+                ? "Về trang chủ"
+                : "Back to homepage"}
             <ArrowRight size={16} />
           </a>
         </div>

@@ -1,4 +1,4 @@
-export type FaqLang = "en" | "zh";
+export type FaqLang = "en" | "zh" | "vi";
 
 export const productFaqCopy = {
   en: {
@@ -42,6 +42,28 @@ export const productFaqCopy = {
       [
         "哪些信息有助于更快回复？",
         "产品形式、电池应用和预计数量会有帮助，但首次联系时不是必填。"
+      ]
+    ]
+  },
+  vi: {
+    faqEyebrow: "Câu hỏi thường gặp",
+    faqTitle: "Có thể liên hệ trước khi hoàn thiện quy cách",
+    faq: [
+      [
+        "Tôi có cần biết chính xác quy cách trước khi liên hệ không?",
+        "Không. Bạn có thể để lại thông tin liên hệ trước. Đội ngũ của chúng tôi sẽ hỗ trợ xem xét độ dày, chiều rộng, dạng sản phẩm và ứng dụng."
+      ],
+      [
+        "Có cung cấp mẫu không?",
+        "Có thể trao đổi mẫu sau khi xác nhận dạng sản phẩm và ứng dụng cơ bản."
+      ],
+      [
+        "Có thể trao đổi độ dày hoặc chiều rộng theo yêu cầu không?",
+        "Độ dày, chiều rộng, dạng cuộn và kích thước tấm có thể được trao đổi theo yêu cầu của khách hàng."
+      ],
+      [
+        "Thông tin nào giúp nhận phản hồi nhanh hơn?",
+        "Dạng sản phẩm, ứng dụng ắc quy và số lượng dự kiến sẽ hữu ích nhưng không bắt buộc trong lần liên hệ đầu tiên."
       ]
     ]
   }

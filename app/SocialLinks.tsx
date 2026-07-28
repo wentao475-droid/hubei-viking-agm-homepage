@@ -1,4 +1,4 @@
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
 
 export const socialProfileUrls = {
   tiktok: "https://www.tiktok.com/@vikingagm",
@@ -15,6 +15,11 @@ const copy = {
     heading: "关注我们",
     tiktok: "访问 Viking AGM 的 TikTok",
     linkedin: "访问 Viking AGM 的 LinkedIn"
+  },
+  vi: {
+    heading: "Theo dõi chúng tôi",
+    tiktok: "Truy cập TikTok của Viking AGM",
+    linkedin: "Truy cập LinkedIn của Viking AGM"
   }
 } as const;
 
@@ -22,7 +27,7 @@ export function SocialLinks({
   lang,
   className = ""
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   className?: string;
 }) {
   const labels = copy[lang];
