@@ -71,6 +71,39 @@ const headerCopy = {
     companyName: "湖北維京科技有限公司",
     menuOpen: "ナビゲーションメニューを開く",
     menuClose: "ナビゲーションメニューを閉じる"
+  },
+  es: {
+    company: "Empresa",
+    products: "Productos",
+    quality: "Calidad",
+    resources: "Recursos",
+    applications: "Aplicaciones",
+    contact: "Contacto",
+    companyName: "Hubei Viking Technology Co., Ltd.",
+    menuOpen: "Abrir menú de navegación",
+    menuClose: "Cerrar menú de navegación"
+  },
+  pt: {
+    company: "Empresa",
+    products: "Produtos",
+    quality: "Qualidade",
+    resources: "Recursos",
+    applications: "Aplicações",
+    contact: "Contato",
+    companyName: "Hubei Viking Technology Co., Ltd.",
+    menuOpen: "Abrir menu de navegação",
+    menuClose: "Fechar menu de navegação"
+  },
+  ru: {
+    company: "Компания",
+    products: "Продукция",
+    quality: "Качество",
+    resources: "Материалы",
+    applications: "Применение",
+    contact: "Контакты",
+    companyName: "Hubei Viking Technology Co., Ltd.",
+    menuOpen: "Открыть меню навигации",
+    menuClose: "Закрыть меню навигации"
   }
 } as const;
 

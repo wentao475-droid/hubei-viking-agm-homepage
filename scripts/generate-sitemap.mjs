@@ -9,9 +9,12 @@ const pages = [
     vi: "/vi/",
     ko: "/ko/",
     ja: "/ja/",
+    es: "/es/",
+    pt: "/pt/",
+    ru: "/ru/",
     priority: "1.0",
     changefreq: "weekly",
-    lastmod: "2026-07-29"
+    lastmod: "2026-07-30"
   },
   {
     en: "/products/agm-separator/",
@@ -19,9 +22,12 @@ const pages = [
     vi: "/vi/products/agm-separator/",
     ko: "/ko/products/agm-separator/",
     ja: "/ja/products/agm-separator/",
+    es: "/es/products/agm-separator/",
+    pt: "/pt/products/agm-separator/",
+    ru: "/ru/products/agm-separator/",
     priority: "0.9",
     changefreq: "weekly",
-    lastmod: "2026-07-29"
+    lastmod: "2026-07-30"
   },
   {
     en: "/request-agm-separator-sample/",
@@ -29,9 +35,12 @@ const pages = [
     vi: "/vi/request-agm-separator-sample/",
     ko: "/ko/request-agm-separator-sample/",
     ja: "/ja/request-agm-separator-sample/",
+    es: "/es/request-agm-separator-sample/",
+    pt: "/pt/request-agm-separator-sample/",
+    ru: "/ru/request-agm-separator-sample/",
     priority: "0.9",
     changefreq: "weekly",
-    lastmod: "2026-07-29"
+    lastmod: "2026-07-30"
   },
   {
     en: "/resources/",
@@ -162,19 +171,28 @@ function urlEntry(path, alternate) {
   const jaAlternate = alternate.ja
     ? `\n    <xhtml:link rel="alternate" hreflang="ja-JP" href="${absolute(alternate.ja)}" />`
     : "";
+  const esAlternate = alternate.es
+    ? `\n    <xhtml:link rel="alternate" hreflang="es" href="${absolute(alternate.es)}" />`
+    : "";
+  const ptAlternate = alternate.pt
+    ? `\n    <xhtml:link rel="alternate" hreflang="pt-BR" href="${absolute(alternate.pt)}" />`
+    : "";
+  const ruAlternate = alternate.ru
+    ? `\n    <xhtml:link rel="alternate" hreflang="ru-RU" href="${absolute(alternate.ru)}" />`
+    : "";
   return `  <url>
     <loc>${absolute(path)}</loc>
     <lastmod>${alternate.lastmod}</lastmod>
     <changefreq>${alternate.changefreq}</changefreq>
     <priority>${alternate.priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${absolute(alternate.en)}" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="${absolute(alternate.zh)}" />${viAlternate}${koAlternate}${jaAlternate}
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="${absolute(alternate.zh)}" />${viAlternate}${koAlternate}${jaAlternate}${esAlternate}${ptAlternate}${ruAlternate}
     <xhtml:link rel="alternate" hreflang="x-default" href="${absolute(alternate.en)}" />
   </url>`;
 }
 
 const entries = pages.flatMap((page) =>
-  [page.en, page.zh, page.vi, page.ko, page.ja]
+  [page.en, page.zh, page.vi, page.ko, page.ja, page.es, page.pt, page.ru]
     .filter(Boolean)
     .map((path) => urlEntry(path, page))
 );

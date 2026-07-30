@@ -127,6 +127,66 @@ const homeSeo = {
     serviceName: "ガラス繊維AGMセパレーター製造",
     serviceDescription:
       "鉛蓄電池メーカー向けにロール・シート形状のAGMセパレーターを提供し、仕様確認、品質検査、梱包要件の検討を支援します。"
+  },
+  es: {
+    path: "/es/",
+    locale: "es_LA",
+    language: "es",
+    siteName: "Viking AGM",
+    alternateSiteName: "Hubei Viking AGM",
+    title: "Fabricante de separadores AGM para baterías VRLA | Viking AGM",
+    description:
+      "Viking AGM fabrica separadores de fibra de vidrio AGM en rollos y láminas para baterías VRLA, UPS, motocicletas y almacenamiento de energía.",
+    keywords: [
+      "separador AGM",
+      "fabricante de separadores AGM",
+      "separador de fibra de vidrio AGM",
+      "separador para baterías VRLA",
+      "separador para baterías de plomo ácido"
+    ],
+    serviceName: "Fabricación de separadores AGM de fibra de vidrio",
+    serviceDescription:
+      "Separadores AGM en rollos y láminas para fabricantes de baterías de plomo-ácido, con revisión de especificaciones, calidad y embalaje."
+  },
+  pt: {
+    path: "/pt/",
+    locale: "pt_BR",
+    language: "pt-BR",
+    siteName: "Viking AGM",
+    alternateSiteName: "Hubei Viking AGM",
+    title: "Fabricante de separadores AGM para baterias VRLA | Viking AGM",
+    description:
+      "A Viking AGM fabrica separadores de fibra de vidro AGM em rolos e folhas para baterias VRLA, UPS, motocicletas e armazenamento de energia.",
+    keywords: [
+      "separador AGM",
+      "fabricante de separadores AGM",
+      "separador de fibra de vidro AGM",
+      "separador para baterias VRLA",
+      "separador para baterias chumbo ácido"
+    ],
+    serviceName: "Fabricação de separadores AGM de fibra de vidro",
+    serviceDescription:
+      "Separadores AGM em rolos e folhas para fabricantes de baterias chumbo-ácido, com análise de especificações, qualidade e embalagem."
+  },
+  ru: {
+    path: "/ru/",
+    locale: "ru_RU",
+    language: "ru-RU",
+    siteName: "Viking AGM",
+    alternateSiteName: "Hubei Viking AGM",
+    title: "Производитель AGM-сепараторов для аккумуляторов VRLA | Viking AGM",
+    description:
+      "Viking AGM производит стекловолоконные AGM-сепараторы в рулонах и листах для аккумуляторов VRLA, ИБП, мототехники и систем накопления энергии.",
+    keywords: [
+      "AGM сепаратор",
+      "производитель AGM сепараторов",
+      "стекловолоконный AGM сепаратор",
+      "сепаратор для аккумуляторов VRLA",
+      "сепаратор для свинцово кислотных аккумуляторов"
+    ],
+    serviceName: "Производство стекловолоконных AGM-сепараторов",
+    serviceDescription:
+      "AGM-сепараторы в рулонах и листах для производителей свинцово-кислотных аккумуляторов с проверкой спецификаций, качества и упаковки."
   }
 } as const;
 
@@ -274,6 +334,69 @@ const sampleRequestSeo = {
     serviceDescription:
       "サンプル、技術確認、見積相談の前に、バッテリー用途に基づいてAGMセパレーターのロールまたはシート要件を確認します。",
     breadcrumbs: ["ホーム", "AGMセパレーターのサンプル依頼"]
+  },
+  es: {
+    path: "/es/request-agm-separator-sample/",
+    alternatePath: "/request-agm-separator-sample/",
+    locale: "es_LA",
+    language: "es",
+    siteName: "Viking AGM",
+    title: "Solicite una muestra y revisión de especificaciones AGM | Viking AGM",
+    description:
+      "Solicite muestras de separador AGM para baterías VRLA. Comparta aplicación, espesor, ancho y requisitos de rollo o lámina.",
+    keywords: [
+      "muestra de separador AGM",
+      "especificaciones de separador AGM",
+      "muestra para batería VRLA",
+      "separador AGM en rollo",
+      "separador AGM en lámina"
+    ],
+    pageName: "Muestra de separador AGM y revisión de especificaciones",
+    serviceDescription:
+      "Revisión de requisitos de separadores AGM en rollo o lámina según la aplicación antes de muestras, evaluación técnica o cotización.",
+    breadcrumbs: ["Inicio", "Solicitar muestra de separador AGM"]
+  },
+  pt: {
+    path: "/pt/request-agm-separator-sample/",
+    alternatePath: "/request-agm-separator-sample/",
+    locale: "pt_BR",
+    language: "pt-BR",
+    siteName: "Viking AGM",
+    title: "Solicite uma amostra e análise de especificações AGM | Viking AGM",
+    description:
+      "Solicite amostras de separador AGM para baterias VRLA. Informe aplicação, espessura, largura e requisitos de rolo ou folha.",
+    keywords: [
+      "amostra de separador AGM",
+      "especificações de separador AGM",
+      "amostra para bateria VRLA",
+      "separador AGM em rolo",
+      "separador AGM em folha"
+    ],
+    pageName: "Amostra de separador AGM e análise de especificações",
+    serviceDescription:
+      "Análise dos requisitos de separadores AGM em rolo ou folha conforme a aplicação antes de amostras, avaliação técnica ou cotação.",
+    breadcrumbs: ["Início", "Solicitar amostra de separador AGM"]
+  },
+  ru: {
+    path: "/ru/request-agm-separator-sample/",
+    alternatePath: "/request-agm-separator-sample/",
+    locale: "ru_RU",
+    language: "ru-RU",
+    siteName: "Viking AGM",
+    title: "Запрос образца и проверка характеристик AGM-сепаратора | Viking AGM",
+    description:
+      "Запросите образцы AGM-сепаратора для аккумуляторов VRLA. Укажите применение, толщину, ширину и требования к рулонам или листам.",
+    keywords: [
+      "образец AGM сепаратора",
+      "характеристики AGM сепаратора",
+      "образец сепаратора VRLA",
+      "AGM сепаратор в рулонах",
+      "AGM сепаратор в листах"
+    ],
+    pageName: "Образец AGM-сепаратора и проверка характеристик",
+    serviceDescription:
+      "Проверка требований к AGM-сепараторам в рулонах или листах по области применения до предоставления образцов, технической оценки или расчета цены.",
+    breadcrumbs: ["Главная", "Запрос образца AGM-сепаратора"]
   }
 } as const;
 
@@ -382,6 +505,69 @@ const agmSeparatorSeo = {
     serviceDescription:
       "顧客仕様の確認に対応する、ロール・シート形状のVRLA鉛蓄電池用ガラス繊維AGMセパレーターです。",
     breadcrumbs: ["ホーム", "製品", "AGMセパレーター"]
+  },
+  es: {
+    path: "/es/products/agm-separator/",
+    alternatePath: "/products/agm-separator/",
+    locale: "es_LA",
+    language: "es",
+    siteName: "Viking AGM",
+    title: "Separador AGM de fibra de vidrio para baterías VRLA | Viking AGM",
+    description:
+      "Separadores AGM de fibra de vidrio en rollos y láminas para baterías VRLA. Envíe el espesor, ancho y aplicación para revisar especificaciones.",
+    keywords: [
+      "separador AGM",
+      "separador para batería AGM",
+      "separador AGM de fibra de vidrio",
+      "separador para batería VRLA",
+      "fabricante de separadores AGM"
+    ],
+    productName: "Separador AGM para baterías VRLA de plomo-ácido",
+    serviceDescription:
+      "Separadores AGM de fibra de vidrio en rollos y láminas para baterías VRLA, con revisión de especificaciones del cliente.",
+    breadcrumbs: ["Inicio", "Productos", "Separador AGM"]
+  },
+  pt: {
+    path: "/pt/products/agm-separator/",
+    alternatePath: "/products/agm-separator/",
+    locale: "pt_BR",
+    language: "pt-BR",
+    siteName: "Viking AGM",
+    title: "Separador AGM de fibra de vidro para baterias VRLA | Viking AGM",
+    description:
+      "Separadores AGM de fibra de vidro em rolos e folhas para baterias VRLA. Envie espessura, largura e aplicação para análise das especificações.",
+    keywords: [
+      "separador AGM",
+      "separador para bateria AGM",
+      "separador AGM de fibra de vidro",
+      "separador para bateria VRLA",
+      "fabricante de separadores AGM"
+    ],
+    productName: "Separador AGM para baterias VRLA chumbo-ácido",
+    serviceDescription:
+      "Separadores AGM de fibra de vidro em rolos e folhas para baterias VRLA, com análise das especificações do cliente.",
+    breadcrumbs: ["Início", "Produtos", "Separador AGM"]
+  },
+  ru: {
+    path: "/ru/products/agm-separator/",
+    alternatePath: "/products/agm-separator/",
+    locale: "ru_RU",
+    language: "ru-RU",
+    siteName: "Viking AGM",
+    title: "Стекловолоконный AGM-сепаратор для аккумуляторов VRLA | Viking AGM",
+    description:
+      "Стекловолоконные AGM-сепараторы в рулонах и листах для аккумуляторов VRLA. Укажите толщину, ширину и применение для проверки спецификации.",
+    keywords: [
+      "AGM сепаратор",
+      "сепаратор для AGM аккумулятора",
+      "стекловолоконный AGM сепаратор",
+      "сепаратор для аккумулятора VRLA",
+      "производитель AGM сепараторов"
+    ],
+    productName: "AGM-сепаратор для свинцово-кислотных аккумуляторов VRLA",
+    serviceDescription:
+      "Стекловолоконные AGM-сепараторы в рулонах и листах для аккумуляторов VRLA с проверкой требований заказчика.",
+    breadcrumbs: ["Главная", "Продукция", "AGM-сепаратор"]
   }
 } as const;
 
@@ -1127,6 +1313,9 @@ export function buildHomeMetadata(lang: SiteLocale): Metadata {
     viPath: "/vi/",
     koPath: "/ko/",
     jaPath: "/ja/",
+    esPath: "/es/",
+    ptPath: "/pt/",
+    ruPath: "/ru/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.serviceName
@@ -1167,6 +1356,9 @@ export function buildSampleRequestMetadata(lang: SiteLocale): Metadata {
     viPath: "/vi/request-agm-separator-sample/",
     koPath: "/ko/request-agm-separator-sample/",
     jaPath: "/ja/request-agm-separator-sample/",
+    esPath: "/es/request-agm-separator-sample/",
+    ptPath: "/pt/request-agm-separator-sample/",
+    ruPath: "/ru/request-agm-separator-sample/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -1191,6 +1383,9 @@ export function buildAgmSeparatorMetadata(lang: SiteLocale): Metadata {
     viPath: "/vi/products/agm-separator/",
     koPath: "/ko/products/agm-separator/",
     jaPath: "/ja/products/agm-separator/",
+    esPath: "/es/products/agm-separator/",
+    ptPath: "/pt/products/agm-separator/",
+    ruPath: "/ru/products/agm-separator/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName
@@ -1570,6 +1765,9 @@ function buildMetadata({
   viPath,
   koPath,
   jaPath,
+  esPath,
+  ptPath,
+  ruPath,
   locale,
   siteName,
   imageAlt,
@@ -1588,6 +1786,9 @@ function buildMetadata({
   viPath?: string;
   koPath?: string;
   jaPath?: string;
+  esPath?: string;
+  ptPath?: string;
+  ruPath?: string;
   locale: string;
   siteName: string;
   imageAlt: string;
@@ -1609,6 +1810,9 @@ function buildMetadata({
         ...(viPath ? { "vi-VN": viPath } : {}),
         ...(koPath ? { "ko-KR": koPath } : {}),
         ...(jaPath ? { "ja-JP": jaPath } : {}),
+        ...(esPath ? { es: esPath } : {}),
+        ...(ptPath ? { "pt-BR": ptPath } : {}),
+        ...(ruPath ? { "ru-RU": ruPath } : {}),
         "x-default": enPath
       }
     },
@@ -1681,7 +1885,13 @@ export function StructuredData({ lang }: { lang: SiteLocale }) {
                 ? "1분 만에 보는 Viking AGM 분리막 생산"
                 : lang === "ja"
                   ? "1分で見るViking AGMセパレーター生産"
-              : "Watch the 1-minute Viking AGM factory overview",
+                  : lang === "es"
+                    ? "Conozca la producción de separadores Viking AGM en 1 minuto"
+                    : lang === "pt"
+                      ? "Conheça a produção de separadores Viking AGM em 1 minuto"
+                      : lang === "ru"
+                        ? "Производство AGM-сепараторов Viking за 1 минуту"
+                        : "Watch the 1-minute Viking AGM factory overview",
         description:
           lang === "zh"
             ? "湖北维京 AGM 隔板生产、卷材处理、质量检测和包装出运现场宣传片。"
@@ -1691,7 +1901,13 @@ export function StructuredData({ lang }: { lang: SiteLocale }) {
                 ? "Viking AGM의 분리막 생산, 롤 처리, 품질 검사와 포장 현장을 소개하는 1분 영상입니다."
                 : lang === "ja"
                   ? "Viking AGMのセパレーター生産、ロール加工、品質検査、梱包現場を紹介する1分動画です。"
-              : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
+                  : lang === "es"
+                    ? "Video de un minuto sobre producción, manejo de rollos, control de calidad y embalaje de separadores Viking AGM."
+                    : lang === "pt"
+                      ? "Vídeo de um minuto sobre produção, manuseio de rolos, controle de qualidade e embalagem de separadores Viking AGM."
+                      : lang === "ru"
+                        ? "Минутный обзор производства, обработки рулонов, контроля качества и упаковки AGM-сепараторов Viking."
+                        : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
         thumbnailUrl: [HOME_VIDEO_POSTER],
         uploadDate: "2026-07-01T00:00:00+08:00",
         duration: "PT1M3S",
@@ -2867,7 +3083,7 @@ function organizationData(lang: SiteLocale, description: string) {
             ? ["Hubei Viking Technology Co., Ltd.", "Viking AGM Korea", "湖北维京AGM"]
             : lang === "ja"
               ? ["Hubei Viking Technology Co., Ltd.", "Viking AGM Japan", "湖北維京AGM"]
-          : ["Hubei Viking Technology Co., Ltd.", "Hubei Viking AGM", "湖北维京AGM"],
+              : ["Hubei Viking Technology Co., Ltd.", "Hubei Viking AGM", "湖北维京AGM"],
     url: SITE_URL,
     logo: `${SITE_URL}/images/banner-logo-header.webp`,
     sameAs: [socialProfileUrls.tiktok, socialProfileUrls.linkedin],
@@ -2878,7 +3094,16 @@ function organizationData(lang: SiteLocale, description: string) {
       telephone: "+86 18171518528",
       email: "vikingsales@vikingagm.com",
       contactType: "sales",
-      availableLanguage: ["en", "zh-CN", "vi-VN", "ko-KR", "ja-JP"]
+      availableLanguage: [
+        "en",
+        "zh-CN",
+        "vi-VN",
+        "ko-KR",
+        "ja-JP",
+        "es",
+        "pt-BR",
+        "ru-RU"
+      ]
     },
     foundingDate: "2015-12",
     address: {

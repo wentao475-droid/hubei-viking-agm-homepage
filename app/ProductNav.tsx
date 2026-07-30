@@ -64,6 +64,30 @@ const productNavItems = {
       description: "VRLA鉛蓄電池向けのロール・シート形状に対応します。",
       href: "/ja/products/agm-separator/"
     }
+  ],
+  es: [
+    {
+      title: "Separador AGM para baterías VRLA",
+      description:
+        "Separadores AGM en rollos y láminas para baterías de plomo-ácido VRLA.",
+      href: "/es/products/agm-separator/"
+    }
+  ],
+  pt: [
+    {
+      title: "Separador AGM para baterias VRLA",
+      description:
+        "Separadores AGM em rolos e folhas para baterias chumbo-ácido VRLA.",
+      href: "/pt/products/agm-separator/"
+    }
+  ],
+  ru: [
+    {
+      title: "AGM-сепаратор для аккумуляторов VRLA",
+      description:
+        "AGM-сепараторы в рулонах и листах для свинцово-кислотных аккумуляторов VRLA.",
+      href: "/ru/products/agm-separator/"
+    }
   ]
 } as const;
 
@@ -72,7 +96,10 @@ const productNavEyebrow = {
   zh: "产品页面",
   vi: "Sản phẩm",
   ko: "제품",
-  ja: "製品"
+  ja: "製品",
+  es: "Producto",
+  pt: "Produto",
+  ru: "Продукция"
 } as const;
 
 function asset(path: string) {

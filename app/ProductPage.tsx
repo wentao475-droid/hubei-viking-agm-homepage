@@ -166,6 +166,66 @@ const sharedMessages = {
       company: "会社名",
       interestedProduct: "AGMセパレーターのロール、シート、または未定"
     }
+  },
+  es: {
+    copied: "Copiado",
+    copyPhone: "Copiar número de teléfono",
+    copyEmail: "Copiar correo electrónico",
+    openWechat: "Ver código QR de WeChat",
+    backToTop: "Volver arriba",
+    fields: {
+      name: "Nombre",
+      contact: "Correo / WhatsApp / Teléfono",
+      company: "Empresa",
+      interestedProduct: "Producto de interés",
+      message: "Información adicional"
+    },
+    placeholders: {
+      name: "Nombre completo",
+      contact: "Correo, WhatsApp o teléfono",
+      company: "Nombre de la empresa",
+      interestedProduct: "Separador AGM en rollo, lámina o por definir"
+    }
+  },
+  pt: {
+    copied: "Copiado",
+    copyPhone: "Copiar número de telefone",
+    copyEmail: "Copiar e-mail",
+    openWechat: "Ver QR code do WeChat",
+    backToTop: "Voltar ao topo",
+    fields: {
+      name: "Nome",
+      contact: "E-mail / WhatsApp / Telefone",
+      company: "Empresa",
+      interestedProduct: "Produto de interesse",
+      message: "Informações adicionais"
+    },
+    placeholders: {
+      name: "Nome completo",
+      contact: "E-mail, WhatsApp ou telefone",
+      company: "Nome da empresa",
+      interestedProduct: "Separador AGM em rolo, folha ou a definir"
+    }
+  },
+  ru: {
+    copied: "Скопировано",
+    copyPhone: "Скопировать номер телефона",
+    copyEmail: "Скопировать адрес электронной почты",
+    openWechat: "Показать QR-код WeChat",
+    backToTop: "Наверх",
+    fields: {
+      name: "Имя",
+      contact: "Email / WhatsApp / Телефон",
+      company: "Компания",
+      interestedProduct: "Интересующий продукт",
+      message: "Дополнительная информация"
+    },
+    placeholders: {
+      name: "Ваше имя",
+      contact: "Email, WhatsApp или телефон",
+      company: "Название компании",
+      interestedProduct: "AGM-сепаратор в рулонах, листах или пока не определено"
+    }
   }
 } as const;
 
@@ -198,6 +258,18 @@ const commonRelated = {
   ja: [
     ["AGMセパレーター製品", "/ja/products/agm-separator/"],
     ["サンプル・仕様確認依頼", "/ja/request-agm-separator-sample/"]
+  ] as LinkItem[],
+  es: [
+    ["Separador AGM", "/es/products/agm-separator/"],
+    ["Solicitar muestra y revisar especificaciones", "/es/request-agm-separator-sample/"]
+  ] as LinkItem[],
+  pt: [
+    ["Separador AGM", "/pt/products/agm-separator/"],
+    ["Solicitar amostra e analisar especificações", "/pt/request-agm-separator-sample/"]
+  ] as LinkItem[],
+  ru: [
+    ["AGM-сепаратор", "/ru/products/agm-separator/"],
+    ["Запросить образец и проверку характеристик", "/ru/request-agm-separator-sample/"]
   ] as LinkItem[]
 };
 
@@ -290,6 +362,63 @@ const leadCaptureCopy = {
     emailFallback:
       "メールアプリを開きました。作成済みのメールを送信してお問い合わせを完了してください。",
     ...productFaqCopy.ja
+  },
+  es: {
+    heroPrompt:
+      "Deje su correo, WhatsApp o teléfono. Le ayudaremos a confirmar la especificación adecuada del separador AGM.",
+    formText:
+      "Envíe primero sus datos de contacto. Nuestro equipo confirmará después el espesor, ancho, cantidad y aplicación.",
+    checklist: [
+      "Su nombre y contacto son suficientes para comenzar",
+      "Le ayudamos a revisar la especificación adecuada",
+      "El espesor, ancho y volumen pueden definirse después"
+    ],
+    messagePlaceholder:
+      "Opcional: aplicación de la batería, cantidad estimada, muestra o consulta técnica",
+    required: "Ingrese su nombre y datos de contacto.",
+    success:
+      "Gracias. Nos pondremos en contacto para confirmar sus requisitos de separador AGM.",
+    emailFallback:
+      "Se abrió su aplicación de correo con los datos preparados. Envíe el mensaje para completar la consulta.",
+    ...productFaqCopy.es
+  },
+  pt: {
+    heroPrompt:
+      "Deixe seu e-mail, WhatsApp ou telefone. Ajudaremos a confirmar a especificação adequada do separador AGM.",
+    formText:
+      "Envie primeiro seus dados de contato. Nossa equipe confirmará depois espessura, largura, quantidade e aplicação.",
+    checklist: [
+      "Nome e contato são suficientes para começar",
+      "Ajudamos a analisar a especificação adequada",
+      "Espessura, largura e volume podem ser definidos depois"
+    ],
+    messagePlaceholder:
+      "Opcional: aplicação da bateria, quantidade estimada, amostra ou dúvida técnica",
+    required: "Informe seu nome e dados de contato.",
+    success:
+      "Obrigado. Entraremos em contato para confirmar os requisitos do separador AGM.",
+    emailFallback:
+      "Seu aplicativo de e-mail foi aberto com os dados preparados. Envie a mensagem para concluir a consulta.",
+    ...productFaqCopy.pt
+  },
+  ru: {
+    heroPrompt:
+      "Оставьте email, WhatsApp или телефон. Мы поможем уточнить подходящие характеристики AGM-сепаратора.",
+    formText:
+      "Сначала оставьте контактные данные. Затем наша команда уточнит толщину, ширину, объем и область применения.",
+    checklist: [
+      "Для начала достаточно имени и контакта",
+      "Мы поможем проверить подходящую спецификацию",
+      "Толщину, ширину и объем можно согласовать позже"
+    ],
+    messagePlaceholder:
+      "Необязательно: применение аккумулятора, объем, образец или технический вопрос",
+    required: "Укажите имя и контактные данные.",
+    success:
+      "Спасибо. Мы свяжемся с вами, чтобы уточнить требования к AGM-сепаратору.",
+    emailFallback:
+      "Открыто почтовое приложение с подготовленными данными. Отправьте письмо, чтобы завершить запрос.",
+    ...productFaqCopy.ru
   }
 } as const;
 
@@ -323,6 +452,24 @@ const footerCopy = {
       "鉛蓄電池メーカーと商社向けのAGMガラス繊維セパレーター製造会社。",
     wechat: "公式WeChatアカウント",
     mobile: "モバイルサイト"
+  },
+  es: {
+    description:
+      "Fabricante de separadores de fibra de vidrio AGM para productores de baterías de plomo-ácido y socios comerciales.",
+    wechat: "Cuenta oficial de WeChat",
+    mobile: "Sitio web móvil"
+  },
+  pt: {
+    description:
+      "Fabricante de separadores de fibra de vidro AGM para produtores de baterias chumbo-ácido e parceiros comerciais.",
+    wechat: "Conta oficial do WeChat",
+    mobile: "Site móvel"
+  },
+  ru: {
+    description:
+      "Производитель стекловолоконных AGM-сепараторов для производителей свинцово-кислотных аккумуляторов и торговых партнеров.",
+    wechat: "Официальный аккаунт WeChat",
+    mobile: "Мобильная версия сайта"
   }
 } as const;
 
@@ -2914,6 +3061,274 @@ const jaContent: Partial<Record<ProductPageKind, ProductContent>> = {
   }
 };
 
+const additionalAgmContent: Record<"es" | "pt" | "ru", ProductContent> = {
+  es: {
+    homePath: "/es/",
+    languagePath: "/",
+    quote: "Solicitar muestra",
+    hero: {
+      eyebrow: "Producto separador AGM",
+      title: "Separador AGM de fibra de vidrio para baterías VRLA",
+      subtitle:
+        "Separadores AGM en rollo o lámina para fabricantes y socios comerciales de baterías VRLA de plomo-ácido.",
+      primary: "Solicitar muestras de separador AGM",
+      secondary: "Enviar especificaciones",
+      proof: [
+        "Formatos en rollo y lámina",
+        "Revisión según requisitos del cliente",
+        "Comunicación directa con fábrica"
+      ],
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "Rollo terminado de separador AGM de fibra de vidrio",
+        width: 900,
+        height: 675
+      }
+    },
+    overview: {
+      eyebrow: "Descripción del producto",
+      title: "Un material separador vinculado al diseño y rendimiento de la batería",
+      paragraphs: [
+        "El separador AGM es un material de fibra de vidrio utilizado en baterías VRLA de plomo-ácido. Separa las placas positiva y negativa y retiene el electrolito dentro de la estructura de la batería.",
+        "Para un fabricante de baterías, la selección del separador está relacionada con el diseño de placas, la retención de electrolito, la resistencia interna, el montaje y el rendimiento a largo plazo.",
+        "Suministramos rollos y láminas. El espesor, ancho, tamaño de lámina y embalaje se revisan según el diseño de la batería y el proceso de producción."
+      ]
+    },
+    parameters: {
+      eyebrow: "Especificaciones clave",
+      title: "Parámetros que el comprador suele confirmar",
+      text:
+        "La selección de un separador AGM para baterías VRLA requiere revisar en conjunto espesor, ancho, gramaje, absorción de ácido, resistencia eléctrica y resistencia de manipulación.",
+      items: [
+        ["Espesor", "Se revisa con la separación de placas, la compresión y los requisitos de montaje."],
+        ["Ancho o tamaño de lámina", "Se pueden acordar ancho de rollo, dirección de corte o dimensiones precortadas."],
+        ["Gramaje", "Se evalúa junto con la estructura, la retención de electrolito y el método de ensayo."],
+        ["Absorción de ácido", "Se confirma según la aplicación y las condiciones de ensayo acordadas."],
+        ["Resistencia eléctrica", "Se revisa con los objetivos de rendimiento y las condiciones de ensayo."],
+        ["Porosidad y resistencia", "Se pueden comprobar según los requisitos de conversión, corte y montaje."]
+      ]
+    },
+    forms: {
+      eyebrow: "Formatos de producto",
+      title: "Especificaciones disponibles en rollo y lámina",
+      items: [
+        ["Rollos AGM", "Se pueden revisar espesor, ancho, diámetro, embalaje y plan de producción.", "/images/viking-finished-separator-roll-900.webp", "Rollo terminado de separador AGM", 900, 675],
+        ["Láminas AGM", "Las láminas precortadas facilitan muestras, confirmación de especificaciones y pruebas de montaje.", "/images/viking-separator-sheets-900.webp", "Láminas precortadas de separador AGM", 900, 675],
+        ["Proceso de producción", "Las imágenes de materia prima y línea permiten una revisión más concreta del proceso.", "/images/evidence/factory-raw-material-feed-01.webp", "Alimentación de materia prima para separadores AGM", 1200, 900],
+        ["Embalaje y despacho", "El método de embalaje, los pallets y la preparación de envío pueden revisarse antes del pedido.", "/images/evidence/shipping-pallet-01.webp", "Embalaje y preparación de envío de separadores AGM", 1200, 900]
+      ]
+    },
+    applications: {
+      eyebrow: "Aplicaciones",
+      title: "Principales aplicaciones de baterías VRLA",
+      items: ["Baterías UPS", "Respaldo de telecomunicaciones", "Baterías para motocicleta", "Baterías de arranque automotriz", "Almacenamiento de energía"]
+    },
+    quality: {
+      eyebrow: "Revisión de calidad",
+      title: "Inspección según requisitos acordados",
+      text: "Las partidas de ensayo y los criterios de aceptación se confirman antes de producir y despachar.",
+      cards: [
+        ["Materia prima y proceso", "El estado del material y los puntos de control se revisan durante la consulta."],
+        ["Producto terminado", "Las especificaciones finales se inspeccionan según los puntos acordados."],
+        ["Confirmación de requisitos", "Los métodos de ensayo y criterios de aceptación se acuerdan antes de producir."]
+      ]
+    },
+    related: {
+      eyebrow: "Páginas relacionadas",
+      title: "Ver producto y solicitud de muestra",
+      items: commonRelated.es
+    },
+    inquiry: {
+      eyebrow: "Consulta",
+      title: "Envíe sus requisitos de separador AGM",
+      text: "Para desarrollar una muestra o evaluar un proveedor, comparta espesor, ancho, formato en rollo o lámina y aplicación.",
+      checklist: ["Espesor y ancho objetivo", "Rollo o tamaño de lámina", "Aplicación y modelo de batería", "Cantidad y requisitos de muestra", "Ensayo o embalaje"],
+      placeholder: "Espesor, ancho, formato, cantidad, muestra y requisitos de ensayo",
+      submit: "Enviar requisitos",
+      submitting: "Enviando...",
+      required: "Ingrese su nombre y datos de contacto.",
+      success: "Gracias. Revisaremos la información y nos pondremos en contacto.",
+      failure: "No se pudo enviar la solicitud. Inténtelo de nuevo más tarde.",
+      emailFallback: "Se abrió su aplicación de correo. Envíe el mensaje preparado."
+    },
+    footer: footerCopy.es
+  },
+  pt: {
+    homePath: "/pt/",
+    languagePath: "/",
+    quote: "Solicitar amostra",
+    hero: {
+      eyebrow: "Produto separador AGM",
+      title: "Separador AGM de fibra de vidro para baterias VRLA",
+      subtitle:
+        "Separadores AGM em rolo ou folha para fabricantes e parceiros comerciais de baterias VRLA chumbo-ácido.",
+      primary: "Solicitar amostras de separador AGM",
+      secondary: "Enviar especificações",
+      proof: ["Formatos em rolo e folha", "Análise conforme requisitos do cliente", "Contato direto com a fábrica"],
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "Rolo acabado de separador AGM de fibra de vidro",
+        width: 900,
+        height: 675
+      }
+    },
+    overview: {
+      eyebrow: "Visão geral do produto",
+      title: "Um material separador ligado ao projeto e ao desempenho da bateria",
+      paragraphs: [
+        "O separador AGM é um material de fibra de vidro usado em baterias VRLA chumbo-ácido. Ele separa as placas positiva e negativa e retém o eletrólito na estrutura da bateria.",
+        "Para fabricantes de baterias, a seleção do separador está relacionada ao projeto das placas, retenção de eletrólito, resistência interna, montagem e desempenho de longo prazo.",
+        "Fornecemos rolos e folhas. Espessura, largura, dimensões e embalagem são analisadas conforme o projeto da bateria e o processo produtivo."
+      ]
+    },
+    parameters: {
+      eyebrow: "Especificações principais",
+      title: "Parâmetros que o comprador normalmente confirma",
+      text:
+        "A seleção de um separador AGM para baterias VRLA exige analisar em conjunto espessura, largura, gramatura, absorção de ácido, resistência elétrica e resistência ao manuseio.",
+      items: [
+        ["Espessura", "Analisada com espaçamento das placas, compressão e requisitos de montagem."],
+        ["Largura ou dimensão da folha", "Podem ser definidos largura do rolo, direção de corte e tamanho pré-cortado."],
+        ["Gramatura", "Avaliada com a estrutura, retenção de eletrólito e método de ensaio."],
+        ["Absorção de ácido", "Confirmada conforme a aplicação e as condições de ensaio acordadas."],
+        ["Resistência elétrica", "Analisada com os objetivos de desempenho e condições de ensaio."],
+        ["Porosidade e resistência", "Podem ser verificadas conforme conversão, corte e montagem."]
+      ]
+    },
+    forms: {
+      eyebrow: "Formatos do produto",
+      title: "Especificações em rolo e folha",
+      items: [
+        ["Rolos AGM", "Espessura, largura, diâmetro, embalagem e planejamento de produção podem ser analisados.", "/images/viking-finished-separator-roll-900.webp", "Rolo acabado de separador AGM", 900, 675],
+        ["Folhas AGM", "Folhas pré-cortadas apoiam amostras, confirmação de especificações e testes de montagem.", "/images/viking-separator-sheets-900.webp", "Folhas pré-cortadas de separador AGM", 900, 675],
+        ["Processo de produção", "Imagens de matéria-prima e da linha ajudam a tornar a análise do processo mais concreta.", "/images/evidence/factory-raw-material-feed-01.webp", "Alimentação de matéria-prima para separadores AGM", 1200, 900],
+        ["Embalagem e expedição", "Método de embalagem, pallets e preparação do envio podem ser analisados antes do pedido.", "/images/evidence/shipping-pallet-01.webp", "Embalagem e preparação do envio de separadores AGM", 1200, 900]
+      ]
+    },
+    applications: {
+      eyebrow: "Aplicações",
+      title: "Principais aplicações de baterias VRLA",
+      items: ["Baterias UPS", "Backup de telecomunicações", "Baterias para motocicletas", "Baterias de partida automotiva", "Armazenamento de energia"]
+    },
+    quality: {
+      eyebrow: "Análise de qualidade",
+      title: "Inspeção conforme os requisitos acordados",
+      text: "Os itens de ensaio e critérios de aceitação são confirmados antes da produção e expedição.",
+      cards: [
+        ["Matéria-prima e processo", "A condição do material e os pontos de controle são analisados durante a consulta."],
+        ["Produto acabado", "As especificações finais são inspecionadas conforme os itens acordados."],
+        ["Confirmação de requisitos", "Métodos de ensaio e critérios de aceitação são definidos antes da produção."]
+      ]
+    },
+    related: {
+      eyebrow: "Páginas relacionadas",
+      title: "Veja o produto e solicite uma amostra",
+      items: commonRelated.pt
+    },
+    inquiry: {
+      eyebrow: "Consulta",
+      title: "Envie seus requisitos de separador AGM",
+      text: "Para desenvolver uma amostra ou avaliar um fornecedor, informe espessura, largura, formato em rolo ou folha e aplicação.",
+      checklist: ["Espessura e largura desejadas", "Rolo ou dimensão da folha", "Aplicação e modelo de bateria", "Quantidade e amostras", "Ensaios ou embalagem"],
+      placeholder: "Espessura, largura, formato, quantidade, amostra e requisitos de ensaio",
+      submit: "Enviar requisitos",
+      submitting: "Enviando...",
+      required: "Informe seu nome e dados de contato.",
+      success: "Obrigado. Analisaremos as informações e entraremos em contato.",
+      failure: "Não foi possível enviar a solicitação. Tente novamente mais tarde.",
+      emailFallback: "Seu aplicativo de e-mail foi aberto. Envie a mensagem preparada."
+    },
+    footer: footerCopy.pt
+  },
+  ru: {
+    homePath: "/ru/",
+    languagePath: "/",
+    quote: "Запросить образец",
+    hero: {
+      eyebrow: "AGM-сепараторы",
+      title: "Стекловолоконный AGM-сепаратор для аккумуляторов VRLA",
+      subtitle:
+        "AGM-сепараторы в рулонах и листах для производителей и торговых партнеров по свинцово-кислотным аккумуляторам VRLA.",
+      primary: "Запросить образцы AGM-сепаратора",
+      secondary: "Отправить характеристики",
+      proof: ["Рулоны и листы", "Проверка требований заказчика", "Прямая связь с заводом"],
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "Готовый рулон стекловолоконного AGM-сепаратора",
+        width: 900,
+        height: 675
+      }
+    },
+    overview: {
+      eyebrow: "О продукте",
+      title: "Материал сепаратора, связанный с конструкцией и характеристиками аккумулятора",
+      paragraphs: [
+        "AGM-сепаратор — стекловолоконный материал для свинцово-кислотных аккумуляторов VRLA. Он разделяет положительные и отрицательные пластины и удерживает электролит внутри аккумулятора.",
+        "Для производителя выбор сепаратора связан с конструкцией пластин, удержанием электролита, внутренним сопротивлением, сборкой и долговременной работой.",
+        "Мы поставляем рулоны и листы. Толщина, ширина, размер листа и упаковка согласуются с конструкцией аккумулятора и производственным процессом."
+      ]
+    },
+    parameters: {
+      eyebrow: "Основные характеристики",
+      title: "Параметры, которые обычно уточняет покупатель",
+      text:
+        "При выборе AGM-сепаратора для VRLA одновременно оценивают толщину, ширину, поверхностную плотность, поглощение кислоты, электрическое сопротивление и прочность при обработке.",
+      items: [
+        ["Толщина", "Рассматривается вместе с зазором пластин, сжатием и требованиями к сборке."],
+        ["Ширина или размер листа", "Можно согласовать ширину рулона, направление резки и размеры листов."],
+        ["Поверхностная плотность", "Оценивается вместе со структурой, удержанием электролита и методом испытаний."],
+        ["Поглощение кислоты", "Подтверждается по применению и согласованным условиям испытаний."],
+        ["Электрическое сопротивление", "Рассматривается с целевыми характеристиками и условиями испытаний."],
+        ["Пористость и прочность", "Проверяются с учетом переработки, резки и сборки."]
+      ]
+    },
+    forms: {
+      eyebrow: "Формы поставки",
+      title: "Характеристики рулонов и листов под заказ",
+      items: [
+        ["Рулоны AGM", "Можно согласовать толщину, ширину, диаметр рулона, упаковку и план производства.", "/images/viking-finished-separator-roll-900.webp", "Готовый рулон AGM-сепаратора", 900, 675],
+        ["Листы AGM", "Предварительно нарезанные листы подходят для образцов, проверки спецификаций и сборки.", "/images/viking-separator-sheets-900.webp", "Нарезанные листы AGM-сепаратора", 900, 675],
+        ["Производственный процесс", "Фотографии сырья и линии помогают предметно обсудить процесс изготовления.", "/images/evidence/factory-raw-material-feed-01.webp", "Подача сырья для AGM-сепараторов", 1200, 900],
+        ["Упаковка и отгрузка", "Способ упаковки, паллеты и подготовку к отправке можно согласовать до заказа.", "/images/evidence/shipping-pallet-01.webp", "Упаковка и подготовка AGM-сепараторов к отгрузке", 1200, 900]
+      ]
+    },
+    applications: {
+      eyebrow: "Применение",
+      title: "Основные области применения аккумуляторов VRLA",
+      items: ["Аккумуляторы для ИБП", "Резервное питание телекоммуникаций", "Мотоциклетные аккумуляторы", "Автомобильные стартерные аккумуляторы", "Накопление энергии"]
+    },
+    quality: {
+      eyebrow: "Контроль качества",
+      title: "Проверка по согласованным требованиям",
+      text: "Показатели испытаний и критерии приемки подтверждаются до производства и отгрузки.",
+      cards: [
+        ["Сырье и процесс", "Состояние материала и контрольные точки обсуждаются при согласовании заказа."],
+        ["Готовая продукция", "Характеристики готового продукта проверяются по согласованным показателям."],
+        ["Подтверждение требований", "Методы испытаний и критерии приемки согласуются до производства."]
+      ]
+    },
+    related: {
+      eyebrow: "Связанные страницы",
+      title: "Посмотреть продукт и запросить образец",
+      items: commonRelated.ru
+    },
+    inquiry: {
+      eyebrow: "Запрос",
+      title: "Отправьте требования к AGM-сепаратору",
+      text: "Для разработки образца или оценки поставщика укажите толщину, ширину, форму рулона или листа и применение.",
+      checklist: ["Целевая толщина и ширина", "Рулон или размер листа", "Применение и модель аккумулятора", "Объем и образцы", "Испытания или упаковка"],
+      placeholder: "Толщина, ширина, форма, объем, образец и требования к испытаниям",
+      submit: "Отправить требования",
+      submitting: "Отправка...",
+      required: "Укажите имя и контактные данные.",
+      success: "Спасибо. Мы проверим информацию и свяжемся с вами.",
+      failure: "Не удалось отправить запрос. Повторите попытку позже.",
+      emailFallback: "Открыто почтовое приложение. Отправьте подготовленное письмо."
+    },
+    footer: footerCopy.ru
+  }
+};
+
 function asset(path: string) {
   return `${basePath}${path}`;
 }
@@ -2924,7 +3339,10 @@ function localeText(
   zh: string,
   vi: string,
   ko = en,
-  ja = en
+  ja = en,
+  es = en,
+  pt = en,
+  ru = en
 ) {
   return lang === "zh"
     ? zh
@@ -2934,7 +3352,13 @@ function localeText(
         ? ko
         : lang === "ja"
           ? ja
-          : en;
+          : lang === "es"
+            ? es
+            : lang === "pt"
+              ? pt
+              : lang === "ru"
+                ? ru
+                : en;
 }
 
 function CheckIcon({ size = 18, className = "" }: IconProps) {
@@ -3089,9 +3513,13 @@ export function ProductPage({
       ? viContent[page]
       : lang === "ko"
         ? koContent[page]
-        : lang === "ja"
+      : lang === "ja"
           ? jaContent[page]
-          : content[page][lang as Lang];
+          : lang === "es" || lang === "pt" || lang === "ru"
+            ? page === "agmSeparator"
+              ? additionalAgmContent[lang]
+              : undefined
+            : content[page][lang as Lang];
 
   if (!defaults) {
     throw new Error(`Missing ${lang} content for product page "${page}"`);
@@ -3129,6 +3557,12 @@ export function ProductPage({
               ? "AGM 분리막 샘플 및 사양 검토"
               : lang === "ja"
                 ? "AGMセパレーターのサンプル・仕様確認"
+                : lang === "es"
+                  ? "Muestra de separador AGM y revisión de especificaciones"
+                  : lang === "pt"
+                    ? "Amostra de separador AGM e análise de especificações"
+                    : lang === "ru"
+                      ? "Образец AGM-сепаратора и проверка характеристик"
             : "AGM separator sample and specification match";
 
   return (
@@ -3143,7 +3577,10 @@ export function ProductPage({
           "申请样品",
           "Yêu cầu mẫu",
           "샘플 요청",
-          "サンプル依頼"
+          "サンプル依頼",
+          "Solicitar muestra",
+          "Solicitar amostra",
+          "Запросить образец"
         )}
       />
 
@@ -3172,7 +3609,10 @@ export function ProductPage({
                   "申请样品与规格匹配",
                   "Yêu cầu mẫu và đối chiếu thông số",
                   "샘플 및 사양 검토 요청",
-                  "サンプル・仕様確認を依頼"
+                  "サンプル・仕様確認を依頼",
+                  "Solicitar una muestra y revisión de especificaciones",
+                  "Solicitar amostra e análise de especificações",
+                  "Запросить образец и проверку характеристик"
                 )}
                 <SendIcon size={18} />
               </a>
@@ -3411,7 +3851,13 @@ export function ProductPage({
                     ? "/ko/request-agm-separator-sample/"
                     : lang === "ja"
                       ? "/ja/request-agm-separator-sample/"
-                  : "/request-agm-separator-sample/"
+                      : lang === "es"
+                        ? "/es/request-agm-separator-sample/"
+                        : lang === "pt"
+                          ? "/pt/request-agm-separator-sample/"
+                          : lang === "ru"
+                            ? "/ru/request-agm-separator-sample/"
+                            : "/request-agm-separator-sample/"
             )}
             className="group rounded-md border border-signal/25 bg-signal p-6 text-white shadow-sm transition hover:bg-ink"
           >
@@ -3422,7 +3868,10 @@ export function ProductPage({
                 "下一步",
                 "Bước tiếp theo",
                 "다음 단계",
-                "次のステップ"
+                "次のステップ",
+                "Siguiente paso",
+                "Próximo passo",
+                "Следующий шаг"
               )}
             </p>
             <h2 className="mt-3 text-2xl font-bold">
@@ -3432,7 +3881,10 @@ export function ProductPage({
                 "申请样品与规格匹配",
                 "Yêu cầu mẫu và đối chiếu thông số",
                 "샘플 및 사양 검토 요청",
-                "サンプル・仕様確認を依頼"
+                "サンプル・仕様確認を依頼",
+                "Solicitar una muestra y revisión de especificaciones",
+                "Solicitar amostra e análise de especificações",
+                "Запросить образец и проверку характеристик"
               )}
             </h2>
             <p className="mt-3 text-sm leading-7 text-white/75">
@@ -3442,7 +3894,10 @@ export function ProductPage({
                 "查看需要准备的信息、样品沟通流程和真实生产检测证据。",
                 "Xem danh sách thông tin, quy trình trao đổi mẫu và bằng chứng sản xuất.",
                 "필요 정보, 샘플 협의 절차와 생산 근거를 확인하세요.",
-                "必要情報、サンプル協議の流れ、製造情報をご確認ください。"
+                "必要情報、サンプル協議の流れ、製造情報をご確認ください。",
+                "Revise la información necesaria, el proceso de muestras y la evidencia de producción.",
+                "Veja as informações necessárias, o processo de amostras e as evidências de produção.",
+                "Ознакомьтесь с перечнем данных, процессом обсуждения образцов и производственными материалами."
               )}
             </p>
             <ArrowRight
@@ -3462,7 +3917,10 @@ export function ProductPage({
                 "采购资料",
                 "Tài liệu người mua",
                 "구매 참고 자료",
-                "購買参考資料"
+                "購買参考資料",
+                "Material para compradores",
+                "Material para compradores",
+                "Материалы для покупателя"
               )}
             </p>
             <h2 className="mt-3 text-2xl font-bold">
@@ -3472,7 +3930,10 @@ export function ProductPage({
                 "下载维京 AGM 技术能力 PDF",
                 "Tải hồ sơ năng lực Viking AGM (EN/ZH)",
                 "Viking AGM 영문/중문 PDF 다운로드",
-                "Viking AGM英語・中国語PDFをダウンロード"
+                "Viking AGM英語・中国語PDFをダウンロード",
+                "Descargar ficha técnica Viking AGM (EN/ZH)",
+                "Baixar ficha técnica Viking AGM (EN/ZH)",
+                "Скачать технический обзор Viking AGM (EN/ZH)"
               )}
             </h2>
             <p className="mt-3 text-sm leading-7 text-steel">
@@ -3482,7 +3943,10 @@ export function ProductPage({
                 "中英文资料，包含产品形式、应用沟通、质量检查和包装说明。",
                 "Tài liệu tiếng Anh và tiếng Trung về dạng sản phẩm, ứng dụng, kiểm tra chất lượng và đóng gói.",
                 "제품 형태, 적용 분야, 품질 검사와 포장을 소개하는 영문·중문 자료입니다.",
-                "製品形状、用途、品質検査、梱包をまとめた英語・中国語資料です。"
+                "製品形状、用途、品質検査、梱包をまとめた英語・中国語資料です。",
+                "Documento en inglés y chino sobre formatos, aplicaciones, controles de calidad y embalaje.",
+                "Documento em inglês e chinês sobre formatos, aplicações, controles de qualidade e embalagem.",
+                "Материал на английском и китайском языках о формах поставки, применении, контроле качества и упаковке."
               )}
             </p>
             <ArrowRight
@@ -3605,7 +4069,10 @@ function Footer({
             "保留所有权利。",
             "Bảo lưu mọi quyền.",
             "모든 권리 보유.",
-            "All rights reserved."
+            "All rights reserved.",
+            "Todos los derechos reservados.",
+            "Todos os direitos reservados.",
+            "Все права защищены."
           )}
         </div>
         <a

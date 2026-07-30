@@ -103,7 +103,7 @@ const vietnamesePages = [
     key: "sampleRequest",
     route: "app/vi/request-agm-separator-sample/page.tsx",
     path: "/vi/request-agm-separator-sample/",
-    content: content.home?.vi,
+    content: content.sampleRequest?.vi,
     seo: content.seo?.sampleRequest?.vi
   }
 ];
@@ -118,7 +118,7 @@ for (const page of vietnamesePages) {
   );
 }
 
-const koreanJapanesePages = ["ko", "ja"].flatMap((locale) => [
+const coreLocalizedPages = ["ko", "ja", "es", "pt", "ru"].flatMap((locale) => [
   {
     key: `home.${locale}`,
     route: `app/${locale}/page.tsx`,
@@ -137,12 +137,12 @@ const koreanJapanesePages = ["ko", "ja"].flatMap((locale) => [
     key: `sampleRequest.${locale}`,
     route: `app/${locale}/request-agm-separator-sample/page.tsx`,
     path: `/${locale}/request-agm-separator-sample/`,
-    content: content.home?.[locale],
+    content: content.sampleRequest?.[locale],
     seo: content.seo?.sampleRequest?.[locale]
   }
 ]);
 
-for (const page of koreanJapanesePages) {
+for (const page of coreLocalizedPages) {
   check(Boolean(page.content), `${page.key} has localized page content`);
   check(Boolean(page.seo), `${page.key} has localized SEO content`);
   check(existsSync(join(root, page.route)), `${page.key} has a route`);
@@ -157,7 +157,7 @@ if (failed) {
 }
 
 console.log(
-  `PASS content registry is complete for ${articles.length} bilingual articles, ${vietnamesePages.length} Vietnamese pages and ${koreanJapanesePages.length} Korean/Japanese pages`
+  `PASS content registry is complete for ${articles.length} bilingual articles, ${vietnamesePages.length} Vietnamese pages and ${coreLocalizedPages.length} core localized pages`
 );
 
 function check(condition, message) {

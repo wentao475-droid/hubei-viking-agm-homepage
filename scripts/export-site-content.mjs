@@ -148,11 +148,15 @@ function collectConstants(path, names) {
 }
 
 const home = collectConstants("app/VikingHome.tsx", ["copy"]).copy;
+const sampleRequest = collectConstants("app/SampleRequestPage.tsx", [
+  "pageCopy"
+]).pageCopy;
 const productConstants = collectConstants("app/ProductPage.tsx", [
   "content",
   "viContent",
   "koContent",
-  "jaContent"
+  "jaContent",
+  "additionalAgmContent"
 ]);
 const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "articleCopy",
@@ -204,9 +208,18 @@ for (const [page, value] of Object.entries(productConstants.jaContent)) {
     ja: value
   };
 }
+for (const [locale, value] of Object.entries(
+  productConstants.additionalAgmContent
+)) {
+  products.agmSeparator = {
+    ...products.agmSeparator,
+    [locale]: value
+  };
+}
 
 const content = {
   home,
+  sampleRequest,
   products,
   articles: {
     whatIsAgmSeparator: articleConstants.articleCopy,

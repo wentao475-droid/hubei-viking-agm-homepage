@@ -270,6 +270,162 @@ const copy = {
     email: "メールを送る",
     phone: "電話・メッセージ",
     subject: "AGMセパレーターのサンプル・仕様確認依頼 - Viking AGM"
+  },
+  es: {
+    fields: {
+      name: "Nombre",
+      contact: "Email / WhatsApp / Teléfono",
+      company: "Empresa",
+      country: "País / Región",
+      application: "Aplicación de la batería",
+      interestedProduct: "Formato del producto",
+      message: "Notas sobre especificaciones o muestras"
+    },
+    placeholders: {
+      name: "Nombre completo",
+      contact: "Email, WhatsApp o número de teléfono",
+      company: "Nombre de la empresa (opcional)",
+      country: "País o región (opcional)",
+      application: "Seleccione una aplicación (opcional)",
+      interestedProduct: "Seleccione un formato (opcional)",
+      message:
+        "Opcional: espesor, ancho, tamaño de lámina, cantidad y requisitos de muestra o ensayo"
+    },
+    options: {
+      applications: [
+        ["UPS / standby power", "UPS / Energía de respaldo"],
+        ["Energy storage battery", "Batería de almacenamiento de energía"],
+        ["Motorcycle battery", "Batería de arranque para motocicleta"],
+        ["Automotive starting battery", "Batería de arranque automotriz"],
+        ["Telecom backup power", "Respaldo para telecomunicaciones"],
+        ["E-bike battery", "Batería para vehículo eléctrico ligero"],
+        ["Other VRLA lead-acid battery", "Otra batería de plomo-ácido VRLA"],
+        ["Not sure", "Aún no definido"]
+      ],
+      productFormats: [
+        ["AGM separator rolls", "Separador AGM en rollos"],
+        ["AGM separator sheets", "Separador AGM en láminas"],
+        ["Rolls and sheets", "Rollos y láminas"],
+        ["Not sure", "Aún no definido"]
+      ]
+    },
+    submit: "Solicitar una muestra y revisión de especificaciones",
+    submitting: "Enviando...",
+    required: "Ingrese su nombre y al menos un medio de contacto.",
+    success:
+      "Gracias. Guardamos su solicitud y nuestro equipo se comunicará para confirmar el siguiente paso.",
+    failure:
+      "No fue posible enviar el formulario. Contáctenos directamente por email o teléfono.",
+    emailFallback:
+      "Se abrió su aplicación de email. Envíe el mensaje preparado para completar la solicitud.",
+    email: "Enviar email",
+    phone: "Llamar o enviar mensaje",
+    subject:
+      "Solicitud de muestra y revisión de especificaciones AGM - Viking AGM"
+  },
+  pt: {
+    fields: {
+      name: "Nome",
+      contact: "E-mail / WhatsApp / Telefone",
+      company: "Empresa",
+      country: "País / Região",
+      application: "Aplicação da bateria",
+      interestedProduct: "Formato do produto",
+      message: "Observações sobre especificação ou amostra"
+    },
+    placeholders: {
+      name: "Nome completo",
+      contact: "E-mail, WhatsApp ou número de telefone",
+      company: "Nome da empresa (opcional)",
+      country: "País ou região (opcional)",
+      application: "Selecione uma aplicação (opcional)",
+      interestedProduct: "Selecione um formato (opcional)",
+      message:
+        "Opcional: espessura, largura, tamanho da folha, quantidade e requisitos de amostra ou ensaio"
+    },
+    options: {
+      applications: [
+        ["UPS / standby power", "UPS / Energia de reserva"],
+        ["Energy storage battery", "Bateria de armazenamento de energia"],
+        ["Motorcycle battery", "Bateria de partida para motocicleta"],
+        ["Automotive starting battery", "Bateria de partida automotiva"],
+        ["Telecom backup power", "Energia de reserva para telecomunicações"],
+        ["E-bike battery", "Bateria para veículo elétrico leve"],
+        ["Other VRLA lead-acid battery", "Outra bateria chumbo-ácido VRLA"],
+        ["Not sure", "Ainda não definido"]
+      ],
+      productFormats: [
+        ["AGM separator rolls", "Separador AGM em rolos"],
+        ["AGM separator sheets", "Separador AGM em folhas"],
+        ["Rolls and sheets", "Rolos e folhas"],
+        ["Not sure", "Ainda não definido"]
+      ]
+    },
+    submit: "Solicitar amostra e análise de especificações",
+    submitting: "Enviando...",
+    required: "Informe seu nome e pelo menos um meio de contato.",
+    success:
+      "Obrigado. Sua solicitação foi registrada e nossa equipe entrará em contato para confirmar a próxima etapa.",
+    failure:
+      "Não foi possível enviar o formulário. Entre em contato diretamente por e-mail ou telefone.",
+    emailFallback:
+      "Seu aplicativo de e-mail foi aberto. Envie a mensagem preparada para concluir a solicitação.",
+    email: "Enviar e-mail",
+    phone: "Ligar ou enviar mensagem",
+    subject:
+      "Solicitação de amostra e análise de especificações AGM - Viking AGM"
+  },
+  ru: {
+    fields: {
+      name: "Имя",
+      contact: "Email / WhatsApp / Телефон",
+      company: "Компания",
+      country: "Страна / Регион",
+      application: "Назначение аккумулятора",
+      interestedProduct: "Формат продукции",
+      message: "Требования к характеристикам или образцу"
+    },
+    placeholders: {
+      name: "Ваше имя",
+      contact: "Email, WhatsApp или номер телефона",
+      company: "Название компании (необязательно)",
+      country: "Страна или регион (необязательно)",
+      application: "Выберите назначение (необязательно)",
+      interestedProduct: "Выберите формат (необязательно)",
+      message:
+        "Необязательно: толщина, ширина, размер листа, количество, требования к образцу или испытаниям"
+    },
+    options: {
+      applications: [
+        ["UPS / standby power", "ИБП / резервное питание"],
+        ["Energy storage battery", "Аккумулятор для хранения энергии"],
+        ["Motorcycle battery", "Стартерный аккумулятор для мотоцикла"],
+        ["Automotive starting battery", "Автомобильный стартерный аккумулятор"],
+        ["Telecom backup power", "Резервное питание для телекоммуникаций"],
+        ["E-bike battery", "Аккумулятор для лёгкого электротранспорта"],
+        ["Other VRLA lead-acid battery", "Другой свинцово-кислотный аккумулятор VRLA"],
+        ["Not sure", "Пока не определено"]
+      ],
+      productFormats: [
+        ["AGM separator rolls", "AGM-сепаратор в рулонах"],
+        ["AGM separator sheets", "AGM-сепаратор в листах"],
+        ["Rolls and sheets", "Рулоны и листы"],
+        ["Not sure", "Пока не определено"]
+      ]
+    },
+    submit: "Запросить образец и проверку характеристик",
+    submitting: "Отправка...",
+    required: "Укажите имя и хотя бы один способ связи.",
+    success:
+      "Спасибо. Ваш запрос сохранён, и наша команда свяжется с вами для согласования следующего шага.",
+    failure:
+      "Не удалось отправить онлайн-форму. Свяжитесь с нами напрямую по email или телефону.",
+    emailFallback:
+      "Открыта почтовая программа. Отправьте подготовленное письмо, чтобы завершить запрос.",
+    email: "Написать по email",
+    phone: "Позвонить или отправить сообщение",
+    subject:
+      "Запрос образца и проверка характеристик AGM-сепаратора - Viking AGM"
   }
 } as const;
 
@@ -528,35 +684,47 @@ function resolveApplicationDefault(value: string) {
   if (
     normalized.includes("ups") ||
     normalized.includes("备用") ||
-    normalized.includes("dự phòng")
+    normalized.includes("dự phòng") ||
+    normalized.includes("respaldo") ||
+    normalized.includes("backup") ||
+    normalized.includes("резерв")
   ) {
     return "UPS / standby power";
   }
   if (
     normalized.includes("energy storage") ||
     normalized.includes("储能") ||
-    normalized.includes("lưu trữ")
+    normalized.includes("lưu trữ") ||
+    normalized.includes("almacenamiento") ||
+    normalized.includes("armazenamento") ||
+    normalized.includes("накоплен")
   ) {
     return "Energy storage battery";
   }
   if (
     normalized.includes("motorcycle") ||
     normalized.includes("摩托") ||
-    normalized.includes("xe máy")
+    normalized.includes("xe máy") ||
+    normalized.includes("motocic") ||
+    normalized.includes("мотоцикл")
   ) {
     return "Motorcycle battery";
   }
   if (
     normalized.includes("automotive") ||
     normalized.includes("汽车") ||
-    normalized.includes("ô tô")
+    normalized.includes("ô tô") ||
+    normalized.includes("automotr") ||
+    normalized.includes("automotiv") ||
+    normalized.includes("автомоб")
   ) {
     return "Automotive starting battery";
   }
   if (
     normalized.includes("telecom") ||
     normalized.includes("通信") ||
-    normalized.includes("viễn thông")
+    normalized.includes("viễn thông") ||
+    normalized.includes("телеком")
   ) {
     return "Telecom backup power";
   }
@@ -564,17 +732,29 @@ function resolveApplicationDefault(value: string) {
     normalized.includes("e-bike") ||
     normalized.includes("electric vehicle") ||
     normalized.includes("电动车") ||
-    normalized.includes("xe điện")
+    normalized.includes("xe điện") ||
+    normalized.includes("bicicleta eléctrica") ||
+    normalized.includes("bicicleta elétrica") ||
+    normalized.includes("электровелосип")
   ) {
     return "E-bike battery";
   }
-  if (normalized.includes("vrla") || normalized.includes("铅酸")) {
+  if (
+    normalized.includes("vrla") ||
+    normalized.includes("铅酸") ||
+    normalized.includes("plomo") ||
+    normalized.includes("chumbo") ||
+    normalized.includes("свинц")
+  ) {
     return "Other VRLA lead-acid battery";
   }
   if (
     normalized.includes("not sure") ||
     normalized.includes("暂不确定") ||
-    normalized.includes("chưa xác định")
+    normalized.includes("chưa xác định") ||
+    normalized.includes("por definir") ||
+    normalized.includes("a definir") ||
+    normalized.includes("не определ")
   ) {
     return "Not sure";
   }
@@ -587,11 +767,17 @@ function resolveProductFormatDefault(value: string) {
   const includesRoll =
     normalized.includes("roll") ||
     normalized.includes("卷材") ||
-    normalized.includes("cuộn");
+    normalized.includes("cuộn") ||
+    normalized.includes("rollo") ||
+    normalized.includes("rolo") ||
+    normalized.includes("рулон");
   const includesSheet =
     normalized.includes("sheet") ||
     normalized.includes("片材") ||
-    normalized.includes("tấm");
+    normalized.includes("tấm") ||
+    normalized.includes("lámina") ||
+    normalized.includes("folha") ||
+    normalized.includes("лист");
 
   if (includesRoll && includesSheet) {
     return "Rolls and sheets";
@@ -605,7 +791,10 @@ function resolveProductFormatDefault(value: string) {
   if (
     normalized.includes("not sure") ||
     normalized.includes("暂不确定") ||
-    normalized.includes("chưa xác định")
+    normalized.includes("chưa xác định") ||
+    normalized.includes("por definir") ||
+    normalized.includes("a definir") ||
+    normalized.includes("не определ")
   ) {
     return "Not sure";
   }
@@ -667,36 +856,7 @@ function ensureFirstTouch() {
 
 function buildInquiryMailto(formData: FormData, lang: SiteLocale) {
   const t = copy[lang];
-  const labels =
-    lang === "zh"
-      ? {
-          name: "姓名",
-          contact: "联系方式",
-          company: "公司",
-          country: "国家或地区",
-          application: "电池应用",
-          interestedProduct: "产品形式",
-          message: "规格或样品说明"
-        }
-      : lang === "vi"
-        ? {
-            name: "Họ và tên",
-            contact: "Liên hệ",
-            company: "Công ty",
-            country: "Quốc gia / Khu vực",
-            application: "Ứng dụng ắc quy",
-            interestedProduct: "Dạng sản phẩm",
-            message: "Thông số hoặc yêu cầu mẫu"
-          }
-      : {
-          name: "Name",
-          contact: "Contact",
-          company: "Company",
-          country: "Country / Region",
-          application: "Battery application",
-          interestedProduct: "Product format",
-          message: "Specification or sample notes"
-        };
+  const labels = t.fields;
   const fields = [
     ["name", labels.name],
     ["contact", labels.contact],

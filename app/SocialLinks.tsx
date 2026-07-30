@@ -30,6 +30,21 @@ const copy = {
     heading: "公式チャンネル",
     tiktok: "Viking AGMのTikTokを見る",
     linkedin: "Viking AGMのLinkedInを見る"
+  },
+  es: {
+    heading: "Canales oficiales",
+    tiktok: "Visitar Viking AGM en TikTok",
+    linkedin: "Visitar Viking AGM en LinkedIn"
+  },
+  pt: {
+    heading: "Canais oficiais",
+    tiktok: "Visitar a Viking AGM no TikTok",
+    linkedin: "Visitar a Viking AGM no LinkedIn"
+  },
+  ru: {
+    heading: "Официальные каналы",
+    tiktok: "Открыть страницу Viking AGM в TikTok",
+    linkedin: "Открыть страницу Viking AGM в LinkedIn"
   }
 } as const;
 

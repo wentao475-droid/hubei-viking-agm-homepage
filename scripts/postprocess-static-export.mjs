@@ -18,7 +18,13 @@ for (const file of walk(outDir)) {
         ? "ko"
         : outputPath.startsWith("ja/")
           ? "ja"
-      : "en";
+          : outputPath.startsWith("es/")
+            ? "es"
+            : outputPath.startsWith("pt/")
+              ? "pt-BR"
+              : outputPath.startsWith("ru/")
+                ? "ru"
+                : "en";
   const source = readFileSync(file, "utf8");
   const result = source.replace(
     /<html\s+lang="[^"]*"/,

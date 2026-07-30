@@ -437,6 +437,224 @@ const pageCopy = {
       message: "任意：バッテリー用途、目標厚さ、ロール幅またはシート寸法、サンプル数量、技術・梱包要件"
     },
     footer: "鉛蓄電池プロジェクト向けAGMガラス繊維セパレーターの製造、品質確認、供給調整。"
+  },
+  es: {
+    homePath: "/es/",
+    languagePath: "/",
+    eyebrow: "Muestra y revisión de especificaciones",
+    title: "Solicite una muestra de separador AGM y revisión de especificaciones",
+    subtitle:
+      "Comparta la aplicación de la batería y la información disponible del separador. Viking AGM puede ayudarle a revisar el formato en rollo o lámina y la orientación de especificación antes de hablar de muestras o cotización.",
+    primary: "Iniciar solicitud de muestra",
+    secondary: "Descargar ficha técnica EN/ZH",
+    proof: [
+      "Formatos en rollo y lámina",
+      "Revisión según la aplicación",
+      "Requisitos de inspección y empaque"
+    ],
+    requirements: {
+      eyebrow: "Lista de información",
+      title: "Qué conviene proporcionar para una primera revisión útil",
+      text:
+        "No es necesario definir todos los parámetros antes de contactarnos. Envíe la información disponible e indique con claridad los puntos que aún están en revisión.",
+      items: [
+        ["Aplicación de la batería", "VRLA, UPS, motocicleta, automóvil, almacenamiento de energía u otra aplicación de batería de plomo-ácido."],
+        ["Formato del producto", "Material en rollo, láminas precortadas o una solicitud para comparar ambos formatos."],
+        ["Dimensiones", "Espesor objetivo, ancho del rollo, largo y ancho de la lámina o un plano existente."],
+        ["Referencia técnica", "Valores objetivo, normas del cliente, pruebas requeridas o una muestra de referencia si está disponible."],
+        ["Cantidad y empaque", "Cantidad de muestra, plan de prueba o producción, núcleo del rollo, etiquetas y requisitos de empaque."]
+      ]
+    },
+    process: {
+      eyebrow: "Siguientes pasos",
+      title: "Un proceso claro desde la consulta hasta la muestra",
+      items: [
+        ["1", "Revisión de la aplicación", "Revisamos la aplicación de la batería, el formato del producto y la información de especificación disponible."],
+        ["2", "Confirmación de datos faltantes", "Aclaramos dimensiones, muestras de referencia, pruebas o detalles de empaque que aún deban confirmarse."],
+        ["3", "Definición del siguiente paso", "Ambas partes acuerdan la ruta de muestra, revisión técnica o cotización según la información confirmada."]
+      ]
+    },
+    evidence: {
+      eyebrow: "Evidencia de fabricación",
+      title: "Revise la producción, inspección y preparación de entrega",
+      items: [
+        {
+          title: "Capacidad de producción",
+          text: "La producción y el manejo de rollos AGM respaldan la revisión de especificaciones y el suministro por lotes.",
+          src: "/images/agm-factory-capability-1200.webp",
+          alt: "Capacidad de producción de separadores AGM de Viking"
+        },
+        {
+          title: "Inspección de calidad",
+          text: "Los requisitos de inspección pueden confirmarse según la aplicación y las pruebas acordadas.",
+          src: "/images/agm-quality-control-1200.webp",
+          alt: "Inspección de calidad de separadores AGM en Viking Technology"
+        },
+        {
+          title: "Empaque y entrega",
+          text: "Los requisitos de rollo, lámina, etiqueta y pallet pueden revisarse antes de organizar la muestra o el pedido.",
+          src: "/images/evidence/shipping-pallet-01.webp",
+          alt: "Empaque en pallets de separadores AGM preparado para entrega"
+        }
+      ]
+    },
+    download: {
+      eyebrow: "Referencia para compradores",
+      title: "Descargue el resumen de capacidad técnica de Viking AGM",
+      text: "Documento en inglés y chino sobre formatos, aplicaciones, inspección, empaque y datos necesarios para revisar especificaciones.",
+      button: "Descargar PDF EN/ZH"
+    },
+    faq: { eyebrow: "Preguntas frecuentes", title: "Preguntas antes de solicitar una muestra" },
+    form: {
+      eyebrow: "Inicie la conversación",
+      title: "Envíe la información que ya tiene",
+      text: "El nombre y un medio de contacto son suficientes para comenzar. La aplicación, el formato y las dimensiones nos ayudan a preparar una respuesta más útil.",
+      hints: ["Aplicación de la batería", "Formato en rollo o lámina", "Espesor, ancho o tamaño de lámina", "Necesidades de muestra, prueba y empaque"],
+      message: "Opcional: aplicación, espesor objetivo, ancho del rollo o tamaño de lámina, cantidad de muestra, requisitos técnicos o de empaque"
+    },
+    footer: "Fabricación de separadores AGM de fibra de vidrio, revisión de calidad y coordinación de suministro para proyectos de baterías de plomo-ácido."
+  },
+  pt: {
+    homePath: "/pt/",
+    languagePath: "/",
+    eyebrow: "Amostra e análise de especificações",
+    title: "Solicite uma amostra de separador AGM e análise de especificações",
+    subtitle:
+      "Compartilhe a aplicação da bateria e as informações disponíveis do separador. A Viking AGM pode ajudar a analisar o formato em rolo ou folha e a direção da especificação antes da conversa sobre amostra ou cotação.",
+    primary: "Iniciar solicitação de amostra",
+    secondary: "Baixar material técnico EN/ZH",
+    proof: ["Formatos em rolo e folha", "Análise conforme a aplicação", "Requisitos de inspeção e embalagem"],
+    requirements: {
+      eyebrow: "Lista de informações",
+      title: "O que fornecer para uma primeira análise útil",
+      text: "Não é necessário definir todos os parâmetros antes do contato. Envie as informações disponíveis e indique claramente os pontos que ainda estão em análise.",
+      items: [
+        ["Aplicação da bateria", "VRLA, UPS, motocicleta, automóvel, armazenamento de energia ou outra aplicação de bateria chumbo-ácido."],
+        ["Formato do produto", "Material em rolo, folhas pré-cortadas ou solicitação para comparar os dois formatos."],
+        ["Dimensões", "Espessura desejada, largura do rolo, comprimento e largura da folha ou desenho existente."],
+        ["Referência técnica", "Valores desejados, normas do cliente, itens de teste ou amostra de referência, quando disponível."],
+        ["Quantidade e embalagem", "Quantidade de amostra, plano de teste ou produção, tubete, etiquetas e requisitos de embalagem."]
+      ]
+    },
+    process: {
+      eyebrow: "Próximas etapas",
+      title: "Um caminho claro da consulta à conversa sobre amostras",
+      items: [
+        ["1", "Análise da aplicação", "Analisamos a aplicação da bateria, o formato do produto e as informações de especificação disponíveis."],
+        ["2", "Confirmação de dados faltantes", "Alinhamos dimensões, amostras de referência, testes ou detalhes de embalagem que ainda precisam ser confirmados."],
+        ["3", "Definição da próxima etapa", "As partes definem o caminho de amostra, análise técnica ou cotação com base nas informações confirmadas."]
+      ]
+    },
+    evidence: {
+      eyebrow: "Evidências de fabricação",
+      title: "Conheça a produção, a inspeção e a preparação para entrega",
+      items: [
+        {
+          title: "Capacidade de produção",
+          text: "A produção e o manuseio de rolos AGM apoiam a análise de especificações e o fornecimento por lotes.",
+          src: "/images/agm-factory-capability-1200.webp",
+          alt: "Capacidade de produção de separadores AGM da Viking"
+        },
+        {
+          title: "Inspeção de qualidade",
+          text: "Os requisitos de inspeção podem ser confirmados conforme a aplicação e os testes acordados.",
+          src: "/images/agm-quality-control-1200.webp",
+          alt: "Inspeção de qualidade de separadores AGM na Viking Technology"
+        },
+        {
+          title: "Embalagem e entrega",
+          text: "Requisitos de rolo, folha, etiqueta e pallet podem ser analisados antes da amostra ou do pedido.",
+          src: "/images/evidence/shipping-pallet-01.webp",
+          alt: "Embalagem em pallets de separadores AGM preparada para entrega"
+        }
+      ]
+    },
+    download: {
+      eyebrow: "Referência para compradores",
+      title: "Baixe o resumo de capacidade técnica da Viking AGM",
+      text: "Material em inglês e chinês sobre formatos, aplicações, inspeção, embalagem e dados necessários para analisar especificações.",
+      button: "Baixar PDF EN/ZH"
+    },
+    faq: { eyebrow: "Perguntas frequentes", title: "Dúvidas antes de solicitar uma amostra" },
+    form: {
+      eyebrow: "Inicie a conversa",
+      title: "Envie as informações que você já possui",
+      text: "Nome e contato são suficientes para começar. Aplicação, formato e dimensões nos ajudam a preparar uma resposta mais útil.",
+      hints: ["Aplicação da bateria", "Formato em rolo ou folha", "Espessura, largura ou tamanho da folha", "Necessidades de amostra, teste e embalagem"],
+      message: "Opcional: aplicação, espessura desejada, largura do rolo ou tamanho da folha, quantidade de amostra, requisitos técnicos ou de embalagem"
+    },
+    footer: "Fabricação de separadores AGM de fibra de vidro, análise de qualidade e coordenação de fornecimento para projetos de baterias chumbo-ácido."
+  },
+  ru: {
+    homePath: "/ru/",
+    languagePath: "/",
+    eyebrow: "Образец и проверка характеристик",
+    title: "Запрос образца AGM-сепаратора и проверка характеристик",
+    subtitle:
+      "Сообщите область применения аккумулятора и имеющиеся данные о сепараторе. Viking AGM поможет предварительно согласовать рулонный или листовой формат и направление спецификации до обсуждения образца или коммерческого предложения.",
+    primary: "Начать запрос образца",
+    secondary: "Скачать технический обзор EN/ZH",
+    proof: ["Рулоны и листы", "Проверка по области применения", "Требования к контролю и упаковке"],
+    requirements: {
+      eyebrow: "Перечень информации",
+      title: "Что предоставить для первичной проверки",
+      text: "Необязательно заранее утверждать все параметры. Отправьте имеющиеся данные и укажите пункты, которые еще находятся на рассмотрении.",
+      items: [
+        ["Область применения", "VRLA, ИБП, мотоцикл, автомобиль, накопление энергии или другое применение свинцово-кислотного аккумулятора."],
+        ["Формат продукции", "Рулонный материал, предварительно нарезанные листы или запрос на сравнение двух форматов."],
+        ["Размеры", "Целевая толщина, ширина рулона, длина и ширина листа или существующий чертеж."],
+        ["Техническая информация", "Целевые значения, стандарты заказчика, перечень испытаний или эталонный образец, если он имеется."],
+        ["Количество и упаковка", "Количество образцов, план испытаний или производства, втулка рулона, маркировка и требования к упаковке."]
+      ]
+    },
+    process: {
+      eyebrow: "Дальнейшие шаги",
+      title: "Понятный путь от запроса до обсуждения образца",
+      items: [
+        ["1", "Проверка применения", "Мы рассматриваем область применения аккумулятора, формат продукции и имеющиеся данные спецификации."],
+        ["2", "Уточнение данных", "Согласовываем размеры, эталонные образцы, испытания и детали упаковки, требующие уточнения."],
+        ["3", "Согласование следующего шага", "Стороны определяют порядок предоставления образца, технической проверки или расчета предложения."]
+      ]
+    },
+    evidence: {
+      eyebrow: "Производственные подтверждения",
+      title: "Производство, контроль и подготовка к поставке",
+      items: [
+        {
+          title: "Производственные возможности",
+          text: "Производство AGM-сепараторов и работа с рулонами поддерживают согласование спецификаций и серийных поставок.",
+          src: "/images/agm-factory-capability-1200.webp",
+          alt: "Производственные возможности Viking AGM"
+        },
+        {
+          title: "Контроль качества",
+          text: "Требования к контролю согласуются с учетом области применения и утвержденных испытаний.",
+          src: "/images/agm-quality-control-1200.webp",
+          alt: "Контроль качества AGM-сепараторов на Viking Technology"
+        },
+        {
+          title: "Упаковка и поставка",
+          text: "Требования к рулонам, листам, маркировке и паллетам можно проверить до подготовки образца или заказа.",
+          src: "/images/evidence/shipping-pallet-01.webp",
+          alt: "Паллетная упаковка AGM-сепараторов для поставки"
+        }
+      ]
+    },
+    download: {
+      eyebrow: "Материал для закупщика",
+      title: "Скачайте обзор технических возможностей Viking AGM",
+      text: "Материал на английском и китайском языках о форматах, применении, контроле, упаковке и данных для проверки спецификации.",
+      button: "Скачать PDF EN/ZH"
+    },
+    faq: { eyebrow: "Частые вопросы", title: "Вопросы перед запросом образца" },
+    form: {
+      eyebrow: "Начать обсуждение",
+      title: "Отправьте имеющуюся информацию",
+      text: "Для начала достаточно имени и контакта. Область применения, формат и размеры помогут подготовить более предметный ответ.",
+      hints: ["Область применения аккумулятора", "Рулонный или листовой формат", "Толщина, ширина или размер листа", "Требования к образцу, испытаниям и упаковке"],
+      message: "Необязательно: применение, целевая толщина, ширина рулона или размер листа, количество образцов, технические требования или упаковка"
+    },
+    footer: "Производство стекловолоконных AGM-сепараторов, проверка качества и координация поставок для свинцово-кислотных аккумуляторов."
   }
 } as const;
 
@@ -462,6 +680,12 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
                 ? "샘플 요청"
                 : lang === "ja"
                   ? "サンプル依頼"
+                  : lang === "es"
+                    ? "Solicitar muestra"
+                    : lang === "pt"
+                      ? "Solicitar amostra"
+                      : lang === "ru"
+                        ? "Запросить образец"
                   : "Request Sample"
         }
       />
@@ -478,6 +702,12 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
                   ? "Viking AGM 분리막 생산 라인"
                   : lang === "ja"
                     ? "Viking AGMセパレーター生産ライン"
+                    : lang === "es"
+                      ? "Línea de producción de separadores AGM de Viking"
+                      : lang === "pt"
+                        ? "Linha de produção de separadores AGM da Viking"
+                        : lang === "ru"
+                          ? "Линия производства AGM-сепараторов Viking"
                     : "Viking AGM separator production line"
           }
           fill
@@ -677,6 +907,16 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
                 ? "AGM 隔板样品与规格匹配"
                 : lang === "vi"
                   ? "Yêu cầu mẫu và đối chiếu thông số tấm ngăn AGM"
+                  : lang === "ko"
+                    ? "AGM 분리막 샘플 및 사양 검토"
+                    : lang === "ja"
+                      ? "AGMセパレーターのサンプル・仕様確認"
+                      : lang === "es"
+                        ? "Muestra de separador AGM y revisión de especificaciones"
+                        : lang === "pt"
+                          ? "Amostra de separador AGM e análise de especificações"
+                          : lang === "ru"
+                            ? "Образец AGM-сепаратора и проверка характеристик"
                   : "AGM separator sample and specification match"
             }
             messagePlaceholder={t.form.message}
@@ -713,6 +953,12 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
                   ? "홈으로 돌아가기"
                   : lang === "ja"
                     ? "ホームへ戻る"
+                    : lang === "es"
+                      ? "Volver al inicio"
+                      : lang === "pt"
+                        ? "Voltar ao início"
+                        : lang === "ru"
+                          ? "На главную"
                     : "Back to homepage"}
             <ArrowRight size={16} />
           </a>

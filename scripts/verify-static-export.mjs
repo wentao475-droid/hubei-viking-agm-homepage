@@ -19,6 +19,15 @@ const requiredFiles = [
   "ko/products/agm-separator/index.html",
   "ja/request-agm-separator-sample/index.html",
   "ja/products/agm-separator/index.html",
+  "es/index.html",
+  "es/request-agm-separator-sample/index.html",
+  "es/products/agm-separator/index.html",
+  "pt/index.html",
+  "pt/request-agm-separator-sample/index.html",
+  "pt/products/agm-separator/index.html",
+  "ru/index.html",
+  "ru/request-agm-separator-sample/index.html",
+  "ru/products/agm-separator/index.html",
   "applications/agm-separator-for-ups-battery/index.html",
   "zh/applications/agm-separator-for-ups-battery/index.html",
   "applications/agm-separator-for-motorcycle-battery/index.html",
@@ -93,6 +102,21 @@ const koSampleHtml = readOutFile(
 const jaProductHtml = readOutFile("ja/products/agm-separator/index.html");
 const jaSampleHtml = readOutFile(
   "ja/request-agm-separator-sample/index.html"
+);
+const esHtml = readOutFile("es/index.html");
+const esProductHtml = readOutFile("es/products/agm-separator/index.html");
+const esSampleHtml = readOutFile(
+  "es/request-agm-separator-sample/index.html"
+);
+const ptHtml = readOutFile("pt/index.html");
+const ptProductHtml = readOutFile("pt/products/agm-separator/index.html");
+const ptSampleHtml = readOutFile(
+  "pt/request-agm-separator-sample/index.html"
+);
+const ruHtml = readOutFile("ru/index.html");
+const ruProductHtml = readOutFile("ru/products/agm-separator/index.html");
+const ruSampleHtml = readOutFile(
+  "ru/request-agm-separator-sample/index.html"
 );
 const resourcesHtml = readOutFile("resources/index.html");
 const zhResourcesHtml = readOutFile("zh/resources/index.html");
@@ -169,7 +193,16 @@ const inquiryFormsUseSelects = [
   koSampleHtml,
   jaHtml,
   jaProductHtml,
-  jaSampleHtml
+  jaSampleHtml,
+  esHtml,
+  esProductHtml,
+  esSampleHtml,
+  ptHtml,
+  ptProductHtml,
+  ptSampleHtml,
+  ruHtml,
+  ruProductHtml,
+  ruSampleHtml
 ].every((html) =>
     /<select[^>]+name="application"/.test(html) &&
     /<select[^>]+name="interestedProduct"/.test(html) &&
@@ -257,6 +290,24 @@ if (jaHtml.includes('<html lang="ja"')) {
   pass("Japanese homepage declares lang=ja");
 } else {
   fail("Japanese homepage does not declare lang=ja");
+}
+
+if (esHtml.includes('<html lang="es"')) {
+  pass("Spanish homepage declares lang=es");
+} else {
+  fail("Spanish homepage does not declare lang=es");
+}
+
+if (ptHtml.includes('<html lang="pt-BR"')) {
+  pass("Portuguese homepage declares lang=pt-BR");
+} else {
+  fail("Portuguese homepage does not declare lang=pt-BR");
+}
+
+if (ruHtml.includes('<html lang="ru"')) {
+  pass("Russian homepage declares lang=ru");
+} else {
+  fail("Russian homepage does not declare lang=ru");
 }
 
 const vietnamesePages = [
@@ -358,6 +409,83 @@ if (
   fail("Korean or Japanese inquiry form values are not canonical or language is missing");
 }
 
+const spanishPortugueseRussianPages = [
+  [esHtml, "/es/", "es", "es_LA"],
+  [
+    esProductHtml,
+    "/es/products/agm-separator/",
+    "es",
+    "es_LA"
+  ],
+  [
+    esSampleHtml,
+    "/es/request-agm-separator-sample/",
+    "es",
+    "es_LA"
+  ],
+  [ptHtml, "/pt/", "pt-BR", "pt_BR"],
+  [
+    ptProductHtml,
+    "/pt/products/agm-separator/",
+    "pt-BR",
+    "pt_BR"
+  ],
+  [
+    ptSampleHtml,
+    "/pt/request-agm-separator-sample/",
+    "pt-BR",
+    "pt_BR"
+  ],
+  [ruHtml, "/ru/", "ru-RU", "ru_RU"],
+  [
+    ruProductHtml,
+    "/ru/products/agm-separator/",
+    "ru-RU",
+    "ru_RU"
+  ],
+  [
+    ruSampleHtml,
+    "/ru/request-agm-separator-sample/",
+    "ru-RU",
+    "ru_RU"
+  ]
+];
+
+const spanishPortugueseRussianSeoComplete =
+  spanishPortugueseRussianPages.every(([html, path, language, locale]) =>
+    [
+      `https://www.vikingagm.com${path}`,
+      `hrefLang="${language}"`,
+      `"inLanguage":"${language}"`,
+      locale
+    ].every((value) => html.includes(value))
+  );
+
+if (spanishPortugueseRussianSeoComplete) {
+  pass("Spanish, Portuguese and Russian pages include localized SEO metadata");
+} else {
+  fail("one or more Spanish, Portuguese or Russian pages have incomplete SEO metadata");
+}
+
+const newLocaleFormsComplete = [
+  ["es", esHtml, esProductHtml, esSampleHtml],
+  ["pt", ptHtml, ptProductHtml, ptSampleHtml],
+  ["ru", ruHtml, ruProductHtml, ruSampleHtml]
+].every(([language, ...pages]) =>
+  pages.every(
+    (html) =>
+      html.includes('value="Motorcycle battery"') &&
+      html.includes('value="AGM separator rolls"') &&
+      new RegExp(`name="language"\\s+value="${language}"`).test(html)
+  )
+);
+
+if (newLocaleFormsComplete) {
+  pass("Spanish, Portuguese and Russian forms submit canonical values");
+} else {
+  fail("Spanish, Portuguese or Russian form values are not canonical");
+}
+
 if (
   upsVrlaArticleHtml.includes(
     "https://www.vikingagm.com/blog/why-ups-projects-still-use-vrla-batteries/"
@@ -444,10 +572,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 48) {
-  pass("sitemap.xml lists the expected 48 localized public URLs");
+if (sitemapUrls.length === 57) {
+  pass("sitemap.xml lists the expected 57 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 48`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 57`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -464,11 +592,11 @@ if (sitemapMetadataComplete) {
 }
 
 const expectedSitemapLastmod = [
-  ["https://www.vikingagm.com/", "2026-07-29"],
-  ["https://www.vikingagm.com/vi/", "2026-07-29"],
+  ["https://www.vikingagm.com/", "2026-07-30"],
+  ["https://www.vikingagm.com/vi/", "2026-07-30"],
   [
     "https://www.vikingagm.com/vi/products/agm-separator/",
-    "2026-07-29"
+    "2026-07-30"
   ],
   [
     "https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/",
@@ -476,31 +604,43 @@ const expectedSitemapLastmod = [
   ],
   [
     "https://www.vikingagm.com/vi/request-agm-separator-sample/",
-    "2026-07-29"
+    "2026-07-30"
   ],
   [
     "https://www.vikingagm.com/ko/",
-    "2026-07-29"
+    "2026-07-30"
   ],
   [
     "https://www.vikingagm.com/ko/products/agm-separator/",
-    "2026-07-29"
+    "2026-07-30"
   ],
   [
     "https://www.vikingagm.com/ko/request-agm-separator-sample/",
-    "2026-07-29"
+    "2026-07-30"
   ],
   [
     "https://www.vikingagm.com/ja/",
-    "2026-07-29"
+    "2026-07-30"
+  ],
+  [
+    "https://www.vikingagm.com/es/",
+    "2026-07-30"
+  ],
+  [
+    "https://www.vikingagm.com/pt/products/agm-separator/",
+    "2026-07-30"
+  ],
+  [
+    "https://www.vikingagm.com/ru/request-agm-separator-sample/",
+    "2026-07-30"
   ],
   [
     "https://www.vikingagm.com/ja/products/agm-separator/",
-    "2026-07-29"
+    "2026-07-30"
   ],
   [
     "https://www.vikingagm.com/ja/request-agm-separator-sample/",
-    "2026-07-29"
+    "2026-07-30"
   ],
   [
     "https://www.vikingagm.com/blog/agm-separator-manufacturing-quality-delivery/",

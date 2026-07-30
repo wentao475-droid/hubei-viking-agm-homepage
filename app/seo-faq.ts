@@ -1,4 +1,12 @@
-export type FaqLang = "en" | "zh" | "vi" | "ko" | "ja";
+export type FaqLang =
+  | "en"
+  | "zh"
+  | "vi"
+  | "ko"
+  | "ja"
+  | "es"
+  | "pt"
+  | "ru";
 
 export const productFaqCopy = {
   en: {
@@ -108,6 +116,72 @@ export const productFaqCopy = {
       [
         "より早い回答に必要な情報は何ですか？",
         "製品形状、バッテリー用途、予定数量があると確認が進みますが、初回お問い合わせの必須項目ではありません。"
+      ]
+    ]
+  },
+  es: {
+    faqEyebrow: "Preguntas frecuentes",
+    faqTitle: "Puede consultarnos antes de finalizar la especificación",
+    faq: [
+      [
+        "¿Necesito conocer la especificación exacta antes de contactar?",
+        "No. Puede dejar sus datos primero. Nuestro equipo puede ayudar a revisar el espesor, el ancho, el formato y la aplicación."
+      ],
+      [
+        "¿Proporcionan muestras?",
+        "La muestra puede evaluarse después de confirmar el formato del producto y la aplicación básica."
+      ],
+      [
+        "¿Pueden adaptar el espesor o el ancho?",
+        "El espesor, el ancho, el formato en rollo y el tamaño de lámina pueden revisarse según los requisitos del cliente."
+      ],
+      [
+        "¿Qué información ayuda a responder más rápido?",
+        "El formato, la aplicación de la batería y la cantidad estimada son útiles, pero no son obligatorios en el primer contacto."
+      ]
+    ]
+  },
+  pt: {
+    faqEyebrow: "Perguntas frequentes",
+    faqTitle: "Você pode entrar em contato antes de finalizar a especificação",
+    faq: [
+      [
+        "Preciso conhecer a especificação exata antes de entrar em contato?",
+        "Não. Você pode deixar seus dados primeiro. Nossa equipe pode ajudar a analisar espessura, largura, formato e aplicação."
+      ],
+      [
+        "Vocês fornecem amostras?",
+        "A amostra pode ser discutida após a confirmação do formato do produto e da aplicação básica."
+      ],
+      [
+        "É possível ajustar espessura ou largura?",
+        "Espessura, largura, formato em rolo e tamanho da folha podem ser analisados conforme os requisitos do cliente."
+      ],
+      [
+        "Quais informações ajudam a obter uma resposta mais rápida?",
+        "Formato do produto, aplicação da bateria e quantidade estimada são úteis, mas não obrigatórios no primeiro contato."
+      ]
+    ]
+  },
+  ru: {
+    faqEyebrow: "Частые вопросы",
+    faqTitle: "Можно обратиться до окончательного согласования характеристик",
+    faq: [
+      [
+        "Нужно ли знать точные характеристики до обращения?",
+        "Нет. Сначала можно оставить контактные данные. Наша команда поможет уточнить толщину, ширину, формат и назначение."
+      ],
+      [
+        "Предоставляете ли вы образцы?",
+        "Образец можно обсудить после подтверждения формата продукции и основного применения."
+      ],
+      [
+        "Можно ли согласовать индивидуальную толщину или ширину?",
+        "Толщину, ширину, рулонный формат и размеры листов можно обсудить с учётом требований заказчика."
+      ],
+      [
+        "Какая информация поможет получить ответ быстрее?",
+        "Формат продукции, назначение аккумулятора и ориентировочный объём полезны, но не обязательны при первом обращении."
       ]
     ]
   }

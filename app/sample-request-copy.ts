@@ -90,5 +90,59 @@ export const sampleRequestFaq = {
       "フォーム送信で生産注文が確定しますか？",
       "いいえ。用途、仕様の方向性、適切な次のステップを双方で確認するための技術・商談を開始するものです。"
     ]
+  ],
+  es: [
+    [
+      "¿Puedo solicitar una muestra antes de definir todos los parámetros?",
+      "Sí. Comience con la aplicación de la batería, la preferencia por rollo o lámina y las dimensiones conocidas. Los demás puntos pueden revisarse durante el seguimiento."
+    ],
+    [
+      "¿Qué información ayuda a revisar la especificación?",
+      "Son útiles la aplicación, el espesor objetivo, el ancho del rollo o tamaño de lámina, el formato, los planos o muestras de referencia y los ensayos esperados."
+    ],
+    [
+      "¿Podemos revisar el embalaje junto con la muestra?",
+      "Sí. El núcleo del rollo, el embalaje de láminas, las etiquetas y otros requisitos pueden revisarse junto con la especificación."
+    ],
+    [
+      "¿Enviar el formulario confirma una orden de producción?",
+      "No. Inicia una conversación técnica y comercial para confirmar la aplicación, la dirección de la especificación y el siguiente paso adecuado."
+    ]
+  ],
+  pt: [
+    [
+      "Posso solicitar uma amostra antes de definir todos os parâmetros?",
+      "Sim. Comece pela aplicação da bateria, preferência por rolo ou folha e dimensões conhecidas. Os demais pontos podem ser analisados no acompanhamento."
+    ],
+    [
+      "Quais informações ajudam na análise da especificação?",
+      "São úteis a aplicação, espessura desejada, largura do rolo ou tamanho da folha, formato, desenhos ou amostras de referência e ensaios esperados."
+    ],
+    [
+      "Podemos analisar a embalagem junto com a amostra?",
+      "Sim. Tubetes, embalagem de folhas, etiquetas e outros requisitos podem ser discutidos junto com a especificação."
+    ],
+    [
+      "O envio do formulário confirma um pedido de produção?",
+      "Não. Ele inicia uma conversa técnica e comercial para confirmar a aplicação, a direção da especificação e a próxima etapa adequada."
+    ]
+  ],
+  ru: [
+    [
+      "Можно ли запросить образец до окончательного согласования всех параметров?",
+      "Да. Укажите назначение аккумулятора, предпочтительный формат — рулон или лист — и известные размеры. Остальные параметры можно уточнить при дальнейшем обсуждении."
+    ],
+    [
+      "Какая информация поможет проверить соответствие характеристик?",
+      "Полезны назначение аккумулятора, требуемая толщина, ширина рулона или размер листа, формат продукции, чертежи или эталонные образцы и ожидаемые испытания."
+    ],
+    [
+      "Можно ли обсудить упаковку вместе с образцом?",
+      "Да. Втулки рулонов, упаковку листов, маркировку и другие требования можно согласовать вместе с характеристиками продукции."
+    ],
+    [
+      "Означает ли отправка формы подтверждение производственного заказа?",
+      "Нет. Она начинает техническое и коммерческое обсуждение для согласования применения, характеристик и подходящего следующего шага."
+    ]
   ]
 } satisfies Record<SiteLocale, string[][]>;

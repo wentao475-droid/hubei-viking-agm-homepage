@@ -35,6 +35,21 @@ const localeCopy = {
     short: "JA",
     name: "日本語",
     aria: "現在の言語は日本語です。言語を変更"
+  },
+  es: {
+    short: "ES",
+    name: "Español",
+    aria: "El idioma actual es español. Cambiar idioma"
+  },
+  pt: {
+    short: "PT",
+    name: "Português (Brasil)",
+    aria: "O idioma atual é português. Alterar idioma"
+  },
+  ru: {
+    short: "RU",
+    name: "Русский",
+    aria: "Текущий язык — русский. Изменить язык"
   }
 } as const;
 
@@ -106,7 +121,7 @@ export function LanguageSwitcher({
         <div
           id={menuId}
           role="menu"
-          className="absolute right-0 top-full z-[70] mt-2 w-48 rounded-md border border-line bg-white p-1.5 shadow-industrial"
+          className="absolute right-0 top-full z-[70] mt-2 max-h-[min(24rem,calc(100vh-5rem))] w-56 overflow-y-auto rounded-md border border-line bg-white p-1.5 shadow-industrial"
         >
           {(Object.keys(localeCopy) as SiteLocale[]).map((locale) => {
             const item = localeCopy[locale];
@@ -124,7 +139,11 @@ export function LanguageSwitcher({
                       ? "ko-KR"
                       : locale === "ja"
                         ? "ja-JP"
-                        : locale
+                        : locale === "pt"
+                          ? "pt-BR"
+                          : locale === "ru"
+                            ? "ru-RU"
+                            : locale
                 }
                 onClick={() => setOpen(false)}
                 className="flex min-h-11 items-center gap-3 rounded-md px-3 py-2 text-sm font-semibold text-graphite transition hover:bg-frost hover:text-signal focus:bg-frost focus:text-signal focus:outline-none"
@@ -168,7 +187,10 @@ function LocaleIcon({ locale }: { locale: SiteLocale }) {
     zh: "cn",
     vi: "vn",
     ko: "kr",
-    ja: "jp"
+    ja: "jp",
+    es: "es",
+    pt: "br",
+    ru: "ru"
   }[locale];
 
   return (

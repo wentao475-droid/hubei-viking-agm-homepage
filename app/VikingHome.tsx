@@ -885,7 +885,7 @@ const baseCopy = {
         ["Website di động", "/images/website-logo-180.webp"]
       ]
     }
-  }
+  },
 } as const;
 
 const copy = {
@@ -1286,6 +1286,468 @@ const copy = {
         ["モバイルサイト", "/images/website-logo-180.webp"]
       ]
     }
+  },
+  es: {
+    ...baseCopy.en,
+    nav: { company: "Empresa", products: "Productos", applications: "Aplicaciones", quality: "Calidad", contact: "Contacto" },
+    language: "Español",
+    hero: {
+      ...baseCopy.en.hero,
+      badge: "Viking AGM · Fabricante",
+      title: ["Fabricante profesional de", "separadores AGM de fibra de vidrio"],
+      subtitle: "Fabricación especializada y suministro estable de separadores AGM de fibra de vidrio para productores de baterías de plomo-ácido.",
+      quote: "Solicitar cotización",
+      products: "Ver productos",
+      proof: ["Separador AGM de fibra de vidrio", "Producción con control de proceso", "Suministro preparado para exportación"],
+      image: { ...baseCopy.en.hero.image, alt: "Línea de producción de separadores AGM" }
+    },
+    video: {
+      eyebrow: "Vista general de la fábrica",
+      title: "Conozca la fábrica de Viking AGM en 1 minuto",
+      text: "Vea la producción de separadores AGM, el manejo de rollos, el control de calidad y la preparación del empaque.",
+      duration: "Video de fábrica de 1 minuto",
+      play: "Reproducir video",
+      close: "Cerrar video",
+      aria: "Reproducir el video de la fábrica Viking AGM"
+    },
+    stats: [
+      { value: "AGM", label: "Fabricación de separadores de fibra de vidrio" },
+      { value: "OEM", label: "Revisión de especificaciones en rollo y lámina" },
+      { value: "QC", label: "Inspección y seguimiento del proceso" }
+    ],
+    company: {
+      ...baseCopy.en.company,
+      eyebrow: "Perfil de la empresa",
+      title: "Fabricante tecnológico de separadores AGM en Hubei",
+      text: [
+        "Hubei Viking Technology Co., Ltd. fue fundada en diciembre de 2015 con un capital registrado de 30 millones de RMB. La planta está ubicada en la Zona de Desarrollo Económico y Tecnológico de Ezhou, provincia de Hubei, ocupa aproximadamente 65 mu y se especializa en separadores de fibra de vidrio ultrafina.",
+        "La empresa produce principalmente separadores AGM, con una capacidad anual aproximada de 4.000 toneladas. Varias líneas de producción y sistemas de control de proceso, inspección y gestión de calidad respaldan el suministro por lotes.",
+        "Viking Technology cuenta con certificación del sistema de gestión de calidad ISO9001:2015. Las especificaciones pueden revisarse según los requisitos del cliente y la aplicación de la batería de plomo-ácido."
+      ],
+      imageLabel: "Oficinas y planta de Hubei Viking Technology",
+      image: { ...baseCopy.en.company.image, alt: "Oficinas y planta de Hubei Viking Technology" },
+      cards: [
+        ["Fundada en 2015", "Capital registrado de 30 millones de RMB y enfoque continuo en separadores AGM."],
+        ["Planta de aproximadamente 65 mu", "Ubicada en la Zona de Desarrollo Económico y Tecnológico de Ezhou, Hubei."],
+        ["Capacidad anual aproximada de 4.000 toneladas", "Varias líneas AGM respaldan el suministro estable por lotes."],
+        ["Certificación ISO9001:2015", "El sistema de calidad respalda la evaluación de proveedores."],
+        ["Producción según especificación", "Espesor, ancho y formato pueden revisarse según la aplicación."]
+      ]
+    },
+    values: {
+      ...baseCopy.en.values,
+      eyebrow: "Valor del producto",
+      title: "Material diseñado para un desempeño estable de la batería",
+      text: "El control desde las materias primas hasta la liberación del producto respalda la absorción de ácido, el comportamiento a compresión y la consistencia entre lotes.",
+      items: [
+        ["Alta absorción", "Absorción rápida del electrolito y retención relativamente uniforme."],
+        ["Baja resistencia eléctrica", "Diseñado para apoyar la conducción y el desempeño de la batería."],
+        ["Espesor estable", "El control de espesor facilita el ensamble de placas y la compresión."],
+        ["Resistencia a la tracción", "Adecuada para corte, conversión y manejo durante el ensamble."],
+        ["Calidad consistente", "Control entre lotes para necesidades de producción continua."]
+      ],
+      images: [
+        ["Rollo de separador terminado", "Rollos AGM preparados para producción y conversión de baterías.", "/images/viking-finished-separator-roll-900.webp"],
+        ["Láminas de separador", "Láminas precortadas para revisar especificaciones y muestras.", "/images/viking-separator-sheets-900.webp"]
+      ]
+    },
+    applications: {
+      eyebrow: "Aplicaciones",
+      title: "Material separador para los principales segmentos de baterías de plomo-ácido",
+      items: ["Baterías VRLA", "Baterías UPS", "Baterías para motocicleta", "Baterías automotrices", "Sistemas de almacenamiento de energía"]
+    },
+    factory: {
+      ...baseCopy.en.factory,
+      eyebrow: "Capacidad de fabricación",
+      title: "Evidencia de producción que el comprador puede revisar",
+      text: "Los equipos, el control en línea y el manejo de rollos muestran cómo se produce, inspecciona y prepara el material para el envío.",
+      items: [
+        ["Producción continua en rollo", "Las líneas respaldan conversaciones sobre suministro continuo."],
+        ["Control en línea", "Los equipos y registros hacen más concreto el seguimiento del proceso."],
+        ["Empaque y envío", "Se pueden revisar tamaño del rollo, empaque y programación de exportación."],
+        ["Especificaciones personalizadas", "Se pueden revisar espesor, ancho, formato y requisitos de aplicación."]
+      ],
+      image: { ...baseCopy.en.factory.image, alt: "Planta de fabricación de separadores AGM" }
+    },
+    process: {
+      ...baseCopy.en.process,
+      eyebrow: "Proceso de fabricación",
+      title: "Desde la selección de materias primas hasta el seguimiento del cliente",
+      text: "El flujo integra materias primas, preparación de fibra, formación, inspección, análisis de calidad y seguimiento.",
+      steps: ["Selección de materias primas", "Inspección de entrada", "Tratamiento de fibra y agua", "Preparación de pulpa", "Formación, secado y combinación", "Corte y fijación", "Análisis de calidad", "Liberación del producto", "Seguimiento del cliente"],
+      image: { ...baseCopy.en.process.image, alt: "Proceso de fabricación de separadores AGM" }
+    },
+    quality: {
+      ...baseCopy.en.quality,
+      eyebrow: "Control de calidad",
+      title: "Certificación, inspección y liberación",
+      text: "La gestión incluye documentos de calificación, controles de proceso, análisis del producto terminado, liberación y comentarios del cliente.",
+      items: ["Documentos disponibles para revisión", "Controles de entrada y proceso", "Análisis de producto terminado", "Liberación y seguimiento"],
+      image: { ...baseCopy.en.quality.image, alt: "Inspección de calidad de separadores AGM" }
+    },
+    certifications: {
+      eyebrow: "Certificaciones y cumplimiento",
+      title: "Documentación para la evaluación del proveedor",
+      text: "La licencia comercial y los certificados pueden proporcionarse para revisión. Los nombres, números y vigencia se confirman con los documentos originales.",
+      items: ["Licencia comercial", "Certificados de sistemas de gestión", "Reconocimientos de producto o empresa", "Documentación adicional bajo solicitud"],
+      note: "Los documentos originales pueden revisarse durante la evaluación del proveedor."
+    },
+    why: {
+      eyebrow: "Por qué Viking AGM",
+      title: "Un socio de fabricación práctico para empresas de baterías",
+      items: [
+        ["Experiencia de fabricación", "Enfoque en materiales separadores AGM para baterías de plomo-ácido."],
+        ["Planificación de entrega", "Producción y empaque coordinados con los requisitos del pedido."],
+        ["Soporte OEM y de especificación", "Revisión según tipo de batería, proceso y formato de rollo."],
+        ["Comunicación para exportación", "Respuestas técnicas y comerciales claras para compradores internacionales."]
+      ]
+    },
+    form: {
+      ...baseCopy.en.form,
+      eyebrow: "Consulta",
+      title: "Comparta sus datos de contacto",
+      text: "Puede comenzar con sus datos de contacto. Después revisaremos espesor, ancho, cantidad y aplicación.",
+      hints: ["Correo, WhatsApp o teléfono para comenzar", "Apoyo para confirmar la especificación", "Espesor, ancho y cantidad pueden revisarse después"],
+      fields: { name: "Nombre", contact: "Correo / WhatsApp / Teléfono", company: "Empresa", interestedProduct: "Producto de interés", message: "Mensaje" },
+      placeholders: { name: "Nombre completo", contact: "Correo, WhatsApp o teléfono", company: "Nombre de la empresa", interestedProduct: "Rollos, láminas o por definir", message: "Opcional: aplicación, cantidad, muestra o consulta técnica" },
+      submit: "Enviar contacto",
+      submitting: "Enviando...",
+      success: "Gracias. Nos comunicaremos para confirmar sus requisitos de separador AGM.",
+      required: "Ingrese su nombre y un medio de contacto.",
+      emailFallback: "Se abrió su cliente de correo. Envíe el mensaje preparado para completar la consulta.",
+      failure: "No fue posible enviar la consulta. Inténtelo nuevamente o contáctenos directamente."
+    },
+    faq: {
+      eyebrow: "Preguntas frecuentes",
+      title: "Preguntas antes de solicitar soporte para separadores AGM",
+      items: [
+        ["¿Pueden personalizar el espesor o el ancho?", "Sí. Se pueden revisar espesor, ancho, formato de rollo y tamaño de lámina según el diseño y el proceso."],
+        ["¿Puedo solicitar muestras antes de una compra mayor?", "Las muestras pueden revisarse después de confirmar formato, aplicación y dirección básica de especificación."],
+        ["¿Para qué baterías se utilizan los separadores AGM?", "Podemos revisar aplicaciones VRLA, UPS, motocicleta, automóvil y almacenamiento de energía."],
+        ["¿Qué información se necesita para cotizar?", "Aplicación, formato, espesor, ancho o tamaño, cantidad estimada y pruebas requeridas ayudan a la revisión."]
+      ]
+    },
+    footer: {
+      ...baseCopy.en.footer,
+      description: "Fabricante de separadores AGM de fibra de vidrio para productores y socios comerciales de baterías de plomo-ácido.",
+      wechat: "Cuenta oficial de WeChat",
+      mobile: "Sitio móvil",
+      columns: {
+        Empresa: [["Fabricación", "/es/#company"], ["Contacto", "/es/#contact"]],
+        Productos: [["Separador AGM", "/es/products/agm-separator/"], ["Rollos y láminas", "/es/products/agm-separator/"]],
+        Contacto: [["Solicitar muestra", "/es/request-agm-separator-sample/"], ["Consulta técnica", "/es/#contact"], ["Ficha técnica EN/ZH", "/downloads/viking-agm-technical-capability.pdf"]]
+      },
+      logo: { ...baseCopy.en.footer.logo, alt: "Logotipo de Viking Technology" },
+      qrImages: [["Cuenta oficial de WeChat", "/images/qrcode_for_logo.jpg"], ["Sitio móvil", "/images/website-logo-180.webp"]]
+    }
+  },
+  pt: {
+    ...baseCopy.en,
+    nav: { company: "Empresa", products: "Produtos", applications: "Aplicações", quality: "Qualidade", contact: "Contato" },
+    language: "Português (Brasil)",
+    hero: {
+      ...baseCopy.en.hero,
+      badge: "Viking AGM · Fabricante",
+      title: ["Fabricante profissional de", "separadores AGM de fibra de vidro"],
+      subtitle: "Fabricação especializada e fornecimento estável de separadores AGM de fibra de vidro para produtores de baterias chumbo-ácido.",
+      quote: "Solicitar cotação",
+      products: "Ver produtos",
+      proof: ["Separador AGM de fibra de vidro", "Produção com controle de processo", "Fornecimento preparado para exportação"],
+      image: { ...baseCopy.en.hero.image, alt: "Linha de produção de separadores AGM" }
+    },
+    video: {
+      eyebrow: "Visão geral da fábrica",
+      title: "Conheça a fábrica da Viking AGM em 1 minuto",
+      text: "Veja a produção de separadores AGM, o manuseio de rolos, o controle de qualidade e a preparação da embalagem.",
+      duration: "Vídeo de fábrica de 1 minuto",
+      play: "Reproduzir vídeo",
+      close: "Fechar vídeo",
+      aria: "Reproduzir o vídeo da fábrica Viking AGM"
+    },
+    stats: [
+      { value: "AGM", label: "Fabricação de separadores de fibra de vidro" },
+      { value: "OEM", label: "Análise de especificações em rolo e folha" },
+      { value: "QC", label: "Inspeção e acompanhamento do processo" }
+    ],
+    company: {
+      ...baseCopy.en.company,
+      eyebrow: "Perfil da empresa",
+      title: "Fabricante de separadores AGM com base tecnológica em Hubei",
+      text: [
+        "A Hubei Viking Technology Co., Ltd. foi fundada em dezembro de 2015 com capital registrado de RMB 30 milhões. A fábrica fica na Zona de Desenvolvimento Econômico e Tecnológico de Ezhou, província de Hubei, ocupa cerca de 65 mu e se dedica a separadores de fibra de vidro ultrafina.",
+        "A empresa produz principalmente separadores AGM, com capacidade anual aproximada de 4.000 toneladas. Várias linhas de produção e sistemas de controle de processo, inspeção e gestão da qualidade apoiam o fornecimento por lotes.",
+        "A Viking Technology possui certificação do sistema de gestão da qualidade ISO9001:2015. As especificações podem ser analisadas conforme os requisitos do cliente e a aplicação da bateria chumbo-ácido."
+      ],
+      imageLabel: "Escritório e fábrica da Hubei Viking Technology",
+      image: { ...baseCopy.en.company.image, alt: "Escritório e fábrica da Hubei Viking Technology" },
+      cards: [
+        ["Fundada em 2015", "Capital registrado de RMB 30 milhões e foco contínuo em separadores AGM."],
+        ["Fábrica com cerca de 65 mu", "Localizada na Zona de Desenvolvimento Econômico e Tecnológico de Ezhou, Hubei."],
+        ["Capacidade anual aproximada de 4.000 toneladas", "Várias linhas AGM apoiam o fornecimento estável por lotes."],
+        ["Certificação ISO9001:2015", "O sistema de qualidade apoia a avaliação de fornecedores."],
+        ["Produção conforme especificação", "Espessura, largura e formato podem ser analisados conforme a aplicação."]
+      ]
+    },
+    values: {
+      ...baseCopy.en.values,
+      eyebrow: "Valor do produto",
+      title: "Material desenvolvido para desempenho estável da bateria",
+      text: "O controle das matérias-primas à liberação apoia a absorção de ácido, o comportamento sob compressão e a consistência entre lotes.",
+      items: [
+        ["Alta absorção", "Absorção rápida do eletrólito e retenção relativamente uniforme."],
+        ["Baixa resistência elétrica", "Desenvolvido para apoiar a condução e o desempenho da bateria."],
+        ["Espessura estável", "O controle de espessura auxilia a montagem das placas e a compressão."],
+        ["Resistência à tração", "Adequada para corte, conversão e manuseio durante a montagem."],
+        ["Qualidade consistente", "Controle entre lotes para necessidades de produção contínua."]
+      ],
+      images: [
+        ["Rolo de separador acabado", "Rolos AGM preparados para produção e conversão de baterias.", "/images/viking-finished-separator-roll-900.webp"],
+        ["Folhas de separador", "Folhas pré-cortadas para análise de especificações e amostras.", "/images/viking-separator-sheets-900.webp"]
+      ]
+    },
+    applications: {
+      eyebrow: "Aplicações",
+      title: "Material separador para os principais segmentos de baterias chumbo-ácido",
+      items: ["Baterias VRLA", "Baterias UPS", "Baterias para motocicletas", "Baterias automotivas", "Sistemas de armazenamento de energia"]
+    },
+    factory: {
+      ...baseCopy.en.factory,
+      eyebrow: "Capacidade de fabricação",
+      title: "Evidências de produção para análise do comprador",
+      text: "Equipamentos, controle em linha e manuseio de rolos mostram como o material é produzido, inspecionado e preparado para envio.",
+      items: [
+        ["Produção contínua em rolo", "As linhas apoiam conversas sobre fornecimento contínuo."],
+        ["Controle em linha", "Equipamentos e registros tornam o acompanhamento mais concreto."],
+        ["Embalagem e envio", "Tamanho do rolo, embalagem e programação de exportação podem ser analisados."],
+        ["Especificações personalizadas", "Espessura, largura, formato e requisitos de aplicação podem ser analisados."]
+      ],
+      image: { ...baseCopy.en.factory.image, alt: "Fábrica de separadores AGM" }
+    },
+    process: {
+      ...baseCopy.en.process,
+      eyebrow: "Processo de fabricação",
+      title: "Da seleção de matérias-primas ao acompanhamento do cliente",
+      text: "O fluxo integra matérias-primas, preparação da fibra, formação, inspeção, análise da qualidade e acompanhamento.",
+      steps: ["Seleção de matérias-primas", "Inspeção de entrada", "Tratamento de fibra e água", "Preparação da polpa", "Formação, secagem e combinação", "Corte e fixação", "Análise da qualidade", "Liberação do produto", "Acompanhamento do cliente"],
+      image: { ...baseCopy.en.process.image, alt: "Processo de fabricação de separadores AGM" }
+    },
+    quality: {
+      ...baseCopy.en.quality,
+      eyebrow: "Controle de qualidade",
+      title: "Certificação, inspeção e liberação",
+      text: "A gestão inclui documentos de qualificação, controles de processo, análise do produto acabado, liberação e retorno do cliente.",
+      items: ["Documentos disponíveis para análise", "Controles de entrada e processo", "Análise do produto acabado", "Liberação e acompanhamento"],
+      image: { ...baseCopy.en.quality.image, alt: "Inspeção de qualidade de separadores AGM" }
+    },
+    certifications: {
+      eyebrow: "Certificações e conformidade",
+      title: "Documentação para avaliação do fornecedor",
+      text: "A licença comercial e os certificados podem ser fornecidos para análise. Nomes, números e validade são confirmados nos documentos originais.",
+      items: ["Licença comercial", "Certificados de sistemas de gestão", "Reconhecimentos de produto ou empresa", "Documentação adicional sob solicitação"],
+      note: "Os documentos originais podem ser analisados durante a avaliação do fornecedor."
+    },
+    why: {
+      eyebrow: "Por que escolher a Viking AGM",
+      title: "Um parceiro de fabricação prático para empresas de baterias",
+      items: [
+        ["Experiência de fabricação", "Foco em materiais separadores AGM para baterias chumbo-ácido."],
+        ["Planejamento de entrega", "Produção e embalagem alinhadas aos requisitos do pedido."],
+        ["Suporte OEM e de especificação", "Análise conforme tipo de bateria, processo e formato do rolo."],
+        ["Comunicação para exportação", "Respostas técnicas e comerciais claras para compradores internacionais."]
+      ]
+    },
+    form: {
+      ...baseCopy.en.form,
+      eyebrow: "Consulta",
+      title: "Compartilhe seus dados de contato",
+      text: "Você pode começar pelos dados de contato. Depois analisaremos espessura, largura, quantidade e aplicação.",
+      hints: ["E-mail, WhatsApp ou telefone para começar", "Apoio para confirmar a especificação", "Espessura, largura e quantidade podem ser analisadas depois"],
+      fields: { name: "Nome", contact: "E-mail / WhatsApp / Telefone", company: "Empresa", interestedProduct: "Produto de interesse", message: "Mensagem" },
+      placeholders: { name: "Nome completo", contact: "E-mail, WhatsApp ou telefone", company: "Nome da empresa", interestedProduct: "Rolos, folhas ou a definir", message: "Opcional: aplicação, quantidade, amostra ou dúvida técnica" },
+      submit: "Enviar contato",
+      submitting: "Enviando...",
+      success: "Obrigado. Entraremos em contato para confirmar os requisitos do separador AGM.",
+      required: "Informe seu nome e um meio de contato.",
+      emailFallback: "Seu cliente de e-mail foi aberto. Envie a mensagem preparada para concluir a consulta.",
+      failure: "Não foi possível enviar a consulta. Tente novamente ou fale conosco diretamente."
+    },
+    faq: {
+      eyebrow: "Perguntas frequentes",
+      title: "Dúvidas antes de solicitar suporte para separadores AGM",
+      items: [
+        ["É possível personalizar espessura ou largura?", "Sim. Espessura, largura, formato do rolo e tamanho da folha podem ser analisados conforme o projeto e o processo."],
+        ["Posso solicitar amostras antes de uma compra maior?", "As amostras podem ser analisadas após confirmar formato, aplicação e direção básica da especificação."],
+        ["Em quais baterias os separadores AGM são utilizados?", "Podemos analisar aplicações VRLA, UPS, motocicleta, automotiva e armazenamento de energia."],
+        ["Quais informações são necessárias para cotação?", "Aplicação, formato, espessura, largura ou tamanho, quantidade estimada e testes necessários ajudam na análise."]
+      ]
+    },
+    footer: {
+      ...baseCopy.en.footer,
+      description: "Fabricante de separadores AGM de fibra de vidro para produtores e parceiros comerciais de baterias chumbo-ácido.",
+      wechat: "Conta oficial no WeChat",
+      mobile: "Site móvel",
+      columns: {
+        Empresa: [["Fabricação", "/pt/#company"], ["Contato", "/pt/#contact"]],
+        Produtos: [["Separador AGM", "/pt/products/agm-separator/"], ["Rolos e folhas", "/pt/products/agm-separator/"]],
+        Contato: [["Solicitar amostra", "/pt/request-agm-separator-sample/"], ["Consulta técnica", "/pt/#contact"], ["Material técnico EN/ZH", "/downloads/viking-agm-technical-capability.pdf"]]
+      },
+      logo: { ...baseCopy.en.footer.logo, alt: "Logotipo da Viking Technology" },
+      qrImages: [["Conta oficial no WeChat", "/images/qrcode_for_logo.jpg"], ["Site móvel", "/images/website-logo-180.webp"]]
+    }
+  },
+  ru: {
+    ...baseCopy.en,
+    nav: { company: "Компания", products: "Продукция", applications: "Применение", quality: "Качество", contact: "Контакты" },
+    language: "Русский",
+    hero: {
+      ...baseCopy.en.hero,
+      badge: "Viking AGM · Производитель",
+      title: ["Профессиональный производитель", "стекловолоконных AGM-сепараторов"],
+      subtitle: "Специализированное производство и стабильные поставки AGM-сепараторов для производителей свинцово-кислотных аккумуляторов.",
+      quote: "Запросить предложение",
+      products: "Смотреть продукцию",
+      proof: ["Стекловолоконный AGM-сепаратор", "Контролируемое производство", "Готовность к экспортным поставкам"],
+      image: { ...baseCopy.en.hero.image, alt: "Линия производства AGM-сепараторов" }
+    },
+    video: {
+      eyebrow: "Обзор завода",
+      title: "Познакомьтесь с заводом Viking AGM за 1 минуту",
+      text: "Производство AGM-сепараторов, работа с рулонами, контроль качества и подготовка упаковки.",
+      duration: "Видео о заводе, 1 минута",
+      play: "Смотреть видео",
+      close: "Закрыть видео",
+      aria: "Смотреть видео о заводе Viking AGM"
+    },
+    stats: [
+      { value: "AGM", label: "Производство стекловолоконных сепараторов" },
+      { value: "OEM", label: "Согласование рулонных и листовых спецификаций" },
+      { value: "QC", label: "Контроль и отслеживание процесса" }
+    ],
+    company: {
+      ...baseCopy.en.company,
+      eyebrow: "О компании",
+      title: "Технологичный производитель AGM-сепараторов в провинции Хубэй",
+      text: [
+        "Компания Hubei Viking Technology Co., Ltd. основана в декабре 2015 года с уставным капиталом 30 млн юаней. Завод расположен в зоне экономического и технологического развития Эчжоу, провинция Хубэй, занимает около 65 му и специализируется на сепараторах из ультратонкого стекловолокна.",
+        "Основная продукция — AGM-сепараторы, годовая мощность составляет около 4 000 тонн. Несколько производственных линий и системы контроля процесса, инспекции и качества поддерживают серийные поставки.",
+        "Viking Technology сертифицирована по системе менеджмента качества ISO9001:2015. Характеристики продукции согласуются с требованиями заказчика и областью применения свинцово-кислотного аккумулятора."
+      ],
+      imageLabel: "Офис и производственная база Hubei Viking Technology",
+      image: { ...baseCopy.en.company.image, alt: "Офис и производственная база Hubei Viking Technology" },
+      cards: [
+        ["Основана в 2015 году", "Уставный капитал 30 млн юаней и постоянная специализация на AGM-сепараторах."],
+        ["Площадка около 65 му", "Зона экономического и технологического развития Эчжоу, Хубэй."],
+        ["Около 4 000 тонн в год", "Несколько линий AGM поддерживают стабильные серийные поставки."],
+        ["Сертификация ISO9001:2015", "Система качества поддерживает аудит поставщика."],
+        ["Производство по спецификации", "Толщина, ширина и формат согласуются с учетом применения."]
+      ]
+    },
+    values: {
+      ...baseCopy.en.values,
+      eyebrow: "Ценность продукции",
+      title: "Материал для стабильной работы аккумулятора",
+      text: "Контроль от сырья до выпуска поддерживает впитывание кислоты, поведение при сжатии и стабильность между партиями.",
+      items: [
+        ["Высокое впитывание", "Быстрое впитывание электролита и относительно равномерное удержание."],
+        ["Низкое электрическое сопротивление", "Разработан для поддержки проводимости и работы аккумулятора."],
+        ["Стабильная толщина", "Контроль толщины помогает сборке пластин и управлению сжатием."],
+        ["Прочность при растяжении", "Подходит для резки, конвертинга и операций сборки."],
+        ["Стабильное качество", "Межпартийный контроль для серийного производства."]
+      ],
+      images: [
+        ["Готовый рулон сепаратора", "Рулоны AGM для производства и дальнейшей обработки.", "/images/viking-finished-separator-roll-900.webp"],
+        ["Листы сепаратора", "Нарезанные листы для проверки спецификации и образца.", "/images/viking-separator-sheets-900.webp"]
+      ]
+    },
+    applications: {
+      eyebrow: "Применение",
+      title: "Материал для основных сегментов свинцово-кислотных аккумуляторов",
+      items: ["Аккумуляторы VRLA", "Аккумуляторы ИБП", "Мотоциклетные аккумуляторы", "Автомобильные аккумуляторы", "Системы накопления энергии"]
+    },
+    factory: {
+      ...baseCopy.en.factory,
+      eyebrow: "Производственные возможности",
+      title: "Производственные подтверждения для закупщика",
+      text: "Оборудование, контроль на линии и работа с рулонами показывают, как материал производится, проверяется и готовится к отгрузке.",
+      items: [
+        ["Непрерывное рулонное производство", "Линии поддерживают обсуждение непрерывных поставок."],
+        ["Контроль на линии", "Оборудование и записи делают отслеживание процесса предметным."],
+        ["Упаковка и отгрузка", "Размер рулона, упаковка и график экспорта могут быть согласованы."],
+        ["Индивидуальные спецификации", "Толщина, ширина, формат и требования применения могут быть согласованы."]
+      ],
+      image: { ...baseCopy.en.factory.image, alt: "Производство AGM-сепараторов" }
+    },
+    process: {
+      ...baseCopy.en.process,
+      eyebrow: "Производственный процесс",
+      title: "От выбора сырья до сопровождения заказчика",
+      text: "Процесс объединяет выбор сырья, подготовку волокна, формование, контроль, анализ качества и сопровождение.",
+      steps: ["Выбор сырья", "Входной контроль", "Обработка волокна и воды", "Подготовка массы", "Формование, сушка и соединение", "Резка и фиксация", "Анализ качества", "Выпуск продукции", "Сопровождение заказчика"],
+      image: { ...baseCopy.en.process.image, alt: "Процесс производства AGM-сепараторов" }
+    },
+    quality: {
+      ...baseCopy.en.quality,
+      eyebrow: "Контроль качества",
+      title: "Сертификация, проверка и выпуск",
+      text: "Управление включает квалификационные документы, контроль процесса, анализ готовой продукции, выпуск и обратную связь.",
+      items: ["Документы для проверки", "Входной и процессный контроль", "Анализ готовой продукции", "Выпуск и сопровождение"],
+      image: { ...baseCopy.en.quality.image, alt: "Контроль качества AGM-сепараторов" }
+    },
+    certifications: {
+      eyebrow: "Сертификация и соответствие",
+      title: "Документы для оценки поставщика",
+      text: "Регистрационные и сертификационные документы предоставляются для проверки. Названия, номера и сроки подтверждаются оригиналами.",
+      items: ["Регистрационные документы", "Сертификаты систем менеджмента", "Документы о признании продукции или компании", "Дополнительные документы по запросу"],
+      note: "Оригиналы документов доступны для проверки в ходе аудита поставщика."
+    },
+    why: {
+      eyebrow: "Почему Viking AGM",
+      title: "Практичный производственный партнер для аккумуляторных компаний",
+      items: [
+        ["Производственный опыт", "Специализация на AGM-сепараторах для свинцово-кислотных аккумуляторов."],
+        ["Планирование поставок", "Производство и упаковка согласуются с требованиями заказа."],
+        ["Поддержка OEM и спецификаций", "Согласование по типу аккумулятора, процессу и формату рулона."],
+        ["Экспортная коммуникация", "Понятные технические и коммерческие ответы международным закупщикам."]
+      ]
+    },
+    form: {
+      ...baseCopy.en.form,
+      eyebrow: "Запрос",
+      title: "Оставьте контактные данные",
+      text: "Для начала достаточно контакта. Толщину, ширину, количество и применение мы уточним далее.",
+      hints: ["Достаточно электронной почты, WhatsApp или телефона", "Поможем проверить подходящую спецификацию", "Толщину, ширину и количество можно согласовать позже"],
+      fields: { name: "Имя", contact: "E-mail / WhatsApp / Телефон", company: "Компания", interestedProduct: "Интересующая продукция", message: "Сообщение" },
+      placeholders: { name: "Полное имя", contact: "E-mail, WhatsApp или телефон", company: "Название компании", interestedProduct: "Рулоны, листы или пока не определено", message: "Необязательно: применение, количество, образец или технический вопрос" },
+      submit: "Отправить контакт",
+      submitting: "Отправка...",
+      success: "Спасибо. Мы свяжемся с вами для уточнения требований к AGM-сепаратору.",
+      required: "Укажите имя и контактные данные.",
+      emailFallback: "Открыт почтовый клиент. Отправьте подготовленное письмо для завершения запроса.",
+      failure: "Не удалось отправить запрос. Повторите попытку или свяжитесь с нами напрямую."
+    },
+    faq: {
+      eyebrow: "Частые вопросы",
+      title: "Вопросы перед запросом AGM-сепаратора",
+      items: [
+        ["Можно ли согласовать индивидуальную толщину или ширину?", "Да. Толщина, ширина, формат рулона и размер листа рассматриваются с учетом конструкции и процесса."],
+        ["Можно ли запросить образцы до крупного заказа?", "Образцы обсуждаются после подтверждения формата, применения и базового направления спецификации."],
+        ["Для каких аккумуляторов применяются AGM-сепараторы?", "Мы рассматриваем VRLA, ИБП, мотоциклетные, автомобильные и накопительные применения."],
+        ["Какие данные нужны для предложения?", "Применение, формат, толщина, ширина или размер, предполагаемое количество и испытания помогают проверке."]
+      ]
+    },
+    footer: {
+      ...baseCopy.en.footer,
+      description: "Производитель стекловолоконных AGM-сепараторов для предприятий и торговых партнеров в отрасли свинцово-кислотных аккумуляторов.",
+      wechat: "Официальный WeChat",
+      mobile: "Мобильный сайт",
+      columns: {
+        Компания: [["Производство", "/ru/#company"], ["Контакты", "/ru/#contact"]],
+        Продукция: [["AGM-сепаратор", "/ru/products/agm-separator/"], ["Рулоны и листы", "/ru/products/agm-separator/"]],
+        Контакты: [["Запросить образец", "/ru/request-agm-separator-sample/"], ["Технический запрос", "/ru/#contact"], ["Технический обзор EN/ZH", "/downloads/viking-agm-technical-capability.pdf"]]
+      },
+      logo: { ...baseCopy.en.footer.logo, alt: "Логотип Viking Technology" },
+      qrImages: [["Официальный WeChat", "/images/qrcode_for_logo.jpg"], ["Мобильный сайт", "/images/website-logo-180.webp"]]
+    }
   }
 } as const;
 
@@ -1341,7 +1803,10 @@ function localeText(
   zh: string,
   vi: string,
   ko = en,
-  ja = en
+  ja = en,
+  es = en,
+  pt = en,
+  ru = en
 ) {
   return lang === "zh"
     ? zh
@@ -1351,7 +1816,13 @@ function localeText(
         ? ko
         : lang === "ja"
           ? ja
-          : en;
+          : lang === "es"
+            ? es
+            : lang === "pt"
+              ? pt
+              : lang === "ru"
+                ? ru
+                : en;
 }
 
 export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
@@ -1405,7 +1876,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
           "申请样品",
           "Yêu cầu mẫu",
           "샘플 요청",
-          "サンプル依頼"
+          "サンプル依頼",
+          "Solicitar muestra",
+          "Solicitar amostra",
+          "Запросить образец"
         )}
       />
 
@@ -1448,7 +1922,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                   "申请样品与规格匹配",
                   "Yêu cầu mẫu và đối chiếu thông số",
                   "샘플 및 사양 검토 요청",
-                  "サンプル・仕様確認を依頼"
+                  "サンプル・仕様確認を依頼",
+                  "Solicitar una muestra y revisión de especificaciones",
+                  "Solicitar amostra e análise de especificações",
+                  "Запросить образец и проверку характеристик"
                 )}
                 <Send size={18} />
               </a>
@@ -1649,6 +2126,27 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                             ["4,000トン", "年間生産能力"],
                             ["ISO9001", "品質システム"]
                           ]
+                        : lang === "es"
+                          ? [
+                              ["2015", "Fundación"],
+                              ["65 mu", "Planta"],
+                              ["4.000 t", "Capacidad anual"],
+                              ["ISO9001", "Sistema de calidad"]
+                            ]
+                          : lang === "pt"
+                            ? [
+                                ["2015", "Fundação"],
+                                ["65 mu", "Fábrica"],
+                                ["4.000 t", "Capacidade anual"],
+                                ["ISO9001", "Sistema da qualidade"]
+                              ]
+                            : lang === "ru"
+                              ? [
+                                  ["2015", "Основание"],
+                                  ["65 му", "Площадка"],
+                                  ["4 000 т", "Мощность в год"],
+                                  ["ISO9001", "Система качества"]
+                                ]
                     : [
                       ["2015", "Established"],
                       ["65 mu", "Production site"],
@@ -1724,6 +2222,12 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                     ? "/ko/products/agm-separator/"
                     : lang === "ja"
                       ? "/ja/products/agm-separator/"
+                      : lang === "es"
+                        ? "/es/products/agm-separator/"
+                        : lang === "pt"
+                          ? "/pt/products/agm-separator/"
+                          : lang === "ru"
+                            ? "/ru/products/agm-separator/"
                   : "/products/agm-separator/"
             )}
             className="inline-flex items-center justify-center gap-2 rounded-md border border-signal bg-white px-5 py-3 text-sm font-bold text-signal transition hover:bg-signal hover:text-white"
@@ -1734,7 +2238,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
               "了解 AGM 隔板产品",
               "Tìm hiểu sản phẩm tấm ngăn AGM",
               "AGM 분리막 제품 보기",
-              "AGMセパレーター製品を見る"
+              "AGMセパレーター製品を見る",
+              "Conocer el separador AGM",
+              "Conhecer o separador AGM",
+              "Подробнее об AGM-сепараторе"
             )}
             <ArrowRight size={16} />
           </a>
@@ -1804,7 +2311,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                 "AGM 隔板制造流程",
                 "Quy trình sản xuất tấm ngăn AGM",
                 "AGM 분리막 제조 공정",
-                "AGMセパレーター製造工程"
+                "AGMセパレーター製造工程",
+                "Proceso de fabricación de separadores AGM",
+                "Processo de fabricação de separadores AGM",
+                "Процесс производства AGM-сепараторов"
               )
             }
             replacement="public/images/manufacturing-process-1400.webp"
@@ -1822,7 +2332,17 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
             src={asset(t.factory.image.src)}
             alt={t.factory.image.alt}
             eyebrow="Hubei Viking Technology"
-            title="AGM separator manufacturing and roll finishing"
+            title={localeText(
+              lang,
+              "AGM separator manufacturing and roll finishing",
+              "AGM 隔板生产与卷材后处理",
+              "Sản xuất và hoàn thiện cuộn tấm ngăn AGM",
+              "AGM 분리막 생산 및 롤 마감",
+              "AGMセパレーター生産・ロール仕上げ",
+              "Producción y acabado de rollos AGM",
+              "Produção e acabamento de rolos AGM",
+              "Производство и отделка рулонов AGM"
+            )}
             note={
               localeText(
                 lang,
@@ -1830,7 +2350,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                 "AGM 隔板生产与卷材后处理现场",
                 "Sản xuất và hoàn thiện cuộn tấm ngăn AGM",
                 "AGM 분리막 생산 및 롤 마감 공정",
-                "AGMセパレーター生産・ロール仕上げ工程"
+                "AGMセパレーター生産・ロール仕上げ工程",
+                "Producción de separadores AGM y acabado de rollos",
+                "Produção de separadores AGM e acabamento de rolos",
+                "Производство AGM-сепараторов и отделка рулонов"
               )
             }
             replacement="public/images/agm-factory-capability-1200.webp"
@@ -1912,7 +2435,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                   "质量检测流程",
                   "Quy trình kiểm tra",
                   "품질 검사 공정",
-                  "品質検査工程"
+                  "品質検査工程",
+                  "Proceso de control de calidad",
+                  "Processo de controle de qualidade",
+                  "Процесс контроля качества"
                 )}
               </div>
             </div>
@@ -1928,7 +2454,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
             "现场证据",
             "Bằng chứng thực tế",
             "현장 근거",
-            "現場情報"
+            "現場情報",
+            "Evidencia de fábrica",
+            "Evidências da fábrica",
+            "Производственные подтверждения"
           )}
           title={localeText(
             lang,
@@ -1936,7 +2465,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
             "生产、检测与包装现场",
             "Sản xuất, kiểm tra và chuẩn bị giao hàng",
             "생산, 검사 및 출하 근거",
-            "生産、検査、出荷の実例"
+            "生産、検査、出荷の実例",
+            "Producción, inspección y preparación de envíos",
+            "Produção, inspeção e preparação para envio",
+            "Производство, контроль и подготовка к отгрузке"
           )}
           text={localeText(
             lang,
@@ -1944,7 +2476,10 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
             "以下图片展示原料上料、卷材后处理、厚度检测和包装出运等实际环节。",
             "Các hình ảnh cho thấy quá trình cấp nguyên liệu, hoàn thiện cuộn, kiểm tra độ dày và chuẩn bị đóng gói giao hàng.",
             "원료 투입, 롤 마감, 두께 검사와 출하 준비의 실제 공정을 보여 줍니다.",
-            "原料投入、ロール仕上げ、厚さ検査、出荷準備の実工程を示しています。"
+            "原料投入、ロール仕上げ、厚さ検査、出荷準備の実工程を示しています。",
+            "Las imágenes muestran la alimentación de materias primas, el acabado de rollos, la inspección de espesor y la preparación del envío.",
+            "As imagens mostram a alimentação de matérias-primas, o acabamento de rolos, a inspeção de espessura e a preparação para envio.",
+            "На фотографиях показаны подача сырья, отделка рулонов, контроль толщины и подготовка к отгрузке."
           )}
         />
         <div className="mx-auto mt-12 grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -2057,7 +2592,28 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                           "AGMセパレーターの梱包と出荷"
                         ]
                       ]
-                : [
+                    : lang === "es"
+                      ? [
+                          ["Alimentación de materia prima", "La materia prima preparada entra al proceso según el plan de producción.", "/images/evidence/factory-raw-material-feed-01.webp", "Alimentación de materia prima para separadores AGM"],
+                          ["Acabado de rollos", "Los rollos pasan por bobinado, corte y ajuste de especificaciones.", "/images/evidence/factory-roll-finishing-01.webp", "Acabado de rollos de separador AGM"],
+                          ["Inspección de espesor", "El control confirma las dimensiones frente a los requisitos acordados.", "/images/evidence/quality-thickness-test-01.webp", "Inspección de espesor del separador AGM"],
+                          ["Embalaje y envío", "Los rollos o láminas se embalan en el formato acordado y se preparan en pallets.", "/images/evidence/shipping-pallet-01.webp", "Embalaje y envío de separadores AGM"]
+                        ]
+                      : lang === "pt"
+                        ? [
+                            ["Alimentação de matéria-prima", "A matéria-prima preparada entra no processo conforme o plano de produção.", "/images/evidence/factory-raw-material-feed-01.webp", "Alimentação de matéria-prima para separadores AGM"],
+                            ["Acabamento de rolos", "Os rolos passam por bobinamento, corte e ajuste de especificações.", "/images/evidence/factory-roll-finishing-01.webp", "Acabamento de rolos de separador AGM"],
+                            ["Inspeção de espessura", "O controle confirma as dimensões conforme os requisitos acordados.", "/images/evidence/quality-thickness-test-01.webp", "Inspeção de espessura do separador AGM"],
+                            ["Embalagem e envio", "Rolos ou folhas são embalados no formato acordado e preparados em pallets.", "/images/evidence/shipping-pallet-01.webp", "Embalagem e envio de separadores AGM"]
+                          ]
+                        : lang === "ru"
+                          ? [
+                              ["Подача сырья", "Подготовленное сырье поступает в процесс согласно производственному плану.", "/images/evidence/factory-raw-material-feed-01.webp", "Подача сырья для AGM-сепараторов"],
+                              ["Отделка рулонов", "Готовые рулоны проходят намотку, резку и обработку под спецификацию.", "/images/evidence/factory-roll-finishing-01.webp", "Отделка рулонов AGM-сепаратора"],
+                              ["Контроль толщины", "Проверка подтверждает размеры по согласованным требованиям.", "/images/evidence/quality-thickness-test-01.webp", "Контроль толщины AGM-сепаратора"],
+                              ["Упаковка и отгрузка", "Рулоны или листы упаковываются в согласованном формате и готовятся к отправке на паллетах.", "/images/evidence/shipping-pallet-01.webp", "Упаковка и отгрузка AGM-сепараторов"]
+                            ]
+                          : [
                   [
                     "Raw material feed",
                     "Prepared raw materials enter the manufacturing workflow according to the production plan.",
@@ -2082,7 +2638,7 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                     "/images/evidence/shipping-pallet-01.webp",
                     "AGM separator packing and shipment"
                   ]
-                ]
+                            ]
           ).map(([title, text, src, alt]) => (
             <article
               key={title}
@@ -2242,6 +2798,12 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                     ? "AGM 분리막 샘플 및 사양 검토"
                     : lang === "ja"
                       ? "AGMセパレーターのサンプル・仕様確認"
+                      : lang === "es"
+                        ? "Muestra de separador AGM y revisión de especificaciones"
+                        : lang === "pt"
+                          ? "Amostra de separador AGM e análise de especificações"
+                          : lang === "ru"
+                            ? "Образец AGM-сепаратора и проверка характеристик"
                   : "AGM separator sample and specification match"
             }
             messagePlaceholder={t.form.placeholders.message}
@@ -2381,8 +2943,41 @@ function QuickContactDock({ lang }: { lang: SiteLocale }) {
                 openWechat: "WeChat QRコードを表示",
                 copyEmail: "メールをコピー",
                 backTop: "ページ上部へ",
-                copied: "コピーしました"
+              copied: "コピーしました"
               }
+            : lang === "es"
+              ? {
+                  phone: "Teléfono",
+                  wechat: "WeChat",
+                  email: "Correo",
+                  copyPhone: "Copiar teléfono",
+                  openWechat: "Ver código QR de WeChat",
+                  copyEmail: "Copiar correo",
+                  backTop: "Volver arriba",
+                  copied: "Copiado"
+                }
+              : lang === "pt"
+                ? {
+                    phone: "Telefone",
+                    wechat: "WeChat",
+                    email: "E-mail",
+                    copyPhone: "Copiar telefone",
+                    openWechat: "Ver QR do WeChat",
+                    copyEmail: "Copiar e-mail",
+                    backTop: "Voltar ao topo",
+                    copied: "Copiado"
+                  }
+                : lang === "ru"
+                  ? {
+                      phone: "Телефон",
+                      wechat: "WeChat",
+                      email: "E-mail",
+                      copyPhone: "Копировать телефон",
+                      openWechat: "Показать QR-код WeChat",
+                      copyEmail: "Копировать e-mail",
+                      backTop: "Наверх",
+                      copied: "Скопировано"
+                    }
         : {
           phone: "TEL",
           wechat: "WeChat",
@@ -2516,6 +3111,27 @@ function CertificationBanner({ lang }: { lang: SiteLocale }) {
                 item: "認証資料",
                 counter: "/"
               }
+            : lang === "es"
+              ? {
+                  previous: "Documento anterior",
+                  next: "Documento siguiente",
+                  item: "Documento de certificación",
+                  counter: "de"
+                }
+              : lang === "pt"
+                ? {
+                    previous: "Documento anterior",
+                    next: "Próximo documento",
+                    item: "Documento de certificação",
+                    counter: "de"
+                  }
+                : lang === "ru"
+                  ? {
+                      previous: "Предыдущий документ",
+                      next: "Следующий документ",
+                      item: "Сертификационный документ",
+                      counter: "из"
+                    }
         : {
           previous: "Previous qualification material",
           next: "Next qualification material",
@@ -2608,7 +3224,10 @@ function CopyContactButton({
     "已复制",
     "Đã sao chép",
     "복사됨",
-    "コピーしました"
+    "コピーしました",
+    "Copiado",
+    "Copiado",
+    "Скопировано"
   );
 
   async function copyValue() {

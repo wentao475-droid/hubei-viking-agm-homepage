@@ -1,12 +1,15 @@
 export type Lang = "en" | "zh";
-export type SiteLocale = Lang | "vi" | "ko" | "ja";
+export type SiteLocale = Lang | "vi" | "ko" | "ja" | "es" | "pt" | "ru";
 
 export const localeHomePaths: Record<SiteLocale, string> = {
   en: "/",
   zh: "/zh/",
   vi: "/vi/",
   ko: "/ko/",
-  ja: "/ja/"
+  ja: "/ja/",
+  es: "/es/",
+  pt: "/pt/",
+  ru: "/ru/"
 };
 
 export const localizedRouteGroups = [
@@ -16,7 +19,10 @@ export const localizedRouteGroups = [
     zh: "/zh/products/agm-separator/",
     vi: "/vi/products/agm-separator/",
     ko: "/ko/products/agm-separator/",
-    ja: "/ja/products/agm-separator/"
+    ja: "/ja/products/agm-separator/",
+    es: "/es/products/agm-separator/",
+    pt: "/pt/products/agm-separator/",
+    ru: "/ru/products/agm-separator/"
   },
   {
     en: "/applications/agm-separator-for-motorcycle-battery/",
@@ -28,7 +34,10 @@ export const localizedRouteGroups = [
     zh: "/zh/request-agm-separator-sample/",
     vi: "/vi/request-agm-separator-sample/",
     ko: "/ko/request-agm-separator-sample/",
-    ja: "/ja/request-agm-separator-sample/"
+    ja: "/ja/request-agm-separator-sample/",
+    es: "/es/request-agm-separator-sample/",
+    pt: "/pt/request-agm-separator-sample/",
+    ru: "/ru/request-agm-separator-sample/"
   }
 ] satisfies Array<Partial<Record<SiteLocale, string>>>;
 
