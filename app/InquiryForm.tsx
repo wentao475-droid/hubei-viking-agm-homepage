@@ -170,6 +170,106 @@ const copy = {
     email: "Gửi email",
     phone: "Gọi điện hoặc nhắn tin",
     subject: "Yêu cầu mẫu và đối chiếu thông số tấm ngăn AGM - Viking AGM"
+  },
+  ko: {
+    fields: {
+      name: "이름",
+      contact: "이메일 / WhatsApp / 전화번호",
+      company: "회사명",
+      country: "국가 / 지역",
+      application: "배터리 적용 분야",
+      interestedProduct: "제품 형태",
+      message: "사양 또는 샘플 요청 사항"
+    },
+    placeholders: {
+      name: "이름을 입력해 주세요",
+      contact: "이메일, WhatsApp 또는 전화번호",
+      company: "회사명 (선택)",
+      country: "국가 또는 지역 (선택)",
+      application: "배터리 적용 분야 선택 (선택)",
+      interestedProduct: "제품 형태 선택 (선택)",
+      message: "선택: 두께, 폭, 시트 규격, 수량, 샘플 또는 시험 요구사항"
+    },
+    options: {
+      applications: [
+        ["UPS / standby power", "UPS / 비상 전원"],
+        ["Energy storage battery", "에너지 저장 배터리"],
+        ["Motorcycle battery", "오토바이 시동 배터리"],
+        ["Automotive starting battery", "자동차 시동 배터리"],
+        ["Telecom backup power", "통신 백업 전원"],
+        ["E-bike battery", "전기 이륜차 배터리"],
+        ["Other VRLA lead-acid battery", "기타 VRLA 납축전지"],
+        ["Not sure", "미정"]
+      ],
+      productFormats: [
+        ["AGM separator rolls", "AGM 분리막 롤"],
+        ["AGM separator sheets", "AGM 분리막 시트"],
+        ["Rolls and sheets", "롤 및 시트"],
+        ["Not sure", "미정"]
+      ]
+    },
+    submit: "샘플 및 사양 검토 요청",
+    submitting: "전송 중...",
+    required: "이름과 하나 이상의 연락처를 입력해 주세요.",
+    success:
+      "요청이 접수되었습니다. 샘플 및 사양 확인을 위해 담당자가 연락드리겠습니다.",
+    failure:
+      "온라인 양식을 전송할 수 없습니다. 이메일 또는 전화로 직접 문의해 주세요.",
+    emailFallback:
+      "이메일 프로그램이 열렸습니다. 준비된 이메일을 전송해 요청을 완료해 주세요.",
+    email: "이메일 보내기",
+    phone: "전화 또는 메시지",
+    subject: "AGM 분리막 샘플 및 사양 검토 요청 - Viking AGM"
+  },
+  ja: {
+    fields: {
+      name: "お名前",
+      contact: "メール / WhatsApp / 電話番号",
+      company: "会社名",
+      country: "国・地域",
+      application: "バッテリー用途",
+      interestedProduct: "製品形状",
+      message: "仕様・サンプルに関するご要望"
+    },
+    placeholders: {
+      name: "お名前を入力してください",
+      contact: "メール、WhatsAppまたは電話番号",
+      company: "会社名（任意）",
+      country: "国または地域（任意）",
+      application: "バッテリー用途を選択（任意）",
+      interestedProduct: "製品形状を選択（任意）",
+      message: "任意：厚さ、幅、シート寸法、数量、サンプル・試験要件"
+    },
+    options: {
+      applications: [
+        ["UPS / standby power", "UPS / 非常用電源"],
+        ["Energy storage battery", "蓄電池"],
+        ["Motorcycle battery", "二輪車始動用バッテリー"],
+        ["Automotive starting battery", "自動車始動用バッテリー"],
+        ["Telecom backup power", "通信バックアップ電源"],
+        ["E-bike battery", "電動二輪車用バッテリー"],
+        ["Other VRLA lead-acid battery", "その他のVRLA鉛蓄電池"],
+        ["Not sure", "未定"]
+      ],
+      productFormats: [
+        ["AGM separator rolls", "AGMセパレーター ロール"],
+        ["AGM separator sheets", "AGMセパレーター シート"],
+        ["Rolls and sheets", "ロール・シート"],
+        ["Not sure", "未定"]
+      ]
+    },
+    submit: "サンプル・仕様確認を依頼",
+    submitting: "送信中...",
+    required: "お名前と1つ以上の連絡先を入力してください。",
+    success:
+      "ご依頼を受け付けました。サンプルと仕様確認のため担当者よりご連絡します。",
+    failure:
+      "オンラインフォームを送信できませんでした。メールまたは電話で直接お問い合わせください。",
+    emailFallback:
+      "メールアプリを開きました。作成済みのメールを送信して依頼を完了してください。",
+    email: "メールを送る",
+    phone: "電話・メッセージ",
+    subject: "AGMセパレーターのサンプル・仕様確認依頼 - Viking AGM"
   }
 } as const;
 

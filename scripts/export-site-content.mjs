@@ -150,7 +150,9 @@ function collectConstants(path, names) {
 const home = collectConstants("app/VikingHome.tsx", ["copy"]).copy;
 const productConstants = collectConstants("app/ProductPage.tsx", [
   "content",
-  "viContent"
+  "viContent",
+  "koContent",
+  "jaContent"
 ]);
 const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "articleCopy",
@@ -188,6 +190,18 @@ for (const [page, value] of Object.entries(productConstants.viContent)) {
   products[page] = {
     ...products[page],
     vi: value
+  };
+}
+for (const [page, value] of Object.entries(productConstants.koContent)) {
+  products[page] = {
+    ...products[page],
+    ko: value
+  };
+}
+for (const [page, value] of Object.entries(productConstants.jaContent)) {
+  products[page] = {
+    ...products[page],
+    ja: value
   };
 }
 

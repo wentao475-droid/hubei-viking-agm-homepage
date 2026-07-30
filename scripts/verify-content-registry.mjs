@@ -118,12 +118,46 @@ for (const page of vietnamesePages) {
   );
 }
 
+const koreanJapanesePages = ["ko", "ja"].flatMap((locale) => [
+  {
+    key: `home.${locale}`,
+    route: `app/${locale}/page.tsx`,
+    path: `/${locale}/`,
+    content: content.home?.[locale],
+    seo: content.seo?.home?.[locale]
+  },
+  {
+    key: `agmSeparator.${locale}`,
+    route: `app/${locale}/products/agm-separator/page.tsx`,
+    path: `/${locale}/products/agm-separator/`,
+    content: content.products?.agmSeparator?.[locale],
+    seo: content.seo?.agmSeparator?.[locale]
+  },
+  {
+    key: `sampleRequest.${locale}`,
+    route: `app/${locale}/request-agm-separator-sample/page.tsx`,
+    path: `/${locale}/request-agm-separator-sample/`,
+    content: content.home?.[locale],
+    seo: content.seo?.sampleRequest?.[locale]
+  }
+]);
+
+for (const page of koreanJapanesePages) {
+  check(Boolean(page.content), `${page.key} has localized page content`);
+  check(Boolean(page.seo), `${page.key} has localized SEO content`);
+  check(existsSync(join(root, page.route)), `${page.key} has a route`);
+  check(
+    sitemapSource.includes(`"${page.path}"`),
+    `${page.key} is registered in the sitemap`
+  );
+}
+
 if (failed) {
   process.exit(1);
 }
 
 console.log(
-  `PASS content registry is complete for ${articles.length} bilingual articles and ${vietnamesePages.length} Vietnamese pages`
+  `PASS content registry is complete for ${articles.length} bilingual articles, ${vietnamesePages.length} Vietnamese pages and ${koreanJapanesePages.length} Korean/Japanese pages`
 );
 
 function check(condition, message) {

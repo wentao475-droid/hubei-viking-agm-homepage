@@ -7,25 +7,31 @@ const pages = [
     en: "/",
     zh: "/zh/",
     vi: "/vi/",
+    ko: "/ko/",
+    ja: "/ja/",
     priority: "1.0",
     changefreq: "weekly",
-    lastmod: "2026-07-28"
+    lastmod: "2026-07-29"
   },
   {
     en: "/products/agm-separator/",
     zh: "/zh/products/agm-separator/",
     vi: "/vi/products/agm-separator/",
+    ko: "/ko/products/agm-separator/",
+    ja: "/ja/products/agm-separator/",
     priority: "0.9",
     changefreq: "weekly",
-    lastmod: "2026-07-28"
+    lastmod: "2026-07-29"
   },
   {
     en: "/request-agm-separator-sample/",
     zh: "/zh/request-agm-separator-sample/",
     vi: "/vi/request-agm-separator-sample/",
+    ko: "/ko/request-agm-separator-sample/",
+    ja: "/ja/request-agm-separator-sample/",
     priority: "0.9",
     changefreq: "weekly",
-    lastmod: "2026-07-28"
+    lastmod: "2026-07-29"
   },
   {
     en: "/resources/",
@@ -150,19 +156,27 @@ function urlEntry(path, alternate) {
   const viAlternate = alternate.vi
     ? `\n    <xhtml:link rel="alternate" hreflang="vi-VN" href="${absolute(alternate.vi)}" />`
     : "";
+  const koAlternate = alternate.ko
+    ? `\n    <xhtml:link rel="alternate" hreflang="ko-KR" href="${absolute(alternate.ko)}" />`
+    : "";
+  const jaAlternate = alternate.ja
+    ? `\n    <xhtml:link rel="alternate" hreflang="ja-JP" href="${absolute(alternate.ja)}" />`
+    : "";
   return `  <url>
     <loc>${absolute(path)}</loc>
     <lastmod>${alternate.lastmod}</lastmod>
     <changefreq>${alternate.changefreq}</changefreq>
     <priority>${alternate.priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${absolute(alternate.en)}" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="${absolute(alternate.zh)}" />${viAlternate}
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="${absolute(alternate.zh)}" />${viAlternate}${koAlternate}${jaAlternate}
     <xhtml:link rel="alternate" hreflang="x-default" href="${absolute(alternate.en)}" />
   </url>`;
 }
 
 const entries = pages.flatMap((page) =>
-  [page.en, page.zh, page.vi].filter(Boolean).map((path) => urlEntry(path, page))
+  [page.en, page.zh, page.vi, page.ko, page.ja]
+    .filter(Boolean)
+    .map((path) => urlEntry(path, page))
 );
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

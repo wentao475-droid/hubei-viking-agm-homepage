@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import type { SiteLocale } from "./locales";
+import type { Lang } from "./locales";
+
+type ApplicationsLocale = Lang | "vi";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -95,7 +97,7 @@ export function ApplicationsNavDropdown({
   lang,
   label
 }: {
-  lang: SiteLocale;
+  lang: ApplicationsLocale;
   label: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -165,7 +167,7 @@ export function ApplicationsNavMobileGroup({
   label,
   onNavigate
 }: {
-  lang: SiteLocale;
+  lang: ApplicationsLocale;
   label: string;
   onNavigate?: () => void;
 }) {

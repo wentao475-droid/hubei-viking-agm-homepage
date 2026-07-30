@@ -126,6 +126,46 @@ const sharedMessages = {
       company: "Tên công ty",
       interestedProduct: "Tấm ngăn AGM dạng cuộn, dạng tấm hoặc chưa xác định"
     }
+  },
+  ko: {
+    copied: "복사됨",
+    copyPhone: "전화번호 복사",
+    copyEmail: "이메일 주소 복사",
+    openWechat: "WeChat QR 코드 보기",
+    backToTop: "맨 위로",
+    fields: {
+      name: "이름",
+      contact: "이메일 / WhatsApp / 전화번호",
+      company: "회사명",
+      interestedProduct: "관심 제품",
+      message: "추가 요청사항"
+    },
+    placeholders: {
+      name: "이름을 입력해 주세요",
+      contact: "이메일, WhatsApp 또는 전화번호",
+      company: "회사명",
+      interestedProduct: "AGM 분리막 롤, 시트 또는 미정"
+    }
+  },
+  ja: {
+    copied: "コピーしました",
+    copyPhone: "電話番号をコピー",
+    copyEmail: "メールアドレスをコピー",
+    openWechat: "WeChat QRコードを表示",
+    backToTop: "ページ上部へ",
+    fields: {
+      name: "お名前",
+      contact: "メール / WhatsApp / 電話番号",
+      company: "会社名",
+      interestedProduct: "ご希望の製品",
+      message: "追加情報"
+    },
+    placeholders: {
+      name: "お名前を入力してください",
+      contact: "メール、WhatsAppまたは電話番号",
+      company: "会社名",
+      interestedProduct: "AGMセパレーターのロール、シート、または未定"
+    }
   }
 } as const;
 
@@ -150,6 +190,14 @@ const commonRelated = {
       "/vi/applications/agm-separator-for-motorcycle-battery/"
     ],
     ["Yêu cầu mẫu", "/vi/request-agm-separator-sample/"]
+  ] as LinkItem[],
+  ko: [
+    ["AGM 분리막 제품", "/ko/products/agm-separator/"],
+    ["샘플 및 사양 검토 요청", "/ko/request-agm-separator-sample/"]
+  ] as LinkItem[],
+  ja: [
+    ["AGMセパレーター製品", "/ja/products/agm-separator/"],
+    ["サンプル・仕様確認依頼", "/ja/request-agm-separator-sample/"]
   ] as LinkItem[]
 };
 
@@ -206,6 +254,42 @@ const leadCaptureCopy = {
     emailFallback:
       "Ứng dụng email đã được mở với thông tin liên hệ. Vui lòng gửi email để hoàn tất yêu cầu.",
     ...productFaqCopy.vi
+  },
+  ko: {
+    heroPrompt:
+      "이메일, WhatsApp 또는 전화번호를 남겨 주세요. 적합한 AGM 분리막 사양을 함께 검토합니다.",
+    formText:
+      "연락처를 먼저 남겨 주세요. 두께, 폭, 수량 및 적용 분야를 후속 확인합니다.",
+    checklist: [
+      "이름과 연락처만으로 시작할 수 있습니다",
+      "적합한 사양 검토를 지원합니다",
+      "두께, 폭 및 수량은 후속 협의가 가능합니다"
+    ],
+    messagePlaceholder:
+      "선택: 배터리 적용 분야, 예상 수량, 샘플 또는 기술 문의",
+    required: "이름과 연락처를 입력해 주세요.",
+    success: "감사합니다. AGM 분리막 요구사항 확인을 위해 연락드리겠습니다.",
+    emailFallback:
+      "이메일 프로그램이 열렸습니다. 준비된 이메일을 전송해 문의를 완료해 주세요.",
+    ...productFaqCopy.ko
+  },
+  ja: {
+    heroPrompt:
+      "メール、WhatsAppまたは電話番号をお知らせください。適切なAGMセパレーター仕様を確認します。",
+    formText:
+      "まずは連絡先をお知らせください。厚さ、幅、数量、用途をその後確認します。",
+    checklist: [
+      "お名前と連絡先だけでも開始できます",
+      "適切な仕様の確認をサポートします",
+      "厚さ、幅、数量はその後協議できます"
+    ],
+    messagePlaceholder:
+      "任意：バッテリー用途、予定数量、サンプル・技術に関するご質問",
+    required: "お名前と連絡先を入力してください。",
+    success: "ありがとうございます。AGMセパレーター要件の確認のためご連絡します。",
+    emailFallback:
+      "メールアプリを開きました。作成済みのメールを送信してお問い合わせを完了してください。",
+    ...productFaqCopy.ja
   }
 } as const;
 
@@ -227,6 +311,18 @@ const footerCopy = {
       "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
     wechat: "Tài khoản WeChat chính thức",
     mobile: "Website di động"
+  },
+  ko: {
+    description:
+      "납축전지 제조업체와 무역 파트너를 위한 AGM 유리섬유 분리막 제조업체.",
+    wechat: "공식 WeChat 계정",
+    mobile: "모바일 웹사이트"
+  },
+  ja: {
+    description:
+      "鉛蓄電池メーカーと商社向けのAGMガラス繊維セパレーター製造会社。",
+    wechat: "公式WeChatアカウント",
+    mobile: "モバイルサイト"
   }
 } as const;
 
@@ -2638,6 +2734,186 @@ const viContent: Partial<Record<ProductPageKind, ProductContent>> = {
   }
 };
 
+const koContent: Partial<Record<ProductPageKind, ProductContent>> = {
+  agmSeparator: {
+    homePath: "/ko/",
+    languagePath: "/",
+    quote: "샘플 요청",
+    hero: {
+      eyebrow: "AGM 분리막 제품",
+      title: "VRLA 납축전지용 유리섬유 AGM 분리막",
+      subtitle:
+        "VRLA 납축전지 제조업체와 무역 파트너를 위한 롤 및 시트 형태의 AGM 분리막.",
+      primary: "AGM 분리막 샘플 요청",
+      secondary: "사양 정보 보내기",
+      proof: ["롤 및 시트 협의", "고객 요구사항 검토", "공장과 직접 소통"],
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "완성된 AGM 유리섬유 분리막 롤",
+        width: 900,
+        height: 675
+      }
+    },
+    overview: {
+      eyebrow: "제품 개요",
+      title: "배터리 설계와 성능에 연결되는 분리막 소재",
+      paragraphs: [
+        "AGM 분리막은 VRLA 납축전지에 사용되는 유리섬유 소재입니다. 양극과 음극을 분리하면서 전해액을 배터리 구조 내부에 유지합니다.",
+        "배터리 제조업체의 분리막 선택은 극판 설계, 전해액 유지, 내부 저항, 조립 공정 및 장기 성능과 관련됩니다.",
+        "롤과 시트 형태를 공급합니다. 두께, 폭, 시트 크기와 포장은 배터리 설계 및 생산 공정에 따라 협의할 수 있습니다."
+      ]
+    },
+    parameters: {
+      eyebrow: "주요 사양",
+      title: "구매자가 일반적으로 확인하는 항목",
+      text:
+        "VRLA 배터리용 AGM 분리막은 두께, 폭, 평량, 산 흡수 성능, 전기 저항과 취급 강도를 함께 검토해야 합니다.",
+      items: [
+        ["두께", "극판 간격, 압축 조건과 조립 요구사항을 함께 검토합니다."],
+        ["폭 또는 시트 크기", "롤 폭, 슬리팅 방향 또는 사전 절단 치수를 협의할 수 있습니다."],
+        ["평량", "소재 구조, 전해액 유지 성능과 시험 방법을 함께 검토합니다."],
+        ["산 흡수 성능", "적용 분야, 전해액 유지 요구와 합의된 시험 조건에 따라 확인합니다."],
+        ["전기 저항", "배터리 성능 목표 및 시험 조건과 함께 검토합니다."],
+        ["기공률 및 강도", "가공, 절단 및 조립 요구사항에 따라 확인할 수 있습니다."]
+      ]
+    },
+    forms: {
+      eyebrow: "제품 형태",
+      title: "롤 및 시트 사양 협의",
+      items: [
+        ["AGM 분리막 롤", "두께, 폭, 롤 지름, 포장 및 생산 계획을 협의할 수 있습니다.", "/images/viking-finished-separator-roll-900.webp", "완성된 AGM 분리막 롤", 900, 675],
+        ["AGM 분리막 시트", "사전 절단 시트는 샘플 평가, 사양 확인과 조립 검토를 지원합니다.", "/images/viking-separator-sheets-900.webp", "사전 절단 AGM 분리막 시트", 900, 675],
+        ["생산 공정 확인", "원료와 생산 라인 이미지를 바탕으로 제조 공정을 구체적으로 협의합니다.", "/images/evidence/factory-raw-material-feed-01.webp", "AGM 분리막 원료 투입 공정", 1200, 900],
+        ["포장 및 출하 준비", "포장 방식, 팔레트와 출하 준비를 주문 전에 검토할 수 있습니다.", "/images/evidence/shipping-pallet-01.webp", "AGM 분리막 포장 및 출하 준비", 1200, 900]
+      ]
+    },
+    applications: {
+      eyebrow: "적용 분야",
+      title: "주요 VRLA 납축전지 적용 분야",
+      items: ["UPS 배터리", "통신 백업 전원", "오토바이 배터리", "자동차 시동 배터리", "에너지 저장 배터리"]
+    },
+    quality: {
+      eyebrow: "품질 확인",
+      title: "합의된 요구사항에 따른 검사",
+      text: "시험 항목과 허용 기준은 생산 및 출하 전에 양측이 확인해야 합니다.",
+      cards: [
+        ["원료 및 공정 검사", "주문 협의 시 소재 상태와 공정 관리 항목을 검토할 수 있습니다."],
+        ["완제품 검사", "합의된 항목에 따라 완제품 사양을 검사합니다."],
+        ["요구사항 확인", "생산 전에 시험 방법과 허용 기준을 확인합니다."]
+      ]
+    },
+    related: {
+      eyebrow: "관련 페이지",
+      title: "제품 및 샘플 요청 보기",
+      items: commonRelated.ko
+    },
+    inquiry: {
+      eyebrow: "문의",
+      title: "AGM 분리막 요구사항을 보내 주세요",
+      text: "새 배터리 샘플을 개발하거나 공급업체를 평가 중이라면 두께, 폭, 롤·시트 형태와 적용 분야를 알려 주세요.",
+      checklist: ["목표 두께와 폭", "롤 또는 시트 크기", "배터리 적용 분야와 모델", "수량 및 샘플 요구", "시험 또는 포장 요구사항"],
+      placeholder: "두께, 폭, 롤 또는 시트 형태, 수량, 샘플 및 시험 요구사항",
+      submit: "요구사항 보내기",
+      submitting: "전송 중...",
+      required: "이름과 연락처를 입력해 주세요.",
+      success: "감사합니다. 내용을 검토한 후 연락드리겠습니다.",
+      failure: "현재 요청을 전송할 수 없습니다. 잠시 후 다시 시도해 주세요.",
+      emailFallback: "이메일 프로그램이 열렸습니다. 준비된 이메일을 전송해 주세요."
+    },
+    footer: footerCopy.ko
+  }
+};
+
+const jaContent: Partial<Record<ProductPageKind, ProductContent>> = {
+  agmSeparator: {
+    homePath: "/ja/",
+    languagePath: "/",
+    quote: "サンプル依頼",
+    hero: {
+      eyebrow: "AGMセパレーター製品",
+      title: "VRLA鉛蓄電池用ガラス繊維AGMセパレーター",
+      subtitle:
+        "VRLA鉛蓄電池メーカーと商社向けのロール・シート形状AGMセパレーター。",
+      primary: "AGMセパレーターのサンプル依頼",
+      secondary: "仕様情報を送る",
+      proof: ["ロール・シート対応", "顧客要件の確認", "工場との直接連絡"],
+      image: {
+        src: "/images/viking-finished-separator-roll-900.webp",
+        alt: "完成したAGMガラス繊維セパレーターロール",
+        width: 900,
+        height: 675
+      }
+    },
+    overview: {
+      eyebrow: "製品概要",
+      title: "バッテリー設計と性能に関わるセパレーター材料",
+      paragraphs: [
+        "AGMセパレーターはVRLA鉛蓄電池に使用するガラス繊維材料です。正極と負極を隔離しながら、電解液をバッテリー内部に保持します。",
+        "セパレーター選定は極板設計、電解液保持、内部抵抗、組立工程、長期性能に関係します。",
+        "ロールとシート形状を供給します。厚さ、幅、シート寸法、梱包はバッテリー設計と生産工程に応じて協議できます。"
+      ]
+    },
+    parameters: {
+      eyebrow: "主要仕様",
+      title: "購買時に確認される主な項目",
+      text:
+        "VRLAバッテリー用AGMセパレーターは、厚さ、幅、坪量、吸液性能、電気抵抗、取扱強度をあわせて確認します。",
+      items: [
+        ["厚さ", "極板間隔、圧縮条件、組立要件とあわせて確認します。"],
+        ["幅・シート寸法", "ロール幅、スリット方向、カット済み寸法を協議できます。"],
+        ["坪量", "材料構造、電解液保持性能、試験方法とあわせて評価します。"],
+        ["吸液性能", "用途、電解液保持要件、合意した試験条件に基づいて確認します。"],
+        ["電気抵抗", "バッテリー性能目標と試験条件にあわせて確認します。"],
+        ["空隙率・強度", "加工、裁断、組立要件に応じて確認できます。"]
+      ]
+    },
+    forms: {
+      eyebrow: "製品形状",
+      title: "ロール・シート仕様に対応",
+      items: [
+        ["AGMセパレーター ロール", "厚さ、幅、ロール径、梱包、生産計画を協議できます。", "/images/viking-finished-separator-roll-900.webp", "完成したAGMセパレーターロール", 900, 675],
+        ["AGMセパレーター シート", "カット済みシートはサンプル評価、仕様確認、組立確認に使用できます。", "/images/viking-separator-sheets-900.webp", "カット済みAGMセパレーターシート", 900, 675],
+        ["生産工程の確認", "原料と生産ラインの写真をもとに製造工程を具体的に確認できます。", "/images/evidence/factory-raw-material-feed-01.webp", "AGMセパレーター原料の投入工程", 1200, 900],
+        ["梱包・出荷準備", "梱包方法、パレット、出荷準備を注文前に確認できます。", "/images/evidence/shipping-pallet-01.webp", "AGMセパレーターの梱包と出荷準備", 1200, 900]
+      ]
+    },
+    applications: {
+      eyebrow: "用途",
+      title: "主なVRLA鉛蓄電池用途",
+      items: ["UPSバッテリー", "通信バックアップ電源", "二輪車用バッテリー", "自動車始動用バッテリー", "蓄電池"]
+    },
+    quality: {
+      eyebrow: "品質確認",
+      title: "合意した要件に基づく検査",
+      text: "試験項目と受入基準は生産・出荷前に双方で確認します。",
+      cards: [
+        ["原料・工程検査", "受注協議時に材料状態と工程管理項目を確認できます。"],
+        ["完成品検査", "合意した項目に基づいて完成品仕様を検査します。"],
+        ["要件確認", "生産前に試験方法と受入基準を確認します。"]
+      ]
+    },
+    related: {
+      eyebrow: "関連ページ",
+      title: "製品とサンプル依頼を確認",
+      items: commonRelated.ja
+    },
+    inquiry: {
+      eyebrow: "お問い合わせ",
+      title: "AGMセパレーター要件をお送りください",
+      text: "新しいバッテリーサンプルの開発やサプライヤー評価では、厚さ、幅、ロール・シート形状、用途をお知らせください。",
+      checklist: ["目標厚さ・幅", "ロールまたはシート寸法", "バッテリー用途・型式", "数量・サンプル要件", "試験・梱包要件"],
+      placeholder: "厚さ、幅、ロールまたはシート形状、数量、サンプル・試験要件",
+      submit: "要件を送信",
+      submitting: "送信中...",
+      required: "お名前と連絡先を入力してください。",
+      success: "ありがとうございます。内容を確認してご連絡します。",
+      failure: "現在リクエストを送信できません。しばらくしてから再度お試しください。",
+      emailFallback: "メールアプリを開きました。作成済みのメールを送信してください。"
+    },
+    footer: footerCopy.ja
+  }
+};
+
 function asset(path: string) {
   return `${basePath}${path}`;
 }
@@ -2646,9 +2922,19 @@ function localeText(
   lang: SiteLocale,
   en: string,
   zh: string,
-  vi: string
+  vi: string,
+  ko = en,
+  ja = en
 ) {
-  return lang === "zh" ? zh : lang === "vi" ? vi : en;
+  return lang === "zh"
+    ? zh
+    : lang === "vi"
+      ? vi
+      : lang === "ko"
+        ? ko
+        : lang === "ja"
+          ? ja
+          : en;
 }
 
 function CheckIcon({ size = 18, className = "" }: IconProps) {
@@ -2799,7 +3085,13 @@ export function ProductPage({
   page?: ProductPageKind;
 }) {
   const defaults =
-    lang === "vi" ? viContent[page] : content[page][lang as Lang];
+    lang === "vi"
+      ? viContent[page]
+      : lang === "ko"
+        ? koContent[page]
+        : lang === "ja"
+          ? jaContent[page]
+          : content[page][lang as Lang];
 
   if (!defaults) {
     throw new Error(`Missing ${lang} content for product page "${page}"`);
@@ -2814,17 +3106,29 @@ export function ProductPage({
         ? "AGM 隔板卷材"
         : lang === "vi"
           ? "Tấm ngăn AGM dạng cuộn"
+          : lang === "ko"
+            ? "AGM 분리막 롤"
+            : lang === "ja"
+              ? "AGMセパレーター ロール"
           : "AGM separator rolls"
       : page === "agmSeparatorSheets"
         ? lang === "zh"
           ? "AGM 隔板片材"
           : lang === "vi"
             ? "Tấm ngăn AGM dạng tấm"
+            : lang === "ko"
+              ? "AGM 분리막 시트"
+              : lang === "ja"
+                ? "AGMセパレーター シート"
             : "AGM separator sheets"
         : lang === "zh"
           ? "AGM 隔板样品与规格匹配"
           : lang === "vi"
             ? "Yêu cầu mẫu và đối chiếu thông số tấm ngăn AGM"
+            : lang === "ko"
+              ? "AGM 분리막 샘플 및 사양 검토"
+              : lang === "ja"
+                ? "AGMセパレーターのサンプル・仕様確認"
             : "AGM separator sample and specification match";
 
   return (
@@ -2833,7 +3137,14 @@ export function ProductPage({
         lang={lang}
         homePath={t.homePath}
         languagePath={t.languagePath}
-        quoteLabel={localeText(lang, "Request Sample", "申请样品", "Yêu cầu mẫu")}
+        quoteLabel={localeText(
+          lang,
+          "Request Sample",
+          "申请样品",
+          "Yêu cầu mẫu",
+          "샘플 요청",
+          "サンプル依頼"
+        )}
       />
 
       <section className="relative overflow-hidden pt-20">
@@ -2859,7 +3170,9 @@ export function ProductPage({
                   lang,
                   "Request a Sample & Specification Match",
                   "申请样品与规格匹配",
-                  "Yêu cầu mẫu và đối chiếu thông số"
+                  "Yêu cầu mẫu và đối chiếu thông số",
+                  "샘플 및 사양 검토 요청",
+                  "サンプル・仕様確認を依頼"
                 )}
                 <SendIcon size={18} />
               </a>
@@ -3094,19 +3407,32 @@ export function ProductPage({
                 ? "/zh/request-agm-separator-sample/"
                 : lang === "vi"
                   ? "/vi/request-agm-separator-sample/"
+                  : lang === "ko"
+                    ? "/ko/request-agm-separator-sample/"
+                    : lang === "ja"
+                      ? "/ja/request-agm-separator-sample/"
                   : "/request-agm-separator-sample/"
             )}
             className="group rounded-md border border-signal/25 bg-signal p-6 text-white shadow-sm transition hover:bg-ink"
           >
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/65">
-              {localeText(lang, "Next Step", "下一步", "Bước tiếp theo")}
+              {localeText(
+                lang,
+                "Next Step",
+                "下一步",
+                "Bước tiếp theo",
+                "다음 단계",
+                "次のステップ"
+              )}
             </p>
             <h2 className="mt-3 text-2xl font-bold">
               {localeText(
                 lang,
                 "Request a Sample & Specification Match",
                 "申请样品与规格匹配",
-                "Yêu cầu mẫu và đối chiếu thông số"
+                "Yêu cầu mẫu và đối chiếu thông số",
+                "샘플 및 사양 검토 요청",
+                "サンプル・仕様確認を依頼"
               )}
             </h2>
             <p className="mt-3 text-sm leading-7 text-white/75">
@@ -3114,7 +3440,9 @@ export function ProductPage({
                 lang,
                 "Review the information checklist, sample discussion path and production evidence.",
                 "查看需要准备的信息、样品沟通流程和真实生产检测证据。",
-                "Xem danh sách thông tin, quy trình trao đổi mẫu và bằng chứng sản xuất."
+                "Xem danh sách thông tin, quy trình trao đổi mẫu và bằng chứng sản xuất.",
+                "필요 정보, 샘플 협의 절차와 생산 근거를 확인하세요.",
+                "必要情報、サンプル協議の流れ、製造情報をご確認ください。"
               )}
             </p>
             <ArrowRight
@@ -3128,14 +3456,23 @@ export function ProductPage({
             className="group rounded-md border border-line bg-frost p-6 text-ink transition hover:border-signal hover:bg-white"
           >
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-signal">
-              {localeText(lang, "Buyer Reference", "采购资料", "Tài liệu người mua")}
+              {localeText(
+                lang,
+                "Buyer Reference",
+                "采购资料",
+                "Tài liệu người mua",
+                "구매 참고 자료",
+                "購買参考資料"
+              )}
             </p>
             <h2 className="mt-3 text-2xl font-bold">
               {localeText(
                 lang,
                 "Download the Viking AGM Capability PDF",
                 "下载维京 AGM 技术能力 PDF",
-                "Tải hồ sơ năng lực Viking AGM (EN/ZH)"
+                "Tải hồ sơ năng lực Viking AGM (EN/ZH)",
+                "Viking AGM 영문/중문 PDF 다운로드",
+                "Viking AGM英語・中国語PDFをダウンロード"
               )}
             </h2>
             <p className="mt-3 text-sm leading-7 text-steel">
@@ -3143,7 +3480,9 @@ export function ProductPage({
                 lang,
                 "A bilingual overview of product forms, application discussion, quality checks and packing.",
                 "中英文资料，包含产品形式、应用沟通、质量检查和包装说明。",
-                "Tài liệu tiếng Anh và tiếng Trung về dạng sản phẩm, ứng dụng, kiểm tra chất lượng và đóng gói."
+                "Tài liệu tiếng Anh và tiếng Trung về dạng sản phẩm, ứng dụng, kiểm tra chất lượng và đóng gói.",
+                "제품 형태, 적용 분야, 품질 검사와 포장을 소개하는 영문·중문 자료입니다.",
+                "製品形状、用途、品質検査、梱包をまとめた英語・中国語資料です。"
               )}
             </p>
             <ArrowRight
@@ -3264,7 +3603,9 @@ function Footer({
             lang,
             "All rights reserved.",
             "保留所有权利。",
-            "Bảo lưu mọi quyền."
+            "Bảo lưu mọi quyền.",
+            "모든 권리 보유.",
+            "All rights reserved."
           )}
         </div>
         <a

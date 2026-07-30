@@ -50,13 +50,29 @@ const productNavItems = {
         "Dạng cuộn và tấm cho các ứng dụng ắc quy axit-chì VRLA.",
       href: "/vi/products/agm-separator/"
     }
+  ],
+  ko: [
+    {
+      title: "VRLA 배터리용 AGM 분리막",
+      description: "VRLA 납축전지용 롤 및 시트 형태의 AGM 분리막.",
+      href: "/ko/products/agm-separator/"
+    }
+  ],
+  ja: [
+    {
+      title: "VRLAバッテリー用AGMセパレーター",
+      description: "VRLA鉛蓄電池向けのロール・シート形状に対応します。",
+      href: "/ja/products/agm-separator/"
+    }
   ]
 } as const;
 
 const productNavEyebrow = {
   en: "Product page",
   zh: "产品页面",
-  vi: "Sản phẩm"
+  vi: "Sản phẩm",
+  ko: "제품",
+  ja: "製品"
 } as const;
 
 function asset(path: string) {

@@ -49,6 +49,28 @@ const headerCopy = {
     companyName: "Công ty TNHH Công nghệ Hubei Viking",
     menuOpen: "Mở menu điều hướng",
     menuClose: "Đóng menu điều hướng"
+  },
+  ko: {
+    company: "회사",
+    products: "제품",
+    quality: "품질",
+    resources: "자료",
+    applications: "적용 분야",
+    contact: "문의",
+    companyName: "후베이 바이킹 테크놀로지 유한회사",
+    menuOpen: "내비게이션 메뉴 열기",
+    menuClose: "내비게이션 메뉴 닫기"
+  },
+  ja: {
+    company: "会社",
+    products: "製品",
+    quality: "品質",
+    resources: "資料",
+    applications: "用途",
+    contact: "お問い合わせ",
+    companyName: "湖北維京科技有限公司",
+    menuOpen: "ナビゲーションメニューを開く",
+    menuClose: "ナビゲーションメニューを閉じる"
   }
 } as const;
 
@@ -131,6 +153,8 @@ export function SiteHeader({
   const [menuOpen, setMenuOpen] = useState(false);
   const t = headerCopy[lang];
   const homeHref = asset(homePath);
+  const hasFullNavigation = lang === "en" || lang === "zh";
+  const hasApplications = hasFullNavigation || lang === "vi";
 
   const navItemsBeforeProducts = [[t.company, `${homeHref}#company`]] as const;
   const navItemsAfterResources = [[t.contact, "#contact"]] as const;
@@ -173,13 +197,15 @@ export function SiteHeader({
             </a>
           ))}
           <ProductNavDropdown lang={lang} label={t.products} />
-          {lang !== "vi" && (
+          {hasFullNavigation && (
             <>
               <QualityNavDropdown lang={lang} label={t.quality} />
               <ResourcesNavDropdown lang={lang} label={t.resources} />
             </>
           )}
-          <ApplicationsNavDropdown lang={lang} label={t.applications} />
+          {hasApplications && (
+            <ApplicationsNavDropdown lang={lang} label={t.applications} />
+          )}
           {navItemsAfterResources.map(([label, href]) => (
             <a
               key={href}
@@ -237,7 +263,7 @@ export function SiteHeader({
               label={t.products}
               onNavigate={() => setMenuOpen(false)}
             />
-            {lang !== "vi" && (
+            {hasFullNavigation && (
               <>
                 <QualityNavMobileGroup
                   lang={lang}
@@ -251,11 +277,13 @@ export function SiteHeader({
                 />
               </>
             )}
-            <ApplicationsNavMobileGroup
-              lang={lang}
-              label={t.applications}
-              onNavigate={() => setMenuOpen(false)}
-            />
+            {hasApplications && (
+              <ApplicationsNavMobileGroup
+                lang={lang}
+                label={t.applications}
+                onNavigate={() => setMenuOpen(false)}
+              />
+            )}
             {navItemsAfterResources.map(([label, href]) => (
               <a
                 key={href}

@@ -20,6 +20,16 @@ const copy = {
     heading: "Theo dõi chúng tôi",
     tiktok: "Truy cập TikTok của Viking AGM",
     linkedin: "Truy cập LinkedIn của Viking AGM"
+  },
+  ko: {
+    heading: "공식 채널",
+    tiktok: "Viking AGM TikTok 방문",
+    linkedin: "Viking AGM LinkedIn 방문"
+  },
+  ja: {
+    heading: "公式チャンネル",
+    tiktok: "Viking AGMのTikTokを見る",
+    linkedin: "Viking AGMのLinkedInを見る"
   }
 } as const;
 

@@ -1,10 +1,12 @@
 export type Lang = "en" | "zh";
-export type SiteLocale = Lang | "vi";
+export type SiteLocale = Lang | "vi" | "ko" | "ja";
 
 export const localeHomePaths: Record<SiteLocale, string> = {
   en: "/",
   zh: "/zh/",
-  vi: "/vi/"
+  vi: "/vi/",
+  ko: "/ko/",
+  ja: "/ja/"
 };
 
 export const localizedRouteGroups = [
@@ -12,7 +14,9 @@ export const localizedRouteGroups = [
   {
     en: "/products/agm-separator/",
     zh: "/zh/products/agm-separator/",
-    vi: "/vi/products/agm-separator/"
+    vi: "/vi/products/agm-separator/",
+    ko: "/ko/products/agm-separator/",
+    ja: "/ja/products/agm-separator/"
   },
   {
     en: "/applications/agm-separator-for-motorcycle-battery/",
@@ -22,9 +26,11 @@ export const localizedRouteGroups = [
   {
     en: "/request-agm-separator-sample/",
     zh: "/zh/request-agm-separator-sample/",
-    vi: "/vi/request-agm-separator-sample/"
+    vi: "/vi/request-agm-separator-sample/",
+    ko: "/ko/request-agm-separator-sample/",
+    ja: "/ja/request-agm-separator-sample/"
   }
-] satisfies Array<Record<SiteLocale, string>>;
+] satisfies Array<Partial<Record<SiteLocale, string>>>;
 
 export function languagePathsFor(
   pathname: string,
@@ -37,7 +43,10 @@ export function languagePathsFor(
   );
 
   if (exactGroup) {
-    return exactGroup;
+    return {
+      ...localeHomePaths,
+      ...exactGroup
+    };
   }
 
   const fallback = { ...localeHomePaths };

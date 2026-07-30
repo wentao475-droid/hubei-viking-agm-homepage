@@ -25,6 +25,16 @@ const localeCopy = {
     short: "VI",
     name: "Tiếng Việt",
     aria: "Ngôn ngữ hiện tại là tiếng Việt. Đổi ngôn ngữ"
+  },
+  ko: {
+    short: "KO",
+    name: "한국어",
+    aria: "현재 언어는 한국어입니다. 언어 변경"
+  },
+  ja: {
+    short: "JA",
+    name: "日本語",
+    aria: "現在の言語は日本語です。言語を変更"
   }
 } as const;
 
@@ -107,7 +117,15 @@ export function LanguageSwitcher({
                 key={locale}
                 role="menuitem"
                 href={`${basePath}${paths[locale]}`}
-                lang={locale === "zh" ? "zh-CN" : locale}
+                lang={
+                  locale === "zh"
+                    ? "zh-CN"
+                    : locale === "ko"
+                      ? "ko-KR"
+                      : locale === "ja"
+                        ? "ja-JP"
+                        : locale
+                }
                 onClick={() => setOpen(false)}
                 className="flex min-h-11 items-center gap-3 rounded-md px-3 py-2 text-sm font-semibold text-graphite transition hover:bg-frost hover:text-signal focus:bg-frost focus:text-signal focus:outline-none"
               >
@@ -146,10 +164,17 @@ function LocaleIcon({ locale }: { locale: SiteLocale }) {
     );
   }
 
+  const flagFile = {
+    zh: "cn",
+    vi: "vn",
+    ko: "kr",
+    ja: "jp"
+  }[locale];
+
   return (
     <Image
       aria-hidden="true"
-      src={`${basePath}/icons/flags/${locale === "zh" ? "cn" : "vn"}.svg`}
+      src={`${basePath}/icons/flags/${flagFile}.svg`}
       alt=""
       width={22}
       height={15}

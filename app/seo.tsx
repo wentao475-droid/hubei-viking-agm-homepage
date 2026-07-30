@@ -9,7 +9,10 @@ import {
   localizeText,
   resourceArticles
 } from "./resourceCatalog";
+import { localeHomePaths } from "./locales";
 import type { Lang, SiteLocale } from "./locales";
+
+type ApplicationLocale = Lang | "vi";
 
 export const SITE_URL = "https://www.vikingagm.com";
 const PREVIEW_IMAGE = `${SITE_URL}/images/viking-finished-separator-roll-900.webp`;
@@ -84,6 +87,46 @@ const homeSeo = {
     serviceName: "Sản xuất tấm ngăn sợi thủy tinh AGM",
     serviceDescription:
       "Cung cấp tấm ngăn AGM dạng cuộn và dạng tấm cho nhà sản xuất ắc quy chì axit, hỗ trợ xác nhận quy cách, kiểm soát chất lượng và yêu cầu đóng gói."
+  },
+  ko: {
+    path: "/ko/",
+    locale: "ko_KR",
+    language: "ko-KR",
+    siteName: "Viking AGM",
+    alternateSiteName: "Hubei Viking AGM",
+    title: "VRLA 배터리용 AGM 분리막 제조업체 | Viking AGM",
+    description:
+      "Viking AGM은 VRLA, UPS, 오토바이 및 에너지 저장용 납축전지에 사용하는 유리섬유 AGM 분리막을 롤과 시트 형태로 생산합니다. 샘플과 사양 검토를 요청하세요.",
+    keywords: [
+      "AGM 분리막",
+      "AGM 분리막 제조업체",
+      "유리섬유 AGM 분리막",
+      "VRLA 배터리 분리막",
+      "납축전지 분리막"
+    ],
+    serviceName: "유리섬유 AGM 분리막 제조",
+    serviceDescription:
+      "납축전지 제조사를 위한 롤 및 시트형 AGM 분리막을 공급하며 사양 확인, 품질 검사와 포장 요구사항 검토를 지원합니다."
+  },
+  ja: {
+    path: "/ja/",
+    locale: "ja_JP",
+    language: "ja-JP",
+    siteName: "Viking AGM",
+    alternateSiteName: "Hubei Viking AGM",
+    title: "VRLAバッテリー用AGMセパレーターメーカー | Viking AGM",
+    description:
+      "Viking AGMは、VRLA、UPS、二輪車、蓄電用途の鉛蓄電池向けガラス繊維AGMセパレーターをロール・シートで製造しています。サンプルと仕様確認をご依頼ください。",
+    keywords: [
+      "AGMセパレーター",
+      "AGMセパレーターメーカー",
+      "ガラス繊維AGMセパレーター",
+      "VRLAバッテリーセパレーター",
+      "鉛蓄電池セパレーター"
+    ],
+    serviceName: "ガラス繊維AGMセパレーター製造",
+    serviceDescription:
+      "鉛蓄電池メーカー向けにロール・シート形状のAGMセパレーターを提供し、仕様確認、品質検査、梱包要件の検討を支援します。"
   }
 } as const;
 
@@ -189,6 +232,48 @@ const sampleRequestSeo = {
     serviceDescription:
       "Xem xét yêu cầu tấm ngăn AGM dạng cuộn hoặc dạng tấm theo ứng dụng trước khi gửi mẫu, trao đổi kỹ thuật hoặc báo giá.",
     breadcrumbs: ["Trang chủ", "Yêu cầu mẫu tấm ngăn AGM"]
+  },
+  ko: {
+    path: "/ko/request-agm-separator-sample/",
+    alternatePath: "/request-agm-separator-sample/",
+    locale: "ko_KR",
+    language: "ko-KR",
+    siteName: "Viking AGM",
+    title: "AGM 분리막 샘플 및 사양 검토 요청 | Viking AGM",
+    description:
+      "VRLA, UPS 및 오토바이 배터리용 AGM 분리막 샘플을 요청하세요. 적용 분야, 두께, 폭, 롤 또는 시트 요구사항을 보내 주시면 사양을 검토합니다.",
+    keywords: [
+      "AGM 분리막 샘플",
+      "AGM 분리막 사양 검토",
+      "VRLA 배터리 분리막 샘플",
+      "AGM 분리막 롤",
+      "AGM 분리막 시트"
+    ],
+    pageName: "AGM 분리막 샘플 및 사양 검토",
+    serviceDescription:
+      "샘플, 기술 검토 또는 견적 상담 전에 배터리 적용 분야에 맞춰 AGM 분리막 롤 또는 시트 요구사항을 검토합니다.",
+    breadcrumbs: ["홈", "AGM 분리막 샘플 요청"]
+  },
+  ja: {
+    path: "/ja/request-agm-separator-sample/",
+    alternatePath: "/request-agm-separator-sample/",
+    locale: "ja_JP",
+    language: "ja-JP",
+    siteName: "Viking AGM",
+    title: "AGMセパレーターのサンプル・仕様確認依頼 | Viking AGM",
+    description:
+      "VRLA、UPS、二輪車用バッテリー向けAGMセパレーターのサンプルをご依頼いただけます。用途、厚さ、幅、ロールまたはシートの要件をご共有ください。",
+    keywords: [
+      "AGMセパレーターサンプル",
+      "AGMセパレーター仕様確認",
+      "VRLAバッテリーセパレーターサンプル",
+      "AGMセパレーターロール",
+      "AGMセパレーターシート"
+    ],
+    pageName: "AGMセパレーターのサンプル・仕様確認",
+    serviceDescription:
+      "サンプル、技術確認、見積相談の前に、バッテリー用途に基づいてAGMセパレーターのロールまたはシート要件を確認します。",
+    breadcrumbs: ["ホーム", "AGMセパレーターのサンプル依頼"]
   }
 } as const;
 
@@ -255,6 +340,48 @@ const agmSeparatorSeo = {
     serviceDescription:
       "Tấm ngăn sợi thủy tinh AGM dạng cuộn và dạng tấm cho ắc quy chì axit VRLA, hỗ trợ đối chiếu thông số theo yêu cầu của khách hàng.",
     breadcrumbs: ["Trang chủ", "Sản phẩm", "Tấm ngăn AGM"]
+  },
+  ko: {
+    path: "/ko/products/agm-separator/",
+    alternatePath: "/products/agm-separator/",
+    locale: "ko_KR",
+    language: "ko-KR",
+    siteName: "Viking AGM",
+    title: "VRLA 납축전지용 유리섬유 AGM 분리막 | Viking AGM",
+    description:
+      "VRLA 납축전지용 유리섬유 AGM 분리막을 롤과 시트 형태로 제공합니다. 두께, 폭, 배터리 적용 분야를 보내 주시면 사양을 검토합니다.",
+    keywords: [
+      "AGM 분리막",
+      "AGM 배터리 분리막",
+      "유리섬유 AGM 분리막",
+      "VRLA 배터리 분리막",
+      "AGM 분리막 제조업체"
+    ],
+    productName: "VRLA 납축전지용 AGM 분리막",
+    serviceDescription:
+      "고객 요구사항 검토를 위한 롤 및 시트 형태의 VRLA 납축전지용 유리섬유 AGM 분리막입니다.",
+    breadcrumbs: ["홈", "제품", "AGM 분리막"]
+  },
+  ja: {
+    path: "/ja/products/agm-separator/",
+    alternatePath: "/products/agm-separator/",
+    locale: "ja_JP",
+    language: "ja-JP",
+    siteName: "Viking AGM",
+    title: "VRLA鉛蓄電池用ガラス繊維AGMセパレーター | Viking AGM",
+    description:
+      "VRLA鉛蓄電池用のガラス繊維AGMセパレーターをロール・シート形状で提供します。厚さ、幅、バッテリー用途をご共有ください。",
+    keywords: [
+      "AGMセパレーター",
+      "AGMバッテリーセパレーター",
+      "ガラス繊維AGMセパレーター",
+      "VRLAバッテリーセパレーター",
+      "AGMセパレーターメーカー"
+    ],
+    productName: "VRLA鉛蓄電池用AGMセパレーター",
+    serviceDescription:
+      "顧客仕様の確認に対応する、ロール・シート形状のVRLA鉛蓄電池用ガラス繊維AGMセパレーターです。",
+    breadcrumbs: ["ホーム", "製品", "AGMセパレーター"]
   }
 } as const;
 
@@ -998,6 +1125,8 @@ export function buildHomeMetadata(lang: SiteLocale): Metadata {
     enPath: "/",
     zhPath: "/zh/",
     viPath: "/vi/",
+    koPath: "/ko/",
+    jaPath: "/ja/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.serviceName
@@ -1036,6 +1165,8 @@ export function buildSampleRequestMetadata(lang: SiteLocale): Metadata {
     enPath: "/request-agm-separator-sample/",
     zhPath: "/zh/request-agm-separator-sample/",
     viPath: "/vi/request-agm-separator-sample/",
+    koPath: "/ko/request-agm-separator-sample/",
+    jaPath: "/ja/request-agm-separator-sample/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -1058,6 +1189,8 @@ export function buildAgmSeparatorMetadata(lang: SiteLocale): Metadata {
     enPath: "/products/agm-separator/",
     zhPath: "/zh/products/agm-separator/",
     viPath: "/vi/products/agm-separator/",
+    koPath: "/ko/products/agm-separator/",
+    jaPath: "/ja/products/agm-separator/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName
@@ -1191,7 +1324,7 @@ export function buildAgmSeparatorUpsApplicationMetadata(
 }
 
 export function buildAgmSeparatorMotorcycleApplicationMetadata(
-  lang: SiteLocale
+  lang: ApplicationLocale
 ): Metadata {
   return buildApplicationDetailMetadata(
     lang,
@@ -1435,6 +1568,8 @@ function buildMetadata({
   enPath,
   zhPath,
   viPath,
+  koPath,
+  jaPath,
   locale,
   siteName,
   imageAlt,
@@ -1451,6 +1586,8 @@ function buildMetadata({
   enPath: string;
   zhPath: string;
   viPath?: string;
+  koPath?: string;
+  jaPath?: string;
   locale: string;
   siteName: string;
   imageAlt: string;
@@ -1470,6 +1607,8 @@ function buildMetadata({
         en: enPath,
         "zh-CN": zhPath,
         ...(viPath ? { "vi-VN": viPath } : {}),
+        ...(koPath ? { "ko-KR": koPath } : {}),
+        ...(jaPath ? { "ja-JP": jaPath } : {}),
         "x-default": enPath
       }
     },
@@ -1538,12 +1677,20 @@ export function StructuredData({ lang }: { lang: SiteLocale }) {
             ? "1 分钟了解维京 AGM 隔板生产能力"
             : lang === "vi"
               ? "Tổng quan 1 phút về nhà máy tấm ngăn AGM Viking"
+              : lang === "ko"
+                ? "1분 만에 보는 Viking AGM 분리막 생산"
+                : lang === "ja"
+                  ? "1分で見るViking AGMセパレーター生産"
               : "Watch the 1-minute Viking AGM factory overview",
         description:
           lang === "zh"
             ? "湖北维京 AGM 隔板生产、卷材处理、质量检测和包装出运现场宣传片。"
             : lang === "vi"
               ? "Video một phút giới thiệu sản xuất tấm ngăn AGM, xử lý cuộn, kiểm soát chất lượng và đóng gói tại Viking AGM."
+              : lang === "ko"
+                ? "Viking AGM의 분리막 생산, 롤 처리, 품질 검사와 포장 현장을 소개하는 1분 영상입니다."
+                : lang === "ja"
+                  ? "Viking AGMのセパレーター生産、ロール加工、品質検査、梱包現場を紹介する1分動画です。"
               : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
         thumbnailUrl: [HOME_VIDEO_POSTER],
         uploadDate: "2026-07-01T00:00:00+08:00",
@@ -1564,7 +1711,7 @@ export function StructuredData({ lang }: { lang: SiteLocale }) {
 export function SampleRequestStructuredData({ lang }: { lang: SiteLocale }) {
   const current = sampleRequestSeo[lang];
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : lang === "vi" ? "/vi/" : "/";
+  const homePath = localeHomePaths[lang];
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -1630,7 +1777,7 @@ export function SampleRequestStructuredData({ lang }: { lang: SiteLocale }) {
 export function AgmSeparatorStructuredData({ lang }: { lang: SiteLocale }) {
   const current = seoContent("agmSeparator", lang, agmSeparatorSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : lang === "vi" ? "/vi/" : "/";
+  const homePath = localeHomePaths[lang];
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -2026,7 +2173,7 @@ export function AgmSeparatorUpsApplicationStructuredData({
 export function AgmSeparatorMotorcycleApplicationStructuredData({
   lang
 }: {
-  lang: SiteLocale;
+  lang: ApplicationLocale;
 }) {
   return (
     <ApplicationDetailStructuredData
@@ -2695,7 +2842,7 @@ export function ResourcesHubStructuredData({ lang }: { lang: Lang }) {
           name,
           item:
             index === 0
-              ? `${SITE_URL}${lang === "zh" ? "/zh/" : "/"}`
+              ? `${SITE_URL}${localeHomePaths[lang]}`
               : url
         }))
       }
@@ -2716,6 +2863,10 @@ function organizationData(lang: SiteLocale, description: string) {
         ? ["湖北维京科技有限公司", "维京AGM", "Viking AGM"]
         : lang === "vi"
           ? ["Hubei Viking Technology Co., Ltd.", "Viking AGM Việt Nam", "湖北维京AGM"]
+          : lang === "ko"
+            ? ["Hubei Viking Technology Co., Ltd.", "Viking AGM Korea", "湖北维京AGM"]
+            : lang === "ja"
+              ? ["Hubei Viking Technology Co., Ltd.", "Viking AGM Japan", "湖北維京AGM"]
           : ["Hubei Viking Technology Co., Ltd.", "Hubei Viking AGM", "湖北维京AGM"],
     url: SITE_URL,
     logo: `${SITE_URL}/images/banner-logo-header.webp`,
@@ -2727,7 +2878,7 @@ function organizationData(lang: SiteLocale, description: string) {
       telephone: "+86 18171518528",
       email: "vikingsales@vikingagm.com",
       contactType: "sales",
-      availableLanguage: ["en", "zh-CN", "vi-VN"]
+      availableLanguage: ["en", "zh-CN", "vi-VN", "ko-KR", "ja-JP"]
     },
     foundingDate: "2015-12",
     address: {

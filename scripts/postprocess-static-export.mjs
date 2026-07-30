@@ -14,6 +14,10 @@ for (const file of walk(outDir)) {
     ? "zh-CN"
     : outputPath.startsWith("vi/")
       ? "vi"
+      : outputPath.startsWith("ko/")
+        ? "ko"
+        : outputPath.startsWith("ja/")
+          ? "ja"
       : "en";
   const source = readFileSync(file, "utf8");
   const result = source.replace(

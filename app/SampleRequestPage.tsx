@@ -294,6 +294,149 @@ const pageCopy = {
     },
     footer:
       "Sản xuất tấm ngăn sợi thủy tinh AGM, đánh giá chất lượng và phối hợp cung ứng cho các dự án ắc quy axit-chì."
+  },
+  ko: {
+    homePath: "/ko/",
+    languagePath: "/",
+    eyebrow: "샘플 및 사양 검토",
+    title: "AGM 분리막 샘플 및 사양 검토 요청",
+    subtitle:
+      "배터리 적용 분야와 보유한 분리막 정보를 보내 주세요. Viking AGM이 샘플 또는 견적 협의 전에 적합한 롤·시트 형태와 사양 방향을 함께 검토합니다.",
+    primary: "샘플 요청 시작",
+    secondary: "영문/중문 기술 자료 다운로드",
+    proof: ["롤 및 시트 형태", "적용 분야별 검토", "검사·포장 요구사항 확인"],
+    requirements: {
+      eyebrow: "정보 체크리스트",
+      title: "첫 검토에 필요한 정보",
+      text:
+        "문의 전에 모든 항목을 확정할 필요는 없습니다. 현재 보유한 정보를 먼저 보내고 검토 중인 항목을 표시해 주세요.",
+      items: [
+        ["배터리 적용 분야", "VRLA, UPS, 오토바이, 자동차, 에너지 저장 또는 기타 납축전지 적용 분야."],
+        ["제품 형태", "롤, 사전 절단 시트 또는 두 형태의 비교 요청."],
+        ["치수", "목표 두께, 롤 폭, 시트 가로·세로 또는 기존 도면."],
+        ["기술 기준", "목표값, 고객 기준, 시험 항목 또는 보유한 기준 샘플."],
+        ["수량 및 포장", "샘플 수량, 시험·양산 계획, 롤 코어, 라벨 및 포장 요구사항."]
+      ]
+    },
+    process: {
+      eyebrow: "다음 단계",
+      title: "문의부터 샘플 협의까지",
+      items: [
+        ["1", "적용 분야 검토", "배터리 적용 분야, 제품 형태와 현재 사양 정보를 검토합니다."],
+        ["2", "추가 정보 확인", "치수, 기준 샘플, 시험 항목 또는 포장 세부사항을 확인합니다."],
+        ["3", "진행 방향 협의", "확인된 내용을 바탕으로 샘플, 기술 검토 또는 견적 진행 방향을 협의합니다."]
+      ]
+    },
+    evidence: {
+      eyebrow: "제조 근거",
+      title: "생산, 검사 및 출하 준비 확인",
+      items: [
+        {
+          title: "생산 역량",
+          text: "AGM 분리막 생산과 롤 취급 설비를 바탕으로 사양 및 배치 공급을 협의합니다.",
+          src: "/images/agm-factory-capability-1200.webp",
+          alt: "Viking AGM 분리막 생산 설비"
+        },
+        {
+          title: "품질 검사",
+          text: "고객 적용 분야와 합의된 시험 항목을 기준으로 검사 요구사항을 확인합니다.",
+          src: "/images/agm-quality-control-1200.webp",
+          alt: "Viking Technology AGM 분리막 품질 검사"
+        },
+        {
+          title: "포장 및 출하",
+          text: "샘플 또는 주문 전에 롤, 시트, 라벨과 팔레트 요구사항을 검토합니다.",
+          src: "/images/evidence/shipping-pallet-01.webp",
+          alt: "AGM 분리막 팔레트 포장 및 출하 준비"
+        }
+      ]
+    },
+    download: {
+      eyebrow: "구매 참고 자료",
+      title: "Viking AGM 기술 역량 자료",
+      text: "제품 형태, 적용 분야, 품질 검사, 포장과 사양 검토 정보를 담은 영문·중문 자료입니다.",
+      button: "영문/중문 PDF 다운로드"
+    },
+    faq: { eyebrow: "FAQ", title: "샘플 요청 전 자주 묻는 질문" },
+    form: {
+      eyebrow: "협의 시작",
+      title: "현재 보유한 정보를 보내 주세요",
+      text: "이름과 연락처만으로 시작할 수 있습니다. 적용 분야, 제품 형태와 치수를 함께 보내면 더 구체적으로 검토할 수 있습니다.",
+      hints: ["배터리 적용 분야", "롤 또는 시트 형태", "두께, 폭 또는 시트 크기", "샘플, 시험 및 포장 요구사항"],
+      message: "선택: 배터리 적용 분야, 목표 두께, 롤 폭 또는 시트 크기, 샘플 수량, 기술·포장 요구사항"
+    },
+    footer: "납축전지 프로젝트를 위한 AGM 유리섬유 분리막 제조, 품질 검토 및 공급 협의."
+  },
+  ja: {
+    homePath: "/ja/",
+    languagePath: "/",
+    eyebrow: "サンプル・仕様確認",
+    title: "AGMセパレーターのサンプル・仕様確認依頼",
+    subtitle:
+      "バッテリー用途と現在お持ちのセパレーター情報をお知らせください。サンプルまたは見積りの前に、適切なロール・シート形状と仕様の方向性を確認します。",
+    primary: "サンプル依頼を開始",
+    secondary: "英語・中国語の技術資料をダウンロード",
+    proof: ["ロール・シート形状", "用途に基づく確認", "検査・梱包要件の確認"],
+    requirements: {
+      eyebrow: "情報チェックリスト",
+      title: "初回確認に必要な情報",
+      text: "お問い合わせ前にすべての項目を確定する必要はありません。判明している情報と検討中の項目をお知らせください。",
+      items: [
+        ["バッテリー用途", "VRLA、UPS、二輪車、自動車、蓄電またはその他の鉛蓄電池用途。"],
+        ["製品形状", "ロール、カット済みシート、または両方の比較。"],
+        ["寸法", "目標厚さ、ロール幅、シート縦横寸法、または既存図面。"],
+        ["技術資料", "目標値、顧客規格、試験項目、または基準サンプル。"],
+        ["数量・梱包", "サンプル数量、試作・量産計画、ロールコア、ラベル、梱包要件。"]
+      ]
+    },
+    process: {
+      eyebrow: "次のステップ",
+      title: "お問い合わせからサンプル協議まで",
+      items: [
+        ["1", "用途確認", "バッテリー用途、製品形状、現在の仕様情報を確認します。"],
+        ["2", "不足情報の確認", "寸法、基準サンプル、試験項目、梱包の詳細を確認します。"],
+        ["3", "進め方の協議", "確認内容に基づきサンプル、技術確認、見積りの進め方を協議します。"]
+      ]
+    },
+    evidence: {
+      eyebrow: "製造情報",
+      title: "生産、検査、出荷準備を確認",
+      items: [
+        {
+          title: "生産能力",
+          text: "AGMセパレーターの生産・ロール加工設備をもとに、仕様とロット供給を協議します。",
+          src: "/images/agm-factory-capability-1200.webp",
+          alt: "Viking AGMセパレーター生産設備"
+        },
+        {
+          title: "品質検査",
+          text: "お客様の用途と合意した試験項目に基づいて検査要件を確認します。",
+          src: "/images/agm-quality-control-1200.webp",
+          alt: "Viking TechnologyのAGMセパレーター品質検査"
+        },
+        {
+          title: "梱包・出荷",
+          text: "サンプルまたは注文前にロール、シート、ラベル、パレット要件を確認します。",
+          src: "/images/evidence/shipping-pallet-01.webp",
+          alt: "AGMセパレーターのパレット梱包と出荷準備"
+        }
+      ]
+    },
+    download: {
+      eyebrow: "購買参考資料",
+      title: "Viking AGM技術能力概要",
+      text: "製品形状、用途、品質検査、梱包、仕様確認に必要な情報をまとめた英語・中国語資料です。",
+      button: "英語・中国語PDFをダウンロード"
+    },
+    faq: { eyebrow: "FAQ", title: "サンプル依頼前のよくある質問" },
+    form: {
+      eyebrow: "確認を開始",
+      title: "現在お持ちの情報をお送りください",
+      text: "お名前と連絡先だけでも開始できます。用途、製品形状、寸法があるとより具体的に確認できます。",
+      hints: ["バッテリー用途", "ロールまたはシート形状", "厚さ、幅またはシート寸法", "サンプル、試験、梱包要件"],
+      message: "任意：バッテリー用途、目標厚さ、ロール幅またはシート寸法、サンプル数量、技術・梱包要件"
+    },
+    footer: "鉛蓄電池プロジェクト向けAGMガラス繊維セパレーターの製造、品質確認、供給調整。"
   }
 } as const;
 
@@ -315,7 +458,11 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
             ? "申请样品"
             : lang === "vi"
               ? "Yêu cầu mẫu"
-              : "Request Sample"
+              : lang === "ko"
+                ? "샘플 요청"
+                : lang === "ja"
+                  ? "サンプル依頼"
+                  : "Request Sample"
         }
       />
 
@@ -327,7 +474,11 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
               ? "湖北维京 AGM 隔板生产线"
               : lang === "vi"
                 ? "Dây chuyền sản xuất tấm ngăn AGM của Viking"
-                : "Viking AGM separator production line"
+                : lang === "ko"
+                  ? "Viking AGM 분리막 생산 라인"
+                  : lang === "ja"
+                    ? "Viking AGMセパレーター生産ライン"
+                    : "Viking AGM separator production line"
           }
           fill
           priority
@@ -558,7 +709,11 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
               ? "返回首页"
               : lang === "vi"
                 ? "Về trang chủ"
-                : "Back to homepage"}
+                : lang === "ko"
+                  ? "홈으로 돌아가기"
+                  : lang === "ja"
+                    ? "ホームへ戻る"
+                    : "Back to homepage"}
             <ArrowRight size={16} />
           </a>
         </div>

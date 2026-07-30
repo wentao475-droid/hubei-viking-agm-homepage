@@ -7,12 +7,18 @@ const requiredFiles = [
   "index.html",
   "zh/index.html",
   "vi/index.html",
+  "ko/index.html",
+  "ja/index.html",
   "resources/index.html",
   "zh/resources/index.html",
   "request-agm-separator-sample/index.html",
   "zh/request-agm-separator-sample/index.html",
   "vi/request-agm-separator-sample/index.html",
   "vi/products/agm-separator/index.html",
+  "ko/request-agm-separator-sample/index.html",
+  "ko/products/agm-separator/index.html",
+  "ja/request-agm-separator-sample/index.html",
+  "ja/products/agm-separator/index.html",
   "applications/agm-separator-for-ups-battery/index.html",
   "zh/applications/agm-separator-for-ups-battery/index.html",
   "applications/agm-separator-for-motorcycle-battery/index.html",
@@ -71,12 +77,22 @@ if (process.exitCode) {
 const indexHtml = readOutFile("index.html");
 const zhHtml = readOutFile("zh/index.html");
 const viHtml = readOutFile("vi/index.html");
+const koHtml = readOutFile("ko/index.html");
+const jaHtml = readOutFile("ja/index.html");
 const viProductHtml = readOutFile("vi/products/agm-separator/index.html");
 const viMotorcycleHtml = readOutFile(
   "vi/applications/agm-separator-for-motorcycle-battery/index.html"
 );
 const viSampleHtml = readOutFile(
   "vi/request-agm-separator-sample/index.html"
+);
+const koProductHtml = readOutFile("ko/products/agm-separator/index.html");
+const koSampleHtml = readOutFile(
+  "ko/request-agm-separator-sample/index.html"
+);
+const jaProductHtml = readOutFile("ja/products/agm-separator/index.html");
+const jaSampleHtml = readOutFile(
+  "ja/request-agm-separator-sample/index.html"
 );
 const resourcesHtml = readOutFile("resources/index.html");
 const zhResourcesHtml = readOutFile("zh/resources/index.html");
@@ -143,13 +159,23 @@ if (
   fail("Organization structured data is missing official social profiles");
 }
 
-const inquiryFormsUseSelects = [indexHtml, zhHtml, viHtml, viSampleHtml].every(
-  (html) =>
+const inquiryFormsUseSelects = [
+  indexHtml,
+  zhHtml,
+  viHtml,
+  viSampleHtml,
+  koHtml,
+  koProductHtml,
+  koSampleHtml,
+  jaHtml,
+  jaProductHtml,
+  jaSampleHtml
+].every((html) =>
     /<select[^>]+name="application"/.test(html) &&
     /<select[^>]+name="interestedProduct"/.test(html) &&
     html.includes('value="UPS / standby power"') &&
     html.includes('value="AGM separator rolls"')
-);
+  );
 
 if (inquiryFormsUseSelects) {
   pass("inquiry forms use battery application and product format selects");
@@ -221,6 +247,18 @@ if (viHtml.includes('<html lang="vi"')) {
   fail("Vietnamese homepage does not declare lang=vi");
 }
 
+if (koHtml.includes('<html lang="ko"')) {
+  pass("Korean homepage declares lang=ko");
+} else {
+  fail("Korean homepage does not declare lang=ko");
+}
+
+if (jaHtml.includes('<html lang="ja"')) {
+  pass("Japanese homepage declares lang=ja");
+} else {
+  fail("Japanese homepage does not declare lang=ja");
+}
+
 const vietnamesePages = [
   [viHtml, "/vi/"],
   [viProductHtml, "/vi/products/agm-separator/"],
@@ -254,6 +292,70 @@ if (
   pass("Vietnamese inquiry forms submit canonical values and language=vi");
 } else {
   fail("Vietnamese inquiry form values are not canonical or language is missing");
+}
+
+const koreanJapanesePages = [
+  [koHtml, "/ko/", "ko-KR", "ko_KR"],
+  [
+    koProductHtml,
+    "/ko/products/agm-separator/",
+    "ko-KR",
+    "ko_KR"
+  ],
+  [
+    koSampleHtml,
+    "/ko/request-agm-separator-sample/",
+    "ko-KR",
+    "ko_KR"
+  ],
+  [jaHtml, "/ja/", "ja-JP", "ja_JP"],
+  [
+    jaProductHtml,
+    "/ja/products/agm-separator/",
+    "ja-JP",
+    "ja_JP"
+  ],
+  [
+    jaSampleHtml,
+    "/ja/request-agm-separator-sample/",
+    "ja-JP",
+    "ja_JP"
+  ]
+];
+
+const koreanJapaneseSeoComplete = koreanJapanesePages.every(
+  ([html, path, language, locale]) =>
+    [
+      `https://www.vikingagm.com${path}`,
+      `hrefLang="${language}"`,
+      `"inLanguage":"${language}"`,
+      locale
+    ].every((value) => html.includes(value))
+);
+
+if (koreanJapaneseSeoComplete) {
+  pass("Korean and Japanese pages include canonical, hreflang and localized metadata");
+} else {
+  fail("one or more Korean or Japanese pages have incomplete localized metadata");
+}
+
+if (
+  [koHtml, koProductHtml, koSampleHtml].every(
+    (html) =>
+      html.includes('value="Motorcycle battery"') &&
+      html.includes('value="AGM separator rolls"') &&
+      /name="language"\s+value="ko"/.test(html)
+  ) &&
+  [jaHtml, jaProductHtml, jaSampleHtml].every(
+    (html) =>
+      html.includes('value="Motorcycle battery"') &&
+      html.includes('value="AGM separator rolls"') &&
+      /name="language"\s+value="ja"/.test(html)
+  )
+) {
+  pass("Korean and Japanese inquiry forms submit canonical values and locale codes");
+} else {
+  fail("Korean or Japanese inquiry form values are not canonical or language is missing");
 }
 
 if (
@@ -342,10 +444,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 42) {
-  pass("sitemap.xml lists the expected English, Chinese and Vietnamese public URLs");
+if (sitemapUrls.length === 48) {
+  pass("sitemap.xml lists the expected 48 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 42`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 48`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -362,11 +464,11 @@ if (sitemapMetadataComplete) {
 }
 
 const expectedSitemapLastmod = [
-  ["https://www.vikingagm.com/", "2026-07-28"],
-  ["https://www.vikingagm.com/vi/", "2026-07-28"],
+  ["https://www.vikingagm.com/", "2026-07-29"],
+  ["https://www.vikingagm.com/vi/", "2026-07-29"],
   [
     "https://www.vikingagm.com/vi/products/agm-separator/",
-    "2026-07-28"
+    "2026-07-29"
   ],
   [
     "https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/",
@@ -374,7 +476,31 @@ const expectedSitemapLastmod = [
   ],
   [
     "https://www.vikingagm.com/vi/request-agm-separator-sample/",
-    "2026-07-28"
+    "2026-07-29"
+  ],
+  [
+    "https://www.vikingagm.com/ko/",
+    "2026-07-29"
+  ],
+  [
+    "https://www.vikingagm.com/ko/products/agm-separator/",
+    "2026-07-29"
+  ],
+  [
+    "https://www.vikingagm.com/ko/request-agm-separator-sample/",
+    "2026-07-29"
+  ],
+  [
+    "https://www.vikingagm.com/ja/",
+    "2026-07-29"
+  ],
+  [
+    "https://www.vikingagm.com/ja/products/agm-separator/",
+    "2026-07-29"
+  ],
+  [
+    "https://www.vikingagm.com/ja/request-agm-separator-sample/",
+    "2026-07-29"
   ],
   [
     "https://www.vikingagm.com/blog/agm-separator-manufacturing-quality-delivery/",
