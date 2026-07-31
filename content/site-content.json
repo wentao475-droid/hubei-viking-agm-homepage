@@ -4431,6 +4431,10 @@
               "/ko/products/agm-separator/"
             ],
             [
+              "오토바이 배터리 적용",
+              "/ko/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
               "샘플 및 사양 검토 요청",
               "/ko/request-agm-separator-sample/"
             ]
@@ -4598,6 +4602,10 @@
             [
               "AGMセパレーター製品",
               "/ja/products/agm-separator/"
+            ],
+            [
+              "二輪車用バッテリー用途",
+              "/ja/applications/agm-separator-for-motorcycle-battery/"
             ],
             [
               "サンプル・仕様確認依頼",
@@ -4769,6 +4777,10 @@
               "/es/products/agm-separator/"
             ],
             [
+              "Aplicación para baterías de motocicleta",
+              "/es/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
               "Solicitar muestra y revisar especificaciones",
               "/es/request-agm-separator-sample/"
             ]
@@ -4938,6 +4950,10 @@
               "/pt/products/agm-separator/"
             ],
             [
+              "Aplicação em baterias de motocicletas",
+              "/pt/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
               "Solicitar amostra e analisar especificações",
               "/pt/request-agm-separator-sample/"
             ]
@@ -5105,6 +5121,10 @@
             [
               "AGM-сепаратор",
               "/ru/products/agm-separator/"
+            ],
+            [
+              "Применение в мотоциклетных аккумуляторах",
+              "/ru/applications/agm-separator-for-motorcycle-battery/"
             ],
             [
               "Запросить образец и проверку характеристик",
@@ -7108,6 +7128,816 @@
           "description": "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
           "wechat": "Tài khoản WeChat chính thức",
           "mobile": "Website di động"
+        }
+      },
+      "ko": {
+        "homePath": "/ko/",
+        "languagePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "quote": "샘플 요청",
+        "hero": {
+          "eyebrow": "오토바이 배터리 적용",
+          "title": "오토바이 시동 배터리용 AGM 분리막",
+          "subtitle": "소형 VRLA 오토바이 배터리용 AGM 분리막의 롤, 시트 및 샘플 사양을 검토합니다.",
+          "primary": "배터리 요구사항 상담",
+          "secondary": "사양 정보 보내기",
+          "proof": [
+            "시동 배터리 적용",
+            "소형 치수 검토",
+            "샘플 협의 지원"
+          ],
+          "image": {
+            "src": "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+            "alt": "오토바이 시동 배터리용 AGM 분리막",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "적용 분야",
+          "title": "소형 배터리 구조에 맞춘 분리막 검토",
+          "paragraphs": [
+            "오토바이 시동 배터리는 내부 공간이 작기 때문에 극판 치수, 조립 방식 및 배터리 샘플에 따라 분리막을 확인해야 합니다.",
+            "구매자는 일반적으로 두께, 시트 크기 또는 롤 폭, 취급 강도, 산 흡수 성능과 전기 저항을 함께 검토합니다."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "사양 검토",
+          "title": "구매 전 확인할 주요 항목",
+          "text": "요구사항은 배터리 샘플, 극판 설계 및 고객의 조립 공정과 함께 검토합니다.",
+          "items": [
+            [
+              "시트 크기 또는 롤 폭",
+              "소형 설계와 절단 공정에 맞춰 확인합니다."
+            ],
+            [
+              "두께",
+              "극판 간격, 압축 조건 및 조립 요구사항과 함께 검토합니다."
+            ],
+            [
+              "산 흡수 성능",
+              "배터리 설계와 합의된 시험 방법에 따라 확인합니다."
+            ],
+            [
+              "샘플 평가",
+              "전체 사양 확정 전에도 샘플 협의를 시작할 수 있습니다."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "제품 형태",
+          "title": "소형 배터리 조립을 위한 롤 및 시트",
+          "items": [
+            [
+              "시험 조립용 재단 시트",
+              "배터리 샘플 평가와 시험 조립에 사용할 수 있습니다.",
+              "/images/sheets1-900.webp",
+              "오토바이 배터리 조립용 AGM 분리막 시트",
+              900,
+              675
+            ],
+            [
+              "고객 절단용 롤",
+              "고객의 배터리 설계에 맞춰 절단할 수 있는 롤 형태입니다.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "오토바이 배터리 생산용 AGM 분리막 롤",
+              900,
+              675
+            ],
+            [
+              "시동 배터리 적용",
+              "소형 VRLA 배터리 구조와 적용 조건을 함께 검토합니다.",
+              "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+              "오토바이 VRLA 배터리 적용",
+              1200,
+              900
+            ],
+            [
+              "시트 가장자리 확인",
+              "샘플 및 사양 확인 과정에서 시트 상태를 검토할 수 있습니다.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "오토바이 배터리용 AGM 분리막 시트 상세",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "오토바이 적용",
+          "title": "주요 시동 배터리 적용",
+          "items": [
+            "오토바이 시동 배터리",
+            "스쿠터 배터리",
+            "소형 VRLA 배터리",
+            "시험 샘플 개발"
+          ]
+        },
+        "quality": {
+          "eyebrow": "품질 검토",
+          "title": "소형 배터리에서는 치수와 취급성이 중요합니다",
+          "text": "최종 시험 항목은 고객 요구사항과 합의된 시험 방법에 따릅니다.",
+          "cards": [
+            [
+              "치수 검토",
+              "시트 길이와 폭 또는 롤 폭을 배터리 샘플에 맞춰 확인합니다."
+            ],
+            [
+              "취급성 검토",
+              "절단 및 조립 과정의 분리막 상태를 협의할 수 있습니다."
+            ],
+            [
+              "시험 항목 협의",
+              "두께, 산 흡수 성능과 전기 저항을 목표 요구사항에 따라 검토합니다."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "관련 페이지",
+          "title": "제품 및 샘플 요청 계속 보기",
+          "items": [
+            [
+              "AGM 분리막 제품",
+              "/ko/products/agm-separator/"
+            ],
+            [
+              "오토바이 배터리 적용",
+              "/ko/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "샘플 및 사양 검토 요청",
+              "/ko/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "문의",
+          "title": "오토바이 배터리용 분리막 요구사항을 보내 주세요",
+          "text": "연락처와 배터리 모델을 남겨 주시면 생산 또는 샘플 평가에 적합한 AGM 분리막 형태를 함께 확인합니다.",
+          "checklist": [
+            "오토바이 배터리 모델",
+            "시트 크기 또는 롤 폭",
+            "샘플 요구사항",
+            "시험 또는 생산 수량"
+          ],
+          "placeholder": "배터리 모델, 시트 크기, 롤 폭, 샘플 또는 기술 요구사항",
+          "submit": "요구사항 보내기",
+          "submitting": "전송 중...",
+          "required": "이름과 연락처를 입력해 주세요.",
+          "success": "감사합니다. 요구사항 확인을 위해 연락드리겠습니다.",
+          "failure": "현재 요청을 전송할 수 없습니다. 잠시 후 다시 시도해 주세요.",
+          "emailFallback": "이메일 프로그램이 열렸습니다. 준비된 이메일을 전송해 주세요."
+        },
+        "footer": {
+          "description": "납축전지 제조업체와 무역 파트너를 위한 AGM 유리섬유 분리막 제조업체.",
+          "wechat": "공식 WeChat 계정",
+          "mobile": "모바일 웹사이트"
+        }
+      },
+      "ja": {
+        "homePath": "/ja/",
+        "languagePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "quote": "サンプル依頼",
+        "hero": {
+          "eyebrow": "二輪車用バッテリー用途",
+          "title": "二輪車始動用バッテリー向けAGMセパレーター",
+          "subtitle": "小型VRLA二輪車用バッテリー向けに、ロール、シート、サンプル仕様を確認します。",
+          "primary": "バッテリー要件を相談",
+          "secondary": "仕様情報を送る",
+          "proof": [
+            "始動用バッテリー",
+            "小型寸法の確認",
+            "サンプル相談"
+          ],
+          "image": {
+            "src": "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+            "alt": "二輪車始動用バッテリー向けAGMセパレーター",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "用途の要点",
+          "title": "小型バッテリー構造に合わせたセパレーター確認",
+          "paragraphs": [
+            "二輪車始動用バッテリーは内部構造が小型で、極板寸法、組立方法、バッテリーサンプルに合わせた確認が必要です。",
+            "購買時には厚さ、シート寸法またはロール幅、取扱強度、吸液性能、電気抵抗をあわせて確認します。"
+          ]
+        },
+        "parameters": {
+          "eyebrow": "仕様確認",
+          "title": "購入前に確認する主な項目",
+          "text": "要件はバッテリーサンプル、極板設計、組立工程とあわせて確認します。",
+          "items": [
+            [
+              "シート寸法・ロール幅",
+              "小型設計と裁断工程に合わせて確認します。"
+            ],
+            [
+              "厚さ",
+              "極板間隔、圧縮条件、組立要件とあわせて確認します。"
+            ],
+            [
+              "吸液性能",
+              "バッテリー設計と合意した試験方法に基づき確認します。"
+            ],
+            [
+              "サンプル評価",
+              "全仕様の確定前でもサンプル相談を開始できます。"
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "製品形状",
+          "title": "小型バッテリー組立向けロール・シート",
+          "items": [
+            [
+              "試作組立用カットシート",
+              "バッテリーサンプル評価と試作組立に使用できます。",
+              "/images/sheets1-900.webp",
+              "二輪車用バッテリー組立向けAGMセパレーターシート",
+              900,
+              675
+            ],
+            [
+              "お客様で裁断するロール",
+              "バッテリー設計に合わせて裁断できるロール形状です。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "二輪車用バッテリー生産向けAGMセパレーターロール",
+              900,
+              675
+            ],
+            [
+              "始動用バッテリー用途",
+              "小型VRLAバッテリーの構造と用途条件を確認します。",
+              "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+              "二輪車用VRLAバッテリー用途",
+              1200,
+              900
+            ],
+            [
+              "シート端部の確認",
+              "サンプル・仕様確認時にシート状態を確認できます。",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "二輪車用AGMセパレーターシート詳細",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "二輪車用途",
+          "title": "主な始動用バッテリー用途",
+          "items": [
+            "二輪車始動用バッテリー",
+            "スクーター用バッテリー",
+            "小型VRLAバッテリー",
+            "試作サンプル開発"
+          ]
+        },
+        "quality": {
+          "eyebrow": "品質確認",
+          "title": "小型バッテリーでは寸法と取扱性を重視",
+          "text": "最終試験項目はお客様の要件と合意した試験方法に基づきます。",
+          "cards": [
+            [
+              "寸法確認",
+              "シート長さ・幅またはロール幅をバッテリーサンプルに合わせます。"
+            ],
+            [
+              "取扱性確認",
+              "裁断・組立工程でのセパレーター状態を協議できます。"
+            ],
+            [
+              "試験項目の協議",
+              "厚さ、吸液性能、電気抵抗を目標要件に合わせて確認します。"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "関連ページ",
+          "title": "製品とサンプル依頼を見る",
+          "items": [
+            [
+              "AGMセパレーター製品",
+              "/ja/products/agm-separator/"
+            ],
+            [
+              "二輪車用バッテリー用途",
+              "/ja/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "サンプル・仕様確認依頼",
+              "/ja/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "お問い合わせ",
+          "title": "二輪車用バッテリーのセパレーター要件をお送りください",
+          "text": "連絡先とバッテリー型式から、生産またはサンプル評価に適したAGMセパレーター形状を確認します。",
+          "checklist": [
+            "二輪車用バッテリー型式",
+            "シート寸法またはロール幅",
+            "サンプル要件",
+            "試験または生産数量"
+          ],
+          "placeholder": "バッテリー型式、シート寸法、ロール幅、サンプル・技術要件",
+          "submit": "要件を送信",
+          "submitting": "送信中...",
+          "required": "お名前と連絡先を入力してください。",
+          "success": "ありがとうございます。要件確認のためご連絡します。",
+          "failure": "現在リクエストを送信できません。しばらくしてから再度お試しください。",
+          "emailFallback": "メールアプリを開きました。作成済みのメールを送信してください。"
+        },
+        "footer": {
+          "description": "鉛蓄電池メーカーと商社向けのAGMガラス繊維セパレーター製造会社。",
+          "wechat": "公式WeChatアカウント",
+          "mobile": "モバイルサイト"
+        }
+      },
+      "es": {
+        "homePath": "/es/",
+        "languagePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "quote": "Solicitar muestra",
+        "hero": {
+          "eyebrow": "Aplicación en motocicletas",
+          "title": "Separador AGM para baterías de arranque de motocicleta",
+          "subtitle": "Revisión de separadores AGM en rollo, lámina y muestra para baterías VRLA compactas de motocicleta.",
+          "primary": "Revisar requisitos de la batería",
+          "secondary": "Enviar especificaciones",
+          "proof": [
+            "Baterías de arranque",
+            "Revisión de medidas compactas",
+            "Soporte para muestras"
+          ],
+          "image": {
+            "src": "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+            "alt": "Separador AGM para batería de arranque de motocicleta",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "Enfoque de aplicación",
+          "title": "El separador debe corresponder a la estructura compacta",
+          "paragraphs": [
+            "Las baterías de arranque de motocicleta suelen tener una estructura interna compacta. El separador debe revisarse según las placas, el montaje y la muestra de batería.",
+            "Los compradores suelen confirmar espesor, tamaño de lámina o ancho de rollo, resistencia de manipulación, absorción de ácido y resistencia eléctrica."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Revisión de especificaciones",
+          "title": "Puntos que conviene confirmar antes de comprar",
+          "text": "Los requisitos se revisan con la muestra de batería, el diseño de placas y el proceso de montaje del cliente.",
+          "items": [
+            [
+              "Tamaño de lámina o ancho de rollo",
+              "Se confirma según el diseño compacto y el proceso de corte."
+            ],
+            [
+              "Espesor",
+              "Se revisa con la separación de placas, la compresión y el montaje."
+            ],
+            [
+              "Absorción de ácido",
+              "Se confirma según el diseño y el método de ensayo acordado."
+            ],
+            [
+              "Evaluación de muestra",
+              "La conversación puede comenzar antes de cerrar toda la especificación."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Formatos",
+          "title": "Rollos y láminas para montaje compacto",
+          "items": [
+            [
+              "Láminas cortadas para pruebas",
+              "Permiten evaluar muestras y realizar montajes de prueba.",
+              "/images/sheets1-900.webp",
+              "Láminas AGM para baterías de motocicleta",
+              900,
+              675
+            ],
+            [
+              "Rollos para corte del cliente",
+              "Formato en rollo para cortar según el diseño de la batería.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rollo AGM para producir baterías de motocicleta",
+              900,
+              675
+            ],
+            [
+              "Aplicación de batería de arranque",
+              "Ayuda a revisar la estructura de una batería VRLA compacta.",
+              "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+              "Aplicación VRLA para motocicleta",
+              1200,
+              900
+            ],
+            [
+              "Detalle del borde de la lámina",
+              "El estado de la lámina puede revisarse durante la confirmación de muestra.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "Detalle de lámina AGM para motocicleta",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicación",
+          "title": "Baterías de arranque que suelen revisarse",
+          "items": [
+            "Baterías de motocicleta",
+            "Baterías de scooter",
+            "Baterías VRLA compactas",
+            "Desarrollo de muestras"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Factores de calidad",
+          "title": "Las medidas y la manipulación requieren atención",
+          "text": "Los ensayos finales dependen de los requisitos y métodos acordados.",
+          "cards": [
+            [
+              "Revisión dimensional",
+              "Largo y ancho de lámina o ancho de rollo se comparan con la muestra."
+            ],
+            [
+              "Revisión de manipulación",
+              "Se puede revisar el comportamiento durante corte y montaje."
+            ],
+            [
+              "Ensayos acordados",
+              "Espesor, absorción y resistencia eléctrica se revisan según el objetivo."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Páginas relacionadas",
+          "title": "Continuar con producto y muestra",
+          "items": [
+            [
+              "Separador AGM",
+              "/es/products/agm-separator/"
+            ],
+            [
+              "Aplicación para baterías de motocicleta",
+              "/es/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Solicitar muestra y revisar especificaciones",
+              "/es/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Consulta",
+          "title": "Envíe sus requisitos para batería de motocicleta",
+          "text": "Comparta sus datos y el modelo de batería para revisar el formato AGM adecuado para muestra o producción.",
+          "checklist": [
+            "Modelo de batería",
+            "Tamaño de lámina o ancho de rollo",
+            "Requisitos de muestra",
+            "Cantidad de prueba o producción"
+          ],
+          "placeholder": "Modelo, medidas, ancho de rollo, muestra o consulta técnica",
+          "submit": "Enviar requisitos",
+          "submitting": "Enviando...",
+          "required": "Ingrese su nombre y datos de contacto.",
+          "success": "Gracias. Nos pondremos en contacto para revisar los requisitos.",
+          "failure": "No se puede enviar la solicitud ahora. Inténtelo de nuevo más tarde.",
+          "emailFallback": "Se abrió su aplicación de correo. Envíe el mensaje preparado para completar la consulta."
+        },
+        "footer": {
+          "description": "Fabricante de separadores de fibra de vidrio AGM para productores de baterías de plomo-ácido y socios comerciales.",
+          "wechat": "Cuenta oficial de WeChat",
+          "mobile": "Sitio web móvil"
+        }
+      },
+      "pt": {
+        "homePath": "/pt/",
+        "languagePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "quote": "Solicitar amostra",
+        "hero": {
+          "eyebrow": "Aplicação em motocicletas",
+          "title": "Separador AGM para baterias de partida de motocicletas",
+          "subtitle": "Análise de separadores AGM em rolo, folha e amostra para baterias VRLA compactas de motocicletas.",
+          "primary": "Analisar requisitos da bateria",
+          "secondary": "Enviar especificações",
+          "proof": [
+            "Baterias de partida",
+            "Análise de medidas compactas",
+            "Suporte para amostras"
+          ],
+          "image": {
+            "src": "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+            "alt": "Separador AGM para bateria de partida de motocicleta",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "Foco da aplicação",
+          "title": "O separador deve corresponder à estrutura compacta",
+          "paragraphs": [
+            "Baterias de partida de motocicletas geralmente possuem estrutura interna compacta. O separador deve ser analisado conforme placas, montagem e amostra da bateria.",
+            "Compradores normalmente confirmam espessura, tamanho da folha ou largura do rolo, resistência ao manuseio, absorção de ácido e resistência elétrica."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Análise de especificações",
+          "title": "Pontos a confirmar antes da compra",
+          "text": "Os requisitos são analisados com a amostra da bateria, o projeto das placas e o processo de montagem do cliente.",
+          "items": [
+            [
+              "Tamanho da folha ou largura do rolo",
+              "Confirmado conforme o projeto compacto e o processo de corte."
+            ],
+            [
+              "Espessura",
+              "Analisada com o espaçamento das placas, compressão e montagem."
+            ],
+            [
+              "Absorção de ácido",
+              "Confirmada conforme o projeto e o método de ensaio acordado."
+            ],
+            [
+              "Avaliação de amostra",
+              "A conversa pode começar antes de fechar toda a especificação."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Formatos",
+          "title": "Rolos e folhas para montagem compacta",
+          "items": [
+            [
+              "Folhas cortadas para testes",
+              "Apoiam avaliação de amostras e montagem experimental.",
+              "/images/sheets1-900.webp",
+              "Folhas AGM para baterias de motocicletas",
+              900,
+              675
+            ],
+            [
+              "Rolos para corte pelo cliente",
+              "Formato em rolo para corte conforme o projeto da bateria.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rolo AGM para produzir baterias de motocicletas",
+              900,
+              675
+            ],
+            [
+              "Aplicação em bateria de partida",
+              "Ajuda a analisar a estrutura de uma bateria VRLA compacta.",
+              "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+              "Aplicação VRLA para motocicleta",
+              1200,
+              900
+            ],
+            [
+              "Detalhe da borda da folha",
+              "A condição da folha pode ser analisada durante a confirmação da amostra.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "Detalhe de folha AGM para motocicleta",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicação",
+          "title": "Baterias de partida normalmente analisadas",
+          "items": [
+            "Baterias de motocicletas",
+            "Baterias de scooters",
+            "Baterias VRLA compactas",
+            "Desenvolvimento de amostras"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Fatores de qualidade",
+          "title": "Medidas e manuseio exigem atenção",
+          "text": "Os ensaios finais dependem dos requisitos e métodos acordados.",
+          "cards": [
+            [
+              "Análise dimensional",
+              "Comprimento e largura da folha ou do rolo são comparados com a amostra."
+            ],
+            [
+              "Análise de manuseio",
+              "O comportamento durante corte e montagem pode ser analisado."
+            ],
+            [
+              "Ensaios acordados",
+              "Espessura, absorção e resistência elétrica são analisadas conforme a meta."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Páginas relacionadas",
+          "title": "Continuar para produto e amostra",
+          "items": [
+            [
+              "Separador AGM",
+              "/pt/products/agm-separator/"
+            ],
+            [
+              "Aplicação em baterias de motocicletas",
+              "/pt/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Solicitar amostra e analisar especificações",
+              "/pt/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Consulta",
+          "title": "Envie os requisitos da bateria de motocicleta",
+          "text": "Compartilhe seus dados e o modelo da bateria para analisar o formato AGM adequado para amostra ou produção.",
+          "checklist": [
+            "Modelo da bateria",
+            "Tamanho da folha ou largura do rolo",
+            "Requisitos da amostra",
+            "Quantidade de teste ou produção"
+          ],
+          "placeholder": "Modelo, medidas, largura do rolo, amostra ou dúvida técnica",
+          "submit": "Enviar requisitos",
+          "submitting": "Enviando...",
+          "required": "Informe seu nome e dados de contato.",
+          "success": "Obrigado. Entraremos em contato para analisar os requisitos.",
+          "failure": "Não foi possível enviar agora. Tente novamente mais tarde.",
+          "emailFallback": "Seu aplicativo de e-mail foi aberto. Envie a mensagem preparada para concluir a consulta."
+        },
+        "footer": {
+          "description": "Fabricante de separadores de fibra de vidro AGM para produtores de baterias chumbo-ácido e parceiros comerciais.",
+          "wechat": "Conta oficial do WeChat",
+          "mobile": "Site móvel"
+        }
+      },
+      "ru": {
+        "homePath": "/ru/",
+        "languagePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "quote": "Запросить образец",
+        "hero": {
+          "eyebrow": "Мотоциклетные аккумуляторы",
+          "title": "AGM-сепаратор для стартерных аккумуляторов мотоциклов",
+          "subtitle": "Согласование рулонных, листовых и образцовых AGM-сепараторов для компактных VRLA-аккумуляторов.",
+          "primary": "Обсудить требования",
+          "secondary": "Отправить спецификацию",
+          "proof": [
+            "Стартерные аккумуляторы",
+            "Проверка компактных размеров",
+            "Поддержка образцов"
+          ],
+          "image": {
+            "src": "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+            "alt": "AGM-сепаратор для стартерного аккумулятора мотоцикла",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "Особенности применения",
+          "title": "Сепаратор должен соответствовать компактной конструкции",
+          "paragraphs": [
+            "Стартерные аккумуляторы мотоциклов обычно имеют компактную внутреннюю конструкцию. Сепаратор согласуют с пластинами, способом сборки и образцом аккумулятора.",
+            "Покупатели обычно проверяют толщину, размер листа или ширину рулона, прочность при обработке, впитывание кислоты и электрическое сопротивление."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Согласование спецификации",
+          "title": "Что проверить перед закупкой",
+          "text": "Требования рассматриваются вместе с образцом аккумулятора, конструкцией пластин и процессом сборки заказчика.",
+          "items": [
+            [
+              "Размер листа или ширина рулона",
+              "Проверяется по компактной конструкции и процессу резки."
+            ],
+            [
+              "Толщина",
+              "Рассматривается с зазором пластин, сжатием и сборкой."
+            ],
+            [
+              "Впитывание кислоты",
+              "Проверяется по конструкции и согласованной методике испытаний."
+            ],
+            [
+              "Оценка образца",
+              "Обсуждение можно начать до утверждения всей спецификации."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Форматы продукции",
+          "title": "Рулоны и листы для компактной сборки",
+          "items": [
+            [
+              "Нарезанные листы для испытаний",
+              "Подходят для оценки образцов и пробной сборки.",
+              "/images/sheets1-900.webp",
+              "Листы AGM для мотоциклетных аккумуляторов",
+              900,
+              675
+            ],
+            [
+              "Рулоны для резки заказчиком",
+              "Рулонный формат для резки по конструкции аккумулятора.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Рулон AGM для мотоциклетных аккумуляторов",
+              900,
+              675
+            ],
+            [
+              "Применение в стартерной батарее",
+              "Помогает обсудить конструкцию компактного VRLA-аккумулятора.",
+              "/images/applications/motorcycle-vrla-battery-application-1200.webp",
+              "Применение VRLA в мотоцикле",
+              1200,
+              900
+            ],
+            [
+              "Деталь кромки листа",
+              "Состояние листа проверяется при согласовании образца.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "Деталь листового AGM-сепаратора",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Применение",
+          "title": "Типичные стартерные аккумуляторы",
+          "items": [
+            "Стартерные аккумуляторы мотоциклов",
+            "Аккумуляторы скутеров",
+            "Компактные VRLA-аккумуляторы",
+            "Разработка образцов"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Факторы качества",
+          "title": "Размеры и обработка требуют внимания",
+          "text": "Окончательные испытания зависят от согласованных требований и методов.",
+          "cards": [
+            [
+              "Проверка размеров",
+              "Длина и ширина листа или ширина рулона сопоставляются с образцом."
+            ],
+            [
+              "Проверка обработки",
+              "Можно обсудить поведение материала при резке и сборке."
+            ],
+            [
+              "Согласованные испытания",
+              "Толщина, впитывание и сопротивление проверяются по целевым требованиям."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Связанные страницы",
+          "title": "Перейти к продукции и запросу образца",
+          "items": [
+            [
+              "AGM-сепаратор",
+              "/ru/products/agm-separator/"
+            ],
+            [
+              "Применение в мотоциклетных аккумуляторах",
+              "/ru/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Запросить образец и проверку характеристик",
+              "/ru/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Запрос",
+          "title": "Отправьте требования к мотоциклетному аккумулятору",
+          "text": "Укажите контакты и модель аккумулятора, чтобы согласовать формат AGM для образца или производства.",
+          "checklist": [
+            "Модель аккумулятора",
+            "Размер листа или ширина рулона",
+            "Требования к образцу",
+            "Количество для испытаний или производства"
+          ],
+          "placeholder": "Модель, размеры, ширина рулона, образец или технический вопрос",
+          "submit": "Отправить требования",
+          "submitting": "Отправка...",
+          "required": "Укажите имя и контактные данные.",
+          "success": "Спасибо. Мы свяжемся с вами для уточнения требований.",
+          "failure": "Сейчас запрос отправить невозможно. Повторите попытку позже.",
+          "emailFallback": "Открыто почтовое приложение. Отправьте подготовленное письмо, чтобы завершить запрос."
+        },
+        "footer": {
+          "description": "Производитель стекловолоконных AGM-сепараторов для производителей свинцово-кислотных аккумуляторов и торговых партнеров.",
+          "wechat": "Официальный аккаунт WeChat",
+          "mobile": "Мобильная версия сайта"
         }
       }
     },
@@ -11669,6 +12499,131 @@
           "Trang chủ",
           "Ứng dụng",
           "Tấm ngăn AGM cho ắc quy xe máy"
+        ]
+      },
+      "ko": {
+        "path": "/ko/applications/agm-separator-for-motorcycle-battery/",
+        "alternatePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM",
+        "title": "오토바이 배터리용 AGM 분리막 | Viking AGM",
+        "description": "소형 오토바이 시동용 VRLA 배터리를 위한 AGM 분리막 롤, 시트, 치수 및 샘플 요구사항을 검토합니다.",
+        "keywords": [
+          "오토바이 배터리 AGM 분리막",
+          "오토바이 배터리 분리막",
+          "VRLA 배터리 분리막",
+          "시동 배터리 분리막",
+          "AGM 분리막 시트"
+        ],
+        "pageName": "오토바이 시동 배터리용 AGM 분리막",
+        "serviceDescription": "소형 오토바이 시동용 VRLA 납축전지 생산을 위한 AGM 유리섬유 분리막 사양 및 샘플 검토.",
+        "serviceType": "오토바이 배터리용 AGM 분리막",
+        "image": "https://www.vikingagm.com/images/applications/motorcycle-vrla-battery-application-1200.webp",
+        "breadcrumbs": [
+          "홈",
+          "적용 분야",
+          "오토바이 배터리용 AGM 분리막"
+        ]
+      },
+      "ja": {
+        "path": "/ja/applications/agm-separator-for-motorcycle-battery/",
+        "alternatePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM",
+        "title": "二輪車用バッテリー向けAGMセパレーター | Viking AGM",
+        "description": "小型二輪車始動用VRLAバッテリー向けに、AGMセパレーターのロール、シート、寸法、サンプル要件を確認します。",
+        "keywords": [
+          "二輪車 バッテリー AGM セパレーター",
+          "二輪車用バッテリー セパレーター",
+          "VRLA セパレーター",
+          "始動用バッテリー セパレーター",
+          "AGM セパレーター シート"
+        ],
+        "pageName": "二輪車始動用バッテリー向けAGMセパレーター",
+        "serviceDescription": "小型二輪車始動用VRLA鉛蓄電池向けAGMガラス繊維セパレーターの仕様・サンプル確認。",
+        "serviceType": "二輪車用バッテリー向けAGMセパレーター",
+        "image": "https://www.vikingagm.com/images/applications/motorcycle-vrla-battery-application-1200.webp",
+        "breadcrumbs": [
+          "ホーム",
+          "用途",
+          "二輪車用AGMセパレーター"
+        ]
+      },
+      "es": {
+        "path": "/es/applications/agm-separator-for-motorcycle-battery/",
+        "alternatePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "Separador AGM para baterías de motocicleta | Viking AGM",
+        "description": "Separadores AGM para baterías VRLA compactas de arranque de motocicleta: rollos, láminas, medidas y evaluación de muestras.",
+        "keywords": [
+          "separador AGM para batería de motocicleta",
+          "separador de batería de motocicleta",
+          "separador VRLA",
+          "separador de batería de arranque",
+          "láminas AGM"
+        ],
+        "pageName": "Separador AGM para baterías de arranque de motocicleta",
+        "serviceDescription": "Revisión de especificaciones y muestras de separador AGM de fibra de vidrio para baterías VRLA compactas de motocicleta.",
+        "serviceType": "Separador AGM para baterías de motocicleta",
+        "image": "https://www.vikingagm.com/images/applications/motorcycle-vrla-battery-application-1200.webp",
+        "breadcrumbs": [
+          "Inicio",
+          "Aplicaciones",
+          "Separador AGM para motocicleta"
+        ]
+      },
+      "pt": {
+        "path": "/pt/applications/agm-separator-for-motorcycle-battery/",
+        "alternatePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM",
+        "title": "Separador AGM para baterias de motocicletas | Viking AGM",
+        "description": "Separadores AGM para baterias VRLA compactas de partida de motocicletas: rolos, folhas, medidas e avaliação de amostras.",
+        "keywords": [
+          "separador AGM para bateria de motocicleta",
+          "separador de bateria de motocicleta",
+          "separador VRLA",
+          "separador de bateria de partida",
+          "folhas AGM"
+        ],
+        "pageName": "Separador AGM para baterias de partida de motocicletas",
+        "serviceDescription": "Análise de especificações e amostras de separador AGM de fibra de vidro para baterias VRLA compactas de motocicletas.",
+        "serviceType": "Separador AGM para baterias de motocicletas",
+        "image": "https://www.vikingagm.com/images/applications/motorcycle-vrla-battery-application-1200.webp",
+        "breadcrumbs": [
+          "Início",
+          "Aplicações",
+          "Separador AGM para motocicletas"
+        ]
+      },
+      "ru": {
+        "path": "/ru/applications/agm-separator-for-motorcycle-battery/",
+        "alternatePath": "/applications/agm-separator-for-motorcycle-battery/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "AGM-сепаратор для мотоциклетных аккумуляторов | Viking AGM",
+        "description": "AGM-сепараторы для компактных стартерных VRLA-аккумуляторов мотоциклов: рулоны, листы, размеры и оценка образцов.",
+        "keywords": [
+          "AGM-сепаратор для мотоциклетного аккумулятора",
+          "сепаратор мотоциклетного аккумулятора",
+          "сепаратор VRLA",
+          "сепаратор стартерного аккумулятора",
+          "листы AGM"
+        ],
+        "pageName": "AGM-сепаратор для стартерных аккумуляторов мотоциклов",
+        "serviceDescription": "Согласование спецификаций и образцов стекловолоконного AGM-сепаратора для компактных мотоциклетных VRLA-аккумуляторов.",
+        "serviceType": "AGM-сепаратор для мотоциклетных аккумуляторов",
+        "image": "https://www.vikingagm.com/images/applications/motorcycle-vrla-battery-application-1200.webp",
+        "breadcrumbs": [
+          "Главная",
+          "Применение",
+          "AGM-сепаратор для мотоциклов"
         ]
       }
     },

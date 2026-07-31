@@ -12,7 +12,7 @@ import {
 import { localeHomePaths } from "./locales";
 import type { Lang, SiteLocale } from "./locales";
 
-type ApplicationLocale = Lang | "vi";
+type ApplicationLocale = SiteLocale;
 
 export const SITE_URL = "https://www.vikingagm.com";
 const PREVIEW_IMAGE = `${SITE_URL}/images/viking-finished-separator-roll-900.webp`;
@@ -869,6 +869,81 @@ const agmSeparatorMotorcycleApplicationSeo = {
     serviceType: "Tấm ngăn AGM cho ứng dụng ắc quy xe máy",
     image: MOTORCYCLE_APPLICATION_IMAGE,
     breadcrumbs: ["Trang chủ", "Ứng dụng", "Tấm ngăn AGM cho ắc quy xe máy"]
+  },
+  ko: {
+    path: "/ko/applications/agm-separator-for-motorcycle-battery/",
+    alternatePath: "/applications/agm-separator-for-motorcycle-battery/",
+    locale: "ko_KR",
+    language: "ko-KR",
+    siteName: "Viking AGM",
+    title: "오토바이 배터리용 AGM 분리막 | Viking AGM",
+    description: "소형 오토바이 시동용 VRLA 배터리를 위한 AGM 분리막 롤, 시트, 치수 및 샘플 요구사항을 검토합니다.",
+    keywords: ["오토바이 배터리 AGM 분리막", "오토바이 배터리 분리막", "VRLA 배터리 분리막", "시동 배터리 분리막", "AGM 분리막 시트"],
+    pageName: "오토바이 시동 배터리용 AGM 분리막",
+    serviceDescription: "소형 오토바이 시동용 VRLA 납축전지 생산을 위한 AGM 유리섬유 분리막 사양 및 샘플 검토.",
+    serviceType: "오토바이 배터리용 AGM 분리막",
+    image: MOTORCYCLE_APPLICATION_IMAGE,
+    breadcrumbs: ["홈", "적용 분야", "오토바이 배터리용 AGM 분리막"]
+  },
+  ja: {
+    path: "/ja/applications/agm-separator-for-motorcycle-battery/",
+    alternatePath: "/applications/agm-separator-for-motorcycle-battery/",
+    locale: "ja_JP",
+    language: "ja-JP",
+    siteName: "Viking AGM",
+    title: "二輪車用バッテリー向けAGMセパレーター | Viking AGM",
+    description: "小型二輪車始動用VRLAバッテリー向けに、AGMセパレーターのロール、シート、寸法、サンプル要件を確認します。",
+    keywords: ["二輪車 バッテリー AGM セパレーター", "二輪車用バッテリー セパレーター", "VRLA セパレーター", "始動用バッテリー セパレーター", "AGM セパレーター シート"],
+    pageName: "二輪車始動用バッテリー向けAGMセパレーター",
+    serviceDescription: "小型二輪車始動用VRLA鉛蓄電池向けAGMガラス繊維セパレーターの仕様・サンプル確認。",
+    serviceType: "二輪車用バッテリー向けAGMセパレーター",
+    image: MOTORCYCLE_APPLICATION_IMAGE,
+    breadcrumbs: ["ホーム", "用途", "二輪車用AGMセパレーター"]
+  },
+  es: {
+    path: "/es/applications/agm-separator-for-motorcycle-battery/",
+    alternatePath: "/applications/agm-separator-for-motorcycle-battery/",
+    locale: "es_LA",
+    language: "es",
+    siteName: "Viking AGM",
+    title: "Separador AGM para baterías de motocicleta | Viking AGM",
+    description: "Separadores AGM para baterías VRLA compactas de arranque de motocicleta: rollos, láminas, medidas y evaluación de muestras.",
+    keywords: ["separador AGM para batería de motocicleta", "separador de batería de motocicleta", "separador VRLA", "separador de batería de arranque", "láminas AGM"],
+    pageName: "Separador AGM para baterías de arranque de motocicleta",
+    serviceDescription: "Revisión de especificaciones y muestras de separador AGM de fibra de vidrio para baterías VRLA compactas de motocicleta.",
+    serviceType: "Separador AGM para baterías de motocicleta",
+    image: MOTORCYCLE_APPLICATION_IMAGE,
+    breadcrumbs: ["Inicio", "Aplicaciones", "Separador AGM para motocicleta"]
+  },
+  pt: {
+    path: "/pt/applications/agm-separator-for-motorcycle-battery/",
+    alternatePath: "/applications/agm-separator-for-motorcycle-battery/",
+    locale: "pt_BR",
+    language: "pt-BR",
+    siteName: "Viking AGM",
+    title: "Separador AGM para baterias de motocicletas | Viking AGM",
+    description: "Separadores AGM para baterias VRLA compactas de partida de motocicletas: rolos, folhas, medidas e avaliação de amostras.",
+    keywords: ["separador AGM para bateria de motocicleta", "separador de bateria de motocicleta", "separador VRLA", "separador de bateria de partida", "folhas AGM"],
+    pageName: "Separador AGM para baterias de partida de motocicletas",
+    serviceDescription: "Análise de especificações e amostras de separador AGM de fibra de vidro para baterias VRLA compactas de motocicletas.",
+    serviceType: "Separador AGM para baterias de motocicletas",
+    image: MOTORCYCLE_APPLICATION_IMAGE,
+    breadcrumbs: ["Início", "Aplicações", "Separador AGM para motocicletas"]
+  },
+  ru: {
+    path: "/ru/applications/agm-separator-for-motorcycle-battery/",
+    alternatePath: "/applications/agm-separator-for-motorcycle-battery/",
+    locale: "ru_RU",
+    language: "ru-RU",
+    siteName: "Viking AGM",
+    title: "AGM-сепаратор для мотоциклетных аккумуляторов | Viking AGM",
+    description: "AGM-сепараторы для компактных стартерных VRLA-аккумуляторов мотоциклов: рулоны, листы, размеры и оценка образцов.",
+    keywords: ["AGM-сепаратор для мотоциклетного аккумулятора", "сепаратор мотоциклетного аккумулятора", "сепаратор VRLA", "сепаратор стартерного аккумулятора", "листы AGM"],
+    pageName: "AGM-сепаратор для стартерных аккумуляторов мотоциклов",
+    serviceDescription: "Согласование спецификаций и образцов стекловолоконного AGM-сепаратора для компактных мотоциклетных VRLA-аккумуляторов.",
+    serviceType: "AGM-сепаратор для мотоциклетных аккумуляторов",
+    image: MOTORCYCLE_APPLICATION_IMAGE,
+    breadcrumbs: ["Главная", "Применение", "AGM-сепаратор для мотоциклов"]
   }
 } as const;
 
@@ -1482,7 +1557,12 @@ function buildApplicationDetailMetadata(
   current: ApplicationDetailSeo,
   enPath: string,
   zhPath: string,
-  viPath?: string
+  viPath?: string,
+  koPath?: string,
+  jaPath?: string,
+  esPath?: string,
+  ptPath?: string,
+  ruPath?: string
 ): Metadata {
   return buildMetadata({
     title: current.title,
@@ -1492,6 +1572,11 @@ function buildApplicationDetailMetadata(
     enPath,
     zhPath,
     viPath,
+    koPath,
+    jaPath,
+    esPath,
+    ptPath,
+    ruPath,
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -1530,7 +1615,12 @@ export function buildAgmSeparatorMotorcycleApplicationMetadata(
     ),
     "/applications/agm-separator-for-motorcycle-battery/",
     "/zh/applications/agm-separator-for-motorcycle-battery/",
-    "/vi/applications/agm-separator-for-motorcycle-battery/"
+    "/vi/applications/agm-separator-for-motorcycle-battery/",
+    "/ko/applications/agm-separator-for-motorcycle-battery/",
+    "/ja/applications/agm-separator-for-motorcycle-battery/",
+    "/es/applications/agm-separator-for-motorcycle-battery/",
+    "/pt/applications/agm-separator-for-motorcycle-battery/",
+    "/ru/applications/agm-separator-for-motorcycle-battery/"
   );
 }
 

@@ -17,17 +17,22 @@ const requiredFiles = [
   "vi/products/agm-separator/index.html",
   "ko/request-agm-separator-sample/index.html",
   "ko/products/agm-separator/index.html",
+  "ko/applications/agm-separator-for-motorcycle-battery/index.html",
   "ja/request-agm-separator-sample/index.html",
   "ja/products/agm-separator/index.html",
+  "ja/applications/agm-separator-for-motorcycle-battery/index.html",
   "es/index.html",
   "es/request-agm-separator-sample/index.html",
   "es/products/agm-separator/index.html",
+  "es/applications/agm-separator-for-motorcycle-battery/index.html",
   "pt/index.html",
   "pt/request-agm-separator-sample/index.html",
   "pt/products/agm-separator/index.html",
+  "pt/applications/agm-separator-for-motorcycle-battery/index.html",
   "ru/index.html",
   "ru/request-agm-separator-sample/index.html",
   "ru/products/agm-separator/index.html",
+  "ru/applications/agm-separator-for-motorcycle-battery/index.html",
   "applications/agm-separator-for-ups-battery/index.html",
   "zh/applications/agm-separator-for-ups-battery/index.html",
   "applications/agm-separator-for-motorcycle-battery/index.html",
@@ -96,25 +101,40 @@ const viSampleHtml = readOutFile(
   "vi/request-agm-separator-sample/index.html"
 );
 const koProductHtml = readOutFile("ko/products/agm-separator/index.html");
+const koMotorcycleHtml = readOutFile(
+  "ko/applications/agm-separator-for-motorcycle-battery/index.html"
+);
 const koSampleHtml = readOutFile(
   "ko/request-agm-separator-sample/index.html"
 );
 const jaProductHtml = readOutFile("ja/products/agm-separator/index.html");
+const jaMotorcycleHtml = readOutFile(
+  "ja/applications/agm-separator-for-motorcycle-battery/index.html"
+);
 const jaSampleHtml = readOutFile(
   "ja/request-agm-separator-sample/index.html"
 );
 const esHtml = readOutFile("es/index.html");
 const esProductHtml = readOutFile("es/products/agm-separator/index.html");
+const esMotorcycleHtml = readOutFile(
+  "es/applications/agm-separator-for-motorcycle-battery/index.html"
+);
 const esSampleHtml = readOutFile(
   "es/request-agm-separator-sample/index.html"
 );
 const ptHtml = readOutFile("pt/index.html");
 const ptProductHtml = readOutFile("pt/products/agm-separator/index.html");
+const ptMotorcycleHtml = readOutFile(
+  "pt/applications/agm-separator-for-motorcycle-battery/index.html"
+);
 const ptSampleHtml = readOutFile(
   "pt/request-agm-separator-sample/index.html"
 );
 const ruHtml = readOutFile("ru/index.html");
 const ruProductHtml = readOutFile("ru/products/agm-separator/index.html");
+const ruMotorcycleHtml = readOutFile(
+  "ru/applications/agm-separator-for-motorcycle-battery/index.html"
+);
 const ruSampleHtml = readOutFile(
   "ru/request-agm-separator-sample/index.html"
 );
@@ -354,6 +374,12 @@ const koreanJapanesePages = [
     "ko_KR"
   ],
   [
+    koMotorcycleHtml,
+    "/ko/applications/agm-separator-for-motorcycle-battery/",
+    "ko-KR",
+    "ko_KR"
+  ],
+  [
     koSampleHtml,
     "/ko/request-agm-separator-sample/",
     "ko-KR",
@@ -363,6 +389,12 @@ const koreanJapanesePages = [
   [
     jaProductHtml,
     "/ja/products/agm-separator/",
+    "ja-JP",
+    "ja_JP"
+  ],
+  [
+    jaMotorcycleHtml,
+    "/ja/applications/agm-separator-for-motorcycle-battery/",
     "ja-JP",
     "ja_JP"
   ],
@@ -391,13 +423,13 @@ if (koreanJapaneseSeoComplete) {
 }
 
 if (
-  [koHtml, koProductHtml, koSampleHtml].every(
+  [koHtml, koProductHtml, koMotorcycleHtml, koSampleHtml].every(
     (html) =>
       html.includes('value="Motorcycle battery"') &&
       html.includes('value="AGM separator rolls"') &&
       /name="language"\s+value="ko"/.test(html)
   ) &&
-  [jaHtml, jaProductHtml, jaSampleHtml].every(
+  [jaHtml, jaProductHtml, jaMotorcycleHtml, jaSampleHtml].every(
     (html) =>
       html.includes('value="Motorcycle battery"') &&
       html.includes('value="AGM separator rolls"') &&
@@ -418,6 +450,12 @@ const spanishPortugueseRussianPages = [
     "es_LA"
   ],
   [
+    esMotorcycleHtml,
+    "/es/applications/agm-separator-for-motorcycle-battery/",
+    "es",
+    "es_LA"
+  ],
+  [
     esSampleHtml,
     "/es/request-agm-separator-sample/",
     "es",
@@ -431,6 +469,12 @@ const spanishPortugueseRussianPages = [
     "pt_BR"
   ],
   [
+    ptMotorcycleHtml,
+    "/pt/applications/agm-separator-for-motorcycle-battery/",
+    "pt-BR",
+    "pt_BR"
+  ],
+  [
     ptSampleHtml,
     "/pt/request-agm-separator-sample/",
     "pt-BR",
@@ -440,6 +484,12 @@ const spanishPortugueseRussianPages = [
   [
     ruProductHtml,
     "/ru/products/agm-separator/",
+    "ru-RU",
+    "ru_RU"
+  ],
+  [
+    ruMotorcycleHtml,
+    "/ru/applications/agm-separator-for-motorcycle-battery/",
     "ru-RU",
     "ru_RU"
   ],
@@ -468,9 +518,9 @@ if (spanishPortugueseRussianSeoComplete) {
 }
 
 const newLocaleFormsComplete = [
-  ["es", esHtml, esProductHtml, esSampleHtml],
-  ["pt", ptHtml, ptProductHtml, ptSampleHtml],
-  ["ru", ruHtml, ruProductHtml, ruSampleHtml]
+  ["es", esHtml, esProductHtml, esMotorcycleHtml, esSampleHtml],
+  ["pt", ptHtml, ptProductHtml, ptMotorcycleHtml, ptSampleHtml],
+  ["ru", ruHtml, ruProductHtml, ruMotorcycleHtml, ruSampleHtml]
 ].every(([language, ...pages]) =>
   pages.every(
     (html) =>
@@ -562,6 +612,12 @@ const p0ApplicationUrls = [
   "https://www.vikingagm.com/zh/applications/agm-separator-for-ups-battery/",
   "https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/",
   "https://www.vikingagm.com/zh/applications/agm-separator-for-motorcycle-battery/",
+  "https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/",
+  "https://www.vikingagm.com/ko/applications/agm-separator-for-motorcycle-battery/",
+  "https://www.vikingagm.com/ja/applications/agm-separator-for-motorcycle-battery/",
+  "https://www.vikingagm.com/es/applications/agm-separator-for-motorcycle-battery/",
+  "https://www.vikingagm.com/pt/applications/agm-separator-for-motorcycle-battery/",
+  "https://www.vikingagm.com/ru/applications/agm-separator-for-motorcycle-battery/",
   "https://www.vikingagm.com/applications/agm-separator-for-energy-storage-battery/",
   "https://www.vikingagm.com/zh/applications/agm-separator-for-energy-storage-battery/"
 ];
@@ -572,10 +628,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 57) {
-  pass("sitemap.xml lists the expected 57 localized public URLs");
+if (sitemapUrls.length === 62) {
+  pass("sitemap.xml lists the expected 62 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 57`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 62`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -600,7 +656,7 @@ const expectedSitemapLastmod = [
   ],
   [
     "https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/",
-    "2026-07-28"
+    "2026-07-31"
   ],
   [
     "https://www.vikingagm.com/vi/request-agm-separator-sample/",
@@ -615,6 +671,10 @@ const expectedSitemapLastmod = [
     "2026-07-30"
   ],
   [
+    "https://www.vikingagm.com/ko/applications/agm-separator-for-motorcycle-battery/",
+    "2026-07-31"
+  ],
+  [
     "https://www.vikingagm.com/ko/request-agm-separator-sample/",
     "2026-07-30"
   ],
@@ -623,16 +683,32 @@ const expectedSitemapLastmod = [
     "2026-07-30"
   ],
   [
+    "https://www.vikingagm.com/ja/applications/agm-separator-for-motorcycle-battery/",
+    "2026-07-31"
+  ],
+  [
     "https://www.vikingagm.com/es/",
     "2026-07-30"
+  ],
+  [
+    "https://www.vikingagm.com/es/applications/agm-separator-for-motorcycle-battery/",
+    "2026-07-31"
   ],
   [
     "https://www.vikingagm.com/pt/products/agm-separator/",
     "2026-07-30"
   ],
   [
+    "https://www.vikingagm.com/pt/applications/agm-separator-for-motorcycle-battery/",
+    "2026-07-31"
+  ],
+  [
     "https://www.vikingagm.com/ru/request-agm-separator-sample/",
     "2026-07-30"
+  ],
+  [
+    "https://www.vikingagm.com/ru/applications/agm-separator-for-motorcycle-battery/",
+    "2026-07-31"
   ],
   [
     "https://www.vikingagm.com/ja/products/agm-separator/",

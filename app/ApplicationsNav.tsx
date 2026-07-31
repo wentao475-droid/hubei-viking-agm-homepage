@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Lang } from "./locales";
-
-type ApplicationsLocale = Lang | "vi";
+import type { SiteLocale } from "./locales";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -80,13 +78,78 @@ const applicationsNavItems = {
         "Trao đổi về kích thước và dạng tấm ngăn cho ắc quy khởi động xe máy.",
       href: "/vi/applications/agm-separator-for-motorcycle-battery/"
     }
+  ],
+  ko: [
+    {
+      title: "적용 분야 개요",
+      description: "AGM 분리막이 사용되는 주요 납축전지 적용 분야입니다.",
+      href: "/ko/#applications"
+    },
+    {
+      title: "오토바이 배터리용 AGM 분리막",
+      description: "소형 시동 배터리용 규격, 롤 및 시트 형태를 검토합니다.",
+      href: "/ko/applications/agm-separator-for-motorcycle-battery/"
+    }
+  ],
+  ja: [
+    {
+      title: "用途概要",
+      description: "AGMセパレーターが使用される主な鉛蓄電池用途です。",
+      href: "/ja/#applications"
+    },
+    {
+      title: "二輪車用バッテリー向けAGMセパレーター",
+      description: "小型始動用バッテリーの寸法、ロール・シート形状を確認します。",
+      href: "/ja/applications/agm-separator-for-motorcycle-battery/"
+    }
+  ],
+  es: [
+    {
+      title: "Resumen de aplicaciones",
+      description: "Principales aplicaciones de baterías de plomo-ácido con separador AGM.",
+      href: "/es/#applications"
+    },
+    {
+      title: "Separador AGM para baterías de motocicleta",
+      description: "Revisión de medidas y formatos para baterías compactas de arranque.",
+      href: "/es/applications/agm-separator-for-motorcycle-battery/"
+    }
+  ],
+  pt: [
+    {
+      title: "Visão geral das aplicações",
+      description: "Principais aplicações de baterias chumbo-ácido com separador AGM.",
+      href: "/pt/#applications"
+    },
+    {
+      title: "Separador AGM para baterias de motocicletas",
+      description: "Análise de medidas e formatos para baterias compactas de partida.",
+      href: "/pt/applications/agm-separator-for-motorcycle-battery/"
+    }
+  ],
+  ru: [
+    {
+      title: "Обзор применений",
+      description: "Основные области применения AGM-сепараторов в свинцово-кислотных аккумуляторах.",
+      href: "/ru/#applications"
+    },
+    {
+      title: "AGM-сепаратор для мотоциклетных аккумуляторов",
+      description: "Согласование размеров и форматов для компактных стартерных аккумуляторов.",
+      href: "/ru/applications/agm-separator-for-motorcycle-battery/"
+    }
   ]
 } as const;
 
 const applicationsNavEyebrow = {
   en: "Application",
   zh: "应用",
-  vi: "Ứng dụng"
+  vi: "Ứng dụng",
+  ko: "적용 분야",
+  ja: "用途",
+  es: "Aplicación",
+  pt: "Aplicação",
+  ru: "Применение"
 } as const;
 
 function asset(path: string) {
@@ -97,7 +160,7 @@ export function ApplicationsNavDropdown({
   lang,
   label
 }: {
-  lang: ApplicationsLocale;
+  lang: SiteLocale;
   label: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -167,7 +230,7 @@ export function ApplicationsNavMobileGroup({
   label,
   onNavigate
 }: {
-  lang: ApplicationsLocale;
+  lang: SiteLocale;
   label: string;
   onNavigate?: () => void;
 }) {

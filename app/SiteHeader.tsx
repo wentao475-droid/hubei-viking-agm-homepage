@@ -187,7 +187,7 @@ export function SiteHeader({
   const t = headerCopy[lang];
   const homeHref = asset(homePath);
   const hasFullNavigation = lang === "en" || lang === "zh";
-  const hasApplications = hasFullNavigation || lang === "vi";
+  const hasApplications = true;
 
   const navItemsBeforeProducts = [[t.company, `${homeHref}#company`]] as const;
   const navItemsAfterResources = [[t.contact, "#contact"]] as const;

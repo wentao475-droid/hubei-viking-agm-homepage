@@ -76,49 +76,7 @@ check(
   "resource hub is registered in the sitemap"
 );
 
-const vietnamesePages = [
-  {
-    key: "home",
-    route: "app/vi/page.tsx",
-    path: "/vi/",
-    content: content.home?.vi,
-    seo: content.seo?.home?.vi
-  },
-  {
-    key: "agmSeparator",
-    route: "app/vi/products/agm-separator/page.tsx",
-    path: "/vi/products/agm-separator/",
-    content: content.products?.agmSeparator?.vi,
-    seo: content.seo?.agmSeparator?.vi
-  },
-  {
-    key: "agmSeparatorMotorcycleApplication",
-    route:
-      "app/vi/applications/agm-separator-for-motorcycle-battery/page.tsx",
-    path: "/vi/applications/agm-separator-for-motorcycle-battery/",
-    content: content.products?.agmSeparatorMotorcycleApplication?.vi,
-    seo: content.seo?.agmSeparatorMotorcycleApplication?.vi
-  },
-  {
-    key: "sampleRequest",
-    route: "app/vi/request-agm-separator-sample/page.tsx",
-    path: "/vi/request-agm-separator-sample/",
-    content: content.sampleRequest?.vi,
-    seo: content.seo?.sampleRequest?.vi
-  }
-];
-
-for (const page of vietnamesePages) {
-  check(Boolean(page.content), `${page.key} has Vietnamese page content`);
-  check(Boolean(page.seo), `${page.key} has Vietnamese SEO content`);
-  check(existsSync(join(root, page.route)), `${page.key} has a Vietnamese route`);
-  check(
-    sitemapSource.includes(`vi: "${page.path}"`),
-    `${page.key} is registered as Vietnamese in the sitemap`
-  );
-}
-
-const coreLocalizedPages = ["ko", "ja", "es", "pt", "ru"].flatMap((locale) => [
+const secondaryLocalizedPages = ["vi", "ko", "ja", "es", "pt", "ru"].flatMap((locale) => [
   {
     key: `home.${locale}`,
     route: `app/${locale}/page.tsx`,
@@ -134,6 +92,13 @@ const coreLocalizedPages = ["ko", "ja", "es", "pt", "ru"].flatMap((locale) => [
     seo: content.seo?.agmSeparator?.[locale]
   },
   {
+    key: `agmSeparatorMotorcycleApplication.${locale}`,
+    route: `app/${locale}/applications/agm-separator-for-motorcycle-battery/page.tsx`,
+    path: `/${locale}/applications/agm-separator-for-motorcycle-battery/`,
+    content: content.products?.agmSeparatorMotorcycleApplication?.[locale],
+    seo: content.seo?.agmSeparatorMotorcycleApplication?.[locale]
+  },
+  {
     key: `sampleRequest.${locale}`,
     route: `app/${locale}/request-agm-separator-sample/page.tsx`,
     path: `/${locale}/request-agm-separator-sample/`,
@@ -142,7 +107,7 @@ const coreLocalizedPages = ["ko", "ja", "es", "pt", "ru"].flatMap((locale) => [
   }
 ]);
 
-for (const page of coreLocalizedPages) {
+for (const page of secondaryLocalizedPages) {
   check(Boolean(page.content), `${page.key} has localized page content`);
   check(Boolean(page.seo), `${page.key} has localized SEO content`);
   check(existsSync(join(root, page.route)), `${page.key} has a route`);
@@ -157,7 +122,7 @@ if (failed) {
 }
 
 console.log(
-  `PASS content registry is complete for ${articles.length} bilingual articles, ${vietnamesePages.length} Vietnamese pages and ${coreLocalizedPages.length} core localized pages`
+  `PASS content registry is complete for ${articles.length} bilingual articles and ${secondaryLocalizedPages.length} aligned secondary-language pages`
 );
 
 function check(condition, message) {

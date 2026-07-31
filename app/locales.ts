@@ -27,7 +27,12 @@ export const localizedRouteGroups = [
   {
     en: "/applications/agm-separator-for-motorcycle-battery/",
     zh: "/zh/applications/agm-separator-for-motorcycle-battery/",
-    vi: "/vi/applications/agm-separator-for-motorcycle-battery/"
+    vi: "/vi/applications/agm-separator-for-motorcycle-battery/",
+    ko: "/ko/applications/agm-separator-for-motorcycle-battery/",
+    ja: "/ja/applications/agm-separator-for-motorcycle-battery/",
+    es: "/es/applications/agm-separator-for-motorcycle-battery/",
+    pt: "/pt/applications/agm-separator-for-motorcycle-battery/",
+    ru: "/ru/applications/agm-separator-for-motorcycle-battery/"
   },
   {
     en: "/request-agm-separator-sample/",

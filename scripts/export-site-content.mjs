@@ -156,7 +156,11 @@ const productConstants = collectConstants("app/ProductPage.tsx", [
   "viContent",
   "koContent",
   "jaContent",
-  "additionalAgmContent"
+  "additionalAgmContent",
+  "commonRelated",
+  "footerCopy",
+  "motorcycleApplicationCopy",
+  "motorcycleFormImages"
 ]);
 const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "articleCopy",
@@ -214,6 +218,75 @@ for (const [locale, value] of Object.entries(
   products.agmSeparator = {
     ...products.agmSeparator,
     [locale]: value
+  };
+}
+
+for (const [locale, copy] of Object.entries(
+  productConstants.motorcycleApplicationCopy
+)) {
+  const images = productConstants.motorcycleFormImages;
+  products.agmSeparatorMotorcycleApplication = {
+    ...products.agmSeparatorMotorcycleApplication,
+    [locale]: {
+      homePath: `/${locale}/`,
+      languagePath: "/applications/agm-separator-for-motorcycle-battery/",
+      quote: copy.quote,
+      hero: {
+        eyebrow: copy.eyebrow,
+        title: copy.title,
+        subtitle: copy.subtitle,
+        primary: copy.primary,
+        secondary: copy.secondary,
+        proof: copy.proof,
+        image: {
+          src: images[2][0],
+          alt: copy.imageAlt,
+          width: 1200,
+          height: 900
+        }
+      },
+      overview: {
+        eyebrow: copy.overview[0],
+        title: copy.overview[1],
+        paragraphs: [copy.overview[2], copy.overview[3]]
+      },
+      parameters: {
+        eyebrow: copy.parameters[0],
+        title: copy.parameters[1],
+        text: copy.parameters[2],
+        items: copy.parameters[3]
+      },
+      forms: {
+        eyebrow: copy.forms[0],
+        title: copy.forms[1],
+        items: copy.forms[2].map(([title, text, alt], index) => [
+          title,
+          text,
+          images[index][0],
+          alt,
+          images[index][1],
+          images[index][2]
+        ])
+      },
+      applications: {
+        eyebrow: copy.applications[0],
+        title: copy.applications[1],
+        items: copy.applications[2]
+      },
+      quality: {
+        eyebrow: copy.quality[0],
+        title: copy.quality[1],
+        text: copy.quality[2],
+        cards: copy.quality[3]
+      },
+      related: {
+        eyebrow: copy.related[0],
+        title: copy.related[1],
+        items: productConstants.commonRelated[locale]
+      },
+      inquiry: copy.inquiry,
+      footer: productConstants.footerCopy[locale]
+    }
   };
 }
 
