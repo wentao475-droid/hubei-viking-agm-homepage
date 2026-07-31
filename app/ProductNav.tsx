@@ -49,6 +49,16 @@ const productNavItems = {
       description:
         "Dạng cuộn và tấm cho các ứng dụng ắc quy axit-chì VRLA.",
       href: "/vi/products/agm-separator/"
+    },
+    {
+      title: "Tấm ngăn AGM dạng cuộn",
+      description: "Cuộn AGM cho dây chuyền sản xuất, xẻ cuộn và cắt tại nhà máy.",
+      href: "/vi/products/agm-separator-rolls/"
+    },
+    {
+      title: "Tấm ngăn AGM dạng tấm",
+      description: "Tấm cắt sẵn cho lắp ráp ắc quy VRLA và đánh giá mẫu.",
+      href: "/vi/products/agm-separator-sheets/"
     }
   ],
   ko: [
@@ -56,6 +66,16 @@ const productNavItems = {
       title: "VRLA 배터리용 AGM 분리막",
       description: "VRLA 납축전지용 롤 및 시트 형태의 AGM 분리막.",
       href: "/ko/products/agm-separator/"
+    },
+    {
+      title: "AGM 분리막 롤",
+      description: "배터리 생산 라인, 슬리팅 및 사내 절단용 롤 공급.",
+      href: "/ko/products/agm-separator-rolls/"
+    },
+    {
+      title: "AGM 분리막 시트",
+      description: "VRLA 배터리 조립 및 샘플 검토용 사전 절단 시트.",
+      href: "/ko/products/agm-separator-sheets/"
     }
   ],
   ja: [
@@ -63,6 +83,16 @@ const productNavItems = {
       title: "VRLAバッテリー用AGMセパレーター",
       description: "VRLA鉛蓄電池向けのロール・シート形状に対応します。",
       href: "/ja/products/agm-separator/"
+    },
+    {
+      title: "AGMセパレーター ロール",
+      description: "電池生産ライン、スリット、社内裁断向けのロール供給。",
+      href: "/ja/products/agm-separator-rolls/"
+    },
+    {
+      title: "AGMセパレーター シート",
+      description: "VRLA電池組立・サンプル確認向けのカットシート。",
+      href: "/ja/products/agm-separator-sheets/"
     }
   ],
   es: [
@@ -71,6 +101,16 @@ const productNavItems = {
       description:
         "Separadores AGM en rollos y láminas para baterías de plomo-ácido VRLA.",
       href: "/es/products/agm-separator/"
+    },
+    {
+      title: "Rollos de separador AGM",
+      description: "Rollos para líneas de baterías, corte longitudinal y conversión interna.",
+      href: "/es/products/agm-separator-rolls/"
+    },
+    {
+      title: "Láminas de separador AGM",
+      description: "Láminas precortadas para montaje VRLA y evaluación de muestras.",
+      href: "/es/products/agm-separator-sheets/"
     }
   ],
   pt: [
@@ -79,6 +119,16 @@ const productNavItems = {
       description:
         "Separadores AGM em rolos e folhas para baterias chumbo-ácido VRLA.",
       href: "/pt/products/agm-separator/"
+    },
+    {
+      title: "Rolos de separador AGM",
+      description: "Rolos para linhas de baterias, corte longitudinal e conversão interna.",
+      href: "/pt/products/agm-separator-rolls/"
+    },
+    {
+      title: "Folhas de separador AGM",
+      description: "Folhas pré-cortadas para montagem VRLA e avaliação de amostras.",
+      href: "/pt/products/agm-separator-sheets/"
     }
   ],
   ru: [
@@ -87,6 +137,16 @@ const productNavItems = {
       description:
         "AGM-сепараторы в рулонах и листах для свинцово-кислотных аккумуляторов VRLA.",
       href: "/ru/products/agm-separator/"
+    },
+    {
+      title: "Рулоны AGM-сепаратора",
+      description: "Рулоны для линий сборки аккумуляторов, продольной и внутренней резки.",
+      href: "/ru/products/agm-separator-rolls/"
+    },
+    {
+      title: "Листы AGM-сепаратора",
+      description: "Нарезанные листы для сборки VRLA и оценки образцов.",
+      href: "/ru/products/agm-separator-sheets/"
     }
   ]
 } as const;

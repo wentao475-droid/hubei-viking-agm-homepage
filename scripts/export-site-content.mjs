@@ -159,6 +159,8 @@ const productConstants = collectConstants("app/ProductPage.tsx", [
   "additionalAgmContent",
   "commonRelated",
   "footerCopy",
+  "secondaryDetailCopy",
+  "detailFormImages",
   "motorcycleApplicationCopy",
   "motorcycleFormImages"
 ]);
@@ -219,6 +221,93 @@ for (const [locale, value] of Object.entries(
     ...products.agmSeparator,
     [locale]: value
   };
+}
+
+for (const [locale, detailCopy] of Object.entries(
+  productConstants.secondaryDetailCopy
+)) {
+  const base = products.agmSeparator[locale];
+
+  for (const [page, variant] of [
+    ["agmSeparatorRolls", "rolls"],
+    ["agmSeparatorSheets", "sheets"],
+    ["agmSeparatorTesting", "testing"]
+  ]) {
+    const copy = detailCopy[variant];
+    const images = productConstants.detailFormImages[variant];
+    const path = page === "agmSeparatorTesting"
+      ? "/quality-control/agm-separator-testing/"
+      : page === "agmSeparatorRolls"
+        ? "/products/agm-separator-rolls/"
+        : "/products/agm-separator-sheets/";
+    const heroImage = page === "agmSeparatorTesting"
+      ? ["/images/agm-quality-control-1200.webp", 1200, 900]
+      : images[0];
+    const forms = page === "agmSeparatorTesting"
+      ? copy.testCards.map(([title, text, alt], index) => [
+          title,
+          text,
+          images[index][0],
+          alt,
+          images[index][1],
+          images[index][2]
+        ])
+      : base.forms.items.map(([title, text, , alt], index) => [
+          title,
+          text,
+          images[index][0],
+          alt,
+          images[index][1],
+          images[index][2]
+        ]);
+
+    products[page] = {
+      ...products[page],
+      [locale]: {
+        ...base,
+        languagePath: path,
+        hero: {
+          eyebrow: copy.hero[0],
+          title: copy.hero[1],
+          subtitle: copy.hero[2],
+          primary: copy.hero[3],
+          secondary: base.hero.secondary,
+          proof: copy.proof,
+          image: {
+            src: heroImage[0],
+            alt: copy.hero[1],
+            width: heroImage[1],
+            height: heroImage[2]
+          }
+        },
+        overview: {
+          eyebrow: base.overview.eyebrow,
+          title: copy.overview[0],
+          paragraphs: [copy.overview[1], copy.overview[2]]
+        },
+        parameters: {
+          eyebrow: base.parameters.eyebrow,
+          title: copy.parameters[0],
+          text: copy.parameters[1],
+          items: base.parameters.items
+        },
+        forms: {
+          eyebrow: base.forms.eyebrow,
+          title: copy.formsTitle,
+          items: forms
+        },
+        related: {
+          ...base.related,
+          items: productConstants.commonRelated[locale]
+        },
+        inquiry: {
+          ...base.inquiry,
+          title: copy.inquiry[0],
+          text: copy.inquiry[1]
+        }
+      }
+    };
+  }
 }
 
 for (const [locale, copy] of Object.entries(

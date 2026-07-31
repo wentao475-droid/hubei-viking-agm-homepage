@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -20,12 +20,36 @@ const qualityNavItems = {
       description: "围绕厚度、克重、吸酸性能、电阻和外观等项目进行质量沟通。",
       href: "/zh/quality-control/agm-separator-testing/"
     }
+  ],
+  vi: [
+    { title: "Kiểm tra tấm ngăn AGM", description: "Kiểm tra độ dày, định lượng, hút axit, điện trở và ngoại quan.", href: "/vi/quality-control/agm-separator-testing/" }
+  ],
+  ko: [
+    { title: "AGM 분리막 시험", description: "두께, 평량, 산 흡수, 전기 저항 및 외관 품질을 확인합니다.", href: "/ko/quality-control/agm-separator-testing/" }
+  ],
+  ja: [
+    { title: "AGMセパレーター試験", description: "厚さ、坪量、吸液、電気抵抗、外観を確認します。", href: "/ja/quality-control/agm-separator-testing/" }
+  ],
+  es: [
+    { title: "Ensayos de separadores AGM", description: "Control de espesor, gramaje, absorción de ácido, resistencia y apariencia.", href: "/es/quality-control/agm-separator-testing/" }
+  ],
+  pt: [
+    { title: "Ensaios de separadores AGM", description: "Controle de espessura, gramatura, absorção de ácido, resistência e aparência.", href: "/pt/quality-control/agm-separator-testing/" }
+  ],
+  ru: [
+    { title: "Испытания AGM-сепаратора", description: "Контроль толщины, плотности, впитывания кислоты, сопротивления и внешнего вида.", href: "/ru/quality-control/agm-separator-testing/" }
   ]
 } as const;
 
 const qualityNavEyebrow = {
   en: "Quality page",
-  zh: "质量页面"
+  zh: "质量页面",
+  vi: "Chất lượng",
+  ko: "품질",
+  ja: "品質",
+  es: "Calidad",
+  pt: "Qualidade",
+  ru: "Качество"
 } as const;
 
 function asset(path: string) {
@@ -36,7 +60,7 @@ export function QualityNavDropdown({
   lang,
   label
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   label: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -106,7 +130,7 @@ export function QualityNavMobileGroup({
   label,
   onNavigate
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   label: string;
   onNavigate?: () => void;
 }) {

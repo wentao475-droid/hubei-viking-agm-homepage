@@ -4258,6 +4258,18 @@
               "/vi/products/agm-separator/"
             ],
             [
+              "Tấm ngăn AGM dạng cuộn",
+              "/vi/products/agm-separator-rolls/"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "/vi/products/agm-separator-sheets/"
+            ],
+            [
+              "Kiểm tra tấm ngăn AGM",
+              "/vi/quality-control/agm-separator-testing/"
+            ],
+            [
               "Ứng dụng ắc quy xe máy",
               "/vi/applications/agm-separator-for-motorcycle-battery/"
             ],
@@ -4429,6 +4441,18 @@
             [
               "AGM 분리막 제품",
               "/ko/products/agm-separator/"
+            ],
+            [
+              "AGM 분리막 롤",
+              "/ko/products/agm-separator-rolls/"
+            ],
+            [
+              "AGM 분리막 시트",
+              "/ko/products/agm-separator-sheets/"
+            ],
+            [
+              "AGM 분리막 시험",
+              "/ko/quality-control/agm-separator-testing/"
             ],
             [
               "오토바이 배터리 적용",
@@ -4604,6 +4628,18 @@
               "/ja/products/agm-separator/"
             ],
             [
+              "AGMセパレーター ロール",
+              "/ja/products/agm-separator-rolls/"
+            ],
+            [
+              "AGMセパレーター シート",
+              "/ja/products/agm-separator-sheets/"
+            ],
+            [
+              "AGMセパレーター試験",
+              "/ja/quality-control/agm-separator-testing/"
+            ],
+            [
               "二輪車用バッテリー用途",
               "/ja/applications/agm-separator-for-motorcycle-battery/"
             ],
@@ -4775,6 +4811,18 @@
             [
               "Separador AGM",
               "/es/products/agm-separator/"
+            ],
+            [
+              "Rollos de separador AGM",
+              "/es/products/agm-separator-rolls/"
+            ],
+            [
+              "Láminas de separador AGM",
+              "/es/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensayos de separadores AGM",
+              "/es/quality-control/agm-separator-testing/"
             ],
             [
               "Aplicación para baterías de motocicleta",
@@ -4950,6 +4998,18 @@
               "/pt/products/agm-separator/"
             ],
             [
+              "Rolos de separador AGM",
+              "/pt/products/agm-separator-rolls/"
+            ],
+            [
+              "Folhas de separador AGM",
+              "/pt/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensaios de separadores AGM",
+              "/pt/quality-control/agm-separator-testing/"
+            ],
+            [
               "Aplicação em baterias de motocicletas",
               "/pt/applications/agm-separator-for-motorcycle-battery/"
             ],
@@ -5121,6 +5181,18 @@
             [
               "AGM-сепаратор",
               "/ru/products/agm-separator/"
+            ],
+            [
+              "Рулоны AGM-сепаратора",
+              "/ru/products/agm-separator-rolls/"
+            ],
+            [
+              "Листы AGM-сепаратора",
+              "/ru/products/agm-separator-sheets/"
+            ],
+            [
+              "Испытания AGM-сепаратора",
+              "/ru/quality-control/agm-separator-testing/"
             ],
             [
               "Применение в мотоциклетных аккумуляторах",
@@ -5534,6 +5606,1110 @@
           "wechat": "官方微信公众号",
           "mobile": "移动官网"
         }
+      },
+      "vi": {
+        "homePath": "/vi/",
+        "languagePath": "/products/agm-separator-rolls/",
+        "quote": "Yêu cầu báo giá",
+        "hero": {
+          "eyebrow": "Tấm ngăn AGM dạng cuộn",
+          "title": "Cuộn tấm ngăn AGM cho dây chuyền sản xuất ắc quy",
+          "subtitle": "Vật liệu sợi thủy tinh AGM dạng cuộn cho xẻ cuộn, cắt tại nhà máy và sản xuất ắc quy VRLA.",
+          "primary": "Yêu cầu mẫu cuộn AGM",
+          "secondary": "Gửi quy cách cần thiết",
+          "proof": [
+            "Trao đổi chiều rộng và độ dày",
+            "Xác nhận lõi và đường kính cuộn",
+            "Đóng gói theo yêu cầu"
+          ],
+          "image": {
+            "src": "/images/viking-finished-separator-roll-900.webp",
+            "alt": "Cuộn tấm ngăn AGM cho dây chuyền sản xuất ắc quy",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "Tổng quan sản phẩm",
+          "title": "Dạng cuộn hỗ trợ sản xuất và cắt liên tục",
+          "paragraphs": [
+            "Cuộn AGM phù hợp với nhà sản xuất tự xẻ hoặc cắt vật liệu theo thiết kế bản cực và quy trình lắp ráp.",
+            "Chiều rộng, độ dày, chiều dài, lõi, đường kính và đóng gói cần được xác nhận trước khi làm mẫu hoặc sản xuất."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Thông số chính",
+          "title": "Thông tin cần xác nhận cho cuộn AGM",
+          "text": "Hãy gửi chiều rộng, độ dày, đường kính hoặc chiều dài cuộn, kích thước lõi và yêu cầu đóng gói.",
+          "items": [
+            [
+              "Độ dày",
+              "Cần được xem xét cùng khoảng cách bản cực, độ nén và yêu cầu lắp ráp."
+            ],
+            [
+              "Chiều rộng hoặc kích thước tấm",
+              "Có thể trao đổi chiều rộng cuộn, hướng xẻ hoặc kích thước cắt sẵn."
+            ],
+            [
+              "Định lượng",
+              "Được đánh giá cùng cấu trúc vật liệu, khả năng giữ điện phân và phương pháp thử."
+            ],
+            [
+              "Khả năng hút axit",
+              "Xác nhận theo ứng dụng, nhu cầu giữ điện phân và điều kiện thử đã thống nhất."
+            ],
+            [
+              "Điện trở",
+              "Xem xét với mục tiêu hiệu suất ắc quy và điều kiện thử."
+            ],
+            [
+              "Độ rỗng và độ bền",
+              "Có thể kiểm tra theo nhu cầu gia công, cắt và lắp ráp."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Dạng sản phẩm",
+          "title": "Cuộn thành phẩm, sản xuất và đóng gói",
+          "items": [
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "Có thể trao đổi độ dày, chiều rộng, đường kính cuộn, cách đóng gói và kế hoạch sản xuất.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Cuộn tấm ngăn AGM thành phẩm",
+              900,
+              675
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "Tấm cắt sẵn hỗ trợ đánh giá mẫu, xác nhận quy cách và yêu cầu lắp ráp.",
+              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "Tấm ngăn AGM cắt sẵn",
+              1200,
+              900
+            ],
+            [
+              "Theo dõi sản xuất",
+              "Hình ảnh nguyên liệu và dây chuyền giúp trao đổi cụ thể hơn về quá trình sản xuất.",
+              "/images/evidence/agm-separator-roll-end-face-01.webp",
+              "Nguyên liệu tấm ngăn AGM vào dây chuyền",
+              1200,
+              900
+            ],
+            [
+              "Chuẩn bị đóng gói và giao hàng",
+              "Có thể xem xét cách đóng gói, pallet và chuẩn bị xuất hàng.",
+              "/images/evidence/agm-separator-roll-packaging-01.webp",
+              "Đóng gói và chuẩn bị giao tấm ngăn AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Ứng dụng",
+          "title": "Dùng cho các phân khúc ắc quy axit-chì VRLA chính",
+          "items": [
+            "Ắc quy UPS",
+            "Nguồn dự phòng viễn thông",
+            "Ắc quy xe máy",
+            "Ắc quy khởi động ô tô",
+            "Ắc quy lưu trữ năng lượng"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Ghi chú chất lượng",
+          "title": "Hạng mục kiểm tra theo yêu cầu đã xác nhận",
+          "text": "Hạng mục thử nghiệm và giá trị chấp nhận cần được hai bên xác nhận trước khi sản xuất và giao hàng.",
+          "cards": [
+            [
+              "Kiểm tra đầu vào và quy trình",
+              "Tình trạng vật liệu và quy trình có thể được xem xét khi trao đổi đơn hàng."
+            ],
+            [
+              "Kiểm tra thành phẩm",
+              "Các thông số thành phẩm được kiểm tra theo hạng mục đã thống nhất."
+            ],
+            [
+              "Xác nhận yêu cầu",
+              "Giá trị chấp nhận cần được xác nhận trước khi sản xuất."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Trang liên quan",
+          "title": "Tiếp tục xem ứng dụng và yêu cầu mẫu",
+          "items": [
+            [
+              "Sản phẩm tấm ngăn AGM",
+              "/vi/products/agm-separator/"
+            ],
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "/vi/products/agm-separator-rolls/"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "/vi/products/agm-separator-sheets/"
+            ],
+            [
+              "Kiểm tra tấm ngăn AGM",
+              "/vi/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Ứng dụng ắc quy xe máy",
+              "/vi/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Yêu cầu mẫu",
+              "/vi/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Yêu cầu",
+          "title": "Gửi yêu cầu cuộn AGM",
+          "text": "Chia sẻ chiều rộng, độ dày, lõi, đường kính, số lượng và ứng dụng ắc quy để bắt đầu trao đổi.",
+          "checklist": [
+            "Độ dày và chiều rộng mục tiêu",
+            "Dạng cuộn hoặc kích thước tấm",
+            "Ứng dụng và mẫu ắc quy",
+            "Số lượng và yêu cầu mẫu",
+            "Yêu cầu thử nghiệm hoặc đóng gói"
+          ],
+          "placeholder": "Độ dày, chiều rộng, dạng cuộn hoặc tấm, số lượng, yêu cầu mẫu và thử nghiệm",
+          "submit": "Gửi yêu cầu",
+          "submitting": "Đang gửi...",
+          "required": "Vui lòng nhập họ tên và thông tin liên hệ.",
+          "success": "Cảm ơn bạn. Chúng tôi sẽ xem xét và liên hệ lại.",
+          "failure": "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau.",
+          "emailFallback": "Ứng dụng email đã được mở với nội dung yêu cầu. Vui lòng gửi email để hoàn tất."
+        },
+        "footer": {
+          "description": "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
+          "wechat": "Tài khoản WeChat chính thức",
+          "mobile": "Website di động"
+        }
+      },
+      "ko": {
+        "homePath": "/ko/",
+        "languagePath": "/products/agm-separator-rolls/",
+        "quote": "샘플 요청",
+        "hero": {
+          "eyebrow": "AGM 분리막 롤",
+          "title": "배터리 생산 라인용 AGM 분리막 롤",
+          "subtitle": "VRLA 배터리 생산, 슬리팅 및 사내 절단을 위한 유리섬유 AGM 롤 소재입니다.",
+          "primary": "AGM 롤 샘플 요청",
+          "secondary": "사양 정보 보내기",
+          "proof": [
+            "폭과 두께 협의",
+            "코어와 롤 직경 확인",
+            "포장 요구사항 검토"
+          ],
+          "image": {
+            "src": "/images/viking-finished-separator-roll-900.webp",
+            "alt": "배터리 생산 라인용 AGM 분리막 롤",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "제품 개요",
+          "title": "연속 생산과 절단 공정에 맞춘 롤 공급",
+          "paragraphs": [
+            "AGM 롤은 고객이 배터리 설계와 조립 공정에 맞춰 직접 슬리팅하거나 절단하는 생산 방식에 적합합니다.",
+            "샘플 또는 생산 전에 폭, 두께, 길이, 코어, 롤 직경과 포장 방식을 확인합니다."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "주요 사양",
+          "title": "AGM 롤 사양 확인 항목",
+          "text": "폭, 두께, 롤 길이 또는 직경, 코어 크기, 수량과 포장 요구사항을 보내 주세요.",
+          "items": [
+            [
+              "두께",
+              "극판 간격, 압축 조건과 조립 요구사항을 함께 검토합니다."
+            ],
+            [
+              "폭 또는 시트 크기",
+              "롤 폭, 슬리팅 방향 또는 사전 절단 치수를 협의할 수 있습니다."
+            ],
+            [
+              "평량",
+              "소재 구조, 전해액 유지 성능과 시험 방법을 함께 검토합니다."
+            ],
+            [
+              "산 흡수 성능",
+              "적용 분야, 전해액 유지 요구와 합의된 시험 조건에 따라 확인합니다."
+            ],
+            [
+              "전기 저항",
+              "배터리 성능 목표 및 시험 조건과 함께 검토합니다."
+            ],
+            [
+              "기공률 및 강도",
+              "가공, 절단 및 조립 요구사항에 따라 확인할 수 있습니다."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "제품 형태",
+          "title": "완성 롤, 생산 및 포장 확인",
+          "items": [
+            [
+              "AGM 분리막 롤",
+              "두께, 폭, 롤 지름, 포장 및 생산 계획을 협의할 수 있습니다.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "완성된 AGM 분리막 롤",
+              900,
+              675
+            ],
+            [
+              "AGM 분리막 시트",
+              "사전 절단 시트는 샘플 평가, 사양 확인과 조립 검토를 지원합니다.",
+              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "사전 절단 AGM 분리막 시트",
+              1200,
+              900
+            ],
+            [
+              "생산 공정 확인",
+              "원료와 생산 라인 이미지를 바탕으로 제조 공정을 구체적으로 협의합니다.",
+              "/images/evidence/agm-separator-roll-end-face-01.webp",
+              "AGM 분리막 원료 투입 공정",
+              1200,
+              900
+            ],
+            [
+              "포장 및 출하 준비",
+              "포장 방식, 팔레트와 출하 준비를 주문 전에 검토할 수 있습니다.",
+              "/images/evidence/agm-separator-roll-packaging-01.webp",
+              "AGM 분리막 포장 및 출하 준비",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "적용 분야",
+          "title": "주요 VRLA 납축전지 적용 분야",
+          "items": [
+            "UPS 배터리",
+            "통신 백업 전원",
+            "오토바이 배터리",
+            "자동차 시동 배터리",
+            "에너지 저장 배터리"
+          ]
+        },
+        "quality": {
+          "eyebrow": "품질 확인",
+          "title": "합의된 요구사항에 따른 검사",
+          "text": "시험 항목과 허용 기준은 생산 및 출하 전에 양측이 확인해야 합니다.",
+          "cards": [
+            [
+              "원료 및 공정 검사",
+              "주문 협의 시 소재 상태와 공정 관리 항목을 검토할 수 있습니다."
+            ],
+            [
+              "완제품 검사",
+              "합의된 항목에 따라 완제품 사양을 검사합니다."
+            ],
+            [
+              "요구사항 확인",
+              "생산 전에 시험 방법과 허용 기준을 확인합니다."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "관련 페이지",
+          "title": "제품 및 샘플 요청 보기",
+          "items": [
+            [
+              "AGM 분리막 제품",
+              "/ko/products/agm-separator/"
+            ],
+            [
+              "AGM 분리막 롤",
+              "/ko/products/agm-separator-rolls/"
+            ],
+            [
+              "AGM 분리막 시트",
+              "/ko/products/agm-separator-sheets/"
+            ],
+            [
+              "AGM 분리막 시험",
+              "/ko/quality-control/agm-separator-testing/"
+            ],
+            [
+              "오토바이 배터리 적용",
+              "/ko/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "샘플 및 사양 검토 요청",
+              "/ko/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "문의",
+          "title": "AGM 롤 요구사항 보내기",
+          "text": "폭, 두께, 코어, 롤 직경, 수량과 배터리 적용 분야를 공유해 주세요.",
+          "checklist": [
+            "목표 두께와 폭",
+            "롤 또는 시트 크기",
+            "배터리 적용 분야와 모델",
+            "수량 및 샘플 요구",
+            "시험 또는 포장 요구사항"
+          ],
+          "placeholder": "두께, 폭, 롤 또는 시트 형태, 수량, 샘플 및 시험 요구사항",
+          "submit": "요구사항 보내기",
+          "submitting": "전송 중...",
+          "required": "이름과 연락처를 입력해 주세요.",
+          "success": "감사합니다. 내용을 검토한 후 연락드리겠습니다.",
+          "failure": "현재 요청을 전송할 수 없습니다. 잠시 후 다시 시도해 주세요.",
+          "emailFallback": "이메일 프로그램이 열렸습니다. 준비된 이메일을 전송해 주세요."
+        },
+        "footer": {
+          "description": "납축전지 제조업체와 무역 파트너를 위한 AGM 유리섬유 분리막 제조업체.",
+          "wechat": "공식 WeChat 계정",
+          "mobile": "모바일 웹사이트"
+        }
+      },
+      "ja": {
+        "homePath": "/ja/",
+        "languagePath": "/products/agm-separator-rolls/",
+        "quote": "サンプル依頼",
+        "hero": {
+          "eyebrow": "AGMセパレーター ロール",
+          "title": "電池生産ライン向けAGMセパレーターロール",
+          "subtitle": "VRLA電池生産、スリット、社内裁断向けのガラス繊維AGMロール材です。",
+          "primary": "AGMロールサンプルを依頼",
+          "secondary": "仕様情報を送る",
+          "proof": [
+            "幅・厚さの確認",
+            "紙管・ロール径の確認",
+            "梱包要件の確認"
+          ],
+          "image": {
+            "src": "/images/viking-finished-separator-roll-900.webp",
+            "alt": "電池生産ライン向けAGMセパレーターロール",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "製品概要",
+          "title": "連続生産と裁断工程に対応するロール供給",
+          "paragraphs": [
+            "AGMロールは、電池設計と組立工程に合わせてお客様がスリット・裁断する生産方式に適しています。",
+            "サンプルまたは生産前に、幅、厚さ、長さ、紙管、ロール径、梱包方法を確認します。"
+          ]
+        },
+        "parameters": {
+          "eyebrow": "主要仕様",
+          "title": "AGMロールで確認する仕様",
+          "text": "幅、厚さ、ロール長または径、紙管寸法、数量、梱包要件をご提示ください。",
+          "items": [
+            [
+              "厚さ",
+              "極板間隔、圧縮条件、組立要件とあわせて確認します。"
+            ],
+            [
+              "幅・シート寸法",
+              "ロール幅、スリット方向、カット済み寸法を協議できます。"
+            ],
+            [
+              "坪量",
+              "材料構造、電解液保持性能、試験方法とあわせて評価します。"
+            ],
+            [
+              "吸液性能",
+              "用途、電解液保持要件、合意した試験条件に基づいて確認します。"
+            ],
+            [
+              "電気抵抗",
+              "バッテリー性能目標と試験条件にあわせて確認します。"
+            ],
+            [
+              "空隙率・強度",
+              "加工、裁断、組立要件に応じて確認できます。"
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "製品形状",
+          "title": "完成ロール、生産、梱包の確認",
+          "items": [
+            [
+              "AGMセパレーター ロール",
+              "厚さ、幅、ロール径、梱包、生産計画を協議できます。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "完成したAGMセパレーターロール",
+              900,
+              675
+            ],
+            [
+              "AGMセパレーター シート",
+              "カット済みシートはサンプル評価、仕様確認、組立確認に使用できます。",
+              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "カット済みAGMセパレーターシート",
+              1200,
+              900
+            ],
+            [
+              "生産工程の確認",
+              "原料と生産ラインの写真をもとに製造工程を具体的に確認できます。",
+              "/images/evidence/agm-separator-roll-end-face-01.webp",
+              "AGMセパレーター原料の投入工程",
+              1200,
+              900
+            ],
+            [
+              "梱包・出荷準備",
+              "梱包方法、パレット、出荷準備を注文前に確認できます。",
+              "/images/evidence/agm-separator-roll-packaging-01.webp",
+              "AGMセパレーターの梱包と出荷準備",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "用途",
+          "title": "主なVRLA鉛蓄電池用途",
+          "items": [
+            "UPSバッテリー",
+            "通信バックアップ電源",
+            "二輪車用バッテリー",
+            "自動車始動用バッテリー",
+            "蓄電池"
+          ]
+        },
+        "quality": {
+          "eyebrow": "品質確認",
+          "title": "合意した要件に基づく検査",
+          "text": "試験項目と受入基準は生産・出荷前に双方で確認します。",
+          "cards": [
+            [
+              "原料・工程検査",
+              "受注協議時に材料状態と工程管理項目を確認できます。"
+            ],
+            [
+              "完成品検査",
+              "合意した項目に基づいて完成品仕様を検査します。"
+            ],
+            [
+              "要件確認",
+              "生産前に試験方法と受入基準を確認します。"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "関連ページ",
+          "title": "製品とサンプル依頼を確認",
+          "items": [
+            [
+              "AGMセパレーター製品",
+              "/ja/products/agm-separator/"
+            ],
+            [
+              "AGMセパレーター ロール",
+              "/ja/products/agm-separator-rolls/"
+            ],
+            [
+              "AGMセパレーター シート",
+              "/ja/products/agm-separator-sheets/"
+            ],
+            [
+              "AGMセパレーター試験",
+              "/ja/quality-control/agm-separator-testing/"
+            ],
+            [
+              "二輪車用バッテリー用途",
+              "/ja/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "サンプル・仕様確認依頼",
+              "/ja/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "お問い合わせ",
+          "title": "AGMロール要件を送信",
+          "text": "幅、厚さ、紙管、ロール径、数量、バッテリー用途をお知らせください。",
+          "checklist": [
+            "目標厚さ・幅",
+            "ロールまたはシート寸法",
+            "バッテリー用途・型式",
+            "数量・サンプル要件",
+            "試験・梱包要件"
+          ],
+          "placeholder": "厚さ、幅、ロールまたはシート形状、数量、サンプル・試験要件",
+          "submit": "要件を送信",
+          "submitting": "送信中...",
+          "required": "お名前と連絡先を入力してください。",
+          "success": "ありがとうございます。内容を確認してご連絡します。",
+          "failure": "現在リクエストを送信できません。しばらくしてから再度お試しください。",
+          "emailFallback": "メールアプリを開きました。作成済みのメールを送信してください。"
+        },
+        "footer": {
+          "description": "鉛蓄電池メーカーと商社向けのAGMガラス繊維セパレーター製造会社。",
+          "wechat": "公式WeChatアカウント",
+          "mobile": "モバイルサイト"
+        }
+      },
+      "es": {
+        "homePath": "/es/",
+        "languagePath": "/products/agm-separator-rolls/",
+        "quote": "Solicitar muestra",
+        "hero": {
+          "eyebrow": "Rollos de separador AGM",
+          "title": "Rollos AGM para líneas de producción de baterías",
+          "subtitle": "Material AGM de fibra de vidrio en rollo para corte longitudinal, conversión interna y fabricación de baterías VRLA.",
+          "primary": "Solicitar muestra de rollo AGM",
+          "secondary": "Enviar especificaciones",
+          "proof": [
+            "Revisión de ancho y espesor",
+            "Confirmación de núcleo y diámetro",
+            "Embalaje según requisitos"
+          ],
+          "image": {
+            "src": "/images/viking-finished-separator-roll-900.webp",
+            "alt": "Rollos AGM para líneas de producción de baterías",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "Descripción del producto",
+          "title": "Suministro en rollo para producción y corte continuos",
+          "paragraphs": [
+            "Los rollos AGM son adecuados cuando el fabricante corta o convierte el material según el diseño de placas y el proceso de montaje.",
+            "Antes de la muestra o producción se confirman ancho, espesor, longitud, núcleo, diámetro y embalaje."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Especificaciones clave",
+          "title": "Datos necesarios para un rollo AGM",
+          "text": "Comparta ancho, espesor, longitud o diámetro, núcleo, cantidad y requisitos de embalaje.",
+          "items": [
+            [
+              "Espesor",
+              "Se revisa con la separación de placas, la compresión y los requisitos de montaje."
+            ],
+            [
+              "Ancho o tamaño de lámina",
+              "Se pueden acordar ancho de rollo, dirección de corte o dimensiones precortadas."
+            ],
+            [
+              "Gramaje",
+              "Se evalúa junto con la estructura, la retención de electrolito y el método de ensayo."
+            ],
+            [
+              "Absorción de ácido",
+              "Se confirma según la aplicación y las condiciones de ensayo acordadas."
+            ],
+            [
+              "Resistencia eléctrica",
+              "Se revisa con los objetivos de rendimiento y las condiciones de ensayo."
+            ],
+            [
+              "Porosidad y resistencia",
+              "Se pueden comprobar según los requisitos de conversión, corte y montaje."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Formatos de producto",
+          "title": "Rollo terminado, producción y embalaje",
+          "items": [
+            [
+              "Rollos AGM",
+              "Se pueden revisar espesor, ancho, diámetro, embalaje y plan de producción.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rollo terminado de separador AGM",
+              900,
+              675
+            ],
+            [
+              "Láminas AGM",
+              "Las láminas precortadas facilitan muestras, confirmación de especificaciones y pruebas de montaje.",
+              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "Láminas precortadas de separador AGM",
+              1200,
+              900
+            ],
+            [
+              "Proceso de producción",
+              "Las imágenes de materia prima y línea permiten una revisión más concreta del proceso.",
+              "/images/evidence/agm-separator-roll-end-face-01.webp",
+              "Alimentación de materia prima para separadores AGM",
+              1200,
+              900
+            ],
+            [
+              "Embalaje y despacho",
+              "El método de embalaje, los pallets y la preparación de envío pueden revisarse antes del pedido.",
+              "/images/evidence/agm-separator-roll-packaging-01.webp",
+              "Embalaje y preparación de envío de separadores AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicaciones",
+          "title": "Principales aplicaciones de baterías VRLA",
+          "items": [
+            "Baterías UPS",
+            "Respaldo de telecomunicaciones",
+            "Baterías para motocicleta",
+            "Baterías de arranque automotriz",
+            "Almacenamiento de energía"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Revisión de calidad",
+          "title": "Inspección según requisitos acordados",
+          "text": "Las partidas de ensayo y los criterios de aceptación se confirman antes de producir y despachar.",
+          "cards": [
+            [
+              "Materia prima y proceso",
+              "El estado del material y los puntos de control se revisan durante la consulta."
+            ],
+            [
+              "Producto terminado",
+              "Las especificaciones finales se inspeccionan según los puntos acordados."
+            ],
+            [
+              "Confirmación de requisitos",
+              "Los métodos de ensayo y criterios de aceptación se acuerdan antes de producir."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Páginas relacionadas",
+          "title": "Ver producto y solicitud de muestra",
+          "items": [
+            [
+              "Separador AGM",
+              "/es/products/agm-separator/"
+            ],
+            [
+              "Rollos de separador AGM",
+              "/es/products/agm-separator-rolls/"
+            ],
+            [
+              "Láminas de separador AGM",
+              "/es/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensayos de separadores AGM",
+              "/es/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Aplicación para baterías de motocicleta",
+              "/es/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Solicitar muestra y revisar especificaciones",
+              "/es/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Consulta",
+          "title": "Enviar requisitos del rollo AGM",
+          "text": "Comparta ancho, espesor, núcleo, diámetro, cantidad y aplicación de la batería.",
+          "checklist": [
+            "Espesor y ancho objetivo",
+            "Rollo o tamaño de lámina",
+            "Aplicación y modelo de batería",
+            "Cantidad y requisitos de muestra",
+            "Ensayo o embalaje"
+          ],
+          "placeholder": "Espesor, ancho, formato, cantidad, muestra y requisitos de ensayo",
+          "submit": "Enviar requisitos",
+          "submitting": "Enviando...",
+          "required": "Ingrese su nombre y datos de contacto.",
+          "success": "Gracias. Revisaremos la información y nos pondremos en contacto.",
+          "failure": "No se pudo enviar la solicitud. Inténtelo de nuevo más tarde.",
+          "emailFallback": "Se abrió su aplicación de correo. Envíe el mensaje preparado."
+        },
+        "footer": {
+          "description": "Fabricante de separadores de fibra de vidrio AGM para productores de baterías de plomo-ácido y socios comerciales.",
+          "wechat": "Cuenta oficial de WeChat",
+          "mobile": "Sitio web móvil"
+        }
+      },
+      "pt": {
+        "homePath": "/pt/",
+        "languagePath": "/products/agm-separator-rolls/",
+        "quote": "Solicitar amostra",
+        "hero": {
+          "eyebrow": "Rolos de separador AGM",
+          "title": "Rolos AGM para linhas de produção de baterias",
+          "subtitle": "Material AGM de fibra de vidro em rolo para corte longitudinal, conversão interna e fabricação de baterias VRLA.",
+          "primary": "Solicitar amostra de rolo AGM",
+          "secondary": "Enviar especificações",
+          "proof": [
+            "Análise de largura e espessura",
+            "Confirmação de núcleo e diâmetro",
+            "Embalagem conforme requisitos"
+          ],
+          "image": {
+            "src": "/images/viking-finished-separator-roll-900.webp",
+            "alt": "Rolos AGM para linhas de produção de baterias",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "Visão geral do produto",
+          "title": "Fornecimento em rolo para produção e corte contínuos",
+          "paragraphs": [
+            "Rolos AGM são adequados quando o fabricante corta ou converte o material conforme o projeto das placas e o processo de montagem.",
+            "Antes da amostra ou produção, confirmamos largura, espessura, comprimento, núcleo, diâmetro e embalagem."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Especificações principais",
+          "title": "Dados necessários para rolos AGM",
+          "text": "Informe largura, espessura, comprimento ou diâmetro, núcleo, quantidade e requisitos de embalagem.",
+          "items": [
+            [
+              "Espessura",
+              "Analisada com espaçamento das placas, compressão e requisitos de montagem."
+            ],
+            [
+              "Largura ou dimensão da folha",
+              "Podem ser definidos largura do rolo, direção de corte e tamanho pré-cortado."
+            ],
+            [
+              "Gramatura",
+              "Avaliada com a estrutura, retenção de eletrólito e método de ensaio."
+            ],
+            [
+              "Absorção de ácido",
+              "Confirmada conforme a aplicação e as condições de ensaio acordadas."
+            ],
+            [
+              "Resistência elétrica",
+              "Analisada com os objetivos de desempenho e condições de ensaio."
+            ],
+            [
+              "Porosidade e resistência",
+              "Podem ser verificadas conforme conversão, corte e montagem."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Formatos do produto",
+          "title": "Rolo acabado, produção e embalagem",
+          "items": [
+            [
+              "Rolos AGM",
+              "Espessura, largura, diâmetro, embalagem e planejamento de produção podem ser analisados.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rolo acabado de separador AGM",
+              900,
+              675
+            ],
+            [
+              "Folhas AGM",
+              "Folhas pré-cortadas apoiam amostras, confirmação de especificações e testes de montagem.",
+              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "Folhas pré-cortadas de separador AGM",
+              1200,
+              900
+            ],
+            [
+              "Processo de produção",
+              "Imagens de matéria-prima e da linha ajudam a tornar a análise do processo mais concreta.",
+              "/images/evidence/agm-separator-roll-end-face-01.webp",
+              "Alimentação de matéria-prima para separadores AGM",
+              1200,
+              900
+            ],
+            [
+              "Embalagem e expedição",
+              "Método de embalagem, pallets e preparação do envio podem ser analisados antes do pedido.",
+              "/images/evidence/agm-separator-roll-packaging-01.webp",
+              "Embalagem e preparação do envio de separadores AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicações",
+          "title": "Principais aplicações de baterias VRLA",
+          "items": [
+            "Baterias UPS",
+            "Backup de telecomunicações",
+            "Baterias para motocicletas",
+            "Baterias de partida automotiva",
+            "Armazenamento de energia"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Análise de qualidade",
+          "title": "Inspeção conforme os requisitos acordados",
+          "text": "Os itens de ensaio e critérios de aceitação são confirmados antes da produção e expedição.",
+          "cards": [
+            [
+              "Matéria-prima e processo",
+              "A condição do material e os pontos de controle são analisados durante a consulta."
+            ],
+            [
+              "Produto acabado",
+              "As especificações finais são inspecionadas conforme os itens acordados."
+            ],
+            [
+              "Confirmação de requisitos",
+              "Métodos de ensaio e critérios de aceitação são definidos antes da produção."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Páginas relacionadas",
+          "title": "Veja o produto e solicite uma amostra",
+          "items": [
+            [
+              "Separador AGM",
+              "/pt/products/agm-separator/"
+            ],
+            [
+              "Rolos de separador AGM",
+              "/pt/products/agm-separator-rolls/"
+            ],
+            [
+              "Folhas de separador AGM",
+              "/pt/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensaios de separadores AGM",
+              "/pt/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Aplicação em baterias de motocicletas",
+              "/pt/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Solicitar amostra e analisar especificações",
+              "/pt/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Consulta",
+          "title": "Enviar requisitos do rolo AGM",
+          "text": "Compartilhe largura, espessura, núcleo, diâmetro, quantidade e aplicação da bateria.",
+          "checklist": [
+            "Espessura e largura desejadas",
+            "Rolo ou dimensão da folha",
+            "Aplicação e modelo de bateria",
+            "Quantidade e amostras",
+            "Ensaios ou embalagem"
+          ],
+          "placeholder": "Espessura, largura, formato, quantidade, amostra e requisitos de ensaio",
+          "submit": "Enviar requisitos",
+          "submitting": "Enviando...",
+          "required": "Informe seu nome e dados de contato.",
+          "success": "Obrigado. Analisaremos as informações e entraremos em contato.",
+          "failure": "Não foi possível enviar a solicitação. Tente novamente mais tarde.",
+          "emailFallback": "Seu aplicativo de e-mail foi aberto. Envie a mensagem preparada."
+        },
+        "footer": {
+          "description": "Fabricante de separadores de fibra de vidro AGM para produtores de baterias chumbo-ácido e parceiros comerciais.",
+          "wechat": "Conta oficial do WeChat",
+          "mobile": "Site móvel"
+        }
+      },
+      "ru": {
+        "homePath": "/ru/",
+        "languagePath": "/products/agm-separator-rolls/",
+        "quote": "Запросить образец",
+        "hero": {
+          "eyebrow": "Рулоны AGM-сепаратора",
+          "title": "Рулонный AGM-сепаратор для линий производства аккумуляторов",
+          "subtitle": "Стекловолоконный материал AGM в рулонах для продольной резки, внутренней переработки и выпуска аккумуляторов VRLA.",
+          "primary": "Запросить образец рулона AGM",
+          "secondary": "Отправить характеристики",
+          "proof": [
+            "Согласование ширины и толщины",
+            "Проверка втулки и диаметра",
+            "Упаковка по требованиям"
+          ],
+          "image": {
+            "src": "/images/viking-finished-separator-roll-900.webp",
+            "alt": "Рулонный AGM-сепаратор для линий производства аккумуляторов",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "О продукте",
+          "title": "Рулоны для непрерывного производства и резки",
+          "paragraphs": [
+            "Рулоны AGM подходят производителям, которые режут материал по конструкции пластин и процессу сборки.",
+            "До изготовления образца или партии согласуются ширина, толщина, длина, втулка, диаметр и упаковка."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Основные характеристики",
+          "title": "Данные для согласования рулона AGM",
+          "text": "Укажите ширину, толщину, длину или диаметр, размер втулки, объем и требования к упаковке.",
+          "items": [
+            [
+              "Толщина",
+              "Рассматривается вместе с зазором пластин, сжатием и требованиями к сборке."
+            ],
+            [
+              "Ширина или размер листа",
+              "Можно согласовать ширину рулона, направление резки и размеры листов."
+            ],
+            [
+              "Поверхностная плотность",
+              "Оценивается вместе со структурой, удержанием электролита и методом испытаний."
+            ],
+            [
+              "Поглощение кислоты",
+              "Подтверждается по применению и согласованным условиям испытаний."
+            ],
+            [
+              "Электрическое сопротивление",
+              "Рассматривается с целевыми характеристиками и условиями испытаний."
+            ],
+            [
+              "Пористость и прочность",
+              "Проверяются с учетом переработки, резки и сборки."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Формы поставки",
+          "title": "Готовые рулоны, производство и упаковка",
+          "items": [
+            [
+              "Рулоны AGM",
+              "Можно согласовать толщину, ширину, диаметр рулона, упаковку и план производства.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Готовый рулон AGM-сепаратора",
+              900,
+              675
+            ],
+            [
+              "Листы AGM",
+              "Предварительно нарезанные листы подходят для образцов, проверки спецификаций и сборки.",
+              "/images/evidence/agm-separator-roll-warehouse-01.webp",
+              "Нарезанные листы AGM-сепаратора",
+              1200,
+              900
+            ],
+            [
+              "Производственный процесс",
+              "Фотографии сырья и линии помогают предметно обсудить процесс изготовления.",
+              "/images/evidence/agm-separator-roll-end-face-01.webp",
+              "Подача сырья для AGM-сепараторов",
+              1200,
+              900
+            ],
+            [
+              "Упаковка и отгрузка",
+              "Способ упаковки, паллеты и подготовку к отправке можно согласовать до заказа.",
+              "/images/evidence/agm-separator-roll-packaging-01.webp",
+              "Упаковка и подготовка AGM-сепараторов к отгрузке",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Применение",
+          "title": "Основные области применения аккумуляторов VRLA",
+          "items": [
+            "Аккумуляторы для ИБП",
+            "Резервное питание телекоммуникаций",
+            "Мотоциклетные аккумуляторы",
+            "Автомобильные стартерные аккумуляторы",
+            "Накопление энергии"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Контроль качества",
+          "title": "Проверка по согласованным требованиям",
+          "text": "Показатели испытаний и критерии приемки подтверждаются до производства и отгрузки.",
+          "cards": [
+            [
+              "Сырье и процесс",
+              "Состояние материала и контрольные точки обсуждаются при согласовании заказа."
+            ],
+            [
+              "Готовая продукция",
+              "Характеристики готового продукта проверяются по согласованным показателям."
+            ],
+            [
+              "Подтверждение требований",
+              "Методы испытаний и критерии приемки согласуются до производства."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Связанные страницы",
+          "title": "Посмотреть продукт и запросить образец",
+          "items": [
+            [
+              "AGM-сепаратор",
+              "/ru/products/agm-separator/"
+            ],
+            [
+              "Рулоны AGM-сепаратора",
+              "/ru/products/agm-separator-rolls/"
+            ],
+            [
+              "Листы AGM-сепаратора",
+              "/ru/products/agm-separator-sheets/"
+            ],
+            [
+              "Испытания AGM-сепаратора",
+              "/ru/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Применение в мотоциклетных аккумуляторах",
+              "/ru/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Запросить образец и проверку характеристик",
+              "/ru/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Запрос",
+          "title": "Отправить требования к рулону AGM",
+          "text": "Укажите ширину, толщину, втулку, диаметр, количество и применение аккумулятора.",
+          "checklist": [
+            "Целевая толщина и ширина",
+            "Рулон или размер листа",
+            "Применение и модель аккумулятора",
+            "Объем и образцы",
+            "Испытания или упаковка"
+          ],
+          "placeholder": "Толщина, ширина, форма, объем, образец и требования к испытаниям",
+          "submit": "Отправить требования",
+          "submitting": "Отправка...",
+          "required": "Укажите имя и контактные данные.",
+          "success": "Спасибо. Мы проверим информацию и свяжемся с вами.",
+          "failure": "Не удалось отправить запрос. Повторите попытку позже.",
+          "emailFallback": "Открыто почтовое приложение. Отправьте подготовленное письмо."
+        },
+        "footer": {
+          "description": "Производитель стекловолоконных AGM-сепараторов для производителей свинцово-кислотных аккумуляторов и торговых партнеров.",
+          "wechat": "Официальный аккаунт WeChat",
+          "mobile": "Мобильная версия сайта"
+        }
       }
     },
     "agmSeparatorSheets": {
@@ -5895,6 +7071,1110 @@
           "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
           "wechat": "官方微信公众号",
           "mobile": "移动官网"
+        }
+      },
+      "vi": {
+        "homePath": "/vi/",
+        "languagePath": "/products/agm-separator-sheets/",
+        "quote": "Yêu cầu báo giá",
+        "hero": {
+          "eyebrow": "Tấm ngăn AGM dạng tấm",
+          "title": "Tấm ngăn AGM cắt sẵn cho lắp ráp ắc quy VRLA",
+          "subtitle": "Tấm sợi thủy tinh AGM cắt theo kích thước để đánh giá mẫu và lắp ráp ắc quy.",
+          "primary": "Yêu cầu mẫu tấm AGM",
+          "secondary": "Gửi quy cách cần thiết",
+          "proof": [
+            "Trao đổi chiều dài và chiều rộng",
+            "Đối chiếu độ dày",
+            "Đóng gói tấm cắt sẵn"
+          ],
+          "image": {
+            "src": "/images/viking-separator-sheets-900.webp",
+            "alt": "Tấm ngăn AGM cắt sẵn cho lắp ráp ắc quy VRLA",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "Tổng quan sản phẩm",
+          "title": "Tấm cắt sẵn cần phù hợp với thiết kế bản cực",
+          "paragraphs": [
+            "Kích thước tấm AGM phải được đối chiếu với bản cực, khoảng cách lắp ráp và phương pháp đặt tấm của khách hàng.",
+            "Nên xác nhận chiều dài, chiều rộng, độ dày, số lượng mỗi gói và yêu cầu thao tác trước khi sản xuất."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Thông số chính",
+          "title": "Thông tin cần xác nhận cho tấm AGM",
+          "text": "Hãy gửi kích thước tấm, độ dày, dung sai, số lượng và yêu cầu đóng gói hoặc đánh giá mẫu.",
+          "items": [
+            [
+              "Độ dày",
+              "Cần được xem xét cùng khoảng cách bản cực, độ nén và yêu cầu lắp ráp."
+            ],
+            [
+              "Chiều rộng hoặc kích thước tấm",
+              "Có thể trao đổi chiều rộng cuộn, hướng xẻ hoặc kích thước cắt sẵn."
+            ],
+            [
+              "Định lượng",
+              "Được đánh giá cùng cấu trúc vật liệu, khả năng giữ điện phân và phương pháp thử."
+            ],
+            [
+              "Khả năng hút axit",
+              "Xác nhận theo ứng dụng, nhu cầu giữ điện phân và điều kiện thử đã thống nhất."
+            ],
+            [
+              "Điện trở",
+              "Xem xét với mục tiêu hiệu suất ắc quy và điều kiện thử."
+            ],
+            [
+              "Độ rỗng và độ bền",
+              "Có thể kiểm tra theo nhu cầu gia công, cắt và lắp ráp."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Dạng sản phẩm",
+          "title": "Tấm cắt sẵn, chi tiết cạnh và đóng gói",
+          "items": [
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "Có thể trao đổi độ dày, chiều rộng, đường kính cuộn, cách đóng gói và kế hoạch sản xuất.",
+              "/images/viking-separator-sheets-900.webp",
+              "Cuộn tấm ngăn AGM thành phẩm",
+              900,
+              675
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "Tấm cắt sẵn hỗ trợ đánh giá mẫu, xác nhận quy cách và yêu cầu lắp ráp.",
+              "/images/sheets1-900.webp",
+              "Tấm ngăn AGM cắt sẵn",
+              900,
+              675
+            ],
+            [
+              "Theo dõi sản xuất",
+              "Hình ảnh nguyên liệu và dây chuyền giúp trao đổi cụ thể hơn về quá trình sản xuất.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "Nguyên liệu tấm ngăn AGM vào dây chuyền",
+              1200,
+              900
+            ],
+            [
+              "Chuẩn bị đóng gói và giao hàng",
+              "Có thể xem xét cách đóng gói, pallet và chuẩn bị xuất hàng.",
+              "/images/evidence/agm-separator-sheets-packaging-01.webp",
+              "Đóng gói và chuẩn bị giao tấm ngăn AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Ứng dụng",
+          "title": "Dùng cho các phân khúc ắc quy axit-chì VRLA chính",
+          "items": [
+            "Ắc quy UPS",
+            "Nguồn dự phòng viễn thông",
+            "Ắc quy xe máy",
+            "Ắc quy khởi động ô tô",
+            "Ắc quy lưu trữ năng lượng"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Ghi chú chất lượng",
+          "title": "Hạng mục kiểm tra theo yêu cầu đã xác nhận",
+          "text": "Hạng mục thử nghiệm và giá trị chấp nhận cần được hai bên xác nhận trước khi sản xuất và giao hàng.",
+          "cards": [
+            [
+              "Kiểm tra đầu vào và quy trình",
+              "Tình trạng vật liệu và quy trình có thể được xem xét khi trao đổi đơn hàng."
+            ],
+            [
+              "Kiểm tra thành phẩm",
+              "Các thông số thành phẩm được kiểm tra theo hạng mục đã thống nhất."
+            ],
+            [
+              "Xác nhận yêu cầu",
+              "Giá trị chấp nhận cần được xác nhận trước khi sản xuất."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Trang liên quan",
+          "title": "Tiếp tục xem ứng dụng và yêu cầu mẫu",
+          "items": [
+            [
+              "Sản phẩm tấm ngăn AGM",
+              "/vi/products/agm-separator/"
+            ],
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "/vi/products/agm-separator-rolls/"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "/vi/products/agm-separator-sheets/"
+            ],
+            [
+              "Kiểm tra tấm ngăn AGM",
+              "/vi/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Ứng dụng ắc quy xe máy",
+              "/vi/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Yêu cầu mẫu",
+              "/vi/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Yêu cầu",
+          "title": "Gửi yêu cầu tấm AGM",
+          "text": "Chia sẻ kích thước, độ dày, số lượng, mẫu ắc quy và yêu cầu đóng gói để xác nhận khả năng phù hợp.",
+          "checklist": [
+            "Độ dày và chiều rộng mục tiêu",
+            "Dạng cuộn hoặc kích thước tấm",
+            "Ứng dụng và mẫu ắc quy",
+            "Số lượng và yêu cầu mẫu",
+            "Yêu cầu thử nghiệm hoặc đóng gói"
+          ],
+          "placeholder": "Độ dày, chiều rộng, dạng cuộn hoặc tấm, số lượng, yêu cầu mẫu và thử nghiệm",
+          "submit": "Gửi yêu cầu",
+          "submitting": "Đang gửi...",
+          "required": "Vui lòng nhập họ tên và thông tin liên hệ.",
+          "success": "Cảm ơn bạn. Chúng tôi sẽ xem xét và liên hệ lại.",
+          "failure": "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau.",
+          "emailFallback": "Ứng dụng email đã được mở với nội dung yêu cầu. Vui lòng gửi email để hoàn tất."
+        },
+        "footer": {
+          "description": "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
+          "wechat": "Tài khoản WeChat chính thức",
+          "mobile": "Website di động"
+        }
+      },
+      "ko": {
+        "homePath": "/ko/",
+        "languagePath": "/products/agm-separator-sheets/",
+        "quote": "샘플 요청",
+        "hero": {
+          "eyebrow": "AGM 분리막 시트",
+          "title": "VRLA 배터리 조립용 사전 절단 AGM 시트",
+          "subtitle": "배터리 샘플 평가와 조립을 위해 지정 치수로 절단한 유리섬유 AGM 시트입니다.",
+          "primary": "AGM 시트 샘플 요청",
+          "secondary": "사양 정보 보내기",
+          "proof": [
+            "길이와 폭 협의",
+            "두께 확인",
+            "사전 절단 포장"
+          ],
+          "image": {
+            "src": "/images/viking-separator-sheets-900.webp",
+            "alt": "VRLA 배터리 조립용 사전 절단 AGM 시트",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "제품 개요",
+          "title": "사전 절단 시트는 극판 설계와 맞아야 합니다",
+          "paragraphs": [
+            "AGM 시트 치수는 극판 크기, 조립 간격과 고객의 시트 배치 방식에 맞춰 확인해야 합니다.",
+            "생산 전에 길이, 폭, 두께, 포장 수량과 취급 요구사항을 확인합니다."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "주요 사양",
+          "title": "AGM 시트 사양 확인 항목",
+          "text": "시트 치수, 두께, 공차, 수량, 포장 및 샘플 평가 요구사항을 보내 주세요.",
+          "items": [
+            [
+              "두께",
+              "극판 간격, 압축 조건과 조립 요구사항을 함께 검토합니다."
+            ],
+            [
+              "폭 또는 시트 크기",
+              "롤 폭, 슬리팅 방향 또는 사전 절단 치수를 협의할 수 있습니다."
+            ],
+            [
+              "평량",
+              "소재 구조, 전해액 유지 성능과 시험 방법을 함께 검토합니다."
+            ],
+            [
+              "산 흡수 성능",
+              "적용 분야, 전해액 유지 요구와 합의된 시험 조건에 따라 확인합니다."
+            ],
+            [
+              "전기 저항",
+              "배터리 성능 목표 및 시험 조건과 함께 검토합니다."
+            ],
+            [
+              "기공률 및 강도",
+              "가공, 절단 및 조립 요구사항에 따라 확인할 수 있습니다."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "제품 형태",
+          "title": "절단 시트, 가장자리 및 포장 확인",
+          "items": [
+            [
+              "AGM 분리막 롤",
+              "두께, 폭, 롤 지름, 포장 및 생산 계획을 협의할 수 있습니다.",
+              "/images/viking-separator-sheets-900.webp",
+              "완성된 AGM 분리막 롤",
+              900,
+              675
+            ],
+            [
+              "AGM 분리막 시트",
+              "사전 절단 시트는 샘플 평가, 사양 확인과 조립 검토를 지원합니다.",
+              "/images/sheets1-900.webp",
+              "사전 절단 AGM 분리막 시트",
+              900,
+              675
+            ],
+            [
+              "생산 공정 확인",
+              "원료와 생산 라인 이미지를 바탕으로 제조 공정을 구체적으로 협의합니다.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "AGM 분리막 원료 투입 공정",
+              1200,
+              900
+            ],
+            [
+              "포장 및 출하 준비",
+              "포장 방식, 팔레트와 출하 준비를 주문 전에 검토할 수 있습니다.",
+              "/images/evidence/agm-separator-sheets-packaging-01.webp",
+              "AGM 분리막 포장 및 출하 준비",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "적용 분야",
+          "title": "주요 VRLA 납축전지 적용 분야",
+          "items": [
+            "UPS 배터리",
+            "통신 백업 전원",
+            "오토바이 배터리",
+            "자동차 시동 배터리",
+            "에너지 저장 배터리"
+          ]
+        },
+        "quality": {
+          "eyebrow": "품질 확인",
+          "title": "합의된 요구사항에 따른 검사",
+          "text": "시험 항목과 허용 기준은 생산 및 출하 전에 양측이 확인해야 합니다.",
+          "cards": [
+            [
+              "원료 및 공정 검사",
+              "주문 협의 시 소재 상태와 공정 관리 항목을 검토할 수 있습니다."
+            ],
+            [
+              "완제품 검사",
+              "합의된 항목에 따라 완제품 사양을 검사합니다."
+            ],
+            [
+              "요구사항 확인",
+              "생산 전에 시험 방법과 허용 기준을 확인합니다."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "관련 페이지",
+          "title": "제품 및 샘플 요청 보기",
+          "items": [
+            [
+              "AGM 분리막 제품",
+              "/ko/products/agm-separator/"
+            ],
+            [
+              "AGM 분리막 롤",
+              "/ko/products/agm-separator-rolls/"
+            ],
+            [
+              "AGM 분리막 시트",
+              "/ko/products/agm-separator-sheets/"
+            ],
+            [
+              "AGM 분리막 시험",
+              "/ko/quality-control/agm-separator-testing/"
+            ],
+            [
+              "오토바이 배터리 적용",
+              "/ko/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "샘플 및 사양 검토 요청",
+              "/ko/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "문의",
+          "title": "AGM 시트 요구사항 보내기",
+          "text": "치수, 두께, 수량, 배터리 모델과 포장 요구사항을 공유해 주세요.",
+          "checklist": [
+            "목표 두께와 폭",
+            "롤 또는 시트 크기",
+            "배터리 적용 분야와 모델",
+            "수량 및 샘플 요구",
+            "시험 또는 포장 요구사항"
+          ],
+          "placeholder": "두께, 폭, 롤 또는 시트 형태, 수량, 샘플 및 시험 요구사항",
+          "submit": "요구사항 보내기",
+          "submitting": "전송 중...",
+          "required": "이름과 연락처를 입력해 주세요.",
+          "success": "감사합니다. 내용을 검토한 후 연락드리겠습니다.",
+          "failure": "현재 요청을 전송할 수 없습니다. 잠시 후 다시 시도해 주세요.",
+          "emailFallback": "이메일 프로그램이 열렸습니다. 준비된 이메일을 전송해 주세요."
+        },
+        "footer": {
+          "description": "납축전지 제조업체와 무역 파트너를 위한 AGM 유리섬유 분리막 제조업체.",
+          "wechat": "공식 WeChat 계정",
+          "mobile": "모바일 웹사이트"
+        }
+      },
+      "ja": {
+        "homePath": "/ja/",
+        "languagePath": "/products/agm-separator-sheets/",
+        "quote": "サンプル依頼",
+        "hero": {
+          "eyebrow": "AGMセパレーター シート",
+          "title": "VRLA電池組立用カット済みAGMシート",
+          "subtitle": "バッテリーサンプル評価と組立向けに指定寸法へ裁断したガラス繊維AGMシートです。",
+          "primary": "AGMシートサンプルを依頼",
+          "secondary": "仕様情報を送る",
+          "proof": [
+            "長さ・幅の確認",
+            "厚さの確認",
+            "カットシート梱包"
+          ],
+          "image": {
+            "src": "/images/viking-separator-sheets-900.webp",
+            "alt": "VRLA電池組立用カット済みAGMシート",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "製品概要",
+          "title": "カット済みシートは極板設計との適合が重要です",
+          "paragraphs": [
+            "AGMシート寸法は、極板サイズ、組立間隔、お客様の配置方法に合わせて確認します。",
+            "生産前に長さ、幅、厚さ、梱包数量、取扱要件を確認します。"
+          ]
+        },
+        "parameters": {
+          "eyebrow": "主要仕様",
+          "title": "AGMシートで確認する仕様",
+          "text": "シート寸法、厚さ、公差、数量、梱包、サンプル評価要件をご提示ください。",
+          "items": [
+            [
+              "厚さ",
+              "極板間隔、圧縮条件、組立要件とあわせて確認します。"
+            ],
+            [
+              "幅・シート寸法",
+              "ロール幅、スリット方向、カット済み寸法を協議できます。"
+            ],
+            [
+              "坪量",
+              "材料構造、電解液保持性能、試験方法とあわせて評価します。"
+            ],
+            [
+              "吸液性能",
+              "用途、電解液保持要件、合意した試験条件に基づいて確認します。"
+            ],
+            [
+              "電気抵抗",
+              "バッテリー性能目標と試験条件にあわせて確認します。"
+            ],
+            [
+              "空隙率・強度",
+              "加工、裁断、組立要件に応じて確認できます。"
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "製品形状",
+          "title": "カットシート、端部、梱包の確認",
+          "items": [
+            [
+              "AGMセパレーター ロール",
+              "厚さ、幅、ロール径、梱包、生産計画を協議できます。",
+              "/images/viking-separator-sheets-900.webp",
+              "完成したAGMセパレーターロール",
+              900,
+              675
+            ],
+            [
+              "AGMセパレーター シート",
+              "カット済みシートはサンプル評価、仕様確認、組立確認に使用できます。",
+              "/images/sheets1-900.webp",
+              "カット済みAGMセパレーターシート",
+              900,
+              675
+            ],
+            [
+              "生産工程の確認",
+              "原料と生産ラインの写真をもとに製造工程を具体的に確認できます。",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "AGMセパレーター原料の投入工程",
+              1200,
+              900
+            ],
+            [
+              "梱包・出荷準備",
+              "梱包方法、パレット、出荷準備を注文前に確認できます。",
+              "/images/evidence/agm-separator-sheets-packaging-01.webp",
+              "AGMセパレーターの梱包と出荷準備",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "用途",
+          "title": "主なVRLA鉛蓄電池用途",
+          "items": [
+            "UPSバッテリー",
+            "通信バックアップ電源",
+            "二輪車用バッテリー",
+            "自動車始動用バッテリー",
+            "蓄電池"
+          ]
+        },
+        "quality": {
+          "eyebrow": "品質確認",
+          "title": "合意した要件に基づく検査",
+          "text": "試験項目と受入基準は生産・出荷前に双方で確認します。",
+          "cards": [
+            [
+              "原料・工程検査",
+              "受注協議時に材料状態と工程管理項目を確認できます。"
+            ],
+            [
+              "完成品検査",
+              "合意した項目に基づいて完成品仕様を検査します。"
+            ],
+            [
+              "要件確認",
+              "生産前に試験方法と受入基準を確認します。"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "関連ページ",
+          "title": "製品とサンプル依頼を確認",
+          "items": [
+            [
+              "AGMセパレーター製品",
+              "/ja/products/agm-separator/"
+            ],
+            [
+              "AGMセパレーター ロール",
+              "/ja/products/agm-separator-rolls/"
+            ],
+            [
+              "AGMセパレーター シート",
+              "/ja/products/agm-separator-sheets/"
+            ],
+            [
+              "AGMセパレーター試験",
+              "/ja/quality-control/agm-separator-testing/"
+            ],
+            [
+              "二輪車用バッテリー用途",
+              "/ja/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "サンプル・仕様確認依頼",
+              "/ja/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "お問い合わせ",
+          "title": "AGMシート要件を送信",
+          "text": "寸法、厚さ、数量、バッテリー型式、梱包要件をお知らせください。",
+          "checklist": [
+            "目標厚さ・幅",
+            "ロールまたはシート寸法",
+            "バッテリー用途・型式",
+            "数量・サンプル要件",
+            "試験・梱包要件"
+          ],
+          "placeholder": "厚さ、幅、ロールまたはシート形状、数量、サンプル・試験要件",
+          "submit": "要件を送信",
+          "submitting": "送信中...",
+          "required": "お名前と連絡先を入力してください。",
+          "success": "ありがとうございます。内容を確認してご連絡します。",
+          "failure": "現在リクエストを送信できません。しばらくしてから再度お試しください。",
+          "emailFallback": "メールアプリを開きました。作成済みのメールを送信してください。"
+        },
+        "footer": {
+          "description": "鉛蓄電池メーカーと商社向けのAGMガラス繊維セパレーター製造会社。",
+          "wechat": "公式WeChatアカウント",
+          "mobile": "モバイルサイト"
+        }
+      },
+      "es": {
+        "homePath": "/es/",
+        "languagePath": "/products/agm-separator-sheets/",
+        "quote": "Solicitar muestra",
+        "hero": {
+          "eyebrow": "Láminas de separador AGM",
+          "title": "Láminas AGM precortadas para montaje de baterías VRLA",
+          "subtitle": "Láminas AGM de fibra de vidrio cortadas a medida para evaluar muestras y montar baterías.",
+          "primary": "Solicitar muestra de lámina AGM",
+          "secondary": "Enviar especificaciones",
+          "proof": [
+            "Revisión de largo y ancho",
+            "Confirmación de espesor",
+            "Embalaje de piezas cortadas"
+          ],
+          "image": {
+            "src": "/images/viking-separator-sheets-900.webp",
+            "alt": "Láminas AGM precortadas para montaje de baterías VRLA",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "Descripción del producto",
+          "title": "La lámina precortada debe corresponder al diseño de placas",
+          "paragraphs": [
+            "Las dimensiones se revisan con el tamaño de las placas, el espacio de montaje y el método de colocación del cliente.",
+            "Antes de producir se confirman largo, ancho, espesor, cantidad por paquete y requisitos de manipulación."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Especificaciones clave",
+          "title": "Datos necesarios para láminas AGM",
+          "text": "Comparta dimensiones, espesor, tolerancia, cantidad y requisitos de embalaje o evaluación.",
+          "items": [
+            [
+              "Espesor",
+              "Se revisa con la separación de placas, la compresión y los requisitos de montaje."
+            ],
+            [
+              "Ancho o tamaño de lámina",
+              "Se pueden acordar ancho de rollo, dirección de corte o dimensiones precortadas."
+            ],
+            [
+              "Gramaje",
+              "Se evalúa junto con la estructura, la retención de electrolito y el método de ensayo."
+            ],
+            [
+              "Absorción de ácido",
+              "Se confirma según la aplicación y las condiciones de ensayo acordadas."
+            ],
+            [
+              "Resistencia eléctrica",
+              "Se revisa con los objetivos de rendimiento y las condiciones de ensayo."
+            ],
+            [
+              "Porosidad y resistencia",
+              "Se pueden comprobar según los requisitos de conversión, corte y montaje."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Formatos de producto",
+          "title": "Láminas cortadas, bordes y embalaje",
+          "items": [
+            [
+              "Rollos AGM",
+              "Se pueden revisar espesor, ancho, diámetro, embalaje y plan de producción.",
+              "/images/viking-separator-sheets-900.webp",
+              "Rollo terminado de separador AGM",
+              900,
+              675
+            ],
+            [
+              "Láminas AGM",
+              "Las láminas precortadas facilitan muestras, confirmación de especificaciones y pruebas de montaje.",
+              "/images/sheets1-900.webp",
+              "Láminas precortadas de separador AGM",
+              900,
+              675
+            ],
+            [
+              "Proceso de producción",
+              "Las imágenes de materia prima y línea permiten una revisión más concreta del proceso.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "Alimentación de materia prima para separadores AGM",
+              1200,
+              900
+            ],
+            [
+              "Embalaje y despacho",
+              "El método de embalaje, los pallets y la preparación de envío pueden revisarse antes del pedido.",
+              "/images/evidence/agm-separator-sheets-packaging-01.webp",
+              "Embalaje y preparación de envío de separadores AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicaciones",
+          "title": "Principales aplicaciones de baterías VRLA",
+          "items": [
+            "Baterías UPS",
+            "Respaldo de telecomunicaciones",
+            "Baterías para motocicleta",
+            "Baterías de arranque automotriz",
+            "Almacenamiento de energía"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Revisión de calidad",
+          "title": "Inspección según requisitos acordados",
+          "text": "Las partidas de ensayo y los criterios de aceptación se confirman antes de producir y despachar.",
+          "cards": [
+            [
+              "Materia prima y proceso",
+              "El estado del material y los puntos de control se revisan durante la consulta."
+            ],
+            [
+              "Producto terminado",
+              "Las especificaciones finales se inspeccionan según los puntos acordados."
+            ],
+            [
+              "Confirmación de requisitos",
+              "Los métodos de ensayo y criterios de aceptación se acuerdan antes de producir."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Páginas relacionadas",
+          "title": "Ver producto y solicitud de muestra",
+          "items": [
+            [
+              "Separador AGM",
+              "/es/products/agm-separator/"
+            ],
+            [
+              "Rollos de separador AGM",
+              "/es/products/agm-separator-rolls/"
+            ],
+            [
+              "Láminas de separador AGM",
+              "/es/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensayos de separadores AGM",
+              "/es/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Aplicación para baterías de motocicleta",
+              "/es/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Solicitar muestra y revisar especificaciones",
+              "/es/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Consulta",
+          "title": "Enviar requisitos de láminas AGM",
+          "text": "Comparta medidas, espesor, cantidad, modelo de batería y requisitos de embalaje.",
+          "checklist": [
+            "Espesor y ancho objetivo",
+            "Rollo o tamaño de lámina",
+            "Aplicación y modelo de batería",
+            "Cantidad y requisitos de muestra",
+            "Ensayo o embalaje"
+          ],
+          "placeholder": "Espesor, ancho, formato, cantidad, muestra y requisitos de ensayo",
+          "submit": "Enviar requisitos",
+          "submitting": "Enviando...",
+          "required": "Ingrese su nombre y datos de contacto.",
+          "success": "Gracias. Revisaremos la información y nos pondremos en contacto.",
+          "failure": "No se pudo enviar la solicitud. Inténtelo de nuevo más tarde.",
+          "emailFallback": "Se abrió su aplicación de correo. Envíe el mensaje preparado."
+        },
+        "footer": {
+          "description": "Fabricante de separadores de fibra de vidrio AGM para productores de baterías de plomo-ácido y socios comerciales.",
+          "wechat": "Cuenta oficial de WeChat",
+          "mobile": "Sitio web móvil"
+        }
+      },
+      "pt": {
+        "homePath": "/pt/",
+        "languagePath": "/products/agm-separator-sheets/",
+        "quote": "Solicitar amostra",
+        "hero": {
+          "eyebrow": "Folhas de separador AGM",
+          "title": "Folhas AGM pré-cortadas para montagem de baterias VRLA",
+          "subtitle": "Folhas AGM de fibra de vidro cortadas nas dimensões solicitadas para amostras e montagem.",
+          "primary": "Solicitar amostra de folha AGM",
+          "secondary": "Enviar especificações",
+          "proof": [
+            "Análise de comprimento e largura",
+            "Confirmação de espessura",
+            "Embalagem de peças cortadas"
+          ],
+          "image": {
+            "src": "/images/viking-separator-sheets-900.webp",
+            "alt": "Folhas AGM pré-cortadas para montagem de baterias VRLA",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "Visão geral do produto",
+          "title": "A folha pré-cortada deve corresponder ao projeto das placas",
+          "paragraphs": [
+            "As dimensões são analisadas com o tamanho das placas, o espaço de montagem e o método de colocação do cliente.",
+            "Antes da produção, confirmamos comprimento, largura, espessura, quantidade por pacote e requisitos de manuseio."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Especificações principais",
+          "title": "Dados necessários para folhas AGM",
+          "text": "Informe dimensões, espessura, tolerância, quantidade e requisitos de embalagem ou avaliação.",
+          "items": [
+            [
+              "Espessura",
+              "Analisada com espaçamento das placas, compressão e requisitos de montagem."
+            ],
+            [
+              "Largura ou dimensão da folha",
+              "Podem ser definidos largura do rolo, direção de corte e tamanho pré-cortado."
+            ],
+            [
+              "Gramatura",
+              "Avaliada com a estrutura, retenção de eletrólito e método de ensaio."
+            ],
+            [
+              "Absorção de ácido",
+              "Confirmada conforme a aplicação e as condições de ensaio acordadas."
+            ],
+            [
+              "Resistência elétrica",
+              "Analisada com os objetivos de desempenho e condições de ensaio."
+            ],
+            [
+              "Porosidade e resistência",
+              "Podem ser verificadas conforme conversão, corte e montagem."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Formatos do produto",
+          "title": "Folhas cortadas, bordas e embalagem",
+          "items": [
+            [
+              "Rolos AGM",
+              "Espessura, largura, diâmetro, embalagem e planejamento de produção podem ser analisados.",
+              "/images/viking-separator-sheets-900.webp",
+              "Rolo acabado de separador AGM",
+              900,
+              675
+            ],
+            [
+              "Folhas AGM",
+              "Folhas pré-cortadas apoiam amostras, confirmação de especificações e testes de montagem.",
+              "/images/sheets1-900.webp",
+              "Folhas pré-cortadas de separador AGM",
+              900,
+              675
+            ],
+            [
+              "Processo de produção",
+              "Imagens de matéria-prima e da linha ajudam a tornar a análise do processo mais concreta.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "Alimentação de matéria-prima para separadores AGM",
+              1200,
+              900
+            ],
+            [
+              "Embalagem e expedição",
+              "Método de embalagem, pallets e preparação do envio podem ser analisados antes do pedido.",
+              "/images/evidence/agm-separator-sheets-packaging-01.webp",
+              "Embalagem e preparação do envio de separadores AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicações",
+          "title": "Principais aplicações de baterias VRLA",
+          "items": [
+            "Baterias UPS",
+            "Backup de telecomunicações",
+            "Baterias para motocicletas",
+            "Baterias de partida automotiva",
+            "Armazenamento de energia"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Análise de qualidade",
+          "title": "Inspeção conforme os requisitos acordados",
+          "text": "Os itens de ensaio e critérios de aceitação são confirmados antes da produção e expedição.",
+          "cards": [
+            [
+              "Matéria-prima e processo",
+              "A condição do material e os pontos de controle são analisados durante a consulta."
+            ],
+            [
+              "Produto acabado",
+              "As especificações finais são inspecionadas conforme os itens acordados."
+            ],
+            [
+              "Confirmação de requisitos",
+              "Métodos de ensaio e critérios de aceitação são definidos antes da produção."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Páginas relacionadas",
+          "title": "Veja o produto e solicite uma amostra",
+          "items": [
+            [
+              "Separador AGM",
+              "/pt/products/agm-separator/"
+            ],
+            [
+              "Rolos de separador AGM",
+              "/pt/products/agm-separator-rolls/"
+            ],
+            [
+              "Folhas de separador AGM",
+              "/pt/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensaios de separadores AGM",
+              "/pt/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Aplicação em baterias de motocicletas",
+              "/pt/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Solicitar amostra e analisar especificações",
+              "/pt/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Consulta",
+          "title": "Enviar requisitos das folhas AGM",
+          "text": "Compartilhe medidas, espessura, quantidade, modelo da bateria e requisitos de embalagem.",
+          "checklist": [
+            "Espessura e largura desejadas",
+            "Rolo ou dimensão da folha",
+            "Aplicação e modelo de bateria",
+            "Quantidade e amostras",
+            "Ensaios ou embalagem"
+          ],
+          "placeholder": "Espessura, largura, formato, quantidade, amostra e requisitos de ensaio",
+          "submit": "Enviar requisitos",
+          "submitting": "Enviando...",
+          "required": "Informe seu nome e dados de contato.",
+          "success": "Obrigado. Analisaremos as informações e entraremos em contato.",
+          "failure": "Não foi possível enviar a solicitação. Tente novamente mais tarde.",
+          "emailFallback": "Seu aplicativo de e-mail foi aberto. Envie a mensagem preparada."
+        },
+        "footer": {
+          "description": "Fabricante de separadores de fibra de vidro AGM para produtores de baterias chumbo-ácido e parceiros comerciais.",
+          "wechat": "Conta oficial do WeChat",
+          "mobile": "Site móvel"
+        }
+      },
+      "ru": {
+        "homePath": "/ru/",
+        "languagePath": "/products/agm-separator-sheets/",
+        "quote": "Запросить образец",
+        "hero": {
+          "eyebrow": "Листы AGM-сепаратора",
+          "title": "Нарезанные листы AGM для сборки аккумуляторов VRLA",
+          "subtitle": "Стекловолоконные листы AGM заданного размера для оценки образцов и сборки аккумуляторов.",
+          "primary": "Запросить образец листа AGM",
+          "secondary": "Отправить характеристики",
+          "proof": [
+            "Согласование длины и ширины",
+            "Проверка толщины",
+            "Упаковка нарезанных листов"
+          ],
+          "image": {
+            "src": "/images/viking-separator-sheets-900.webp",
+            "alt": "Нарезанные листы AGM для сборки аккумуляторов VRLA",
+            "width": 900,
+            "height": 675
+          }
+        },
+        "overview": {
+          "eyebrow": "О продукте",
+          "title": "Размер листа должен соответствовать конструкции пластин",
+          "paragraphs": [
+            "Размеры листа AGM проверяются по пластинам, сборочному зазору и способу укладки у заказчика.",
+            "До производства согласуются длина, ширина, толщина, количество в упаковке и требования к обработке."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Основные характеристики",
+          "title": "Данные для согласования листов AGM",
+          "text": "Укажите размеры листа, толщину, допуск, количество, упаковку и требования к образцам.",
+          "items": [
+            [
+              "Толщина",
+              "Рассматривается вместе с зазором пластин, сжатием и требованиями к сборке."
+            ],
+            [
+              "Ширина или размер листа",
+              "Можно согласовать ширину рулона, направление резки и размеры листов."
+            ],
+            [
+              "Поверхностная плотность",
+              "Оценивается вместе со структурой, удержанием электролита и методом испытаний."
+            ],
+            [
+              "Поглощение кислоты",
+              "Подтверждается по применению и согласованным условиям испытаний."
+            ],
+            [
+              "Электрическое сопротивление",
+              "Рассматривается с целевыми характеристиками и условиями испытаний."
+            ],
+            [
+              "Пористость и прочность",
+              "Проверяются с учетом переработки, резки и сборки."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Формы поставки",
+          "title": "Нарезанные листы, кромки и упаковка",
+          "items": [
+            [
+              "Рулоны AGM",
+              "Можно согласовать толщину, ширину, диаметр рулона, упаковку и план производства.",
+              "/images/viking-separator-sheets-900.webp",
+              "Готовый рулон AGM-сепаратора",
+              900,
+              675
+            ],
+            [
+              "Листы AGM",
+              "Предварительно нарезанные листы подходят для образцов, проверки спецификаций и сборки.",
+              "/images/sheets1-900.webp",
+              "Нарезанные листы AGM-сепаратора",
+              900,
+              675
+            ],
+            [
+              "Производственный процесс",
+              "Фотографии сырья и линии помогают предметно обсудить процесс изготовления.",
+              "/images/evidence/agm-separator-sheets-detail-01.webp",
+              "Подача сырья для AGM-сепараторов",
+              1200,
+              900
+            ],
+            [
+              "Упаковка и отгрузка",
+              "Способ упаковки, паллеты и подготовку к отправке можно согласовать до заказа.",
+              "/images/evidence/agm-separator-sheets-packaging-01.webp",
+              "Упаковка и подготовка AGM-сепараторов к отгрузке",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Применение",
+          "title": "Основные области применения аккумуляторов VRLA",
+          "items": [
+            "Аккумуляторы для ИБП",
+            "Резервное питание телекоммуникаций",
+            "Мотоциклетные аккумуляторы",
+            "Автомобильные стартерные аккумуляторы",
+            "Накопление энергии"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Контроль качества",
+          "title": "Проверка по согласованным требованиям",
+          "text": "Показатели испытаний и критерии приемки подтверждаются до производства и отгрузки.",
+          "cards": [
+            [
+              "Сырье и процесс",
+              "Состояние материала и контрольные точки обсуждаются при согласовании заказа."
+            ],
+            [
+              "Готовая продукция",
+              "Характеристики готового продукта проверяются по согласованным показателям."
+            ],
+            [
+              "Подтверждение требований",
+              "Методы испытаний и критерии приемки согласуются до производства."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Связанные страницы",
+          "title": "Посмотреть продукт и запросить образец",
+          "items": [
+            [
+              "AGM-сепаратор",
+              "/ru/products/agm-separator/"
+            ],
+            [
+              "Рулоны AGM-сепаратора",
+              "/ru/products/agm-separator-rolls/"
+            ],
+            [
+              "Листы AGM-сепаратора",
+              "/ru/products/agm-separator-sheets/"
+            ],
+            [
+              "Испытания AGM-сепаратора",
+              "/ru/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Применение в мотоциклетных аккумуляторах",
+              "/ru/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Запросить образец и проверку характеристик",
+              "/ru/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Запрос",
+          "title": "Отправить требования к листам AGM",
+          "text": "Укажите размеры, толщину, количество, модель аккумулятора и требования к упаковке.",
+          "checklist": [
+            "Целевая толщина и ширина",
+            "Рулон или размер листа",
+            "Применение и модель аккумулятора",
+            "Объем и образцы",
+            "Испытания или упаковка"
+          ],
+          "placeholder": "Толщина, ширина, форма, объем, образец и требования к испытаниям",
+          "submit": "Отправить требования",
+          "submitting": "Отправка...",
+          "required": "Укажите имя и контактные данные.",
+          "success": "Спасибо. Мы проверим информацию и свяжемся с вами.",
+          "failure": "Не удалось отправить запрос. Повторите попытку позже.",
+          "emailFallback": "Открыто почтовое приложение. Отправьте подготовленное письмо."
+        },
+        "footer": {
+          "description": "Производитель стекловолоконных AGM-сепараторов для производителей свинцово-кислотных аккумуляторов и торговых партнеров.",
+          "wechat": "Официальный аккаунт WeChat",
+          "mobile": "Мобильная версия сайта"
         }
       }
     },
@@ -7097,6 +9377,18 @@
               "/vi/products/agm-separator/"
             ],
             [
+              "Tấm ngăn AGM dạng cuộn",
+              "/vi/products/agm-separator-rolls/"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "/vi/products/agm-separator-sheets/"
+            ],
+            [
+              "Kiểm tra tấm ngăn AGM",
+              "/vi/quality-control/agm-separator-testing/"
+            ],
+            [
               "Ứng dụng ắc quy xe máy",
               "/vi/applications/agm-separator-for-motorcycle-battery/"
             ],
@@ -7257,6 +9549,18 @@
             [
               "AGM 분리막 제품",
               "/ko/products/agm-separator/"
+            ],
+            [
+              "AGM 분리막 롤",
+              "/ko/products/agm-separator-rolls/"
+            ],
+            [
+              "AGM 분리막 시트",
+              "/ko/products/agm-separator-sheets/"
+            ],
+            [
+              "AGM 분리막 시험",
+              "/ko/quality-control/agm-separator-testing/"
             ],
             [
               "오토바이 배터리 적용",
@@ -7421,6 +9725,18 @@
               "/ja/products/agm-separator/"
             ],
             [
+              "AGMセパレーター ロール",
+              "/ja/products/agm-separator-rolls/"
+            ],
+            [
+              "AGMセパレーター シート",
+              "/ja/products/agm-separator-sheets/"
+            ],
+            [
+              "AGMセパレーター試験",
+              "/ja/quality-control/agm-separator-testing/"
+            ],
+            [
               "二輪車用バッテリー用途",
               "/ja/applications/agm-separator-for-motorcycle-battery/"
             ],
@@ -7581,6 +9897,18 @@
             [
               "Separador AGM",
               "/es/products/agm-separator/"
+            ],
+            [
+              "Rollos de separador AGM",
+              "/es/products/agm-separator-rolls/"
+            ],
+            [
+              "Láminas de separador AGM",
+              "/es/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensayos de separadores AGM",
+              "/es/quality-control/agm-separator-testing/"
             ],
             [
               "Aplicación para baterías de motocicleta",
@@ -7745,6 +10073,18 @@
               "/pt/products/agm-separator/"
             ],
             [
+              "Rolos de separador AGM",
+              "/pt/products/agm-separator-rolls/"
+            ],
+            [
+              "Folhas de separador AGM",
+              "/pt/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensaios de separadores AGM",
+              "/pt/quality-control/agm-separator-testing/"
+            ],
+            [
               "Aplicação em baterias de motocicletas",
               "/pt/applications/agm-separator-for-motorcycle-battery/"
             ],
@@ -7905,6 +10245,18 @@
             [
               "AGM-сепаратор",
               "/ru/products/agm-separator/"
+            ],
+            [
+              "Рулоны AGM-сепаратора",
+              "/ru/products/agm-separator-rolls/"
+            ],
+            [
+              "Листы AGM-сепаратора",
+              "/ru/products/agm-separator-sheets/"
+            ],
+            [
+              "Испытания AGM-сепаратора",
+              "/ru/quality-control/agm-separator-testing/"
             ],
             [
               "Применение в мотоциклетных аккумуляторах",
@@ -8696,6 +11048,1110 @@
           "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
           "wechat": "官方微信公众号",
           "mobile": "移动官网"
+        }
+      },
+      "vi": {
+        "homePath": "/vi/",
+        "languagePath": "/quality-control/agm-separator-testing/",
+        "quote": "Yêu cầu báo giá",
+        "hero": {
+          "eyebrow": "Kiểm tra và kiểm soát chất lượng",
+          "title": "Kiểm tra chất lượng tấm ngăn AGM",
+          "subtitle": "Trao đổi các hạng mục kiểm tra như độ dày, định lượng, hút axit, điện trở và ngoại quan theo yêu cầu khách hàng.",
+          "primary": "Gửi yêu cầu kiểm tra",
+          "secondary": "Gửi quy cách cần thiết",
+          "proof": [
+            "Kiểm tra thông số có thể đo",
+            "Xác nhận phương pháp thử",
+            "Đánh giá theo yêu cầu khách hàng"
+          ],
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Kiểm tra chất lượng tấm ngăn AGM",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "Tổng quan sản phẩm",
+          "title": "Chất lượng cần được xác nhận bằng ngoại quan và dữ liệu",
+          "paragraphs": [
+            "Độ ổn định của tấm ngăn AGM liên quan đến vật liệu, quy trình, kích thước và các thông số thử đã thống nhất.",
+            "Hạng mục thử, điều kiện, phương pháp và giá trị chấp nhận cần được xác nhận trước khi làm mẫu hoặc đặt hàng."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Thông số chính",
+          "title": "Các hạng mục kiểm tra thường được trao đổi",
+          "text": "Độ dày, định lượng, hút axit, điện trở, độ rỗng, độ bền và ngoại quan được xem xét theo tiêu chuẩn khách hàng.",
+          "items": [
+            [
+              "Độ dày",
+              "Cần được xem xét cùng khoảng cách bản cực, độ nén và yêu cầu lắp ráp."
+            ],
+            [
+              "Chiều rộng hoặc kích thước tấm",
+              "Có thể trao đổi chiều rộng cuộn, hướng xẻ hoặc kích thước cắt sẵn."
+            ],
+            [
+              "Định lượng",
+              "Được đánh giá cùng cấu trúc vật liệu, khả năng giữ điện phân và phương pháp thử."
+            ],
+            [
+              "Khả năng hút axit",
+              "Xác nhận theo ứng dụng, nhu cầu giữ điện phân và điều kiện thử đã thống nhất."
+            ],
+            [
+              "Điện trở",
+              "Xem xét với mục tiêu hiệu suất ắc quy và điều kiện thử."
+            ],
+            [
+              "Độ rỗng và độ bền",
+              "Có thể kiểm tra theo nhu cầu gia công, cắt và lắp ráp."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Dạng sản phẩm",
+          "title": "Hình ảnh kiểm tra chất lượng thực tế",
+          "items": [
+            [
+              "Kiểm tra độ dày",
+              "Xác nhận độ dày và độ ổn định kích thước theo phương pháp đã thống nhất.",
+              "/images/evidence/quality-thickness-test-01.webp",
+              "Kiểm tra độ dày tấm ngăn AGM",
+              1200,
+              900
+            ],
+            [
+              "Kiểm tra định lượng",
+              "Đánh giá khối lượng trên đơn vị diện tích và tính nhất quán của vật liệu.",
+              "/images/evidence/quality-basis-weight-test-01.webp",
+              "Kiểm tra định lượng tấm ngăn AGM",
+              1200,
+              900
+            ],
+            [
+              "Kiểm tra hút axit",
+              "Trao đổi khả năng hút và giữ điện phân theo điều kiện thử.",
+              "/images/evidence/quality-acid-absorption-test-01.webp",
+              "Kiểm tra khả năng hút axit tấm ngăn AGM",
+              1200,
+              900
+            ],
+            [
+              "Kiểm tra điện trở",
+              "Xem xét điện trở theo mục tiêu hiệu suất và phương pháp của khách hàng.",
+              "/images/evidence/quality-electrical-resistance-test-01.webp",
+              "Kiểm tra điện trở tấm ngăn AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Ứng dụng",
+          "title": "Dùng cho các phân khúc ắc quy axit-chì VRLA chính",
+          "items": [
+            "Ắc quy UPS",
+            "Nguồn dự phòng viễn thông",
+            "Ắc quy xe máy",
+            "Ắc quy khởi động ô tô",
+            "Ắc quy lưu trữ năng lượng"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Ghi chú chất lượng",
+          "title": "Hạng mục kiểm tra theo yêu cầu đã xác nhận",
+          "text": "Hạng mục thử nghiệm và giá trị chấp nhận cần được hai bên xác nhận trước khi sản xuất và giao hàng.",
+          "cards": [
+            [
+              "Kiểm tra đầu vào và quy trình",
+              "Tình trạng vật liệu và quy trình có thể được xem xét khi trao đổi đơn hàng."
+            ],
+            [
+              "Kiểm tra thành phẩm",
+              "Các thông số thành phẩm được kiểm tra theo hạng mục đã thống nhất."
+            ],
+            [
+              "Xác nhận yêu cầu",
+              "Giá trị chấp nhận cần được xác nhận trước khi sản xuất."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Trang liên quan",
+          "title": "Tiếp tục xem ứng dụng và yêu cầu mẫu",
+          "items": [
+            [
+              "Sản phẩm tấm ngăn AGM",
+              "/vi/products/agm-separator/"
+            ],
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "/vi/products/agm-separator-rolls/"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "/vi/products/agm-separator-sheets/"
+            ],
+            [
+              "Kiểm tra tấm ngăn AGM",
+              "/vi/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Ứng dụng ắc quy xe máy",
+              "/vi/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Yêu cầu mẫu",
+              "/vi/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Yêu cầu",
+          "title": "Gửi tiêu chuẩn và yêu cầu kiểm tra",
+          "text": "Chia sẻ hạng mục thử, giá trị mục tiêu, phương pháp, ứng dụng ắc quy và nhu cầu mẫu.",
+          "checklist": [
+            "Độ dày và chiều rộng mục tiêu",
+            "Dạng cuộn hoặc kích thước tấm",
+            "Ứng dụng và mẫu ắc quy",
+            "Số lượng và yêu cầu mẫu",
+            "Yêu cầu thử nghiệm hoặc đóng gói"
+          ],
+          "placeholder": "Độ dày, chiều rộng, dạng cuộn hoặc tấm, số lượng, yêu cầu mẫu và thử nghiệm",
+          "submit": "Gửi yêu cầu",
+          "submitting": "Đang gửi...",
+          "required": "Vui lòng nhập họ tên và thông tin liên hệ.",
+          "success": "Cảm ơn bạn. Chúng tôi sẽ xem xét và liên hệ lại.",
+          "failure": "Hiện không thể gửi yêu cầu. Vui lòng thử lại sau.",
+          "emailFallback": "Ứng dụng email đã được mở với nội dung yêu cầu. Vui lòng gửi email để hoàn tất."
+        },
+        "footer": {
+          "description": "Nhà sản xuất tấm ngăn sợi thủy tinh AGM phục vụ các nhà sản xuất và đối tác thương mại ắc quy axit-chì.",
+          "wechat": "Tài khoản WeChat chính thức",
+          "mobile": "Website di động"
+        }
+      },
+      "ko": {
+        "homePath": "/ko/",
+        "languagePath": "/quality-control/agm-separator-testing/",
+        "quote": "샘플 요청",
+        "hero": {
+          "eyebrow": "시험 및 품질 관리",
+          "title": "AGM 분리막 시험과 품질 관리",
+          "subtitle": "고객 요구사항에 따라 두께, 평량, 산 흡수, 전기 저항 및 외관 검사를 협의합니다.",
+          "primary": "시험 요구사항 보내기",
+          "secondary": "사양 정보 보내기",
+          "proof": [
+            "측정 가능한 품질 항목",
+            "시험 방법 사전 확인",
+            "고객 기준 검토"
+          ],
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGM 분리막 시험과 품질 관리",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "제품 개요",
+          "title": "품질은 외관과 측정 데이터로 확인해야 합니다",
+          "paragraphs": [
+            "AGM 분리막의 안정성은 원료, 공정, 치수와 합의된 시험 항목에 연결됩니다.",
+            "샘플 또는 주문 전에 시험 항목, 조건, 방법과 합격 기준을 확인해야 합니다."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "주요 사양",
+          "title": "일반적으로 협의하는 시험 항목",
+          "text": "두께, 평량, 산 흡수, 전기 저항, 기공률, 강도와 외관을 고객 기준에 따라 검토합니다.",
+          "items": [
+            [
+              "두께",
+              "극판 간격, 압축 조건과 조립 요구사항을 함께 검토합니다."
+            ],
+            [
+              "폭 또는 시트 크기",
+              "롤 폭, 슬리팅 방향 또는 사전 절단 치수를 협의할 수 있습니다."
+            ],
+            [
+              "평량",
+              "소재 구조, 전해액 유지 성능과 시험 방법을 함께 검토합니다."
+            ],
+            [
+              "산 흡수 성능",
+              "적용 분야, 전해액 유지 요구와 합의된 시험 조건에 따라 확인합니다."
+            ],
+            [
+              "전기 저항",
+              "배터리 성능 목표 및 시험 조건과 함께 검토합니다."
+            ],
+            [
+              "기공률 및 강도",
+              "가공, 절단 및 조립 요구사항에 따라 확인할 수 있습니다."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "제품 형태",
+          "title": "실제 품질 검사 장면",
+          "items": [
+            [
+              "두께 측정",
+              "합의된 방법에 따라 두께와 치수 안정성을 확인합니다.",
+              "/images/evidence/quality-thickness-test-01.webp",
+              "AGM 분리막 두께 측정",
+              1200,
+              900
+            ],
+            [
+              "평량 측정",
+              "단위 면적당 중량과 소재 일관성을 평가합니다.",
+              "/images/evidence/quality-basis-weight-test-01.webp",
+              "AGM 분리막 평량 측정",
+              1200,
+              900
+            ],
+            [
+              "산 흡수 시험",
+              "시험 조건에 따른 전해액 흡수와 유지 성능을 검토합니다.",
+              "/images/evidence/quality-acid-absorption-test-01.webp",
+              "AGM 분리막 산 흡수 시험",
+              1200,
+              900
+            ],
+            [
+              "전기 저항 시험",
+              "배터리 성능 목표와 고객 시험 방법에 따라 검토합니다.",
+              "/images/evidence/quality-electrical-resistance-test-01.webp",
+              "AGM 분리막 전기 저항 시험",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "적용 분야",
+          "title": "주요 VRLA 납축전지 적용 분야",
+          "items": [
+            "UPS 배터리",
+            "통신 백업 전원",
+            "오토바이 배터리",
+            "자동차 시동 배터리",
+            "에너지 저장 배터리"
+          ]
+        },
+        "quality": {
+          "eyebrow": "품질 확인",
+          "title": "합의된 요구사항에 따른 검사",
+          "text": "시험 항목과 허용 기준은 생산 및 출하 전에 양측이 확인해야 합니다.",
+          "cards": [
+            [
+              "원료 및 공정 검사",
+              "주문 협의 시 소재 상태와 공정 관리 항목을 검토할 수 있습니다."
+            ],
+            [
+              "완제품 검사",
+              "합의된 항목에 따라 완제품 사양을 검사합니다."
+            ],
+            [
+              "요구사항 확인",
+              "생산 전에 시험 방법과 허용 기준을 확인합니다."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "관련 페이지",
+          "title": "제품 및 샘플 요청 보기",
+          "items": [
+            [
+              "AGM 분리막 제품",
+              "/ko/products/agm-separator/"
+            ],
+            [
+              "AGM 분리막 롤",
+              "/ko/products/agm-separator-rolls/"
+            ],
+            [
+              "AGM 분리막 시트",
+              "/ko/products/agm-separator-sheets/"
+            ],
+            [
+              "AGM 분리막 시험",
+              "/ko/quality-control/agm-separator-testing/"
+            ],
+            [
+              "오토바이 배터리 적용",
+              "/ko/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "샘플 및 사양 검토 요청",
+              "/ko/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "문의",
+          "title": "시험 기준과 요구사항 보내기",
+          "text": "시험 항목, 목표값, 방법, 배터리 적용 분야와 샘플 요구사항을 공유해 주세요.",
+          "checklist": [
+            "목표 두께와 폭",
+            "롤 또는 시트 크기",
+            "배터리 적용 분야와 모델",
+            "수량 및 샘플 요구",
+            "시험 또는 포장 요구사항"
+          ],
+          "placeholder": "두께, 폭, 롤 또는 시트 형태, 수량, 샘플 및 시험 요구사항",
+          "submit": "요구사항 보내기",
+          "submitting": "전송 중...",
+          "required": "이름과 연락처를 입력해 주세요.",
+          "success": "감사합니다. 내용을 검토한 후 연락드리겠습니다.",
+          "failure": "현재 요청을 전송할 수 없습니다. 잠시 후 다시 시도해 주세요.",
+          "emailFallback": "이메일 프로그램이 열렸습니다. 준비된 이메일을 전송해 주세요."
+        },
+        "footer": {
+          "description": "납축전지 제조업체와 무역 파트너를 위한 AGM 유리섬유 분리막 제조업체.",
+          "wechat": "공식 WeChat 계정",
+          "mobile": "모바일 웹사이트"
+        }
+      },
+      "ja": {
+        "homePath": "/ja/",
+        "languagePath": "/quality-control/agm-separator-testing/",
+        "quote": "サンプル依頼",
+        "hero": {
+          "eyebrow": "試験・品質管理",
+          "title": "AGMセパレーターの試験と品質管理",
+          "subtitle": "お客様の要件に基づき、厚さ、坪量、吸液、電気抵抗、外観検査を確認します。",
+          "primary": "試験要件を送信",
+          "secondary": "仕様情報を送る",
+          "proof": [
+            "測定可能な品質項目",
+            "試験方法の事前確認",
+            "お客様基準の確認"
+          ],
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGMセパレーターの試験と品質管理",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "製品概要",
+          "title": "品質は外観と測定データの両面で確認",
+          "paragraphs": [
+            "AGMセパレーターの安定性は、原料、工程、寸法、合意した試験項目に関係します。",
+            "サンプル・注文前に試験項目、条件、方法、合格基準を確認します。"
+          ]
+        },
+        "parameters": {
+          "eyebrow": "主要仕様",
+          "title": "一般的に確認する試験項目",
+          "text": "厚さ、坪量、吸液、電気抵抗、気孔率、強度、外観をお客様基準に合わせて確認します。",
+          "items": [
+            [
+              "厚さ",
+              "極板間隔、圧縮条件、組立要件とあわせて確認します。"
+            ],
+            [
+              "幅・シート寸法",
+              "ロール幅、スリット方向、カット済み寸法を協議できます。"
+            ],
+            [
+              "坪量",
+              "材料構造、電解液保持性能、試験方法とあわせて評価します。"
+            ],
+            [
+              "吸液性能",
+              "用途、電解液保持要件、合意した試験条件に基づいて確認します。"
+            ],
+            [
+              "電気抵抗",
+              "バッテリー性能目標と試験条件にあわせて確認します。"
+            ],
+            [
+              "空隙率・強度",
+              "加工、裁断、組立要件に応じて確認できます。"
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "製品形状",
+          "title": "実際の品質検査",
+          "items": [
+            [
+              "厚さ測定",
+              "合意した方法で厚さと寸法安定性を確認します。",
+              "/images/evidence/quality-thickness-test-01.webp",
+              "AGMセパレーター厚さ測定",
+              1200,
+              900
+            ],
+            [
+              "坪量測定",
+              "単位面積当たりの質量と材料の均一性を評価します。",
+              "/images/evidence/quality-basis-weight-test-01.webp",
+              "AGMセパレーター坪量測定",
+              1200,
+              900
+            ],
+            [
+              "吸液試験",
+              "試験条件に基づき電解液の吸収・保持を確認します。",
+              "/images/evidence/quality-acid-absorption-test-01.webp",
+              "AGMセパレーター吸液試験",
+              1200,
+              900
+            ],
+            [
+              "電気抵抗試験",
+              "電池性能目標とお客様の方法に基づき確認します。",
+              "/images/evidence/quality-electrical-resistance-test-01.webp",
+              "AGMセパレーター電気抵抗試験",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "用途",
+          "title": "主なVRLA鉛蓄電池用途",
+          "items": [
+            "UPSバッテリー",
+            "通信バックアップ電源",
+            "二輪車用バッテリー",
+            "自動車始動用バッテリー",
+            "蓄電池"
+          ]
+        },
+        "quality": {
+          "eyebrow": "品質確認",
+          "title": "合意した要件に基づく検査",
+          "text": "試験項目と受入基準は生産・出荷前に双方で確認します。",
+          "cards": [
+            [
+              "原料・工程検査",
+              "受注協議時に材料状態と工程管理項目を確認できます。"
+            ],
+            [
+              "完成品検査",
+              "合意した項目に基づいて完成品仕様を検査します。"
+            ],
+            [
+              "要件確認",
+              "生産前に試験方法と受入基準を確認します。"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "関連ページ",
+          "title": "製品とサンプル依頼を確認",
+          "items": [
+            [
+              "AGMセパレーター製品",
+              "/ja/products/agm-separator/"
+            ],
+            [
+              "AGMセパレーター ロール",
+              "/ja/products/agm-separator-rolls/"
+            ],
+            [
+              "AGMセパレーター シート",
+              "/ja/products/agm-separator-sheets/"
+            ],
+            [
+              "AGMセパレーター試験",
+              "/ja/quality-control/agm-separator-testing/"
+            ],
+            [
+              "二輪車用バッテリー用途",
+              "/ja/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "サンプル・仕様確認依頼",
+              "/ja/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "お問い合わせ",
+          "title": "試験基準と要件を送信",
+          "text": "試験項目、目標値、方法、バッテリー用途、サンプル要件をご提示ください。",
+          "checklist": [
+            "目標厚さ・幅",
+            "ロールまたはシート寸法",
+            "バッテリー用途・型式",
+            "数量・サンプル要件",
+            "試験・梱包要件"
+          ],
+          "placeholder": "厚さ、幅、ロールまたはシート形状、数量、サンプル・試験要件",
+          "submit": "要件を送信",
+          "submitting": "送信中...",
+          "required": "お名前と連絡先を入力してください。",
+          "success": "ありがとうございます。内容を確認してご連絡します。",
+          "failure": "現在リクエストを送信できません。しばらくしてから再度お試しください。",
+          "emailFallback": "メールアプリを開きました。作成済みのメールを送信してください。"
+        },
+        "footer": {
+          "description": "鉛蓄電池メーカーと商社向けのAGMガラス繊維セパレーター製造会社。",
+          "wechat": "公式WeChatアカウント",
+          "mobile": "モバイルサイト"
+        }
+      },
+      "es": {
+        "homePath": "/es/",
+        "languagePath": "/quality-control/agm-separator-testing/",
+        "quote": "Solicitar muestra",
+        "hero": {
+          "eyebrow": "Ensayos y control de calidad",
+          "title": "Ensayos y control de calidad de separadores AGM",
+          "subtitle": "Revisión de espesor, gramaje, absorción de ácido, resistencia eléctrica y apariencia según requisitos del cliente.",
+          "primary": "Enviar requisitos de ensayo",
+          "secondary": "Enviar especificaciones",
+          "proof": [
+            "Parámetros medibles",
+            "Métodos de ensayo acordados",
+            "Revisión según criterios del cliente"
+          ],
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Ensayos y control de calidad de separadores AGM",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "Descripción del producto",
+          "title": "La calidad se confirma con apariencia y datos medibles",
+          "paragraphs": [
+            "La estabilidad del separador AGM depende de materia prima, proceso, dimensiones y ensayos acordados.",
+            "Antes de una muestra o pedido se confirman partidas, condiciones, métodos y criterios de aceptación."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Especificaciones clave",
+          "title": "Ensayos que suelen revisarse",
+          "text": "Espesor, gramaje, absorción, resistencia, porosidad, resistencia mecánica y apariencia se revisan según la norma del cliente.",
+          "items": [
+            [
+              "Espesor",
+              "Se revisa con la separación de placas, la compresión y los requisitos de montaje."
+            ],
+            [
+              "Ancho o tamaño de lámina",
+              "Se pueden acordar ancho de rollo, dirección de corte o dimensiones precortadas."
+            ],
+            [
+              "Gramaje",
+              "Se evalúa junto con la estructura, la retención de electrolito y el método de ensayo."
+            ],
+            [
+              "Absorción de ácido",
+              "Se confirma según la aplicación y las condiciones de ensayo acordadas."
+            ],
+            [
+              "Resistencia eléctrica",
+              "Se revisa con los objetivos de rendimiento y las condiciones de ensayo."
+            ],
+            [
+              "Porosidad y resistencia",
+              "Se pueden comprobar según los requisitos de conversión, corte y montaje."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Formatos de producto",
+          "title": "Escenas reales de control de calidad",
+          "items": [
+            [
+              "Medición de espesor",
+              "Confirma espesor y estabilidad dimensional con el método acordado.",
+              "/images/evidence/quality-thickness-test-01.webp",
+              "Medición de espesor de separador AGM",
+              1200,
+              900
+            ],
+            [
+              "Medición de gramaje",
+              "Evalúa masa por unidad de superficie y uniformidad del material.",
+              "/images/evidence/quality-basis-weight-test-01.webp",
+              "Medición de gramaje de separador AGM",
+              1200,
+              900
+            ],
+            [
+              "Ensayo de absorción de ácido",
+              "Revisa absorción y retención del electrolito bajo condiciones definidas.",
+              "/images/evidence/quality-acid-absorption-test-01.webp",
+              "Ensayo de absorción de ácido de separador AGM",
+              1200,
+              900
+            ],
+            [
+              "Ensayo de resistencia eléctrica",
+              "Se revisa según el objetivo de la batería y el método del cliente.",
+              "/images/evidence/quality-electrical-resistance-test-01.webp",
+              "Ensayo de resistencia eléctrica de separador AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicaciones",
+          "title": "Principales aplicaciones de baterías VRLA",
+          "items": [
+            "Baterías UPS",
+            "Respaldo de telecomunicaciones",
+            "Baterías para motocicleta",
+            "Baterías de arranque automotriz",
+            "Almacenamiento de energía"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Revisión de calidad",
+          "title": "Inspección según requisitos acordados",
+          "text": "Las partidas de ensayo y los criterios de aceptación se confirman antes de producir y despachar.",
+          "cards": [
+            [
+              "Materia prima y proceso",
+              "El estado del material y los puntos de control se revisan durante la consulta."
+            ],
+            [
+              "Producto terminado",
+              "Las especificaciones finales se inspeccionan según los puntos acordados."
+            ],
+            [
+              "Confirmación de requisitos",
+              "Los métodos de ensayo y criterios de aceptación se acuerdan antes de producir."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Páginas relacionadas",
+          "title": "Ver producto y solicitud de muestra",
+          "items": [
+            [
+              "Separador AGM",
+              "/es/products/agm-separator/"
+            ],
+            [
+              "Rollos de separador AGM",
+              "/es/products/agm-separator-rolls/"
+            ],
+            [
+              "Láminas de separador AGM",
+              "/es/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensayos de separadores AGM",
+              "/es/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Aplicación para baterías de motocicleta",
+              "/es/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Solicitar muestra y revisar especificaciones",
+              "/es/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Consulta",
+          "title": "Enviar norma y requisitos de ensayo",
+          "text": "Comparta partidas, valores objetivo, método, aplicación de la batería y requisitos de muestra.",
+          "checklist": [
+            "Espesor y ancho objetivo",
+            "Rollo o tamaño de lámina",
+            "Aplicación y modelo de batería",
+            "Cantidad y requisitos de muestra",
+            "Ensayo o embalaje"
+          ],
+          "placeholder": "Espesor, ancho, formato, cantidad, muestra y requisitos de ensayo",
+          "submit": "Enviar requisitos",
+          "submitting": "Enviando...",
+          "required": "Ingrese su nombre y datos de contacto.",
+          "success": "Gracias. Revisaremos la información y nos pondremos en contacto.",
+          "failure": "No se pudo enviar la solicitud. Inténtelo de nuevo más tarde.",
+          "emailFallback": "Se abrió su aplicación de correo. Envíe el mensaje preparado."
+        },
+        "footer": {
+          "description": "Fabricante de separadores de fibra de vidrio AGM para productores de baterías de plomo-ácido y socios comerciales.",
+          "wechat": "Cuenta oficial de WeChat",
+          "mobile": "Sitio web móvil"
+        }
+      },
+      "pt": {
+        "homePath": "/pt/",
+        "languagePath": "/quality-control/agm-separator-testing/",
+        "quote": "Solicitar amostra",
+        "hero": {
+          "eyebrow": "Ensaios e controle de qualidade",
+          "title": "Ensaios e controle de qualidade de separadores AGM",
+          "subtitle": "Análise de espessura, gramatura, absorção de ácido, resistência elétrica e aparência conforme os requisitos do cliente.",
+          "primary": "Enviar requisitos de ensaio",
+          "secondary": "Enviar especificações",
+          "proof": [
+            "Parâmetros mensuráveis",
+            "Métodos de ensaio acordados",
+            "Análise conforme critérios do cliente"
+          ],
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Ensaios e controle de qualidade de separadores AGM",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "Visão geral do produto",
+          "title": "A qualidade é confirmada por aparência e dados mensuráveis",
+          "paragraphs": [
+            "A estabilidade do separador AGM depende da matéria-prima, processo, dimensões e ensaios acordados.",
+            "Antes da amostra ou pedido, confirmamos itens, condições, métodos e critérios de aceitação."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Especificações principais",
+          "title": "Ensaios normalmente analisados",
+          "text": "Espessura, gramatura, absorção, resistência, porosidade, resistência mecânica e aparência são analisadas conforme a norma do cliente.",
+          "items": [
+            [
+              "Espessura",
+              "Analisada com espaçamento das placas, compressão e requisitos de montagem."
+            ],
+            [
+              "Largura ou dimensão da folha",
+              "Podem ser definidos largura do rolo, direção de corte e tamanho pré-cortado."
+            ],
+            [
+              "Gramatura",
+              "Avaliada com a estrutura, retenção de eletrólito e método de ensaio."
+            ],
+            [
+              "Absorção de ácido",
+              "Confirmada conforme a aplicação e as condições de ensaio acordadas."
+            ],
+            [
+              "Resistência elétrica",
+              "Analisada com os objetivos de desempenho e condições de ensaio."
+            ],
+            [
+              "Porosidade e resistência",
+              "Podem ser verificadas conforme conversão, corte e montagem."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Formatos do produto",
+          "title": "Cenas reais de controle de qualidade",
+          "items": [
+            [
+              "Medição de espessura",
+              "Confirma a espessura e a estabilidade dimensional pelo método acordado.",
+              "/images/evidence/quality-thickness-test-01.webp",
+              "Medição de espessura do separador AGM",
+              1200,
+              900
+            ],
+            [
+              "Medição de gramatura",
+              "Avalia massa por unidade de área e uniformidade do material.",
+              "/images/evidence/quality-basis-weight-test-01.webp",
+              "Medição de gramatura do separador AGM",
+              1200,
+              900
+            ],
+            [
+              "Ensaio de absorção de ácido",
+              "Analisa absorção e retenção de eletrólito sob condições definidas.",
+              "/images/evidence/quality-acid-absorption-test-01.webp",
+              "Ensaio de absorção de ácido do separador AGM",
+              1200,
+              900
+            ],
+            [
+              "Ensaio de resistência elétrica",
+              "Analisado conforme o objetivo da bateria e o método do cliente.",
+              "/images/evidence/quality-electrical-resistance-test-01.webp",
+              "Ensaio de resistência elétrica do separador AGM",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicações",
+          "title": "Principais aplicações de baterias VRLA",
+          "items": [
+            "Baterias UPS",
+            "Backup de telecomunicações",
+            "Baterias para motocicletas",
+            "Baterias de partida automotiva",
+            "Armazenamento de energia"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Análise de qualidade",
+          "title": "Inspeção conforme os requisitos acordados",
+          "text": "Os itens de ensaio e critérios de aceitação são confirmados antes da produção e expedição.",
+          "cards": [
+            [
+              "Matéria-prima e processo",
+              "A condição do material e os pontos de controle são analisados durante a consulta."
+            ],
+            [
+              "Produto acabado",
+              "As especificações finais são inspecionadas conforme os itens acordados."
+            ],
+            [
+              "Confirmação de requisitos",
+              "Métodos de ensaio e critérios de aceitação são definidos antes da produção."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Páginas relacionadas",
+          "title": "Veja o produto e solicite uma amostra",
+          "items": [
+            [
+              "Separador AGM",
+              "/pt/products/agm-separator/"
+            ],
+            [
+              "Rolos de separador AGM",
+              "/pt/products/agm-separator-rolls/"
+            ],
+            [
+              "Folhas de separador AGM",
+              "/pt/products/agm-separator-sheets/"
+            ],
+            [
+              "Ensaios de separadores AGM",
+              "/pt/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Aplicação em baterias de motocicletas",
+              "/pt/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Solicitar amostra e analisar especificações",
+              "/pt/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Consulta",
+          "title": "Enviar norma e requisitos de ensaio",
+          "text": "Compartilhe itens, valores-alvo, método, aplicação da bateria e requisitos de amostra.",
+          "checklist": [
+            "Espessura e largura desejadas",
+            "Rolo ou dimensão da folha",
+            "Aplicação e modelo de bateria",
+            "Quantidade e amostras",
+            "Ensaios ou embalagem"
+          ],
+          "placeholder": "Espessura, largura, formato, quantidade, amostra e requisitos de ensaio",
+          "submit": "Enviar requisitos",
+          "submitting": "Enviando...",
+          "required": "Informe seu nome e dados de contato.",
+          "success": "Obrigado. Analisaremos as informações e entraremos em contato.",
+          "failure": "Não foi possível enviar a solicitação. Tente novamente mais tarde.",
+          "emailFallback": "Seu aplicativo de e-mail foi aberto. Envie a mensagem preparada."
+        },
+        "footer": {
+          "description": "Fabricante de separadores de fibra de vidro AGM para produtores de baterias chumbo-ácido e parceiros comerciais.",
+          "wechat": "Conta oficial do WeChat",
+          "mobile": "Site móvel"
+        }
+      },
+      "ru": {
+        "homePath": "/ru/",
+        "languagePath": "/quality-control/agm-separator-testing/",
+        "quote": "Запросить образец",
+        "hero": {
+          "eyebrow": "Испытания и контроль качества",
+          "title": "Испытания и контроль качества AGM-сепараторов",
+          "subtitle": "Согласование толщины, поверхностной плотности, впитывания кислоты, электрического сопротивления и внешнего вида.",
+          "primary": "Отправить требования к испытаниям",
+          "secondary": "Отправить характеристики",
+          "proof": [
+            "Измеряемые показатели",
+            "Согласованные методики",
+            "Проверка по критериям заказчика"
+          ],
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Испытания и контроль качества AGM-сепараторов",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "overview": {
+          "eyebrow": "О продукте",
+          "title": "Качество подтверждается внешним видом и измерениями",
+          "paragraphs": [
+            "Стабильность AGM-сепаратора связана с сырьем, процессом, размерами и согласованными испытаниями.",
+            "До образца или заказа подтверждаются показатели, условия, методы и критерии приемки."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Основные характеристики",
+          "title": "Обычно согласуемые испытания",
+          "text": "Толщина, плотность, впитывание, сопротивление, пористость, прочность и внешний вид проверяются по стандарту заказчика.",
+          "items": [
+            [
+              "Толщина",
+              "Рассматривается вместе с зазором пластин, сжатием и требованиями к сборке."
+            ],
+            [
+              "Ширина или размер листа",
+              "Можно согласовать ширину рулона, направление резки и размеры листов."
+            ],
+            [
+              "Поверхностная плотность",
+              "Оценивается вместе со структурой, удержанием электролита и методом испытаний."
+            ],
+            [
+              "Поглощение кислоты",
+              "Подтверждается по применению и согласованным условиям испытаний."
+            ],
+            [
+              "Электрическое сопротивление",
+              "Рассматривается с целевыми характеристиками и условиями испытаний."
+            ],
+            [
+              "Пористость и прочность",
+              "Проверяются с учетом переработки, резки и сборки."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Формы поставки",
+          "title": "Фактические операции контроля качества",
+          "items": [
+            [
+              "Измерение толщины",
+              "Подтверждает толщину и стабильность размеров согласованным методом.",
+              "/images/evidence/quality-thickness-test-01.webp",
+              "Измерение толщины AGM-сепаратора",
+              1200,
+              900
+            ],
+            [
+              "Измерение поверхностной плотности",
+              "Оценивает массу на единицу площади и однородность материала.",
+              "/images/evidence/quality-basis-weight-test-01.webp",
+              "Измерение плотности AGM-сепаратора",
+              1200,
+              900
+            ],
+            [
+              "Испытание впитывания кислоты",
+              "Проверяет впитывание и удержание электролита в заданных условиях.",
+              "/images/evidence/quality-acid-absorption-test-01.webp",
+              "Испытание впитывания кислоты AGM-сепаратора",
+              1200,
+              900
+            ],
+            [
+              "Испытание электрического сопротивления",
+              "Проводится по целям аккумулятора и методике заказчика.",
+              "/images/evidence/quality-electrical-resistance-test-01.webp",
+              "Испытание сопротивления AGM-сепаратора",
+              1200,
+              900
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Применение",
+          "title": "Основные области применения аккумуляторов VRLA",
+          "items": [
+            "Аккумуляторы для ИБП",
+            "Резервное питание телекоммуникаций",
+            "Мотоциклетные аккумуляторы",
+            "Автомобильные стартерные аккумуляторы",
+            "Накопление энергии"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Контроль качества",
+          "title": "Проверка по согласованным требованиям",
+          "text": "Показатели испытаний и критерии приемки подтверждаются до производства и отгрузки.",
+          "cards": [
+            [
+              "Сырье и процесс",
+              "Состояние материала и контрольные точки обсуждаются при согласовании заказа."
+            ],
+            [
+              "Готовая продукция",
+              "Характеристики готового продукта проверяются по согласованным показателям."
+            ],
+            [
+              "Подтверждение требований",
+              "Методы испытаний и критерии приемки согласуются до производства."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Связанные страницы",
+          "title": "Посмотреть продукт и запросить образец",
+          "items": [
+            [
+              "AGM-сепаратор",
+              "/ru/products/agm-separator/"
+            ],
+            [
+              "Рулоны AGM-сепаратора",
+              "/ru/products/agm-separator-rolls/"
+            ],
+            [
+              "Листы AGM-сепаратора",
+              "/ru/products/agm-separator-sheets/"
+            ],
+            [
+              "Испытания AGM-сепаратора",
+              "/ru/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Применение в мотоциклетных аккумуляторах",
+              "/ru/applications/agm-separator-for-motorcycle-battery/"
+            ],
+            [
+              "Запросить образец и проверку характеристик",
+              "/ru/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Запрос",
+          "title": "Отправить стандарт и требования",
+          "text": "Укажите показатели, целевые значения, методику, применение аккумулятора и требования к образцу.",
+          "checklist": [
+            "Целевая толщина и ширина",
+            "Рулон или размер листа",
+            "Применение и модель аккумулятора",
+            "Объем и образцы",
+            "Испытания или упаковка"
+          ],
+          "placeholder": "Толщина, ширина, форма, объем, образец и требования к испытаниям",
+          "submit": "Отправить требования",
+          "submitting": "Отправка...",
+          "required": "Укажите имя и контактные данные.",
+          "success": "Спасибо. Мы проверим информацию и свяжемся с вами.",
+          "failure": "Не удалось отправить запрос. Повторите попытку позже.",
+          "emailFallback": "Открыто почтовое приложение. Отправьте подготовленное письмо."
+        },
+        "footer": {
+          "description": "Производитель стекловолоконных AGM-сепараторов для производителей свинцово-кислотных аккумуляторов и торговых партнеров.",
+          "wechat": "Официальный аккаунт WeChat",
+          "mobile": "Мобильная версия сайта"
         }
       }
     }
@@ -12227,6 +15683,138 @@
           "产品",
           "AGM 隔板卷材"
         ]
+      },
+      "vi": {
+        "path": "/vi/products/agm-separator-rolls/",
+        "alternatePath": "/products/agm-separator-rolls/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM",
+        "title": "Cuộn tấm ngăn AGM cho sản xuất ắc quy VRLA | Viking AGM",
+        "description": "Cuộn tấm ngăn AGM cho dây chuyền ắc quy VRLA. Có thể trao đổi chiều rộng, độ dày, lõi, đường kính cuộn và đóng gói.",
+        "keywords": [
+          "cuộn tấm ngăn AGM",
+          "nhà cung cấp tấm ngăn AGM",
+          "tấm ngăn ắc quy VRLA dạng cuộn",
+          "tấm ngăn sợi thủy tinh AGM"
+        ],
+        "productName": "Cuộn tấm ngăn AGM",
+        "serviceDescription": "Tấm ngăn sợi thủy tinh AGM dạng cuộn cho sản xuất ắc quy VRLA, với quy cách và đóng gói được xác nhận theo nhu cầu khách hàng.",
+        "breadcrumbs": [
+          "Trang chủ",
+          "Sản phẩm",
+          "Tấm ngăn AGM dạng cuộn"
+        ]
+      },
+      "ko": {
+        "path": "/ko/products/agm-separator-rolls/",
+        "alternatePath": "/products/agm-separator-rolls/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM",
+        "title": "VRLA 배터리 생산용 AGM 분리막 롤 | Viking AGM",
+        "description": "VRLA 배터리 생산용 AGM 분리막 롤. 폭, 두께, 코어, 롤 직경과 포장 요구사항을 협의할 수 있습니다.",
+        "keywords": [
+          "AGM 분리막 롤",
+          "AGM 롤 공급업체",
+          "VRLA 배터리 분리막",
+          "유리섬유 AGM 분리막"
+        ],
+        "productName": "AGM 분리막 롤",
+        "serviceDescription": "VRLA 납축전지 생산용 유리섬유 AGM 롤 소재로 폭, 두께, 코어, 롤 규격과 포장을 고객 요구에 맞춰 확인합니다.",
+        "breadcrumbs": [
+          "홈",
+          "제품",
+          "AGM 분리막 롤"
+        ]
+      },
+      "ja": {
+        "path": "/ja/products/agm-separator-rolls/",
+        "alternatePath": "/products/agm-separator-rolls/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM",
+        "title": "VRLA電池生産用AGMセパレーターロール | Viking AGM",
+        "description": "VRLA電池生産向けAGMセパレーターロール。幅、厚さ、紙管、ロール径、梱包要件を確認できます。",
+        "keywords": [
+          "AGMセパレーターロール",
+          "AGMロール供給",
+          "VRLA電池セパレーター",
+          "ガラス繊維AGMセパレーター"
+        ],
+        "productName": "AGMセパレーターロール",
+        "serviceDescription": "VRLA鉛蓄電池生産用のガラス繊維AGMロール材。幅、厚さ、紙管、ロール仕様、梱包を要件に合わせて確認します。",
+        "breadcrumbs": [
+          "ホーム",
+          "製品",
+          "AGMセパレーターロール"
+        ]
+      },
+      "es": {
+        "path": "/es/products/agm-separator-rolls/",
+        "alternatePath": "/products/agm-separator-rolls/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "Rollos de separador AGM para baterías VRLA | Viking AGM",
+        "description": "Rollos de separador AGM para producción de baterías VRLA. Se revisan ancho, espesor, núcleo, diámetro y embalaje.",
+        "keywords": [
+          "rollos de separador AGM",
+          "proveedor de separador AGM",
+          "separador para baterías VRLA",
+          "separador AGM de fibra de vidrio"
+        ],
+        "productName": "Rollos de separador AGM",
+        "serviceDescription": "Separadores AGM de fibra de vidrio en rollo para baterías VRLA, con especificaciones y embalaje revisados según el comprador.",
+        "breadcrumbs": [
+          "Inicio",
+          "Productos",
+          "Rollos AGM"
+        ]
+      },
+      "pt": {
+        "path": "/pt/products/agm-separator-rolls/",
+        "alternatePath": "/products/agm-separator-rolls/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM",
+        "title": "Rolos de separador AGM para baterias VRLA | Viking AGM",
+        "description": "Rolos de separador AGM para produção de baterias VRLA. Largura, espessura, núcleo, diâmetro e embalagem podem ser analisados.",
+        "keywords": [
+          "rolos de separador AGM",
+          "fornecedor de separador AGM",
+          "separador para baterias VRLA",
+          "separador AGM de fibra de vidro"
+        ],
+        "productName": "Rolos de separador AGM",
+        "serviceDescription": "Separadores AGM de fibra de vidro em rolo para baterias VRLA, com especificações e embalagem analisadas conforme o comprador.",
+        "breadcrumbs": [
+          "Início",
+          "Produtos",
+          "Rolos AGM"
+        ]
+      },
+      "ru": {
+        "path": "/ru/products/agm-separator-rolls/",
+        "alternatePath": "/products/agm-separator-rolls/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "Рулоны AGM-сепаратора для аккумуляторов VRLA | Viking AGM",
+        "description": "Рулоны AGM-сепаратора для производства аккумуляторов VRLA. Согласование ширины, толщины, втулки, диаметра и упаковки.",
+        "keywords": [
+          "рулоны AGM сепаратора",
+          "поставщик AGM сепаратора",
+          "сепаратор для VRLA",
+          "стекловолоконный AGM сепаратор"
+        ],
+        "productName": "Рулоны AGM-сепаратора",
+        "serviceDescription": "Стекловолоконный AGM-сепаратор в рулонах для производства VRLA с согласованием спецификации и упаковки.",
+        "breadcrumbs": [
+          "Главная",
+          "Продукция",
+          "Рулоны AGM"
+        ]
       }
     },
     "agmSeparatorSheets": {
@@ -12275,6 +15863,138 @@
           "产品",
           "AGM 隔板片材"
         ]
+      },
+      "vi": {
+        "path": "/vi/products/agm-separator-sheets/",
+        "alternatePath": "/products/agm-separator-sheets/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM",
+        "title": "Tấm ngăn AGM cắt sẵn cho lắp ráp ắc quy VRLA | Viking AGM",
+        "description": "Tấm ngăn AGM cắt sẵn cho lắp ráp ắc quy VRLA. Kích thước, độ dày, dung sai và đóng gói được xác nhận theo thiết kế ắc quy.",
+        "keywords": [
+          "tấm ngăn AGM dạng tấm",
+          "tấm ngăn AGM cắt sẵn",
+          "tấm ngăn ắc quy VRLA",
+          "tấm ngăn sợi thủy tinh AGM"
+        ],
+        "productName": "Tấm ngăn AGM cắt sẵn",
+        "serviceDescription": "Tấm ngăn AGM cắt theo kích thước cho lắp ráp ắc quy VRLA, với quy cách và đóng gói được xác nhận theo thiết kế khách hàng.",
+        "breadcrumbs": [
+          "Trang chủ",
+          "Sản phẩm",
+          "Tấm ngăn AGM dạng tấm"
+        ]
+      },
+      "ko": {
+        "path": "/ko/products/agm-separator-sheets/",
+        "alternatePath": "/products/agm-separator-sheets/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM",
+        "title": "VRLA 배터리 조립용 AGM 분리막 시트 | Viking AGM",
+        "description": "VRLA 배터리 조립용 사전 절단 AGM 시트. 치수, 두께, 공차와 포장 요구사항을 배터리 설계에 맞춰 확인합니다.",
+        "keywords": [
+          "AGM 분리막 시트",
+          "사전 절단 AGM 분리막",
+          "VRLA 배터리 분리막",
+          "유리섬유 AGM 시트"
+        ],
+        "productName": "AGM 분리막 시트",
+        "serviceDescription": "VRLA 배터리 조립용 사전 절단 유리섬유 AGM 시트로 치수와 포장을 고객 설계에 맞춰 확인합니다.",
+        "breadcrumbs": [
+          "홈",
+          "제품",
+          "AGM 분리막 시트"
+        ]
+      },
+      "ja": {
+        "path": "/ja/products/agm-separator-sheets/",
+        "alternatePath": "/products/agm-separator-sheets/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM",
+        "title": "VRLA電池組立用AGMセパレーターシート | Viking AGM",
+        "description": "VRLA電池組立向けカット済みAGMシート。寸法、厚さ、公差、梱包要件を電池設計に合わせて確認します。",
+        "keywords": [
+          "AGMセパレーターシート",
+          "カット済みAGMセパレーター",
+          "VRLA電池セパレーター",
+          "ガラス繊維AGMシート"
+        ],
+        "productName": "AGMセパレーターシート",
+        "serviceDescription": "VRLA電池組立用のカット済みガラス繊維AGMシート。寸法と梱包をお客様設計に合わせて確認します。",
+        "breadcrumbs": [
+          "ホーム",
+          "製品",
+          "AGMセパレーターシート"
+        ]
+      },
+      "es": {
+        "path": "/es/products/agm-separator-sheets/",
+        "alternatePath": "/products/agm-separator-sheets/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "Láminas de separador AGM para montaje VRLA | Viking AGM",
+        "description": "Láminas AGM precortadas para montaje de baterías VRLA. Dimensiones, espesor, tolerancia y embalaje se revisan según el diseño.",
+        "keywords": [
+          "láminas de separador AGM",
+          "separador AGM precortado",
+          "separador para baterías VRLA",
+          "láminas AGM de fibra de vidrio"
+        ],
+        "productName": "Láminas de separador AGM",
+        "serviceDescription": "Láminas AGM precortadas para montaje de baterías VRLA, con dimensiones y embalaje revisados según el diseño del cliente.",
+        "breadcrumbs": [
+          "Inicio",
+          "Productos",
+          "Láminas AGM"
+        ]
+      },
+      "pt": {
+        "path": "/pt/products/agm-separator-sheets/",
+        "alternatePath": "/products/agm-separator-sheets/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM",
+        "title": "Folhas de separador AGM para montagem VRLA | Viking AGM",
+        "description": "Folhas AGM pré-cortadas para montagem de baterias VRLA. Dimensões, espessura, tolerância e embalagem são analisadas conforme o projeto.",
+        "keywords": [
+          "folhas de separador AGM",
+          "separador AGM pré-cortado",
+          "separador para baterias VRLA",
+          "folhas AGM de fibra de vidro"
+        ],
+        "productName": "Folhas de separador AGM",
+        "serviceDescription": "Folhas AGM pré-cortadas para montagem de baterias VRLA, com dimensões e embalagem analisadas conforme o projeto do cliente.",
+        "breadcrumbs": [
+          "Início",
+          "Produtos",
+          "Folhas AGM"
+        ]
+      },
+      "ru": {
+        "path": "/ru/products/agm-separator-sheets/",
+        "alternatePath": "/products/agm-separator-sheets/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "Листы AGM-сепаратора для сборки аккумуляторов VRLA | Viking AGM",
+        "description": "Нарезанные листы AGM для сборки VRLA. Размеры, толщина, допуск и упаковка согласуются по конструкции аккумулятора.",
+        "keywords": [
+          "листы AGM сепаратора",
+          "нарезанный AGM сепаратор",
+          "сепаратор для VRLA",
+          "стекловолоконные листы AGM"
+        ],
+        "productName": "Листы AGM-сепаратора",
+        "serviceDescription": "Нарезанные листы AGM для сборки аккумуляторов VRLA с согласованием размеров и упаковки по конструкции заказчика.",
+        "breadcrumbs": [
+          "Главная",
+          "Продукция",
+          "Листы AGM"
+        ]
       }
     },
     "agmSeparatorTesting": {
@@ -12322,6 +16042,138 @@
           "首页",
           "质量控制",
           "AGM 隔板检测"
+        ]
+      },
+      "vi": {
+        "path": "/vi/quality-control/agm-separator-testing/",
+        "alternatePath": "/quality-control/agm-separator-testing/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM",
+        "title": "Kiểm tra và kiểm soát chất lượng tấm ngăn AGM | Viking AGM",
+        "description": "Các hạng mục kiểm tra tấm ngăn AGM gồm độ dày, định lượng, hút axit, điện trở, độ rỗng và ngoại quan theo yêu cầu khách hàng.",
+        "keywords": [
+          "kiểm tra tấm ngăn AGM",
+          "kiểm soát chất lượng AGM",
+          "kiểm tra tấm ngăn ắc quy",
+          "chất lượng tấm ngăn VRLA"
+        ],
+        "pageName": "Kiểm tra và kiểm soát chất lượng tấm ngăn AGM",
+        "serviceDescription": "Trao đổi kiểm tra độ dày, định lượng, hút axit, điện trở và ngoại quan tấm ngăn AGM theo yêu cầu khách hàng.",
+        "breadcrumbs": [
+          "Trang chủ",
+          "Chất lượng",
+          "Kiểm tra tấm ngăn AGM"
+        ]
+      },
+      "ko": {
+        "path": "/ko/quality-control/agm-separator-testing/",
+        "alternatePath": "/quality-control/agm-separator-testing/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM",
+        "title": "AGM 분리막 시험 및 품질 관리 | Viking AGM",
+        "description": "고객 요구사항에 따라 AGM 분리막 두께, 평량, 산 흡수, 전기 저항, 기공률과 외관 품질을 확인합니다.",
+        "keywords": [
+          "AGM 분리막 시험",
+          "AGM 품질 관리",
+          "배터리 분리막 검사",
+          "VRLA 분리막 품질"
+        ],
+        "pageName": "AGM 분리막 시험 및 품질 관리",
+        "serviceDescription": "고객 요구사항에 따른 AGM 분리막 두께, 평량, 산 흡수, 전기 저항 및 외관 검사 협의.",
+        "breadcrumbs": [
+          "홈",
+          "품질",
+          "AGM 분리막 시험"
+        ]
+      },
+      "ja": {
+        "path": "/ja/quality-control/agm-separator-testing/",
+        "alternatePath": "/quality-control/agm-separator-testing/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM",
+        "title": "AGMセパレーター試験・品質管理 | Viking AGM",
+        "description": "お客様の要件に基づき、AGMセパレーターの厚さ、坪量、吸液、電気抵抗、気孔率、外観を確認します。",
+        "keywords": [
+          "AGMセパレーター試験",
+          "AGM品質管理",
+          "電池セパレーター検査",
+          "VRLAセパレーター品質"
+        ],
+        "pageName": "AGMセパレーター試験・品質管理",
+        "serviceDescription": "お客様要件に基づくAGMセパレーターの厚さ、坪量、吸液、電気抵抗、外観検査の確認。",
+        "breadcrumbs": [
+          "ホーム",
+          "品質",
+          "AGMセパレーター試験"
+        ]
+      },
+      "es": {
+        "path": "/es/quality-control/agm-separator-testing/",
+        "alternatePath": "/quality-control/agm-separator-testing/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "Ensayos y control de calidad de separadores AGM | Viking AGM",
+        "description": "Ensayos de espesor, gramaje, absorción de ácido, resistencia eléctrica, porosidad y apariencia según requisitos del cliente.",
+        "keywords": [
+          "ensayos de separadores AGM",
+          "control de calidad AGM",
+          "inspección de separador de batería",
+          "calidad de separador VRLA"
+        ],
+        "pageName": "Ensayos y control de calidad de separadores AGM",
+        "serviceDescription": "Revisión de espesor, gramaje, absorción, resistencia y apariencia de separadores AGM según requisitos del cliente.",
+        "breadcrumbs": [
+          "Inicio",
+          "Calidad",
+          "Ensayos AGM"
+        ]
+      },
+      "pt": {
+        "path": "/pt/quality-control/agm-separator-testing/",
+        "alternatePath": "/quality-control/agm-separator-testing/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM",
+        "title": "Ensaios e controle de qualidade de separadores AGM | Viking AGM",
+        "description": "Ensaios de espessura, gramatura, absorção de ácido, resistência elétrica, porosidade e aparência conforme os requisitos do cliente.",
+        "keywords": [
+          "ensaios de separadores AGM",
+          "controle de qualidade AGM",
+          "inspeção de separador de bateria",
+          "qualidade de separador VRLA"
+        ],
+        "pageName": "Ensaios e controle de qualidade de separadores AGM",
+        "serviceDescription": "Análise de espessura, gramatura, absorção, resistência e aparência de separadores AGM conforme requisitos do cliente.",
+        "breadcrumbs": [
+          "Início",
+          "Qualidade",
+          "Ensaios AGM"
+        ]
+      },
+      "ru": {
+        "path": "/ru/quality-control/agm-separator-testing/",
+        "alternatePath": "/quality-control/agm-separator-testing/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "Испытания и контроль качества AGM-сепараторов | Viking AGM",
+        "description": "Испытания толщины, плотности, впитывания кислоты, электрического сопротивления, пористости и внешнего вида по требованиям заказчика.",
+        "keywords": [
+          "испытания AGM сепаратора",
+          "контроль качества AGM",
+          "проверка сепаратора аккумулятора",
+          "качество сепаратора VRLA"
+        ],
+        "pageName": "Испытания и контроль качества AGM-сепараторов",
+        "serviceDescription": "Проверка толщины, плотности, впитывания, сопротивления и внешнего вида AGM-сепараторов по требованиям заказчика.",
+        "breadcrumbs": [
+          "Главная",
+          "Качество",
+          "Испытания AGM"
         ]
       }
     },

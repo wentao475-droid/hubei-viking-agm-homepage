@@ -571,6 +571,141 @@ const agmSeparatorSeo = {
   }
 } as const;
 
+const secondaryProductDetailSeo = {
+  rolls: {
+    vi: {
+      path: "/vi/products/agm-separator-rolls/", alternatePath: "/products/agm-separator-rolls/", locale: "vi_VN", language: "vi-VN", siteName: "Viking AGM",
+      title: "Cuộn tấm ngăn AGM cho sản xuất ắc quy VRLA | Viking AGM",
+      description: "Cuộn tấm ngăn AGM cho dây chuyền ắc quy VRLA. Có thể trao đổi chiều rộng, độ dày, lõi, đường kính cuộn và đóng gói.",
+      keywords: ["cuộn tấm ngăn AGM", "nhà cung cấp tấm ngăn AGM", "tấm ngăn ắc quy VRLA dạng cuộn", "tấm ngăn sợi thủy tinh AGM"],
+      productName: "Cuộn tấm ngăn AGM", serviceDescription: "Tấm ngăn sợi thủy tinh AGM dạng cuộn cho sản xuất ắc quy VRLA, với quy cách và đóng gói được xác nhận theo nhu cầu khách hàng.", breadcrumbs: ["Trang chủ", "Sản phẩm", "Tấm ngăn AGM dạng cuộn"]
+    },
+    ko: {
+      path: "/ko/products/agm-separator-rolls/", alternatePath: "/products/agm-separator-rolls/", locale: "ko_KR", language: "ko-KR", siteName: "Viking AGM",
+      title: "VRLA 배터리 생산용 AGM 분리막 롤 | Viking AGM",
+      description: "VRLA 배터리 생산용 AGM 분리막 롤. 폭, 두께, 코어, 롤 직경과 포장 요구사항을 협의할 수 있습니다.",
+      keywords: ["AGM 분리막 롤", "AGM 롤 공급업체", "VRLA 배터리 분리막", "유리섬유 AGM 분리막"],
+      productName: "AGM 분리막 롤", serviceDescription: "VRLA 납축전지 생산용 유리섬유 AGM 롤 소재로 폭, 두께, 코어, 롤 규격과 포장을 고객 요구에 맞춰 확인합니다.", breadcrumbs: ["홈", "제품", "AGM 분리막 롤"]
+    },
+    ja: {
+      path: "/ja/products/agm-separator-rolls/", alternatePath: "/products/agm-separator-rolls/", locale: "ja_JP", language: "ja-JP", siteName: "Viking AGM",
+      title: "VRLA電池生産用AGMセパレーターロール | Viking AGM",
+      description: "VRLA電池生産向けAGMセパレーターロール。幅、厚さ、紙管、ロール径、梱包要件を確認できます。",
+      keywords: ["AGMセパレーターロール", "AGMロール供給", "VRLA電池セパレーター", "ガラス繊維AGMセパレーター"],
+      productName: "AGMセパレーターロール", serviceDescription: "VRLA鉛蓄電池生産用のガラス繊維AGMロール材。幅、厚さ、紙管、ロール仕様、梱包を要件に合わせて確認します。", breadcrumbs: ["ホーム", "製品", "AGMセパレーターロール"]
+    },
+    es: {
+      path: "/es/products/agm-separator-rolls/", alternatePath: "/products/agm-separator-rolls/", locale: "es_LA", language: "es", siteName: "Viking AGM",
+      title: "Rollos de separador AGM para baterías VRLA | Viking AGM",
+      description: "Rollos de separador AGM para producción de baterías VRLA. Se revisan ancho, espesor, núcleo, diámetro y embalaje.",
+      keywords: ["rollos de separador AGM", "proveedor de separador AGM", "separador para baterías VRLA", "separador AGM de fibra de vidrio"],
+      productName: "Rollos de separador AGM", serviceDescription: "Separadores AGM de fibra de vidrio en rollo para baterías VRLA, con especificaciones y embalaje revisados según el comprador.", breadcrumbs: ["Inicio", "Productos", "Rollos AGM"]
+    },
+    pt: {
+      path: "/pt/products/agm-separator-rolls/", alternatePath: "/products/agm-separator-rolls/", locale: "pt_BR", language: "pt-BR", siteName: "Viking AGM",
+      title: "Rolos de separador AGM para baterias VRLA | Viking AGM",
+      description: "Rolos de separador AGM para produção de baterias VRLA. Largura, espessura, núcleo, diâmetro e embalagem podem ser analisados.",
+      keywords: ["rolos de separador AGM", "fornecedor de separador AGM", "separador para baterias VRLA", "separador AGM de fibra de vidro"],
+      productName: "Rolos de separador AGM", serviceDescription: "Separadores AGM de fibra de vidro em rolo para baterias VRLA, com especificações e embalagem analisadas conforme o comprador.", breadcrumbs: ["Início", "Produtos", "Rolos AGM"]
+    },
+    ru: {
+      path: "/ru/products/agm-separator-rolls/", alternatePath: "/products/agm-separator-rolls/", locale: "ru_RU", language: "ru-RU", siteName: "Viking AGM",
+      title: "Рулоны AGM-сепаратора для аккумуляторов VRLA | Viking AGM",
+      description: "Рулоны AGM-сепаратора для производства аккумуляторов VRLA. Согласование ширины, толщины, втулки, диаметра и упаковки.",
+      keywords: ["рулоны AGM сепаратора", "поставщик AGM сепаратора", "сепаратор для VRLA", "стекловолоконный AGM сепаратор"],
+      productName: "Рулоны AGM-сепаратора", serviceDescription: "Стекловолоконный AGM-сепаратор в рулонах для производства VRLA с согласованием спецификации и упаковки.", breadcrumbs: ["Главная", "Продукция", "Рулоны AGM"]
+    }
+  },
+  sheets: {
+    vi: {
+      path: "/vi/products/agm-separator-sheets/", alternatePath: "/products/agm-separator-sheets/", locale: "vi_VN", language: "vi-VN", siteName: "Viking AGM",
+      title: "Tấm ngăn AGM cắt sẵn cho lắp ráp ắc quy VRLA | Viking AGM",
+      description: "Tấm ngăn AGM cắt sẵn cho lắp ráp ắc quy VRLA. Kích thước, độ dày, dung sai và đóng gói được xác nhận theo thiết kế ắc quy.",
+      keywords: ["tấm ngăn AGM dạng tấm", "tấm ngăn AGM cắt sẵn", "tấm ngăn ắc quy VRLA", "tấm ngăn sợi thủy tinh AGM"],
+      productName: "Tấm ngăn AGM cắt sẵn", serviceDescription: "Tấm ngăn AGM cắt theo kích thước cho lắp ráp ắc quy VRLA, với quy cách và đóng gói được xác nhận theo thiết kế khách hàng.", breadcrumbs: ["Trang chủ", "Sản phẩm", "Tấm ngăn AGM dạng tấm"]
+    },
+    ko: {
+      path: "/ko/products/agm-separator-sheets/", alternatePath: "/products/agm-separator-sheets/", locale: "ko_KR", language: "ko-KR", siteName: "Viking AGM",
+      title: "VRLA 배터리 조립용 AGM 분리막 시트 | Viking AGM",
+      description: "VRLA 배터리 조립용 사전 절단 AGM 시트. 치수, 두께, 공차와 포장 요구사항을 배터리 설계에 맞춰 확인합니다.",
+      keywords: ["AGM 분리막 시트", "사전 절단 AGM 분리막", "VRLA 배터리 분리막", "유리섬유 AGM 시트"],
+      productName: "AGM 분리막 시트", serviceDescription: "VRLA 배터리 조립용 사전 절단 유리섬유 AGM 시트로 치수와 포장을 고객 설계에 맞춰 확인합니다.", breadcrumbs: ["홈", "제품", "AGM 분리막 시트"]
+    },
+    ja: {
+      path: "/ja/products/agm-separator-sheets/", alternatePath: "/products/agm-separator-sheets/", locale: "ja_JP", language: "ja-JP", siteName: "Viking AGM",
+      title: "VRLA電池組立用AGMセパレーターシート | Viking AGM",
+      description: "VRLA電池組立向けカット済みAGMシート。寸法、厚さ、公差、梱包要件を電池設計に合わせて確認します。",
+      keywords: ["AGMセパレーターシート", "カット済みAGMセパレーター", "VRLA電池セパレーター", "ガラス繊維AGMシート"],
+      productName: "AGMセパレーターシート", serviceDescription: "VRLA電池組立用のカット済みガラス繊維AGMシート。寸法と梱包をお客様設計に合わせて確認します。", breadcrumbs: ["ホーム", "製品", "AGMセパレーターシート"]
+    },
+    es: {
+      path: "/es/products/agm-separator-sheets/", alternatePath: "/products/agm-separator-sheets/", locale: "es_LA", language: "es", siteName: "Viking AGM",
+      title: "Láminas de separador AGM para montaje VRLA | Viking AGM",
+      description: "Láminas AGM precortadas para montaje de baterías VRLA. Dimensiones, espesor, tolerancia y embalaje se revisan según el diseño.",
+      keywords: ["láminas de separador AGM", "separador AGM precortado", "separador para baterías VRLA", "láminas AGM de fibra de vidrio"],
+      productName: "Láminas de separador AGM", serviceDescription: "Láminas AGM precortadas para montaje de baterías VRLA, con dimensiones y embalaje revisados según el diseño del cliente.", breadcrumbs: ["Inicio", "Productos", "Láminas AGM"]
+    },
+    pt: {
+      path: "/pt/products/agm-separator-sheets/", alternatePath: "/products/agm-separator-sheets/", locale: "pt_BR", language: "pt-BR", siteName: "Viking AGM",
+      title: "Folhas de separador AGM para montagem VRLA | Viking AGM",
+      description: "Folhas AGM pré-cortadas para montagem de baterias VRLA. Dimensões, espessura, tolerância e embalagem são analisadas conforme o projeto.",
+      keywords: ["folhas de separador AGM", "separador AGM pré-cortado", "separador para baterias VRLA", "folhas AGM de fibra de vidro"],
+      productName: "Folhas de separador AGM", serviceDescription: "Folhas AGM pré-cortadas para montagem de baterias VRLA, com dimensões e embalagem analisadas conforme o projeto do cliente.", breadcrumbs: ["Início", "Produtos", "Folhas AGM"]
+    },
+    ru: {
+      path: "/ru/products/agm-separator-sheets/", alternatePath: "/products/agm-separator-sheets/", locale: "ru_RU", language: "ru-RU", siteName: "Viking AGM",
+      title: "Листы AGM-сепаратора для сборки аккумуляторов VRLA | Viking AGM",
+      description: "Нарезанные листы AGM для сборки VRLA. Размеры, толщина, допуск и упаковка согласуются по конструкции аккумулятора.",
+      keywords: ["листы AGM сепаратора", "нарезанный AGM сепаратор", "сепаратор для VRLA", "стекловолоконные листы AGM"],
+      productName: "Листы AGM-сепаратора", serviceDescription: "Нарезанные листы AGM для сборки аккумуляторов VRLA с согласованием размеров и упаковки по конструкции заказчика.", breadcrumbs: ["Главная", "Продукция", "Листы AGM"]
+    }
+  },
+  testing: {
+    vi: {
+      path: "/vi/quality-control/agm-separator-testing/", alternatePath: "/quality-control/agm-separator-testing/", locale: "vi_VN", language: "vi-VN", siteName: "Viking AGM",
+      title: "Kiểm tra và kiểm soát chất lượng tấm ngăn AGM | Viking AGM",
+      description: "Các hạng mục kiểm tra tấm ngăn AGM gồm độ dày, định lượng, hút axit, điện trở, độ rỗng và ngoại quan theo yêu cầu khách hàng.",
+      keywords: ["kiểm tra tấm ngăn AGM", "kiểm soát chất lượng AGM", "kiểm tra tấm ngăn ắc quy", "chất lượng tấm ngăn VRLA"],
+      pageName: "Kiểm tra và kiểm soát chất lượng tấm ngăn AGM", serviceDescription: "Trao đổi kiểm tra độ dày, định lượng, hút axit, điện trở và ngoại quan tấm ngăn AGM theo yêu cầu khách hàng.", breadcrumbs: ["Trang chủ", "Chất lượng", "Kiểm tra tấm ngăn AGM"]
+    },
+    ko: {
+      path: "/ko/quality-control/agm-separator-testing/", alternatePath: "/quality-control/agm-separator-testing/", locale: "ko_KR", language: "ko-KR", siteName: "Viking AGM",
+      title: "AGM 분리막 시험 및 품질 관리 | Viking AGM",
+      description: "고객 요구사항에 따라 AGM 분리막 두께, 평량, 산 흡수, 전기 저항, 기공률과 외관 품질을 확인합니다.",
+      keywords: ["AGM 분리막 시험", "AGM 품질 관리", "배터리 분리막 검사", "VRLA 분리막 품질"],
+      pageName: "AGM 분리막 시험 및 품질 관리", serviceDescription: "고객 요구사항에 따른 AGM 분리막 두께, 평량, 산 흡수, 전기 저항 및 외관 검사 협의.", breadcrumbs: ["홈", "품질", "AGM 분리막 시험"]
+    },
+    ja: {
+      path: "/ja/quality-control/agm-separator-testing/", alternatePath: "/quality-control/agm-separator-testing/", locale: "ja_JP", language: "ja-JP", siteName: "Viking AGM",
+      title: "AGMセパレーター試験・品質管理 | Viking AGM",
+      description: "お客様の要件に基づき、AGMセパレーターの厚さ、坪量、吸液、電気抵抗、気孔率、外観を確認します。",
+      keywords: ["AGMセパレーター試験", "AGM品質管理", "電池セパレーター検査", "VRLAセパレーター品質"],
+      pageName: "AGMセパレーター試験・品質管理", serviceDescription: "お客様要件に基づくAGMセパレーターの厚さ、坪量、吸液、電気抵抗、外観検査の確認。", breadcrumbs: ["ホーム", "品質", "AGMセパレーター試験"]
+    },
+    es: {
+      path: "/es/quality-control/agm-separator-testing/", alternatePath: "/quality-control/agm-separator-testing/", locale: "es_LA", language: "es", siteName: "Viking AGM",
+      title: "Ensayos y control de calidad de separadores AGM | Viking AGM",
+      description: "Ensayos de espesor, gramaje, absorción de ácido, resistencia eléctrica, porosidad y apariencia según requisitos del cliente.",
+      keywords: ["ensayos de separadores AGM", "control de calidad AGM", "inspección de separador de batería", "calidad de separador VRLA"],
+      pageName: "Ensayos y control de calidad de separadores AGM", serviceDescription: "Revisión de espesor, gramaje, absorción, resistencia y apariencia de separadores AGM según requisitos del cliente.", breadcrumbs: ["Inicio", "Calidad", "Ensayos AGM"]
+    },
+    pt: {
+      path: "/pt/quality-control/agm-separator-testing/", alternatePath: "/quality-control/agm-separator-testing/", locale: "pt_BR", language: "pt-BR", siteName: "Viking AGM",
+      title: "Ensaios e controle de qualidade de separadores AGM | Viking AGM",
+      description: "Ensaios de espessura, gramatura, absorção de ácido, resistência elétrica, porosidade e aparência conforme os requisitos do cliente.",
+      keywords: ["ensaios de separadores AGM", "controle de qualidade AGM", "inspeção de separador de bateria", "qualidade de separador VRLA"],
+      pageName: "Ensaios e controle de qualidade de separadores AGM", serviceDescription: "Análise de espessura, gramatura, absorção, resistência e aparência de separadores AGM conforme requisitos do cliente.", breadcrumbs: ["Início", "Qualidade", "Ensaios AGM"]
+    },
+    ru: {
+      path: "/ru/quality-control/agm-separator-testing/", alternatePath: "/quality-control/agm-separator-testing/", locale: "ru_RU", language: "ru-RU", siteName: "Viking AGM",
+      title: "Испытания и контроль качества AGM-сепараторов | Viking AGM",
+      description: "Испытания толщины, плотности, впитывания кислоты, электрического сопротивления, пористости и внешнего вида по требованиям заказчика.",
+      keywords: ["испытания AGM сепаратора", "контроль качества AGM", "проверка сепаратора аккумулятора", "качество сепаратора VRLA"],
+      pageName: "Испытания и контроль качества AGM-сепараторов", serviceDescription: "Проверка толщины, плотности, впитывания, сопротивления и внешнего вида AGM-сепараторов по требованиям заказчика.", breadcrumbs: ["Главная", "Качество", "Испытания AGM"]
+    }
+  }
+} as const;
+
 const agmSeparatorRollsSeo = {
   en: {
     path: "/products/agm-separator-rolls/",
@@ -613,7 +748,8 @@ const agmSeparatorRollsSeo = {
     serviceDescription:
       "用于 VRLA 铅酸电池生产的 AGM 玻璃纤维隔板卷材，宽度、厚度、卷长、芯管和包装要求可按客户需求沟通确认。",
     breadcrumbs: ["首页", "产品", "AGM 隔板卷材"]
-  }
+  },
+  ...secondaryProductDetailSeo.rolls
 } as const;
 
 const agmSeparatorSheetsSeo = {
@@ -658,7 +794,8 @@ const agmSeparatorSheetsSeo = {
     serviceDescription:
       "用于 VRLA 铅酸电池装配的预裁切 AGM 玻璃纤维隔板片材，片材高度、宽度、厚度和包装要求可按客户电池设计沟通确认。",
     breadcrumbs: ["首页", "产品", "AGM 隔板片材"]
-  }
+  },
+  ...secondaryProductDetailSeo.sheets
 } as const;
 
 const agmSeparatorTestingSeo = {
@@ -703,7 +840,8 @@ const agmSeparatorTestingSeo = {
     serviceDescription:
       "围绕 AGM 隔板厚度、克重、吸酸性能、电阻、孔隙率、外观和客户特定检测要求开展质量控制沟通。",
     breadcrumbs: ["首页", "质量控制", "AGM 隔板检测"]
-  }
+  },
+  ...secondaryProductDetailSeo.testing
 } as const;
 
 const agmSeparatorVrlaApplicationSeo = {
@@ -1467,7 +1605,7 @@ export function buildAgmSeparatorMetadata(lang: SiteLocale): Metadata {
   });
 }
 
-export function buildAgmSeparatorRollsMetadata(lang: Lang): Metadata {
+export function buildAgmSeparatorRollsMetadata(lang: SiteLocale): Metadata {
   const current = seoContent("agmSeparatorRolls", lang, agmSeparatorRollsSeo[lang]);
 
   return buildMetadata({
@@ -1477,13 +1615,19 @@ export function buildAgmSeparatorRollsMetadata(lang: Lang): Metadata {
     path: current.path,
     enPath: "/products/agm-separator-rolls/",
     zhPath: "/zh/products/agm-separator-rolls/",
+    viPath: "/vi/products/agm-separator-rolls/",
+    koPath: "/ko/products/agm-separator-rolls/",
+    jaPath: "/ja/products/agm-separator-rolls/",
+    esPath: "/es/products/agm-separator-rolls/",
+    ptPath: "/pt/products/agm-separator-rolls/",
+    ruPath: "/ru/products/agm-separator-rolls/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName
   });
 }
 
-export function buildAgmSeparatorSheetsMetadata(lang: Lang): Metadata {
+export function buildAgmSeparatorSheetsMetadata(lang: SiteLocale): Metadata {
   const current = seoContent("agmSeparatorSheets", lang, agmSeparatorSheetsSeo[lang]);
 
   return buildMetadata({
@@ -1493,6 +1637,12 @@ export function buildAgmSeparatorSheetsMetadata(lang: Lang): Metadata {
     path: current.path,
     enPath: "/products/agm-separator-sheets/",
     zhPath: "/zh/products/agm-separator-sheets/",
+    viPath: "/vi/products/agm-separator-sheets/",
+    koPath: "/ko/products/agm-separator-sheets/",
+    jaPath: "/ja/products/agm-separator-sheets/",
+    esPath: "/es/products/agm-separator-sheets/",
+    ptPath: "/pt/products/agm-separator-sheets/",
+    ruPath: "/ru/products/agm-separator-sheets/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName,
@@ -1504,7 +1654,7 @@ export function buildAgmSeparatorSheetsMetadata(lang: Lang): Metadata {
   });
 }
 
-export function buildAgmSeparatorTestingMetadata(lang: Lang): Metadata {
+export function buildAgmSeparatorTestingMetadata(lang: SiteLocale): Metadata {
   const current = seoContent("agmSeparatorTesting", lang, agmSeparatorTestingSeo[lang]);
 
   return buildMetadata({
@@ -1514,6 +1664,12 @@ export function buildAgmSeparatorTestingMetadata(lang: Lang): Metadata {
     path: current.path,
     enPath: "/quality-control/agm-separator-testing/",
     zhPath: "/zh/quality-control/agm-separator-testing/",
+    viPath: "/vi/quality-control/agm-separator-testing/",
+    koPath: "/ko/quality-control/agm-separator-testing/",
+    jaPath: "/ja/quality-control/agm-separator-testing/",
+    esPath: "/es/quality-control/agm-separator-testing/",
+    ptPath: "/pt/quality-control/agm-separator-testing/",
+    ruPath: "/ru/quality-control/agm-separator-testing/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -2141,10 +2297,10 @@ export function AgmSeparatorStructuredData({ lang }: { lang: SiteLocale }) {
   return <JsonLd data={data} />;
 }
 
-export function AgmSeparatorRollsStructuredData({ lang }: { lang: Lang }) {
+export function AgmSeparatorRollsStructuredData({ lang }: { lang: SiteLocale }) {
   const current = seoContent("agmSeparatorRolls", lang, agmSeparatorRollsSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : "/";
+  const homePath = localeHomePaths[lang];
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -2202,10 +2358,10 @@ export function AgmSeparatorRollsStructuredData({ lang }: { lang: Lang }) {
   return <JsonLd data={data} />;
 }
 
-export function AgmSeparatorSheetsStructuredData({ lang }: { lang: Lang }) {
+export function AgmSeparatorSheetsStructuredData({ lang }: { lang: SiteLocale }) {
   const current = seoContent("agmSeparatorSheets", lang, agmSeparatorSheetsSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : "/";
+  const homePath = localeHomePaths[lang];
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -2263,10 +2419,10 @@ export function AgmSeparatorSheetsStructuredData({ lang }: { lang: Lang }) {
   return <JsonLd data={data} />;
 }
 
-export function AgmSeparatorTestingStructuredData({ lang }: { lang: Lang }) {
+export function AgmSeparatorTestingStructuredData({ lang }: { lang: SiteLocale }) {
   const current = seoContent("agmSeparatorTesting", lang, agmSeparatorTestingSeo[lang]);
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : "/";
+  const homePath = localeHomePaths[lang];
   const data = {
     "@context": "https://schema.org",
     "@graph": [

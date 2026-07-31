@@ -3,6 +3,12 @@ import { join } from "node:path";
 
 const root = process.cwd();
 const outDir = join(root, "out");
+const synchronizedLocaleCodes = ["vi", "ko", "ja", "es", "pt", "ru"];
+const synchronizedDetailFiles = synchronizedLocaleCodes.flatMap((locale) => [
+  `${locale}/products/agm-separator-rolls/index.html`,
+  `${locale}/products/agm-separator-sheets/index.html`,
+  `${locale}/quality-control/agm-separator-testing/index.html`
+]);
 const requiredFiles = [
   "index.html",
   "zh/index.html",
@@ -48,7 +54,8 @@ const requiredFiles = [
   "sitemap.xml",
   "robots.txt",
   "favicon.ico",
-  "videos/viking-agm-promo-480p.mp4"
+  "videos/viking-agm-promo-480p.mp4",
+  ...synchronizedDetailFiles
 ];
 
 function pass(message) {
@@ -138,6 +145,22 @@ const ruMotorcycleHtml = readOutFile(
 const ruSampleHtml = readOutFile(
   "ru/request-agm-separator-sample/index.html"
 );
+const synchronizedDetailHtml = Object.fromEntries(
+  synchronizedLocaleCodes.map((locale) => [
+    locale,
+    {
+      rolls: readOutFile(
+        `${locale}/products/agm-separator-rolls/index.html`
+      ),
+      sheets: readOutFile(
+        `${locale}/products/agm-separator-sheets/index.html`
+      ),
+      testing: readOutFile(
+        `${locale}/quality-control/agm-separator-testing/index.html`
+      )
+    }
+  ])
+);
 const resourcesHtml = readOutFile("resources/index.html");
 const zhResourcesHtml = readOutFile("zh/resources/index.html");
 const upsVrlaArticleHtml = readOutFile(
@@ -222,7 +245,8 @@ const inquiryFormsUseSelects = [
   ptSampleHtml,
   ruHtml,
   ruProductHtml,
-  ruSampleHtml
+  ruSampleHtml,
+  ...Object.values(synchronizedDetailHtml).flatMap(Object.values)
 ].every((html) =>
     /<select[^>]+name="application"/.test(html) &&
     /<select[^>]+name="interestedProduct"/.test(html) &&
@@ -333,6 +357,12 @@ if (ruHtml.includes('<html lang="ru"')) {
 const vietnamesePages = [
   [viHtml, "/vi/"],
   [viProductHtml, "/vi/products/agm-separator/"],
+  [synchronizedDetailHtml.vi.rolls, "/vi/products/agm-separator-rolls/"],
+  [synchronizedDetailHtml.vi.sheets, "/vi/products/agm-separator-sheets/"],
+  [
+    synchronizedDetailHtml.vi.testing,
+    "/vi/quality-control/agm-separator-testing/"
+  ],
   [
     viMotorcycleHtml,
     "/vi/applications/agm-separator-for-motorcycle-battery/"
@@ -356,9 +386,18 @@ if (vietnameseSeoComplete) {
 }
 
 if (
-  viHtml.includes('value="Motorcycle battery"') &&
-  viHtml.includes('value="AGM separator rolls"') &&
-  /name="language"\s+value="vi"/.test(viHtml)
+  [
+    viHtml,
+    viProductHtml,
+    viMotorcycleHtml,
+    viSampleHtml,
+    ...Object.values(synchronizedDetailHtml.vi)
+  ].every(
+    (html) =>
+      html.includes('value="Motorcycle battery"') &&
+      html.includes('value="AGM separator rolls"') &&
+      /name="language"\s+value="vi"/.test(html)
+  )
 ) {
   pass("Vietnamese inquiry forms submit canonical values and language=vi");
 } else {
@@ -370,6 +409,24 @@ const koreanJapanesePages = [
   [
     koProductHtml,
     "/ko/products/agm-separator/",
+    "ko-KR",
+    "ko_KR"
+  ],
+  [
+    synchronizedDetailHtml.ko.rolls,
+    "/ko/products/agm-separator-rolls/",
+    "ko-KR",
+    "ko_KR"
+  ],
+  [
+    synchronizedDetailHtml.ko.sheets,
+    "/ko/products/agm-separator-sheets/",
+    "ko-KR",
+    "ko_KR"
+  ],
+  [
+    synchronizedDetailHtml.ko.testing,
+    "/ko/quality-control/agm-separator-testing/",
     "ko-KR",
     "ko_KR"
   ],
@@ -389,6 +446,24 @@ const koreanJapanesePages = [
   [
     jaProductHtml,
     "/ja/products/agm-separator/",
+    "ja-JP",
+    "ja_JP"
+  ],
+  [
+    synchronizedDetailHtml.ja.rolls,
+    "/ja/products/agm-separator-rolls/",
+    "ja-JP",
+    "ja_JP"
+  ],
+  [
+    synchronizedDetailHtml.ja.sheets,
+    "/ja/products/agm-separator-sheets/",
+    "ja-JP",
+    "ja_JP"
+  ],
+  [
+    synchronizedDetailHtml.ja.testing,
+    "/ja/quality-control/agm-separator-testing/",
     "ja-JP",
     "ja_JP"
   ],
@@ -423,13 +498,25 @@ if (koreanJapaneseSeoComplete) {
 }
 
 if (
-  [koHtml, koProductHtml, koMotorcycleHtml, koSampleHtml].every(
+  [
+    koHtml,
+    koProductHtml,
+    koMotorcycleHtml,
+    koSampleHtml,
+    ...Object.values(synchronizedDetailHtml.ko)
+  ].every(
     (html) =>
       html.includes('value="Motorcycle battery"') &&
       html.includes('value="AGM separator rolls"') &&
       /name="language"\s+value="ko"/.test(html)
   ) &&
-  [jaHtml, jaProductHtml, jaMotorcycleHtml, jaSampleHtml].every(
+  [
+    jaHtml,
+    jaProductHtml,
+    jaMotorcycleHtml,
+    jaSampleHtml,
+    ...Object.values(synchronizedDetailHtml.ja)
+  ].every(
     (html) =>
       html.includes('value="Motorcycle battery"') &&
       html.includes('value="AGM separator rolls"') &&
@@ -446,6 +533,24 @@ const spanishPortugueseRussianPages = [
   [
     esProductHtml,
     "/es/products/agm-separator/",
+    "es",
+    "es_LA"
+  ],
+  [
+    synchronizedDetailHtml.es.rolls,
+    "/es/products/agm-separator-rolls/",
+    "es",
+    "es_LA"
+  ],
+  [
+    synchronizedDetailHtml.es.sheets,
+    "/es/products/agm-separator-sheets/",
+    "es",
+    "es_LA"
+  ],
+  [
+    synchronizedDetailHtml.es.testing,
+    "/es/quality-control/agm-separator-testing/",
     "es",
     "es_LA"
   ],
@@ -469,6 +574,24 @@ const spanishPortugueseRussianPages = [
     "pt_BR"
   ],
   [
+    synchronizedDetailHtml.pt.rolls,
+    "/pt/products/agm-separator-rolls/",
+    "pt-BR",
+    "pt_BR"
+  ],
+  [
+    synchronizedDetailHtml.pt.sheets,
+    "/pt/products/agm-separator-sheets/",
+    "pt-BR",
+    "pt_BR"
+  ],
+  [
+    synchronizedDetailHtml.pt.testing,
+    "/pt/quality-control/agm-separator-testing/",
+    "pt-BR",
+    "pt_BR"
+  ],
+  [
     ptMotorcycleHtml,
     "/pt/applications/agm-separator-for-motorcycle-battery/",
     "pt-BR",
@@ -484,6 +607,24 @@ const spanishPortugueseRussianPages = [
   [
     ruProductHtml,
     "/ru/products/agm-separator/",
+    "ru-RU",
+    "ru_RU"
+  ],
+  [
+    synchronizedDetailHtml.ru.rolls,
+    "/ru/products/agm-separator-rolls/",
+    "ru-RU",
+    "ru_RU"
+  ],
+  [
+    synchronizedDetailHtml.ru.sheets,
+    "/ru/products/agm-separator-sheets/",
+    "ru-RU",
+    "ru_RU"
+  ],
+  [
+    synchronizedDetailHtml.ru.testing,
+    "/ru/quality-control/agm-separator-testing/",
     "ru-RU",
     "ru_RU"
   ],
@@ -518,9 +659,30 @@ if (spanishPortugueseRussianSeoComplete) {
 }
 
 const newLocaleFormsComplete = [
-  ["es", esHtml, esProductHtml, esMotorcycleHtml, esSampleHtml],
-  ["pt", ptHtml, ptProductHtml, ptMotorcycleHtml, ptSampleHtml],
-  ["ru", ruHtml, ruProductHtml, ruMotorcycleHtml, ruSampleHtml]
+  [
+    "es",
+    esHtml,
+    esProductHtml,
+    esMotorcycleHtml,
+    esSampleHtml,
+    ...Object.values(synchronizedDetailHtml.es)
+  ],
+  [
+    "pt",
+    ptHtml,
+    ptProductHtml,
+    ptMotorcycleHtml,
+    ptSampleHtml,
+    ...Object.values(synchronizedDetailHtml.pt)
+  ],
+  [
+    "ru",
+    ruHtml,
+    ruProductHtml,
+    ruMotorcycleHtml,
+    ruSampleHtml,
+    ...Object.values(synchronizedDetailHtml.ru)
+  ]
 ].every(([language, ...pages]) =>
   pages.every(
     (html) =>
@@ -628,10 +790,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 62) {
-  pass("sitemap.xml lists the expected 62 localized public URLs");
+if (sitemapUrls.length === 80) {
+  pass("sitemap.xml lists the expected 80 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 62`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 80`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -741,7 +903,21 @@ const expectedSitemapLastmod = [
   [
     "https://www.vikingagm.com/resources/",
     "2026-07-26"
-  ]
+  ],
+  ...synchronizedLocaleCodes.flatMap((locale) => [
+    [
+      `https://www.vikingagm.com/${locale}/products/agm-separator-rolls/`,
+      "2026-07-31"
+    ],
+    [
+      `https://www.vikingagm.com/${locale}/products/agm-separator-sheets/`,
+      "2026-07-31"
+    ],
+    [
+      `https://www.vikingagm.com/${locale}/quality-control/agm-separator-testing/`,
+      "2026-07-31"
+    ]
+  ])
 ];
 
 const staleLastmod = expectedSitemapLastmod.filter(([url, date]) => {

@@ -52,23 +52,41 @@ const pages = [
   {
     en: "/products/agm-separator-rolls/",
     zh: "/zh/products/agm-separator-rolls/",
+    vi: "/vi/products/agm-separator-rolls/",
+    ko: "/ko/products/agm-separator-rolls/",
+    ja: "/ja/products/agm-separator-rolls/",
+    es: "/es/products/agm-separator-rolls/",
+    pt: "/pt/products/agm-separator-rolls/",
+    ru: "/ru/products/agm-separator-rolls/",
     priority: "0.9",
     changefreq: "weekly",
-    lastmod: "2026-07-05"
+    lastmod: "2026-07-31"
   },
   {
     en: "/products/agm-separator-sheets/",
     zh: "/zh/products/agm-separator-sheets/",
+    vi: "/vi/products/agm-separator-sheets/",
+    ko: "/ko/products/agm-separator-sheets/",
+    ja: "/ja/products/agm-separator-sheets/",
+    es: "/es/products/agm-separator-sheets/",
+    pt: "/pt/products/agm-separator-sheets/",
+    ru: "/ru/products/agm-separator-sheets/",
     priority: "0.9",
     changefreq: "weekly",
-    lastmod: "2026-07-05"
+    lastmod: "2026-07-31"
   },
   {
     en: "/quality-control/agm-separator-testing/",
     zh: "/zh/quality-control/agm-separator-testing/",
+    vi: "/vi/quality-control/agm-separator-testing/",
+    ko: "/ko/quality-control/agm-separator-testing/",
+    ja: "/ja/quality-control/agm-separator-testing/",
+    es: "/es/quality-control/agm-separator-testing/",
+    pt: "/pt/quality-control/agm-separator-testing/",
+    ru: "/ru/quality-control/agm-separator-testing/",
     priority: "0.8",
     changefreq: "monthly",
-    lastmod: "2026-06-11"
+    lastmod: "2026-07-31"
   },
   {
     en: "/applications/agm-separator-for-vrla-battery/",

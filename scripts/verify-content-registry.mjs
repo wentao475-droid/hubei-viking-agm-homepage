@@ -92,6 +92,27 @@ const secondaryLocalizedPages = ["vi", "ko", "ja", "es", "pt", "ru"].flatMap((lo
     seo: content.seo?.agmSeparator?.[locale]
   },
   {
+    key: `agmSeparatorRolls.${locale}`,
+    route: `app/${locale}/products/agm-separator-rolls/page.tsx`,
+    path: `/${locale}/products/agm-separator-rolls/`,
+    content: content.products?.agmSeparatorRolls?.[locale],
+    seo: content.seo?.agmSeparatorRolls?.[locale]
+  },
+  {
+    key: `agmSeparatorSheets.${locale}`,
+    route: `app/${locale}/products/agm-separator-sheets/page.tsx`,
+    path: `/${locale}/products/agm-separator-sheets/`,
+    content: content.products?.agmSeparatorSheets?.[locale],
+    seo: content.seo?.agmSeparatorSheets?.[locale]
+  },
+  {
+    key: `agmSeparatorTesting.${locale}`,
+    route: `app/${locale}/quality-control/agm-separator-testing/page.tsx`,
+    path: `/${locale}/quality-control/agm-separator-testing/`,
+    content: content.products?.agmSeparatorTesting?.[locale],
+    seo: content.seo?.agmSeparatorTesting?.[locale]
+  },
+  {
     key: `agmSeparatorMotorcycleApplication.${locale}`,
     route: `app/${locale}/applications/agm-separator-for-motorcycle-battery/page.tsx`,
     path: `/${locale}/applications/agm-separator-for-motorcycle-battery/`,

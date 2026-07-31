@@ -245,6 +245,9 @@ const commonRelated = {
   ] as LinkItem[],
   vi: [
     ["Sản phẩm tấm ngăn AGM", "/vi/products/agm-separator/"],
+    ["Tấm ngăn AGM dạng cuộn", "/vi/products/agm-separator-rolls/"],
+    ["Tấm ngăn AGM dạng tấm", "/vi/products/agm-separator-sheets/"],
+    ["Kiểm tra tấm ngăn AGM", "/vi/quality-control/agm-separator-testing/"],
     [
       "Ứng dụng ắc quy xe máy",
       "/vi/applications/agm-separator-for-motorcycle-battery/"
@@ -253,6 +256,9 @@ const commonRelated = {
   ] as LinkItem[],
   ko: [
     ["AGM 분리막 제품", "/ko/products/agm-separator/"],
+    ["AGM 분리막 롤", "/ko/products/agm-separator-rolls/"],
+    ["AGM 분리막 시트", "/ko/products/agm-separator-sheets/"],
+    ["AGM 분리막 시험", "/ko/quality-control/agm-separator-testing/"],
     [
       "오토바이 배터리 적용",
       "/ko/applications/agm-separator-for-motorcycle-battery/"
@@ -261,6 +267,9 @@ const commonRelated = {
   ] as LinkItem[],
   ja: [
     ["AGMセパレーター製品", "/ja/products/agm-separator/"],
+    ["AGMセパレーター ロール", "/ja/products/agm-separator-rolls/"],
+    ["AGMセパレーター シート", "/ja/products/agm-separator-sheets/"],
+    ["AGMセパレーター試験", "/ja/quality-control/agm-separator-testing/"],
     [
       "二輪車用バッテリー用途",
       "/ja/applications/agm-separator-for-motorcycle-battery/"
@@ -269,6 +278,9 @@ const commonRelated = {
   ] as LinkItem[],
   es: [
     ["Separador AGM", "/es/products/agm-separator/"],
+    ["Rollos de separador AGM", "/es/products/agm-separator-rolls/"],
+    ["Láminas de separador AGM", "/es/products/agm-separator-sheets/"],
+    ["Ensayos de separadores AGM", "/es/quality-control/agm-separator-testing/"],
     [
       "Aplicación para baterías de motocicleta",
       "/es/applications/agm-separator-for-motorcycle-battery/"
@@ -277,6 +289,9 @@ const commonRelated = {
   ] as LinkItem[],
   pt: [
     ["Separador AGM", "/pt/products/agm-separator/"],
+    ["Rolos de separador AGM", "/pt/products/agm-separator-rolls/"],
+    ["Folhas de separador AGM", "/pt/products/agm-separator-sheets/"],
+    ["Ensaios de separadores AGM", "/pt/quality-control/agm-separator-testing/"],
     [
       "Aplicação em baterias de motocicletas",
       "/pt/applications/agm-separator-for-motorcycle-battery/"
@@ -285,6 +300,9 @@ const commonRelated = {
   ] as LinkItem[],
   ru: [
     ["AGM-сепаратор", "/ru/products/agm-separator/"],
+    ["Рулоны AGM-сепаратора", "/ru/products/agm-separator-rolls/"],
+    ["Листы AGM-сепаратора", "/ru/products/agm-separator-sheets/"],
+    ["Испытания AGM-сепаратора", "/ru/quality-control/agm-separator-testing/"],
     [
       "Применение в мотоциклетных аккумуляторах",
       "/ru/applications/agm-separator-for-motorcycle-battery/"
@@ -3349,6 +3367,301 @@ const additionalAgmContent: Record<"es" | "pt" | "ru", ProductContent> = {
   }
 };
 
+type SecondaryDetailLocale = "vi" | "ko" | "ja" | "es" | "pt" | "ru";
+type SecondaryDetailKind =
+  | "agmSeparatorRolls"
+  | "agmSeparatorSheets"
+  | "agmSeparatorTesting";
+
+type DetailPageCopy = {
+  hero: [string, string, string, string];
+  proof: string[];
+  overview: [string, string, string];
+  parameters: [string, string];
+  formsTitle: string;
+  inquiry: [string, string];
+};
+
+type SecondaryDetailCopy = {
+  rolls: DetailPageCopy;
+  sheets: DetailPageCopy;
+  testing: DetailPageCopy & {
+    testCards: Array<[string, string, string]>;
+  };
+};
+
+const secondaryDetailCopy: Record<SecondaryDetailLocale, SecondaryDetailCopy> = {
+  vi: {
+    rolls: {
+      hero: ["Tấm ngăn AGM dạng cuộn", "Cuộn tấm ngăn AGM cho dây chuyền sản xuất ắc quy", "Vật liệu sợi thủy tinh AGM dạng cuộn cho xẻ cuộn, cắt tại nhà máy và sản xuất ắc quy VRLA.", "Yêu cầu mẫu cuộn AGM"],
+      proof: ["Trao đổi chiều rộng và độ dày", "Xác nhận lõi và đường kính cuộn", "Đóng gói theo yêu cầu"],
+      overview: ["Dạng cuộn hỗ trợ sản xuất và cắt liên tục", "Cuộn AGM phù hợp với nhà sản xuất tự xẻ hoặc cắt vật liệu theo thiết kế bản cực và quy trình lắp ráp.", "Chiều rộng, độ dày, chiều dài, lõi, đường kính và đóng gói cần được xác nhận trước khi làm mẫu hoặc sản xuất."],
+      parameters: ["Thông tin cần xác nhận cho cuộn AGM", "Hãy gửi chiều rộng, độ dày, đường kính hoặc chiều dài cuộn, kích thước lõi và yêu cầu đóng gói."],
+      formsTitle: "Cuộn thành phẩm, sản xuất và đóng gói",
+      inquiry: ["Gửi yêu cầu cuộn AGM", "Chia sẻ chiều rộng, độ dày, lõi, đường kính, số lượng và ứng dụng ắc quy để bắt đầu trao đổi."]
+    },
+    sheets: {
+      hero: ["Tấm ngăn AGM dạng tấm", "Tấm ngăn AGM cắt sẵn cho lắp ráp ắc quy VRLA", "Tấm sợi thủy tinh AGM cắt theo kích thước để đánh giá mẫu và lắp ráp ắc quy.", "Yêu cầu mẫu tấm AGM"],
+      proof: ["Trao đổi chiều dài và chiều rộng", "Đối chiếu độ dày", "Đóng gói tấm cắt sẵn"],
+      overview: ["Tấm cắt sẵn cần phù hợp với thiết kế bản cực", "Kích thước tấm AGM phải được đối chiếu với bản cực, khoảng cách lắp ráp và phương pháp đặt tấm của khách hàng.", "Nên xác nhận chiều dài, chiều rộng, độ dày, số lượng mỗi gói và yêu cầu thao tác trước khi sản xuất."],
+      parameters: ["Thông tin cần xác nhận cho tấm AGM", "Hãy gửi kích thước tấm, độ dày, dung sai, số lượng và yêu cầu đóng gói hoặc đánh giá mẫu."],
+      formsTitle: "Tấm cắt sẵn, chi tiết cạnh và đóng gói",
+      inquiry: ["Gửi yêu cầu tấm AGM", "Chia sẻ kích thước, độ dày, số lượng, mẫu ắc quy và yêu cầu đóng gói để xác nhận khả năng phù hợp."]
+    },
+    testing: {
+      hero: ["Kiểm tra và kiểm soát chất lượng", "Kiểm tra chất lượng tấm ngăn AGM", "Trao đổi các hạng mục kiểm tra như độ dày, định lượng, hút axit, điện trở và ngoại quan theo yêu cầu khách hàng.", "Gửi yêu cầu kiểm tra"],
+      proof: ["Kiểm tra thông số có thể đo", "Xác nhận phương pháp thử", "Đánh giá theo yêu cầu khách hàng"],
+      overview: ["Chất lượng cần được xác nhận bằng ngoại quan và dữ liệu", "Độ ổn định của tấm ngăn AGM liên quan đến vật liệu, quy trình, kích thước và các thông số thử đã thống nhất.", "Hạng mục thử, điều kiện, phương pháp và giá trị chấp nhận cần được xác nhận trước khi làm mẫu hoặc đặt hàng."],
+      parameters: ["Các hạng mục kiểm tra thường được trao đổi", "Độ dày, định lượng, hút axit, điện trở, độ rỗng, độ bền và ngoại quan được xem xét theo tiêu chuẩn khách hàng."],
+      formsTitle: "Hình ảnh kiểm tra chất lượng thực tế",
+      inquiry: ["Gửi tiêu chuẩn và yêu cầu kiểm tra", "Chia sẻ hạng mục thử, giá trị mục tiêu, phương pháp, ứng dụng ắc quy và nhu cầu mẫu."],
+      testCards: [
+        ["Kiểm tra độ dày", "Xác nhận độ dày và độ ổn định kích thước theo phương pháp đã thống nhất.", "Kiểm tra độ dày tấm ngăn AGM"],
+        ["Kiểm tra định lượng", "Đánh giá khối lượng trên đơn vị diện tích và tính nhất quán của vật liệu.", "Kiểm tra định lượng tấm ngăn AGM"],
+        ["Kiểm tra hút axit", "Trao đổi khả năng hút và giữ điện phân theo điều kiện thử.", "Kiểm tra khả năng hút axit tấm ngăn AGM"],
+        ["Kiểm tra điện trở", "Xem xét điện trở theo mục tiêu hiệu suất và phương pháp của khách hàng.", "Kiểm tra điện trở tấm ngăn AGM"]
+      ]
+    }
+  },
+  ko: {
+    rolls: {
+      hero: ["AGM 분리막 롤", "배터리 생산 라인용 AGM 분리막 롤", "VRLA 배터리 생산, 슬리팅 및 사내 절단을 위한 유리섬유 AGM 롤 소재입니다.", "AGM 롤 샘플 요청"],
+      proof: ["폭과 두께 협의", "코어와 롤 직경 확인", "포장 요구사항 검토"],
+      overview: ["연속 생산과 절단 공정에 맞춘 롤 공급", "AGM 롤은 고객이 배터리 설계와 조립 공정에 맞춰 직접 슬리팅하거나 절단하는 생산 방식에 적합합니다.", "샘플 또는 생산 전에 폭, 두께, 길이, 코어, 롤 직경과 포장 방식을 확인합니다."],
+      parameters: ["AGM 롤 사양 확인 항목", "폭, 두께, 롤 길이 또는 직경, 코어 크기, 수량과 포장 요구사항을 보내 주세요."],
+      formsTitle: "완성 롤, 생산 및 포장 확인",
+      inquiry: ["AGM 롤 요구사항 보내기", "폭, 두께, 코어, 롤 직경, 수량과 배터리 적용 분야를 공유해 주세요."]
+    },
+    sheets: {
+      hero: ["AGM 분리막 시트", "VRLA 배터리 조립용 사전 절단 AGM 시트", "배터리 샘플 평가와 조립을 위해 지정 치수로 절단한 유리섬유 AGM 시트입니다.", "AGM 시트 샘플 요청"],
+      proof: ["길이와 폭 협의", "두께 확인", "사전 절단 포장"],
+      overview: ["사전 절단 시트는 극판 설계와 맞아야 합니다", "AGM 시트 치수는 극판 크기, 조립 간격과 고객의 시트 배치 방식에 맞춰 확인해야 합니다.", "생산 전에 길이, 폭, 두께, 포장 수량과 취급 요구사항을 확인합니다."],
+      parameters: ["AGM 시트 사양 확인 항목", "시트 치수, 두께, 공차, 수량, 포장 및 샘플 평가 요구사항을 보내 주세요."],
+      formsTitle: "절단 시트, 가장자리 및 포장 확인",
+      inquiry: ["AGM 시트 요구사항 보내기", "치수, 두께, 수량, 배터리 모델과 포장 요구사항을 공유해 주세요."]
+    },
+    testing: {
+      hero: ["시험 및 품질 관리", "AGM 분리막 시험과 품질 관리", "고객 요구사항에 따라 두께, 평량, 산 흡수, 전기 저항 및 외관 검사를 협의합니다.", "시험 요구사항 보내기"],
+      proof: ["측정 가능한 품질 항목", "시험 방법 사전 확인", "고객 기준 검토"],
+      overview: ["품질은 외관과 측정 데이터로 확인해야 합니다", "AGM 분리막의 안정성은 원료, 공정, 치수와 합의된 시험 항목에 연결됩니다.", "샘플 또는 주문 전에 시험 항목, 조건, 방법과 합격 기준을 확인해야 합니다."],
+      parameters: ["일반적으로 협의하는 시험 항목", "두께, 평량, 산 흡수, 전기 저항, 기공률, 강도와 외관을 고객 기준에 따라 검토합니다."],
+      formsTitle: "실제 품질 검사 장면",
+      inquiry: ["시험 기준과 요구사항 보내기", "시험 항목, 목표값, 방법, 배터리 적용 분야와 샘플 요구사항을 공유해 주세요."],
+      testCards: [
+        ["두께 측정", "합의된 방법에 따라 두께와 치수 안정성을 확인합니다.", "AGM 분리막 두께 측정"],
+        ["평량 측정", "단위 면적당 중량과 소재 일관성을 평가합니다.", "AGM 분리막 평량 측정"],
+        ["산 흡수 시험", "시험 조건에 따른 전해액 흡수와 유지 성능을 검토합니다.", "AGM 분리막 산 흡수 시험"],
+        ["전기 저항 시험", "배터리 성능 목표와 고객 시험 방법에 따라 검토합니다.", "AGM 분리막 전기 저항 시험"]
+      ]
+    }
+  },
+  ja: {
+    rolls: {
+      hero: ["AGMセパレーター ロール", "電池生産ライン向けAGMセパレーターロール", "VRLA電池生産、スリット、社内裁断向けのガラス繊維AGMロール材です。", "AGMロールサンプルを依頼"],
+      proof: ["幅・厚さの確認", "紙管・ロール径の確認", "梱包要件の確認"],
+      overview: ["連続生産と裁断工程に対応するロール供給", "AGMロールは、電池設計と組立工程に合わせてお客様がスリット・裁断する生産方式に適しています。", "サンプルまたは生産前に、幅、厚さ、長さ、紙管、ロール径、梱包方法を確認します。"],
+      parameters: ["AGMロールで確認する仕様", "幅、厚さ、ロール長または径、紙管寸法、数量、梱包要件をご提示ください。"],
+      formsTitle: "完成ロール、生産、梱包の確認",
+      inquiry: ["AGMロール要件を送信", "幅、厚さ、紙管、ロール径、数量、バッテリー用途をお知らせください。"]
+    },
+    sheets: {
+      hero: ["AGMセパレーター シート", "VRLA電池組立用カット済みAGMシート", "バッテリーサンプル評価と組立向けに指定寸法へ裁断したガラス繊維AGMシートです。", "AGMシートサンプルを依頼"],
+      proof: ["長さ・幅の確認", "厚さの確認", "カットシート梱包"],
+      overview: ["カット済みシートは極板設計との適合が重要です", "AGMシート寸法は、極板サイズ、組立間隔、お客様の配置方法に合わせて確認します。", "生産前に長さ、幅、厚さ、梱包数量、取扱要件を確認します。"],
+      parameters: ["AGMシートで確認する仕様", "シート寸法、厚さ、公差、数量、梱包、サンプル評価要件をご提示ください。"],
+      formsTitle: "カットシート、端部、梱包の確認",
+      inquiry: ["AGMシート要件を送信", "寸法、厚さ、数量、バッテリー型式、梱包要件をお知らせください。"]
+    },
+    testing: {
+      hero: ["試験・品質管理", "AGMセパレーターの試験と品質管理", "お客様の要件に基づき、厚さ、坪量、吸液、電気抵抗、外観検査を確認します。", "試験要件を送信"],
+      proof: ["測定可能な品質項目", "試験方法の事前確認", "お客様基準の確認"],
+      overview: ["品質は外観と測定データの両面で確認", "AGMセパレーターの安定性は、原料、工程、寸法、合意した試験項目に関係します。", "サンプル・注文前に試験項目、条件、方法、合格基準を確認します。"],
+      parameters: ["一般的に確認する試験項目", "厚さ、坪量、吸液、電気抵抗、気孔率、強度、外観をお客様基準に合わせて確認します。"],
+      formsTitle: "実際の品質検査",
+      inquiry: ["試験基準と要件を送信", "試験項目、目標値、方法、バッテリー用途、サンプル要件をご提示ください。"],
+      testCards: [
+        ["厚さ測定", "合意した方法で厚さと寸法安定性を確認します。", "AGMセパレーター厚さ測定"],
+        ["坪量測定", "単位面積当たりの質量と材料の均一性を評価します。", "AGMセパレーター坪量測定"],
+        ["吸液試験", "試験条件に基づき電解液の吸収・保持を確認します。", "AGMセパレーター吸液試験"],
+        ["電気抵抗試験", "電池性能目標とお客様の方法に基づき確認します。", "AGMセパレーター電気抵抗試験"]
+      ]
+    }
+  },
+  es: {
+    rolls: {
+      hero: ["Rollos de separador AGM", "Rollos AGM para líneas de producción de baterías", "Material AGM de fibra de vidrio en rollo para corte longitudinal, conversión interna y fabricación de baterías VRLA.", "Solicitar muestra de rollo AGM"],
+      proof: ["Revisión de ancho y espesor", "Confirmación de núcleo y diámetro", "Embalaje según requisitos"],
+      overview: ["Suministro en rollo para producción y corte continuos", "Los rollos AGM son adecuados cuando el fabricante corta o convierte el material según el diseño de placas y el proceso de montaje.", "Antes de la muestra o producción se confirman ancho, espesor, longitud, núcleo, diámetro y embalaje."],
+      parameters: ["Datos necesarios para un rollo AGM", "Comparta ancho, espesor, longitud o diámetro, núcleo, cantidad y requisitos de embalaje."],
+      formsTitle: "Rollo terminado, producción y embalaje",
+      inquiry: ["Enviar requisitos del rollo AGM", "Comparta ancho, espesor, núcleo, diámetro, cantidad y aplicación de la batería."]
+    },
+    sheets: {
+      hero: ["Láminas de separador AGM", "Láminas AGM precortadas para montaje de baterías VRLA", "Láminas AGM de fibra de vidrio cortadas a medida para evaluar muestras y montar baterías.", "Solicitar muestra de lámina AGM"],
+      proof: ["Revisión de largo y ancho", "Confirmación de espesor", "Embalaje de piezas cortadas"],
+      overview: ["La lámina precortada debe corresponder al diseño de placas", "Las dimensiones se revisan con el tamaño de las placas, el espacio de montaje y el método de colocación del cliente.", "Antes de producir se confirman largo, ancho, espesor, cantidad por paquete y requisitos de manipulación."],
+      parameters: ["Datos necesarios para láminas AGM", "Comparta dimensiones, espesor, tolerancia, cantidad y requisitos de embalaje o evaluación."],
+      formsTitle: "Láminas cortadas, bordes y embalaje",
+      inquiry: ["Enviar requisitos de láminas AGM", "Comparta medidas, espesor, cantidad, modelo de batería y requisitos de embalaje."]
+    },
+    testing: {
+      hero: ["Ensayos y control de calidad", "Ensayos y control de calidad de separadores AGM", "Revisión de espesor, gramaje, absorción de ácido, resistencia eléctrica y apariencia según requisitos del cliente.", "Enviar requisitos de ensayo"],
+      proof: ["Parámetros medibles", "Métodos de ensayo acordados", "Revisión según criterios del cliente"],
+      overview: ["La calidad se confirma con apariencia y datos medibles", "La estabilidad del separador AGM depende de materia prima, proceso, dimensiones y ensayos acordados.", "Antes de una muestra o pedido se confirman partidas, condiciones, métodos y criterios de aceptación."],
+      parameters: ["Ensayos que suelen revisarse", "Espesor, gramaje, absorción, resistencia, porosidad, resistencia mecánica y apariencia se revisan según la norma del cliente."],
+      formsTitle: "Escenas reales de control de calidad",
+      inquiry: ["Enviar norma y requisitos de ensayo", "Comparta partidas, valores objetivo, método, aplicación de la batería y requisitos de muestra."],
+      testCards: [
+        ["Medición de espesor", "Confirma espesor y estabilidad dimensional con el método acordado.", "Medición de espesor de separador AGM"],
+        ["Medición de gramaje", "Evalúa masa por unidad de superficie y uniformidad del material.", "Medición de gramaje de separador AGM"],
+        ["Ensayo de absorción de ácido", "Revisa absorción y retención del electrolito bajo condiciones definidas.", "Ensayo de absorción de ácido de separador AGM"],
+        ["Ensayo de resistencia eléctrica", "Se revisa según el objetivo de la batería y el método del cliente.", "Ensayo de resistencia eléctrica de separador AGM"]
+      ]
+    }
+  },
+  pt: {
+    rolls: {
+      hero: ["Rolos de separador AGM", "Rolos AGM para linhas de produção de baterias", "Material AGM de fibra de vidro em rolo para corte longitudinal, conversão interna e fabricação de baterias VRLA.", "Solicitar amostra de rolo AGM"],
+      proof: ["Análise de largura e espessura", "Confirmação de núcleo e diâmetro", "Embalagem conforme requisitos"],
+      overview: ["Fornecimento em rolo para produção e corte contínuos", "Rolos AGM são adequados quando o fabricante corta ou converte o material conforme o projeto das placas e o processo de montagem.", "Antes da amostra ou produção, confirmamos largura, espessura, comprimento, núcleo, diâmetro e embalagem."],
+      parameters: ["Dados necessários para rolos AGM", "Informe largura, espessura, comprimento ou diâmetro, núcleo, quantidade e requisitos de embalagem."],
+      formsTitle: "Rolo acabado, produção e embalagem",
+      inquiry: ["Enviar requisitos do rolo AGM", "Compartilhe largura, espessura, núcleo, diâmetro, quantidade e aplicação da bateria."]
+    },
+    sheets: {
+      hero: ["Folhas de separador AGM", "Folhas AGM pré-cortadas para montagem de baterias VRLA", "Folhas AGM de fibra de vidro cortadas nas dimensões solicitadas para amostras e montagem.", "Solicitar amostra de folha AGM"],
+      proof: ["Análise de comprimento e largura", "Confirmação de espessura", "Embalagem de peças cortadas"],
+      overview: ["A folha pré-cortada deve corresponder ao projeto das placas", "As dimensões são analisadas com o tamanho das placas, o espaço de montagem e o método de colocação do cliente.", "Antes da produção, confirmamos comprimento, largura, espessura, quantidade por pacote e requisitos de manuseio."],
+      parameters: ["Dados necessários para folhas AGM", "Informe dimensões, espessura, tolerância, quantidade e requisitos de embalagem ou avaliação."],
+      formsTitle: "Folhas cortadas, bordas e embalagem",
+      inquiry: ["Enviar requisitos das folhas AGM", "Compartilhe medidas, espessura, quantidade, modelo da bateria e requisitos de embalagem."]
+    },
+    testing: {
+      hero: ["Ensaios e controle de qualidade", "Ensaios e controle de qualidade de separadores AGM", "Análise de espessura, gramatura, absorção de ácido, resistência elétrica e aparência conforme os requisitos do cliente.", "Enviar requisitos de ensaio"],
+      proof: ["Parâmetros mensuráveis", "Métodos de ensaio acordados", "Análise conforme critérios do cliente"],
+      overview: ["A qualidade é confirmada por aparência e dados mensuráveis", "A estabilidade do separador AGM depende da matéria-prima, processo, dimensões e ensaios acordados.", "Antes da amostra ou pedido, confirmamos itens, condições, métodos e critérios de aceitação."],
+      parameters: ["Ensaios normalmente analisados", "Espessura, gramatura, absorção, resistência, porosidade, resistência mecânica e aparência são analisadas conforme a norma do cliente."],
+      formsTitle: "Cenas reais de controle de qualidade",
+      inquiry: ["Enviar norma e requisitos de ensaio", "Compartilhe itens, valores-alvo, método, aplicação da bateria e requisitos de amostra."],
+      testCards: [
+        ["Medição de espessura", "Confirma a espessura e a estabilidade dimensional pelo método acordado.", "Medição de espessura do separador AGM"],
+        ["Medição de gramatura", "Avalia massa por unidade de área e uniformidade do material.", "Medição de gramatura do separador AGM"],
+        ["Ensaio de absorção de ácido", "Analisa absorção e retenção de eletrólito sob condições definidas.", "Ensaio de absorção de ácido do separador AGM"],
+        ["Ensaio de resistência elétrica", "Analisado conforme o objetivo da bateria e o método do cliente.", "Ensaio de resistência elétrica do separador AGM"]
+      ]
+    }
+  },
+  ru: {
+    rolls: {
+      hero: ["Рулоны AGM-сепаратора", "Рулонный AGM-сепаратор для линий производства аккумуляторов", "Стекловолоконный материал AGM в рулонах для продольной резки, внутренней переработки и выпуска аккумуляторов VRLA.", "Запросить образец рулона AGM"],
+      proof: ["Согласование ширины и толщины", "Проверка втулки и диаметра", "Упаковка по требованиям"],
+      overview: ["Рулоны для непрерывного производства и резки", "Рулоны AGM подходят производителям, которые режут материал по конструкции пластин и процессу сборки.", "До изготовления образца или партии согласуются ширина, толщина, длина, втулка, диаметр и упаковка."],
+      parameters: ["Данные для согласования рулона AGM", "Укажите ширину, толщину, длину или диаметр, размер втулки, объем и требования к упаковке."],
+      formsTitle: "Готовые рулоны, производство и упаковка",
+      inquiry: ["Отправить требования к рулону AGM", "Укажите ширину, толщину, втулку, диаметр, количество и применение аккумулятора."]
+    },
+    sheets: {
+      hero: ["Листы AGM-сепаратора", "Нарезанные листы AGM для сборки аккумуляторов VRLA", "Стекловолоконные листы AGM заданного размера для оценки образцов и сборки аккумуляторов.", "Запросить образец листа AGM"],
+      proof: ["Согласование длины и ширины", "Проверка толщины", "Упаковка нарезанных листов"],
+      overview: ["Размер листа должен соответствовать конструкции пластин", "Размеры листа AGM проверяются по пластинам, сборочному зазору и способу укладки у заказчика.", "До производства согласуются длина, ширина, толщина, количество в упаковке и требования к обработке."],
+      parameters: ["Данные для согласования листов AGM", "Укажите размеры листа, толщину, допуск, количество, упаковку и требования к образцам."],
+      formsTitle: "Нарезанные листы, кромки и упаковка",
+      inquiry: ["Отправить требования к листам AGM", "Укажите размеры, толщину, количество, модель аккумулятора и требования к упаковке."]
+    },
+    testing: {
+      hero: ["Испытания и контроль качества", "Испытания и контроль качества AGM-сепараторов", "Согласование толщины, поверхностной плотности, впитывания кислоты, электрического сопротивления и внешнего вида.", "Отправить требования к испытаниям"],
+      proof: ["Измеряемые показатели", "Согласованные методики", "Проверка по критериям заказчика"],
+      overview: ["Качество подтверждается внешним видом и измерениями", "Стабильность AGM-сепаратора связана с сырьем, процессом, размерами и согласованными испытаниями.", "До образца или заказа подтверждаются показатели, условия, методы и критерии приемки."],
+      parameters: ["Обычно согласуемые испытания", "Толщина, плотность, впитывание, сопротивление, пористость, прочность и внешний вид проверяются по стандарту заказчика."],
+      formsTitle: "Фактические операции контроля качества",
+      inquiry: ["Отправить стандарт и требования", "Укажите показатели, целевые значения, методику, применение аккумулятора и требования к образцу."],
+      testCards: [
+        ["Измерение толщины", "Подтверждает толщину и стабильность размеров согласованным методом.", "Измерение толщины AGM-сепаратора"],
+        ["Измерение поверхностной плотности", "Оценивает массу на единицу площади и однородность материала.", "Измерение плотности AGM-сепаратора"],
+        ["Испытание впитывания кислоты", "Проверяет впитывание и удержание электролита в заданных условиях.", "Испытание впитывания кислоты AGM-сепаратора"],
+        ["Испытание электрического сопротивления", "Проводится по целям аккумулятора и методике заказчика.", "Испытание сопротивления AGM-сепаратора"]
+      ]
+    }
+  }
+};
+
+const detailFormImages = {
+  rolls: [
+    ["/images/viking-finished-separator-roll-900.webp", 900, 675],
+    ["/images/evidence/agm-separator-roll-warehouse-01.webp", 1200, 900],
+    ["/images/evidence/agm-separator-roll-end-face-01.webp", 1200, 900],
+    ["/images/evidence/agm-separator-roll-packaging-01.webp", 1200, 900]
+  ],
+  sheets: [
+    ["/images/viking-separator-sheets-900.webp", 900, 675],
+    ["/images/sheets1-900.webp", 900, 675],
+    ["/images/evidence/agm-separator-sheets-detail-01.webp", 1200, 900],
+    ["/images/evidence/agm-separator-sheets-packaging-01.webp", 1200, 900]
+  ],
+  testing: [
+    ["/images/evidence/quality-thickness-test-01.webp", 1200, 900],
+    ["/images/evidence/quality-basis-weight-test-01.webp", 1200, 900],
+    ["/images/evidence/quality-acid-absorption-test-01.webp", 1200, 900],
+    ["/images/evidence/quality-electrical-resistance-test-01.webp", 1200, 900]
+  ]
+} as const;
+
+function buildSecondaryDetailContent(
+  lang: SecondaryDetailLocale,
+  kind: SecondaryDetailKind,
+  base: ProductContent,
+  copy: DetailPageCopy & { testCards?: Array<[string, string, string]> }
+): ProductContent {
+  const variant = kind === "agmSeparatorRolls" ? "rolls" : kind === "agmSeparatorSheets" ? "sheets" : "testing";
+  const path = kind === "agmSeparatorTesting" ? "/quality-control/agm-separator-testing/" : kind === "agmSeparatorRolls" ? "/products/agm-separator-rolls/" : "/products/agm-separator-sheets/";
+  const heroImage = kind === "agmSeparatorTesting"
+    ? ["/images/agm-quality-control-1200.webp", 1200, 900] as const
+    : detailFormImages[variant][0];
+  const forms = kind === "agmSeparatorTesting" && copy.testCards
+    ? copy.testCards.map(([title, text, alt], index) => [title, text, detailFormImages.testing[index][0], alt, detailFormImages.testing[index][1], detailFormImages.testing[index][2]] as ImageCard)
+    : base.forms.items.map(([title, text, , alt], index) => [title, text, detailFormImages[variant][index][0], alt, detailFormImages[variant][index][1], detailFormImages[variant][index][2]] as ImageCard);
+
+  return {
+    ...base,
+    languagePath: path,
+    hero: {
+      eyebrow: copy.hero[0],
+      title: copy.hero[1],
+      subtitle: copy.hero[2],
+      primary: copy.hero[3],
+      secondary: base.hero.secondary,
+      proof: copy.proof,
+      image: { src: heroImage[0], alt: copy.hero[1], width: heroImage[1], height: heroImage[2] }
+    },
+    overview: { eyebrow: base.overview.eyebrow, title: copy.overview[0], paragraphs: [copy.overview[1], copy.overview[2]] },
+    parameters: { eyebrow: base.parameters.eyebrow, title: copy.parameters[0], text: copy.parameters[1], items: base.parameters.items },
+    forms: { eyebrow: base.forms.eyebrow, title: copy.formsTitle, items: forms },
+    related: { ...base.related, items: commonRelated[lang] },
+    inquiry: { ...base.inquiry, title: copy.inquiry[0], text: copy.inquiry[1] }
+  };
+}
+
+const secondaryBaseContent: Record<SecondaryDetailLocale, ProductContent> = {
+  vi: viContent.agmSeparator!,
+  ko: koContent.agmSeparator!,
+  ja: jaContent.agmSeparator!,
+  es: additionalAgmContent.es,
+  pt: additionalAgmContent.pt,
+  ru: additionalAgmContent.ru
+};
+
+const secondaryDetailContent = Object.fromEntries(
+  (Object.keys(secondaryDetailCopy) as SecondaryDetailLocale[]).map((lang) => {
+    const copy = secondaryDetailCopy[lang];
+    const base = secondaryBaseContent[lang];
+    return [lang, {
+      agmSeparatorRolls: buildSecondaryDetailContent(lang, "agmSeparatorRolls", base, copy.rolls),
+      agmSeparatorSheets: buildSecondaryDetailContent(lang, "agmSeparatorSheets", base, copy.sheets),
+      agmSeparatorTesting: buildSecondaryDetailContent(lang, "agmSeparatorTesting", base, copy.testing)
+    }];
+  })
+) as Record<SecondaryDetailLocale, Record<SecondaryDetailKind, ProductContent>>;
+
 type AdditionalMotorcycleLocale = "ko" | "ja" | "es" | "pt" | "ru";
 
 type MotorcycleApplicationCopy = {
@@ -3733,8 +4046,17 @@ export function ProductPage({
   lang: SiteLocale;
   page?: ProductPageKind;
 }) {
+  const localizedDetail =
+    lang !== "en" &&
+    lang !== "zh" &&
+    (page === "agmSeparatorRolls" ||
+      page === "agmSeparatorSheets" ||
+      page === "agmSeparatorTesting")
+      ? secondaryDetailContent[lang][page]
+      : undefined;
   const defaults =
-    lang === "vi"
+    localizedDetail ??
+    (lang === "vi"
       ? viContent[page]
       : lang === "ko"
         ? koContent[page] ??
@@ -3752,7 +4074,7 @@ export function ProductPage({
               : page === "agmSeparatorMotorcycleApplication"
                 ? additionalMotorcycleContent[lang]
                 : undefined
-            : content[page][lang as Lang];
+            : content[page][lang as Lang]);
 
   if (!defaults) {
     throw new Error(`Missing ${lang} content for product page "${page}"`);

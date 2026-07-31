@@ -186,7 +186,7 @@ export function SiteHeader({
   const [menuOpen, setMenuOpen] = useState(false);
   const t = headerCopy[lang];
   const homeHref = asset(homePath);
-  const hasFullNavigation = lang === "en" || lang === "zh";
+  const hasResources = lang === "en" || lang === "zh";
   const hasApplications = true;
 
   const navItemsBeforeProducts = [[t.company, `${homeHref}#company`]] as const;
@@ -230,11 +230,9 @@ export function SiteHeader({
             </a>
           ))}
           <ProductNavDropdown lang={lang} label={t.products} />
-          {hasFullNavigation && (
-            <>
-              <QualityNavDropdown lang={lang} label={t.quality} />
-              <ResourcesNavDropdown lang={lang} label={t.resources} />
-            </>
+          <QualityNavDropdown lang={lang} label={t.quality} />
+          {hasResources && (
+            <ResourcesNavDropdown lang={lang} label={t.resources} />
           )}
           {hasApplications && (
             <ApplicationsNavDropdown lang={lang} label={t.applications} />
@@ -296,19 +294,17 @@ export function SiteHeader({
               label={t.products}
               onNavigate={() => setMenuOpen(false)}
             />
-            {hasFullNavigation && (
-              <>
-                <QualityNavMobileGroup
-                  lang={lang}
-                  label={t.quality}
-                  onNavigate={() => setMenuOpen(false)}
-                />
-                <ResourcesNavMobileGroup
-                  lang={lang}
-                  label={t.resources}
-                  onNavigate={() => setMenuOpen(false)}
-                />
-              </>
+            <QualityNavMobileGroup
+              lang={lang}
+              label={t.quality}
+              onNavigate={() => setMenuOpen(false)}
+            />
+            {hasResources && (
+              <ResourcesNavMobileGroup
+                lang={lang}
+                label={t.resources}
+                onNavigate={() => setMenuOpen(false)}
+              />
             )}
             {hasApplications && (
               <ApplicationsNavMobileGroup
