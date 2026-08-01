@@ -91,16 +91,28 @@ const pages = [
   {
     en: "/applications/agm-separator-for-vrla-battery/",
     zh: "/zh/applications/agm-separator-for-vrla-battery/",
+    vi: "/vi/applications/agm-separator-for-vrla-battery/",
+    ko: "/ko/applications/agm-separator-for-vrla-battery/",
+    ja: "/ja/applications/agm-separator-for-vrla-battery/",
+    es: "/es/applications/agm-separator-for-vrla-battery/",
+    pt: "/pt/applications/agm-separator-for-vrla-battery/",
+    ru: "/ru/applications/agm-separator-for-vrla-battery/",
     priority: "0.85",
     changefreq: "monthly",
-    lastmod: "2026-06-11"
+    lastmod: "2026-07-31"
   },
   {
     en: "/applications/agm-separator-for-ups-battery/",
     zh: "/zh/applications/agm-separator-for-ups-battery/",
+    vi: "/vi/applications/agm-separator-for-ups-battery/",
+    ko: "/ko/applications/agm-separator-for-ups-battery/",
+    ja: "/ja/applications/agm-separator-for-ups-battery/",
+    es: "/es/applications/agm-separator-for-ups-battery/",
+    pt: "/pt/applications/agm-separator-for-ups-battery/",
+    ru: "/ru/applications/agm-separator-for-ups-battery/",
     priority: "0.85",
     changefreq: "monthly",
-    lastmod: "2026-06-24"
+    lastmod: "2026-07-31"
   },
   {
     en: "/applications/agm-separator-for-motorcycle-battery/",
@@ -118,9 +130,15 @@ const pages = [
   {
     en: "/applications/agm-separator-for-energy-storage-battery/",
     zh: "/zh/applications/agm-separator-for-energy-storage-battery/",
+    vi: "/vi/applications/agm-separator-for-energy-storage-battery/",
+    ko: "/ko/applications/agm-separator-for-energy-storage-battery/",
+    ja: "/ja/applications/agm-separator-for-energy-storage-battery/",
+    es: "/es/applications/agm-separator-for-energy-storage-battery/",
+    pt: "/pt/applications/agm-separator-for-energy-storage-battery/",
+    ru: "/ru/applications/agm-separator-for-energy-storage-battery/",
     priority: "0.85",
     changefreq: "monthly",
-    lastmod: "2026-06-24"
+    lastmod: "2026-07-31"
   },
   {
     en: "/blog/what-is-agm-separator/",

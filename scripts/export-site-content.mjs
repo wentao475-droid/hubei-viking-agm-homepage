@@ -161,6 +161,9 @@ const productConstants = collectConstants("app/ProductPage.tsx", [
   "footerCopy",
   "secondaryDetailCopy",
   "detailFormImages",
+  "secondaryApplicationCopy",
+  "secondaryApplicationImages",
+  "secondaryApplicationPaths",
   "motorcycleApplicationCopy",
   "motorcycleFormImages"
 ]);
@@ -304,6 +307,82 @@ for (const [locale, detailCopy] of Object.entries(
           ...base.inquiry,
           title: copy.inquiry[0],
           text: copy.inquiry[1]
+        }
+      }
+    };
+  }
+}
+
+for (const [locale, applications] of Object.entries(
+  productConstants.secondaryApplicationCopy
+)) {
+  const base = products.agmSeparator[locale];
+
+  for (const [page, copy] of Object.entries(applications)) {
+    const image = productConstants.secondaryApplicationImages[page];
+    const forms = [
+      ...base.forms.items.slice(0, 2),
+      [copy.hero[1], copy.overview[1], image[0], copy.hero[1], image[1], image[2]],
+      [
+        base.quality.title,
+        base.quality.text,
+        "/images/agm-quality-control-1200.webp",
+        base.quality.title,
+        1200,
+        900
+      ]
+    ];
+
+    products[page] = {
+      ...products[page],
+      [locale]: {
+        ...base,
+        homePath: `/${locale}/`,
+        languagePath: productConstants.secondaryApplicationPaths[page],
+        hero: {
+          eyebrow: copy.hero[0],
+          title: copy.hero[1],
+          subtitle: copy.hero[2],
+          primary: copy.hero[3],
+          secondary: base.hero.secondary,
+          proof: copy.proof,
+          image: {
+            src: image[0],
+            alt: copy.hero[1],
+            width: image[1],
+            height: image[2]
+          }
+        },
+        overview: {
+          eyebrow: base.overview.eyebrow,
+          title: copy.overview[0],
+          paragraphs: [copy.overview[1], copy.overview[2]]
+        },
+        parameters: {
+          eyebrow: base.parameters.eyebrow,
+          title: copy.parameters[0],
+          text: copy.parameters[1],
+          items: base.parameters.items
+        },
+        forms: {
+          eyebrow: base.forms.eyebrow,
+          title: copy.formsTitle,
+          items: forms
+        },
+        applications: {
+          eyebrow: base.applications.eyebrow,
+          title: copy.applications[0],
+          items: copy.applications[1]
+        },
+        related: {
+          ...base.related,
+          items: productConstants.commonRelated[locale]
+        },
+        inquiry: {
+          ...base.inquiry,
+          title: copy.inquiry[0],
+          text: copy.inquiry[1],
+          placeholder: copy.inquiry[2]
         }
       }
     };

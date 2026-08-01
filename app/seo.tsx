@@ -844,6 +844,285 @@ const agmSeparatorTestingSeo = {
   ...secondaryProductDetailSeo.testing
 } as const;
 
+const secondaryApplicationSeo = {
+  vrla: {
+    vi: {
+      path: "/vi/applications/agm-separator-for-vrla-battery/",
+      alternatePath: "/applications/agm-separator-for-vrla-battery/",
+      locale: "vi_VN",
+      language: "vi-VN",
+      siteName: "Viking AGM",
+      title: "Tấm ngăn AGM cho ắc quy VRLA | Viking AGM",
+      description: "Tấm ngăn sợi thủy tinh AGM cho ắc quy chì axit VRLA kín khí. Trao đổi dạng cuộn, dạng tấm, độ dày, chiều rộng và yêu cầu mẫu.",
+      keywords: ["tấm ngăn AGM cho ắc quy VRLA","tấm ngăn ắc quy chì axit","tấm ngăn sợi thủy tinh AGM"],
+      pageName: "Tấm ngăn AGM cho ứng dụng ắc quy VRLA",
+      serviceDescription: "Đối chiếu tấm ngăn sợi thủy tinh AGM cho sản xuất ắc quy chì axit VRLA kín khí.",
+      serviceType: "Tấm ngăn AGM cho ắc quy VRLA",
+      image: PREVIEW_IMAGE,
+      breadcrumbs: ["Trang chủ","Ứng dụng","Tấm ngăn AGM cho ắc quy VRLA"]
+    },
+    ko: {
+      path: "/ko/applications/agm-separator-for-vrla-battery/",
+      alternatePath: "/applications/agm-separator-for-vrla-battery/",
+      locale: "ko_KR",
+      language: "ko-KR",
+      siteName: "Viking AGM",
+      title: "VRLA 배터리용 AGM 분리막 | Viking AGM",
+      description: "밀폐형 VRLA 납축전지용 유리섬유 AGM 분리막입니다. 롤, 시트, 두께, 폭과 샘플 요구사항을 검토합니다.",
+      keywords: ["VRLA 배터리 AGM 분리막","납축전지 분리막","유리섬유 AGM 분리막"],
+      pageName: "VRLA 배터리용 AGM 분리막",
+      serviceDescription: "밀폐형 VRLA 납축전지 생산을 위한 유리섬유 AGM 분리막 사양 및 샘플 검토.",
+      serviceType: "VRLA 배터리용 AGM 분리막",
+      image: PREVIEW_IMAGE,
+      breadcrumbs: ["홈","적용 분야","VRLA 배터리용 AGM 분리막"]
+    },
+    ja: {
+      path: "/ja/applications/agm-separator-for-vrla-battery/",
+      alternatePath: "/applications/agm-separator-for-vrla-battery/",
+      locale: "ja_JP",
+      language: "ja-JP",
+      siteName: "Viking AGM",
+      title: "VRLAバッテリー用AGMセパレーター | Viking AGM",
+      description: "密閉形VRLA鉛蓄電池向けガラス繊維AGMセパレーター。ロール、シート、厚さ、幅、サンプル要件を確認します。",
+      keywords: ["VRLAバッテリー AGMセパレーター","鉛蓄電池 セパレーター","ガラス繊維 AGMセパレーター"],
+      pageName: "VRLAバッテリー用AGMセパレーター",
+      serviceDescription: "密閉形VRLA鉛蓄電池生産向けガラス繊維AGMセパレーターの仕様・サンプル確認。",
+      serviceType: "VRLAバッテリー用AGMセパレーター",
+      image: PREVIEW_IMAGE,
+      breadcrumbs: ["ホーム","用途","VRLAバッテリー用AGMセパレーター"]
+    },
+    es: {
+      path: "/es/applications/agm-separator-for-vrla-battery/",
+      alternatePath: "/applications/agm-separator-for-vrla-battery/",
+      locale: "es_LA",
+      language: "es",
+      siteName: "Viking AGM",
+      title: "Separador AGM para baterías VRLA | Viking AGM",
+      description: "Separador AGM de fibra de vidrio para baterías VRLA selladas de plomo-ácido. Revise rollos, láminas, espesor, ancho y muestras.",
+      keywords: ["separador AGM para baterías VRLA","separador de batería de plomo-ácido","separador AGM de fibra de vidrio"],
+      pageName: "Separador AGM para aplicaciones VRLA",
+      serviceDescription: "Revisión de separadores AGM de fibra de vidrio para producir baterías VRLA selladas de plomo-ácido.",
+      serviceType: "Separador AGM para baterías VRLA",
+      image: PREVIEW_IMAGE,
+      breadcrumbs: ["Inicio","Aplicaciones","Separador AGM para baterías VRLA"]
+    },
+    pt: {
+      path: "/pt/applications/agm-separator-for-vrla-battery/",
+      alternatePath: "/applications/agm-separator-for-vrla-battery/",
+      locale: "pt_BR",
+      language: "pt-BR",
+      siteName: "Viking AGM",
+      title: "Separador AGM para baterias VRLA | Viking AGM",
+      description: "Separador AGM de fibra de vidro para baterias VRLA seladas chumbo-ácido. Analise rolos, folhas, espessura, largura e amostras.",
+      keywords: ["separador AGM para baterias VRLA","separador de bateria chumbo-ácido","separador AGM de fibra de vidro"],
+      pageName: "Separador AGM para aplicações VRLA",
+      serviceDescription: "Análise de separadores AGM de fibra de vidro para produção de baterias VRLA seladas chumbo-ácido.",
+      serviceType: "Separador AGM para baterias VRLA",
+      image: PREVIEW_IMAGE,
+      breadcrumbs: ["Início","Aplicações","Separador AGM para baterias VRLA"]
+    },
+    ru: {
+      path: "/ru/applications/agm-separator-for-vrla-battery/",
+      alternatePath: "/applications/agm-separator-for-vrla-battery/",
+      locale: "ru_RU",
+      language: "ru-RU",
+      siteName: "Viking AGM",
+      title: "AGM-сепаратор для аккумуляторов VRLA | Viking AGM",
+      description: "Стекловолоконный AGM-сепаратор для герметичных свинцово-кислотных аккумуляторов VRLA. Согласование рулонов, листов и образцов.",
+      keywords: ["AGM сепаратор для VRLA","сепаратор свинцово-кислотного аккумулятора","стекловолоконный AGM сепаратор"],
+      pageName: "AGM-сепаратор для применения в VRLA",
+      serviceDescription: "Согласование стекловолоконного AGM-сепаратора для производства герметичных аккумуляторов VRLA.",
+      serviceType: "AGM-сепаратор для VRLA",
+      image: PREVIEW_IMAGE,
+      breadcrumbs: ["Главная","Применение","AGM-сепаратор для VRLA"]
+    },
+  },
+  ups: {
+    vi: {
+      path: "/vi/applications/agm-separator-for-ups-battery/",
+      alternatePath: "/applications/agm-separator-for-ups-battery/",
+      locale: "vi_VN",
+      language: "vi-VN",
+      siteName: "Viking AGM",
+      title: "Tấm ngăn AGM cho ắc quy UPS và nguồn dự phòng | Viking AGM",
+      description: "Tấm ngăn AGM cho ắc quy VRLA dùng trong UPS, nguồn chờ và nguồn dự phòng. Trao đổi dạng cuộn, tấm và thông số mẫu.",
+      keywords: ["tấm ngăn AGM cho ắc quy UPS","tấm ngăn ắc quy nguồn dự phòng","tấm ngăn UPS VRLA"],
+      pageName: "Tấm ngăn AGM cho ứng dụng ắc quy UPS",
+      serviceDescription: "Đối chiếu tấm ngăn sợi thủy tinh AGM cho ắc quy UPS, nguồn chờ và nguồn dự phòng VRLA.",
+      serviceType: "Tấm ngăn AGM cho ắc quy UPS",
+      image: UPS_APPLICATION_IMAGE,
+      breadcrumbs: ["Trang chủ","Ứng dụng","Tấm ngăn AGM cho ắc quy UPS"]
+    },
+    ko: {
+      path: "/ko/applications/agm-separator-for-ups-battery/",
+      alternatePath: "/applications/agm-separator-for-ups-battery/",
+      locale: "ko_KR",
+      language: "ko-KR",
+      siteName: "Viking AGM",
+      title: "UPS 배터리용 AGM 분리막 | Viking AGM",
+      description: "UPS, 대기전원 및 백업 전원용 VRLA 납축전지 AGM 분리막입니다. 롤, 시트와 샘플 사양을 검토합니다.",
+      keywords: ["UPS 배터리 AGM 분리막","UPS VRLA 분리막","백업 전원 배터리 분리막"],
+      pageName: "UPS 배터리용 AGM 분리막",
+      serviceDescription: "UPS, 대기전원 및 백업 전원용 VRLA 납축전지를 위한 유리섬유 AGM 분리막 검토.",
+      serviceType: "UPS 배터리용 AGM 분리막",
+      image: UPS_APPLICATION_IMAGE,
+      breadcrumbs: ["홈","적용 분야","UPS 배터리용 AGM 분리막"]
+    },
+    ja: {
+      path: "/ja/applications/agm-separator-for-ups-battery/",
+      alternatePath: "/applications/agm-separator-for-ups-battery/",
+      locale: "ja_JP",
+      language: "ja-JP",
+      siteName: "Viking AGM",
+      title: "UPSバッテリー用AGMセパレーター | Viking AGM",
+      description: "UPS、待機電源、バックアップ電源用VRLA鉛蓄電池向けAGMセパレーター。ロール、シート、サンプル仕様を確認します。",
+      keywords: ["UPSバッテリー AGMセパレーター","UPS VRLA セパレーター","バックアップ電源 セパレーター"],
+      pageName: "UPSバッテリー用AGMセパレーター",
+      serviceDescription: "UPS・待機電源・バックアップ電源用VRLA鉛蓄電池向けガラス繊維AGMセパレーターの確認。",
+      serviceType: "UPSバッテリー用AGMセパレーター",
+      image: UPS_APPLICATION_IMAGE,
+      breadcrumbs: ["ホーム","用途","UPSバッテリー用AGMセパレーター"]
+    },
+    es: {
+      path: "/es/applications/agm-separator-for-ups-battery/",
+      alternatePath: "/applications/agm-separator-for-ups-battery/",
+      locale: "es_LA",
+      language: "es",
+      siteName: "Viking AGM",
+      title: "Separador AGM para baterías UPS y de respaldo | Viking AGM",
+      description: "Separador AGM para baterías VRLA de UPS, energía de reserva y respaldo. Revise rollos, láminas y especificaciones de muestra.",
+      keywords: ["separador AGM para batería UPS","separador UPS VRLA","separador de batería de respaldo"],
+      pageName: "Separador AGM para aplicaciones UPS",
+      serviceDescription: "Revisión de separadores AGM de fibra de vidrio para baterías VRLA de UPS y energía de respaldo.",
+      serviceType: "Separador AGM para baterías UPS",
+      image: UPS_APPLICATION_IMAGE,
+      breadcrumbs: ["Inicio","Aplicaciones","Separador AGM para baterías UPS"]
+    },
+    pt: {
+      path: "/pt/applications/agm-separator-for-ups-battery/",
+      alternatePath: "/applications/agm-separator-for-ups-battery/",
+      locale: "pt_BR",
+      language: "pt-BR",
+      siteName: "Viking AGM",
+      title: "Separador AGM para baterias UPS e de reserva | Viking AGM",
+      description: "Separador AGM para baterias VRLA de UPS, energia de reserva e backup. Analise rolos, folhas e especificações de amostra.",
+      keywords: ["separador AGM para bateria UPS","separador UPS VRLA","separador de bateria de reserva"],
+      pageName: "Separador AGM para aplicações UPS",
+      serviceDescription: "Análise de separadores AGM de fibra de vidro para baterias VRLA de UPS e energia de reserva.",
+      serviceType: "Separador AGM para baterias UPS",
+      image: UPS_APPLICATION_IMAGE,
+      breadcrumbs: ["Início","Aplicações","Separador AGM para baterias UPS"]
+    },
+    ru: {
+      path: "/ru/applications/agm-separator-for-ups-battery/",
+      alternatePath: "/applications/agm-separator-for-ups-battery/",
+      locale: "ru_RU",
+      language: "ru-RU",
+      siteName: "Viking AGM",
+      title: "AGM-сепаратор для аккумуляторов ИБП | Viking AGM",
+      description: "AGM-сепаратор для аккумуляторов VRLA в ИБП и системах резервного питания. Согласование рулонов, листов и образцов.",
+      keywords: ["AGM сепаратор для ИБП","сепаратор UPS VRLA","сепаратор аккумулятора резервного питания"],
+      pageName: "AGM-сепаратор для применения в ИБП",
+      serviceDescription: "Согласование стекловолоконного AGM-сепаратора для VRLA-аккумуляторов ИБП и резервного питания.",
+      serviceType: "AGM-сепаратор для ИБП",
+      image: UPS_APPLICATION_IMAGE,
+      breadcrumbs: ["Главная","Применение","AGM-сепаратор для ИБП"]
+    },
+  },
+  energy: {
+    vi: {
+      path: "/vi/applications/agm-separator-for-energy-storage-battery/",
+      alternatePath: "/applications/agm-separator-for-energy-storage-battery/",
+      locale: "vi_VN",
+      language: "vi-VN",
+      siteName: "Viking AGM",
+      title: "Tấm ngăn AGM cho ắc quy lưu trữ năng lượng | Viking AGM",
+      description: "Tấm ngăn AGM cho ắc quy chì axit lưu trữ năng lượng, nguồn dự phòng và nguồn chờ. Trao đổi dạng cuộn, tấm và thông số mẫu.",
+      keywords: ["tấm ngăn AGM cho ắc quy lưu trữ năng lượng","tấm ngăn ắc quy chì axit lưu trữ","tấm ngăn nguồn dự phòng"],
+      pageName: "Tấm ngăn AGM cho ứng dụng lưu trữ năng lượng",
+      serviceDescription: "Đối chiếu tấm ngăn sợi thủy tinh AGM cho ắc quy chì axit lưu trữ và nguồn dự phòng.",
+      serviceType: "Tấm ngăn AGM cho lưu trữ năng lượng",
+      image: ENERGY_STORAGE_APPLICATION_IMAGE,
+      breadcrumbs: ["Trang chủ","Ứng dụng","Tấm ngăn AGM cho lưu trữ năng lượng"]
+    },
+    ko: {
+      path: "/ko/applications/agm-separator-for-energy-storage-battery/",
+      alternatePath: "/applications/agm-separator-for-energy-storage-battery/",
+      locale: "ko_KR",
+      language: "ko-KR",
+      siteName: "Viking AGM",
+      title: "에너지 저장 배터리용 AGM 분리막 | Viking AGM",
+      description: "납축전지 에너지 저장, 백업 및 대기전원용 VRLA 배터리 AGM 분리막입니다. 롤, 시트와 샘플 사양을 검토합니다.",
+      keywords: ["에너지 저장 배터리 AGM 분리막","납축전지 저장 분리막","백업 전원 분리막"],
+      pageName: "에너지 저장 배터리용 AGM 분리막",
+      serviceDescription: "납축전지 에너지 저장 및 백업 전원용 유리섬유 AGM 분리막 사양 검토.",
+      serviceType: "에너지 저장용 AGM 분리막",
+      image: ENERGY_STORAGE_APPLICATION_IMAGE,
+      breadcrumbs: ["홈","적용 분야","에너지 저장용 AGM 분리막"]
+    },
+    ja: {
+      path: "/ja/applications/agm-separator-for-energy-storage-battery/",
+      alternatePath: "/applications/agm-separator-for-energy-storage-battery/",
+      locale: "ja_JP",
+      language: "ja-JP",
+      siteName: "Viking AGM",
+      title: "蓄電用バッテリー向けAGMセパレーター | Viking AGM",
+      description: "鉛蓄電池の蓄電、バックアップ、待機電源用途向けAGMセパレーター。ロール、シート、サンプル仕様を確認します。",
+      keywords: ["蓄電池 AGMセパレーター","鉛蓄電池 蓄電 セパレーター","バックアップ電源 セパレーター"],
+      pageName: "蓄電用バッテリー向けAGMセパレーター",
+      serviceDescription: "鉛蓄電池の蓄電・バックアップ電源用途向けガラス繊維AGMセパレーターの仕様確認。",
+      serviceType: "蓄電用AGMセパレーター",
+      image: ENERGY_STORAGE_APPLICATION_IMAGE,
+      breadcrumbs: ["ホーム","用途","蓄電用AGMセパレーター"]
+    },
+    es: {
+      path: "/es/applications/agm-separator-for-energy-storage-battery/",
+      alternatePath: "/applications/agm-separator-for-energy-storage-battery/",
+      locale: "es_LA",
+      language: "es",
+      siteName: "Viking AGM",
+      title: "Separador AGM para baterías de almacenamiento de energía | Viking AGM",
+      description: "Separador AGM para baterías VRLA de almacenamiento de energía, respaldo y reserva. Revise rollos, láminas y muestras.",
+      keywords: ["separador AGM para almacenamiento de energía","separador de batería de plomo para almacenamiento","separador de energía de respaldo"],
+      pageName: "Separador AGM para almacenamiento de energía",
+      serviceDescription: "Revisión de separadores AGM de fibra de vidrio para baterías de plomo de almacenamiento y respaldo.",
+      serviceType: "Separador AGM para almacenamiento",
+      image: ENERGY_STORAGE_APPLICATION_IMAGE,
+      breadcrumbs: ["Inicio","Aplicaciones","Separador AGM para almacenamiento"]
+    },
+    pt: {
+      path: "/pt/applications/agm-separator-for-energy-storage-battery/",
+      alternatePath: "/applications/agm-separator-for-energy-storage-battery/",
+      locale: "pt_BR",
+      language: "pt-BR",
+      siteName: "Viking AGM",
+      title: "Separador AGM para baterias de armazenamento de energia | Viking AGM",
+      description: "Separador AGM para baterias VRLA de armazenamento, backup e reserva. Analise rolos, folhas e especificações de amostra.",
+      keywords: ["separador AGM para armazenamento de energia","separador de bateria chumbo-ácido para armazenamento","separador de energia de reserva"],
+      pageName: "Separador AGM para armazenamento de energia",
+      serviceDescription: "Análise de separadores AGM de fibra de vidro para baterias chumbo-ácido de armazenamento e backup.",
+      serviceType: "Separador AGM para armazenamento",
+      image: ENERGY_STORAGE_APPLICATION_IMAGE,
+      breadcrumbs: ["Início","Aplicações","Separador AGM para armazenamento"]
+    },
+    ru: {
+      path: "/ru/applications/agm-separator-for-energy-storage-battery/",
+      alternatePath: "/applications/agm-separator-for-energy-storage-battery/",
+      locale: "ru_RU",
+      language: "ru-RU",
+      siteName: "Viking AGM",
+      title: "AGM-сепаратор для аккумуляторов систем хранения энергии | Viking AGM",
+      description: "AGM-сепаратор для свинцово-кислотных VRLA-аккумуляторов систем хранения и резервного питания. Согласование рулонов, листов и образцов.",
+      keywords: ["AGM сепаратор для хранения энергии","сепаратор свинцового накопительного аккумулятора","сепаратор резервного питания"],
+      pageName: "AGM-сепаратор для систем хранения энергии",
+      serviceDescription: "Согласование стекловолоконного AGM-сепаратора для свинцовых аккумуляторов хранения и резервного питания.",
+      serviceType: "AGM-сепаратор для хранения энергии",
+      image: ENERGY_STORAGE_APPLICATION_IMAGE,
+      breadcrumbs: ["Главная","Применение","AGM-сепаратор для хранения энергии"]
+    },
+  },
+} as const;
+
 const agmSeparatorVrlaApplicationSeo = {
   en: {
     path: "/applications/agm-separator-for-vrla-battery/",
@@ -864,6 +1143,8 @@ const agmSeparatorVrlaApplicationSeo = {
     pageName: "AGM Separator for VRLA Battery Applications",
     serviceDescription:
       "Application-focused AGM glass fiber separator discussion for VRLA lead-acid batteries, including UPS, telecom, motorcycle, e-bike, energy storage and automotive starting battery applications.",
+    serviceType: "AGM separator for VRLA lead-acid battery applications",
+    image: PREVIEW_IMAGE,
     breadcrumbs: ["Home", "Applications", "AGM Separator for VRLA Battery"]
   },
   zh: {
@@ -885,8 +1166,11 @@ const agmSeparatorVrlaApplicationSeo = {
     pageName: "用于 VRLA 电池应用的 AGM 隔板",
     serviceDescription:
       "面向 VRLA 铅酸电池应用的 AGM 玻璃纤维隔板沟通，覆盖 UPS、通信、摩托车、电动车、储能和汽车启动电池等应用场景。",
+    serviceType: "VRLA 铅酸电池应用 AGM 隔板",
+    image: PREVIEW_IMAGE,
     breadcrumbs: ["首页", "应用", "VRLA 电池 AGM 隔板应用"]
-  }
+  },
+  ...secondaryApplicationSeo.vrla
 } as const;
 
 const agmSeparatorUpsApplicationSeo = {
@@ -935,7 +1219,8 @@ const agmSeparatorUpsApplicationSeo = {
     serviceType: "UPS VRLA 电池应用 AGM 隔板",
     image: UPS_APPLICATION_IMAGE,
     breadcrumbs: ["首页", "应用", "UPS 电池 AGM 隔板"]
-  }
+  },
+  ...secondaryApplicationSeo.ups
 } as const;
 
 const agmSeparatorMotorcycleApplicationSeo = {
@@ -1131,7 +1416,8 @@ const agmSeparatorEnergyStorageApplicationSeo = {
     serviceType: "铅酸储能电池应用 AGM 隔板",
     image: ENERGY_STORAGE_APPLICATION_IMAGE,
     breadcrumbs: ["首页", "应用", "储能电池 AGM 隔板"]
-  }
+  },
+  ...secondaryApplicationSeo.energy
 } as const;
 
 type ApplicationDetailSeo = {
@@ -1682,7 +1968,7 @@ export function buildAgmSeparatorTestingMetadata(lang: SiteLocale): Metadata {
 }
 
 export function buildAgmSeparatorVrlaApplicationMetadata(
-  lang: Lang
+  lang: ApplicationLocale
 ): Metadata {
   const current = seoContent(
     "agmSeparatorVrlaApplication",
@@ -1690,22 +1976,18 @@ export function buildAgmSeparatorVrlaApplicationMetadata(
     agmSeparatorVrlaApplicationSeo[lang]
   );
 
-  return buildMetadata({
-    title: current.title,
-    description: current.description,
-    keywords: [...current.keywords],
-    path: current.path,
-    enPath: "/applications/agm-separator-for-vrla-battery/",
-    zhPath: "/zh/applications/agm-separator-for-vrla-battery/",
-    locale: current.locale,
-    siteName: current.siteName,
-    imageAlt: current.pageName,
-    image: {
-      url: PREVIEW_IMAGE,
-      width: 900,
-      height: 675
-    }
-  });
+  return buildApplicationDetailMetadata(
+    lang,
+    current,
+    "/applications/agm-separator-for-vrla-battery/",
+    "/zh/applications/agm-separator-for-vrla-battery/",
+    "/vi/applications/agm-separator-for-vrla-battery/",
+    "/ko/applications/agm-separator-for-vrla-battery/",
+    "/ja/applications/agm-separator-for-vrla-battery/",
+    "/es/applications/agm-separator-for-vrla-battery/",
+    "/pt/applications/agm-separator-for-vrla-battery/",
+    "/ru/applications/agm-separator-for-vrla-battery/"
+  );
 }
 
 function buildApplicationDetailMetadata(
@@ -1745,7 +2027,7 @@ function buildApplicationDetailMetadata(
 }
 
 export function buildAgmSeparatorUpsApplicationMetadata(
-  lang: Lang
+  lang: ApplicationLocale
 ): Metadata {
   return buildApplicationDetailMetadata(
     lang,
@@ -1755,7 +2037,13 @@ export function buildAgmSeparatorUpsApplicationMetadata(
       agmSeparatorUpsApplicationSeo[lang]
     ),
     "/applications/agm-separator-for-ups-battery/",
-    "/zh/applications/agm-separator-for-ups-battery/"
+    "/zh/applications/agm-separator-for-ups-battery/",
+    "/vi/applications/agm-separator-for-ups-battery/",
+    "/ko/applications/agm-separator-for-ups-battery/",
+    "/ja/applications/agm-separator-for-ups-battery/",
+    "/es/applications/agm-separator-for-ups-battery/",
+    "/pt/applications/agm-separator-for-ups-battery/",
+    "/ru/applications/agm-separator-for-ups-battery/"
   );
 }
 
@@ -1781,7 +2069,7 @@ export function buildAgmSeparatorMotorcycleApplicationMetadata(
 }
 
 export function buildAgmSeparatorEnergyStorageApplicationMetadata(
-  lang: Lang
+  lang: ApplicationLocale
 ): Metadata {
   return buildApplicationDetailMetadata(
     lang,
@@ -1791,7 +2079,13 @@ export function buildAgmSeparatorEnergyStorageApplicationMetadata(
       agmSeparatorEnergyStorageApplicationSeo[lang]
     ),
     "/applications/agm-separator-for-energy-storage-battery/",
-    "/zh/applications/agm-separator-for-energy-storage-battery/"
+    "/zh/applications/agm-separator-for-energy-storage-battery/",
+    "/vi/applications/agm-separator-for-energy-storage-battery/",
+    "/ko/applications/agm-separator-for-energy-storage-battery/",
+    "/ja/applications/agm-separator-for-energy-storage-battery/",
+    "/es/applications/agm-separator-for-energy-storage-battery/",
+    "/pt/applications/agm-separator-for-energy-storage-battery/",
+    "/ru/applications/agm-separator-for-energy-storage-battery/"
   );
 }
 
@@ -2483,70 +2777,18 @@ export function AgmSeparatorTestingStructuredData({ lang }: { lang: SiteLocale }
 export function AgmSeparatorVrlaApplicationStructuredData({
   lang
 }: {
-  lang: Lang;
+  lang: ApplicationLocale;
 }) {
-  const current = seoContent(
-    "agmSeparatorVrlaApplication",
-    lang,
-    agmSeparatorVrlaApplicationSeo[lang]
+  return (
+    <ApplicationDetailStructuredData
+      lang={lang}
+      current={seoContent(
+        "agmSeparatorVrlaApplication",
+        lang,
+        agmSeparatorVrlaApplicationSeo[lang]
+      )}
+    />
   );
-  const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : "/";
-  const data = {
-    "@context": "https://schema.org",
-    "@graph": [
-      organizationData(lang, current.description),
-      {
-        "@type": "WebPage",
-        "@id": `${url}#webpage`,
-        url,
-        name: current.title,
-        description: current.description,
-        inLanguage: current.language,
-        isPartOf: {
-          "@id": `${SITE_URL}/#website`
-        },
-        primaryImageOfPage: {
-          "@type": "ImageObject",
-          url: PREVIEW_IMAGE,
-          width: 900,
-          height: 675
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": `${url}#service`,
-        name: current.pageName,
-        description: current.serviceDescription,
-        serviceType: "AGM separator for VRLA lead-acid battery applications",
-        image: PREVIEW_IMAGE,
-        provider: {
-          "@id": `${SITE_URL}/#organization`
-        },
-        areaServed: "Worldwide",
-        url,
-        inLanguage: current.language
-      },
-      faqPageData(url, lang),
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${url}#breadcrumb`,
-        itemListElement: current.breadcrumbs.map((name, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name,
-          item:
-            index === 0
-              ? `${SITE_URL}${homePath}`
-              : index === 1
-                ? `${SITE_URL}${homePath}#applications`
-                : url
-        }))
-      }
-    ]
-  };
-
-  return <JsonLd data={data} />;
 }
 
 function ApplicationDetailStructuredData({
@@ -2557,7 +2799,7 @@ function ApplicationDetailStructuredData({
   current: ApplicationDetailSeo;
 }) {
   const url = `${SITE_URL}${current.path}`;
-  const homePath = lang === "zh" ? "/zh/" : lang === "vi" ? "/vi/" : "/";
+  const homePath = localeHomePaths[lang];
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -2618,7 +2860,7 @@ function ApplicationDetailStructuredData({
 export function AgmSeparatorUpsApplicationStructuredData({
   lang
 }: {
-  lang: Lang;
+  lang: ApplicationLocale;
 }) {
   return (
     <ApplicationDetailStructuredData
@@ -2652,7 +2894,7 @@ export function AgmSeparatorMotorcycleApplicationStructuredData({
 export function AgmSeparatorEnergyStorageApplicationStructuredData({
   lang
 }: {
-  lang: Lang;
+  lang: ApplicationLocale;
 }) {
   return (
     <ApplicationDetailStructuredData

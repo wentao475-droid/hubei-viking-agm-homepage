@@ -113,11 +113,32 @@ const secondaryLocalizedPages = ["vi", "ko", "ja", "es", "pt", "ru"].flatMap((lo
     seo: content.seo?.agmSeparatorTesting?.[locale]
   },
   {
+    key: `agmSeparatorVrlaApplication.${locale}`,
+    route: `app/${locale}/applications/agm-separator-for-vrla-battery/page.tsx`,
+    path: `/${locale}/applications/agm-separator-for-vrla-battery/`,
+    content: content.products?.agmSeparatorVrlaApplication?.[locale],
+    seo: content.seo?.agmSeparatorVrlaApplication?.[locale]
+  },
+  {
+    key: `agmSeparatorUpsApplication.${locale}`,
+    route: `app/${locale}/applications/agm-separator-for-ups-battery/page.tsx`,
+    path: `/${locale}/applications/agm-separator-for-ups-battery/`,
+    content: content.products?.agmSeparatorUpsApplication?.[locale],
+    seo: content.seo?.agmSeparatorUpsApplication?.[locale]
+  },
+  {
     key: `agmSeparatorMotorcycleApplication.${locale}`,
     route: `app/${locale}/applications/agm-separator-for-motorcycle-battery/page.tsx`,
     path: `/${locale}/applications/agm-separator-for-motorcycle-battery/`,
     content: content.products?.agmSeparatorMotorcycleApplication?.[locale],
     seo: content.seo?.agmSeparatorMotorcycleApplication?.[locale]
+  },
+  {
+    key: `agmSeparatorEnergyStorageApplication.${locale}`,
+    route: `app/${locale}/applications/agm-separator-for-energy-storage-battery/page.tsx`,
+    path: `/${locale}/applications/agm-separator-for-energy-storage-battery/`,
+    content: content.products?.agmSeparatorEnergyStorageApplication?.[locale],
+    seo: content.seo?.agmSeparatorEnergyStorageApplication?.[locale]
   },
   {
     key: `sampleRequest.${locale}`,

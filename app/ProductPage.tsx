@@ -248,10 +248,13 @@ const commonRelated = {
     ["Tấm ngăn AGM dạng cuộn", "/vi/products/agm-separator-rolls/"],
     ["Tấm ngăn AGM dạng tấm", "/vi/products/agm-separator-sheets/"],
     ["Kiểm tra tấm ngăn AGM", "/vi/quality-control/agm-separator-testing/"],
+    ["Ứng dụng ắc quy VRLA", "/vi/applications/agm-separator-for-vrla-battery/"],
+    ["Ứng dụng ắc quy UPS", "/vi/applications/agm-separator-for-ups-battery/"],
     [
       "Ứng dụng ắc quy xe máy",
       "/vi/applications/agm-separator-for-motorcycle-battery/"
     ],
+    ["Ứng dụng ắc quy lưu trữ năng lượng", "/vi/applications/agm-separator-for-energy-storage-battery/"],
     ["Yêu cầu mẫu", "/vi/request-agm-separator-sample/"]
   ] as LinkItem[],
   ko: [
@@ -259,10 +262,13 @@ const commonRelated = {
     ["AGM 분리막 롤", "/ko/products/agm-separator-rolls/"],
     ["AGM 분리막 시트", "/ko/products/agm-separator-sheets/"],
     ["AGM 분리막 시험", "/ko/quality-control/agm-separator-testing/"],
+    ["VRLA 배터리 적용", "/ko/applications/agm-separator-for-vrla-battery/"],
+    ["UPS 배터리 적용", "/ko/applications/agm-separator-for-ups-battery/"],
     [
       "오토바이 배터리 적용",
       "/ko/applications/agm-separator-for-motorcycle-battery/"
     ],
+    ["에너지 저장 배터리 적용", "/ko/applications/agm-separator-for-energy-storage-battery/"],
     ["샘플 및 사양 검토 요청", "/ko/request-agm-separator-sample/"]
   ] as LinkItem[],
   ja: [
@@ -270,10 +276,13 @@ const commonRelated = {
     ["AGMセパレーター ロール", "/ja/products/agm-separator-rolls/"],
     ["AGMセパレーター シート", "/ja/products/agm-separator-sheets/"],
     ["AGMセパレーター試験", "/ja/quality-control/agm-separator-testing/"],
+    ["VRLAバッテリー用途", "/ja/applications/agm-separator-for-vrla-battery/"],
+    ["UPSバッテリー用途", "/ja/applications/agm-separator-for-ups-battery/"],
     [
       "二輪車用バッテリー用途",
       "/ja/applications/agm-separator-for-motorcycle-battery/"
     ],
+    ["蓄電用バッテリー用途", "/ja/applications/agm-separator-for-energy-storage-battery/"],
     ["サンプル・仕様確認依頼", "/ja/request-agm-separator-sample/"]
   ] as LinkItem[],
   es: [
@@ -281,10 +290,13 @@ const commonRelated = {
     ["Rollos de separador AGM", "/es/products/agm-separator-rolls/"],
     ["Láminas de separador AGM", "/es/products/agm-separator-sheets/"],
     ["Ensayos de separadores AGM", "/es/quality-control/agm-separator-testing/"],
+    ["Aplicaciones de baterías VRLA", "/es/applications/agm-separator-for-vrla-battery/"],
+    ["Aplicaciones de baterías UPS", "/es/applications/agm-separator-for-ups-battery/"],
     [
       "Aplicación para baterías de motocicleta",
       "/es/applications/agm-separator-for-motorcycle-battery/"
     ],
+    ["Aplicaciones de almacenamiento de energía", "/es/applications/agm-separator-for-energy-storage-battery/"],
     ["Solicitar muestra y revisar especificaciones", "/es/request-agm-separator-sample/"]
   ] as LinkItem[],
   pt: [
@@ -292,10 +304,13 @@ const commonRelated = {
     ["Rolos de separador AGM", "/pt/products/agm-separator-rolls/"],
     ["Folhas de separador AGM", "/pt/products/agm-separator-sheets/"],
     ["Ensaios de separadores AGM", "/pt/quality-control/agm-separator-testing/"],
+    ["Aplicações em baterias VRLA", "/pt/applications/agm-separator-for-vrla-battery/"],
+    ["Aplicações em baterias UPS", "/pt/applications/agm-separator-for-ups-battery/"],
     [
       "Aplicação em baterias de motocicletas",
       "/pt/applications/agm-separator-for-motorcycle-battery/"
     ],
+    ["Aplicações de armazenamento de energia", "/pt/applications/agm-separator-for-energy-storage-battery/"],
     ["Solicitar amostra e analisar especificações", "/pt/request-agm-separator-sample/"]
   ] as LinkItem[],
   ru: [
@@ -303,10 +318,13 @@ const commonRelated = {
     ["Рулоны AGM-сепаратора", "/ru/products/agm-separator-rolls/"],
     ["Листы AGM-сепаратора", "/ru/products/agm-separator-sheets/"],
     ["Испытания AGM-сепаратора", "/ru/quality-control/agm-separator-testing/"],
+    ["Применение в VRLA-аккумуляторах", "/ru/applications/agm-separator-for-vrla-battery/"],
+    ["Применение в аккумуляторах ИБП", "/ru/applications/agm-separator-for-ups-battery/"],
     [
       "Применение в мотоциклетных аккумуляторах",
       "/ru/applications/agm-separator-for-motorcycle-battery/"
     ],
+    ["Применение в накопителях энергии", "/ru/applications/agm-separator-for-energy-storage-battery/"],
     ["Запросить образец и проверку характеристик", "/ru/request-agm-separator-sample/"]
   ] as LinkItem[]
 };
@@ -3662,6 +3680,287 @@ const secondaryDetailContent = Object.fromEntries(
   })
 ) as Record<SecondaryDetailLocale, Record<SecondaryDetailKind, ProductContent>>;
 
+type SecondaryApplicationKind =
+  | "agmSeparatorVrlaApplication"
+  | "agmSeparatorUpsApplication"
+  | "agmSeparatorEnergyStorageApplication";
+
+type SecondaryApplicationPageCopy = {
+  hero: [string, string, string, string];
+  proof: string[];
+  overview: [string, string, string];
+  parameters: [string, string];
+  formsTitle: string;
+  applications: [string, string[]];
+  inquiry: [string, string, string];
+};
+
+const secondaryApplicationCopy: Record<
+  SecondaryDetailLocale,
+  Record<SecondaryApplicationKind, SecondaryApplicationPageCopy>
+> = {
+  vi: {
+    agmSeparatorVrlaApplication: {
+      hero: ["Ứng dụng ắc quy VRLA", "Tấm ngăn AGM cho ắc quy chì axit VRLA", "Trao đổi vật liệu tấm ngăn AGM theo cấu trúc ắc quy, bản cực, quy trình lắp ráp và điều kiện sử dụng.", "Đối chiếu ứng dụng và quy cách"],
+      proof: ["Ứng dụng VRLA", "Dạng cuộn hoặc tấm", "Hỗ trợ xác nhận mẫu"],
+      overview: ["Tấm ngăn cần phù hợp với thiết kế ắc quy VRLA", "Tấm ngăn AGM nằm giữa bản cực dương và âm, giúp giữ chất điện phân trong cấu trúc ắc quy và hạn chế tiếp xúc trực tiếp giữa các bản cực.", "UPS, viễn thông, xe máy, lưu trữ năng lượng và các ứng dụng khởi động có thể yêu cầu cách trao đổi quy cách khác nhau."],
+      parameters: ["Bắt đầu từ cấu trúc ắc quy và quy trình lắp ráp", "Độ dày, chiều rộng, định lượng, khả năng hút axit, điện trở và dạng sản phẩm cần được xem xét cùng thiết kế của khách hàng."],
+      formsTitle: "Dạng cuộn, dạng tấm và xác nhận ứng dụng VRLA",
+      applications: ["Các phân khúc VRLA thường được trao đổi", ["Ắc quy UPS", "Ắc quy viễn thông", "Ắc quy xe máy", "Ắc quy lưu trữ năng lượng", "Ắc quy dự phòng", "Ắc quy khởi động"]],
+      inquiry: ["Gửi yêu cầu ứng dụng VRLA", "Cung cấp ứng dụng, độ dày, chiều rộng, dạng cuộn hoặc tấm và tiêu chuẩn thử nếu có.", "Ứng dụng ắc quy, cấu trúc bản cực, độ dày, chiều rộng, dạng sản phẩm và yêu cầu mẫu"]
+    },
+    agmSeparatorUpsApplication: {
+      hero: ["Ứng dụng ắc quy UPS", "Tấm ngăn AGM cho ắc quy UPS VRLA", "Trao đổi tấm ngăn AGM cho hệ thống UPS, nguồn dự phòng và ắc quy VRLA chế độ chờ.", "Trao đổi nhu cầu ắc quy UPS"],
+      proof: ["UPS và nguồn dự phòng", "Đối chiếu quy cách", "Theo dõi tính nhất quán"],
+      overview: ["Yêu cầu tấm ngăn cần phù hợp với thiết kế UPS và chế độ chờ", "Dự án ắc quy UPS thường xem xét cấu trúc ắc quy, điều kiện vận hành và quy trình sản xuất trước khi xác nhận mẫu.", "Người mua thường trao đổi về độ dày, chiều rộng, khả năng hút axit, điện trở và tính nhất quán giữa các lô."],
+      parameters: ["Các điểm cần xác nhận cho ắc quy UPS", "Quy cách cuối cùng cần được đối chiếu với thiết kế bản cực, phương pháp thử và quy trình lắp ráp của khách hàng."],
+      formsTitle: "Dạng cuộn và tấm cho sản xuất ắc quy UPS",
+      applications: ["Các hướng nguồn dự phòng thường gặp", ["Ắc quy UPS dự phòng", "Trung tâm dữ liệu", "Nguồn khẩn cấp", "Tủ viễn thông", "Điều khiển công nghiệp", "Hệ thống nguồn chế độ chờ"]],
+      inquiry: ["Gửi yêu cầu tấm ngăn cho ắc quy UPS", "Chúng tôi sẽ hỗ trợ đối chiếu dạng cuộn, dạng tấm và thông tin quy cách cần thiết.", "Thiết kế ắc quy UPS, độ dày, chiều rộng, dạng sản phẩm, số lượng mẫu và yêu cầu thử"]
+    },
+    agmSeparatorEnergyStorageApplication: {
+      hero: ["Ứng dụng lưu trữ năng lượng", "Tấm ngăn AGM cho ắc quy chì axit lưu trữ năng lượng", "Trao đổi tấm ngăn AGM cho hệ thống lưu trữ, nguồn dự phòng và ắc quy VRLA dự trữ.", "Trao đổi nhu cầu lưu trữ năng lượng"],
+      proof: ["Nguồn lưu trữ và dự phòng", "Trao đổi cung ứng ổn định", "Hỗ trợ kiểm tra chất lượng"],
+      overview: ["Dự án lưu trữ cần trao đổi quy cách và cung ứng rõ ràng", "Các dự án ắc quy lưu trữ và nguồn dự phòng thường cần cung ứng lặp lại, xác nhận quy cách ổn định và kiểm tra chất lượng trước khi đặt hàng.", "Yêu cầu tấm ngăn nên được xem xét theo cấu trúc ắc quy, điều kiện vận hành, hạng mục thử và dạng cuộn hoặc tấm."],
+      parameters: ["Các điểm cần xác nhận cho ắc quy lưu trữ", "Độ dày, định lượng, hút axit, điện trở, tính nhất quán, đóng gói và kế hoạch giao hàng cần theo tiêu chuẩn của khách hàng."],
+      formsTitle: "Dạng tấm ngăn cho dự án lưu trữ và nguồn dự phòng",
+      applications: ["Các hướng lưu trữ và nguồn dự phòng", ["Ắc quy lưu trữ chì axit", "Nguồn dự phòng", "Nguồn dự trữ", "Nguồn viễn thông", "Hệ thống năng lượng mặt trời dự phòng", "Ắc quy công nghiệp chế độ chờ"]],
+      inquiry: ["Gửi yêu cầu tấm ngăn cho ắc quy lưu trữ", "Cung cấp quy cách, dạng sản phẩm, số lượng, đóng gói và kế hoạch mẫu hoặc đơn hàng nếu có.", "Ứng dụng lưu trữ, độ dày, chiều rộng, dạng cuộn hoặc tấm, số lượng, thử nghiệm và đóng gói"]
+    }
+  },
+  ko: {
+    agmSeparatorVrlaApplication: {
+      hero: ["VRLA 배터리 적용", "VRLA 납축전지용 AGM 분리막", "배터리 구조, 극판 설계, 조립 공정 및 사용 조건에 맞춰 AGM 분리막 사양을 검토합니다.", "적용 분야 및 사양 검토"],
+      proof: ["VRLA 적용", "롤 또는 시트", "샘플 검토 지원"],
+      overview: ["AGM 분리막은 VRLA 배터리 설계와 맞아야 합니다", "AGM 분리막은 양극판과 음극판 사이에서 직접 접촉을 방지하고 배터리 구조 내 전해액 유지에 기여합니다.", "UPS, 통신, 오토바이, 에너지 저장 및 시동용 배터리는 서로 다른 사양 검토가 필요할 수 있습니다."],
+      parameters: ["배터리 구조와 조립 공정에서 사양 검토를 시작합니다", "두께, 폭, 평량, 산 흡수, 전기 저항 및 제품 형태를 고객 설계와 함께 확인해야 합니다."],
+      formsTitle: "VRLA 적용을 위한 롤, 시트 및 샘플 검토",
+      applications: ["주요 VRLA 적용 분야", ["UPS 배터리", "통신용 배터리", "오토바이 배터리", "에너지 저장 배터리", "예비 전원 배터리", "시동용 배터리"]],
+      inquiry: ["VRLA 적용 요구사항 보내기", "적용 분야, 두께, 폭, 롤 또는 시트 형태와 시험 기준을 보내 주세요.", "배터리 적용, 극판 구조, 두께, 폭, 제품 형태 및 샘플 요구사항"]
+    },
+    agmSeparatorUpsApplication: {
+      hero: ["UPS 배터리 적용", "UPS VRLA 배터리용 AGM 분리막", "UPS, 대기 전원 및 백업용 VRLA 배터리 생산을 위한 AGM 분리막을 검토합니다.", "UPS 배터리 요구사항 상담"],
+      proof: ["UPS 및 대기 전원", "사양 검토", "배치 일관성 확인"],
+      overview: ["분리막 요구사항은 UPS 설계와 대기 운전에 맞아야 합니다", "UPS 배터리 프로젝트에서는 샘플 확인 전에 배터리 구조, 운전 환경 및 생산 공정을 함께 검토합니다.", "구매자는 일반적으로 두께, 폭, 산 흡수, 전기 저항 및 로트 간 일관성을 확인합니다."],
+      parameters: ["UPS 배터리 조달 시 확인할 항목", "최종 사양은 극판 설계, 시험 방법 및 고객 조립 공정에 맞춰 확인해야 합니다."],
+      formsTitle: "UPS 배터리 생산을 위한 롤 및 시트",
+      applications: ["주요 대기 전원 적용", ["UPS 백업 배터리", "데이터센터", "비상 전원", "통신 캐비닛", "산업 제어", "대기 전원 시스템"]],
+      inquiry: ["UPS 배터리 분리막 요구사항 보내기", "롤, 시트 및 필요한 사양 정보를 함께 검토합니다.", "UPS 배터리 설계, 두께, 폭, 제품 형태, 샘플 수량 및 시험 요구사항"]
+    },
+    agmSeparatorEnergyStorageApplication: {
+      hero: ["에너지 저장 배터리 적용", "납축 에너지 저장 배터리용 AGM 분리막", "에너지 저장, 백업 전원 및 예비 전원용 VRLA 배터리 프로젝트를 위한 AGM 분리막을 검토합니다.", "에너지 저장 요구사항 상담"],
+      proof: ["저장 및 백업 전원", "안정 공급 검토", "품질 검토 지원"],
+      overview: ["에너지 저장 프로젝트에는 명확한 사양과 공급 협의가 필요합니다", "납축 에너지 저장 및 백업 전원 프로젝트는 반복 공급, 안정적인 사양 확인과 주문 전 품질 검토가 중요합니다.", "배터리 구조, 운전 조건, 시험 항목 및 롤 또는 시트 요구사항을 함께 확인해야 합니다."],
+      parameters: ["에너지 저장 배터리 조달 시 확인할 항목", "두께, 평량, 산 흡수, 전기 저항, 일관성, 포장 및 납품 계획은 고객 기준에 맞춰야 합니다."],
+      formsTitle: "에너지 저장 및 백업 프로젝트용 분리막 형태",
+      applications: ["주요 저장 및 예비 전원 적용", ["납축 에너지 저장", "백업 전원", "예비 전원", "통신 백업", "태양광 백업", "산업용 대기 배터리"]],
+      inquiry: ["에너지 저장 배터리 분리막 요구사항 보내기", "사양, 제품 형태, 수량, 포장과 샘플 또는 주문 계획을 보내 주세요.", "저장 적용, 두께, 폭, 롤 또는 시트, 수량, 시험 및 포장 요구사항"]
+    }
+  },
+  ja: {
+    agmSeparatorVrlaApplication: {
+      hero: ["VRLAバッテリー用途", "VRLA鉛蓄電池用AGMセパレーター", "バッテリー構造、極板設計、組立工程、使用条件に合わせてAGMセパレーター仕様を確認します。", "用途と仕様を確認"],
+      proof: ["VRLA用途", "ロール・シート", "サンプル確認対応"],
+      overview: ["AGMセパレーターはVRLAバッテリー設計との適合が必要です", "AGMセパレーターは正極板と負極板の間に配置され、直接接触を防ぎながら電解液保持を支えます。", "UPS、通信、二輪車、蓄電、始動用バッテリーでは、仕様確認の重点が異なる場合があります。"],
+      parameters: ["バッテリー構造と組立工程から仕様を確認", "厚さ、幅、坪量、吸液性、電気抵抗、製品形態を顧客設計と合わせて確認します。"],
+      formsTitle: "VRLA用途向けロール、シート、サンプル確認",
+      applications: ["主なVRLA用途", ["UPSバッテリー", "通信用バッテリー", "二輪車用バッテリー", "蓄電用バッテリー", "バックアップ電源", "始動用バッテリー"]],
+      inquiry: ["VRLA用途の要件を送信", "用途、厚さ、幅、ロール・シート形態、試験基準をご連絡ください。", "バッテリー用途、極板構造、厚さ、幅、製品形態、サンプル要件"]
+    },
+    agmSeparatorUpsApplication: {
+      hero: ["UPSバッテリー用途", "UPS VRLAバッテリー用AGMセパレーター", "UPS、待機電源、バックアップ用VRLA鉛蓄電池向けAGMセパレーターを確認します。", "UPSバッテリー要件を相談"],
+      proof: ["UPS・待機電源", "仕様確認", "ロット一貫性の確認"],
+      overview: ["セパレーター要件はUPS設計と待機運用に合わせます", "UPSバッテリープロジェクトでは、サンプル確認前にバッテリー構造、運用環境、生産工程を検討します。", "厚さ、幅、吸液性、電気抵抗、ロット間の一貫性が主な確認項目です。"],
+      parameters: ["UPSバッテリー調達時の確認項目", "最終仕様は極板設計、試験方法、顧客の組立工程に合わせて確認します。"],
+      formsTitle: "UPSバッテリー生産向けロール・シート",
+      applications: ["主な待機電源用途", ["UPSバックアップ", "データセンター", "非常用電源", "通信キャビネット", "産業制御", "待機電源システム"]],
+      inquiry: ["UPSバッテリー用セパレーター要件を送信", "ロール、シート、必要な仕様情報を確認します。", "UPS設計、厚さ、幅、製品形態、サンプル数量、試験要件"]
+    },
+    agmSeparatorEnergyStorageApplication: {
+      hero: ["蓄電用バッテリー用途", "鉛蓄電池式エネルギー貯蔵向けAGMセパレーター", "蓄電、バックアップ、予備電源用VRLAバッテリープロジェクト向けに仕様を確認します。", "蓄電用途の要件を相談"],
+      proof: ["蓄電・バックアップ", "安定供給の確認", "品質確認対応"],
+      overview: ["蓄電プロジェクトには明確な仕様と供給協議が必要です", "鉛蓄電池式蓄電・バックアップ案件では、継続供給、安定した仕様確認、発注前の品質協議が重要です。", "バッテリー構造、運用条件、試験項目、ロール・シート要件を合わせて確認します。"],
+      parameters: ["蓄電用バッテリー調達時の確認項目", "厚さ、坪量、吸液性、電気抵抗、一貫性、梱包、納入計画を顧客基準に合わせます。"],
+      formsTitle: "蓄電・バックアップ案件向け製品形態",
+      applications: ["主な蓄電・予備電源用途", ["鉛蓄電池式蓄電", "バックアップ電源", "予備電源", "通信バックアップ", "太陽光バックアップ", "産業用待機バッテリー"]],
+      inquiry: ["蓄電用バッテリーの要件を送信", "仕様、製品形態、数量、梱包、サンプルまたは発注計画をご連絡ください。", "蓄電用途、厚さ、幅、ロール・シート、数量、試験、梱包要件"]
+    }
+  },
+  es: {
+    agmSeparatorVrlaApplication: {
+      hero: ["Aplicaciones VRLA", "Separador AGM para baterías VRLA de plomo-ácido", "Revisión del separador según la estructura de la batería, las placas, el proceso de montaje y las condiciones de uso.", "Revisar aplicación y especificación"],
+      proof: ["Aplicaciones VRLA", "Rollos o láminas", "Evaluación de muestras"],
+      overview: ["El separador debe corresponder al diseño de la batería VRLA", "El separador AGM se coloca entre las placas positivas y negativas, ayuda a evitar el contacto directo y mantiene el electrolito dentro de la estructura.", "UPS, telecomunicaciones, motocicletas, almacenamiento y arranque pueden requerir revisiones de especificación diferentes."],
+      parameters: ["La revisión comienza con la estructura y el montaje", "Espesor, ancho, gramaje, absorción de ácido, resistencia eléctrica y formato deben revisarse con el diseño del cliente."],
+      formsTitle: "Rollos, láminas y evaluación para aplicaciones VRLA",
+      applications: ["Segmentos VRLA habituales", ["Baterías UPS", "Baterías de telecomunicaciones", "Baterías de motocicleta", "Baterías de almacenamiento", "Energía de respaldo", "Baterías de arranque"]],
+      inquiry: ["Enviar requisitos de la aplicación VRLA", "Indique la aplicación, el espesor, el ancho, el formato y los criterios de ensayo disponibles.", "Aplicación, estructura de placas, espesor, ancho, formato y requisitos de muestra"]
+    },
+    agmSeparatorUpsApplication: {
+      hero: ["Aplicación en baterías UPS", "Separador AGM para baterías UPS VRLA", "Revisión para baterías UPS, sistemas de espera y respaldo de energía con tecnología VRLA.", "Revisar requisitos de baterías UPS"],
+      proof: ["UPS y respaldo", "Revisión de especificaciones", "Consistencia por lote"],
+      overview: ["Los requisitos deben corresponder al diseño UPS y al servicio de espera", "Los proyectos UPS suelen revisar la estructura de la batería, el entorno operativo y el proceso de producción antes de confirmar muestras.", "Espesor, ancho, absorción de ácido, resistencia eléctrica y consistencia entre lotes son puntos habituales."],
+      parameters: ["Puntos para comprar separadores de baterías UPS", "La especificación final debe confirmarse con el diseño de placas, el método de ensayo y el proceso de montaje del cliente."],
+      formsTitle: "Rollos y láminas para producción de baterías UPS",
+      applications: ["Usos habituales de respaldo", ["Baterías UPS", "Centros de datos", "Energía de emergencia", "Gabinetes de telecomunicaciones", "Control industrial", "Sistemas de espera"]],
+      inquiry: ["Enviar requisitos del separador para UPS", "Ayudamos a revisar el formato en rollo o lámina y la información técnica necesaria.", "Diseño UPS, espesor, ancho, formato, cantidad de muestras y requisitos de ensayo"]
+    },
+    agmSeparatorEnergyStorageApplication: {
+      hero: ["Aplicación en almacenamiento", "Separador AGM para baterías de almacenamiento de energía", "Revisión para proyectos VRLA de almacenamiento, respaldo y reserva de energía con baterías de plomo-ácido.", "Revisar requisitos de almacenamiento"],
+      proof: ["Almacenamiento y respaldo", "Suministro estable", "Revisión de calidad"],
+      overview: ["Los proyectos de almacenamiento necesitan especificaciones y suministro claros", "Estos proyectos suelen requerir suministro repetido, comunicación estable de especificaciones y revisión de calidad antes del pedido.", "Deben considerarse la estructura, las condiciones de operación, los ensayos y el formato en rollo o lámina."],
+      parameters: ["Puntos para comprar separadores de almacenamiento", "Espesor, gramaje, absorción, resistencia, consistencia, embalaje y entrega deben alinearse con la norma del cliente."],
+      formsTitle: "Formatos para proyectos de almacenamiento y respaldo",
+      applications: ["Usos habituales de almacenamiento y reserva", ["Almacenamiento con plomo-ácido", "Energía de respaldo", "Energía de reserva", "Respaldo de telecomunicaciones", "Respaldo solar", "Baterías industriales de espera"]],
+      inquiry: ["Enviar requisitos para baterías de almacenamiento", "Indique especificación, formato, cantidad, embalaje y plan de muestras o pedido.", "Aplicación, espesor, ancho, rollo o lámina, cantidad, ensayos y embalaje"]
+    }
+  },
+  pt: {
+    agmSeparatorVrlaApplication: {
+      hero: ["Aplicações VRLA", "Separador AGM para baterias VRLA chumbo-ácido", "Análise do separador conforme a estrutura da bateria, placas, processo de montagem e condições de uso.", "Analisar aplicação e especificação"],
+      proof: ["Aplicações VRLA", "Rolos ou folhas", "Avaliação de amostras"],
+      overview: ["O separador deve corresponder ao projeto da bateria VRLA", "O separador AGM fica entre as placas positivas e negativas, ajuda a evitar contato direto e mantém o eletrólito na estrutura.", "UPS, telecomunicações, motocicletas, armazenamento e partida podem exigir análises de especificação diferentes."],
+      parameters: ["A análise começa pela estrutura e montagem", "Espessura, largura, gramatura, absorção de ácido, resistência elétrica e formato devem ser avaliados com o projeto do cliente."],
+      formsTitle: "Rolos, folhas e avaliação para aplicações VRLA",
+      applications: ["Segmentos VRLA comuns", ["Baterias UPS", "Baterias de telecomunicações", "Baterias de motocicletas", "Baterias de armazenamento", "Energia de backup", "Baterias de partida"]],
+      inquiry: ["Enviar requisitos da aplicação VRLA", "Informe aplicação, espessura, largura, formato e critérios de ensaio disponíveis.", "Aplicação, estrutura das placas, espessura, largura, formato e requisitos de amostra"]
+    },
+    agmSeparatorUpsApplication: {
+      hero: ["Aplicação em baterias UPS", "Separador AGM para baterias UPS VRLA", "Análise para baterias UPS, sistemas de espera e backup de energia com tecnologia VRLA.", "Analisar requisitos de baterias UPS"],
+      proof: ["UPS e backup", "Análise de especificações", "Consistência por lote"],
+      overview: ["Os requisitos devem corresponder ao projeto UPS e ao serviço de espera", "Projetos UPS normalmente analisam estrutura da bateria, ambiente operacional e processo de produção antes de confirmar amostras.", "Espessura, largura, absorção de ácido, resistência elétrica e consistência entre lotes são pontos comuns."],
+      parameters: ["Pontos para comprar separadores de baterias UPS", "A especificação final deve ser confirmada com o projeto das placas, método de ensaio e processo de montagem do cliente."],
+      formsTitle: "Rolos e folhas para produção de baterias UPS",
+      applications: ["Usos comuns de backup", ["Baterias UPS", "Data centers", "Energia de emergência", "Gabinetes de telecomunicações", "Controle industrial", "Sistemas de espera"]],
+      inquiry: ["Enviar requisitos do separador para UPS", "Ajudamos a analisar rolos, folhas e as informações técnicas necessárias.", "Projeto UPS, espessura, largura, formato, quantidade de amostras e requisitos de ensaio"]
+    },
+    agmSeparatorEnergyStorageApplication: {
+      hero: ["Aplicação em armazenamento", "Separador AGM para baterias de armazenamento de energia", "Análise para projetos VRLA de armazenamento, backup e reserva de energia com baterias chumbo-ácido.", "Analisar requisitos de armazenamento"],
+      proof: ["Armazenamento e backup", "Fornecimento estável", "Análise de qualidade"],
+      overview: ["Projetos de armazenamento precisam de especificações e fornecimento claros", "Esses projetos costumam exigir fornecimento repetido, comunicação estável de especificações e análise de qualidade antes do pedido.", "Estrutura, condições de operação, ensaios e formato em rolo ou folha devem ser considerados."],
+      parameters: ["Pontos para comprar separadores de armazenamento", "Espessura, gramatura, absorção, resistência, consistência, embalagem e entrega devem seguir a norma do cliente."],
+      formsTitle: "Formatos para projetos de armazenamento e backup",
+      applications: ["Usos comuns de armazenamento e reserva", ["Armazenamento chumbo-ácido", "Energia de backup", "Energia de reserva", "Backup de telecomunicações", "Backup solar", "Baterias industriais de espera"]],
+      inquiry: ["Enviar requisitos para baterias de armazenamento", "Informe especificação, formato, quantidade, embalagem e plano de amostra ou pedido.", "Aplicação, espessura, largura, rolo ou folha, quantidade, ensaios e embalagem"]
+    }
+  },
+  ru: {
+    agmSeparatorVrlaApplication: {
+      hero: ["Применение VRLA", "AGM-сепаратор для свинцово-кислотных VRLA-аккумуляторов", "Согласование сепаратора с конструкцией аккумулятора, пластинами, процессом сборки и условиями эксплуатации.", "Согласовать применение и характеристики"],
+      proof: ["Применение VRLA", "Рулоны или листы", "Оценка образцов"],
+      overview: ["Сепаратор должен соответствовать конструкции VRLA-аккумулятора", "AGM-сепаратор размещается между положительными и отрицательными пластинами, предотвращает прямой контакт и удерживает электролит в структуре.", "ИБП, связь, мотоциклы, накопители энергии и стартерные системы могут требовать разного подхода к характеристикам."],
+      parameters: ["Согласование начинается с конструкции и сборки", "Толщина, ширина, масса на единицу площади, впитывание кислоты, сопротивление и формат проверяются с учетом проекта клиента."],
+      formsTitle: "Рулоны, листы и оценка для VRLA",
+      applications: ["Основные сегменты VRLA", ["Аккумуляторы ИБП", "Телекоммуникационные аккумуляторы", "Мотоциклетные аккумуляторы", "Накопители энергии", "Резервное питание", "Стартерные аккумуляторы"]],
+      inquiry: ["Отправить требования к применению VRLA", "Укажите применение, толщину, ширину, формат и доступные критерии испытаний.", "Применение, конструкция пластин, толщина, ширина, формат и требования к образцам"]
+    },
+    agmSeparatorUpsApplication: {
+      hero: ["Применение в ИБП", "AGM-сепаратор для VRLA-аккумуляторов ИБП", "Согласование для аккумуляторов ИБП, систем дежурного и резервного питания.", "Обсудить требования к ИБП"],
+      proof: ["ИБП и резервное питание", "Согласование характеристик", "Стабильность партий"],
+      overview: ["Требования должны соответствовать конструкции ИБП и дежурному режиму", "В проектах ИБП до подтверждения образцов учитывают конструкцию аккумулятора, условия эксплуатации и производственный процесс.", "Обычно проверяют толщину, ширину, впитывание кислоты, электрическое сопротивление и стабильность между партиями."],
+      parameters: ["Что подтвердить при закупке сепаратора для ИБП", "Итоговые характеристики согласуют с конструкцией пластин, методом испытаний и процессом сборки клиента."],
+      formsTitle: "Рулоны и листы для производства аккумуляторов ИБП",
+      applications: ["Основные области резервного питания", ["Аккумуляторы ИБП", "Центры обработки данных", "Аварийное питание", "Телекоммуникационные шкафы", "Промышленное управление", "Дежурные системы"]],
+      inquiry: ["Отправить требования к сепаратору для ИБП", "Мы поможем согласовать рулоны, листы и необходимые технические данные.", "Конструкция ИБП, толщина, ширина, формат, количество образцов и испытания"]
+    },
+    agmSeparatorEnergyStorageApplication: {
+      hero: ["Применение в накопителях", "AGM-сепаратор для свинцово-кислотных накопителей энергии", "Согласование для VRLA-проектов накопления, резервного и аварийного питания.", "Обсудить требования к накопителям"],
+      proof: ["Накопление и резерв", "Стабильные поставки", "Проверка качества"],
+      overview: ["Проектам накопления нужны четкие характеристики и поставки", "Для таких проектов важны повторные поставки, стабильное согласование характеристик и проверка качества до заказа.", "Учитываются конструкция, условия эксплуатации, испытания и поставка в рулонах или листах."],
+      parameters: ["Что подтвердить при закупке для накопителей", "Толщина, масса, впитывание, сопротивление, стабильность, упаковка и поставка должны соответствовать стандартам клиента."],
+      formsTitle: "Форматы для проектов накопления и резерва",
+      applications: ["Основные системы накопления и резерва", ["Свинцово-кислотные накопители", "Резервное питание", "Аварийный резерв", "Резерв связи", "Солнечные системы", "Промышленные дежурные аккумуляторы"]],
+      inquiry: ["Отправить требования к накопителю энергии", "Укажите характеристики, формат, количество, упаковку и план образцов или заказа.", "Применение, толщина, ширина, рулон или лист, количество, испытания и упаковка"]
+    }
+  }
+};
+
+const secondaryApplicationImages: Record<
+  SecondaryApplicationKind,
+  readonly [string, number, number]
+> = {
+  agmSeparatorVrlaApplication: ["/images/viking-finished-separator-roll-900.webp", 900, 675],
+  agmSeparatorUpsApplication: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
+  agmSeparatorEnergyStorageApplication: ["/images/applications/energy-storage-lead-acid-battery-application-1200.webp", 1200, 900]
+};
+
+const secondaryApplicationPaths: Record<SecondaryApplicationKind, string> = {
+  agmSeparatorVrlaApplication: "/applications/agm-separator-for-vrla-battery/",
+  agmSeparatorUpsApplication: "/applications/agm-separator-for-ups-battery/",
+  agmSeparatorEnergyStorageApplication: "/applications/agm-separator-for-energy-storage-battery/"
+};
+
+function buildSecondaryApplicationContent(
+  lang: SecondaryDetailLocale,
+  kind: SecondaryApplicationKind,
+  base: ProductContent,
+  copy: SecondaryApplicationPageCopy
+): ProductContent {
+  const image = secondaryApplicationImages[kind];
+  const baseForms = base.forms.items.slice(0, 2);
+  const forms: ImageCard[] = [
+    ...baseForms,
+    [copy.hero[1], copy.overview[1], image[0], copy.hero[1], image[1], image[2]],
+    [base.quality.title, base.quality.text, "/images/agm-quality-control-1200.webp", base.quality.title, 1200, 900]
+  ];
+
+  return {
+    ...base,
+    homePath: `/${lang}/`,
+    languagePath: secondaryApplicationPaths[kind],
+    hero: {
+      eyebrow: copy.hero[0],
+      title: copy.hero[1],
+      subtitle: copy.hero[2],
+      primary: copy.hero[3],
+      secondary: base.hero.secondary,
+      proof: copy.proof,
+      image: { src: image[0], alt: copy.hero[1], width: image[1], height: image[2] }
+    },
+    overview: {
+      eyebrow: base.overview.eyebrow,
+      title: copy.overview[0],
+      paragraphs: [copy.overview[1], copy.overview[2]]
+    },
+    parameters: {
+      eyebrow: base.parameters.eyebrow,
+      title: copy.parameters[0],
+      text: copy.parameters[1],
+      items: base.parameters.items
+    },
+    forms: { eyebrow: base.forms.eyebrow, title: copy.formsTitle, items: forms },
+    applications: {
+      eyebrow: base.applications.eyebrow,
+      title: copy.applications[0],
+      items: copy.applications[1]
+    },
+    related: { ...base.related, items: commonRelated[lang] },
+    inquiry: {
+      ...base.inquiry,
+      title: copy.inquiry[0],
+      text: copy.inquiry[1],
+      placeholder: copy.inquiry[2]
+    }
+  };
+}
+
+const secondaryApplicationContent = Object.fromEntries(
+  (Object.keys(secondaryApplicationCopy) as SecondaryDetailLocale[]).map((lang) => [
+    lang,
+    Object.fromEntries(
+      (Object.keys(secondaryApplicationCopy[lang]) as SecondaryApplicationKind[]).map((kind) => [
+        kind,
+        buildSecondaryApplicationContent(
+          lang,
+          kind,
+          secondaryBaseContent[lang],
+          secondaryApplicationCopy[lang][kind]
+        )
+      ])
+    )
+  ])
+) as Record<SecondaryDetailLocale, Record<SecondaryApplicationKind, ProductContent>>;
+
 type AdditionalMotorcycleLocale = "ko" | "ja" | "es" | "pt" | "ru";
 
 type MotorcycleApplicationCopy = {
@@ -4054,8 +4353,17 @@ export function ProductPage({
       page === "agmSeparatorTesting")
       ? secondaryDetailContent[lang][page]
       : undefined;
+  const localizedApplication =
+    lang !== "en" &&
+    lang !== "zh" &&
+    (page === "agmSeparatorVrlaApplication" ||
+      page === "agmSeparatorUpsApplication" ||
+      page === "agmSeparatorEnergyStorageApplication")
+      ? secondaryApplicationContent[lang][page]
+      : undefined;
   const defaults =
     localizedDetail ??
+    localizedApplication ??
     (lang === "vi"
       ? viContent[page]
       : lang === "ko"

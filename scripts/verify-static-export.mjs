@@ -9,6 +9,16 @@ const synchronizedDetailFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/products/agm-separator-sheets/index.html`,
   `${locale}/quality-control/agm-separator-testing/index.html`
 ]);
+const synchronizedApplicationSlugs = [
+  "agm-separator-for-vrla-battery",
+  "agm-separator-for-ups-battery",
+  "agm-separator-for-energy-storage-battery"
+];
+const synchronizedApplicationFiles = synchronizedLocaleCodes.flatMap((locale) =>
+  synchronizedApplicationSlugs.map(
+    (slug) => `${locale}/applications/${slug}/index.html`
+  )
+);
 const requiredFiles = [
   "index.html",
   "zh/index.html",
@@ -55,7 +65,8 @@ const requiredFiles = [
   "robots.txt",
   "favicon.ico",
   "videos/viking-agm-promo-480p.mp4",
-  ...synchronizedDetailFiles
+  ...synchronizedDetailFiles,
+  ...synchronizedApplicationFiles
 ];
 
 function pass(message) {
@@ -161,6 +172,17 @@ const synchronizedDetailHtml = Object.fromEntries(
     }
   ])
 );
+const synchronizedApplicationHtml = Object.fromEntries(
+  synchronizedLocaleCodes.map((locale) => [
+    locale,
+    Object.fromEntries(
+      synchronizedApplicationSlugs.map((slug) => [
+        slug,
+        readOutFile(`${locale}/applications/${slug}/index.html`)
+      ])
+    )
+  ])
+);
 const resourcesHtml = readOutFile("resources/index.html");
 const zhResourcesHtml = readOutFile("zh/resources/index.html");
 const upsVrlaArticleHtml = readOutFile(
@@ -246,7 +268,8 @@ const inquiryFormsUseSelects = [
   ruHtml,
   ruProductHtml,
   ruSampleHtml,
-  ...Object.values(synchronizedDetailHtml).flatMap(Object.values)
+  ...Object.values(synchronizedDetailHtml).flatMap(Object.values),
+  ...Object.values(synchronizedApplicationHtml).flatMap(Object.values)
 ].every((html) =>
     /<select[^>]+name="application"/.test(html) &&
     /<select[^>]+name="interestedProduct"/.test(html) &&
@@ -367,6 +390,10 @@ const vietnamesePages = [
     viMotorcycleHtml,
     "/vi/applications/agm-separator-for-motorcycle-battery/"
   ],
+  ...synchronizedApplicationSlugs.map((slug) => [
+    synchronizedApplicationHtml.vi[slug],
+    `/vi/applications/${slug}/`
+  ]),
   [viSampleHtml, "/vi/request-agm-separator-sample/"]
 ];
 
@@ -391,7 +418,8 @@ if (
     viProductHtml,
     viMotorcycleHtml,
     viSampleHtml,
-    ...Object.values(synchronizedDetailHtml.vi)
+    ...Object.values(synchronizedDetailHtml.vi),
+    ...Object.values(synchronizedApplicationHtml.vi)
   ].every(
     (html) =>
       html.includes('value="Motorcycle battery"') &&
@@ -436,6 +464,12 @@ const koreanJapanesePages = [
     "ko-KR",
     "ko_KR"
   ],
+  ...synchronizedApplicationSlugs.map((slug) => [
+    synchronizedApplicationHtml.ko[slug],
+    `/ko/applications/${slug}/`,
+    "ko-KR",
+    "ko_KR"
+  ]),
   [
     koSampleHtml,
     "/ko/request-agm-separator-sample/",
@@ -473,6 +507,12 @@ const koreanJapanesePages = [
     "ja-JP",
     "ja_JP"
   ],
+  ...synchronizedApplicationSlugs.map((slug) => [
+    synchronizedApplicationHtml.ja[slug],
+    `/ja/applications/${slug}/`,
+    "ja-JP",
+    "ja_JP"
+  ]),
   [
     jaSampleHtml,
     "/ja/request-agm-separator-sample/",
@@ -503,7 +543,8 @@ if (
     koProductHtml,
     koMotorcycleHtml,
     koSampleHtml,
-    ...Object.values(synchronizedDetailHtml.ko)
+    ...Object.values(synchronizedDetailHtml.ko),
+    ...Object.values(synchronizedApplicationHtml.ko)
   ].every(
     (html) =>
       html.includes('value="Motorcycle battery"') &&
@@ -515,7 +556,8 @@ if (
     jaProductHtml,
     jaMotorcycleHtml,
     jaSampleHtml,
-    ...Object.values(synchronizedDetailHtml.ja)
+    ...Object.values(synchronizedDetailHtml.ja),
+    ...Object.values(synchronizedApplicationHtml.ja)
   ].every(
     (html) =>
       html.includes('value="Motorcycle battery"') &&
@@ -560,6 +602,12 @@ const spanishPortugueseRussianPages = [
     "es",
     "es_LA"
   ],
+  ...synchronizedApplicationSlugs.map((slug) => [
+    synchronizedApplicationHtml.es[slug],
+    `/es/applications/${slug}/`,
+    "es",
+    "es_LA"
+  ]),
   [
     esSampleHtml,
     "/es/request-agm-separator-sample/",
@@ -597,6 +645,12 @@ const spanishPortugueseRussianPages = [
     "pt-BR",
     "pt_BR"
   ],
+  ...synchronizedApplicationSlugs.map((slug) => [
+    synchronizedApplicationHtml.pt[slug],
+    `/pt/applications/${slug}/`,
+    "pt-BR",
+    "pt_BR"
+  ]),
   [
     ptSampleHtml,
     "/pt/request-agm-separator-sample/",
@@ -634,6 +688,12 @@ const spanishPortugueseRussianPages = [
     "ru-RU",
     "ru_RU"
   ],
+  ...synchronizedApplicationSlugs.map((slug) => [
+    synchronizedApplicationHtml.ru[slug],
+    `/ru/applications/${slug}/`,
+    "ru-RU",
+    "ru_RU"
+  ]),
   [
     ruSampleHtml,
     "/ru/request-agm-separator-sample/",
@@ -665,7 +725,8 @@ const newLocaleFormsComplete = [
     esProductHtml,
     esMotorcycleHtml,
     esSampleHtml,
-    ...Object.values(synchronizedDetailHtml.es)
+    ...Object.values(synchronizedDetailHtml.es),
+    ...Object.values(synchronizedApplicationHtml.es)
   ],
   [
     "pt",
@@ -673,7 +734,8 @@ const newLocaleFormsComplete = [
     ptProductHtml,
     ptMotorcycleHtml,
     ptSampleHtml,
-    ...Object.values(synchronizedDetailHtml.pt)
+    ...Object.values(synchronizedDetailHtml.pt),
+    ...Object.values(synchronizedApplicationHtml.pt)
   ],
   [
     "ru",
@@ -681,7 +743,8 @@ const newLocaleFormsComplete = [
     ruProductHtml,
     ruMotorcycleHtml,
     ruSampleHtml,
-    ...Object.values(synchronizedDetailHtml.ru)
+    ...Object.values(synchronizedDetailHtml.ru),
+    ...Object.values(synchronizedApplicationHtml.ru)
   ]
 ].every(([language, ...pages]) =>
   pages.every(
@@ -769,20 +832,19 @@ if (
   fail("sitemap.xml does not list both public pages");
 }
 
-const p0ApplicationUrls = [
-  "https://www.vikingagm.com/applications/agm-separator-for-ups-battery/",
-  "https://www.vikingagm.com/zh/applications/agm-separator-for-ups-battery/",
-  "https://www.vikingagm.com/applications/agm-separator-for-motorcycle-battery/",
-  "https://www.vikingagm.com/zh/applications/agm-separator-for-motorcycle-battery/",
-  "https://www.vikingagm.com/vi/applications/agm-separator-for-motorcycle-battery/",
-  "https://www.vikingagm.com/ko/applications/agm-separator-for-motorcycle-battery/",
-  "https://www.vikingagm.com/ja/applications/agm-separator-for-motorcycle-battery/",
-  "https://www.vikingagm.com/es/applications/agm-separator-for-motorcycle-battery/",
-  "https://www.vikingagm.com/pt/applications/agm-separator-for-motorcycle-battery/",
-  "https://www.vikingagm.com/ru/applications/agm-separator-for-motorcycle-battery/",
-  "https://www.vikingagm.com/applications/agm-separator-for-energy-storage-battery/",
-  "https://www.vikingagm.com/zh/applications/agm-separator-for-energy-storage-battery/"
+const applicationLocalePrefixes = ["", "zh", ...synchronizedLocaleCodes];
+const allApplicationSlugs = [
+  "agm-separator-for-vrla-battery",
+  "agm-separator-for-ups-battery",
+  "agm-separator-for-motorcycle-battery",
+  "agm-separator-for-energy-storage-battery"
 ];
+const p0ApplicationUrls = applicationLocalePrefixes.flatMap((locale) =>
+  allApplicationSlugs.map(
+    (slug) =>
+      `https://www.vikingagm.com/${locale ? `${locale}/` : ""}applications/${slug}/`
+  )
+);
 
 if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   pass("sitemap.xml lists P0 application pages");
@@ -790,10 +852,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 80) {
-  pass("sitemap.xml lists the expected 80 localized public URLs");
+if (sitemapUrls.length === 98) {
+  pass("sitemap.xml lists the expected 98 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 80`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 98`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -916,7 +978,11 @@ const expectedSitemapLastmod = [
     [
       `https://www.vikingagm.com/${locale}/quality-control/agm-separator-testing/`,
       "2026-07-31"
-    ]
+    ],
+    ...allApplicationSlugs.map((slug) => [
+      `https://www.vikingagm.com/${locale}/applications/${slug}/`,
+      "2026-07-31"
+    ])
   ])
 ];
 

@@ -73,10 +73,25 @@ const applicationsNavItems = {
       href: "/vi/#applications"
     },
     {
+      title: "Tấm ngăn AGM cho ắc quy VRLA",
+      description: "Trao đổi về tấm ngăn cho ắc quy axit-chì VRLA kín khí.",
+      href: "/vi/applications/agm-separator-for-vrla-battery/"
+    },
+    {
+      title: "Tấm ngăn AGM cho ắc quy UPS",
+      description: "Trao đổi về thông số cho ắc quy UPS và nguồn điện dự phòng.",
+      href: "/vi/applications/agm-separator-for-ups-battery/"
+    },
+    {
       title: "Tấm ngăn AGM cho ắc quy xe máy",
       description:
         "Trao đổi về kích thước và dạng tấm ngăn cho ắc quy khởi động xe máy.",
       href: "/vi/applications/agm-separator-for-motorcycle-battery/"
+    },
+    {
+      title: "Tấm ngăn AGM cho ắc quy lưu trữ năng lượng",
+      description: "Trao đổi về tấm ngăn cho hệ thống lưu trữ và nguồn dự phòng.",
+      href: "/vi/applications/agm-separator-for-energy-storage-battery/"
     }
   ],
   ko: [
@@ -86,9 +101,24 @@ const applicationsNavItems = {
       href: "/ko/#applications"
     },
     {
+      title: "VRLA 배터리용 AGM 분리막",
+      description: "밀폐형 VRLA 납축전지용 분리막 사양을 검토합니다.",
+      href: "/ko/applications/agm-separator-for-vrla-battery/"
+    },
+    {
+      title: "UPS 배터리용 AGM 분리막",
+      description: "UPS 및 대기전원용 VRLA 배터리 사양을 검토합니다.",
+      href: "/ko/applications/agm-separator-for-ups-battery/"
+    },
+    {
       title: "오토바이 배터리용 AGM 분리막",
       description: "소형 시동 배터리용 규격, 롤 및 시트 형태를 검토합니다.",
       href: "/ko/applications/agm-separator-for-motorcycle-battery/"
+    },
+    {
+      title: "에너지 저장 배터리용 AGM 분리막",
+      description: "납축전지 에너지 저장 및 백업 전원용 분리막을 검토합니다.",
+      href: "/ko/applications/agm-separator-for-energy-storage-battery/"
     }
   ],
   ja: [
@@ -98,9 +128,24 @@ const applicationsNavItems = {
       href: "/ja/#applications"
     },
     {
+      title: "VRLAバッテリー用AGMセパレーター",
+      description: "密閉形VRLA鉛蓄電池向けの仕様を確認します。",
+      href: "/ja/applications/agm-separator-for-vrla-battery/"
+    },
+    {
+      title: "UPSバッテリー用AGMセパレーター",
+      description: "UPS・待機電源用VRLAバッテリー向けの仕様を確認します。",
+      href: "/ja/applications/agm-separator-for-ups-battery/"
+    },
+    {
       title: "二輪車用バッテリー向けAGMセパレーター",
       description: "小型始動用バッテリーの寸法、ロール・シート形状を確認します。",
       href: "/ja/applications/agm-separator-for-motorcycle-battery/"
+    },
+    {
+      title: "蓄電用バッテリー向けAGMセパレーター",
+      description: "鉛蓄電池の蓄電・バックアップ用途向けの仕様を確認します。",
+      href: "/ja/applications/agm-separator-for-energy-storage-battery/"
     }
   ],
   es: [
@@ -110,9 +155,24 @@ const applicationsNavItems = {
       href: "/es/#applications"
     },
     {
+      title: "Separador AGM para baterías VRLA",
+      description: "Revisión de separadores para baterías VRLA selladas de plomo-ácido.",
+      href: "/es/applications/agm-separator-for-vrla-battery/"
+    },
+    {
+      title: "Separador AGM para baterías UPS",
+      description: "Revisión de especificaciones para baterías UPS y de respaldo.",
+      href: "/es/applications/agm-separator-for-ups-battery/"
+    },
+    {
       title: "Separador AGM para baterías de motocicleta",
       description: "Revisión de medidas y formatos para baterías compactas de arranque.",
       href: "/es/applications/agm-separator-for-motorcycle-battery/"
+    },
+    {
+      title: "Separador AGM para almacenamiento de energía",
+      description: "Revisión para baterías de almacenamiento y energía de respaldo.",
+      href: "/es/applications/agm-separator-for-energy-storage-battery/"
     }
   ],
   pt: [
@@ -122,9 +182,24 @@ const applicationsNavItems = {
       href: "/pt/#applications"
     },
     {
+      title: "Separador AGM para baterias VRLA",
+      description: "Análise de separadores para baterias VRLA seladas de chumbo-ácido.",
+      href: "/pt/applications/agm-separator-for-vrla-battery/"
+    },
+    {
+      title: "Separador AGM para baterias UPS",
+      description: "Análise de especificações para baterias UPS e de reserva.",
+      href: "/pt/applications/agm-separator-for-ups-battery/"
+    },
+    {
       title: "Separador AGM para baterias de motocicletas",
       description: "Análise de medidas e formatos para baterias compactas de partida.",
       href: "/pt/applications/agm-separator-for-motorcycle-battery/"
+    },
+    {
+      title: "Separador AGM para armazenamento de energia",
+      description: "Análise para baterias de armazenamento e energia de reserva.",
+      href: "/pt/applications/agm-separator-for-energy-storage-battery/"
     }
   ],
   ru: [
@@ -134,9 +209,24 @@ const applicationsNavItems = {
       href: "/ru/#applications"
     },
     {
+      title: "AGM-сепаратор для аккумуляторов VRLA",
+      description: "Согласование сепаратора для герметичных свинцово-кислотных аккумуляторов VRLA.",
+      href: "/ru/applications/agm-separator-for-vrla-battery/"
+    },
+    {
+      title: "AGM-сепаратор для аккумуляторов ИБП",
+      description: "Согласование характеристик для аккумуляторов ИБП и резервного питания.",
+      href: "/ru/applications/agm-separator-for-ups-battery/"
+    },
+    {
       title: "AGM-сепаратор для мотоциклетных аккумуляторов",
       description: "Согласование размеров и форматов для компактных стартерных аккумуляторов.",
       href: "/ru/applications/agm-separator-for-motorcycle-battery/"
+    },
+    {
+      title: "AGM-сепаратор для накопителей энергии",
+      description: "Согласование для систем хранения энергии и резервного питания.",
+      href: "/ru/applications/agm-separator-for-energy-storage-battery/"
     }
   ]
 } as const;
