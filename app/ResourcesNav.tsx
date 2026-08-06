@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
+import { secondaryResourceData } from "../content/secondary-resources.mjs";
 import {
   getArticlesByCategory,
   getResourceCategoryPath,
@@ -38,12 +39,20 @@ export function ResourcesNavDropdown({
   lang,
   label
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   label: string;
 }) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const t = resourcesNavCopy[lang];
+  const t =
+    lang === "en" || lang === "zh"
+      ? resourcesNavCopy[lang]
+      : {
+          start: secondaryResourceData[lang].hub.actionEyebrow,
+          browse: secondaryResourceData[lang].hub.libraryTitle,
+          viewAll: secondaryResourceData[lang].hub.libraryEyebrow,
+          viewAllDescription: secondaryResourceData[lang].hub.subtitle
+        };
 
   useEffect(() => {
     if (!open) {
@@ -194,11 +203,19 @@ export function ResourcesNavMobileGroup({
   label,
   onNavigate
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   label: string;
   onNavigate?: () => void;
 }) {
-  const t = resourcesNavCopy[lang];
+  const t =
+    lang === "en" || lang === "zh"
+      ? resourcesNavCopy[lang]
+      : {
+          start: secondaryResourceData[lang].hub.actionEyebrow,
+          browse: secondaryResourceData[lang].hub.libraryTitle,
+          viewAll: secondaryResourceData[lang].hub.libraryEyebrow,
+          viewAllDescription: secondaryResourceData[lang].hub.subtitle
+        };
 
   return (
     <div className="rounded-md border border-line bg-frost p-2">

@@ -1,5 +1,10 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import {
+  articleDefinitions,
+  articleKinds,
+  secondaryResourceLocales
+} from "../content/secondary-resources.mjs";
 
 const root = process.cwd();
 const content = JSON.parse(
@@ -37,6 +42,7 @@ const articles = [
     "agm-glass-fiber-vs-pvc-battery-separator"
   ]
 ];
+const allLocales = ["en", "zh", ...secondaryResourceLocales];
 
 let failed = false;
 
@@ -46,8 +52,14 @@ for (const [key, slug] of articles) {
   const enRoute = join(root, "app/blog", slug, "page.tsx");
   const zhRoute = join(root, "app/zh/blog", slug, "page.tsx");
 
-  check(article?.en && article?.zh, `${key} has English and Chinese article content`);
-  check(seo?.en && seo?.zh, `${key} has English and Chinese SEO content`);
+  check(
+    allLocales.every((locale) => article?.[locale]),
+    `${key} has article content in all 8 languages`
+  );
+  check(
+    allLocales.every((locale) => seo?.[locale]),
+    `${key} has SEO content in all 8 languages`
+  );
   check(existsSync(enRoute) && existsSync(zhRoute), `${key} has both route files`);
   check(
     seoSource.includes(`"${key}"`) || seoSource.includes(`${key}Seo`),
@@ -66,9 +78,20 @@ for (const [key, slug] of articles) {
 }
 
 check(
+  articleKinds.length === articles.length &&
+    articleKinds.every((kind) => articleDefinitions[kind]),
+  "secondary article registry matches the 8 canonical articles"
+);
+check(
+  existsSync(join(root, "app/[locale]/blog/[slug]/page.tsx")),
+  "secondary articles use the shared localized route"
+);
+
+check(
   existsSync(join(root, "app/resources/page.tsx")) &&
-    existsSync(join(root, "app/zh/resources/page.tsx")),
-  "resource hub has both route files"
+    existsSync(join(root, "app/zh/resources/page.tsx")) &&
+    existsSync(join(root, "app/[locale]/resources/page.tsx")),
+  "resource hub has English, Chinese and shared secondary routes"
 );
 check(
   sitemapSource.includes('en: "/resources/"') &&
@@ -164,7 +187,7 @@ if (failed) {
 }
 
 console.log(
-  `PASS content registry is complete for ${articles.length} bilingual articles and ${secondaryLocalizedPages.length} aligned secondary-language pages`
+  `PASS content registry is complete for ${articles.length} articles in 8 languages and ${secondaryLocalizedPages.length} aligned secondary-language pages`
 );
 
 function check(condition, message) {

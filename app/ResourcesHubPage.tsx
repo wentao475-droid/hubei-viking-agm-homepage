@@ -10,7 +10,8 @@ import {
   resourceCategoryCopy,
   resourceCategoryOrder
 } from "./resourceCatalog";
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
+import { secondaryResourceData } from "../content/secondary-resources.mjs";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const icpLicense =
@@ -77,13 +78,17 @@ function asset(path: string) {
   return `${basePath}${path}`;
 }
 
-function formatDate(date: string, lang: Lang) {
+function formatDate(date: string, lang: SiteLocale) {
   if (lang === "zh") {
     const [year, month, day] = date.split("-");
     return `${year}年${Number(month)}月${Number(day)}日`;
   }
 
-  return new Intl.DateTimeFormat("en-US", {
+  const dateLocales: Record<SiteLocale, string> = {
+    en: "en-US", zh: "zh-CN", vi: "vi-VN", ko: "ko-KR",
+    ja: "ja-JP", es: "es", pt: "pt-BR", ru: "ru-RU"
+  };
+  return new Intl.DateTimeFormat(dateLocales[lang], {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -91,8 +96,32 @@ function formatDate(date: string, lang: Lang) {
   }).format(new Date(`${date}T00:00:00Z`));
 }
 
-export function ResourcesHubPage({ lang }: { lang: Lang }) {
-  const t = pageCopy[lang];
+export function ResourcesHubPage({ lang }: { lang: SiteLocale }) {
+  const t: any =
+    lang === "en" || lang === "zh"
+      ? pageCopy[lang]
+      : {
+          homePath: `/${lang}/`, languagePath: "/resources/",
+          quoteLabel: secondaryResourceData[lang].ui.sample,
+          eyebrow: secondaryResourceData[lang].hub.eyebrow,
+          title: secondaryResourceData[lang].hub.title,
+          subtitle: secondaryResourceData[lang].hub.subtitle,
+          countLabel: secondaryResourceData[lang].hub.count,
+          actionEyebrow: secondaryResourceData[lang].hub.actionEyebrow,
+          actionTitle: secondaryResourceData[lang].hub.actionTitle,
+          actionText: secondaryResourceData[lang].hub.actionText,
+          libraryEyebrow: secondaryResourceData[lang].hub.libraryEyebrow,
+          libraryTitle: secondaryResourceData[lang].hub.libraryTitle,
+          articleLabel: secondaryResourceData[lang].ui.article,
+          readLabel: secondaryResourceData[lang].ui.read,
+          closingEyebrow: secondaryResourceData[lang].hub.closingEyebrow,
+          closingTitle: secondaryResourceData[lang].hub.closingTitle,
+          closingText: secondaryResourceData[lang].hub.closingText,
+          closingPrimary: secondaryResourceData[lang].ui.sampleTitle,
+          closingSecondary: secondaryResourceData[lang].hub.productLink,
+          footer: secondaryResourceData[lang].hub.footer,
+          backHome: secondaryResourceData[lang].nav.company
+        };
 
   return (
     <main className="min-h-screen overflow-hidden bg-frost text-ink">
@@ -153,12 +182,8 @@ export function ResourcesHubPage({ lang }: { lang: Lang }) {
                       }`}
                     >
                       {index === 0
-                        ? lang === "zh"
-                          ? "样品与规格"
-                          : "Sample & specification"
-                        : lang === "zh"
-                          ? "下载资料"
-                          : "Download"}
+                        ? lang === "en" ? "Sample & specification" : lang === "zh" ? "样品与规格" : secondaryResourceData[lang].ui.sample
+                        : lang === "en" ? "Download" : lang === "zh" ? "下载资料" : secondaryResourceData[lang].ui.download}
                     </span>
                     <span className="mt-4 block text-xl font-bold leading-7">
                       {localizeText(action.title, lang)}
@@ -282,9 +307,9 @@ export function ResourcesHubPage({ lang }: { lang: Lang }) {
             </a>
             <a
               href={asset(
-                lang === "zh"
-                  ? "/zh/products/agm-separator/"
-                  : "/products/agm-separator/"
+                lang === "en"
+                  ? "/products/agm-separator/"
+                  : `/${lang}/products/agm-separator/`
               )}
               className="inline-flex items-center justify-center gap-2 rounded-md border border-line bg-white px-6 py-3.5 text-sm font-bold text-ink transition hover:border-signal hover:text-signal"
             >

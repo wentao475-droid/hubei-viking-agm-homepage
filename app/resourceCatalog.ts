@@ -1,19 +1,21 @@
-export type ResourceLang = "en" | "zh";
+import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
+import {
+  articleDefinitions,
+  secondaryResourceData,
+  secondaryResourceLocales
+} from "../content/secondary-resources.mjs";
+
+export type ResourceLang = SiteLocale;
 
 export type ResourceCategory =
   | "buyerGuides"
   | "manufacturingQuality"
   | "industryApplications";
 
-type LocalizedText = {
-  en: string;
-  zh: string;
-};
+type LocalizedText = Record<Lang, string> & Partial<Record<SiteLocale, string>>;
 
-type LocalizedHref = {
-  en: string;
-  zh: string;
-};
+type LocalizedHref = Record<Lang, string> & Partial<Record<SiteLocale, string>>;
 
 export type ResourceAction = {
   id: "sample" | "capabilityPdf";
@@ -249,16 +251,53 @@ export const resourceArticles: ResourceArticle[] = [
   }
 ];
 
+const articleKindById: Record<string, string> = {
+  "what-is-agm-separator": "whatIsAgmSeparator",
+  "key-technical-parameters": "keyTechnicalParameters",
+  "how-to-choose-agm-separator": "howToChooseAgmSeparator",
+  "agm-glass-fiber-vs-pvc-separator": "agmGlassFiberVsPvcSeparator",
+  "manufacturing-quality-delivery": "agmSeparatorManufacturingQualityDelivery",
+  "performance-consistency": "agmSeparatorPerformanceConsistency",
+  "export-supply-readiness": "agmSeparatorExportSupplyReadiness",
+  "ups-vrla-selection": "upsVrlaTechnologySelection"
+};
+
+for (const locale of secondaryResourceLocales as SiteLocale[]) {
+  const localeData = secondaryResourceData[locale];
+
+  for (const category of resourceCategoryOrder) {
+    resourceCategoryCopy[category].title[locale] = localeData.categories[category][0];
+    resourceCategoryCopy[category].description[locale] = localeData.categories[category][1];
+  }
+
+  for (const action of resourceActions) {
+    action.title[locale] = localeData.actions[action.id][0];
+    action.description[locale] = localeData.actions[action.id][1];
+    action.href[locale] =
+      action.id === "sample"
+        ? `/${locale}/request-agm-separator-sample/`
+        : "/downloads/viking-agm-technical-capability.pdf";
+  }
+
+  for (const article of resourceArticles) {
+    const kind = articleKindById[article.id];
+    const slug = articleDefinitions[kind][0];
+    article.title[locale] = localeData.topics[kind].title;
+    article.description[locale] = localeData.topics[kind].summary;
+    article.href[locale] = `/${locale}/blog/${slug}/`;
+  }
+}
+
 export function localizeText(value: LocalizedText, lang: ResourceLang) {
-  return value[lang];
+  return value[lang] ?? value.en;
 }
 
 export function localizeHref(value: LocalizedHref, lang: ResourceLang) {
-  return value[lang];
+  return value[lang] ?? value.en;
 }
 
 export function getResourcesPath(lang: ResourceLang) {
-  return lang === "zh" ? "/zh/resources/" : "/resources/";
+  return lang === "en" ? "/resources/" : `/${lang}/resources/`;
 }
 
 export function getResourceCategoryPath(

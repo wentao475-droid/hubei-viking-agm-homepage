@@ -4,6 +4,22 @@ import { join } from "node:path";
 const root = process.cwd();
 const outDir = join(root, "out");
 const synchronizedLocaleCodes = ["vi", "ko", "ja", "es", "pt", "ru"];
+const synchronizedResourceSlugs = [
+  "what-is-agm-separator",
+  "key-technical-parameters-of-agm-separator",
+  "how-to-choose-agm-separator",
+  "agm-glass-fiber-vs-pvc-battery-separator",
+  "agm-separator-manufacturing-quality-delivery",
+  "agm-separator-performance-consistency",
+  "agm-separator-export-supply-readiness",
+  "why-ups-projects-still-use-vrla-batteries"
+];
+const synchronizedResourceFiles = synchronizedLocaleCodes.flatMap((locale) => [
+  `${locale}/resources/index.html`,
+  ...synchronizedResourceSlugs.map(
+    (slug) => `${locale}/blog/${slug}/index.html`
+  )
+]);
 const synchronizedDetailFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/products/agm-separator-rolls/index.html`,
   `${locale}/products/agm-separator-sheets/index.html`,
@@ -66,7 +82,8 @@ const requiredFiles = [
   "favicon.ico",
   "videos/viking-agm-promo-480p.mp4",
   ...synchronizedDetailFiles,
-  ...synchronizedApplicationFiles
+  ...synchronizedApplicationFiles,
+  ...synchronizedResourceFiles
 ];
 
 function pass(message) {
@@ -185,6 +202,20 @@ const synchronizedApplicationHtml = Object.fromEntries(
 );
 const resourcesHtml = readOutFile("resources/index.html");
 const zhResourcesHtml = readOutFile("zh/resources/index.html");
+const synchronizedResourceHtml = Object.fromEntries(
+  synchronizedLocaleCodes.map((locale) => [
+    locale,
+    {
+      hub: readOutFile(`${locale}/resources/index.html`),
+      articles: Object.fromEntries(
+        synchronizedResourceSlugs.map((slug) => [
+          slug,
+          readOutFile(`${locale}/blog/${slug}/index.html`)
+        ])
+      )
+    }
+  ])
+);
 const upsVrlaArticleHtml = readOutFile(
   "blog/why-ups-projects-still-use-vrla-batteries/index.html"
 );
@@ -236,6 +267,31 @@ if (
   pass("social links use safe external-link attributes");
 } else {
   fail("social links are missing URLs or safe external-link attributes");
+}
+
+const secondaryResourcesComplete = synchronizedLocaleCodes.every((locale) => {
+  const { hub, articles } = synchronizedResourceHtml[locale];
+  const hubListsAllArticles = synchronizedResourceSlugs.every((slug) =>
+    hub.includes(`href="/${locale}/blog/${slug}/"`)
+  );
+  const articleMetadataComplete = Object.entries(articles).every(
+    ([slug, html]) =>
+      html.includes(`https://www.vikingagm.com/${locale}/blog/${slug}/`) &&
+      html.includes('"@type":"BlogPosting"') &&
+      html.includes('"dateModified":"2026-08-05"')
+  );
+  return (
+    hubListsAllArticles &&
+    hub.includes('"@type":"CollectionPage"') &&
+    hub.includes('"@type":"ItemList"') &&
+    articleMetadataComplete
+  );
+});
+
+if (secondaryResourcesComplete) {
+  pass("all secondary-language resource hubs and articles are complete");
+} else {
+  fail("one or more secondary-language resource hubs or articles are incomplete");
 }
 
 if (
@@ -852,10 +908,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 98) {
-  pass("sitemap.xml lists the expected 98 localized public URLs");
+if (sitemapUrls.length === 152) {
+  pass("sitemap.xml lists the expected 152 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 98`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 152`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(

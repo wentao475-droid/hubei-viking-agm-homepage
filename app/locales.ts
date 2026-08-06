@@ -12,6 +12,31 @@ export const localeHomePaths: Record<SiteLocale, string> = {
   ru: "/ru/"
 };
 
+const synchronizedResourcePaths = [
+  "resources",
+  "blog/what-is-agm-separator",
+  "blog/key-technical-parameters-of-agm-separator",
+  "blog/how-to-choose-agm-separator",
+  "blog/agm-glass-fiber-vs-pvc-battery-separator",
+  "blog/agm-separator-manufacturing-quality-delivery",
+  "blog/agm-separator-performance-consistency",
+  "blog/agm-separator-export-supply-readiness",
+  "blog/why-ups-projects-still-use-vrla-batteries"
+] as const;
+
+function allLocalePaths(suffix: string): Record<SiteLocale, string> {
+  return {
+    en: `/${suffix}/`,
+    zh: `/zh/${suffix}/`,
+    vi: `/vi/${suffix}/`,
+    ko: `/ko/${suffix}/`,
+    ja: `/ja/${suffix}/`,
+    es: `/es/${suffix}/`,
+    pt: `/pt/${suffix}/`,
+    ru: `/ru/${suffix}/`
+  };
+}
+
 export const localizedRouteGroups = [
   localeHomePaths,
   {
@@ -103,7 +128,8 @@ export const localizedRouteGroups = [
     es: "/es/request-agm-separator-sample/",
     pt: "/pt/request-agm-separator-sample/",
     ru: "/ru/request-agm-separator-sample/"
-  }
+  },
+  ...synchronizedResourcePaths.map(allLocalePaths)
 ] satisfies Array<Partial<Record<SiteLocale, string>>>;
 
 export function languagePathsFor(

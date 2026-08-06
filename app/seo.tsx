@@ -11,6 +11,12 @@ import {
 } from "./resourceCatalog";
 import { localeHomePaths } from "./locales";
 import type { Lang, SiteLocale } from "./locales";
+import {
+  articleDefinitions,
+  buildSecondaryArticleSeo,
+  secondaryResourceData
+} from "../content/secondary-resources.mjs";
+import type { BlogArticleKind } from "./BlogArticlePage";
 
 type ApplicationLocale = SiteLocale;
 
@@ -1821,8 +1827,26 @@ export function buildHomeMetadata(lang: SiteLocale): Metadata {
   });
 }
 
-export function buildResourcesHubMetadata(lang: Lang): Metadata {
-  const current = resourcesHubSeo[lang];
+function secondaryResourcesHubSeo(lang: Exclude<SiteLocale, Lang>) {
+  const data = secondaryResourceData[lang];
+  return {
+    path: `/${lang}/resources/`,
+    locale: data.meta.og,
+    language: data.meta.hreflang,
+    siteName: data.meta.site,
+    title: `${data.hub.title} | Viking AGM`,
+    description: data.hub.subtitle,
+    keywords: ["AGM separator", "VRLA", data.nav.resources, data.nav.quality],
+    pageName: data.hub.title,
+    breadcrumbs: [data.nav.company, data.nav.resources]
+  };
+}
+
+export function buildResourcesHubMetadata(lang: SiteLocale): Metadata {
+  const current =
+    lang === "en" || lang === "zh"
+      ? resourcesHubSeo[lang]
+      : secondaryResourcesHubSeo(lang);
 
   return buildMetadata({
     title: current.title,
@@ -1831,6 +1855,48 @@ export function buildResourcesHubMetadata(lang: Lang): Metadata {
     path: current.path,
     enPath: "/resources/",
     zhPath: "/zh/resources/",
+    viPath: "/vi/resources/",
+    koPath: "/ko/resources/",
+    jaPath: "/ja/resources/",
+    esPath: "/es/resources/",
+    ptPath: "/pt/resources/",
+    ruPath: "/ru/resources/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
+      width: 1600,
+      height: 1000
+    }
+  });
+}
+
+function articleLocalePaths(kind: BlogArticleKind) {
+  const slug = articleDefinitions[kind][0];
+  return {
+    enPath: `/blog/${slug}/`,
+    zhPath: `/zh/blog/${slug}/`,
+    viPath: `/vi/blog/${slug}/`,
+    koPath: `/ko/blog/${slug}/`,
+    jaPath: `/ja/blog/${slug}/`,
+    esPath: `/es/blog/${slug}/`,
+    ptPath: `/pt/blog/${slug}/`,
+    ruPath: `/ru/blog/${slug}/`
+  };
+}
+
+export function buildSecondaryArticleMetadata(
+  lang: Exclude<SiteLocale, Lang>,
+  kind: BlogArticleKind
+): Metadata {
+  const current = buildSecondaryArticleSeo(lang, kind);
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: current.keywords,
+    path: current.path,
+    ...articleLocalePaths(kind),
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -2517,7 +2583,7 @@ export function SampleRequestStructuredData({ lang }: { lang: SiteLocale }) {
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
-        itemListElement: current.breadcrumbs.map((name, index) => ({
+        itemListElement: (current.breadcrumbs as readonly string[]).map((name, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name,
@@ -2573,7 +2639,7 @@ export function AgmSeparatorStructuredData({ lang }: { lang: SiteLocale }) {
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
-        itemListElement: current.breadcrumbs.map((name, index) => ({
+        itemListElement: (current.breadcrumbs as readonly string[]).map((name, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name,
@@ -3504,8 +3570,11 @@ export function AgmGlassFiberVsPvcSeparatorStructuredData({
   return <JsonLd data={data} />;
 }
 
-export function ResourcesHubStructuredData({ lang }: { lang: Lang }) {
-  const current = resourcesHubSeo[lang];
+export function ResourcesHubStructuredData({ lang }: { lang: SiteLocale }) {
+  const current =
+    lang === "en" || lang === "zh"
+      ? resourcesHubSeo[lang]
+      : secondaryResourcesHubSeo(lang);
   const url = `${SITE_URL}${current.path}`;
 
   const data = {
@@ -3548,6 +3617,63 @@ export function ResourcesHubStructuredData({ lang }: { lang: Lang }) {
             index === 0
               ? `${SITE_URL}${localeHomePaths[lang]}`
               : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function SecondaryArticleStructuredData({
+  lang,
+  kind
+}: {
+  lang: Exclude<SiteLocale, Lang>;
+  kind: BlogArticleKind;
+}) {
+  const current = buildSecondaryArticleSeo(lang, kind);
+  const url = `${SITE_URL}${current.path}`;
+  const published = articleDefinitions[kind][2];
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.pageName,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        description: current.articleDescription,
+        url,
+        datePublished: published,
+        dateModified: "2026-08-05",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: (current.breadcrumbs as string[]).map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${localeHomePaths[lang]}`
+              : index === 1
+                ? `${SITE_URL}/${lang}/resources/`
+                : url
         }))
       }
     ]

@@ -6,10 +6,14 @@ import { articleContent } from "./cms-content";
 import { InquiryForm } from "./InquiryForm";
 import { SiteHeader } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
-import type { Lang } from "./VikingHome";
+import type { SiteLocale } from "./locales";
+import {
+  secondaryArticleCopy,
+  secondaryResourceData
+} from "../content/secondary-resources.mjs";
 
 type IconProps = { size?: number; className?: string };
-type BlogArticleKind =
+export type BlogArticleKind =
   | "whatIsAgmSeparator"
   | "keyTechnicalParameters"
   | "howToChooseAgmSeparator"
@@ -18,6 +22,49 @@ type BlogArticleKind =
   | "agmSeparatorExportSupplyReadiness"
   | "upsVrlaTechnologySelection"
   | "agmGlassFiberVsPvcSeparator";
+type ArticlePageData = {
+  homePath: string;
+  languagePath: string;
+  quote: string;
+  nav: { company: string; quality: string };
+  hero: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    secondary: string;
+    image?: { src: string; alt: string; width: number; height: number };
+  };
+  intro: string[];
+  sections: Array<{ eyebrow: string; title: string; text: string }>;
+  parameters: Array<[string, string]>;
+  formats: {
+    eyebrow: string;
+    title: string;
+    items: Array<[string, string, string, string]>;
+  };
+  checklist: { eyebrow: string; title: string; text: string; items: string[] };
+  related: { eyebrow: string; title: string; items: Array<[string, string]> };
+  inquiry: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    checklist: string[];
+    placeholders: { message: string };
+  };
+  footer: { description: string; wechat: string; mobile: string };
+  comparison?: {
+    eyebrow: string;
+    title: string;
+    columns: [string, string, string];
+    rows: Array<[string, string, string]>;
+  };
+  references?: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    items: Array<[string, string]>;
+  };
+};
 type IconName =
   | "arrow"
   | "check"
@@ -2285,30 +2332,60 @@ export function BlogArticlePage({
   lang,
   page = "whatIsAgmSeparator"
 }: {
-  lang: Lang;
+  lang: SiteLocale;
   page?: BlogArticleKind;
 }) {
-  const defaultArticle =
+  const primaryLang = lang === "zh" ? "zh" : "en";
+  const secondaryArticle =
+    lang === "en" || lang === "zh"
+      ? null
+      : secondaryArticleCopy[lang][page];
+  const defaultArticle: any = secondaryArticle ?? (
     page === "keyTechnicalParameters"
-      ? keyTechnicalCopy[lang]
+      ? keyTechnicalCopy[primaryLang]
       : page === "howToChooseAgmSeparator"
-        ? howToChooseCopy[lang]
+        ? howToChooseCopy[primaryLang]
         : page === "agmSeparatorManufacturingQualityDelivery"
-          ? manufacturingDeliveryCopy[lang]
+          ? manufacturingDeliveryCopy[primaryLang]
           : page === "agmSeparatorPerformanceConsistency"
-            ? performanceConsistencyCopy[lang]
+            ? performanceConsistencyCopy[primaryLang]
             : page === "agmSeparatorExportSupplyReadiness"
-              ? exportSupplyReadinessCopy[lang]
+              ? exportSupplyReadinessCopy[primaryLang]
               : page === "upsVrlaTechnologySelection"
-                ? upsVrlaTechnologySelectionCopy[lang]
+                ? upsVrlaTechnologySelectionCopy[primaryLang]
                 : page === "agmGlassFiberVsPvcSeparator"
-                  ? agmGlassFiberVsPvcSeparatorCopy[lang]
-          : articleCopy[lang];
+                  ? agmGlassFiberVsPvcSeparatorCopy[primaryLang]
+          : articleCopy[primaryLang]);
+  const localizedUi =
+    lang === "en"
+      ? {
+          sample: "Request Sample", sampleTitle: "Request a Sample & Specification Match",
+          contents: "Article Contents", parameter: "Parameter", meaning: "Buyer-friendly meaning",
+          next: "Sourcing Next Step", sampleText: "Use the buyer checklist to share your application, product form and available dimensions.",
+          reference: "Technical Reference", pdfTitle: "Download the Viking AGM Capability PDF",
+          pdfText: "Review product forms, quality checks, packing and specification information.",
+          company: "Company", product: "Products", resource: "Resources", contact: "Contact", rights: "All rights reserved."
+        }
+      : lang === "zh"
+        ? {
+            sample: "申请样品", sampleTitle: "申请样品与规格匹配", contents: "文章目录", parameter: "参数", meaning: "买家沟通重点",
+            next: "采购下一步", sampleText: "按清单提供电池应用、产品形式和已有尺寸，开始样品沟通。",
+            reference: "技术资料", pdfTitle: "下载维京 AGM 技术能力 PDF", pdfText: "查看产品形式、质量检查、包装和规格沟通要点。",
+            company: "公司", product: "产品", resource: "资料", contact: "联系", rights: "保留所有权利。"
+          }
+        : secondaryResourceData[lang].ui;
   const sourceNote =
     page === "agmSeparatorExportSupplyReadiness"
-      ? exportSupplySourceCopy[lang]
+      ? lang === "en" || lang === "zh"
+        ? exportSupplySourceCopy[lang]
+        : {
+            eyebrow: localizedUi.source,
+            title: secondaryResourceData[lang].topics[page].title,
+            text: secondaryResourceData[lang].topics[page].intro,
+            linkLabel: localizedUi.read
+          }
       : null;
-  const t = articleContent(page, lang, defaultArticle);
+  const t = articleContent(page, lang, defaultArticle) as ArticlePageData;
   const sectionIds =
     page === "keyTechnicalParameters"
       ? [
@@ -2339,14 +2416,13 @@ export function BlogArticlePage({
                   ? ["electrolyte-management", "agm-structure", "pvc-profile", "replacement-boundary", "buyer-review", "viking-coordination"]
       : ["definition", "function", "parameters"];
   const heroImage =
-    "image" in t.hero
-      ? t.hero.image
-      : {
+    t.hero.image ?? {
           src: "/images/viking-finished-separator-roll-900.webp",
           alt: "Finished AGM separator roll",
           width: 900,
           height: 675
         };
+  const comparison = t.comparison;
 
   return (
     <main className="min-h-screen bg-frost text-ink">
@@ -2354,18 +2430,18 @@ export function BlogArticlePage({
         lang={lang}
         homePath={t.homePath}
         languagePath={t.languagePath}
-        quoteLabel={lang === "zh" ? "申请样品" : "Request Sample"}
+        quoteLabel={localizedUi.sample}
       />
 
       <section className="relative overflow-hidden bg-white px-4 pb-20 pt-32 sm:px-6 sm:pt-36 lg:px-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(14,110,184,0.14),transparent_32%),linear-gradient(180deg,#ffffff_0%,#f5f7fa_100%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1fr] lg:items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-md border border-line bg-white/80 px-4 py-2 text-sm font-bold uppercase tracking-[0.16em] text-signal shadow-sm">
-              <Factory size={17} />
-              {t.hero.eyebrow}
+          <div className="min-w-0">
+            <div className="inline-flex w-full min-w-0 items-start gap-2 rounded-md border border-line bg-white/80 px-4 py-2 text-sm font-bold uppercase leading-5 tracking-[0.16em] text-signal shadow-sm sm:w-auto sm:max-w-full">
+              <Factory className="mt-0.5 shrink-0" size={17} />
+              <span className="min-w-0 flex-1 whitespace-normal break-words">{t.hero.eyebrow}</span>
             </div>
-            <h1 className="mt-8 text-5xl font-black leading-[0.98] tracking-normal text-ink sm:text-6xl lg:text-7xl">
+            <h1 className="mt-8 break-words text-5xl font-black leading-[0.98] tracking-normal text-ink sm:text-6xl lg:text-7xl">
               {t.hero.title}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-graphite">
@@ -2374,19 +2450,17 @@ export function BlogArticlePage({
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-ink"
+                className="inline-flex min-h-14 w-full min-w-0 items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-center text-base font-semibold leading-6 text-white shadow-sm transition hover:bg-ink sm:w-auto"
               >
-                {lang === "zh"
-                  ? "申请样品与规格匹配"
-                  : "Request a Sample & Specification Match"}
-                <Send size={18} />
+                <span className="min-w-0 flex-1 whitespace-normal break-words sm:flex-none">{localizedUi.sampleTitle}</span>
+                <Send className="shrink-0" size={18} />
               </a>
               <a
                 href="#buyer-checklist"
-                className="inline-flex items-center justify-center gap-2 rounded-md border border-line bg-white px-6 py-3.5 text-base font-semibold text-ink transition hover:border-signal hover:text-signal"
+                className="inline-flex min-h-14 w-full min-w-0 items-center justify-center gap-2 rounded-md border border-line bg-white px-6 py-3.5 text-center text-base font-semibold leading-6 text-ink transition hover:border-signal hover:text-signal sm:w-auto"
               >
-                {t.hero.secondary}
-                <ArrowRight size={18} />
+                <span className="min-w-0 flex-1 whitespace-normal break-words sm:flex-none">{t.hero.secondary}</span>
+                <ArrowRight className="shrink-0" size={18} />
               </a>
             </div>
           </div>
@@ -2409,12 +2483,12 @@ export function BlogArticlePage({
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <div className="rounded-md border border-line bg-white p-6 shadow-sm">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
-                {lang === "zh" ? "文章目录" : "Article Contents"}
+                {localizedUi.contents}
               </p>
               <div className="mt-5 grid gap-3 text-sm font-semibold text-graphite">
                 {[
-                  ...("comparison" in t
-                    ? [[t.comparison.eyebrow, "#comparison"]]
+                  ...(comparison
+                    ? [[comparison.eyebrow, "#comparison"]]
                     : []),
                   ...t.sections.map((section, index) => [
                     section.eyebrow,
@@ -2442,23 +2516,23 @@ export function BlogArticlePage({
               ))}
             </div>
 
-            {"comparison" in t && (
+            {comparison && (
               <section
                 id="comparison"
                 className="mt-10 scroll-mt-28 border-t border-line pt-10"
               >
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
-                  {t.comparison.eyebrow}
+                  {comparison.eyebrow}
                 </p>
                 <h2 className="mt-3 text-3xl font-bold leading-tight text-ink">
-                  {t.comparison.title}
+                  {comparison.title}
                 </h2>
 
                 <div className="mt-7 hidden overflow-hidden rounded-md border border-line md:block">
                   <table className="w-full table-fixed border-collapse text-left text-sm">
                     <thead className="bg-ink text-white">
                       <tr>
-                        {t.comparison.columns.map((column, index) => (
+                  {comparison.columns.map((column, index) => (
                           <th
                             key={column}
                             className={`px-4 py-4 font-bold ${
@@ -2471,7 +2545,7 @@ export function BlogArticlePage({
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-line">
-                      {t.comparison.rows.map(([point, agm, pvc]) => (
+                      {comparison.rows.map(([point, agm, pvc]) => (
                         <tr key={point} className="align-top">
                           <th className="bg-frost px-4 py-4 font-bold text-ink">
                             {point}
@@ -2485,7 +2559,7 @@ export function BlogArticlePage({
                 </div>
 
                 <div className="mt-7 grid gap-4 md:hidden">
-                  {t.comparison.rows.map(([point, agm, pvc]) => (
+                  {comparison.rows.map(([point, agm, pvc]) => (
                     <article
                       key={point}
                       className="rounded-md border border-line bg-frost p-5"
@@ -2494,13 +2568,13 @@ export function BlogArticlePage({
                       <dl className="mt-4 grid gap-4">
                         <div>
                           <dt className="text-xs font-bold uppercase tracking-[0.14em] text-signal">
-                            {t.comparison.columns[1]}
+                            {comparison.columns[1]}
                           </dt>
                           <dd className="mt-2 text-sm leading-6 text-steel">{agm}</dd>
                         </div>
                         <div className="border-t border-line pt-4">
                           <dt className="text-xs font-bold uppercase tracking-[0.14em] text-copper">
-                            {t.comparison.columns[2]}
+                            {comparison.columns[2]}
                           </dt>
                           <dd className="mt-2 text-sm leading-6 text-steel">{pvc}</dd>
                         </div>
@@ -2535,10 +2609,10 @@ export function BlogArticlePage({
                   <thead className="bg-frost text-ink">
                     <tr>
                       <th className="w-1/3 px-4 py-3 font-bold">
-                        {lang === "zh" ? "参数" : "Parameter"}
+                        {localizedUi.parameter}
                       </th>
                       <th className="px-4 py-3 font-bold">
-                        {lang === "zh" ? "买家沟通重点" : "Buyer-friendly meaning"}
+                        {localizedUi.meaning}
                       </th>
                     </tr>
                   </thead>
@@ -2653,7 +2727,7 @@ export function BlogArticlePage({
             </a>
           </div>
         )}
-        {"references" in t && (
+        {t.references && (
           <div className="mx-auto mb-20 max-w-5xl rounded-md border border-line bg-frost p-6 shadow-sm sm:p-8">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
               {t.references.eyebrow}
@@ -2701,24 +2775,20 @@ export function BlogArticlePage({
         <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
           <a
             href={asset(
-              lang === "zh"
-                ? "/zh/request-agm-separator-sample/"
-                : "/request-agm-separator-sample/"
+              lang === "en"
+                ? "/request-agm-separator-sample/"
+                : `/${lang}/request-agm-separator-sample/`
             )}
             className="group rounded-md border border-signal/25 bg-signal p-6 text-white shadow-sm transition hover:bg-ink"
           >
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/65">
-              {lang === "zh" ? "采购下一步" : "Sourcing Next Step"}
+              {localizedUi.next}
             </p>
             <h2 className="mt-3 text-xl font-bold">
-              {lang === "zh"
-                ? "申请样品与规格匹配"
-                : "Request a Sample & Specification Match"}
+              {localizedUi.sampleTitle}
             </h2>
             <p className="mt-3 text-sm leading-7 text-white/75">
-              {lang === "zh"
-                ? "按清单提供电池应用、产品形式和已有尺寸，开始样品沟通。"
-                : "Use the buyer checklist to share your application, product form and available dimensions."}
+              {localizedUi.sampleText}
             </p>
             <ArrowRight
               size={18}
@@ -2731,17 +2801,13 @@ export function BlogArticlePage({
             className="group rounded-md border border-line bg-white p-6 text-ink transition hover:border-signal"
           >
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-signal">
-              {lang === "zh" ? "技术资料" : "Technical Reference"}
+              {localizedUi.reference}
             </p>
             <h2 className="mt-3 text-xl font-bold">
-              {lang === "zh"
-                ? "下载维京 AGM 技术能力 PDF"
-                : "Download the Viking AGM Capability PDF"}
+              {localizedUi.pdfTitle}
             </h2>
             <p className="mt-3 text-sm leading-7 text-steel">
-              {lang === "zh"
-                ? "查看产品形式、质量检查、包装和规格沟通要点。"
-                : "Review product forms, quality checks, packing and specification information."}
+              {localizedUi.pdfText}
             </p>
             <ArrowRight
               size={18}
@@ -2853,10 +2919,10 @@ export function BlogArticlePage({
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              [lang === "zh" ? "公司" : "Company", [t.nav.company, t.nav.quality]],
-              [lang === "zh" ? "产品" : "Products", [t.formats.items[0][0], t.formats.items[1][0]]],
-              [lang === "zh" ? "资料" : "Resources", [t.hero.title, t.checklist.title]],
-              [lang === "zh" ? "联系" : "Contact", [t.quote, t.inquiry.title]]
+              [localizedUi.company, [t.nav.company, t.nav.quality]],
+              [localizedUi.product, [t.formats.items[0][0], t.formats.items[1][0]]],
+              [localizedUi.resource, [t.hero.title, t.checklist.title]],
+              [localizedUi.contact, [t.quote, t.inquiry.title]]
             ].map(([title, links]) => (
               <div key={title as string}>
                 <h3 className="font-bold text-ink">{title as string}</h3>
@@ -2877,7 +2943,7 @@ export function BlogArticlePage({
         </div>
         <div className="mx-auto mt-10 max-w-7xl border-t border-line pt-6 text-sm text-steel">
           <div>
-            © 2026 Hubei Viking Technology Co., Ltd. {lang === "zh" ? "保留所有权利。" : "All rights reserved."}
+            © 2026 Hubei Viking Technology Co., Ltd. {localizedUi.rights}
           </div>
           <a
             href="https://beian.miit.gov.cn/"
@@ -2916,7 +2982,7 @@ function SectionHeading({
   );
 }
 
-function QuickContactDock({ lang }: { lang: Lang }) {
+function QuickContactDock({ lang }: { lang: SiteLocale }) {
   const [copiedContact, setCopiedContact] = useState<"phone" | "email" | null>(
     null
   );
@@ -3013,7 +3079,7 @@ function CopyContactButton({
 }: {
   label: string;
   value: string;
-  lang: Lang;
+  lang: SiteLocale;
 }) {
   const [copied, setCopied] = useState(false);
   const copiedLabel = lang === "zh" ? "已复制" : "Copied";

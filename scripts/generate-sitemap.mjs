@@ -198,11 +198,24 @@ const pages = [
   }
 ];
 
+const secondaryLocales = ["vi", "ko", "ja", "es", "pt", "ru"];
+for (const page of pages.filter(
+  ({ en }) => en === "/resources/" || en.startsWith("/blog/")
+)) {
+  for (const locale of secondaryLocales) {
+    page[locale] = `/${locale}${page.en}`;
+  }
+  page.secondaryLastmod = "2026-08-05";
+}
+
 function absolute(path) {
   return `${SITE_URL}${path}`;
 }
 
 function urlEntry(path, alternate) {
+  const isSecondaryLocale = secondaryLocales.some((locale) =>
+    path.startsWith(`/${locale}/`)
+  );
   const viAlternate = alternate.vi
     ? `\n    <xhtml:link rel="alternate" hreflang="vi-VN" href="${absolute(alternate.vi)}" />`
     : "";
@@ -223,7 +236,7 @@ function urlEntry(path, alternate) {
     : "";
   return `  <url>
     <loc>${absolute(path)}</loc>
-    <lastmod>${alternate.lastmod}</lastmod>
+    <lastmod>${isSecondaryLocale && alternate.secondaryLastmod ? alternate.secondaryLastmod : alternate.lastmod}</lastmod>
     <changefreq>${alternate.changefreq}</changefreq>
     <priority>${alternate.priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${absolute(alternate.en)}" />

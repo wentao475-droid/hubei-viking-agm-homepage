@@ -1,6 +1,13 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import ts from "typescript";
+import {
+  articleKinds,
+  buildSecondaryArticleSeo,
+  secondaryArticleCopy,
+  secondaryResourceData,
+  secondaryResourceLocales
+} from "../content/secondary-resources.mjs";
 
 const root = process.cwd();
 
@@ -458,25 +465,57 @@ for (const [locale, copy] of Object.entries(
   };
 }
 
+const articles = {
+  whatIsAgmSeparator: articleConstants.articleCopy,
+  keyTechnicalParameters: articleConstants.keyTechnicalCopy,
+  howToChooseAgmSeparator: articleConstants.howToChooseCopy,
+  agmSeparatorManufacturingQualityDelivery:
+    articleConstants.manufacturingDeliveryCopy,
+  agmSeparatorPerformanceConsistency:
+    articleConstants.performanceConsistencyCopy,
+  agmSeparatorExportSupplyReadiness:
+    articleConstants.exportSupplyReadinessCopy,
+  upsVrlaTechnologySelection:
+    articleConstants.upsVrlaTechnologySelectionCopy,
+  agmGlassFiberVsPvcSeparator:
+    articleConstants.agmGlassFiberVsPvcSeparatorCopy
+};
+
+const articleSeo = {
+  whatIsAgmSeparator: seoConstants.whatIsAgmSeparatorSeo,
+  keyTechnicalParameters: seoConstants.keyTechnicalParametersSeo,
+  howToChooseAgmSeparator: seoConstants.howToChooseAgmSeparatorSeo,
+  agmSeparatorManufacturingQualityDelivery:
+    seoConstants.agmSeparatorManufacturingQualityDeliverySeo,
+  agmSeparatorPerformanceConsistency:
+    seoConstants.agmSeparatorPerformanceConsistencySeo,
+  agmSeparatorExportSupplyReadiness:
+    seoConstants.agmSeparatorExportSupplyReadinessSeo,
+  upsVrlaTechnologySelection:
+    seoConstants.upsVrlaTechnologySelectionSeo,
+  agmGlassFiberVsPvcSeparator:
+    seoConstants.agmGlassFiberVsPvcSeparatorSeo
+};
+
+for (const locale of secondaryResourceLocales) {
+  for (const kind of articleKinds) {
+    articles[kind] = {
+      ...articles[kind],
+      [locale]: secondaryArticleCopy[locale][kind]
+    };
+    articleSeo[kind] = {
+      ...articleSeo[kind],
+      [locale]: buildSecondaryArticleSeo(locale, kind)
+    };
+  }
+}
+
 const content = {
   home,
   sampleRequest,
   products,
-  articles: {
-    whatIsAgmSeparator: articleConstants.articleCopy,
-    keyTechnicalParameters: articleConstants.keyTechnicalCopy,
-    howToChooseAgmSeparator: articleConstants.howToChooseCopy,
-    agmSeparatorManufacturingQualityDelivery:
-      articleConstants.manufacturingDeliveryCopy,
-    agmSeparatorPerformanceConsistency:
-      articleConstants.performanceConsistencyCopy,
-    agmSeparatorExportSupplyReadiness:
-      articleConstants.exportSupplyReadinessCopy,
-    upsVrlaTechnologySelection:
-      articleConstants.upsVrlaTechnologySelectionCopy,
-    agmGlassFiberVsPvcSeparator:
-      articleConstants.agmGlassFiberVsPvcSeparatorCopy
-  },
+  resources: secondaryResourceData,
+  articles,
   seo: {
     home: seoConstants.homeSeo,
     sampleRequest: seoConstants.sampleRequestSeo,
@@ -490,19 +529,7 @@ const content = {
       seoConstants.agmSeparatorMotorcycleApplicationSeo,
     agmSeparatorEnergyStorageApplication:
       seoConstants.agmSeparatorEnergyStorageApplicationSeo,
-    whatIsAgmSeparator: seoConstants.whatIsAgmSeparatorSeo,
-    keyTechnicalParameters: seoConstants.keyTechnicalParametersSeo,
-    howToChooseAgmSeparator: seoConstants.howToChooseAgmSeparatorSeo,
-    agmSeparatorManufacturingQualityDelivery:
-      seoConstants.agmSeparatorManufacturingQualityDeliverySeo,
-    agmSeparatorPerformanceConsistency:
-      seoConstants.agmSeparatorPerformanceConsistencySeo,
-    agmSeparatorExportSupplyReadiness:
-      seoConstants.agmSeparatorExportSupplyReadinessSeo,
-    upsVrlaTechnologySelection:
-      seoConstants.upsVrlaTechnologySelectionSeo,
-    agmGlassFiberVsPvcSeparator:
-      seoConstants.agmGlassFiberVsPvcSeparatorSeo
+    ...articleSeo
   }
 };
 
