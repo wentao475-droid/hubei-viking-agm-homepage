@@ -8,7 +8,8 @@ export const articleKinds = [
   "agmSeparatorManufacturingQualityDelivery",
   "agmSeparatorPerformanceConsistency",
   "agmSeparatorExportSupplyReadiness",
-  "upsVrlaTechnologySelection"
+  "upsVrlaTechnologySelection",
+  "dataCenterBackupPowerAgmSeparator"
 ];
 
 export const articleDefinitions = {
@@ -19,7 +20,8 @@ export const articleDefinitions = {
   agmSeparatorManufacturingQualityDelivery: ["agm-separator-manufacturing-quality-delivery", "manufacturingQuality", "2026-07-07"],
   agmSeparatorPerformanceConsistency: ["agm-separator-performance-consistency", "manufacturingQuality", "2026-07-10"],
   agmSeparatorExportSupplyReadiness: ["agm-separator-export-supply-readiness", "industryApplications", "2026-07-11"],
-  upsVrlaTechnologySelection: ["why-ups-projects-still-use-vrla-batteries", "industryApplications", "2026-07-23"]
+  upsVrlaTechnologySelection: ["why-ups-projects-still-use-vrla-batteries", "industryApplications", "2026-07-23"],
+  dataCenterBackupPowerAgmSeparator: ["agm-separator-for-data-center-backup-power", "industryApplications", "2026-08-07", "2026-08-07"]
 };
 
 const images = {
@@ -30,7 +32,8 @@ const images = {
   agmSeparatorManufacturingQualityDelivery: ["/images/agm-hero-production-1600.webp", 1600, 1000],
   agmSeparatorPerformanceConsistency: ["/images/agm-quality-control-1200.webp", 1200, 900],
   agmSeparatorExportSupplyReadiness: ["/images/evidence/shipping-pallet-01.webp", 1200, 900],
-  upsVrlaTechnologySelection: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900]
+  upsVrlaTechnologySelection: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
+  dataCenterBackupPowerAgmSeparator: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900]
 };
 
 export const secondaryResourceData = {
@@ -304,6 +307,138 @@ Object.assign(secondaryResourceData, {
   })
 });
 
+const dataCenterBackupPowerTopics = {
+  vi: {
+    title: "Nguồn điện dự phòng trung tâm dữ liệu đang tăng: cần xem gì ở tấm ngăn AGM?",
+    summary: "Hướng dẫn cho dự án UPS, trung tâm dữ liệu và viễn thông về khả năng giữ axit, nén tiếp xúc, chu trình oxy và tính nhất quán của tấm ngăn AGM.",
+    intro: "Nhu cầu điện dự phòng tăng không tự động trở thành đơn hàng tấm ngăn. Với hệ VRLA-AGM, yêu cầu cuối cùng vẫn phải đi qua thiết kế ắc quy, thử mẫu và lắp ráp hàng loạt.",
+    sections: [
+      ["Tín hiệu nhu cầu", "Công suất trung tâm dữ liệu tăng kéo theo việc rà soát hệ thống dự phòng", "Deloitte dự báo công suất điện quan trọng của trung tâm dữ liệu toàn cầu có thể đạt gần 96 GW vào năm 2026, trong đó hoạt động AI có thể dùng hơn 40%. Đây là bối cảnh nhu cầu, không phải dự báo đơn hàng AGM."],
+      ["Yêu cầu công khai", "Đơn mua UPS cho thấy tiêu chí nghiệm thu ngày càng cụ thể", "Một thông báo mua sắm tháng 3/2026 yêu cầu ắc quy AGM mới từ 100 Ah, tuổi thọ nạp nổi thiết kế ít nhất 5 năm, phù hợp YD/T 799-2024 và theo dõi điện áp, dòng điện, nội trở cùng nhiệt độ từng bình. Đây là yêu cầu cho ắc quy hoàn chỉnh, không phải bảng thông số tấm ngăn."],
+      ["Phóng điện tốc độ cao", "Điện phân và đường dẫn ion phải ổn định", "Trong VRLA-AGM, axit được giữ trong mạng sợi thủy tinh. Sự khác nhau về hút axit, lỗ rỗng hoặc phân bố điện phân có thể làm việc kiểm soát truyền ion và nội trở giữa các bình khó hơn; tấm ngăn là một phần của hệ thống chứ không quyết định hiệu suất một mình."],
+      ["Nạp nổi dài hạn", "Trạng thái nén sau khi hút axit quan trọng hơn độ dày danh nghĩa", "Nén quá thấp có thể làm tiếp xúc thiếu ổn định; nén quá cao có thể thay đổi lỗ rỗng, lượng điện phân và đường khí. Phạm vi phù hợp phải được xác nhận theo bản cực, dung lượng và điều kiện vận hành cụ thể."],
+      ["Chu trình oxy", "Tấm ngăn cũng tạo đường khí cho tái hợp oxy", "Oxy sinh ra ở bản cực dương cần đi qua cấu trúc tấm ngăn đến bản cực âm để tái tạo nước. Độ bão hòa điện phân, cấu trúc lỗ và nén phải cân bằng giữa giữ axit, dẫn ion và truyền khí."],
+      ["Từ mẫu đến lô", "Tính nhất quán quyết định khả năng lặp lại trong lắp ráp", "Khổ cuộn, trạng thái cuộn, kích thước tấm, độ dày, định lượng và đóng gói đều ảnh hưởng đến vận hành dây chuyền. Mẫu đạt yêu cầu chỉ là bước đầu; các lô sau cần tiếp tục theo cùng logic đã xác nhận."],
+      ["Khác biệt ứng dụng", "UPS, viễn thông và lưu trữ năng lượng không dùng chung một kết luận", "UPS thường nhấn mạnh phóng điện tốc độ cao và khởi động tin cậy sau thời gian nạp nổi; viễn thông còn phụ thuộc thời gian dự phòng và môi trường; ứng dụng chu kỳ cần đánh giá riêng về chu kỳ và quản lý điện phân."]
+    ],
+    parameters: [["Ứng dụng", "UPS, trung tâm dữ liệu, trạm viễn thông hoặc lưu trữ chu kỳ."], ["Thiết kế ắc quy", "Dung lượng, kích thước bản cực hoặc bộ bản cực và điều kiện nạp nổi."], ["Nén", "Độ dày mục tiêu, khe lắp, trạng thái ướt và yêu cầu phục hồi."], ["Điện phân", "Khả năng hút, thời gian thấm và phương pháp thử đã thống nhất."], ["Dạng giao hàng", "Khổ cuộn, lõi, đường kính hoặc kích thước tấm."], ["Giai đoạn dự án", "Mẫu, thử sản xuất hay cung ứng hàng loạt."]],
+    checklist: ["Ứng dụng và dung lượng ắc quy", "Độ dày và thiết kế nén", "Khổ cuộn hoặc kích thước tấm", "Phương pháp thử và tiêu chí chấp nhận", "Giai đoạn mẫu và kế hoạch sản lượng"]
+  },
+  ko: {
+    title: "데이터센터 백업 전력 수요 증가: AGM 분리막은 무엇을 확인해야 합니까?",
+    summary: "UPS·데이터센터·통신 백업용 VRLA 프로젝트에서 산 유지, 압축 접촉, 산소 순환과 로트 일관성을 검토하는 실무 안내입니다.",
+    intro: "백업 전력 수요 증가는 곧바로 분리막 주문을 의미하지 않습니다. VRLA-AGM 프로젝트에서는 배터리 설계, 샘플 검증과 양산 조립을 거쳐야 실제 사양이 결정됩니다.",
+    sections: [
+      ["수요 신호", "데이터센터 용량 증가는 백업 시스템 검토로 이어집니다", "Deloitte는 2026년 전 세계 데이터센터 핵심 전력 용량이 약 96 GW에 이르고 AI 운영이 40% 이상을 사용할 수 있다고 전망합니다. 이는 시장 배경이지 AGM 주문 예측은 아닙니다."],
+      ["공개 조달", "UPS 배터리의 검수 요구가 구체화되고 있습니다", "2026년 3월 한 조달 공고는 100 Ah 이상 신규 AGM 납축전지, 5년 이상의 설계 부동충전 수명, YD/T 799-2024 준수와 단전지 전압·전류·내부저항·온도 모니터링을 요구했습니다. 이는 완성 배터리 요구이지 분리막 사양표가 아닙니다."],
+      ["고율 방전", "전해액과 이온 경로의 일관성이 필요합니다", "VRLA-AGM에서는 산이 유리섬유 기공에 유지됩니다. 흡액, 기공 구조와 산 분포가 달라지면 이온 이동과 내부저항의 일관성 관리가 어려워질 수 있습니다. 분리막은 시스템의 한 요소이며 단독으로 출력을 결정하지 않습니다."],
+      ["장기 부동충전", "습윤 후 압축 상태는 명목 두께보다 중요합니다", "압축이 부족하면 극판 접촉이 불안정할 수 있고 과도하면 기공, 전해액량과 기체 통로가 달라질 수 있습니다. 적정 범위는 용량, 극판 구조와 운전 조건별로 검증해야 합니다."],
+      ["산소 순환", "분리막은 산소 재결합을 위한 기체 통로도 제공합니다", "양극에서 발생한 산소는 분리막을 통해 음극으로 이동해 물로 재결합합니다. 전해액 포화도, 기공 구조와 압축은 산 유지, 이온 이동과 기체 전달 사이에서 균형을 이뤄야 합니다."],
+      ["샘플에서 양산", "로트 일관성이 조립 재현성을 좌우합니다", "롤 폭과 권취 상태, 시트 치수, 두께, 평량과 포장은 생산라인 작업성에 직접 연결됩니다. 첫 샘플 승인은 시작일 뿐이며 후속 로트도 합의된 조건을 유지해야 합니다."],
+      ["용도 차이", "UPS·통신 백업·에너지저장은 같은 기준으로 판단할 수 없습니다", "UPS는 고율 방전과 장기 부동충전 후 신뢰성을 중시하고, 통신 백업은 백업 시간과 환경을 함께 보며, 사이클 저장은 별도의 순환 성능과 전해액 관리 검토가 필요합니다."]
+    ],
+    parameters: [["응용", "UPS, 데이터센터, 통신 기지국 또는 사이클 저장."], ["배터리 설계", "용량, 극판/극군 치수와 부동충전 조건."], ["압축", "목표 두께, 조립 간격, 습윤 상태와 회복 요구."], ["전해액", "흡액량, 젖음 시간과 합의된 시험법."], ["공급 형태", "롤 폭, 코어, 직경 또는 시트 치수."], ["프로젝트 단계", "샘플, 시험 생산 또는 양산 공급."]],
+    checklist: ["배터리 용도와 용량", "두께 및 압축 설계", "롤 폭 또는 시트 치수", "시험법과 합격 기준", "샘플 단계와 예상 수량"]
+  },
+  ja: {
+    title: "データセンターのバックアップ電源需要増加：AGMセパレーターで確認すべき点",
+    summary: "UPS、データセンター、通信バックアップ向けVRLAで、保液、圧縮接触、酸素循環、ロット一貫性を確認する実務ガイドです。",
+    intro: "バックアップ電源需要の増加が、そのままセパレーター注文になるわけではありません。VRLA-AGMでは電池設計、サンプル評価、量産組立を経て実際の仕様が決まります。",
+    sections: [
+      ["需要シグナル", "データセンター容量の増加はバックアップ設備の再評価につながります", "Deloitteは2026年の世界のデータセンター重要電力容量を約96 GW、AI運用の消費を40%以上と予測しています。これは需要背景であり、AGM受注予測ではありません。"],
+      ["公開調達", "UPS蓄電池の検収条件はより具体的です", "2026年3月の調達公告では、100 Ah以上の新品AGM鉛蓄電池、5年以上の設計浮動充電寿命、YD/T 799-2024適合、単電池の電圧・電流・内部抵抗・温度監視が求められました。完成電池の要求であり、セパレーター仕様ではありません。"],
+      ["高率放電", "電解液とイオン経路の一貫性が必要です", "VRLA-AGMでは酸がガラス繊維の空孔に保持されます。吸液、空孔構造、酸分布の差はイオン移動と内部抵抗のばらつき管理を難しくします。ただしセパレーターだけで高率性能が決まるわけではありません。"],
+      ["長期浮動充電", "湿潤後の圧縮状態は公称厚さ以上に重要です", "圧縮不足は接触を不安定にし、過圧縮は空孔、電解液量、ガス通路を変える可能性があります。適正範囲は容量、極板構造、運転条件ごとに確認します。"],
+      ["酸素循環", "セパレーターは酸素再結合のガス通路も担います", "正極で発生した酸素はセパレーターを通って負極へ移動し水に戻ります。電解液飽和度、空孔構造、圧縮を保液、イオン移動、ガス輸送の間で釣り合わせます。"],
+      ["サンプルから量産", "ロット一貫性が組立再現性を左右します", "ロール幅と巻姿、シート寸法、厚さ、坪量、梱包はライン作業性に直結します。初回サンプルの合格後も、後続ロットで同じ条件を維持する必要があります。"],
+      ["用途差", "UPS、通信バックアップ、蓄電を同じ基準で判断しません", "UPSは高率放電と長期浮動充電後の確実な起動、通信はバックアップ時間と環境、サイクル蓄電は循環条件と電解液管理を個別に確認します。"]
+    ],
+    parameters: [["用途", "UPS、データセンター、通信基地局、サイクル蓄電。"], ["電池設計", "容量、極板／極群寸法、浮動充電条件。"], ["圧縮", "目標厚さ、組立間隔、湿潤状態、回復要求。"], ["電解液", "吸液量、濡れ時間、合意済み試験法。"], ["供給形状", "ロール幅、紙管、径、またはシート寸法。"], ["案件段階", "サンプル、試作、量産供給。"]],
+    checklist: ["電池用途と容量", "厚さと圧縮設計", "ロール幅またはシート寸法", "試験法と合格基準", "サンプル段階と想定数量"]
+  },
+  es: {
+    title: "Crece la demanda de respaldo para centros de datos: ¿qué revisar en el separador AGM?",
+    summary: "Guía para proyectos VRLA de UPS, centros de datos y telecomunicaciones sobre retención de ácido, compresión, ciclo de oxígeno y consistencia de lote.",
+    intro: "El crecimiento del respaldo eléctrico no se convierte automáticamente en pedidos de separadores. En VRLA-AGM, la especificación pasa por el diseño de batería, la validación de muestras y el montaje en serie.",
+    sections: [
+      ["Señal de demanda", "Más capacidad de centros de datos obliga a revisar el respaldo", "Deloitte estima que la capacidad eléctrica crítica de centros de datos podría acercarse a 96 GW en 2026 y que la operación de IA podría consumir más del 40%. Es contexto de demanda, no una previsión de pedidos AGM."],
+      ["Compra pública", "Los requisitos de aceptación para baterías UPS son más específicos", "Una compra publicada en marzo de 2026 exigió baterías AGM nuevas de al menos 100 Ah, vida de flotación de diseño mínima de cinco años, conformidad con YD/T 799-2024 y monitoreo de voltaje, corriente, resistencia interna y temperatura por unidad. Son requisitos de la batería terminada, no del separador."],
+      ["Alta descarga", "El electrolito y las vías iónicas deben ser consistentes", "En VRLA-AGM el ácido queda retenido en los poros de la fibra. Variaciones en absorción, porosidad o distribución pueden dificultar el control de transporte iónico y resistencia interna. El separador participa en el sistema, pero no determina solo el desempeño."],
+      ["Flotación prolongada", "La compresión húmeda importa más que el espesor nominal", "Una compresión insuficiente puede reducir la estabilidad del contacto; una excesiva puede modificar poros, volumen de electrolito y pasos de gas. El rango debe validarse para la capacidad, placas y régimen de trabajo concretos."],
+      ["Ciclo de oxígeno", "El separador también aporta vías de gas para la recombinación", "El oxígeno generado en la placa positiva debe atravesar el separador y recombinarse en la negativa. Saturación, porosidad y compresión equilibran retención de ácido, conducción iónica y transporte de gas."],
+      ["De muestra a serie", "La consistencia de lote define la repetibilidad del montaje", "Ancho y bobinado, dimensiones de lámina, espesor, gramaje y embalaje afectan la línea. Aprobar la primera muestra es solo el comienzo; los lotes posteriores deben conservar la lógica acordada."],
+      ["Aplicaciones distintas", "UPS, telecomunicaciones y almacenamiento no usan un criterio único", "UPS prioriza descarga de alta potencia y arranque fiable tras flotación; telecomunicaciones añade autonomía y ambiente; el almacenamiento cíclico requiere revisar ciclos y gestión del electrolito."]
+    ],
+    parameters: [["Aplicación", "UPS, centro de datos, telecomunicaciones o almacenamiento cíclico."], ["Diseño de batería", "Capacidad, dimensiones de placas/grupo y régimen de flotación."], ["Compresión", "Espesor objetivo, espacio de montaje, estado húmedo y recuperación."], ["Electrolito", "Absorción, tiempo de humectación y método de ensayo acordado."], ["Formato", "Ancho, núcleo y diámetro de rollo o tamaño de lámina."], ["Etapa", "Muestra, prueba piloto o suministro en serie."]],
+    checklist: ["Aplicación y capacidad", "Espesor y diseño de compresión", "Ancho de rollo o tamaño de lámina", "Método de ensayo y aceptación", "Etapa de muestra y volumen esperado"]
+  },
+  pt: {
+    title: "A demanda de backup para data centers cresce: o que avaliar no separador AGM?",
+    summary: "Guia para projetos VRLA de UPS, data centers e telecom sobre retenção de ácido, compressão, ciclo de oxigênio e consistência entre lotes.",
+    intro: "O crescimento da energia de backup não vira automaticamente pedido de separador. Em VRLA-AGM, a especificação passa pelo projeto da bateria, validação de amostras e montagem em volume.",
+    sections: [
+      ["Sinal de demanda", "Mais capacidade de data centers exige revisão do backup", "A Deloitte estima que a capacidade elétrica crítica global de data centers pode chegar perto de 96 GW em 2026 e que operações de IA podem consumir mais de 40%. É contexto de demanda, não previsão de pedidos AGM."],
+      ["Compra pública", "Os requisitos de aceitação de baterias UPS estão mais específicos", "Uma compra publicada em março de 2026 exigiu baterias AGM novas de pelo menos 100 Ah, vida de flutuação projetada mínima de cinco anos, conformidade com YD/T 799-2024 e monitoramento de tensão, corrente, resistência interna e temperatura por unidade. São requisitos da bateria, não do separador."],
+      ["Alta descarga", "Eletrólito e caminhos iônicos precisam ser consistentes", "Em VRLA-AGM o ácido fica retido nos poros da fibra. Variações de absorção, porosidade ou distribuição dificultam controlar transporte iônico e resistência interna. O separador participa do sistema, mas não define sozinho o desempenho."],
+      ["Flutuação prolongada", "A compressão após molhamento importa mais que a espessura nominal", "Compressão insuficiente pode reduzir a estabilidade do contato; compressão excessiva pode alterar poros, volume de eletrólito e passagem de gás. A faixa deve ser validada para capacidade, placas e regime de operação."],
+      ["Ciclo de oxigênio", "O separador também fornece caminhos de gás para recombinação", "O oxigênio da placa positiva atravessa o separador e se recombina na negativa. Saturação, porosidade e compressão equilibram retenção de ácido, condução iônica e transporte de gás."],
+      ["Da amostra ao volume", "A consistência entre lotes determina a repetibilidade da montagem", "Largura e bobinamento, dimensões de folha, espessura, gramatura e embalagem afetam a linha. Aprovar a primeira amostra é apenas o início; lotes seguintes devem manter a lógica acordada."],
+      ["Aplicações diferentes", "UPS, telecom e armazenamento não usam um único critério", "UPS prioriza descarga de alta potência e partida confiável após flutuação; telecom inclui autonomia e ambiente; armazenamento cíclico exige avaliação separada de ciclos e eletrólito."]
+    ],
+    parameters: [["Aplicação", "UPS, data center, telecom ou armazenamento cíclico."], ["Projeto da bateria", "Capacidade, dimensões de placas/grupo e regime de flutuação."], ["Compressão", "Espessura alvo, espaço de montagem, condição úmida e recuperação."], ["Eletrólito", "Absorção, tempo de molhamento e método de teste acordado."], ["Formato", "Largura, tubete e diâmetro do rolo ou tamanho da folha."], ["Etapa", "Amostra, piloto ou fornecimento em volume."]],
+    checklist: ["Aplicação e capacidade", "Espessura e projeto de compressão", "Largura de rolo ou tamanho de folha", "Método de teste e aceitação", "Etapa de amostra e volume esperado"]
+  },
+  ru: {
+    title: "Растёт спрос на резервное питание ЦОД: что проверять в AGM-сепараторе?",
+    summary: "Практическое руководство для VRLA-проектов UPS, ЦОД и связи по удержанию электролита, сжатию, кислородному циклу и стабильности партий AGM.",
+    intro: "Рост резервной мощности не превращается автоматически в заказ сепараторов. В VRLA-AGM спецификация проходит через конструкцию батареи, проверку образцов и серийную сборку.",
+    sections: [
+      ["Сигнал спроса", "Рост мощности ЦОД требует пересмотра резервных систем", "Deloitte ожидает, что критическая электрическая мощность мировых ЦОД приблизится к 96 ГВт в 2026 году, а ИИ-операции могут потреблять свыше 40%. Это контекст спроса, а не прогноз заказов AGM."],
+      ["Открытая закупка", "Требования к приёмке UPS-батарей становятся конкретнее", "Закупка марта 2026 года требовала новые AGM-батареи не менее 100 А·ч, расчётный срок службы в буферном режиме не менее пяти лет, соответствие YD/T 799-2024 и мониторинг напряжения, тока, внутреннего сопротивления и температуры каждого блока. Это требования к батарее, не к сепаратору."],
+      ["Высокая мощность", "Электролит и ионные пути должны быть стабильными", "В VRLA-AGM кислота удерживается в порах стекловолокна. Различия в поглощении, пористости и распределении усложняют контроль ионного переноса и внутреннего сопротивления. Сепаратор участвует в системе, но не определяет характеристики самостоятельно."],
+      ["Длительный буфер", "Сжатие во влажном состоянии важнее номинальной толщины", "Недостаточное сжатие может ухудшить стабильность контакта, избыточное — изменить поры, объём электролита и газовые каналы. Диапазон подтверждают для конкретной ёмкости, пластин и режима эксплуатации."],
+      ["Кислородный цикл", "Сепаратор создаёт газовые пути для рекомбинации", "Кислород от положительной пластины проходит через сепаратор и рекомбинирует на отрицательной. Насыщение, пористость и сжатие балансируют удержание кислоты, ионную проводимость и перенос газа."],
+      ["От образца к серии", "Стабильность партий определяет повторяемость сборки", "Ширина и намотка рулона, размер листа, толщина, масса на площадь и упаковка влияют на линию. Одобрение первого образца — начало; последующие партии должны сохранять согласованные условия."],
+      ["Разные применения", "UPS, связь и накопление нельзя оценивать одним критерием", "UPS требует высокой мощности и надёжного запуска после буферного режима; связь учитывает длительность резерва и среду; циклическое накопление требует отдельной оценки циклов и электролита."]
+    ],
+    parameters: [["Применение", "UPS, ЦОД, телеком или циклическое накопление."], ["Конструкция", "Ёмкость, размеры пластин/блока и буферный режим."], ["Сжатие", "Целевая толщина, монтажный зазор, влажное состояние и восстановление."], ["Электролит", "Поглощение, время смачивания и согласованный метод испытания."], ["Формат", "Ширина, втулка и диаметр рулона или размер листа."], ["Этап", "Образец, пилот или серийная поставка."]],
+    checklist: ["Применение и ёмкость", "Толщина и проектное сжатие", "Ширина рулона или размер листа", "Метод испытания и приёмка", "Этап образца и ожидаемый объём"]
+  }
+};
+
+const dataCenterReferences = {
+  vi: ["Tài liệu tham khảo", "Nguồn công khai và phạm vi áp dụng", "Yêu cầu mua sắm áp dụng cho ắc quy hoàn chỉnh, không phải thông số tấm ngăn; nội dung chỉ phục vụ trao đổi kỹ thuật, không phải dự báo thị trường."],
+  ko: ["참고 자료", "공개 자료와 적용 범위", "조달 요구는 완성 배터리에 대한 것이며 분리막 사양이 아닙니다. 본문은 기술 논의를 위한 것으로 시장 전망이 아닙니다."],
+  ja: ["参考資料", "公開情報と適用範囲", "調達条件は完成電池向けでありセパレーター仕様ではありません。本記事は技術検討用で、市場予測ではありません。"],
+  es: ["Referencias", "Fuentes públicas y alcance", "Los requisitos de compra corresponden a baterías terminadas, no a una especificación del separador. El artículo es informativo y no constituye una previsión de mercado."],
+  pt: ["Referências", "Fontes públicas e escopo", "Os requisitos de compra são da bateria completa, não uma especificação do separador. O artigo é informativo e não constitui previsão de mercado."],
+  ru: ["Источники", "Открытые данные и область применения", "Закупочные требования относятся к готовым батареям, а не к спецификации сепаратора. Материал предназначен для технического обсуждения и не является прогнозом рынка."]
+};
+
+const dataCenterReferenceItems = [
+  ["Deloitte — AI and data center power demand", "https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/genai-power-consumption-creates-need-for-more-sustainable-data-centers.html"],
+  ["PLA Procurement — UPS battery purchase notice", "https://www.plap.mil.cn/freecms/site/juncai/ggxx/info/2026/8a1d03e69cd1fb5c019cf579069f769f.html"],
+  ["Journal of Power Sources — closed oxygen cycle in VRLA batteries", "https://doi.org/10.1016/S0378-7753(99)00396-1"],
+  ["Journal of Power Sources — AGM compression-recovery model", "https://doi.org/10.1016/j.jpowsour.2017.08.055"],
+  ["SMM — lead-acid batteries in storage and base-station backup", "https://news.smm.cn/news/103776664"]
+];
+
+const secondaryHubCounts = {
+  vi: "9 bài viết kỹ thuật", ko: "기술 글 9편", ja: "技術記事 9件",
+  es: "9 artículos técnicos", pt: "9 artigos técnicos", ru: "9 технических статей"
+};
+
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.dataCenterBackupPowerAgmSeparator = dataCenterBackupPowerTopics[locale];
+  secondaryResourceData[locale].dataCenterReferences = {
+    eyebrow: dataCenterReferences[locale][0],
+    title: dataCenterReferences[locale][1],
+    text: dataCenterReferences[locale][2],
+    items: dataCenterReferenceItems
+  };
+  secondaryResourceData[locale].hub.count = secondaryHubCounts[locale];
+}
+
 // Remaining locales extend the same data model below. Keeping each locale in one
 // record lets the resource hub, article renderer, SEO and CMS exporter share it.
 
@@ -320,9 +455,11 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
+  const relatedKinds = kind === "dataCenterBackupPowerAgmSeparator"
+    ? ["upsVrlaTechnologySelection", "agmSeparatorPerformanceConsistency", "keyTechnicalParameters", "agmSeparatorManufacturingQualityDelivery"]
+    : definitions.map(([candidate]) => candidate).filter((candidate) => candidate !== kind).slice(0, 4);
   const related = definitions
-    .filter(([candidate]) => candidate !== kind)
-    .slice(0, 4)
+    .filter(([candidate]) => relatedKinds.includes(candidate))
     .map(([candidate]) => [localeData.topics[candidate].title, route(locale, candidate)]);
 
   const result = {
@@ -373,6 +510,19 @@ function buildArticle(locale, kind, localeData) {
     result.references = localeData.references;
   }
 
+  if (kind === "dataCenterBackupPowerAgmSeparator") {
+    result.references = localeData.dataCenterReferences;
+    result.formats = {
+      eyebrow: common.formatsEyebrow,
+      title: common.formatsTitle,
+      items: [
+        [common.roll[0], common.roll[1], "/images/viking-finished-separator-roll-900.webp", common.roll[0]],
+        [localeData.nav.quality, common.checklistText, "/images/agm-quality-control-1200.webp", localeData.nav.quality],
+        [common.sheet[0], common.sheet[1], "/images/evidence/shipping-pallet-01.webp", common.sheet[0]]
+      ]
+    };
+  }
+
   return result;
 }
 
@@ -399,8 +549,9 @@ export function buildSecondaryArticleSeo(locale, kind) {
     description: topic.summary,
     keywords: [topic.title, "AGM separator", "VRLA", "Viking AGM"],
     pageName: topic.title,
+    articleDescription: topic.summary,
     breadcrumbs: [localeData.nav.company, localeData.nav.resources, topic.title],
     datePublished: articleDefinitions[kind][2],
-    dateModified: "2026-08-05"
+    dateModified: articleDefinitions[kind][3] ?? "2026-08-05"
   };
 }

@@ -195,6 +195,14 @@ const pages = [
     priority: "0.75",
     changefreq: "monthly",
     lastmod: "2026-07-26"
+  },
+  {
+    en: "/blog/agm-separator-for-data-center-backup-power/",
+    zh: "/zh/blog/agm-separator-for-data-center-backup-power/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-08-07",
+    secondaryLastmod: "2026-08-07"
   }
 ];
 
@@ -205,7 +213,7 @@ for (const page of pages.filter(
   for (const locale of secondaryLocales) {
     page[locale] = `/${locale}${page.en}`;
   }
-  page.secondaryLastmod = "2026-08-05";
+  page.secondaryLastmod ??= "2026-08-05";
 }
 
 function absolute(path) {

@@ -1758,6 +1758,51 @@ const upsVrlaTechnologySelectionSeo = {
   }
 } as const;
 
+const dataCenterBackupPowerAgmSeparatorSeo = {
+  en: {
+    path: "/blog/agm-separator-for-data-center-backup-power/",
+    alternatePath: "/zh/blog/agm-separator-for-data-center-backup-power/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator Requirements for Data Center Backup Power | Viking AGM",
+    description:
+      "How AGM separator absorption, compression, oxygen transport and batch consistency support VRLA batteries for data center, UPS and telecom backup power.",
+    keywords: [
+      "AGM separator for data center backup power",
+      "UPS VRLA battery separator",
+      "telecom backup battery AGM separator",
+      "AGM separator compression",
+      "VRLA battery batch consistency"
+    ],
+    pageName: "AGM Separator Requirements for Data Center Backup Power",
+    articleDescription:
+      "A technical buyer guide to AGM separator absorption, compression, oxygen transport and batch consistency for data center, UPS and telecom VRLA backup power projects.",
+    breadcrumbs: ["Home", "Resources", "Data Center Backup Power AGM Separators"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-for-data-center-backup-power/",
+    alternatePath: "/blog/agm-separator-for-data-center-backup-power/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "数据中心备电需求增长，AGM 隔板配套该看什么？| 湖北维京AGM",
+    description:
+      "从吸液、压缩贴合、氧复合和批次一致性，了解数据中心、UPS 与通信备电 VRLA 电池项目应如何确认 AGM 隔板规格。",
+    keywords: [
+      "数据中心备电 AGM 隔板",
+      "UPS VRLA 电池隔板",
+      "通信后备电源 AGM 隔板",
+      "AGM 隔板压缩",
+      "VRLA 电池批次一致性"
+    ],
+    pageName: "数据中心备电需求增长，AGM 隔板配套该看什么？",
+    articleDescription:
+      "面向数据中心、UPS 和通信备电项目，从吸液、压缩贴合、氧复合与批次一致性说明 AGM 隔板规格确认要点。",
+    breadcrumbs: ["首页", "资料", "数据中心备电 AGM 隔板"]
+  }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2330,6 +2375,32 @@ export function buildUpsVrlaTechnologySelectionMetadata(
       url: UPS_APPLICATION_IMAGE,
       width: 900,
       height: 675
+    }
+  });
+}
+
+export function buildDataCenterBackupPowerAgmSeparatorMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "dataCenterBackupPowerAgmSeparator",
+    lang,
+    dataCenterBackupPowerAgmSeparatorSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    ...articleLocalePaths("dataCenterBackupPowerAgmSeparator"),
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: UPS_APPLICATION_IMAGE,
+      width: 1200,
+      height: 900
     }
   });
 }
@@ -3496,6 +3567,79 @@ export function UpsVrlaTechnologySelectionStructuredData({
   return <JsonLd data={data} />;
 }
 
+export function DataCenterBackupPowerAgmSeparatorStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "dataCenterBackupPowerAgmSeparator",
+    lang,
+    dataCenterBackupPowerAgmSeparatorSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: UPS_APPLICATION_IMAGE,
+          width: 1200,
+          height: 900
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: UPS_APPLICATION_IMAGE,
+        url,
+        datePublished: "2026-08-07",
+        dateModified: "2026-08-07",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "data center backup power",
+          "UPS VRLA batteries",
+          "telecom backup power",
+          "AGM separator specification matching"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${getResourcesPath(lang)}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
 export function AgmGlassFiberVsPvcSeparatorStructuredData({
   lang
 }: {
@@ -3635,6 +3779,7 @@ export function SecondaryArticleStructuredData({
   const current = buildSecondaryArticleSeo(lang, kind);
   const url = `${SITE_URL}${current.path}`;
   const published = articleDefinitions[kind][2];
+  const modified = articleDefinitions[kind][3] ?? "2026-08-05";
   const data = {
     "@context": "https://schema.org",
     "@graph": [
@@ -3655,7 +3800,7 @@ export function SecondaryArticleStructuredData({
         description: current.articleDescription,
         url,
         datePublished: published,
-        dateModified: "2026-08-05",
+        dateModified: modified,
         mainEntityOfPage: { "@id": `${url}#webpage` },
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },

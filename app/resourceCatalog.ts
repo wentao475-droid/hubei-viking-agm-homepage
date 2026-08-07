@@ -248,6 +248,23 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/why-ups-projects-still-use-vrla-batteries/",
       zh: "/zh/blog/why-ups-projects-still-use-vrla-batteries/"
     }
+  },
+  {
+    id: "data-center-backup-power",
+    category: "industryApplications",
+    publishedAt: "2026-08-07",
+    title: {
+      en: "AGM Separators for Data Center Backup Power",
+      zh: "数据中心备电与 AGM 隔板配套"
+    },
+    description: {
+      en: "AGM separator requirements for UPS, data center and telecom backup power projects.",
+      zh: "从吸液、压缩贴合、氧复合和批次一致性理解备电项目的隔板要求。"
+    },
+    href: {
+      en: "/blog/agm-separator-for-data-center-backup-power/",
+      zh: "/zh/blog/agm-separator-for-data-center-backup-power/"
+    }
   }
 ];
 
@@ -259,7 +276,8 @@ const articleKindById: Record<string, string> = {
   "manufacturing-quality-delivery": "agmSeparatorManufacturingQualityDelivery",
   "performance-consistency": "agmSeparatorPerformanceConsistency",
   "export-supply-readiness": "agmSeparatorExportSupplyReadiness",
-  "ups-vrla-selection": "upsVrlaTechnologySelection"
+  "ups-vrla-selection": "upsVrlaTechnologySelection",
+  "data-center-backup-power": "dataCenterBackupPowerAgmSeparator"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

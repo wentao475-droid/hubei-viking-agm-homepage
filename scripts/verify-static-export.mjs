@@ -12,7 +12,8 @@ const synchronizedResourceSlugs = [
   "agm-separator-manufacturing-quality-delivery",
   "agm-separator-performance-consistency",
   "agm-separator-export-supply-readiness",
-  "why-ups-projects-still-use-vrla-batteries"
+  "why-ups-projects-still-use-vrla-batteries",
+  "agm-separator-for-data-center-backup-power"
 ];
 const synchronizedResourceFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/resources/index.html`,
@@ -76,6 +77,8 @@ const requiredFiles = [
   "zh/blog/why-ups-projects-still-use-vrla-batteries/index.html",
   "blog/agm-glass-fiber-vs-pvc-battery-separator/index.html",
   "zh/blog/agm-glass-fiber-vs-pvc-battery-separator/index.html",
+  "blog/agm-separator-for-data-center-backup-power/index.html",
+  "zh/blog/agm-separator-for-data-center-backup-power/index.html",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -278,7 +281,13 @@ const secondaryResourcesComplete = synchronizedLocaleCodes.every((locale) => {
     ([slug, html]) =>
       html.includes(`https://www.vikingagm.com/${locale}/blog/${slug}/`) &&
       html.includes('"@type":"BlogPosting"') &&
-      html.includes('"dateModified":"2026-08-05"')
+      html.includes(
+        `"dateModified":"${
+          slug === "agm-separator-for-data-center-backup-power"
+            ? "2026-08-07"
+            : "2026-08-05"
+        }"`
+      )
   );
   return (
     hubListsAllArticles &&
@@ -908,10 +917,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 152) {
-  pass("sitemap.xml lists the expected 152 localized public URLs");
+if (sitemapUrls.length === 160) {
+  pass("sitemap.xml lists the expected 160 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 152`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 160`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -1018,6 +1027,18 @@ const expectedSitemapLastmod = [
     "https://www.vikingagm.com/blog/agm-glass-fiber-vs-pvc-battery-separator/",
     "2026-07-26"
   ],
+  [
+    "https://www.vikingagm.com/blog/agm-separator-for-data-center-backup-power/",
+    "2026-08-07"
+  ],
+  [
+    "https://www.vikingagm.com/zh/blog/agm-separator-for-data-center-backup-power/",
+    "2026-08-07"
+  ],
+  ...synchronizedLocaleCodes.map((locale) => [
+    `https://www.vikingagm.com/${locale}/blog/agm-separator-for-data-center-backup-power/`,
+    "2026-08-07"
+  ]),
   [
     "https://www.vikingagm.com/resources/",
     "2026-07-26"

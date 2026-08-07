@@ -21,7 +21,8 @@ export type BlogArticleKind =
   | "agmSeparatorPerformanceConsistency"
   | "agmSeparatorExportSupplyReadiness"
   | "upsVrlaTechnologySelection"
-  | "agmGlassFiberVsPvcSeparator";
+  | "agmGlassFiberVsPvcSeparator"
+  | "dataCenterBackupPowerAgmSeparator";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -2307,6 +2308,269 @@ const agmGlassFiberVsPvcSeparatorCopy = {
   }
 } as const;
 
+const dataCenterBackupPowerAgmSeparatorCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/agm-separator-for-data-center-backup-power/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request a Sample",
+    hero: {
+      eyebrow: "Data Center Backup Power",
+      title: "Data Center Backup Demand Is Growing. What Should AGM Separator Sourcing Review?",
+      subtitle:
+        "Order growth is only the surface. Inside a VRLA battery, electrolyte retention, compression fit and batch consistency are the changes an AGM separator supply program must be ready to support.",
+      primary: "Request a Sample & Specification Match",
+      secondary: "View Project Checklist",
+      image: {
+        src: "/images/applications/ups-vrla-battery-application-1200.webp",
+        alt: "VRLA battery backup application for UPS and data centers",
+        width: 1200,
+        height: 900
+      }
+    },
+    intro: [
+      "Data center construction, UPS battery replacement and communications backup projects are creating renewed discussion around the practical role of VRLA lead-acid batteries. For an AGM separator manufacturer, the useful question is not how much electricity a data center consumes, but what battery design the backup system requires.",
+      "A separator specification only becomes meaningful after the battery architecture, electrolyte condition, compression design, sample validation and volume assembly process are understood. AGM separator is one functional part of that wider electrochemical and mechanical system."
+    ],
+    sections: [
+      {
+        eyebrow: "Demand Signal",
+        title: "More data center capacity puts backup-power readiness under review",
+        text:
+          "Deloitte expects the critical power capacity supporting global data center equipment to approach 96 GW in 2026, nearly double the 2023 level, with AI-related operations potentially consuming more than 40%. This is a demand signal rather than an AGM separator order forecast. Backup architecture, battery technology, system design and validation still sit between capacity growth and separator sourcing."
+      },
+      {
+        eyebrow: "Public Procurement",
+        title: "Battery acceptance requirements are becoming more specific",
+        text:
+          "A UPS battery procurement notice published on March 17, 2026 required new AGM lead-acid batteries rated at no less than 100 Ah, a design float life of at least five years, compliance with YD/T 799-2024, and real-time monitoring of voltage, current, individual battery internal resistance and temperature. These are finished-battery requirements, not an AGM separator specification, but they show the reliability and consistency expected from the complete system."
+      },
+      {
+        eyebrow: "High-Rate Discharge",
+        title: "Electrolyte retention and ion pathways need repeatable material behavior",
+        text:
+          "In a VRLA-AGM battery, electrolyte is mainly retained in the pore network of the glass-fiber separator. Variation in acid absorption, pore structure or electrolyte distribution can make ionic transport and internal-resistance consistency harder to control across cells. Plate formulation, grids, current paths and charging strategy remain equally important; the separator participates in performance but does not determine it alone."
+      },
+      {
+        eyebrow: "Long-Term Float Service",
+        title: "Compression after wetting matters more than nominal thickness alone",
+        text:
+          "The working condition is the separator compressed between plates after electrolyte filling, not a dry sheet lying on a table. Insufficient compression can reduce contact stability, while excessive compression can change pore volume, electrolyte capacity and gas pathways. Published research supports reviewing compression and recovery behavior, but a percentage tested in one battery design should not be applied universally."
+      },
+      {
+        eyebrow: "Oxygen Cycle",
+        title: "The separator also provides gas pathways for oxygen recombination",
+        text:
+          "During charging, oxygen generated at the positive plate must travel through the separator structure to the negative plate and recombine into water. Electrolyte saturation, pore structure and compression therefore need to balance acid retention, ionic conduction and gas transport. Maximizing one property in isolation does not guarantee the right result for the battery."
+      },
+      {
+        eyebrow: "Sample to Volume",
+        title: "Batch consistency is where assembly differences become visible",
+        text:
+          "Roll width and winding condition, sheet dimensions, thickness, basis weight and packing all affect handling and assembly. Small deviations may be adjusted manually during sampling, but repeated variation becomes line adjustment, scrap and specification rework in volume production. A successful first sample is only the start; later batches must continue the same agreed supply logic."
+      },
+      {
+        eyebrow: "Application Fit",
+        title: "UPS, telecom backup and energy storage require separate decisions",
+        text:
+          "UPS projects often emphasize short-duration high-rate discharge and dependable activation after long float service. Telecom backup also considers backup duration, environment and maintenance conditions. Cyclic storage or lead-carbon applications introduce different cycling and electrolyte-management priorities. Battery application, capacity, plate or group dimensions, target compression and roll or sheet requirements should be clear before sampling."
+      }
+    ],
+    parameters: [
+      ["Application", "UPS, data center, telecom backup or cyclic energy storage."],
+      ["Battery design", "Capacity, plate or group dimensions and float-service conditions."],
+      ["Compression", "Target thickness, assembly gap, wet condition and recovery expectations."],
+      ["Electrolyte behavior", "Acid absorption, wetting time and the agreed test method."],
+      ["Supply format", "Roll width, core and diameter, or finished sheet dimensions."],
+      ["Project stage", "Initial sample, pilot assembly or recurring volume supply."]
+    ],
+    formats: {
+      eyebrow: "Manufacturing Evidence",
+      title: "Material form, quality review and packing must support the assembly process",
+      items: [
+        ["AGM separator rolls", "Confirm width, core, roll diameter, winding and handling requirements for the production line.", "/images/viking-finished-separator-roll-900.webp", "Finished AGM separator roll"],
+        ["Quality inspection", "Use agreed methods and conditions to compare dimensions and functional characteristics across samples and batches.", "/images/agm-quality-control-1200.webp", "AGM separator quality inspection"],
+        ["Packing and shipment", "Packing, moisture protection, identification and pallet handling are part of repeatable supply.", "/images/evidence/shipping-pallet-01.webp", "AGM separator packing and shipment preparation"]
+      ]
+    },
+    checklist: {
+      eyebrow: "Project Information",
+      title: "Prepare these details before requesting an AGM separator sample",
+      text:
+        "Clear application and assembly information helps move the discussion from a nominal thickness to a testable separator specification.",
+      items: ["Battery application and capacity", "Target thickness and compression design", "Roll width or sheet dimensions", "Test methods and acceptance criteria", "Current sample stage and expected volume"]
+    },
+    references: {
+      eyebrow: "References",
+      title: "Public sources and technical scope",
+      text:
+        "The procurement requirements cited below apply to finished batteries rather than AGM separator specifications. The article is for technical and industry discussion and does not constitute a market forecast or a battery-design recommendation.",
+      items: [
+        ["Deloitte — AI and data center power demand", "https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/genai-power-consumption-creates-need-for-more-sustainable-data-centers.html"],
+        ["PLA Procurement — UPS battery purchase notice", "https://www.plap.mil.cn/freecms/site/juncai/ggxx/info/2026/8a1d03e69cd1fb5c019cf579069f769f.html"],
+        ["Journal of Power Sources — closed oxygen cycle in VRLA batteries", "https://doi.org/10.1016/S0378-7753(99)00396-1"],
+        ["Journal of Power Sources — AGM compression-recovery model", "https://doi.org/10.1016/j.jpowsour.2017.08.055"],
+        ["SMM — lead-acid batteries in storage and base-station backup", "https://news.smm.cn/news/103776664"]
+      ]
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with application, testing and consistency information",
+      items: [
+        ["AGM Separator for UPS Batteries", "/applications/agm-separator-for-ups-battery/"],
+        ["AGM Separator for Energy Storage", "/applications/agm-separator-for-energy-storage-battery/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["Why AGM Separator Consistency Matters", "/blog/agm-separator-performance-consistency/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Review AGM separator fit for a backup-power battery project",
+      text:
+        "Share the application, battery capacity, target thickness, compression approach, roll or sheet dimensions and current project stage. We can start by reviewing the practical separator supply format.",
+      checklist: ["Application and capacity", "Thickness and compression", "Roll or sheet dimensions", "Sample and volume stage"],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        application: "UPS, data center, telecom backup, energy storage...",
+        message: "Battery capacity, target thickness, compression design, roll or sheet dimensions, test method and project stage"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/agm-separator-for-data-center-backup-power/",
+    brandName: articleCopy.zh.brandName,
+    quote: "申请样品",
+    hero: {
+      eyebrow: "数据中心备电",
+      title: "数据中心备电需求在增长，AGM 隔板配套该看什么？",
+      subtitle:
+        "订单增长只是表面。真正落到 VRLA 电池内部，吸液、压缩贴合和批次一致性，才是 AGM 隔板需要接住的变化。",
+      primary: "申请样品与规格匹配",
+      secondary: "查看项目清单",
+      image: {
+        src: "/images/applications/ups-vrla-battery-application-1200.webp",
+        alt: "UPS 与数据中心 VRLA 电池备电应用",
+        width: 1200,
+        height: 900
+      }
+    },
+    intro: [
+      "AI 算力中心持续建设，UPS 电池组更换和扩容项目陆续落地，通信基站后备电源和储能应用也在重新讨论铅酸电池的现实价值。站在 AGM 隔板制造端，更值得关心的不是数据中心增加了多少用电量，而是项目最终需要怎样的 VRLA 电池。",
+      "AGM 隔板规格只有放进具体电池结构、压缩设计、样品验证和批量装配流程中才有意义。它参与电池内部的电解液管理、离子传导和氧循环，但不会单独决定整只电池的性能。"
+    ],
+    sections: [
+      {
+        eyebrow: "需求信号",
+        title: "数据中心容量增长，推动备用电源系统同步评估",
+        text:
+          "德勤预计，到 2026 年，支撑全球数据中心关键设备运行的电力容量将接近 96GW，较 2023 年接近翻倍；AI 相关运行可能消耗其中超过 40%。这组数据说明备用电源需求值得关注，但不是 AGM 隔板订单预测。电池路线、系统设计、样品测试和批量验证仍是需求落地前必须经过的环节。"
+      },
+      {
+        eyebrow: "公开采购要求",
+        title: "终端项目对电池可靠性和状态管理提出了更具体的要求",
+        text:
+          "2026 年 3 月 17 日发布的一项 UPS 蓄电池采购要求使用全新 AGM 铅酸蓄电池，单只容量不低于 100Ah，设计浮充寿命不低于 5 年，并符合 YD/T 799-2024，同时监测电压、电流、单体内阻和温度。这是终端电池采购要求，并不是 AGM 隔板参数表，但能反映完整系统需要达到的可靠性和一致性目标。"
+      },
+      {
+        eyebrow: "高倍率备电",
+        title: "隔板里的电解液和离子通道需要保持可重复的状态",
+        text:
+          "VRLA-AGM 电池中的电解液主要保存在超细玻璃纤维形成的孔隙中，隔板同时构成正负极之间的离子传导路径。吸液、孔隙结构或电解液分布出现明显差异时，离子传输和内部阻力的一致性更难控制。极板配方、板栅、电流路径和充电制度同样重要，隔板参与其中，但不会单独决定高倍率性能。"
+      },
+      {
+        eyebrow: "长期浮充",
+        title: "真正起作用的是吸液受压后的状态，而不只是标称厚度",
+        text:
+          "压缩不足时，隔板与极板之间的接触和支撑可能不够稳定；压缩过高，又可能改变孔隙、电解液容量和氧气传输通道。相关研究说明压缩与湿态恢复值得被纳入设计评估，但某项研究采用的具体压缩比例不能直接套用到所有电池。容量、极板结构和运行工况不同，需要分别确认合适范围。"
+      },
+      {
+        eyebrow: "氧复合",
+        title: "AGM 隔板还承担着内部氧循环需要的气体通道",
+        text:
+          "充电过程中，正极产生的氧气需要通过隔板结构到达负极，并在那里重新生成水。电解液饱和度、孔隙结构和压缩状态，都会影响氧气传输与复合。隔板需要在保液、导通和气体传输之间形成适合当前电池设计的平衡，而不是把某个单项指标推到最大。"
+      },
+      {
+        eyebrow: "样品到批量",
+        title: "最容易拉开差距的是后续批次能否重复装配",
+        text:
+          "卷材宽度和收卷状态、片材尺寸、厚度、克重与包装方式都会影响上机和装配。打样时可由人工消化的轻微差异，进入连续生产后可能变成调机、返工和材料损耗。第一次样品通过只是起点，后续批次还应尽量延续相同的规格、测试和交付逻辑。"
+      },
+      {
+        eyebrow: "应用匹配",
+        title: "UPS、通信备电和储能不能共用一套笼统判断",
+        text:
+          "UPS 更关注短时高倍率放电和长期浮充后的可靠启动；通信后备电源还要结合备电时长、运行环境和维护条件；循环储能或铅碳应用则有不同的循环与电解液管理重点。SMM 2026 年行业会议议题中也包括铅酸电池在储能与基站后备电源的双轨应用分析。询价前应先说明应用、电池容量、极板或极群尺寸、目标压缩以及卷材或片材需求。"
+      }
+    ],
+    parameters: [
+      ["应用场景", "UPS、数据中心、通信基站后备或循环储能。"],
+      ["电池设计", "容量、极板或极群尺寸以及浮充工况。"],
+      ["压缩设计", "目标厚度、装配间隙、湿态状态和恢复要求。"],
+      ["电解液表现", "吸液量、润湿时间及双方确认的测试方法。"],
+      ["供货形式", "卷材宽度、纸管和卷径，或成品片材尺寸。"],
+      ["项目阶段", "初始样品、试产装配或持续批量供货。"]
+    ],
+    formats: {
+      eyebrow: "制造与交付证据",
+      title: "产品形式、质量确认与包装应共同服务装配流程",
+      items: [
+        ["AGM 隔板卷材", "确认生产线需要的宽度、纸管、卷径、收卷和搬运要求。", "/images/viking-finished-separator-roll-900.webp", "湖北维京 AGM 隔板卷材"],
+        ["质量检测", "使用双方确认的方法和条件，对比样品及不同批次的尺寸与功能指标。", "/images/agm-quality-control-1200.webp", "湖北维京 AGM 隔板质量检测"],
+        ["包装与出运", "包装、防潮、标识和托盘搬运，也是持续稳定供货的一部分。", "/images/evidence/shipping-pallet-01.webp", "湖北维京 AGM 隔板包装出运"]
+      ]
+    },
+    checklist: {
+      eyebrow: "项目资料清单",
+      title: "申请 AGM 隔板样品前，建议准备这些信息",
+      text:
+        "应用与装配信息越清楚，沟通越容易从一个标称厚度进入可测试、可复核的规格。",
+      items: ["电池应用和容量", "目标厚度与压缩设计", "卷材宽度或片材尺寸", "测试方法与验收条件", "当前样品阶段和预计数量"]
+    },
+    references: {
+      eyebrow: "参考资料",
+      title: "公开来源与适用范围说明",
+      text:
+        "下列采购要求属于终端电池要求，不等同于 AGM 隔板规格。本文仅用于行业与技术交流，不构成市场预测、经营建议或具体电池设计结论。",
+      items: [
+        ["Deloitte：AI 与数据中心电力需求", "https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/genai-power-consumption-creates-need-for-more-sustainable-data-centers.html"],
+        ["军队采购网：UPS 蓄电池采购公告", "https://www.plap.mil.cn/freecms/site/juncai/ggxx/info/2026/8a1d03e69cd1fb5c019cf579069f769f.html"],
+        ["Journal of Power Sources：VRLA 电池闭合氧循环研究", "https://doi.org/10.1016/S0378-7753(99)00396-1"],
+        ["Journal of Power Sources：AGM 隔板压缩恢复模型", "https://doi.org/10.1016/j.jpowsour.2017.08.055"],
+        ["SMM：铅酸电池在储能与基站后备电源的应用议题", "https://news.smm.cn/news/103776664"]
+      ]
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续查看应用、检测和一致性信息",
+      items: [
+        ["UPS 电池用 AGM 隔板", "/zh/applications/agm-separator-for-ups-battery/"],
+        ["储能电池用 AGM 隔板", "/zh/applications/agm-separator-for-energy-storage-battery/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["AGM 隔板一致性为什么重要", "/zh/blog/agm-separator-performance-consistency/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "确认备电项目的 AGM 隔板配套方式",
+      text:
+        "请提供应用场景、电池容量、目标厚度、压缩思路、卷材或片材尺寸和当前项目阶段，我们先从隔板的实际供货形式开始确认。",
+      checklist: ["应用与容量", "厚度与压缩", "卷材或片材尺寸", "样品与批量阶段"],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        application: "UPS、数据中心、通信备电、储能等",
+        message: "电池容量、目标厚度、压缩设计、卷材或片材尺寸、测试方法和当前项目阶段"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -2355,6 +2619,8 @@ export function BlogArticlePage({
                 ? upsVrlaTechnologySelectionCopy[primaryLang]
                 : page === "agmGlassFiberVsPvcSeparator"
                   ? agmGlassFiberVsPvcSeparatorCopy[primaryLang]
+                  : page === "dataCenterBackupPowerAgmSeparator"
+                    ? dataCenterBackupPowerAgmSeparatorCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -2414,6 +2680,8 @@ export function BlogArticlePage({
                 ? ["mature-system", "system-fit", "operational-stability", "separator-role", "procurement-review", "viking-coordination"]
                 : page === "agmGlassFiberVsPvcSeparator"
                   ? ["electrolyte-management", "agm-structure", "pvc-profile", "replacement-boundary", "buyer-review", "viking-coordination"]
+                  : page === "dataCenterBackupPowerAgmSeparator"
+                    ? ["demand-signal", "public-procurement", "high-rate-discharge", "float-compression", "oxygen-cycle", "batch-consistency", "application-fit"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
@@ -2655,7 +2923,10 @@ export function BlogArticlePage({
         />
         <div
           className={`mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2 ${
-            page === "upsVrlaTechnologySelection" ? "lg:grid-cols-3" : ""
+            page === "upsVrlaTechnologySelection" ||
+            page === "dataCenterBackupPowerAgmSeparator"
+              ? "lg:grid-cols-3"
+              : ""
           }`}
         >
           {t.formats.items.map(([title, text, src, alt]) => (
