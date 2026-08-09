@@ -76,6 +76,19 @@ const pages = [
     lastmod: "2026-07-31"
   },
   {
+    en: "/products/glass-fiber-thermal-insulation-paper/",
+    zh: "/zh/products/glass-fiber-thermal-insulation-paper/",
+    vi: "/vi/products/glass-fiber-thermal-insulation-paper/",
+    ko: "/ko/products/glass-fiber-thermal-insulation-paper/",
+    ja: "/ja/products/glass-fiber-thermal-insulation-paper/",
+    es: "/es/products/glass-fiber-thermal-insulation-paper/",
+    pt: "/pt/products/glass-fiber-thermal-insulation-paper/",
+    ru: "/ru/products/glass-fiber-thermal-insulation-paper/",
+    priority: "0.9",
+    changefreq: "monthly",
+    lastmod: "2026-08-09"
+  },
+  {
     en: "/quality-control/agm-separator-testing/",
     zh: "/zh/quality-control/agm-separator-testing/",
     vi: "/vi/quality-control/agm-separator-testing/",

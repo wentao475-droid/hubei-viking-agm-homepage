@@ -8,6 +8,10 @@ import {
   secondaryResourceData,
   secondaryResourceLocales
 } from "../content/secondary-resources.mjs";
+import {
+  thermalInsulationPaperContent,
+  thermalInsulationPaperSeo
+} from "../content/thermal-insulation-paper.mjs";
 
 const root = process.cwd();
 
@@ -234,6 +238,10 @@ for (const [locale, value] of Object.entries(
     [locale]: value
   };
 }
+
+products.glassFiberThermalInsulationPaper = structuredClone(
+  thermalInsulationPaperContent
+);
 
 for (const [locale, detailCopy] of Object.entries(
   productConstants.secondaryDetailCopy
@@ -528,6 +536,7 @@ const content = {
     agmSeparator: seoConstants.agmSeparatorSeo,
     agmSeparatorRolls: seoConstants.agmSeparatorRollsSeo,
     agmSeparatorSheets: seoConstants.agmSeparatorSheetsSeo,
+    glassFiberThermalInsulationPaper: thermalInsulationPaperSeo,
     agmSeparatorTesting: seoConstants.agmSeparatorTestingSeo,
     agmSeparatorVrlaApplication: seoConstants.agmSeparatorVrlaApplicationSeo,
     agmSeparatorUpsApplication: seoConstants.agmSeparatorUpsApplicationSeo,

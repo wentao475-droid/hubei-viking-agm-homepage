@@ -133,6 +133,13 @@ const secondaryLocalizedPages = ["vi", "ko", "ja", "es", "pt", "ru"].flatMap((lo
     seo: content.seo?.agmSeparatorSheets?.[locale]
   },
   {
+    key: `glassFiberThermalInsulationPaper.${locale}`,
+    route: `app/${locale}/products/glass-fiber-thermal-insulation-paper/page.tsx`,
+    path: `/${locale}/products/glass-fiber-thermal-insulation-paper/`,
+    content: content.products?.glassFiberThermalInsulationPaper?.[locale],
+    seo: content.seo?.glassFiberThermalInsulationPaper?.[locale]
+  },
+  {
     key: `agmSeparatorTesting.${locale}`,
     route: `app/${locale}/quality-control/agm-separator-testing/page.tsx`,
     path: `/${locale}/quality-control/agm-separator-testing/`,
@@ -183,6 +190,35 @@ for (const page of secondaryLocalizedPages) {
   check(
     sitemapSource.includes(`"${page.path}"`),
     `${page.key} is registered in the sitemap`
+  );
+}
+
+for (const locale of ["en", "zh"]) {
+  const prefix = locale === "en" ? "" : "/zh";
+  const routePrefix = locale === "en" ? "app" : "app/zh";
+  const key = `glassFiberThermalInsulationPaper.${locale}`;
+  const path = `${prefix}/products/glass-fiber-thermal-insulation-paper/`;
+
+  check(
+    Boolean(content.products?.glassFiberThermalInsulationPaper?.[locale]),
+    `${key} has localized page content`
+  );
+  check(
+    Boolean(content.seo?.glassFiberThermalInsulationPaper?.[locale]),
+    `${key} has localized SEO content`
+  );
+  check(
+    existsSync(
+      join(
+        root,
+        `${routePrefix}/products/glass-fiber-thermal-insulation-paper/page.tsx`
+      )
+    ),
+    `${key} has a route`
+  );
+  check(
+    sitemapSource.includes(`"${path}"`),
+    `${key} is registered in the sitemap`
   );
 }
 

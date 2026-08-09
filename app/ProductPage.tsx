@@ -8,11 +8,16 @@ import type { Lang, SiteLocale } from "./locales";
 import { productFaqCopy } from "./seo-faq";
 import { SiteHeader } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
+import {
+  thermalInsulationPaperContent,
+  thermalInsulationPaperLeadCopy
+} from "../content/thermal-insulation-paper.mjs";
 
 export type ProductPageKind =
   | "agmSeparator"
   | "agmSeparatorRolls"
   | "agmSeparatorSheets"
+  | "glassFiberThermalInsulationPaper"
   | "agmSeparatorTesting"
   | "agmSeparatorVrlaApplication"
   | "agmSeparatorUpsApplication"
@@ -529,7 +534,10 @@ const footerCopy = {
   }
 } as const;
 
-const content: Record<ProductPageKind, Record<Lang, ProductContent>> = {
+const content: Record<
+  Exclude<ProductPageKind, "glassFiberThermalInsulationPaper">,
+  Record<Lang, ProductContent>
+> = {
   agmSeparator: {
     en: {
       homePath: "/",
@@ -4345,6 +4353,11 @@ export function ProductPage({
   lang: SiteLocale;
   page?: ProductPageKind;
 }) {
+  const thermalPaperPage = page === "glassFiberThermalInsulationPaper";
+  const agmPage = page as Exclude<
+    ProductPageKind,
+    "glassFiberThermalInsulationPaper"
+  >;
   const localizedDetail =
     lang !== "en" &&
     lang !== "zh" &&
@@ -4362,17 +4375,20 @@ export function ProductPage({
       ? secondaryApplicationContent[lang][page]
       : undefined;
   const defaults =
+    (thermalPaperPage
+      ? (thermalInsulationPaperContent[lang] as ProductContent)
+      : undefined) ??
     localizedDetail ??
     localizedApplication ??
     (lang === "vi"
-      ? viContent[page]
+      ? viContent[agmPage]
       : lang === "ko"
-        ? koContent[page] ??
+        ? koContent[agmPage] ??
           (page === "agmSeparatorMotorcycleApplication"
             ? additionalMotorcycleContent.ko
             : undefined)
         : lang === "ja"
-          ? jaContent[page] ??
+          ? jaContent[agmPage] ??
             (page === "agmSeparatorMotorcycleApplication"
               ? additionalMotorcycleContent.ja
               : undefined)
@@ -4382,17 +4398,20 @@ export function ProductPage({
               : page === "agmSeparatorMotorcycleApplication"
                 ? additionalMotorcycleContent[lang]
                 : undefined
-            : content[page][lang as Lang]);
+            : content[agmPage][lang as Lang]);
 
   if (!defaults) {
     throw new Error(`Missing ${lang} content for product page "${page}"`);
   }
 
   const t = productContent(page, lang, defaults);
-  const lead = leadCaptureCopy[lang];
+  const lead = (thermalPaperPage
+    ? thermalInsulationPaperLeadCopy[lang]
+    : leadCaptureCopy[lang]) as (typeof leadCaptureCopy)[SiteLocale];
   const applicationPage = page.endsWith("Application");
-  const defaultProduct =
-    page === "agmSeparatorRolls"
+  const defaultProduct = thermalPaperPage
+    ? "Glass fiber thermal insulation paper"
+    : page === "agmSeparatorRolls"
       ? lang === "zh"
         ? "AGM 隔板卷材"
         : lang === "vi"
@@ -4702,8 +4721,9 @@ export function ProductPage({
         </div>
       </section>
 
-      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
+      {!thermalPaperPage && (
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
           <a
             href={asset(
               lang === "zh"
@@ -4817,8 +4837,9 @@ export function ProductPage({
               className="mt-5 text-signal transition group-hover:translate-x-1"
             />
           </a>
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       <section id="contact" className="bg-ink px-4 py-24 text-white sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
@@ -4847,6 +4868,7 @@ export function ProductPage({
 
           <InquiryForm
             lang={lang}
+            variant={thermalPaperPage ? "thermalInsulation" : "agm"}
             defaultApplication={applicationPage ? t.hero.title : ""}
             defaultInterestedProduct={defaultProduct}
             messagePlaceholder={lead.messagePlaceholder}

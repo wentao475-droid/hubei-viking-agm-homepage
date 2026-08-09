@@ -26,6 +26,10 @@ const synchronizedDetailFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/products/agm-separator-sheets/index.html`,
   `${locale}/quality-control/agm-separator-testing/index.html`
 ]);
+const thermalInsulationPaperFiles = ["", "zh", ...synchronizedLocaleCodes].map(
+  (locale) =>
+    `${locale ? `${locale}/` : ""}products/glass-fiber-thermal-insulation-paper/index.html`
+);
 const synchronizedApplicationSlugs = [
   "agm-separator-for-vrla-battery",
   "agm-separator-for-ups-battery",
@@ -85,6 +89,7 @@ const requiredFiles = [
   "favicon.ico",
   "videos/viking-agm-promo-480p.mp4",
   ...synchronizedDetailFiles,
+  ...thermalInsulationPaperFiles,
   ...synchronizedApplicationFiles,
   ...synchronizedResourceFiles
 ];
@@ -243,6 +248,35 @@ const socialProfileUrls = [
   "https://www.tiktok.com/@vikingagm",
   "https://www.linkedin.com/company/viking-agm/"
 ];
+const thermalInsulationPagesComplete = [
+  ["", "en"],
+  ["zh", "zh-CN"],
+  ["vi", "vi"],
+  ["ko", "ko"],
+  ["ja", "ja"],
+  ["es", "es"],
+  ["pt", "pt-BR"],
+  ["ru", "ru"]
+].every(([locale, htmlLang]) => {
+  const path = `${locale ? `${locale}/` : ""}products/glass-fiber-thermal-insulation-paper/index.html`;
+  const publicPath = `/${locale ? `${locale}/` : ""}products/glass-fiber-thermal-insulation-paper/`;
+  const html = readOutFile(path);
+
+  return (
+    html.includes(`<html lang="${htmlLang}"`) &&
+    html.includes(`https://www.vikingagm.com${publicPath}`) &&
+    html.includes('"@type":"FAQPage"') &&
+    html.includes('value="Glass fiber insulation paper rolls"') &&
+    html.includes('name="application"') &&
+    !html.includes("400-0881-339")
+  );
+});
+
+if (thermalInsulationPagesComplete) {
+  pass("glass fiber thermal insulation paper pages are complete in 8 languages");
+} else {
+  fail("glass fiber thermal insulation paper page validation failed");
+}
 
 const pagesMissingSocialLinks = sitemapUrls.filter((url) => {
   const path = new URL(url).pathname;
@@ -917,10 +951,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 160) {
-  pass("sitemap.xml lists the expected 160 localized public URLs");
+if (sitemapUrls.length === 168) {
+  pass("sitemap.xml lists the expected 168 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 160`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 168`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(

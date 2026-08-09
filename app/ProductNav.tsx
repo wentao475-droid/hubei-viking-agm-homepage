@@ -24,6 +24,12 @@ const productNavItems = {
       description:
         "Pre-cut sheet supply for VRLA battery assembly and sample review.",
       href: "/products/agm-separator-sheets/"
+    },
+    {
+      title: "Glass Fiber Thermal Insulation Paper",
+      description:
+        "Rolls, sheets and custom-cut glass fiber material for industrial thermal insulation.",
+      href: "/products/glass-fiber-thermal-insulation-paper/"
     }
   ],
   zh: [
@@ -41,6 +47,11 @@ const productNavItems = {
       title: "AGM 隔板片材",
       description: "用于 VRLA 电池装配和样品确认的预裁切片材供应。",
       href: "/zh/products/agm-separator-sheets/"
+    },
+    {
+      title: "玻璃纤维隔热纸",
+      description: "面向工业隔热应用，可沟通卷材、片材和定制裁切形式。",
+      href: "/zh/products/glass-fiber-thermal-insulation-paper/"
     }
   ],
   vi: [
@@ -59,6 +70,11 @@ const productNavItems = {
       title: "Tấm ngăn AGM dạng tấm",
       description: "Tấm cắt sẵn cho lắp ráp ắc quy VRLA và đánh giá mẫu.",
       href: "/vi/products/agm-separator-sheets/"
+    },
+    {
+      title: "Giấy cách nhiệt sợi thủy tinh",
+      description: "Dạng cuộn, tấm và cắt theo yêu cầu cho cách nhiệt công nghiệp.",
+      href: "/vi/products/glass-fiber-thermal-insulation-paper/"
     }
   ],
   ko: [
@@ -76,6 +92,11 @@ const productNavItems = {
       title: "AGM 분리막 시트",
       description: "VRLA 배터리 조립 및 샘플 검토용 사전 절단 시트.",
       href: "/ko/products/agm-separator-sheets/"
+    },
+    {
+      title: "유리섬유 단열지",
+      description: "산업용 단열을 위한 롤, 시트 및 맞춤 재단 소재.",
+      href: "/ko/products/glass-fiber-thermal-insulation-paper/"
     }
   ],
   ja: [
@@ -93,6 +114,11 @@ const productNavItems = {
       title: "AGMセパレーター シート",
       description: "VRLA電池組立・サンプル確認向けのカットシート。",
       href: "/ja/products/agm-separator-sheets/"
+    },
+    {
+      title: "ガラス繊維断熱紙",
+      description: "産業用断熱向けのロール、シート、指定寸法カットに対応。",
+      href: "/ja/products/glass-fiber-thermal-insulation-paper/"
     }
   ],
   es: [
@@ -111,6 +137,11 @@ const productNavItems = {
       title: "Láminas de separador AGM",
       description: "Láminas precortadas para montaje VRLA y evaluación de muestras.",
       href: "/es/products/agm-separator-sheets/"
+    },
+    {
+      title: "Papel aislante térmico de fibra de vidrio",
+      description: "Rollos, láminas y cortes a medida para aislamiento térmico industrial.",
+      href: "/es/products/glass-fiber-thermal-insulation-paper/"
     }
   ],
   pt: [
@@ -129,6 +160,11 @@ const productNavItems = {
       title: "Folhas de separador AGM",
       description: "Folhas pré-cortadas para montagem VRLA e avaliação de amostras.",
       href: "/pt/products/agm-separator-sheets/"
+    },
+    {
+      title: "Papel de isolamento térmico de fibra de vidro",
+      description: "Rolos, folhas e cortes sob medida para isolamento térmico industrial.",
+      href: "/pt/products/glass-fiber-thermal-insulation-paper/"
     }
   ],
   ru: [
@@ -147,6 +183,11 @@ const productNavItems = {
       title: "Листы AGM-сепаратора",
       description: "Нарезанные листы для сборки VRLA и оценки образцов.",
       href: "/ru/products/agm-separator-sheets/"
+    },
+    {
+      title: "Теплоизоляционная бумага из стекловолокна",
+      description: "Рулоны, листы и резка по размерам для промышленной теплоизоляции.",
+      href: "/ru/products/glass-fiber-thermal-insulation-paper/"
     }
   ]
 } as const;

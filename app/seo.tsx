@@ -16,6 +16,10 @@ import {
   buildSecondaryArticleSeo,
   secondaryResourceData
 } from "../content/secondary-resources.mjs";
+import {
+  thermalInsulationPaperLeadCopy,
+  thermalInsulationPaperSeo
+} from "../content/thermal-insulation-paper.mjs";
 import type { BlogArticleKind } from "./BlogArticlePage";
 
 type ApplicationLocale = SiteLocale;
@@ -24,6 +28,7 @@ export const SITE_URL = "https://www.vikingagm.com";
 const PREVIEW_IMAGE = `${SITE_URL}/images/viking-finished-separator-roll-900.webp`;
 const AGM_ROLL_END_FACE_IMAGE = `${SITE_URL}/images/evidence/agm-separator-roll-end-face-01.webp`;
 const SHEETS_PREVIEW_IMAGE = `${SITE_URL}/images/sheets1-900.webp`;
+const THERMAL_INSULATION_PAPER_IMAGE = `${SITE_URL}/images/capability/agm-roll-finished.jpg`;
 const QUALITY_PREVIEW_IMAGE = `${SITE_URL}/images/agm-quality-control-1200.webp`;
 const UPS_APPLICATION_IMAGE = `${SITE_URL}/images/applications/ups-vrla-battery-application-1200.webp`;
 const MOTORCYCLE_APPLICATION_IMAGE = `${SITE_URL}/images/applications/motorcycle-vrla-battery-application-1200.webp`;
@@ -2051,6 +2056,39 @@ export function buildAgmSeparatorSheetsMetadata(lang: SiteLocale): Metadata {
   });
 }
 
+export function buildGlassFiberThermalInsulationPaperMetadata(
+  lang: SiteLocale
+): Metadata {
+  const current = seoContent(
+    "glassFiberThermalInsulationPaper",
+    lang,
+    thermalInsulationPaperSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/products/glass-fiber-thermal-insulation-paper/",
+    zhPath: "/zh/products/glass-fiber-thermal-insulation-paper/",
+    viPath: "/vi/products/glass-fiber-thermal-insulation-paper/",
+    koPath: "/ko/products/glass-fiber-thermal-insulation-paper/",
+    jaPath: "/ja/products/glass-fiber-thermal-insulation-paper/",
+    esPath: "/es/products/glass-fiber-thermal-insulation-paper/",
+    ptPath: "/pt/products/glass-fiber-thermal-insulation-paper/",
+    ruPath: "/ru/products/glass-fiber-thermal-insulation-paper/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.productName,
+    image: {
+      url: THERMAL_INSULATION_PAPER_IMAGE,
+      width: 1600,
+      height: 1200
+    }
+  });
+}
+
 export function buildAgmSeparatorTestingMetadata(lang: SiteLocale): Metadata {
   const current = seoContent("agmSeparatorTesting", lang, agmSeparatorTestingSeo[lang]);
 
@@ -2833,6 +2871,89 @@ export function AgmSeparatorSheetsStructuredData({ lang }: { lang: SiteLocale })
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
         itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${homePath}#products`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function GlassFiberThermalInsulationPaperStructuredData({
+  lang
+}: {
+  lang: SiteLocale;
+}) {
+  const current = seoContent(
+    "glassFiberThermalInsulationPaper",
+    lang,
+    thermalInsulationPaperSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = localeHomePaths[lang];
+  const faq = thermalInsulationPaperLeadCopy[lang].faq as Array<
+    readonly [string, string]
+  >;
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: THERMAL_INSULATION_PAPER_IMAGE,
+          width: 1600,
+          height: 1200
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: current.productName,
+        description: current.serviceDescription,
+        serviceType: "Glass fiber thermal insulation paper supply",
+        image: THERMAL_INSULATION_PAPER_IMAGE,
+        provider: {
+          "@id": `${SITE_URL}/#organization`
+        },
+        areaServed: "Worldwide",
+        url,
+        inLanguage: current.language
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        mainEntity: faq.map(([question, answer]) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: answer
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: (current.breadcrumbs as string[]).map((name, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name,

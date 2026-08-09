@@ -70,6 +70,7 @@ export const localizedRouteGroups = [
     pt: "/pt/products/agm-separator-sheets/",
     ru: "/ru/products/agm-separator-sheets/"
   },
+  allLocalePaths("products/glass-fiber-thermal-insulation-paper"),
   {
     en: "/quality-control/agm-separator-testing/",
     zh: "/zh/quality-control/agm-separator-testing/",

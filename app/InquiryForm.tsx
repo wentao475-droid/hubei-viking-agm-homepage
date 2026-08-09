@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import type { SiteLocale } from "./locales";
+import { thermalInsulationPaperFormCopy } from "../content/thermal-insulation-paper.mjs";
 
 type InquiryFormProps = {
   lang: SiteLocale;
@@ -9,6 +10,7 @@ type InquiryFormProps = {
   defaultApplication?: string;
   defaultInterestedProduct?: string;
   messagePlaceholder?: string;
+  variant?: "agm" | "thermalInsulation";
 };
 
 type FormState = "idle" | "error" | "success" | "failure" | "emailFallback";
@@ -438,9 +440,35 @@ export function InquiryForm({
   className = "",
   defaultApplication = "",
   defaultInterestedProduct = "",
-  messagePlaceholder
+  messagePlaceholder,
+  variant = "agm"
 }: InquiryFormProps) {
-  const t = copy[lang];
+  const baseCopy = copy[lang];
+  const thermalCopy = thermalInsulationPaperFormCopy[lang];
+  const t =
+    variant === "thermalInsulation"
+      ? {
+          ...baseCopy,
+          fields: {
+            ...baseCopy.fields,
+            application: thermalCopy.applicationLabel,
+            interestedProduct: thermalCopy.productLabel,
+            message: thermalCopy.messageLabel
+          },
+          placeholders: {
+            ...baseCopy.placeholders,
+            application: thermalCopy.applicationPlaceholder,
+            interestedProduct: thermalCopy.productPlaceholder,
+            message: thermalCopy.messagePlaceholder
+          },
+          options: {
+            applications: thermalCopy.applications,
+            productFormats: thermalCopy.formats
+          },
+          submit: thermalCopy.submit,
+          subject: thermalCopy.subject
+        }
+      : baseCopy;
   const [formState, setFormState] = useState<FormState>("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fallbackMailto, setFallbackMailto] = useState(
@@ -469,7 +497,7 @@ export function InquiryForm({
     }
 
     appendAttribution(formData, lang);
-    const mailto = buildInquiryMailto(formData, lang);
+    const mailto = buildInquiryMailto(formData, lang, variant);
     setFallbackMailto(mailto);
 
     if (staticFormFallback) {
@@ -854,8 +882,26 @@ function ensureFirstTouch() {
   return firstTouch;
 }
 
-function buildInquiryMailto(formData: FormData, lang: SiteLocale) {
-  const t = copy[lang];
+function buildInquiryMailto(
+  formData: FormData,
+  lang: SiteLocale,
+  variant: InquiryFormProps["variant"] = "agm"
+) {
+  const baseCopy = copy[lang];
+  const thermalCopy = thermalInsulationPaperFormCopy[lang];
+  const t =
+    variant === "thermalInsulation"
+      ? {
+          ...baseCopy,
+          fields: {
+            ...baseCopy.fields,
+            application: thermalCopy.applicationLabel,
+            interestedProduct: thermalCopy.productLabel,
+            message: thermalCopy.messageLabel
+          },
+          subject: thermalCopy.subject
+        }
+      : baseCopy;
   const labels = t.fields;
   const fields = [
     ["name", labels.name],

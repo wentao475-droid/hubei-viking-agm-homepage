@@ -16060,6 +16060,1472 @@
           "mobile": "Мобильная версия сайта"
         }
       }
+    },
+    "glassFiberThermalInsulationPaper": {
+      "en": {
+        "homePath": "/",
+        "languagePath": "/zh/products/glass-fiber-thermal-insulation-paper/",
+        "quote": "Request an Insulation Paper Sample",
+        "hero": {
+          "eyebrow": "Industrial Glass Fiber Material",
+          "title": "Glass Fiber Thermal Insulation Paper",
+          "subtitle": "Rolls, sheets and custom-cut parts for industrial thermal insulation. Specifications are reviewed against the buyer's application, operating temperature and test standard.",
+          "primary": "Request an Insulation Paper Sample",
+          "secondary": "Send your insulation-paper specification",
+          "proof": [
+            "Roll and sheet formats",
+            "Specification review before quotation",
+            "Sample validation support"
+          ],
+          "image": {
+            "src": "/images/capability/agm-roll-finished.jpg",
+            "alt": "Glass fiber paper rolls",
+            "width": 1600,
+            "height": 1200
+          }
+        },
+        "overview": {
+          "eyebrow": "Industrial Glass Fiber Material",
+          "title": "A lightweight glass fiber material for thermal separation and insulation",
+          "paragraphs": [
+            "Glass fiber thermal insulation paper is a nonwoven industrial material made from fine glass fibers. It can be supplied in rolls, sheets or custom-cut parts for equipment insulation, heat barriers and component separation.",
+            "This product is not an AGM battery separator. The material structure, binder system, tensile requirement and acceptance tests should be confirmed according to the intended industrial application.",
+            "Operating temperature, flame behavior and electrical insulation performance are not inferred from appearance alone. Required ratings must be supported by the agreed test method and sample evaluation."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Information to confirm before sample preparation",
+          "title": "Information to confirm before sample preparation",
+          "text": "A useful review starts with the application and test method, not a single thickness value. Send a drawing, reference sample or target specification when available.",
+          "items": [
+            [
+              "Thickness",
+              "Confirm the target value, tolerance and measuring pressure or method."
+            ],
+            [
+              "Basis weight",
+              "Review mass per unit area together with density, handling and insulation needs."
+            ],
+            [
+              "Binder content",
+              "The binder system affects handling, flexibility and temperature performance."
+            ],
+            [
+              "Tensile strength",
+              "Specify direction, specimen width and test method for meaningful comparison."
+            ],
+            [
+              "Thermal or fire requirement",
+              "State the operating temperature, exposure time and required certification or standard."
+            ],
+            [
+              "Dimensions and packing",
+              "Confirm roll width, roll length, core, sheet size, cut shape and moisture-protective packing."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Roll, sheet and converting formats",
+          "title": "Roll, sheet and converting formats",
+          "items": [
+            [
+              "Glass fiber paper rolls",
+              "Roll supply can be reviewed by thickness, width, length, core, winding condition and packing.",
+              "/images/capability/agm-roll-finished.jpg",
+              "Glass fiber paper rolls",
+              1600,
+              1200
+            ],
+            [
+              "Glass fiber insulation sheets",
+              "Sheets can be supplied for sample review, manual assembly or direct placement.",
+              "/images/capability/agm-sheets-stacked.jpg",
+              "Glass fiber insulation sheets",
+              1600,
+              1200
+            ],
+            [
+              "Custom-cut parts",
+              "Rectangles and other cut shapes can be discussed against drawings and dimensional tolerances.",
+              "/images/capability/agm-sheets-cutting.jpg",
+              "Custom-cut parts",
+              1600,
+              1200
+            ],
+            [
+              "Packing and batch supply",
+              "Packing, labels, storage protection and repeat-order consistency are confirmed before production.",
+              "/images/capability/finished-goods.jpg",
+              "Packing and batch supply",
+              1600,
+              1200
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Typical application directions to discuss",
+          "title": "Typical application directions to discuss",
+          "items": [
+            "Electrical equipment insulation",
+            "Industrial heating equipment",
+            "Fire-rated doors and partitions",
+            "Battery-pack thermal barriers",
+            "Appliance heat shielding",
+            "Custom industrial insulation parts"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Performance claims follow agreed tests, not product appearance",
+          "title": "Performance claims follow agreed tests, not product appearance",
+          "text": "The quotation and sample record should identify the test method, target value and acceptance criteria. We do not apply AGM separator data or another supplier's fire rating to this product.",
+          "cards": [
+            [
+              "Material identification",
+              "Confirm fiber composition, binder system and whether a coating or lamination is required."
+            ],
+            [
+              "Dimensional checks",
+              "Thickness, basis weight, width and cut size can be checked using agreed methods."
+            ],
+            [
+              "Application validation",
+              "Temperature, flame, dielectric or chemical-resistance requirements should be verified for the actual use case."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Continue with factory and purchasing information",
+          "title": "Continue with factory and purchasing information",
+          "items": [
+            [
+              "AGM separator products",
+              "/products/agm-separator/"
+            ],
+            [
+              "AGM separator rolls",
+              "/products/agm-separator-rolls/"
+            ],
+            [
+              "Quality control",
+              "/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Technical resources",
+              "/resources/"
+            ],
+            [
+              "Company overview",
+              "/#company"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Send your insulation-paper specification",
+          "title": "Send your insulation-paper specification",
+          "text": "Share the application, thickness, basis weight, roll or sheet dimensions, temperature or fire standard, quantity and any current sample or drawing.",
+          "checklist": [
+            "End use and installation position",
+            "Target thickness and basis weight",
+            "Roll, sheet or custom-cut dimensions",
+            "Operating temperature and exposure time",
+            "Required standard, sample or drawing"
+          ],
+          "placeholder": "Application, thickness, basis weight, dimensions, temperature or fire standard, quantity and reference sample",
+          "submit": "Request an Insulation Paper Sample",
+          "submitting": "...",
+          "required": "",
+          "success": "",
+          "failure": "",
+          "emailFallback": ""
+        },
+        "footer": {
+          "description": "Glass fiber material manufacturing and converting discussions for industrial insulation applications.",
+          "wechat": "WeChat",
+          "mobile": "Viking AGM"
+        },
+        "path": "/products/glass-fiber-thermal-insulation-paper/"
+      },
+      "zh": {
+        "homePath": "/zh/",
+        "languagePath": "/products/glass-fiber-thermal-insulation-paper/",
+        "quote": "申请隔热纸样品",
+        "hero": {
+          "eyebrow": "工业玻璃纤维材料",
+          "title": "玻璃纤维隔热纸",
+          "subtitle": "面向工业隔热、热屏障和部件分隔应用，可沟通卷材、片材及定制裁切件。规格需结合实际用途、工作温度和测试标准确认。",
+          "primary": "申请隔热纸样品",
+          "secondary": "发送隔热纸规格需求",
+          "proof": [
+            "卷材与片材形式",
+            "报价前确认规格",
+            "支持样品验证"
+          ],
+          "image": {
+            "src": "/images/capability/agm-roll-finished.jpg",
+            "alt": "玻璃纤维隔热纸卷材",
+            "width": 1600,
+            "height": 1200
+          }
+        },
+        "overview": {
+          "eyebrow": "工业玻璃纤维材料",
+          "title": "用于隔热与热分隔的轻质玻璃纤维材料",
+          "paragraphs": [
+            "玻璃纤维隔热纸是由细玻璃纤维构成的工业非织造材料，可按卷材、片材或定制裁切件供应，用于设备隔热、热屏障及部件之间的热分隔。",
+            "该产品不是 AGM 电池隔板。两者虽然都可能使用玻璃纤维，但材料结构、粘结体系、强度要求和验收方法不同，不能直接套用参数。",
+            "工作温度、阻燃或防火表现、电气绝缘性能不能仅凭外观判断。需要声明的等级应以双方确认的测试方法和样品验证结果为依据。"
+          ]
+        },
+        "parameters": {
+          "eyebrow": "准备样品前需要确认的信息",
+          "title": "准备样品前需要确认的信息",
+          "text": "有效的规格沟通应从应用和测试方法开始，而不是只比较厚度。如有现有样品、图纸、TDS 或 COA，建议一并提供。",
+          "items": [
+            [
+              "厚度",
+              "确认目标值、公差，以及测量压力或测试方法。"
+            ],
+            [
+              "克重",
+              "结合密度、操作强度和隔热需求评估单位面积质量。"
+            ],
+            [
+              "粘结剂含量",
+              "粘结体系会影响操作性、柔韧性和温度表现。"
+            ],
+            [
+              "拉伸强度",
+              "需要明确方向、试样宽度和测试方法，数据才可比较。"
+            ],
+            [
+              "耐温或防火要求",
+              "提供工作温度、持续时间，以及需要满足的认证或标准。"
+            ],
+            [
+              "尺寸与包装",
+              "确认卷宽、卷长、芯管、片材尺寸、裁切形状及防潮包装要求。"
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "卷材、片材与裁切形式",
+          "title": "卷材、片材与裁切形式",
+          "items": [
+            [
+              "玻璃纤维隔热纸卷材",
+              "卷材可围绕厚度、宽度、卷长、芯管、收卷状态和包装方式沟通。",
+              "/images/capability/agm-roll-finished.jpg",
+              "玻璃纤维隔热纸卷材",
+              1600,
+              1200
+            ],
+            [
+              "玻璃纤维隔热纸片材",
+              "片材适合样品验证、手工装配或直接铺设使用。",
+              "/images/capability/agm-sheets-stacked.jpg",
+              "玻璃纤维隔热纸片材",
+              1600,
+              1200
+            ],
+            [
+              "定制裁切件",
+              "可根据图纸和尺寸公差沟通矩形片材或其他裁切形状。",
+              "/images/capability/agm-sheets-cutting.jpg",
+              "定制裁切件",
+              1600,
+              1200
+            ],
+            [
+              "包装与批次供应",
+              "生产前确认包装、标签、存储防护和重复订单的一致性要求。",
+              "/images/capability/finished-goods.jpg",
+              "包装与批次供应",
+              1600,
+              1200
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "可沟通的典型应用方向",
+          "title": "可沟通的典型应用方向",
+          "items": [
+            "电气设备隔热",
+            "工业加热设备",
+            "防火门与隔断",
+            "电池包热屏障",
+            "家电隔热防护",
+            "定制工业隔热件"
+          ]
+        },
+        "quality": {
+          "eyebrow": "性能声明以约定测试为准，不凭外观推定",
+          "title": "性能声明以约定测试为准，不凭外观推定",
+          "text": "报价和样品记录应明确测试方法、目标值和验收标准。不会把 AGM 隔板参数或其他供应商的防火等级直接套用到本产品。",
+          "cards": [
+            [
+              "材料确认",
+              "确认纤维组成、粘结体系，以及是否需要涂层或复合。"
+            ],
+            [
+              "尺寸检查",
+              "按约定方法检查厚度、克重、宽度和裁切尺寸。"
+            ],
+            [
+              "应用验证",
+              "耐温、阻燃、电气或耐化学要求应结合真实使用场景验证。"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "继续查看工厂与采购信息",
+          "title": "继续查看工厂与采购信息",
+          "items": [
+            [
+              "AGM 隔板产品",
+              "/zh/products/agm-separator/"
+            ],
+            [
+              "AGM 隔板卷材",
+              "/zh/products/agm-separator-rolls/"
+            ],
+            [
+              "质量检测",
+              "/zh/quality-control/agm-separator-testing/"
+            ],
+            [
+              "技术资料",
+              "/zh/resources/"
+            ],
+            [
+              "公司介绍",
+              "/zh/#company"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "发送隔热纸规格需求",
+          "title": "发送隔热纸规格需求",
+          "text": "请提供用途、厚度、克重、卷材或片材尺寸、耐温或防火标准、数量，以及现有样品或图纸。",
+          "checklist": [
+            "最终用途与安装位置",
+            "目标厚度和克重",
+            "卷材、片材或裁切尺寸",
+            "工作温度和持续时间",
+            "标准、样品或图纸"
+          ],
+          "placeholder": "用途、厚度、克重、尺寸、耐温或防火标准、数量及参考样品",
+          "submit": "申请隔热纸样品",
+          "submitting": "...",
+          "required": "",
+          "success": "",
+          "failure": "",
+          "emailFallback": ""
+        },
+        "footer": {
+          "description": "面向工业隔热应用的玻璃纤维材料制造与裁切配套沟通。",
+          "wechat": "WeChat",
+          "mobile": "Viking AGM"
+        },
+        "path": "/zh/products/glass-fiber-thermal-insulation-paper/"
+      },
+      "vi": {
+        "homePath": "/vi/",
+        "languagePath": "/zh/products/glass-fiber-thermal-insulation-paper/",
+        "quote": "Yêu cầu mẫu giấy cách nhiệt",
+        "hero": {
+          "eyebrow": "Vật liệu sợi thủy tinh công nghiệp",
+          "title": "Giấy cách nhiệt sợi thủy tinh",
+          "subtitle": "Dạng cuộn, tấm và chi tiết cắt theo yêu cầu cho ứng dụng cách nhiệt công nghiệp. Thông số được xem xét theo ứng dụng, nhiệt độ và tiêu chuẩn thử nghiệm.",
+          "primary": "Yêu cầu mẫu giấy cách nhiệt",
+          "secondary": "Gửi thông số giấy cách nhiệt",
+          "proof": [
+            "Dạng cuộn và tấm",
+            "Xác nhận thông số trước báo giá",
+            "Hỗ trợ đánh giá mẫu"
+          ],
+          "image": {
+            "src": "/images/capability/agm-roll-finished.jpg",
+            "alt": "Cuộn giấy sợi thủy tinh",
+            "width": 1600,
+            "height": 1200
+          }
+        },
+        "overview": {
+          "eyebrow": "Vật liệu sợi thủy tinh công nghiệp",
+          "title": "Vật liệu sợi thủy tinh nhẹ cho cách nhiệt và ngăn nhiệt",
+          "paragraphs": [
+            "Giấy cách nhiệt sợi thủy tinh là vật liệu không dệt dùng cho thiết bị, lớp chắn nhiệt và phân cách linh kiện.",
+            "Sản phẩm này không phải tấm ngăn ắc quy AGM. Cấu trúc, chất kết dính, độ bền và phương pháp thử phải theo đúng ứng dụng.",
+            "Không suy luận cấp chịu nhiệt hoặc chống cháy từ ngoại quan; mọi tuyên bố phải dựa trên tiêu chuẩn và thử mẫu đã thống nhất."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Thông tin cần xác nhận trước khi làm mẫu",
+          "title": "Thông tin cần xác nhận trước khi làm mẫu",
+          "text": "Vui lòng cung cấp ứng dụng, phương pháp thử, bản vẽ, mẫu hoặc TDS/COA hiện có.",
+          "items": [
+            [
+              "Độ dày",
+              "Xác nhận giá trị, dung sai và phương pháp đo."
+            ],
+            [
+              "Định lượng",
+              "Đánh giá cùng mật độ, khả năng thao tác và cách nhiệt."
+            ],
+            [
+              "Hàm lượng chất kết dính",
+              "Ảnh hưởng đến độ mềm, thao tác và hiệu suất nhiệt."
+            ],
+            [
+              "Độ bền kéo",
+              "Nêu hướng, bề rộng mẫu và phương pháp thử."
+            ],
+            [
+              "Yêu cầu nhiệt hoặc cháy",
+              "Nêu nhiệt độ, thời gian và tiêu chuẩn cần đạt."
+            ],
+            [
+              "Kích thước và đóng gói",
+              "Xác nhận chiều rộng, chiều dài, lõi, kích thước tấm và bao bì."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Dạng cuộn, tấm và cắt theo yêu cầu",
+          "title": "Dạng cuộn, tấm và cắt theo yêu cầu",
+          "items": [
+            [
+              "Cuộn giấy sợi thủy tinh",
+              "Trao đổi độ dày, chiều rộng, chiều dài, lõi và đóng gói.",
+              "/images/capability/agm-roll-finished.jpg",
+              "Cuộn giấy sợi thủy tinh",
+              1600,
+              1200
+            ],
+            [
+              "Tấm cách nhiệt sợi thủy tinh",
+              "Phù hợp đánh giá mẫu và lắp đặt trực tiếp.",
+              "/images/capability/agm-sheets-stacked.jpg",
+              "Tấm cách nhiệt sợi thủy tinh",
+              1600,
+              1200
+            ],
+            [
+              "Chi tiết cắt theo yêu cầu",
+              "Cắt theo bản vẽ và dung sai kích thước.",
+              "/images/capability/agm-sheets-cutting.jpg",
+              "Chi tiết cắt theo yêu cầu",
+              1600,
+              1200
+            ],
+            [
+              "Đóng gói và cung ứng theo lô",
+              "Xác nhận nhãn, bảo quản và tính nhất quán trước sản xuất.",
+              "/images/capability/finished-goods.jpg",
+              "Đóng gói và cung ứng theo lô",
+              1600,
+              1200
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Hướng ứng dụng có thể trao đổi",
+          "title": "Hướng ứng dụng có thể trao đổi",
+          "items": [
+            "Cách nhiệt thiết bị điện",
+            "Thiết bị gia nhiệt công nghiệp",
+            "Cửa và vách chống cháy",
+            "Lớp chắn nhiệt bộ pin",
+            "Che chắn nhiệt gia dụng",
+            "Chi tiết cách nhiệt tùy chỉnh"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Hiệu suất phải theo thử nghiệm đã thỏa thuận",
+          "title": "Hiệu suất phải theo thử nghiệm đã thỏa thuận",
+          "text": "Không áp dụng dữ liệu tấm ngăn AGM hoặc cấp chống cháy của nhà cung cấp khác cho sản phẩm này.",
+          "cards": [
+            [
+              "Xác nhận vật liệu",
+              "Xác nhận thành phần sợi, chất kết dính và lớp phủ."
+            ],
+            [
+              "Kiểm tra kích thước",
+              "Kiểm tra độ dày, định lượng, chiều rộng và kích thước cắt."
+            ],
+            [
+              "Xác nhận ứng dụng",
+              "Thử yêu cầu nhiệt, cháy, điện hoặc hóa chất theo điều kiện thực tế."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Xem thêm thông tin nhà máy và mua hàng",
+          "title": "Xem thêm thông tin nhà máy và mua hàng",
+          "items": [
+            [
+              "Tấm ngăn AGM",
+              "/vi/products/agm-separator/"
+            ],
+            [
+              "Cuộn AGM",
+              "/vi/products/agm-separator-rolls/"
+            ],
+            [
+              "Kiểm soát chất lượng",
+              "/vi/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Tài liệu",
+              "/vi/resources/"
+            ],
+            [
+              "Công ty",
+              "/vi/#company"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Gửi thông số giấy cách nhiệt",
+          "title": "Gửi thông số giấy cách nhiệt",
+          "text": "Gửi ứng dụng, độ dày, định lượng, kích thước, tiêu chuẩn nhiệt/cháy, số lượng và mẫu hoặc bản vẽ.",
+          "checklist": [
+            "Ứng dụng và vị trí lắp đặt",
+            "Độ dày và định lượng",
+            "Kích thước cuộn, tấm hoặc chi tiết",
+            "Nhiệt độ và thời gian",
+            "Tiêu chuẩn, mẫu hoặc bản vẽ"
+          ],
+          "placeholder": "Ứng dụng, độ dày, định lượng, kích thước, tiêu chuẩn, số lượng và mẫu",
+          "submit": "Yêu cầu mẫu giấy cách nhiệt",
+          "submitting": "...",
+          "required": "",
+          "success": "",
+          "failure": "",
+          "emailFallback": ""
+        },
+        "footer": {
+          "description": "Vật liệu sợi thủy tinh và gia công cho ứng dụng cách nhiệt công nghiệp.",
+          "wechat": "WeChat",
+          "mobile": "Viking AGM"
+        },
+        "path": "/vi/products/glass-fiber-thermal-insulation-paper/"
+      },
+      "ko": {
+        "homePath": "/ko/",
+        "languagePath": "/zh/products/glass-fiber-thermal-insulation-paper/",
+        "quote": "단열지 샘플 요청",
+        "hero": {
+          "eyebrow": "산업용 유리섬유 소재",
+          "title": "유리섬유 단열지",
+          "subtitle": "산업용 단열, 열 차단 및 부품 분리용 롤, 시트와 맞춤 재단품입니다. 용도, 온도 및 시험 규격에 따라 사양을 검토합니다.",
+          "primary": "단열지 샘플 요청",
+          "secondary": "단열지 사양 보내기",
+          "proof": [
+            "롤 및 시트",
+            "견적 전 사양 확인",
+            "샘플 검토 지원"
+          ],
+          "image": {
+            "src": "/images/capability/agm-roll-finished.jpg",
+            "alt": "유리섬유 단열지 롤",
+            "width": 1600,
+            "height": 1200
+          }
+        },
+        "overview": {
+          "eyebrow": "산업용 유리섬유 소재",
+          "title": "단열과 열 분리를 위한 경량 유리섬유 소재",
+          "paragraphs": [
+            "유리섬유 단열지는 장비 단열, 열 차단 및 부품 분리에 사용하는 부직포 산업 소재입니다.",
+            "이 제품은 AGM 배터리 분리막과 다릅니다. 재료 구조, 바인더, 강도와 시험 방법은 실제 용도에 맞춰야 합니다.",
+            "외관만으로 내열 또는 난연 등급을 판단하지 않으며, 합의된 규격과 샘플 시험으로 확인합니다."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "샘플 전 확인 정보",
+          "title": "샘플 전 확인 정보",
+          "text": "용도, 시험 방법, 도면, 기존 샘플 또는 TDS/COA를 보내 주세요.",
+          "items": [
+            [
+              "두께",
+              "목표값, 공차 및 측정 방법을 확인합니다."
+            ],
+            [
+              "평량",
+              "밀도, 취급성과 단열 요구를 함께 검토합니다."
+            ],
+            [
+              "바인더 함량",
+              "유연성, 취급성과 열 특성에 영향을 줍니다."
+            ],
+            [
+              "인장 강도",
+              "방향, 시편 폭과 시험 방법을 명시합니다."
+            ],
+            [
+              "내열/난연 요구",
+              "온도, 노출 시간과 요구 규격을 알려 주세요."
+            ],
+            [
+              "치수와 포장",
+              "폭, 길이, 코어, 시트 크기, 재단 및 포장을 확인합니다."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "롤, 시트 및 맞춤 재단",
+          "title": "롤, 시트 및 맞춤 재단",
+          "items": [
+            [
+              "유리섬유 단열지 롤",
+              "두께, 폭, 길이, 코어와 포장을 검토합니다.",
+              "/images/capability/agm-roll-finished.jpg",
+              "유리섬유 단열지 롤",
+              1600,
+              1200
+            ],
+            [
+              "유리섬유 단열 시트",
+              "샘플 검토와 직접 조립에 적합합니다.",
+              "/images/capability/agm-sheets-stacked.jpg",
+              "유리섬유 단열 시트",
+              1600,
+              1200
+            ],
+            [
+              "맞춤 재단품",
+              "도면과 치수 공차에 따라 검토합니다.",
+              "/images/capability/agm-sheets-cutting.jpg",
+              "맞춤 재단품",
+              1600,
+              1200
+            ],
+            [
+              "포장 및 로트 공급",
+              "라벨, 보관 보호와 반복 주문 일관성을 확인합니다.",
+              "/images/capability/finished-goods.jpg",
+              "포장 및 로트 공급",
+              1600,
+              1200
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "협의 가능한 적용 분야",
+          "title": "협의 가능한 적용 분야",
+          "items": [
+            "전기 장비 단열",
+            "산업용 가열 장비",
+            "방화문 및 칸막이",
+            "배터리 팩 열 차단",
+            "가전 열 차폐",
+            "맞춤 산업 단열 부품"
+          ]
+        },
+        "quality": {
+          "eyebrow": "성능은 합의된 시험으로 확인합니다",
+          "title": "성능은 합의된 시험으로 확인합니다",
+          "text": "AGM 분리막 데이터나 타사 방화 등급을 이 제품에 그대로 적용하지 않습니다.",
+          "cards": [
+            [
+              "소재 확인",
+              "섬유, 바인더와 코팅 필요 여부를 확인합니다."
+            ],
+            [
+              "치수 검사",
+              "두께, 평량, 폭과 재단 치수를 검사합니다."
+            ],
+            [
+              "용도 검증",
+              "실제 조건에서 내열, 난연, 전기 또는 내화학 요구를 확인합니다."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "공장 및 구매 정보",
+          "title": "공장 및 구매 정보",
+          "items": [
+            [
+              "AGM 분리막",
+              "/ko/products/agm-separator/"
+            ],
+            [
+              "AGM 롤",
+              "/ko/products/agm-separator-rolls/"
+            ],
+            [
+              "품질 관리",
+              "/ko/quality-control/agm-separator-testing/"
+            ],
+            [
+              "기술 자료",
+              "/ko/resources/"
+            ],
+            [
+              "회사 소개",
+              "/ko/#company"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "단열지 사양 보내기",
+          "title": "단열지 사양 보내기",
+          "text": "용도, 두께, 평량, 치수, 내열/난연 규격, 수량과 샘플 또는 도면을 보내 주세요.",
+          "checklist": [
+            "최종 용도와 설치 위치",
+            "두께와 평량",
+            "롤/시트/재단 치수",
+            "온도와 노출 시간",
+            "규격, 샘플 또는 도면"
+          ],
+          "placeholder": "용도, 두께, 평량, 치수, 규격, 수량과 샘플",
+          "submit": "단열지 샘플 요청",
+          "submitting": "...",
+          "required": "",
+          "success": "",
+          "failure": "",
+          "emailFallback": ""
+        },
+        "footer": {
+          "description": "산업용 단열을 위한 유리섬유 소재 제조 및 가공 협의.",
+          "wechat": "WeChat",
+          "mobile": "Viking AGM"
+        },
+        "path": "/ko/products/glass-fiber-thermal-insulation-paper/"
+      },
+      "ja": {
+        "homePath": "/ja/",
+        "languagePath": "/zh/products/glass-fiber-thermal-insulation-paper/",
+        "quote": "断熱紙サンプルを依頼",
+        "hero": {
+          "eyebrow": "産業用ガラス繊維材料",
+          "title": "ガラス繊維断熱紙",
+          "subtitle": "産業用断熱、遮熱、部品分離向けのロール、シート、カット品。用途、温度、試験規格に合わせて仕様を確認します。",
+          "primary": "断熱紙サンプルを依頼",
+          "secondary": "断熱紙仕様を送信",
+          "proof": [
+            "ロール・シート",
+            "見積前の仕様確認",
+            "サンプル評価対応"
+          ],
+          "image": {
+            "src": "/images/capability/agm-roll-finished.jpg",
+            "alt": "ガラス繊維断熱紙ロール",
+            "width": 1600,
+            "height": 1200
+          }
+        },
+        "overview": {
+          "eyebrow": "産業用ガラス繊維材料",
+          "title": "断熱と熱分離に用いる軽量ガラス繊維材料",
+          "paragraphs": [
+            "ガラス繊維断熱紙は、設備断熱、遮熱、部品分離に使用する不織布系の産業材料です。",
+            "AGMバッテリーセパレーターとは異なります。材料構造、バインダー、強度、試験方法を用途ごとに確認する必要があります。",
+            "外観のみで耐熱・難燃等級を判断せず、合意した規格とサンプル試験で確認します。"
+          ]
+        },
+        "parameters": {
+          "eyebrow": "サンプル前に確認する情報",
+          "title": "サンプル前に確認する情報",
+          "text": "用途、試験方法、図面、既存サンプル、TDS/COAをご提示ください。",
+          "items": [
+            [
+              "厚さ",
+              "目標値、公差、測定方法を確認します。"
+            ],
+            [
+              "坪量",
+              "密度、取扱性、断熱要件と合わせて確認します。"
+            ],
+            [
+              "バインダー含有量",
+              "柔軟性、取扱性、熱特性に影響します。"
+            ],
+            [
+              "引張強度",
+              "方向、試験片幅、試験方法を明記します。"
+            ],
+            [
+              "耐熱・難燃要件",
+              "温度、時間、必要規格をご提示ください。"
+            ],
+            [
+              "寸法・梱包",
+              "幅、長さ、芯、シート寸法、カット、梱包を確認します。"
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "ロール、シート、カット形状",
+          "title": "ロール、シート、カット形状",
+          "items": [
+            [
+              "ガラス繊維断熱紙ロール",
+              "厚さ、幅、長さ、芯、巻き状態、梱包を確認します。",
+              "/images/capability/agm-roll-finished.jpg",
+              "ガラス繊維断熱紙ロール",
+              1600,
+              1200
+            ],
+            [
+              "ガラス繊維断熱シート",
+              "サンプル評価や直接組立に使用できます。",
+              "/images/capability/agm-sheets-stacked.jpg",
+              "ガラス繊維断熱シート",
+              1600,
+              1200
+            ],
+            [
+              "カスタムカット品",
+              "図面と寸法公差に合わせて検討します。",
+              "/images/capability/agm-sheets-cutting.jpg",
+              "カスタムカット品",
+              1600,
+              1200
+            ],
+            [
+              "梱包・ロット供給",
+              "ラベル、保管保護、継続注文の一貫性を確認します。",
+              "/images/capability/finished-goods.jpg",
+              "梱包・ロット供給",
+              1600,
+              1200
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "ご相談可能な用途",
+          "title": "ご相談可能な用途",
+          "items": [
+            "電気機器の断熱",
+            "産業用加熱設備",
+            "防火扉・間仕切り",
+            "バッテリーパック遮熱",
+            "家電の遮熱",
+            "産業用カスタム断熱部品"
+          ]
+        },
+        "quality": {
+          "eyebrow": "性能は合意した試験で確認",
+          "title": "性能は合意した試験で確認",
+          "text": "AGMセパレーターのデータや他社の防火等級を本製品に転用しません。",
+          "cards": [
+            [
+              "材料確認",
+              "繊維、バインダー、コーティングの要否を確認します。"
+            ],
+            [
+              "寸法検査",
+              "厚さ、坪量、幅、カット寸法を確認します。"
+            ],
+            [
+              "用途評価",
+              "実条件で耐熱、難燃、電気、耐薬品要件を評価します。"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "工場・購買情報を見る",
+          "title": "工場・購買情報を見る",
+          "items": [
+            [
+              "AGMセパレーター",
+              "/ja/products/agm-separator/"
+            ],
+            [
+              "AGMロール",
+              "/ja/products/agm-separator-rolls/"
+            ],
+            [
+              "品質管理",
+              "/ja/quality-control/agm-separator-testing/"
+            ],
+            [
+              "技術資料",
+              "/ja/resources/"
+            ],
+            [
+              "会社情報",
+              "/ja/#company"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "断熱紙仕様を送信",
+          "title": "断熱紙仕様を送信",
+          "text": "用途、厚さ、坪量、寸法、耐熱/難燃規格、数量、サンプルまたは図面をご提示ください。",
+          "checklist": [
+            "用途と設置位置",
+            "厚さと坪量",
+            "ロール/シート/カット寸法",
+            "温度と時間",
+            "規格、サンプル、図面"
+          ],
+          "placeholder": "用途、厚さ、坪量、寸法、規格、数量、サンプル",
+          "submit": "断熱紙サンプルを依頼",
+          "submitting": "...",
+          "required": "",
+          "success": "",
+          "failure": "",
+          "emailFallback": ""
+        },
+        "footer": {
+          "description": "産業用断熱向けガラス繊維材料の製造・加工相談。",
+          "wechat": "WeChat",
+          "mobile": "Viking AGM"
+        },
+        "path": "/ja/products/glass-fiber-thermal-insulation-paper/"
+      },
+      "es": {
+        "homePath": "/es/",
+        "languagePath": "/zh/products/glass-fiber-thermal-insulation-paper/",
+        "quote": "Solicitar muestra de papel aislante",
+        "hero": {
+          "eyebrow": "Material industrial de fibra de vidrio",
+          "title": "Papel aislante térmico de fibra de vidrio",
+          "subtitle": "Rollos, láminas y piezas cortadas para aislamiento industrial. Revisamos la especificación según aplicación, temperatura y norma de ensayo.",
+          "primary": "Solicitar muestra de papel aislante",
+          "secondary": "Envíe su especificación",
+          "proof": [
+            "Rollos y láminas",
+            "Revisión antes de cotizar",
+            "Validación de muestras"
+          ],
+          "image": {
+            "src": "/images/capability/agm-roll-finished.jpg",
+            "alt": "Rollos de papel de fibra de vidrio",
+            "width": 1600,
+            "height": 1200
+          }
+        },
+        "overview": {
+          "eyebrow": "Material industrial de fibra de vidrio",
+          "title": "Material ligero para aislamiento y separación térmica",
+          "paragraphs": [
+            "Es un material no tejido de fibra de vidrio para aislamiento de equipos, barreras térmicas y separación de componentes.",
+            "No es un separador AGM de batería. La estructura, el aglutinante, la resistencia y los ensayos deben corresponder a la aplicación real.",
+            "La apariencia no determina la temperatura ni la clasificación al fuego; deben verificarse con la norma y la muestra acordadas."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Datos necesarios antes de preparar muestras",
+          "title": "Datos necesarios antes de preparar muestras",
+          "text": "Envíe la aplicación, método de ensayo, plano, muestra o TDS/COA disponible.",
+          "items": [
+            [
+              "Espesor",
+              "Confirme valor, tolerancia y método de medición."
+            ],
+            [
+              "Gramaje",
+              "Revíselo con densidad, manejo y aislamiento."
+            ],
+            [
+              "Contenido de aglutinante",
+              "Afecta flexibilidad, manejo y desempeño térmico."
+            ],
+            [
+              "Resistencia a la tracción",
+              "Indique dirección, ancho de probeta y método."
+            ],
+            [
+              "Requisito térmico o de fuego",
+              "Indique temperatura, tiempo y norma."
+            ],
+            [
+              "Dimensiones y embalaje",
+              "Confirme ancho, largo, núcleo, lámina, corte y embalaje."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Rollos, láminas y corte a medida",
+          "title": "Rollos, láminas y corte a medida",
+          "items": [
+            [
+              "Rollos de papel de fibra de vidrio",
+              "Revisión de espesor, ancho, largo, núcleo y embalaje.",
+              "/images/capability/agm-roll-finished.jpg",
+              "Rollos de papel de fibra de vidrio",
+              1600,
+              1200
+            ],
+            [
+              "Láminas aislantes",
+              "Para muestras, montaje manual o colocación directa.",
+              "/images/capability/agm-sheets-stacked.jpg",
+              "Láminas aislantes",
+              1600,
+              1200
+            ],
+            [
+              "Piezas cortadas a medida",
+              "Según plano y tolerancias dimensionales.",
+              "/images/capability/agm-sheets-cutting.jpg",
+              "Piezas cortadas a medida",
+              1600,
+              1200
+            ],
+            [
+              "Embalaje y suministro por lotes",
+              "Se confirman etiquetas, protección y consistencia.",
+              "/images/capability/finished-goods.jpg",
+              "Embalaje y suministro por lotes",
+              1600,
+              1200
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicaciones para revisar",
+          "title": "Aplicaciones para revisar",
+          "items": [
+            "Aislamiento de equipos eléctricos",
+            "Equipos de calentamiento industrial",
+            "Puertas y divisiones resistentes al fuego",
+            "Barreras térmicas para baterías",
+            "Protección térmica de electrodomésticos",
+            "Piezas aislantes industriales"
+          ]
+        },
+        "quality": {
+          "eyebrow": "El desempeño se confirma con ensayos acordados",
+          "title": "El desempeño se confirma con ensayos acordados",
+          "text": "No aplicamos datos AGM ni clasificaciones de fuego de otros proveedores a este producto.",
+          "cards": [
+            [
+              "Identificación del material",
+              "Confirme fibra, aglutinante y recubrimiento."
+            ],
+            [
+              "Control dimensional",
+              "Espesor, gramaje, ancho y corte."
+            ],
+            [
+              "Validación de aplicación",
+              "Ensayos térmicos, de fuego, eléctricos o químicos según uso."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Información de fábrica y compra",
+          "title": "Información de fábrica y compra",
+          "items": [
+            [
+              "Separadores AGM",
+              "/es/products/agm-separator/"
+            ],
+            [
+              "Rollos AGM",
+              "/es/products/agm-separator-rolls/"
+            ],
+            [
+              "Control de calidad",
+              "/es/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Recursos",
+              "/es/resources/"
+            ],
+            [
+              "Empresa",
+              "/es/#company"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Envíe su especificación",
+          "title": "Envíe su especificación",
+          "text": "Comparta aplicación, espesor, gramaje, dimensiones, norma térmica/de fuego, cantidad y muestra o plano.",
+          "checklist": [
+            "Uso y posición",
+            "Espesor y gramaje",
+            "Dimensiones",
+            "Temperatura y tiempo",
+            "Norma, muestra o plano"
+          ],
+          "placeholder": "Aplicación, espesor, gramaje, dimensiones, norma, cantidad y muestra",
+          "submit": "Solicitar muestra de papel aislante",
+          "submitting": "...",
+          "required": "",
+          "success": "",
+          "failure": "",
+          "emailFallback": ""
+        },
+        "footer": {
+          "description": "Materiales de fibra de vidrio y conversión para aislamiento industrial.",
+          "wechat": "WeChat",
+          "mobile": "Viking AGM"
+        },
+        "path": "/es/products/glass-fiber-thermal-insulation-paper/"
+      },
+      "pt": {
+        "homePath": "/pt/",
+        "languagePath": "/zh/products/glass-fiber-thermal-insulation-paper/",
+        "quote": "Solicitar amostra de papel isolante",
+        "hero": {
+          "eyebrow": "Material industrial de fibra de vidro",
+          "title": "Papel de isolamento térmico de fibra de vidro",
+          "subtitle": "Rolos, folhas e peças cortadas para isolamento industrial. A especificação é analisada conforme aplicação, temperatura e norma de ensaio.",
+          "primary": "Solicitar amostra de papel isolante",
+          "secondary": "Envie sua especificação",
+          "proof": [
+            "Rolos e folhas",
+            "Análise antes da cotação",
+            "Validação de amostras"
+          ],
+          "image": {
+            "src": "/images/capability/agm-roll-finished.jpg",
+            "alt": "Rolos de papel de fibra de vidro",
+            "width": 1600,
+            "height": 1200
+          }
+        },
+        "overview": {
+          "eyebrow": "Material industrial de fibra de vidro",
+          "title": "Material leve para isolamento e separação térmica",
+          "paragraphs": [
+            "Material não tecido de fibra de vidro para isolamento de equipamentos, barreiras térmicas e separação de componentes.",
+            "Não é um separador AGM de bateria. Estrutura, ligante, resistência e ensaios devem corresponder à aplicação real.",
+            "A aparência não determina classe térmica ou de fogo; a confirmação depende da norma e da amostra acordadas."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Dados para preparar a amostra",
+          "title": "Dados para preparar a amostra",
+          "text": "Envie aplicação, método, desenho, amostra ou TDS/COA disponível.",
+          "items": [
+            [
+              "Espessura",
+              "Confirme valor, tolerância e método de medição."
+            ],
+            [
+              "Gramatura",
+              "Analise com densidade, manuseio e isolamento."
+            ],
+            [
+              "Teor de ligante",
+              "Afeta flexibilidade, manuseio e desempenho térmico."
+            ],
+            [
+              "Resistência à tração",
+              "Informe direção, largura do corpo de prova e método."
+            ],
+            [
+              "Requisito térmico ou de fogo",
+              "Informe temperatura, tempo e norma."
+            ],
+            [
+              "Dimensões e embalagem",
+              "Confirme largura, comprimento, tubete, folha, corte e embalagem."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Rolos, folhas e corte sob medida",
+          "title": "Rolos, folhas e corte sob medida",
+          "items": [
+            [
+              "Rolos de papel de fibra de vidro",
+              "Análise de espessura, largura, comprimento, tubete e embalagem.",
+              "/images/capability/agm-roll-finished.jpg",
+              "Rolos de papel de fibra de vidro",
+              1600,
+              1200
+            ],
+            [
+              "Folhas isolantes",
+              "Para amostras, montagem manual ou aplicação direta.",
+              "/images/capability/agm-sheets-stacked.jpg",
+              "Folhas isolantes",
+              1600,
+              1200
+            ],
+            [
+              "Peças cortadas",
+              "Conforme desenho e tolerâncias.",
+              "/images/capability/agm-sheets-cutting.jpg",
+              "Peças cortadas",
+              1600,
+              1200
+            ],
+            [
+              "Embalagem e lotes",
+              "Confirmamos etiquetas, proteção e consistência.",
+              "/images/capability/finished-goods.jpg",
+              "Embalagem e lotes",
+              1600,
+              1200
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Aplicações para análise",
+          "title": "Aplicações para análise",
+          "items": [
+            "Isolamento de equipamentos elétricos",
+            "Equipamentos de aquecimento industrial",
+            "Portas e divisórias corta-fogo",
+            "Barreiras térmicas para baterias",
+            "Proteção térmica de eletrodomésticos",
+            "Peças isolantes industriais"
+          ]
+        },
+        "quality": {
+          "eyebrow": "O desempenho segue ensaios acordados",
+          "title": "O desempenho segue ensaios acordados",
+          "text": "Não aplicamos dados de AGM ou classe de fogo de outro fornecedor a este produto.",
+          "cards": [
+            [
+              "Identificação do material",
+              "Fibra, ligante e necessidade de revestimento."
+            ],
+            [
+              "Controle dimensional",
+              "Espessura, gramatura, largura e corte."
+            ],
+            [
+              "Validação da aplicação",
+              "Ensaios térmicos, de fogo, elétricos ou químicos conforme o uso."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Informações de fábrica e compra",
+          "title": "Informações de fábrica e compra",
+          "items": [
+            [
+              "Separadores AGM",
+              "/pt/products/agm-separator/"
+            ],
+            [
+              "Rolos AGM",
+              "/pt/products/agm-separator-rolls/"
+            ],
+            [
+              "Controle de qualidade",
+              "/pt/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Recursos",
+              "/pt/resources/"
+            ],
+            [
+              "Empresa",
+              "/pt/#company"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Envie sua especificação",
+          "title": "Envie sua especificação",
+          "text": "Compartilhe aplicação, espessura, gramatura, dimensões, norma térmica/de fogo, quantidade e amostra ou desenho.",
+          "checklist": [
+            "Uso e posição",
+            "Espessura e gramatura",
+            "Dimensões",
+            "Temperatura e tempo",
+            "Norma, amostra ou desenho"
+          ],
+          "placeholder": "Aplicação, espessura, gramatura, dimensões, norma, quantidade e amostra",
+          "submit": "Solicitar amostra de papel isolante",
+          "submitting": "...",
+          "required": "",
+          "success": "",
+          "failure": "",
+          "emailFallback": ""
+        },
+        "footer": {
+          "description": "Materiais de fibra de vidro e conversão para isolamento industrial.",
+          "wechat": "WeChat",
+          "mobile": "Viking AGM"
+        },
+        "path": "/pt/products/glass-fiber-thermal-insulation-paper/"
+      },
+      "ru": {
+        "homePath": "/ru/",
+        "languagePath": "/zh/products/glass-fiber-thermal-insulation-paper/",
+        "quote": "Запросить образец теплоизоляции",
+        "hero": {
+          "eyebrow": "Промышленный стекловолоконный материал",
+          "title": "Теплоизоляционная бумага из стекловолокна",
+          "subtitle": "Рулоны, листы и детали по чертежу для промышленной теплоизоляции. Характеристики согласуются по применению, температуре и методу испытаний.",
+          "primary": "Запросить образец теплоизоляции",
+          "secondary": "Отправьте техническое задание",
+          "proof": [
+            "Рулоны и листы",
+            "Проверка ТЗ до расчета",
+            "Поддержка испытания образцов"
+          ],
+          "image": {
+            "src": "/images/capability/agm-roll-finished.jpg",
+            "alt": "Рулоны стекловолоконной бумаги",
+            "width": 1600,
+            "height": 1200
+          }
+        },
+        "overview": {
+          "eyebrow": "Промышленный стекловолоконный материал",
+          "title": "Легкий материал для теплоизоляции и теплового разделения",
+          "paragraphs": [
+            "Нетканый стекловолоконный материал для изоляции оборудования, тепловых барьеров и разделения компонентов.",
+            "Это не AGM-сепаратор аккумулятора. Структура, связующее, прочность и методы испытаний зависят от фактического применения.",
+            "Температурный или огнестойкий класс нельзя определять по внешнему виду; он подтверждается согласованным стандартом и образцом."
+          ]
+        },
+        "parameters": {
+          "eyebrow": "Данные до изготовления образца",
+          "title": "Данные до изготовления образца",
+          "text": "Предоставьте применение, метод испытаний, чертеж, образец или TDS/COA.",
+          "items": [
+            [
+              "Толщина",
+              "Укажите значение, допуск и метод измерения."
+            ],
+            [
+              "Поверхностная плотность",
+              "Оценивается вместе с плотностью, обработкой и изоляцией."
+            ],
+            [
+              "Содержание связующего",
+              "Влияет на гибкость, обработку и тепловые свойства."
+            ],
+            [
+              "Прочность на растяжение",
+              "Укажите направление, ширину образца и метод."
+            ],
+            [
+              "Тепловые/огневые требования",
+              "Укажите температуру, время и стандарт."
+            ],
+            [
+              "Размеры и упаковка",
+              "Укажите ширину, длину, втулку, листы, раскрой и упаковку."
+            ]
+          ]
+        },
+        "forms": {
+          "eyebrow": "Рулоны, листы и раскрой",
+          "title": "Рулоны, листы и раскрой",
+          "items": [
+            [
+              "Рулоны стекловолоконной бумаги",
+              "Согласование толщины, ширины, длины, втулки и упаковки.",
+              "/images/capability/agm-roll-finished.jpg",
+              "Рулоны стекловолоконной бумаги",
+              1600,
+              1200
+            ],
+            [
+              "Теплоизоляционные листы",
+              "Для образцов, ручной сборки или прямой укладки.",
+              "/images/capability/agm-sheets-stacked.jpg",
+              "Теплоизоляционные листы",
+              1600,
+              1200
+            ],
+            [
+              "Детали по чертежу",
+              "Раскрой по чертежу и допускам.",
+              "/images/capability/agm-sheets-cutting.jpg",
+              "Детали по чертежу",
+              1600,
+              1200
+            ],
+            [
+              "Упаковка и партии",
+              "Согласование маркировки, защиты и повторяемости.",
+              "/images/capability/finished-goods.jpg",
+              "Упаковка и партии",
+              1600,
+              1200
+            ]
+          ]
+        },
+        "applications": {
+          "eyebrow": "Области применения для обсуждения",
+          "title": "Области применения для обсуждения",
+          "items": [
+            "Изоляция электрооборудования",
+            "Промышленное нагревательное оборудование",
+            "Противопожарные двери и перегородки",
+            "Тепловые барьеры батарейных модулей",
+            "Теплозащита бытовой техники",
+            "Промышленные изоляционные детали"
+          ]
+        },
+        "quality": {
+          "eyebrow": "Характеристики подтверждаются согласованными испытаниями",
+          "title": "Характеристики подтверждаются согласованными испытаниями",
+          "text": "Данные AGM или огнестойкость другого поставщика не переносятся на этот продукт.",
+          "cards": [
+            [
+              "Идентификация материала",
+              "Волокно, связующее и необходимость покрытия."
+            ],
+            [
+              "Контроль размеров",
+              "Толщина, плотность, ширина и раскрой."
+            ],
+            [
+              "Проверка применения",
+              "Тепловые, огневые, электрические или химические испытания по условиям эксплуатации."
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Информация о производстве и закупке",
+          "title": "Информация о производстве и закупке",
+          "items": [
+            [
+              "AGM-сепараторы",
+              "/ru/products/agm-separator/"
+            ],
+            [
+              "Рулоны AGM",
+              "/ru/products/agm-separator-rolls/"
+            ],
+            [
+              "Контроль качества",
+              "/ru/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Материалы",
+              "/ru/resources/"
+            ],
+            [
+              "О компании",
+              "/ru/#company"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Отправьте техническое задание",
+          "title": "Отправьте техническое задание",
+          "text": "Укажите применение, толщину, плотность, размеры, тепловой/огневой стандарт, количество и образец или чертеж.",
+          "checklist": [
+            "Назначение и место установки",
+            "Толщина и плотность",
+            "Размеры",
+            "Температура и время",
+            "Стандарт, образец или чертеж"
+          ],
+          "placeholder": "Применение, толщина, плотность, размеры, стандарт, количество и образец",
+          "submit": "Запросить образец теплоизоляции",
+          "submitting": "...",
+          "required": "",
+          "success": "",
+          "failure": "",
+          "emailFallback": ""
+        },
+        "footer": {
+          "description": "Стекловолоконные материалы и раскрой для промышленной теплоизоляции.",
+          "wechat": "WeChat",
+          "mobile": "Viking AGM"
+        },
+        "path": "/ru/products/glass-fiber-thermal-insulation-paper/"
+      }
     }
   },
   "resources": {
@@ -32446,6 +33912,184 @@
           "Главная",
           "Продукция",
           "Листы AGM"
+        ]
+      }
+    },
+    "glassFiberThermalInsulationPaper": {
+      "en": {
+        "path": "/products/glass-fiber-thermal-insulation-paper/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "Glass Fiber Thermal Insulation Paper Rolls & Sheets | Viking",
+        "description": "Rolls, sheets and custom-cut parts for industrial thermal insulation. Specifications are reviewed against the buyer's application, operating temperature and test standard.",
+        "keywords": [
+          "Glass Fiber Thermal Insulation Paper",
+          "Glass fiber paper rolls",
+          "Glass fiber insulation sheets",
+          "Electrical equipment insulation",
+          "glass fiber thermal insulation paper"
+        ],
+        "productName": "Glass Fiber Thermal Insulation Paper",
+        "serviceDescription": "Share the application, thickness, basis weight, roll or sheet dimensions, temperature or fire standard, quantity and any current sample or drawing.",
+        "breadcrumbs": [
+          "Home",
+          "Products",
+          "Glass Fiber Thermal Insulation Paper"
+        ]
+      },
+      "zh": {
+        "path": "/zh/products/glass-fiber-thermal-insulation-paper/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "玻璃纤维隔热纸厂家｜卷材、片材与规格匹配｜湖北维京",
+        "description": "面向工业隔热、热屏障和部件分隔应用，可沟通卷材、片材及定制裁切件。规格需结合实际用途、工作温度和测试标准确认。",
+        "keywords": [
+          "玻璃纤维隔热纸",
+          "玻璃纤维隔热纸卷材",
+          "玻璃纤维隔热纸片材",
+          "电气设备隔热",
+          "glass fiber thermal insulation paper"
+        ],
+        "productName": "玻璃纤维隔热纸",
+        "serviceDescription": "请提供用途、厚度、克重、卷材或片材尺寸、耐温或防火标准、数量，以及现有样品或图纸。",
+        "breadcrumbs": [
+          "首页",
+          "产品",
+          "玻璃纤维隔热纸"
+        ]
+      },
+      "vi": {
+        "path": "/vi/products/glass-fiber-thermal-insulation-paper/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM Việt Nam",
+        "title": "Giấy cách nhiệt sợi thủy tinh dạng cuộn và tấm | Viking",
+        "description": "Dạng cuộn, tấm và chi tiết cắt theo yêu cầu cho ứng dụng cách nhiệt công nghiệp. Thông số được xem xét theo ứng dụng, nhiệt độ và tiêu chuẩn thử nghiệm.",
+        "keywords": [
+          "Giấy cách nhiệt sợi thủy tinh",
+          "Cuộn giấy sợi thủy tinh",
+          "Tấm cách nhiệt sợi thủy tinh",
+          "Cách nhiệt thiết bị điện",
+          "glass fiber thermal insulation paper"
+        ],
+        "productName": "Giấy cách nhiệt sợi thủy tinh",
+        "serviceDescription": "Gửi ứng dụng, độ dày, định lượng, kích thước, tiêu chuẩn nhiệt/cháy, số lượng và mẫu hoặc bản vẽ.",
+        "breadcrumbs": [
+          "Home",
+          "Products",
+          "Giấy cách nhiệt sợi thủy tinh"
+        ]
+      },
+      "ko": {
+        "path": "/ko/products/glass-fiber-thermal-insulation-paper/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM",
+        "title": "유리섬유 단열지 롤·시트 | Viking",
+        "description": "산업용 단열, 열 차단 및 부품 분리용 롤, 시트와 맞춤 재단품입니다. 용도, 온도 및 시험 규격에 따라 사양을 검토합니다.",
+        "keywords": [
+          "유리섬유 단열지",
+          "유리섬유 단열지 롤",
+          "유리섬유 단열 시트",
+          "전기 장비 단열",
+          "glass fiber thermal insulation paper"
+        ],
+        "productName": "유리섬유 단열지",
+        "serviceDescription": "용도, 두께, 평량, 치수, 내열/난연 규격, 수량과 샘플 또는 도면을 보내 주세요.",
+        "breadcrumbs": [
+          "Home",
+          "Products",
+          "유리섬유 단열지"
+        ]
+      },
+      "ja": {
+        "path": "/ja/products/glass-fiber-thermal-insulation-paper/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM",
+        "title": "ガラス繊維断熱紙 ロール・シート | Viking",
+        "description": "産業用断熱、遮熱、部品分離向けのロール、シート、カット品。用途、温度、試験規格に合わせて仕様を確認します。",
+        "keywords": [
+          "ガラス繊維断熱紙",
+          "ガラス繊維断熱紙ロール",
+          "ガラス繊維断熱シート",
+          "電気機器の断熱",
+          "glass fiber thermal insulation paper"
+        ],
+        "productName": "ガラス繊維断熱紙",
+        "serviceDescription": "用途、厚さ、坪量、寸法、耐熱/難燃規格、数量、サンプルまたは図面をご提示ください。",
+        "breadcrumbs": [
+          "Home",
+          "Products",
+          "ガラス繊維断熱紙"
+        ]
+      },
+      "es": {
+        "path": "/es/products/glass-fiber-thermal-insulation-paper/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "Papel aislante térmico de fibra de vidrio | Viking",
+        "description": "Rollos, láminas y piezas cortadas para aislamiento industrial. Revisamos la especificación según aplicación, temperatura y norma de ensayo.",
+        "keywords": [
+          "Papel aislante térmico de fibra de vidrio",
+          "Rollos de papel de fibra de vidrio",
+          "Láminas aislantes",
+          "Aislamiento de equipos eléctricos",
+          "glass fiber thermal insulation paper"
+        ],
+        "productName": "Papel aislante térmico de fibra de vidrio",
+        "serviceDescription": "Comparta aplicación, espesor, gramaje, dimensiones, norma térmica/de fuego, cantidad y muestra o plano.",
+        "breadcrumbs": [
+          "Home",
+          "Products",
+          "Papel aislante térmico de fibra de vidrio"
+        ]
+      },
+      "pt": {
+        "path": "/pt/products/glass-fiber-thermal-insulation-paper/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM",
+        "title": "Papel de isolamento térmico de fibra de vidro | Viking",
+        "description": "Rolos, folhas e peças cortadas para isolamento industrial. A especificação é analisada conforme aplicação, temperatura e norma de ensaio.",
+        "keywords": [
+          "Papel de isolamento térmico de fibra de vidro",
+          "Rolos de papel de fibra de vidro",
+          "Folhas isolantes",
+          "Isolamento de equipamentos elétricos",
+          "glass fiber thermal insulation paper"
+        ],
+        "productName": "Papel de isolamento térmico de fibra de vidro",
+        "serviceDescription": "Compartilhe aplicação, espessura, gramatura, dimensões, norma térmica/de fogo, quantidade e amostra ou desenho.",
+        "breadcrumbs": [
+          "Home",
+          "Products",
+          "Papel de isolamento térmico de fibra de vidro"
+        ]
+      },
+      "ru": {
+        "path": "/ru/products/glass-fiber-thermal-insulation-paper/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "Теплоизоляционная бумага из стекловолокна | Viking",
+        "description": "Рулоны, листы и детали по чертежу для промышленной теплоизоляции. Характеристики согласуются по применению, температуре и методу испытаний.",
+        "keywords": [
+          "Теплоизоляционная бумага из стекловолокна",
+          "Рулоны стекловолоконной бумаги",
+          "Теплоизоляционные листы",
+          "Изоляция электрооборудования",
+          "glass fiber thermal insulation paper"
+        ],
+        "productName": "Теплоизоляционная бумага из стекловолокна",
+        "serviceDescription": "Укажите применение, толщину, плотность, размеры, тепловой/огневой стандарт, количество и образец или чертеж.",
+        "breadcrumbs": [
+          "Home",
+          "Products",
+          "Теплоизоляционная бумага из стекловолокна"
         ]
       }
     },
