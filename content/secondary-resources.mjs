@@ -10,7 +10,8 @@ export const articleKinds = [
   "agmSeparatorExportSupplyReadiness",
   "upsVrlaTechnologySelection",
   "dataCenterBackupPowerAgmSeparator",
-  "earlyChinaLeadAcidBatteryManufacturing"
+  "earlyChinaLeadAcidBatteryManufacturing",
+  "agmSeparatorPressureRetention"
 ];
 
 export const articleDefinitions = {
@@ -23,7 +24,8 @@ export const articleDefinitions = {
   agmSeparatorExportSupplyReadiness: ["agm-separator-export-supply-readiness", "industryApplications", "2026-07-11"],
   upsVrlaTechnologySelection: ["why-ups-projects-still-use-vrla-batteries", "industryApplications", "2026-07-23"],
   dataCenterBackupPowerAgmSeparator: ["agm-separator-for-data-center-backup-power", "industryApplications", "2026-08-07", "2026-08-07"],
-  earlyChinaLeadAcidBatteryManufacturing: ["how-chinas-earliest-lead-acid-batteries-were-made", "manufacturingQuality", "2026-08-11", "2026-08-11"]
+  earlyChinaLeadAcidBatteryManufacturing: ["how-chinas-earliest-lead-acid-batteries-were-made", "manufacturingQuality", "2026-08-11", "2026-08-11"],
+  agmSeparatorPressureRetention: ["agm-separator-pressure-retention-after-acid-filling-and-cycling", "manufacturingQuality", "2026-08-12", "2026-08-12"]
 };
 
 const images = {
@@ -36,7 +38,8 @@ const images = {
   agmSeparatorExportSupplyReadiness: ["/images/evidence/shipping-pallet-01.webp", 1200, 900],
   upsVrlaTechnologySelection: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
   dataCenterBackupPowerAgmSeparator: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
-  earlyChinaLeadAcidBatteryManufacturing: ["/images/agm-hero-production-1600.webp", 1600, 1000]
+  earlyChinaLeadAcidBatteryManufacturing: ["/images/agm-hero-production-1600.webp", 1600, 1000],
+  agmSeparatorPressureRetention: ["/images/agm-quality-control-1200.webp", 1200, 800]
 };
 
 export const secondaryResourceData = {
@@ -403,6 +406,108 @@ const earlyLeadAcidManufacturingTopics = {
   }
 };
 
+const pressureRetentionTopics = {
+  vi: {
+    title: "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không?",
+    summary: "Độ dày ban đầu chỉ là điểm xuất phát; co ngót khi ướt, khả năng hồi phục và lực còn lại mới gần với trạng thái làm việc lâu dài trong ắc quy.",
+    intro: "Mẫu AGM thường được đánh giá khi còn khô và vừa lắp xong, nhưng sau châm axit và chu kỳ, mạng sợi thủy tinh tiếp tục thay đổi. Vì vậy cần theo dõi cùng một mẫu qua nhiều giai đoạn thay vì chỉ so một giá trị độ dày.",
+    sections: [
+      ["Độ dày khô", "Độ dày phải luôn đi kèm áp lực đo", "AGM là vật liệu nén được. Hai mẫu có thể gần nhau tại một điểm áp lực nhưng có đường cong nén và hồi phục khác nhau. Tài liệu H&V dùng các điều kiện 1,25 mm/50 kPa và độ dày tại 10 kPa để minh họa cách so sánh; đây không phải thông số chung cho mọi thiết kế."],
+      ["Sau châm axit", "Làm ướt là ranh giới đầu tiên của thay đổi lực", "Điện phân làm thay đổi tương tác giữa các sợi và có thể gây co ngót. Cần cố định mật độ, nhiệt độ, lượng axit, thời gian nghỉ và nêu rõ phép đo ở áp lực cố định hay khe hở cố định."],
+      ["Sau chu kỳ", "Lực còn lại phản ánh trạng thái lâu dài tốt hơn", "So sánh proxy của vật liệu sau chu kỳ giúp sàng lọc khả năng cơ học nhưng không thay thế thử nghiệm ắc quy. Tuổi thọ còn phụ thuộc bản cực, lưới, lượng axit, nhiệt độ, chế độ sạc và kết cấu lắp ráp."],
+      ["Hồ sơ có thể lặp lại", "Kết nối bốn giai đoạn trong cùng một phương pháp", "Ghi nhận đầu vào, lắp ráp, châm axit và chu kỳ với điều kiện truy xuất được, rồi liên hệ độ giữ lực với dung lượng, nội trở và quan sát tháo rời của ắc quy."],
+      ["Phối hợp thông số", "Viking thống nhất ranh giới thử trước khi so số liệu", "Hãy cung cấp ứng dụng, kết cấu bộ cực, khe hở, độ dày mục tiêu, áp lực đo và phương pháp châm axit hoặc chu kỳ. Việc dùng cho sản xuất hàng loạt vẫn cần khách hàng xác nhận bằng thử vật liệu và ắc quy hoàn chỉnh."]
+    ],
+    parameters: [["Đầu vào", "Lô, định lượng, độ dày khô và áp lực đo."], ["Lắp ráp", "Bản cực, số lớp, khe hở và mức nén mục tiêu."], ["Châm axit", "Mật độ, nhiệt độ, lượng axit, thời gian nghỉ và phương pháp đo."], ["Chu kỳ", "Trạng thái khô/ướt, giới hạn nén, số chu kỳ, tần số và nhiệt độ."]],
+    checklist: ["Áp lực đo độ dày", "Kết cấu bộ cực và khe hở", "Điều kiện điện phân", "Áp lực cố định hoặc khe hở cố định", "Chu kỳ và kết quả ắc quy"]
+  },
+  ko: {
+    title: "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요?",
+    summary: "초기 두께는 시작점입니다. 습윤 수축, 회복과 잔류 압력이 배터리 내부의 장기 상태에 더 가깝습니다.",
+    intro: "AGM 샘플 평가는 건식 두께와 초기 조립에서 끝나기 쉽지만, 전해액 주입과 반복 사이클 후 유리섬유 매트의 상태는 달라집니다. 동일한 샘플을 단계별로 비교해야 합니다.",
+    sections: [
+      ["건식 두께", "두께 값에는 측정 압력이 필요합니다", "AGM은 압축성 소재입니다. 한 압력점에서 두께가 같아도 압축 곡선과 회복은 다를 수 있습니다. H&V의 1.25 mm/50 kPa 비교 조건과 10 kPa 두께 표시는 방법 예시이며 보편 설계값이 아닙니다."],
+      ["주액 후", "습윤은 압력 변화의 첫 경계입니다", "전해액은 섬유 사이 상호작용을 바꾸고 수축을 일으킬 수 있습니다. 산 밀도, 온도, 주입량, 안정 시간을 고정하고 일정 압력 또는 일정 간극 중 어떤 방법인지 밝혀야 합니다."],
+      ["사이클 후", "잔류 압력이 장기 작동 상태에 더 가깝습니다", "소재의 proxy 사이클 압축 비교는 기계적 유지력을 선별하지만 완성 배터리 시험을 대신하지 않습니다. 수명은 극판, 그리드, 산량, 온도, 충전과 조립 설계에도 좌우됩니다."],
+      ["재현 가능한 기록", "네 단계를 하나의 시험 체계로 연결합니다", "입고, 조립, 주액, 사이클 조건을 추적 가능하게 기록하고 유지 상태를 배터리 용량, 내부저항과 해체 관찰에 연결합니다."],
+      ["사양 협의", "Viking은 수치를 비교하기 전에 시험 경계를 맞춥니다", "배터리 용도, 극군 구조, 설계 간극, 목표 두께, 측정 압력과 주액·사이클 방법을 공유해 주세요. 양산 적합성은 고객의 소재 및 완성 배터리 검증이 필요합니다."]
+    ],
+    parameters: [["입고", "로트, 평량, 건식 두께와 측정 압력."], ["조립", "극판 두께, 분리막 층수, 간극과 목표 압축."], ["주액", "산 밀도, 온도, 주입량, 안정 시간과 측정 방식."], ["사이클", "건·습 상태, 압축 범위, 횟수, 주파수와 온도."]],
+    checklist: ["두께 측정 압력", "극군과 설계 간극", "전해액 조건", "일정 압력 또는 일정 간극", "사이클 및 배터리 결과"]
+  },
+  ja: {
+    title: "AGMセパレーターは注液・サイクル後も圧力を保持できるか",
+    summary: "初期厚さは出発点です。湿潤収縮、回復、残留圧力の方が電池内部の長期状態に近い指標です。",
+    intro: "AGMの評価は乾燥厚さと初期組立で終わりがちですが、注液と繰返しサイクルでガラス繊維マットは変化します。同一試料を段階的に追跡する必要があります。",
+    sections: [
+      ["乾燥厚さ", "厚さには測定圧力の明記が必要です", "AGMは圧縮性材料です。一点の厚さが近くても圧縮曲線と回復は異なります。H&Vの1.25 mm/50 kPa比較条件と10 kPa厚さは方法の例であり、共通設計値ではありません。"],
+      ["注液後", "湿潤は圧力変化の最初の境界です", "電解液は繊維間の状態を変え、収縮を生じさせる場合があります。酸密度、温度、注液量、静置時間を固定し、一定圧力か一定間隙かを明示します。"],
+      ["サイクル後", "残留圧力は長期使用状態により近い指標です", "材料のproxyサイクル比較は機械保持性の選別に使えますが、完成電池試験の代替ではありません。寿命は極板、グリッド、酸量、温度、充電条件、組立にも依存します。"],
+      ["再現可能な記録", "四段階を同じ試験系で結びます", "受入、組立、注液、サイクルの条件を追跡可能にし、保持状態を容量、内部抵抗、解体観察と対応させます。"],
+      ["仕様調整", "Vikingは数値比較の前に試験境界を合わせます", "用途、極群構造、設計間隙、目標厚さ、測定圧力、注液・サイクル方法をご提示ください。量産適合性は材料試験と完成電池検証で確認します。"]
+    ],
+    parameters: [["受入", "ロット、坪量、乾燥厚さ、測定圧力。"], ["組立", "極板厚さ、層数、間隙、目標圧縮。"], ["注液", "酸密度、温度、量、静置時間、測定方式。"], ["サイクル", "乾湿状態、圧縮範囲、回数、周波数、温度。"]],
+    checklist: ["厚さ測定圧力", "極群と設計間隙", "電解液条件", "一定圧力または一定間隙", "サイクルと電池結果"]
+  },
+  es: {
+    title: "¿Mantiene presión el separador AGM después del llenado y los ciclos?",
+    summary: "El espesor inicial es solo el punto de partida; la contracción húmeda, la recuperación y la fuerza residual describen mejor su estado a largo plazo.",
+    intro: "La evaluación suele terminar con el espesor en seco y el montaje inicial, pero el llenado de ácido y los ciclos cambian la manta de fibra de vidrio. Conviene seguir la misma muestra en varias etapas.",
+    sections: [
+      ["Espesor en seco", "Todo espesor necesita una presión de medición", "AGM es compresible. Dos materiales pueden coincidir en un punto y diferir en su curva y recuperación. Las condiciones 1,25 mm/50 kPa y el espesor a 10 kPa de H&V ilustran métodos comparativos, no valores universales."],
+      ["Después del llenado", "La humectación es el primer límite del cambio de presión", "El electrolito modifica la interacción de las fibras y puede producir contracción. Deben fijarse densidad, temperatura, cantidad, reposo y si la medición se realiza a presión o separación constante."],
+      ["Después de los ciclos", "La fuerza residual se acerca más al estado de servicio", "Una comparación proxy de ciclos sirve para filtrar la retención mecánica, pero no sustituye el ensayo de batería. La vida también depende de placas, rejillas, ácido, temperatura, carga y montaje."],
+      ["Registro reproducible", "Conectar cuatro etapas con el mismo método", "Registrar recepción, montaje, llenado y ciclos con condiciones trazables, y relacionar la retención con capacidad, resistencia interna y desmontaje de la batería."],
+      ["Coordinación", "Viking alinea primero el método de prueba", "Comparta aplicación, grupo de placas, separación, espesor objetivo, presión de medición y método de llenado o ciclos. La aptitud para serie debe confirmarse con ensayos del cliente."]
+    ],
+    parameters: [["Recepción", "Lote, gramaje, espesor en seco y presión."], ["Montaje", "Placas, capas, separación y compresión objetivo."], ["Llenado", "Densidad, temperatura, cantidad, reposo y método."], ["Ciclos", "Estado seco/húmedo, límites, número, frecuencia y temperatura."]],
+    checklist: ["Presión de espesor", "Grupo de placas y separación", "Condiciones del electrolito", "Presión o separación constante", "Ciclos y resultados de batería"]
+  },
+  pt: {
+    title: "O separador AGM mantém pressão após enchimento e ciclagem?",
+    summary: "A espessura inicial é apenas o começo; contração úmida, recuperação e força residual representam melhor a condição de longo prazo.",
+    intro: "A avaliação costuma parar na espessura seca e na montagem inicial, mas o enchimento com ácido e os ciclos alteram a manta de fibra de vidro. A mesma amostra deve ser acompanhada por etapas.",
+    sections: [
+      ["Espessura seca", "Toda espessura precisa da pressão de medição", "AGM é compressível. Materiais próximos em um ponto podem ter curvas e recuperação diferentes. As condições 1,25 mm/50 kPa e a espessura a 10 kPa da H&V ilustram comparação, não valores universais."],
+      ["Após enchimento", "O umedecimento é a primeira fronteira da mudança de pressão", "O eletrólito altera a interação das fibras e pode causar retração. Fixe densidade, temperatura, volume, repouso e informe se o ensaio usa pressão ou vão constante."],
+      ["Após ciclagem", "A força residual se aproxima mais da condição de serviço", "Um ensaio proxy de ciclagem compara retenção mecânica, mas não substitui a bateria completa. Vida também depende de placas, grades, ácido, temperatura, carga e montagem."],
+      ["Registro reproduzível", "Conectar quatro etapas pelo mesmo método", "Registre recebimento, montagem, enchimento e ciclos com condições rastreáveis e relacione a retenção à capacidade, resistência interna e desmontagem."],
+      ["Coordenação", "A Viking alinha primeiro o limite do ensaio", "Informe aplicação, grupo de placas, vão, espessura alvo, pressão e método de enchimento ou ciclagem. A aprovação para série depende dos testes do cliente."]
+    ],
+    parameters: [["Recebimento", "Lote, gramatura, espessura seca e pressão."], ["Montagem", "Placas, camadas, vão e compressão alvo."], ["Enchimento", "Densidade, temperatura, volume, repouso e método."], ["Ciclagem", "Estado seco/úmido, limites, ciclos, frequência e temperatura."]],
+    checklist: ["Pressão de espessura", "Grupo de placas e vão", "Condições do eletrólito", "Pressão ou vão constante", "Ciclos e resultados da bateria"]
+  },
+  ru: {
+    title: "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?",
+    summary: "Начальная толщина — лишь отправная точка; влажная усадка, восстановление и остаточное усилие лучше отражают длительное состояние в аккумуляторе.",
+    intro: "Оценка AGM часто заканчивается сухой толщиной и первичной сборкой, но заливка электролита и циклы меняют стекловолоконный мат. Один образец следует отслеживать на нескольких этапах.",
+    sections: [
+      ["Сухая толщина", "Толщина должна указываться вместе с давлением измерения", "AGM сжимаем. Материалы могут совпадать в одной точке, но различаться кривой и восстановлением. Условия H&V 1,25 мм/50 кПа и толщина при 10 кПа показывают метод сравнения, а не универсальные значения."],
+      ["После заливки", "Смачивание — первая граница изменения усилия", "Электролит меняет взаимодействие волокон и может вызывать усадку. Нужно фиксировать плотность, температуру, объём, выдержку и указывать постоянное давление или постоянный зазор."],
+      ["После циклов", "Остаточное усилие ближе к рабочему состоянию", "Proxy-циклирование материала помогает сравнить механическое удержание, но не заменяет испытание батареи. Ресурс зависит также от пластин, решёток, кислоты, температуры, заряда и сборки."],
+      ["Воспроизводимая запись", "Связать четыре этапа единым методом", "Условия входного контроля, сборки, заливки и циклов должны быть прослеживаемыми, а удержание — сопоставлено с ёмкостью, сопротивлением и разборкой батареи."],
+      ["Согласование", "Viking сначала согласует границы испытания", "Сообщите применение, конструкцию блока, зазор, целевую толщину, давление и метод заливки или циклов. Серийная пригодность подтверждается испытаниями клиента."]
+    ],
+    parameters: [["Входной контроль", "Партия, плотность, сухая толщина и давление."], ["Сборка", "Пластины, слои, зазор и целевое сжатие."], ["Заливка", "Плотность, температура, объём, выдержка и метод."], ["Циклы", "Сухое/влажное состояние, пределы, число, частота и температура."]],
+    checklist: ["Давление измерения", "Блок пластин и зазор", "Условия электролита", "Постоянное давление или зазор", "Циклы и результаты батареи"]
+  }
+};
+
+const pressureRetentionReferenceCopy = {
+  vi: ["Tài liệu tham khảo", "Phương pháp công khai và giới hạn áp dụng", "Điều kiện được trích dẫn dùng để minh họa phương pháp so sánh, không phải thông số Viking hoặc giá trị thiết kế chung."],
+  ko: ["참고 자료", "공개 시험법과 적용 경계", "인용 조건은 비교 방법을 설명하며 Viking 제품 사양이나 보편 설계값이 아닙니다."],
+  ja: ["参考資料", "公開試験法と適用範囲", "引用条件は比較方法の説明であり、Viking仕様または共通設計値ではありません。"],
+  es: ["Referencias", "Métodos publicados y límites", "Las condiciones citadas explican métodos de comparación; no son especificaciones Viking ni valores universales."],
+  pt: ["Referências", "Métodos publicados e limites", "As condições citadas explicam métodos de comparação; não são especificações Viking nem valores universais."],
+  ru: ["Источники", "Опубликованные методы и границы", "Условия приведены для объяснения сравнения и не являются спецификацией Viking или универсальными значениями."]
+};
+
+const pressureRetentionReferenceItems = [
+  ["Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator", "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"],
+  ["Journal of Power Sources — compression and positive active mass performance", "https://doi.org/10.1016/S0378-7753(99)00018-X"],
+  ["Journal of Power Sources — characterisation of separator papers for VRLA batteries", "https://doi.org/10.1016/S0378-7753(01)00925-9"]
+];
+
 const earlyLeadAcidTimelineCopy = {
   vi: ["Mốc sản xuất", "Năm mốc cho các định nghĩa khác nhau", "Các mốc dưới đây không khẳng định một đáp án duy nhất cho khái niệm ‘đầu tiên’."],
   ko: ["제조 연표", "서로 다른 정의를 보여 주는 다섯 이정표", "아래 연도는 하나의 절대적인 ‘최초’를 주장하지 않습니다."],
@@ -547,13 +652,14 @@ const dataCenterReferenceItems = [
 ];
 
 const secondaryHubCounts = {
-  vi: "10 bài viết kỹ thuật", ko: "기술 글 10편", ja: "技術記事 10件",
-  es: "10 artículos técnicos", pt: "10 artigos técnicos", ru: "10 технических статей"
+  vi: "11 bài viết kỹ thuật", ko: "기술 글 11편", ja: "技術記事 11件",
+  es: "11 artículos técnicos", pt: "11 artigos técnicos", ru: "11 технических статей"
 };
 
 for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].topics.dataCenterBackupPowerAgmSeparator = dataCenterBackupPowerTopics[locale];
   secondaryResourceData[locale].topics.earlyChinaLeadAcidBatteryManufacturing = earlyLeadAcidManufacturingTopics[locale];
+  secondaryResourceData[locale].topics.agmSeparatorPressureRetention = pressureRetentionTopics[locale];
   secondaryResourceData[locale].dataCenterReferences = {
     eyebrow: dataCenterReferences[locale][0],
     title: dataCenterReferences[locale][1],
@@ -571,6 +677,12 @@ for (const locale of secondaryResourceLocales) {
     title: earlyLeadAcidReferenceCopy[locale][1],
     text: earlyLeadAcidReferenceCopy[locale][2],
     items: earlyLeadAcidReferenceItems
+  };
+  secondaryResourceData[locale].pressureRetentionReferences = {
+    eyebrow: pressureRetentionReferenceCopy[locale][0],
+    title: pressureRetentionReferenceCopy[locale][1],
+    text: pressureRetentionReferenceCopy[locale][2],
+    items: pressureRetentionReferenceItems
   };
   secondaryResourceData[locale].hub.count = secondaryHubCounts[locale];
 }
@@ -669,6 +781,19 @@ function buildArticle(locale, kind, localeData) {
         [common.roll[0], common.roll[1], "/images/viking-finished-separator-roll-900.webp", common.roll[0]],
         [localeData.nav.quality, common.checklistText, "/images/agm-quality-control-1200.webp", localeData.nav.quality],
         [common.sheet[0], common.sheet[1], "/images/evidence/shipping-pallet-01.webp", common.sheet[0]]
+      ]
+    };
+  }
+
+  if (kind === "agmSeparatorPressureRetention") {
+    result.references = localeData.pressureRetentionReferences;
+    result.formats = {
+      eyebrow: common.formatsEyebrow,
+      title: common.formatsTitle,
+      items: [
+        [common.roll[0], common.roll[1], "/images/viking-finished-separator-roll-900.webp", common.roll[0]],
+        [localeData.nav.quality, common.checklistText, "/images/agm-quality-control-1200.webp", localeData.nav.quality],
+        [common.sheet[0], common.sheet[1], "/images/sheets1-900.webp", common.sheet[0]]
       ]
     };
   }

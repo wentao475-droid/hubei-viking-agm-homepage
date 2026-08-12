@@ -23,7 +23,8 @@ export type BlogArticleKind =
   | "upsVrlaTechnologySelection"
   | "agmGlassFiberVsPvcSeparator"
   | "dataCenterBackupPowerAgmSeparator"
-  | "earlyChinaLeadAcidBatteryManufacturing";
+  | "earlyChinaLeadAcidBatteryManufacturing"
+  | "agmSeparatorPressureRetention";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -2813,6 +2814,204 @@ const earlyChinaLeadAcidBatteryManufacturingCopy = {
   }
 } as const;
 
+const pressureRetentionReferenceItems: Array<[string, string]> = [
+  ["Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator", "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"],
+  ["Journal of Power Sources — compression and positive active mass performance", "https://doi.org/10.1016/S0378-7753(99)00018-X"],
+  ["Journal of Power Sources — characterisation of separator papers for VRLA batteries", "https://doi.org/10.1016/S0378-7753(01)00925-9"]
+];
+
+const agmSeparatorPressureRetentionCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request Sample",
+    hero: {
+      eyebrow: "Compression & Recovery",
+      title: "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+      subtitle:
+        "Initial thickness is only the starting point. Wet shrinkage, recovery and residual force after repeated compression are closer to the separator's long-term condition inside a battery.",
+      primary: "Request a Sample & Specification Match",
+      secondary: "Review the four test stages",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM separator quality inspection and thickness measurement",
+        width: 1200,
+        height: 800
+      }
+    },
+    intro: [
+      "AGM separator sampling often stops at assembly: dry thickness is within tolerance, the plate group fits and initial compression matches the drawing. A battery, however, does not remain dry. Electrolyte filling changes the glass mat, and cycling repeatedly compresses and releases it.",
+      "Published H&V material compares dry, post-filling and post-cycling retention. The useful lesson is methodological: a single incoming thickness value cannot describe long-term support. The cited conditions are comparison examples, not Viking specifications or universal battery-design targets."
+    ],
+    sections: [
+      {
+        eyebrow: "Dry Thickness",
+        title: "A thickness result only answers the pre-assembly question",
+        text:
+          "AGM is compressible, so every thickness value needs a measurement pressure. Two materials can show similar thickness at one pressure point while having different compression curves and recovery. H&V presents a thickness-versus-pressure curve, a 1.25 mm insertion gap at 50 kPa for comparison, and product-table thickness measured at 10 kPa. Without the test pressure, plate thickness, separator layers and assembly gap, nominal thickness does not fully describe the installed state."
+      },
+      {
+        eyebrow: "After Filling",
+        title: "Electrolyte filling is the first boundary for pressure change",
+        text:
+          "Wetting can change interactions within the glass-fiber network, and published studies note that conventional mats may shrink after wetting, reducing plate-group force. A useful record therefore controls acid density, temperature, filling quantity and rest time, then states whether wet thickness or residual force is measured at constant pressure or constant gap. Results obtained under different conditions should not be compared as if they were equivalent."
+      },
+      {
+        eyebrow: "After Cycling",
+        title: "Residual force after repeated compression is closer to the working condition",
+        text:
+          "During battery operation, plates and separator experience structural change and repeated compression. H&V also shows comparative retention after dry, filling and cycling stages, including a value labelled projected (proxy) after 10,000 cycles. That is a material-level proxy comparison, not a claim that every battery has completed 10,000 charge-discharge cycles. Battery life still depends on plates, grids, acid quantity, temperature, charging regime and assembly design."
+      },
+      {
+        eyebrow: "Reproducible Sampling",
+        title: "A useful sample record should connect four stages",
+        text:
+          "Incoming inspection, assembly, filling and cycling should use traceable conditions. The objective is not to collect the largest possible data table, but to make samples repeatable: record the batch and method, hold the assembly and electrolyte conditions constant, and relate separator retention to capacity, resistance and teardown observations from the complete battery."
+      },
+      {
+        eyebrow: "Specification Coordination",
+        title: "Viking starts by aligning the test boundary, not comparing isolated numbers",
+        text:
+          "For VRLA applications, Viking supplies AGM separator rolls and sheets and can review thickness, width, sheet dimensions and packing. For compression and retention discussions, share the battery application, plate-group structure, design gap, target thickness, measurement pressure and any existing filling or cycling method. Suitability for volume use remains subject to the customer's material and complete-battery validation."
+      }
+    ],
+    parameters: [
+      ["Incoming", "Record batch, basis weight, dry thickness and the exact measurement pressure; add a compression curve when comparing materials."],
+      ["Assembly", "Record plate thickness, separator layers, design gap, target compression and actual insertion behavior."],
+      ["After filling", "Control acid density, temperature, quantity and rest time; state constant-pressure or constant-gap measurement."],
+      ["After cycling", "Record wet or dry state, compression limits, cycle count, frequency and temperature, then link retention to battery results."]
+    ],
+    formats: {
+      eyebrow: "Test Evidence",
+      title: "Material form, measurement method and battery validation must stay connected",
+      items: [
+        ["AGM separator rolls", "Roll width, winding and batch identification affect repeatable sampling and line use.", "/images/viking-finished-separator-roll-900.webp", "Viking AGM separator roll"],
+        ["Quality inspection", "Thickness and compression results are only comparable when pressure, conditioning and equipment are stated.", "/images/agm-quality-control-1200.webp", "AGM separator quality inspection"],
+        ["AGM separator sheets", "Finished sheet dimensions and layer count should match the plate-group and assembly-gap record.", "/images/sheets1-900.webp", "Viking AGM separator sheets"]
+      ]
+    },
+    checklist: {
+      eyebrow: "Sample Test Checklist",
+      title: "Prepare these conditions before comparing pressure retention",
+      text:
+        "A shared method is more valuable than an isolated retention percentage because it allows the result to be repeated and related to battery performance.",
+      items: ["Thickness measurement pressure", "Plate group and design gap", "Electrolyte and rest conditions", "Constant-pressure or constant-gap method", "Cycle profile and battery-level observations"]
+    },
+    references: {
+      eyebrow: "References",
+      title: "Published methods and technical boundaries",
+      text:
+        "The cited test conditions explain comparison methods. They are not Viking product specifications or universal design values. Compression targets must be verified for the battery structure and operating conditions.",
+      items: pressureRetentionReferenceItems
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with technical parameters, testing and consistency",
+      items: [
+        ["Key Technical Parameters of AGM Separators", "/blog/key-technical-parameters-of-agm-separator/"],
+        ["Why AGM Separator Consistency Matters", "/blog/agm-separator-performance-consistency/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["AGM Battery Separators", "/products/agm-separator/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Review compression and pressure-retention requirements",
+      text:
+        "Share the battery application, plate-group structure, design gap, target thickness, measurement pressure and existing filling or cycling method.",
+      checklist: ["Battery application", "Plate group and gap", "Thickness and test pressure", "Filling and cycling method"],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        message: "Battery application, plate-group structure, design gap, target thickness, test pressure, electrolyte and cycling conditions"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    brandName: articleCopy.zh.brandName,
+    quote: "申请样品",
+    hero: {
+      eyebrow: "压缩与回弹",
+      title: "隔板装进去没问题，循环以后还能保持压力吗？",
+      subtitle: "AGM 隔板的初始厚度只是起点。填酸后的收缩、回弹和循环后的残余压力，才更接近它在电池里的长期状态。",
+      primary: "申请样品与规格匹配",
+      secondary: "查看四阶段测试清单",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM 隔板质量检测与厚度测量",
+        width: 1200,
+        height: 800
+      }
+    },
+    intro: [
+      "AGM 隔板打样记录常停在装配完成的一刻：干态厚度合格，极群能装进去，初始压缩也在设计范围内。但电池不会一直停在干态。填酸会改变玻璃纤维毡状态，循环还会让隔板反复受压与恢复。",
+      "H&V 公开资料把比较延伸到干态、填酸后和循环后的保持状态。这里真正可借鉴的是比较方法，而不是把资料中的条件直接当作维京规格或通用设计值。"
+    ],
+    sections: [
+      { eyebrow: "干态厚度", title: "厚度合格，只回答了装配前的问题", text: "AGM 是可压缩材料，每个厚度值都应注明测试压力。两款材料在一个压力点厚度接近，压缩曲线和卸压恢复仍可能不同。H&V 资料同时展示厚度随压力变化曲线、用于比较的 1.25 mm 装配间隙和 50 kPa 条件，以及产品表中 10 kPa 下的厚度。没有测试压力、极板厚度、隔板层数和设计间隙，单独的标称厚度很难完整描述装入极群后的状态。" },
+      { eyebrow: "填酸以后", title: "填酸，是压力变化的第一道分界线", text: "电解液润湿会改变玻璃纤维网络的作用状态，已有研究指出传统玻纤毡湿润后可能收缩，并使板群压力下降。因此记录应统一电解液密度、温度、加液量和静置时间，同时说明采用固定压力还是固定间隙测量湿态厚度或残余压力。条件不同的保持率不能直接横向比较。" },
+      { eyebrow: "循环以后", title: "循环后的残余压力，更接近长期工作状态", text: "电池运行中，极板和隔板会经历结构变化与反复压缩。H&V 资料展示干态、填酸后和循环阶段的比较保持率，并给出标注为 projected（proxy）的 10,000 次循环后比较值。它属于材料层面的代理比较，不等于所有电池都完成了 10,000 次实际充放电。整电池寿命仍受极板、板栅、酸量、温度、充电制度和装配结构共同影响。" },
+      { eyebrow: "可复现打样", title: "一份有用的打样记录，应把四个阶段连起来", text: "来料、装配、填酸和循环要采用可追溯条件。目标不是一次铺开最大的参数表，而是让样品能够复测：记录批次与方法，固定装配和电解液条件，再把隔板保持状态与整电池容量、内阻变化和拆解观察对应起来。" },
+      { eyebrow: "规格协同", title: "维京先对齐测试边界，再比较同一个数值", text: "围绕 VRLA 应用，维京可提供 AGM 隔板卷材和片材，并配合确认厚度、宽度、片材尺寸和包装。涉及压缩与压力保持时，建议提供电池应用、极群结构、设计间隙、目标厚度、测试压力，以及现有填酸或循环方法。是否适合批量使用，仍应以客户材料测试和整电池验证为准。" }
+    ],
+    parameters: [
+      ["来料阶段", "记录批次、克重、干态厚度和对应测试压力；比较材料时可增加压缩曲线。"],
+      ["装配阶段", "记录极板厚度、隔板层数、设计间隙、目标压缩和实际插入状态。"],
+      ["填酸阶段", "固定酸密度、温度、加液量和静置时间，并注明固定压力或固定间隙。"],
+      ["循环阶段", "记录干湿状态、压缩上下限、循环次数、频率和温度，再与整电池结果对应。"]
+    ],
+    formats: {
+      eyebrow: "测试与产品资料",
+      title: "产品形式、测试方法与整电池验证应保持关联",
+      items: [
+        ["AGM 隔板卷材", "卷材宽度、收卷状态和批次标识会影响可复现取样与生产线使用。", "/images/viking-finished-separator-roll-900.webp", "湖北维京 AGM 隔板卷材"],
+        ["质量检测", "只有注明压力、预处理和设备条件，厚度与压缩数据才具有可比性。", "/images/agm-quality-control-1200.webp", "湖北维京 AGM 隔板质量检测"],
+        ["AGM 隔板片材", "成品片材尺寸和层数应与极群结构及设计间隙记录一致。", "/images/sheets1-900.webp", "湖北维京 AGM 隔板片材"]
+      ]
+    },
+    checklist: {
+      eyebrow: "打样测试清单",
+      title: "比较压力保持前，先统一这些条件",
+      text: "共同测试方法比一个孤立的保持率更有价值，因为结果可以复测，也能和整电池表现对应。",
+      items: ["厚度测试压力", "极群结构与设计间隙", "电解液和静置条件", "固定压力或固定间隙方法", "循环条件与整电池观察"]
+    },
+    references: {
+      eyebrow: "资料来源",
+      title: "公开方法与适用边界",
+      text: "文中测试条件用于说明比较方法，不作为维京产品规格或通用设计值。具体压缩范围需结合电池结构和运行条件验证。",
+      items: pressureRetentionReferenceItems
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续了解技术参数、检测和批次一致性",
+      items: [
+        ["AGM 隔板关键技术参数", "/zh/blog/key-technical-parameters-of-agm-separator/"],
+        ["AGM 隔板一致性为什么重要", "/zh/blog/agm-separator-performance-consistency/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["AGM 电池隔板", "/zh/products/agm-separator/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "确认压缩与压力保持测试条件",
+      text: "请提供电池应用、极群结构、设计间隙、目标厚度、测试压力和已有填酸或循环方法。",
+      checklist: ["电池应用", "极群结构与间隙", "厚度与测试压力", "填酸与循环方法"],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        message: "电池应用、极群结构、设计间隙、目标厚度、测试压力、电解液和循环条件"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -2865,6 +3064,8 @@ export function BlogArticlePage({
                     ? dataCenterBackupPowerAgmSeparatorCopy[primaryLang]
                     : page === "earlyChinaLeadAcidBatteryManufacturing"
                       ? earlyChinaLeadAcidBatteryManufacturingCopy[primaryLang]
+                      : page === "agmSeparatorPressureRetention"
+                        ? agmSeparatorPressureRetentionCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -2928,6 +3129,8 @@ export function BlogArticlePage({
                     ? ["demand-signal", "public-procurement", "high-rate-discharge", "float-compression", "oxygen-cycle", "batch-consistency", "application-fit"]
                     : page === "earlyChinaLeadAcidBatteryManufacturing"
                       ? ["historical-definitions", "early-materials", "process-control", "industrial-production", "separator-evolution", "modern-manufacturing"]
+                      : page === "agmSeparatorPressureRetention"
+                        ? ["dry-thickness", "after-filling", "after-cycling", "reproducible-record", "viking-coordination"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
@@ -3201,7 +3404,8 @@ export function BlogArticlePage({
           className={`mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2 ${
             page === "upsVrlaTechnologySelection" ||
             page === "dataCenterBackupPowerAgmSeparator" ||
-            page === "earlyChinaLeadAcidBatteryManufacturing"
+            page === "earlyChinaLeadAcidBatteryManufacturing" ||
+            page === "agmSeparatorPressureRetention"
               ? "lg:grid-cols-3"
               : ""
           }`}

@@ -1853,6 +1853,51 @@ const earlyChinaLeadAcidBatteryManufacturingSeo = {
   }
 } as const;
 
+const agmSeparatorPressureRetentionSeo = {
+  en: {
+    path: "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    alternatePath: "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator Pressure Retention After Filling and Cycling | Viking AGM",
+    description:
+      "Learn how test pressure, wet shrinkage, compression recovery and residual force affect AGM separator evaluation after acid filling and cycling.",
+    keywords: [
+      "AGM separator pressure retention",
+      "AGM separator compression recovery",
+      "AGM wet thickness",
+      "VRLA separator cycling test",
+      "AGM separator test pressure"
+    ],
+    pageName: "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+    articleDescription:
+      "A practical guide to dry thickness, wet compression, residual force and reproducible four-stage testing for AGM separators in VRLA batteries.",
+    breadcrumbs: ["Home", "Resources", "AGM Separator Pressure Retention"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    alternatePath: "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板填酸与循环后的压力保持怎么评估？| 湖北维京AGM",
+    description:
+      "从测试压力、湿态收缩、压缩回弹和循环后残余压力，了解 AGM 隔板四阶段打样记录与整电池验证边界。",
+    keywords: [
+      "AGM 隔板压力保持",
+      "AGM 隔板压缩回弹",
+      "AGM 隔板湿态厚度",
+      "VRLA 隔板循环测试",
+      "AGM 隔板测试压力"
+    ],
+    pageName: "隔板装进去没问题，循环以后还能保持压力吗？",
+    articleDescription:
+      "面向 VRLA 电池打样，从干态厚度、填酸、循环和可复现记录说明 AGM 隔板压力保持的评估方法与适用边界。",
+    breadcrumbs: ["首页", "资料", "AGM 隔板压力保持"]
+  }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2510,6 +2555,32 @@ export function buildEarlyChinaLeadAcidBatteryManufacturingMetadata(
       url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
       width: 1600,
       height: 1000
+    }
+  });
+}
+
+export function buildAgmSeparatorPressureRetentionMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "agmSeparatorPressureRetention",
+    lang,
+    agmSeparatorPressureRetentionSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    ...articleLocalePaths("agmSeparatorPressureRetention"),
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: QUALITY_PREVIEW_IMAGE,
+      width: 1200,
+      height: 800
     }
   });
 }
@@ -3882,6 +3953,79 @@ export function EarlyChinaLeadAcidBatteryManufacturingStructuredData({
           "battery separator material history",
           "AGM separator manufacturing",
           "VRLA lead-acid batteries"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${getResourcesPath(lang)}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorPressureRetentionStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmSeparatorPressureRetention",
+    lang,
+    agmSeparatorPressureRetentionSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: QUALITY_PREVIEW_IMAGE,
+          width: 1200,
+          height: 800
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: QUALITY_PREVIEW_IMAGE,
+        url,
+        datePublished: "2026-08-12",
+        dateModified: "2026-08-12",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "AGM separator pressure retention",
+          "compression recovery after acid filling",
+          "VRLA battery separator cycling test",
+          "AGM separator test pressure"
         ],
         inLanguage: current.language
       },

@@ -282,6 +282,23 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
       zh: "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/"
     }
+  },
+  {
+    id: "agm-separator-pressure-retention",
+    category: "manufacturingQuality",
+    publishedAt: "2026-08-12",
+    title: {
+      en: "AGM Separator Pressure Retention After Filling and Cycling",
+      zh: "AGM 隔板填酸与循环后的压力保持"
+    },
+    description: {
+      en: "How to compare dry thickness, wet shrinkage, recovery and residual force with reproducible test conditions.",
+      zh: "从干态厚度、湿态收缩、回弹和残余压力，建立可复现的四阶段打样记录。"
+    },
+    href: {
+      en: "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+      zh: "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+    }
   }
 ];
 
@@ -295,7 +312,8 @@ const articleKindById: Record<string, string> = {
   "export-supply-readiness": "agmSeparatorExportSupplyReadiness",
   "ups-vrla-selection": "upsVrlaTechnologySelection",
   "data-center-backup-power": "dataCenterBackupPowerAgmSeparator",
-  "early-lead-acid-manufacturing-history": "earlyChinaLeadAcidBatteryManufacturing"
+  "early-lead-acid-manufacturing-history": "earlyChinaLeadAcidBatteryManufacturing",
+  "agm-separator-pressure-retention": "agmSeparatorPressureRetention"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

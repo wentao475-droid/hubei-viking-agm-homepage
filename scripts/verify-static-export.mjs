@@ -14,7 +14,8 @@ const synchronizedResourceSlugs = [
   "agm-separator-export-supply-readiness",
   "why-ups-projects-still-use-vrla-batteries",
   "agm-separator-for-data-center-backup-power",
-  "how-chinas-earliest-lead-acid-batteries-were-made"
+  "how-chinas-earliest-lead-acid-batteries-were-made",
+  "agm-separator-pressure-retention-after-acid-filling-and-cycling"
 ];
 const synchronizedResourceFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/resources/index.html`,
@@ -86,6 +87,8 @@ const requiredFiles = [
   "zh/blog/agm-separator-for-data-center-backup-power/index.html",
   "blog/how-chinas-earliest-lead-acid-batteries-were-made/index.html",
   "zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/index.html",
+  "blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/index.html",
+  "zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/index.html",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -324,7 +327,9 @@ const secondaryResourcesComplete = synchronizedLocaleCodes.every((locale) => {
             ? "2026-08-07"
             : slug === "how-chinas-earliest-lead-acid-batteries-were-made"
               ? "2026-08-11"
-              : "2026-08-05"
+              : slug === "agm-separator-pressure-retention-after-acid-filling-and-cycling"
+                ? "2026-08-12"
+                : "2026-08-05"
         }"`
       )
   );
@@ -956,10 +961,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 176) {
-  pass("sitemap.xml lists the expected 176 localized public URLs");
+if (sitemapUrls.length === 184) {
+  pass("sitemap.xml lists the expected 184 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 176`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 184`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -1089,6 +1094,18 @@ const expectedSitemapLastmod = [
   ...synchronizedLocaleCodes.map((locale) => [
     `https://www.vikingagm.com/${locale}/blog/how-chinas-earliest-lead-acid-batteries-were-made/`,
     "2026-08-11"
+  ]),
+  [
+    "https://www.vikingagm.com/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    "2026-08-12"
+  ],
+  [
+    "https://www.vikingagm.com/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    "2026-08-12"
+  ],
+  ...synchronizedLocaleCodes.map((locale) => [
+    `https://www.vikingagm.com/${locale}/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/`,
+    "2026-08-12"
   ]),
   [
     "https://www.vikingagm.com/resources/",

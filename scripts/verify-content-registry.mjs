@@ -48,6 +48,10 @@ const articles = [
   [
     "earlyChinaLeadAcidBatteryManufacturing",
     "how-chinas-earliest-lead-acid-batteries-were-made"
+  ],
+  [
+    "agmSeparatorPressureRetention",
+    "agm-separator-pressure-retention-after-acid-filling-and-cycling"
   ]
 ];
 const allLocales = ["en", "zh", ...secondaryResourceLocales];
@@ -88,7 +92,7 @@ for (const [key, slug] of articles) {
 check(
   articleKinds.length === articles.length &&
     articleKinds.every((kind) => articleDefinitions[kind]),
-  "secondary article registry matches the 10 canonical articles"
+  "secondary article registry matches the 11 canonical articles"
 );
 check(
   existsSync(join(root, "app/[locale]/blog/[slug]/page.tsx")),

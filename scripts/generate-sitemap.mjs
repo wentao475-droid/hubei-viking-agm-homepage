@@ -224,6 +224,14 @@ const pages = [
     changefreq: "monthly",
     lastmod: "2026-08-11",
     secondaryLastmod: "2026-08-11"
+  },
+  {
+    en: "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    zh: "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-08-12",
+    secondaryLastmod: "2026-08-12"
   }
 ];
 

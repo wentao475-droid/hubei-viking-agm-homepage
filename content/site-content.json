@@ -17567,7 +17567,7 @@
         "eyebrow": "Trung tâm tài liệu tấm ngăn AGM",
         "title": "Tài liệu kỹ thuật dành cho đội ngũ mua hàng tấm ngăn AGM",
         "subtitle": "Hướng dẫn thực tế về thông số, sản xuất, chất lượng và ứng dụng giúp chuẩn bị yêu cầu kỹ thuật, mẫu thử và trao đổi với nhà cung cấp.",
-        "count": "10 bài viết kỹ thuật",
+        "count": "11 bài viết kỹ thuật",
         "actionEyebrow": "Bắt đầu trao đổi mua hàng",
         "actionTitle": "Từ nghiên cứu đến đối chiếu thông số",
         "actionText": "Chia sẻ thông tin hiện có hoặc tải hồ sơ năng lực EN/ZH trước khi liên hệ đội ngũ của chúng tôi.",
@@ -18178,6 +18178,63 @@
             "Phương pháp thử và dung sai",
             "Giai đoạn mẫu hoặc sản xuất hàng loạt"
           ]
+        },
+        "agmSeparatorPressureRetention": {
+          "title": "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không?",
+          "summary": "Độ dày ban đầu chỉ là điểm xuất phát; co ngót khi ướt, khả năng hồi phục và lực còn lại mới gần với trạng thái làm việc lâu dài trong ắc quy.",
+          "intro": "Mẫu AGM thường được đánh giá khi còn khô và vừa lắp xong, nhưng sau châm axit và chu kỳ, mạng sợi thủy tinh tiếp tục thay đổi. Vì vậy cần theo dõi cùng một mẫu qua nhiều giai đoạn thay vì chỉ so một giá trị độ dày.",
+          "sections": [
+            [
+              "Độ dày khô",
+              "Độ dày phải luôn đi kèm áp lực đo",
+              "AGM là vật liệu nén được. Hai mẫu có thể gần nhau tại một điểm áp lực nhưng có đường cong nén và hồi phục khác nhau. Tài liệu H&V dùng các điều kiện 1,25 mm/50 kPa và độ dày tại 10 kPa để minh họa cách so sánh; đây không phải thông số chung cho mọi thiết kế."
+            ],
+            [
+              "Sau châm axit",
+              "Làm ướt là ranh giới đầu tiên của thay đổi lực",
+              "Điện phân làm thay đổi tương tác giữa các sợi và có thể gây co ngót. Cần cố định mật độ, nhiệt độ, lượng axit, thời gian nghỉ và nêu rõ phép đo ở áp lực cố định hay khe hở cố định."
+            ],
+            [
+              "Sau chu kỳ",
+              "Lực còn lại phản ánh trạng thái lâu dài tốt hơn",
+              "So sánh proxy của vật liệu sau chu kỳ giúp sàng lọc khả năng cơ học nhưng không thay thế thử nghiệm ắc quy. Tuổi thọ còn phụ thuộc bản cực, lưới, lượng axit, nhiệt độ, chế độ sạc và kết cấu lắp ráp."
+            ],
+            [
+              "Hồ sơ có thể lặp lại",
+              "Kết nối bốn giai đoạn trong cùng một phương pháp",
+              "Ghi nhận đầu vào, lắp ráp, châm axit và chu kỳ với điều kiện truy xuất được, rồi liên hệ độ giữ lực với dung lượng, nội trở và quan sát tháo rời của ắc quy."
+            ],
+            [
+              "Phối hợp thông số",
+              "Viking thống nhất ranh giới thử trước khi so số liệu",
+              "Hãy cung cấp ứng dụng, kết cấu bộ cực, khe hở, độ dày mục tiêu, áp lực đo và phương pháp châm axit hoặc chu kỳ. Việc dùng cho sản xuất hàng loạt vẫn cần khách hàng xác nhận bằng thử vật liệu và ắc quy hoàn chỉnh."
+            ]
+          ],
+          "parameters": [
+            [
+              "Đầu vào",
+              "Lô, định lượng, độ dày khô và áp lực đo."
+            ],
+            [
+              "Lắp ráp",
+              "Bản cực, số lớp, khe hở và mức nén mục tiêu."
+            ],
+            [
+              "Châm axit",
+              "Mật độ, nhiệt độ, lượng axit, thời gian nghỉ và phương pháp đo."
+            ],
+            [
+              "Chu kỳ",
+              "Trạng thái khô/ướt, giới hạn nén, số chu kỳ, tần số và nhiệt độ."
+            ]
+          ],
+          "checklist": [
+            "Áp lực đo độ dày",
+            "Kết cấu bộ cực và khe hở",
+            "Điều kiện điện phân",
+            "Áp lực cố định hoặc khe hở cố định",
+            "Chu kỳ và kết quả ắc quy"
+          ]
         }
       },
       "comparison": {
@@ -18310,6 +18367,25 @@
             "https://doi.org/10.1016/S0378-7753(96)02516-5"
           ]
         ]
+      },
+      "pressureRetentionReferences": {
+        "eyebrow": "Tài liệu tham khảo",
+        "title": "Phương pháp công khai và giới hạn áp dụng",
+        "text": "Điều kiện được trích dẫn dùng để minh họa phương pháp so sánh, không phải thông số Viking hoặc giá trị thiết kế chung.",
+        "items": [
+          [
+            "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+            "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+          ],
+          [
+            "Journal of Power Sources — compression and positive active mass performance",
+            "https://doi.org/10.1016/S0378-7753(99)00018-X"
+          ],
+          [
+            "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+            "https://doi.org/10.1016/S0378-7753(01)00925-9"
+          ]
+        ]
       }
     },
     "ko": {
@@ -18350,7 +18426,7 @@
         "eyebrow": "AGM 분리막 자료 센터",
         "title": "AGM 분리막 구매·기술팀을 위한 실무 자료",
         "subtitle": "사양 작성, 샘플 평가 및 공급업체 협의를 준비할 수 있도록 기술 파라미터, 제조, 품질과 응용 정보를 제공합니다.",
-        "count": "기술 글 10편",
+        "count": "기술 글 11편",
         "actionEyebrow": "구매 협의 시작",
         "actionTitle": "자료 검토에서 사양 매칭까지",
         "actionText": "현재 확보한 요구사항을 보내거나 문의 전에 EN/ZH 기술 역량 자료를 확인하십시오.",
@@ -18956,6 +19032,63 @@
             "시험법과 공차",
             "샘플 또는 양산 단계"
           ]
+        },
+        "agmSeparatorPressureRetention": {
+          "title": "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요?",
+          "summary": "초기 두께는 시작점입니다. 습윤 수축, 회복과 잔류 압력이 배터리 내부의 장기 상태에 더 가깝습니다.",
+          "intro": "AGM 샘플 평가는 건식 두께와 초기 조립에서 끝나기 쉽지만, 전해액 주입과 반복 사이클 후 유리섬유 매트의 상태는 달라집니다. 동일한 샘플을 단계별로 비교해야 합니다.",
+          "sections": [
+            [
+              "건식 두께",
+              "두께 값에는 측정 압력이 필요합니다",
+              "AGM은 압축성 소재입니다. 한 압력점에서 두께가 같아도 압축 곡선과 회복은 다를 수 있습니다. H&V의 1.25 mm/50 kPa 비교 조건과 10 kPa 두께 표시는 방법 예시이며 보편 설계값이 아닙니다."
+            ],
+            [
+              "주액 후",
+              "습윤은 압력 변화의 첫 경계입니다",
+              "전해액은 섬유 사이 상호작용을 바꾸고 수축을 일으킬 수 있습니다. 산 밀도, 온도, 주입량, 안정 시간을 고정하고 일정 압력 또는 일정 간극 중 어떤 방법인지 밝혀야 합니다."
+            ],
+            [
+              "사이클 후",
+              "잔류 압력이 장기 작동 상태에 더 가깝습니다",
+              "소재의 proxy 사이클 압축 비교는 기계적 유지력을 선별하지만 완성 배터리 시험을 대신하지 않습니다. 수명은 극판, 그리드, 산량, 온도, 충전과 조립 설계에도 좌우됩니다."
+            ],
+            [
+              "재현 가능한 기록",
+              "네 단계를 하나의 시험 체계로 연결합니다",
+              "입고, 조립, 주액, 사이클 조건을 추적 가능하게 기록하고 유지 상태를 배터리 용량, 내부저항과 해체 관찰에 연결합니다."
+            ],
+            [
+              "사양 협의",
+              "Viking은 수치를 비교하기 전에 시험 경계를 맞춥니다",
+              "배터리 용도, 극군 구조, 설계 간극, 목표 두께, 측정 압력과 주액·사이클 방법을 공유해 주세요. 양산 적합성은 고객의 소재 및 완성 배터리 검증이 필요합니다."
+            ]
+          ],
+          "parameters": [
+            [
+              "입고",
+              "로트, 평량, 건식 두께와 측정 압력."
+            ],
+            [
+              "조립",
+              "극판 두께, 분리막 층수, 간극과 목표 압축."
+            ],
+            [
+              "주액",
+              "산 밀도, 온도, 주입량, 안정 시간과 측정 방식."
+            ],
+            [
+              "사이클",
+              "건·습 상태, 압축 범위, 횟수, 주파수와 온도."
+            ]
+          ],
+          "checklist": [
+            "두께 측정 압력",
+            "극군과 설계 간극",
+            "전해액 조건",
+            "일정 압력 또는 일정 간극",
+            "사이클 및 배터리 결과"
+          ]
         }
       },
       "comparison": {
@@ -19088,6 +19221,25 @@
             "https://doi.org/10.1016/S0378-7753(96)02516-5"
           ]
         ]
+      },
+      "pressureRetentionReferences": {
+        "eyebrow": "참고 자료",
+        "title": "공개 시험법과 적용 경계",
+        "text": "인용 조건은 비교 방법을 설명하며 Viking 제품 사양이나 보편 설계값이 아닙니다.",
+        "items": [
+          [
+            "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+            "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+          ],
+          [
+            "Journal of Power Sources — compression and positive active mass performance",
+            "https://doi.org/10.1016/S0378-7753(99)00018-X"
+          ],
+          [
+            "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+            "https://doi.org/10.1016/S0378-7753(01)00925-9"
+          ]
+        ]
       }
     },
     "pt": {
@@ -19128,7 +19280,7 @@
         "eyebrow": "Centro de recursos de separadores AGM",
         "title": "Recursos técnicos para compradores de separadores AGM",
         "subtitle": "Guias práticos sobre parâmetros, fabricação, qualidade e aplicações para preparar especificações, amostras e conversas com fornecedores.",
-        "count": "10 artigos técnicos",
+        "count": "11 artigos técnicos",
         "actionEyebrow": "Iniciar uma conversa de compra",
         "actionTitle": "Da pesquisa à análise de especificações",
         "actionText": "Compartilhe as informações disponíveis ou consulte o PDF técnico EN/ZH antes de falar com nossa equipe.",
@@ -19734,6 +19886,63 @@
             "Método de teste e tolerâncias",
             "Etapa de amostra ou produção"
           ]
+        },
+        "agmSeparatorPressureRetention": {
+          "title": "O separador AGM mantém pressão após enchimento e ciclagem?",
+          "summary": "A espessura inicial é apenas o começo; contração úmida, recuperação e força residual representam melhor a condição de longo prazo.",
+          "intro": "A avaliação costuma parar na espessura seca e na montagem inicial, mas o enchimento com ácido e os ciclos alteram a manta de fibra de vidro. A mesma amostra deve ser acompanhada por etapas.",
+          "sections": [
+            [
+              "Espessura seca",
+              "Toda espessura precisa da pressão de medição",
+              "AGM é compressível. Materiais próximos em um ponto podem ter curvas e recuperação diferentes. As condições 1,25 mm/50 kPa e a espessura a 10 kPa da H&V ilustram comparação, não valores universais."
+            ],
+            [
+              "Após enchimento",
+              "O umedecimento é a primeira fronteira da mudança de pressão",
+              "O eletrólito altera a interação das fibras e pode causar retração. Fixe densidade, temperatura, volume, repouso e informe se o ensaio usa pressão ou vão constante."
+            ],
+            [
+              "Após ciclagem",
+              "A força residual se aproxima mais da condição de serviço",
+              "Um ensaio proxy de ciclagem compara retenção mecânica, mas não substitui a bateria completa. Vida também depende de placas, grades, ácido, temperatura, carga e montagem."
+            ],
+            [
+              "Registro reproduzível",
+              "Conectar quatro etapas pelo mesmo método",
+              "Registre recebimento, montagem, enchimento e ciclos com condições rastreáveis e relacione a retenção à capacidade, resistência interna e desmontagem."
+            ],
+            [
+              "Coordenação",
+              "A Viking alinha primeiro o limite do ensaio",
+              "Informe aplicação, grupo de placas, vão, espessura alvo, pressão e método de enchimento ou ciclagem. A aprovação para série depende dos testes do cliente."
+            ]
+          ],
+          "parameters": [
+            [
+              "Recebimento",
+              "Lote, gramatura, espessura seca e pressão."
+            ],
+            [
+              "Montagem",
+              "Placas, camadas, vão e compressão alvo."
+            ],
+            [
+              "Enchimento",
+              "Densidade, temperatura, volume, repouso e método."
+            ],
+            [
+              "Ciclagem",
+              "Estado seco/úmido, limites, ciclos, frequência e temperatura."
+            ]
+          ],
+          "checklist": [
+            "Pressão de espessura",
+            "Grupo de placas e vão",
+            "Condições do eletrólito",
+            "Pressão ou vão constante",
+            "Ciclos e resultados da bateria"
+          ]
         }
       },
       "comparison": {
@@ -19866,6 +20075,25 @@
             "https://doi.org/10.1016/S0378-7753(96)02516-5"
           ]
         ]
+      },
+      "pressureRetentionReferences": {
+        "eyebrow": "Referências",
+        "title": "Métodos publicados e limites",
+        "text": "As condições citadas explicam métodos de comparação; não são especificações Viking nem valores universais.",
+        "items": [
+          [
+            "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+            "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+          ],
+          [
+            "Journal of Power Sources — compression and positive active mass performance",
+            "https://doi.org/10.1016/S0378-7753(99)00018-X"
+          ],
+          [
+            "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+            "https://doi.org/10.1016/S0378-7753(01)00925-9"
+          ]
+        ]
       }
     },
     "ru": {
@@ -19906,7 +20134,7 @@
         "eyebrow": "Центр материалов по AGM-сепараторам",
         "title": "Технические материалы для закупщиков AGM-сепараторов",
         "subtitle": "Практические руководства по параметрам, производству, качеству и применению для подготовки спецификаций, образцов и переговоров с поставщиком.",
-        "count": "10 технических статей",
+        "count": "11 технических статей",
         "actionEyebrow": "Начать обсуждение закупки",
         "actionTitle": "От изучения к проверке спецификации",
         "actionText": "Перед обращением передайте имеющиеся требования или ознакомьтесь с техническим PDF на EN/ZH.",
@@ -20512,6 +20740,63 @@
             "Метод испытаний и допуски",
             "Этап образца или серийного производства"
           ]
+        },
+        "agmSeparatorPressureRetention": {
+          "title": "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?",
+          "summary": "Начальная толщина — лишь отправная точка; влажная усадка, восстановление и остаточное усилие лучше отражают длительное состояние в аккумуляторе.",
+          "intro": "Оценка AGM часто заканчивается сухой толщиной и первичной сборкой, но заливка электролита и циклы меняют стекловолоконный мат. Один образец следует отслеживать на нескольких этапах.",
+          "sections": [
+            [
+              "Сухая толщина",
+              "Толщина должна указываться вместе с давлением измерения",
+              "AGM сжимаем. Материалы могут совпадать в одной точке, но различаться кривой и восстановлением. Условия H&V 1,25 мм/50 кПа и толщина при 10 кПа показывают метод сравнения, а не универсальные значения."
+            ],
+            [
+              "После заливки",
+              "Смачивание — первая граница изменения усилия",
+              "Электролит меняет взаимодействие волокон и может вызывать усадку. Нужно фиксировать плотность, температуру, объём, выдержку и указывать постоянное давление или постоянный зазор."
+            ],
+            [
+              "После циклов",
+              "Остаточное усилие ближе к рабочему состоянию",
+              "Proxy-циклирование материала помогает сравнить механическое удержание, но не заменяет испытание батареи. Ресурс зависит также от пластин, решёток, кислоты, температуры, заряда и сборки."
+            ],
+            [
+              "Воспроизводимая запись",
+              "Связать четыре этапа единым методом",
+              "Условия входного контроля, сборки, заливки и циклов должны быть прослеживаемыми, а удержание — сопоставлено с ёмкостью, сопротивлением и разборкой батареи."
+            ],
+            [
+              "Согласование",
+              "Viking сначала согласует границы испытания",
+              "Сообщите применение, конструкцию блока, зазор, целевую толщину, давление и метод заливки или циклов. Серийная пригодность подтверждается испытаниями клиента."
+            ]
+          ],
+          "parameters": [
+            [
+              "Входной контроль",
+              "Партия, плотность, сухая толщина и давление."
+            ],
+            [
+              "Сборка",
+              "Пластины, слои, зазор и целевое сжатие."
+            ],
+            [
+              "Заливка",
+              "Плотность, температура, объём, выдержка и метод."
+            ],
+            [
+              "Циклы",
+              "Сухое/влажное состояние, пределы, число, частота и температура."
+            ]
+          ],
+          "checklist": [
+            "Давление измерения",
+            "Блок пластин и зазор",
+            "Условия электролита",
+            "Постоянное давление или зазор",
+            "Циклы и результаты батареи"
+          ]
         }
       },
       "comparison": {
@@ -20644,6 +20929,25 @@
             "https://doi.org/10.1016/S0378-7753(96)02516-5"
           ]
         ]
+      },
+      "pressureRetentionReferences": {
+        "eyebrow": "Источники",
+        "title": "Опубликованные методы и границы",
+        "text": "Условия приведены для объяснения сравнения и не являются спецификацией Viking или универсальными значениями.",
+        "items": [
+          [
+            "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+            "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+          ],
+          [
+            "Journal of Power Sources — compression and positive active mass performance",
+            "https://doi.org/10.1016/S0378-7753(99)00018-X"
+          ],
+          [
+            "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+            "https://doi.org/10.1016/S0378-7753(01)00925-9"
+          ]
+        ]
       }
     },
     "ja": {
@@ -20684,7 +20988,7 @@
         "eyebrow": "AGMセパレーター資料センター",
         "title": "AGMセパレーターの購買・技術担当者向け実務資料",
         "subtitle": "仕様作成、サンプル評価、サプライヤー協議に役立つ技術特性、製造、品質、用途情報をまとめています。",
-        "count": "技術記事 10件",
+        "count": "技術記事 11件",
         "actionEyebrow": "購買相談を始める",
         "actionTitle": "情報収集から仕様照合へ",
         "actionText": "現在の要求事項を共有するか、お問い合わせ前に EN/ZH 技術能力資料をご確認ください。",
@@ -21290,6 +21594,63 @@
             "試験法と公差",
             "サンプルまたは量産段階"
           ]
+        },
+        "agmSeparatorPressureRetention": {
+          "title": "AGMセパレーターは注液・サイクル後も圧力を保持できるか",
+          "summary": "初期厚さは出発点です。湿潤収縮、回復、残留圧力の方が電池内部の長期状態に近い指標です。",
+          "intro": "AGMの評価は乾燥厚さと初期組立で終わりがちですが、注液と繰返しサイクルでガラス繊維マットは変化します。同一試料を段階的に追跡する必要があります。",
+          "sections": [
+            [
+              "乾燥厚さ",
+              "厚さには測定圧力の明記が必要です",
+              "AGMは圧縮性材料です。一点の厚さが近くても圧縮曲線と回復は異なります。H&Vの1.25 mm/50 kPa比較条件と10 kPa厚さは方法の例であり、共通設計値ではありません。"
+            ],
+            [
+              "注液後",
+              "湿潤は圧力変化の最初の境界です",
+              "電解液は繊維間の状態を変え、収縮を生じさせる場合があります。酸密度、温度、注液量、静置時間を固定し、一定圧力か一定間隙かを明示します。"
+            ],
+            [
+              "サイクル後",
+              "残留圧力は長期使用状態により近い指標です",
+              "材料のproxyサイクル比較は機械保持性の選別に使えますが、完成電池試験の代替ではありません。寿命は極板、グリッド、酸量、温度、充電条件、組立にも依存します。"
+            ],
+            [
+              "再現可能な記録",
+              "四段階を同じ試験系で結びます",
+              "受入、組立、注液、サイクルの条件を追跡可能にし、保持状態を容量、内部抵抗、解体観察と対応させます。"
+            ],
+            [
+              "仕様調整",
+              "Vikingは数値比較の前に試験境界を合わせます",
+              "用途、極群構造、設計間隙、目標厚さ、測定圧力、注液・サイクル方法をご提示ください。量産適合性は材料試験と完成電池検証で確認します。"
+            ]
+          ],
+          "parameters": [
+            [
+              "受入",
+              "ロット、坪量、乾燥厚さ、測定圧力。"
+            ],
+            [
+              "組立",
+              "極板厚さ、層数、間隙、目標圧縮。"
+            ],
+            [
+              "注液",
+              "酸密度、温度、量、静置時間、測定方式。"
+            ],
+            [
+              "サイクル",
+              "乾湿状態、圧縮範囲、回数、周波数、温度。"
+            ]
+          ],
+          "checklist": [
+            "厚さ測定圧力",
+            "極群と設計間隙",
+            "電解液条件",
+            "一定圧力または一定間隙",
+            "サイクルと電池結果"
+          ]
         }
       },
       "comparison": {
@@ -21422,6 +21783,25 @@
             "https://doi.org/10.1016/S0378-7753(96)02516-5"
           ]
         ]
+      },
+      "pressureRetentionReferences": {
+        "eyebrow": "参考資料",
+        "title": "公開試験法と適用範囲",
+        "text": "引用条件は比較方法の説明であり、Viking仕様または共通設計値ではありません。",
+        "items": [
+          [
+            "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+            "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+          ],
+          [
+            "Journal of Power Sources — compression and positive active mass performance",
+            "https://doi.org/10.1016/S0378-7753(99)00018-X"
+          ],
+          [
+            "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+            "https://doi.org/10.1016/S0378-7753(01)00925-9"
+          ]
+        ]
       }
     },
     "es": {
@@ -21462,7 +21842,7 @@
         "eyebrow": "Centro de recursos de separadores AGM",
         "title": "Recursos técnicos para compradores de separadores AGM",
         "subtitle": "Guías prácticas sobre parámetros, fabricación, calidad y aplicaciones para preparar especificaciones, muestras y conversaciones con proveedores.",
-        "count": "10 artículos técnicos",
+        "count": "11 artículos técnicos",
         "actionEyebrow": "Iniciar una conversación de compra",
         "actionTitle": "De la investigación a la revisión de especificaciones",
         "actionText": "Comparta la información disponible o revise el PDF técnico EN/ZH antes de contactar a nuestro equipo.",
@@ -22068,6 +22448,63 @@
             "Método de ensayo y tolerancias",
             "Etapa de muestra o producción"
           ]
+        },
+        "agmSeparatorPressureRetention": {
+          "title": "¿Mantiene presión el separador AGM después del llenado y los ciclos?",
+          "summary": "El espesor inicial es solo el punto de partida; la contracción húmeda, la recuperación y la fuerza residual describen mejor su estado a largo plazo.",
+          "intro": "La evaluación suele terminar con el espesor en seco y el montaje inicial, pero el llenado de ácido y los ciclos cambian la manta de fibra de vidrio. Conviene seguir la misma muestra en varias etapas.",
+          "sections": [
+            [
+              "Espesor en seco",
+              "Todo espesor necesita una presión de medición",
+              "AGM es compresible. Dos materiales pueden coincidir en un punto y diferir en su curva y recuperación. Las condiciones 1,25 mm/50 kPa y el espesor a 10 kPa de H&V ilustran métodos comparativos, no valores universales."
+            ],
+            [
+              "Después del llenado",
+              "La humectación es el primer límite del cambio de presión",
+              "El electrolito modifica la interacción de las fibras y puede producir contracción. Deben fijarse densidad, temperatura, cantidad, reposo y si la medición se realiza a presión o separación constante."
+            ],
+            [
+              "Después de los ciclos",
+              "La fuerza residual se acerca más al estado de servicio",
+              "Una comparación proxy de ciclos sirve para filtrar la retención mecánica, pero no sustituye el ensayo de batería. La vida también depende de placas, rejillas, ácido, temperatura, carga y montaje."
+            ],
+            [
+              "Registro reproducible",
+              "Conectar cuatro etapas con el mismo método",
+              "Registrar recepción, montaje, llenado y ciclos con condiciones trazables, y relacionar la retención con capacidad, resistencia interna y desmontaje de la batería."
+            ],
+            [
+              "Coordinación",
+              "Viking alinea primero el método de prueba",
+              "Comparta aplicación, grupo de placas, separación, espesor objetivo, presión de medición y método de llenado o ciclos. La aptitud para serie debe confirmarse con ensayos del cliente."
+            ]
+          ],
+          "parameters": [
+            [
+              "Recepción",
+              "Lote, gramaje, espesor en seco y presión."
+            ],
+            [
+              "Montaje",
+              "Placas, capas, separación y compresión objetivo."
+            ],
+            [
+              "Llenado",
+              "Densidad, temperatura, cantidad, reposo y método."
+            ],
+            [
+              "Ciclos",
+              "Estado seco/húmedo, límites, número, frecuencia y temperatura."
+            ]
+          ],
+          "checklist": [
+            "Presión de espesor",
+            "Grupo de placas y separación",
+            "Condiciones del electrolito",
+            "Presión o separación constante",
+            "Ciclos y resultados de batería"
+          ]
         }
       },
       "comparison": {
@@ -22198,6 +22635,25 @@
           [
             "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
             "https://doi.org/10.1016/S0378-7753(96)02516-5"
+          ]
+        ]
+      },
+      "pressureRetentionReferences": {
+        "eyebrow": "Referencias",
+        "title": "Métodos publicados y límites",
+        "text": "Las condiciones citadas explican métodos de comparación; no son especificaciones Viking ni valores universales.",
+        "items": [
+          [
+            "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+            "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+          ],
+          [
+            "Journal of Power Sources — compression and positive active mass performance",
+            "https://doi.org/10.1016/S0378-7753(99)00018-X"
+          ],
+          [
+            "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+            "https://doi.org/10.1016/S0378-7753(01)00925-9"
           ]
         ]
       }
@@ -33965,6 +34421,1424 @@
         }
       }
     },
+    "agmSeparatorPressureRetention": {
+      "en": {
+        "nav": {
+          "company": "Company",
+          "products": "Products",
+          "applications": "Applications",
+          "quality": "Quality",
+          "resources": "Resources",
+          "contact": "Contact"
+        },
+        "language": "中文",
+        "homePath": "/",
+        "languagePath": "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Request Sample",
+        "hero": {
+          "eyebrow": "Compression & Recovery",
+          "title": "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+          "subtitle": "Initial thickness is only the starting point. Wet shrinkage, recovery and residual force after repeated compression are closer to the separator's long-term condition inside a battery.",
+          "primary": "Request a Sample & Specification Match",
+          "secondary": "Review the four test stages",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGM separator quality inspection and thickness measurement",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "AGM separator sampling often stops at assembly: dry thickness is within tolerance, the plate group fits and initial compression matches the drawing. A battery, however, does not remain dry. Electrolyte filling changes the glass mat, and cycling repeatedly compresses and releases it.",
+          "Published H&V material compares dry, post-filling and post-cycling retention. The useful lesson is methodological: a single incoming thickness value cannot describe long-term support. The cited conditions are comparison examples, not Viking specifications or universal battery-design targets."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Dry Thickness",
+            "title": "A thickness result only answers the pre-assembly question",
+            "text": "AGM is compressible, so every thickness value needs a measurement pressure. Two materials can show similar thickness at one pressure point while having different compression curves and recovery. H&V presents a thickness-versus-pressure curve, a 1.25 mm insertion gap at 50 kPa for comparison, and product-table thickness measured at 10 kPa. Without the test pressure, plate thickness, separator layers and assembly gap, nominal thickness does not fully describe the installed state."
+          },
+          {
+            "eyebrow": "After Filling",
+            "title": "Electrolyte filling is the first boundary for pressure change",
+            "text": "Wetting can change interactions within the glass-fiber network, and published studies note that conventional mats may shrink after wetting, reducing plate-group force. A useful record therefore controls acid density, temperature, filling quantity and rest time, then states whether wet thickness or residual force is measured at constant pressure or constant gap. Results obtained under different conditions should not be compared as if they were equivalent."
+          },
+          {
+            "eyebrow": "After Cycling",
+            "title": "Residual force after repeated compression is closer to the working condition",
+            "text": "During battery operation, plates and separator experience structural change and repeated compression. H&V also shows comparative retention after dry, filling and cycling stages, including a value labelled projected (proxy) after 10,000 cycles. That is a material-level proxy comparison, not a claim that every battery has completed 10,000 charge-discharge cycles. Battery life still depends on plates, grids, acid quantity, temperature, charging regime and assembly design."
+          },
+          {
+            "eyebrow": "Reproducible Sampling",
+            "title": "A useful sample record should connect four stages",
+            "text": "Incoming inspection, assembly, filling and cycling should use traceable conditions. The objective is not to collect the largest possible data table, but to make samples repeatable: record the batch and method, hold the assembly and electrolyte conditions constant, and relate separator retention to capacity, resistance and teardown observations from the complete battery."
+          },
+          {
+            "eyebrow": "Specification Coordination",
+            "title": "Viking starts by aligning the test boundary, not comparing isolated numbers",
+            "text": "For VRLA applications, Viking supplies AGM separator rolls and sheets and can review thickness, width, sheet dimensions and packing. For compression and retention discussions, share the battery application, plate-group structure, design gap, target thickness, measurement pressure and any existing filling or cycling method. Suitability for volume use remains subject to the customer's material and complete-battery validation."
+          }
+        ],
+        "parameters": [
+          [
+            "Incoming",
+            "Record batch, basis weight, dry thickness and the exact measurement pressure; add a compression curve when comparing materials."
+          ],
+          [
+            "Assembly",
+            "Record plate thickness, separator layers, design gap, target compression and actual insertion behavior."
+          ],
+          [
+            "After filling",
+            "Control acid density, temperature, quantity and rest time; state constant-pressure or constant-gap measurement."
+          ],
+          [
+            "After cycling",
+            "Record wet or dry state, compression limits, cycle count, frequency and temperature, then link retention to battery results."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Test Evidence",
+          "title": "Material form, measurement method and battery validation must stay connected",
+          "items": [
+            [
+              "AGM separator rolls",
+              "Roll width, winding and batch identification affect repeatable sampling and line use.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Viking AGM separator roll"
+            ],
+            [
+              "Quality inspection",
+              "Thickness and compression results are only comparable when pressure, conditioning and equipment are stated.",
+              "/images/agm-quality-control-1200.webp",
+              "AGM separator quality inspection"
+            ],
+            [
+              "AGM separator sheets",
+              "Finished sheet dimensions and layer count should match the plate-group and assembly-gap record.",
+              "/images/sheets1-900.webp",
+              "Viking AGM separator sheets"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Sample Test Checklist",
+          "title": "Prepare these conditions before comparing pressure retention",
+          "text": "A shared method is more valuable than an isolated retention percentage because it allows the result to be repeated and related to battery performance.",
+          "items": [
+            "Thickness measurement pressure",
+            "Plate group and design gap",
+            "Electrolyte and rest conditions",
+            "Constant-pressure or constant-gap method",
+            "Cycle profile and battery-level observations"
+          ]
+        },
+        "references": {
+          "eyebrow": "References",
+          "title": "Published methods and technical boundaries",
+          "text": "The cited test conditions explain comparison methods. They are not Viking product specifications or universal design values. Compression targets must be verified for the battery structure and operating conditions.",
+          "items": [
+            [
+              "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+              "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+            ],
+            [
+              "Journal of Power Sources — compression and positive active mass performance",
+              "https://doi.org/10.1016/S0378-7753(99)00018-X"
+            ],
+            [
+              "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+              "https://doi.org/10.1016/S0378-7753(01)00925-9"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Related Pages",
+          "title": "Continue with technical parameters, testing and consistency",
+          "items": [
+            [
+              "Key Technical Parameters of AGM Separators",
+              "/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Why AGM Separator Consistency Matters",
+              "/blog/agm-separator-performance-consistency/"
+            ],
+            [
+              "AGM Separator Testing",
+              "/quality-control/agm-separator-testing/"
+            ],
+            [
+              "AGM Battery Separators",
+              "/products/agm-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Inquiry",
+          "title": "Review compression and pressure-retention requirements",
+          "text": "Share the battery application, plate-group structure, design gap, target thickness, measurement pressure and existing filling or cycling method.",
+          "checklist": [
+            "Battery application",
+            "Plate group and gap",
+            "Thickness and test pressure",
+            "Filling and cycling method"
+          ],
+          "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+          },
+          "placeholders": {
+            "name": "Your full name",
+            "company": "Company name",
+            "email": "name@company.com",
+            "country": "Country / region",
+            "application": "VRLA, UPS, telecom, motorcycle...",
+            "message": "Battery application, plate-group structure, design gap, target thickness, test pressure, electrolyte and cycling conditions"
+          },
+          "submit": "Send Inquiry",
+          "submitting": "Sending...",
+          "required": "Please complete all required fields before submitting.",
+          "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+          "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+          "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+        },
+        "footer": {
+          "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+          "wechat": "Official WeChat account",
+          "mobile": "Mobile website"
+        }
+      },
+      "zh": {
+        "nav": {
+          "company": "公司",
+          "products": "产品",
+          "applications": "应用",
+          "quality": "质量",
+          "resources": "资料",
+          "contact": "联系"
+        },
+        "language": "EN",
+        "homePath": "/zh/",
+        "languagePath": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "brandName": "湖北维京科技有限公司",
+        "quote": "申请样品",
+        "hero": {
+          "eyebrow": "压缩与回弹",
+          "title": "隔板装进去没问题，循环以后还能保持压力吗？",
+          "subtitle": "AGM 隔板的初始厚度只是起点。填酸后的收缩、回弹和循环后的残余压力，才更接近它在电池里的长期状态。",
+          "primary": "申请样品与规格匹配",
+          "secondary": "查看四阶段测试清单",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGM 隔板质量检测与厚度测量",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "AGM 隔板打样记录常停在装配完成的一刻：干态厚度合格，极群能装进去，初始压缩也在设计范围内。但电池不会一直停在干态。填酸会改变玻璃纤维毡状态，循环还会让隔板反复受压与恢复。",
+          "H&V 公开资料把比较延伸到干态、填酸后和循环后的保持状态。这里真正可借鉴的是比较方法，而不是把资料中的条件直接当作维京规格或通用设计值。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "干态厚度",
+            "title": "厚度合格，只回答了装配前的问题",
+            "text": "AGM 是可压缩材料，每个厚度值都应注明测试压力。两款材料在一个压力点厚度接近，压缩曲线和卸压恢复仍可能不同。H&V 资料同时展示厚度随压力变化曲线、用于比较的 1.25 mm 装配间隙和 50 kPa 条件，以及产品表中 10 kPa 下的厚度。没有测试压力、极板厚度、隔板层数和设计间隙，单独的标称厚度很难完整描述装入极群后的状态。"
+          },
+          {
+            "eyebrow": "填酸以后",
+            "title": "填酸，是压力变化的第一道分界线",
+            "text": "电解液润湿会改变玻璃纤维网络的作用状态，已有研究指出传统玻纤毡湿润后可能收缩，并使板群压力下降。因此记录应统一电解液密度、温度、加液量和静置时间，同时说明采用固定压力还是固定间隙测量湿态厚度或残余压力。条件不同的保持率不能直接横向比较。"
+          },
+          {
+            "eyebrow": "循环以后",
+            "title": "循环后的残余压力，更接近长期工作状态",
+            "text": "电池运行中，极板和隔板会经历结构变化与反复压缩。H&V 资料展示干态、填酸后和循环阶段的比较保持率，并给出标注为 projected（proxy）的 10,000 次循环后比较值。它属于材料层面的代理比较，不等于所有电池都完成了 10,000 次实际充放电。整电池寿命仍受极板、板栅、酸量、温度、充电制度和装配结构共同影响。"
+          },
+          {
+            "eyebrow": "可复现打样",
+            "title": "一份有用的打样记录，应把四个阶段连起来",
+            "text": "来料、装配、填酸和循环要采用可追溯条件。目标不是一次铺开最大的参数表，而是让样品能够复测：记录批次与方法，固定装配和电解液条件，再把隔板保持状态与整电池容量、内阻变化和拆解观察对应起来。"
+          },
+          {
+            "eyebrow": "规格协同",
+            "title": "维京先对齐测试边界，再比较同一个数值",
+            "text": "围绕 VRLA 应用，维京可提供 AGM 隔板卷材和片材，并配合确认厚度、宽度、片材尺寸和包装。涉及压缩与压力保持时，建议提供电池应用、极群结构、设计间隙、目标厚度、测试压力，以及现有填酸或循环方法。是否适合批量使用，仍应以客户材料测试和整电池验证为准。"
+          }
+        ],
+        "parameters": [
+          [
+            "来料阶段",
+            "记录批次、克重、干态厚度和对应测试压力；比较材料时可增加压缩曲线。"
+          ],
+          [
+            "装配阶段",
+            "记录极板厚度、隔板层数、设计间隙、目标压缩和实际插入状态。"
+          ],
+          [
+            "填酸阶段",
+            "固定酸密度、温度、加液量和静置时间，并注明固定压力或固定间隙。"
+          ],
+          [
+            "循环阶段",
+            "记录干湿状态、压缩上下限、循环次数、频率和温度，再与整电池结果对应。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "测试与产品资料",
+          "title": "产品形式、测试方法与整电池验证应保持关联",
+          "items": [
+            [
+              "AGM 隔板卷材",
+              "卷材宽度、收卷状态和批次标识会影响可复现取样与生产线使用。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "湖北维京 AGM 隔板卷材"
+            ],
+            [
+              "质量检测",
+              "只有注明压力、预处理和设备条件，厚度与压缩数据才具有可比性。",
+              "/images/agm-quality-control-1200.webp",
+              "湖北维京 AGM 隔板质量检测"
+            ],
+            [
+              "AGM 隔板片材",
+              "成品片材尺寸和层数应与极群结构及设计间隙记录一致。",
+              "/images/sheets1-900.webp",
+              "湖北维京 AGM 隔板片材"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "打样测试清单",
+          "title": "比较压力保持前，先统一这些条件",
+          "text": "共同测试方法比一个孤立的保持率更有价值，因为结果可以复测，也能和整电池表现对应。",
+          "items": [
+            "厚度测试压力",
+            "极群结构与设计间隙",
+            "电解液和静置条件",
+            "固定压力或固定间隙方法",
+            "循环条件与整电池观察"
+          ]
+        },
+        "references": {
+          "eyebrow": "资料来源",
+          "title": "公开方法与适用边界",
+          "text": "文中测试条件用于说明比较方法，不作为维京产品规格或通用设计值。具体压缩范围需结合电池结构和运行条件验证。",
+          "items": [
+            [
+              "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+              "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+            ],
+            [
+              "Journal of Power Sources — compression and positive active mass performance",
+              "https://doi.org/10.1016/S0378-7753(99)00018-X"
+            ],
+            [
+              "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+              "https://doi.org/10.1016/S0378-7753(01)00925-9"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "相关页面",
+          "title": "继续了解技术参数、检测和批次一致性",
+          "items": [
+            [
+              "AGM 隔板关键技术参数",
+              "/zh/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGM 隔板一致性为什么重要",
+              "/zh/blog/agm-separator-performance-consistency/"
+            ],
+            [
+              "AGM 隔板检测",
+              "/zh/quality-control/agm-separator-testing/"
+            ],
+            [
+              "AGM 电池隔板",
+              "/zh/products/agm-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "询盘",
+          "title": "确认压缩与压力保持测试条件",
+          "text": "请提供电池应用、极群结构、设计间隙、目标厚度、测试压力和已有填酸或循环方法。",
+          "checklist": [
+            "电池应用",
+            "极群结构与间隙",
+            "厚度与测试压力",
+            "填酸与循环方法"
+          ],
+          "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+          },
+          "placeholders": {
+            "name": "您的姓名",
+            "company": "公司名称",
+            "email": "name@company.com",
+            "country": "国家或地区",
+            "application": "VRLA、UPS、通信、摩托车等",
+            "message": "电池应用、极群结构、设计间隙、目标厚度、测试压力、电解液和循环条件"
+          },
+          "submit": "发送询盘",
+          "submitting": "发送中...",
+          "required": "请先填写所有必填字段。",
+          "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+          "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+          "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+        },
+        "footer": {
+          "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+          "wechat": "官方微信公众号",
+          "mobile": "移动官网"
+        }
+      },
+      "vi": {
+        "nav": {
+          "company": "Công ty",
+          "products": "Sản phẩm",
+          "quality": "Chất lượng",
+          "resources": "Tài liệu",
+          "applications": "Ứng dụng",
+          "contact": "Liên hệ"
+        },
+        "language": "VI",
+        "homePath": "/vi/",
+        "languagePath": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Yêu cầu mẫu",
+        "hero": {
+          "eyebrow": "Hướng dẫn kỹ thuật AGM",
+          "title": "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không?",
+          "subtitle": "Độ dày ban đầu chỉ là điểm xuất phát; co ngót khi ướt, khả năng hồi phục và lực còn lại mới gần với trạng thái làm việc lâu dài trong ắc quy.",
+          "primary": "Yêu cầu mẫu và đối chiếu thông số",
+          "secondary": "Xem danh sách kiểm tra mua hàng",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không?",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "Mẫu AGM thường được đánh giá khi còn khô và vừa lắp xong, nhưng sau châm axit và chu kỳ, mạng sợi thủy tinh tiếp tục thay đổi. Vì vậy cần theo dõi cùng một mẫu qua nhiều giai đoạn thay vì chỉ so một giá trị độ dày.",
+          "Độ dày ban đầu chỉ là điểm xuất phát; co ngót khi ướt, khả năng hồi phục và lực còn lại mới gần với trạng thái làm việc lâu dài trong ắc quy."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Độ dày khô",
+            "title": "Độ dày phải luôn đi kèm áp lực đo",
+            "text": "AGM là vật liệu nén được. Hai mẫu có thể gần nhau tại một điểm áp lực nhưng có đường cong nén và hồi phục khác nhau. Tài liệu H&V dùng các điều kiện 1,25 mm/50 kPa và độ dày tại 10 kPa để minh họa cách so sánh; đây không phải thông số chung cho mọi thiết kế."
+          },
+          {
+            "eyebrow": "Sau châm axit",
+            "title": "Làm ướt là ranh giới đầu tiên của thay đổi lực",
+            "text": "Điện phân làm thay đổi tương tác giữa các sợi và có thể gây co ngót. Cần cố định mật độ, nhiệt độ, lượng axit, thời gian nghỉ và nêu rõ phép đo ở áp lực cố định hay khe hở cố định."
+          },
+          {
+            "eyebrow": "Sau chu kỳ",
+            "title": "Lực còn lại phản ánh trạng thái lâu dài tốt hơn",
+            "text": "So sánh proxy của vật liệu sau chu kỳ giúp sàng lọc khả năng cơ học nhưng không thay thế thử nghiệm ắc quy. Tuổi thọ còn phụ thuộc bản cực, lưới, lượng axit, nhiệt độ, chế độ sạc và kết cấu lắp ráp."
+          },
+          {
+            "eyebrow": "Hồ sơ có thể lặp lại",
+            "title": "Kết nối bốn giai đoạn trong cùng một phương pháp",
+            "text": "Ghi nhận đầu vào, lắp ráp, châm axit và chu kỳ với điều kiện truy xuất được, rồi liên hệ độ giữ lực với dung lượng, nội trở và quan sát tháo rời của ắc quy."
+          },
+          {
+            "eyebrow": "Phối hợp thông số",
+            "title": "Viking thống nhất ranh giới thử trước khi so số liệu",
+            "text": "Hãy cung cấp ứng dụng, kết cấu bộ cực, khe hở, độ dày mục tiêu, áp lực đo và phương pháp châm axit hoặc chu kỳ. Việc dùng cho sản xuất hàng loạt vẫn cần khách hàng xác nhận bằng thử vật liệu và ắc quy hoàn chỉnh."
+          }
+        ],
+        "parameters": [
+          [
+            "Đầu vào",
+            "Lô, định lượng, độ dày khô và áp lực đo."
+          ],
+          [
+            "Lắp ráp",
+            "Bản cực, số lớp, khe hở và mức nén mục tiêu."
+          ],
+          [
+            "Châm axit",
+            "Mật độ, nhiệt độ, lượng axit, thời gian nghỉ và phương pháp đo."
+          ],
+          [
+            "Chu kỳ",
+            "Trạng thái khô/ướt, giới hạn nén, số chu kỳ, tần số và nhiệt độ."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Dạng cung cấp",
+          "title": "Chọn dạng cuộn hoặc tấm theo quy trình sản xuất",
+          "items": [
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "Phù hợp dây chuyền liên tục, chia cuộn hoặc cắt nội bộ trước khi lắp ráp.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Tấm ngăn AGM dạng cuộn"
+            ],
+            [
+              "Chất lượng",
+              "Thông tin rõ ràng giúp đánh giá mẫu và trao đổi thông số hiệu quả hơn.",
+              "/images/agm-quality-control-1200.webp",
+              "Chất lượng"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "Phù hợp khi cần kích thước cắt sẵn để đơn giản hóa khâu chuẩn bị lắp ráp.",
+              "/images/sheets1-900.webp",
+              "Tấm ngăn AGM dạng tấm"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Kiểm tra mua hàng",
+          "title": "Xác nhận yêu cầu trước khi lấy mẫu",
+          "text": "Thông tin rõ ràng giúp đánh giá mẫu và trao đổi thông số hiệu quả hơn.",
+          "items": [
+            "Áp lực đo độ dày",
+            "Kết cấu bộ cực và khe hở",
+            "Điều kiện điện phân",
+            "Áp lực cố định hoặc khe hở cố định",
+            "Chu kỳ và kết quả ắc quy"
+          ]
+        },
+        "related": {
+          "eyebrow": "Tài liệu liên quan",
+          "title": "Tiếp tục đánh giá sản phẩm và nhà cung cấp",
+          "items": [
+            [
+              "Tấm ngăn AGM là gì?",
+              "/vi/blog/what-is-agm-separator/"
+            ],
+            [
+              "Các thông số kỹ thuật chính của tấm ngăn AGM",
+              "/vi/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Cách lựa chọn tấm ngăn AGM",
+              "/vi/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Tấm ngăn sợi thủy tinh AGM và tấm ngăn PVC khác nhau thế nào?",
+              "/vi/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Trao đổi thông số",
+          "title": "Gửi yêu cầu ứng dụng và kích thước",
+          "text": "Chia sẻ thông tin bạn đã có. Chúng tôi sẽ trao đổi về dạng sản phẩm, mẫu thử và khả năng phối hợp.",
+          "checklist": [
+            "Ứng dụng và loại ắc quy",
+            "Độ dày, chiều rộng hoặc kích thước tấm",
+            "Dạng cuộn hoặc tấm và yêu cầu đóng gói"
+          ],
+          "placeholders": {
+            "message": "Mô tả ứng dụng, thông số mục tiêu, số lượng mẫu hoặc yêu cầu đóng gói."
+          }
+        },
+        "footer": {
+          "description": "Tấm ngăn sợi thủy tinh AGM dạng cuộn và tấm cho nhà sản xuất ắc quy VRLA.",
+          "wechat": "Theo dõi tài khoản WeChat của Viking AGM",
+          "mobile": "Truy cập trang web Viking AGM trên điện thoại"
+        },
+        "references": {
+          "eyebrow": "Tài liệu tham khảo",
+          "title": "Phương pháp công khai và giới hạn áp dụng",
+          "text": "Điều kiện được trích dẫn dùng để minh họa phương pháp so sánh, không phải thông số Viking hoặc giá trị thiết kế chung.",
+          "items": [
+            [
+              "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+              "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+            ],
+            [
+              "Journal of Power Sources — compression and positive active mass performance",
+              "https://doi.org/10.1016/S0378-7753(99)00018-X"
+            ],
+            [
+              "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+              "https://doi.org/10.1016/S0378-7753(01)00925-9"
+            ]
+          ]
+        }
+      },
+      "ko": {
+        "nav": {
+          "company": "회사",
+          "products": "제품",
+          "quality": "품질",
+          "resources": "자료",
+          "applications": "응용 분야",
+          "contact": "문의"
+        },
+        "language": "KO",
+        "homePath": "/ko/",
+        "languagePath": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "샘플 요청",
+        "hero": {
+          "eyebrow": "AGM 분리막 기술 가이드",
+          "title": "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요?",
+          "subtitle": "초기 두께는 시작점입니다. 습윤 수축, 회복과 잔류 압력이 배터리 내부의 장기 상태에 더 가깝습니다.",
+          "primary": "샘플 및 사양 검토 요청",
+          "secondary": "구매 체크리스트 보기",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요?",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "AGM 샘플 평가는 건식 두께와 초기 조립에서 끝나기 쉽지만, 전해액 주입과 반복 사이클 후 유리섬유 매트의 상태는 달라집니다. 동일한 샘플을 단계별로 비교해야 합니다.",
+          "초기 두께는 시작점입니다. 습윤 수축, 회복과 잔류 압력이 배터리 내부의 장기 상태에 더 가깝습니다."
+        ],
+        "sections": [
+          {
+            "eyebrow": "건식 두께",
+            "title": "두께 값에는 측정 압력이 필요합니다",
+            "text": "AGM은 압축성 소재입니다. 한 압력점에서 두께가 같아도 압축 곡선과 회복은 다를 수 있습니다. H&V의 1.25 mm/50 kPa 비교 조건과 10 kPa 두께 표시는 방법 예시이며 보편 설계값이 아닙니다."
+          },
+          {
+            "eyebrow": "주액 후",
+            "title": "습윤은 압력 변화의 첫 경계입니다",
+            "text": "전해액은 섬유 사이 상호작용을 바꾸고 수축을 일으킬 수 있습니다. 산 밀도, 온도, 주입량, 안정 시간을 고정하고 일정 압력 또는 일정 간극 중 어떤 방법인지 밝혀야 합니다."
+          },
+          {
+            "eyebrow": "사이클 후",
+            "title": "잔류 압력이 장기 작동 상태에 더 가깝습니다",
+            "text": "소재의 proxy 사이클 압축 비교는 기계적 유지력을 선별하지만 완성 배터리 시험을 대신하지 않습니다. 수명은 극판, 그리드, 산량, 온도, 충전과 조립 설계에도 좌우됩니다."
+          },
+          {
+            "eyebrow": "재현 가능한 기록",
+            "title": "네 단계를 하나의 시험 체계로 연결합니다",
+            "text": "입고, 조립, 주액, 사이클 조건을 추적 가능하게 기록하고 유지 상태를 배터리 용량, 내부저항과 해체 관찰에 연결합니다."
+          },
+          {
+            "eyebrow": "사양 협의",
+            "title": "Viking은 수치를 비교하기 전에 시험 경계를 맞춥니다",
+            "text": "배터리 용도, 극군 구조, 설계 간극, 목표 두께, 측정 압력과 주액·사이클 방법을 공유해 주세요. 양산 적합성은 고객의 소재 및 완성 배터리 검증이 필요합니다."
+          }
+        ],
+        "parameters": [
+          [
+            "입고",
+            "로트, 평량, 건식 두께와 측정 압력."
+          ],
+          [
+            "조립",
+            "극판 두께, 분리막 층수, 간극과 목표 압축."
+          ],
+          [
+            "주액",
+            "산 밀도, 온도, 주입량, 안정 시간과 측정 방식."
+          ],
+          [
+            "사이클",
+            "건·습 상태, 압축 범위, 횟수, 주파수와 온도."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "공급 형태",
+          "title": "생산 공정에 맞는 롤 또는 시트 선택",
+          "items": [
+            [
+              "AGM 분리막 롤",
+              "연속 생산, 슬리팅 또는 조립 전 사내 절단에 적합합니다.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM 분리막 롤"
+            ],
+            [
+              "품질",
+              "명확한 정보는 샘플 평가와 사양 협의를 더 효율적으로 만듭니다.",
+              "/images/agm-quality-control-1200.webp",
+              "품질"
+            ],
+            [
+              "AGM 분리막 시트",
+              "절단된 규격으로 공급하여 조립 준비를 단순화할 때 적합합니다.",
+              "/images/sheets1-900.webp",
+              "AGM 분리막 시트"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "구매 확인",
+          "title": "샘플 전에 요구사항 확인",
+          "text": "명확한 정보는 샘플 평가와 사양 협의를 더 효율적으로 만듭니다.",
+          "items": [
+            "두께 측정 압력",
+            "극군과 설계 간극",
+            "전해액 조건",
+            "일정 압력 또는 일정 간극",
+            "사이클 및 배터리 결과"
+          ]
+        },
+        "related": {
+          "eyebrow": "관련 자료",
+          "title": "제품 및 공급업체 평가 계속하기",
+          "items": [
+            [
+              "AGM 분리막이란 무엇입니까?",
+              "/ko/blog/what-is-agm-separator/"
+            ],
+            [
+              "AGM 분리막의 핵심 기술 파라미터",
+              "/ko/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGM 분리막 선택 방법",
+              "/ko/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "AGM 유리섬유와 PVC 배터리 분리막 비교",
+              "/ko/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "사양 협의",
+          "title": "용도와 치수 요구사항을 보내 주세요",
+          "text": "현재 보유한 정보를 공유하면 제품 형태, 샘플과 공급 가능성을 함께 검토할 수 있습니다.",
+          "checklist": [
+            "배터리 용도와 형식",
+            "두께, 폭 또는 시트 치수",
+            "롤/시트 및 포장 요구사항"
+          ],
+          "placeholders": {
+            "message": "용도, 목표 사양, 샘플 수량 또는 포장 요구사항을 적어 주세요."
+          }
+        },
+        "footer": {
+          "description": "VRLA 배터리 제조사를 위한 롤 및 시트형 AGM 유리섬유 분리막.",
+          "wechat": "Viking AGM WeChat 공식 계정",
+          "mobile": "모바일에서 Viking AGM 웹사이트 방문"
+        },
+        "references": {
+          "eyebrow": "참고 자료",
+          "title": "공개 시험법과 적용 경계",
+          "text": "인용 조건은 비교 방법을 설명하며 Viking 제품 사양이나 보편 설계값이 아닙니다.",
+          "items": [
+            [
+              "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+              "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+            ],
+            [
+              "Journal of Power Sources — compression and positive active mass performance",
+              "https://doi.org/10.1016/S0378-7753(99)00018-X"
+            ],
+            [
+              "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+              "https://doi.org/10.1016/S0378-7753(01)00925-9"
+            ]
+          ]
+        }
+      },
+      "ja": {
+        "nav": {
+          "company": "会社",
+          "products": "製品",
+          "quality": "品質",
+          "resources": "資料",
+          "applications": "用途",
+          "contact": "お問い合わせ"
+        },
+        "language": "JA",
+        "homePath": "/ja/",
+        "languagePath": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "サンプル依頼",
+        "hero": {
+          "eyebrow": "AGMセパレーター技術ガイド",
+          "title": "AGMセパレーターは注液・サイクル後も圧力を保持できるか",
+          "subtitle": "初期厚さは出発点です。湿潤収縮、回復、残留圧力の方が電池内部の長期状態に近い指標です。",
+          "primary": "サンプル・仕様確認を依頼",
+          "secondary": "購買チェックリストを見る",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGMセパレーターは注液・サイクル後も圧力を保持できるか",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "AGMの評価は乾燥厚さと初期組立で終わりがちですが、注液と繰返しサイクルでガラス繊維マットは変化します。同一試料を段階的に追跡する必要があります。",
+          "初期厚さは出発点です。湿潤収縮、回復、残留圧力の方が電池内部の長期状態に近い指標です。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "乾燥厚さ",
+            "title": "厚さには測定圧力の明記が必要です",
+            "text": "AGMは圧縮性材料です。一点の厚さが近くても圧縮曲線と回復は異なります。H&Vの1.25 mm/50 kPa比較条件と10 kPa厚さは方法の例であり、共通設計値ではありません。"
+          },
+          {
+            "eyebrow": "注液後",
+            "title": "湿潤は圧力変化の最初の境界です",
+            "text": "電解液は繊維間の状態を変え、収縮を生じさせる場合があります。酸密度、温度、注液量、静置時間を固定し、一定圧力か一定間隙かを明示します。"
+          },
+          {
+            "eyebrow": "サイクル後",
+            "title": "残留圧力は長期使用状態により近い指標です",
+            "text": "材料のproxyサイクル比較は機械保持性の選別に使えますが、完成電池試験の代替ではありません。寿命は極板、グリッド、酸量、温度、充電条件、組立にも依存します。"
+          },
+          {
+            "eyebrow": "再現可能な記録",
+            "title": "四段階を同じ試験系で結びます",
+            "text": "受入、組立、注液、サイクルの条件を追跡可能にし、保持状態を容量、内部抵抗、解体観察と対応させます。"
+          },
+          {
+            "eyebrow": "仕様調整",
+            "title": "Vikingは数値比較の前に試験境界を合わせます",
+            "text": "用途、極群構造、設計間隙、目標厚さ、測定圧力、注液・サイクル方法をご提示ください。量産適合性は材料試験と完成電池検証で確認します。"
+          }
+        ],
+        "parameters": [
+          [
+            "受入",
+            "ロット、坪量、乾燥厚さ、測定圧力。"
+          ],
+          [
+            "組立",
+            "極板厚さ、層数、間隙、目標圧縮。"
+          ],
+          [
+            "注液",
+            "酸密度、温度、量、静置時間、測定方式。"
+          ],
+          [
+            "サイクル",
+            "乾湿状態、圧縮範囲、回数、周波数、温度。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "供給形状",
+          "title": "生産工程に合わせてロールまたはシートを選択",
+          "items": [
+            [
+              "AGMセパレーターロール",
+              "連続生産、スリット、組立前の社内裁断に適しています。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGMセパレーターロール"
+            ],
+            [
+              "品質",
+              "情報を明確にすると、サンプル評価と仕様協議が効率化します。",
+              "/images/agm-quality-control-1200.webp",
+              "品質"
+            ],
+            [
+              "AGMセパレーターシート",
+              "裁断済み寸法で供給し、組立準備を簡素化する場合に適しています。",
+              "/images/sheets1-900.webp",
+              "AGMセパレーターシート"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "購買確認",
+          "title": "サンプル前に要求事項を確認",
+          "text": "情報を明確にすると、サンプル評価と仕様協議が効率化します。",
+          "items": [
+            "厚さ測定圧力",
+            "極群と設計間隙",
+            "電解液条件",
+            "一定圧力または一定間隙",
+            "サイクルと電池結果"
+          ]
+        },
+        "related": {
+          "eyebrow": "関連資料",
+          "title": "製品・サプライヤー評価を続ける",
+          "items": [
+            [
+              "AGMセパレーターとは？",
+              "/ja/blog/what-is-agm-separator/"
+            ],
+            [
+              "AGMセパレーターの主要技術特性",
+              "/ja/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGMセパレーターの選び方",
+              "/ja/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "AGMガラス繊維とPVC電池セパレーターの違い",
+              "/ja/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "仕様相談",
+          "title": "用途と寸法要求をお送りください",
+          "text": "現在お持ちの情報から製品形状、サンプル、供給可否を確認します。",
+          "checklist": [
+            "電池用途と形式",
+            "厚さ、幅またはシート寸法",
+            "ロール／シートと梱包要求"
+          ],
+          "placeholders": {
+            "message": "用途、目標仕様、サンプル数量、梱包要求をご記入ください。"
+          }
+        },
+        "footer": {
+          "description": "VRLA電池メーカー向けロール・シート形状のAGMガラス繊維セパレーター。",
+          "wechat": "Viking AGM WeChat公式アカウント",
+          "mobile": "モバイルでViking AGMサイトを表示"
+        },
+        "references": {
+          "eyebrow": "参考資料",
+          "title": "公開試験法と適用範囲",
+          "text": "引用条件は比較方法の説明であり、Viking仕様または共通設計値ではありません。",
+          "items": [
+            [
+              "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+              "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+            ],
+            [
+              "Journal of Power Sources — compression and positive active mass performance",
+              "https://doi.org/10.1016/S0378-7753(99)00018-X"
+            ],
+            [
+              "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+              "https://doi.org/10.1016/S0378-7753(01)00925-9"
+            ]
+          ]
+        }
+      },
+      "es": {
+        "nav": {
+          "company": "Empresa",
+          "products": "Productos",
+          "quality": "Calidad",
+          "resources": "Recursos",
+          "applications": "Aplicaciones",
+          "contact": "Contacto"
+        },
+        "language": "ES",
+        "homePath": "/es/",
+        "languagePath": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Solicitar muestra",
+        "hero": {
+          "eyebrow": "Guía técnica de separadores AGM",
+          "title": "¿Mantiene presión el separador AGM después del llenado y los ciclos?",
+          "subtitle": "El espesor inicial es solo el punto de partida; la contracción húmeda, la recuperación y la fuerza residual describen mejor su estado a largo plazo.",
+          "primary": "Solicitar muestra y revisión de especificaciones",
+          "secondary": "Ver lista de compra",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "¿Mantiene presión el separador AGM después del llenado y los ciclos?",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "La evaluación suele terminar con el espesor en seco y el montaje inicial, pero el llenado de ácido y los ciclos cambian la manta de fibra de vidrio. Conviene seguir la misma muestra en varias etapas.",
+          "El espesor inicial es solo el punto de partida; la contracción húmeda, la recuperación y la fuerza residual describen mejor su estado a largo plazo."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Espesor en seco",
+            "title": "Todo espesor necesita una presión de medición",
+            "text": "AGM es compresible. Dos materiales pueden coincidir en un punto y diferir en su curva y recuperación. Las condiciones 1,25 mm/50 kPa y el espesor a 10 kPa de H&V ilustran métodos comparativos, no valores universales."
+          },
+          {
+            "eyebrow": "Después del llenado",
+            "title": "La humectación es el primer límite del cambio de presión",
+            "text": "El electrolito modifica la interacción de las fibras y puede producir contracción. Deben fijarse densidad, temperatura, cantidad, reposo y si la medición se realiza a presión o separación constante."
+          },
+          {
+            "eyebrow": "Después de los ciclos",
+            "title": "La fuerza residual se acerca más al estado de servicio",
+            "text": "Una comparación proxy de ciclos sirve para filtrar la retención mecánica, pero no sustituye el ensayo de batería. La vida también depende de placas, rejillas, ácido, temperatura, carga y montaje."
+          },
+          {
+            "eyebrow": "Registro reproducible",
+            "title": "Conectar cuatro etapas con el mismo método",
+            "text": "Registrar recepción, montaje, llenado y ciclos con condiciones trazables, y relacionar la retención con capacidad, resistencia interna y desmontaje de la batería."
+          },
+          {
+            "eyebrow": "Coordinación",
+            "title": "Viking alinea primero el método de prueba",
+            "text": "Comparta aplicación, grupo de placas, separación, espesor objetivo, presión de medición y método de llenado o ciclos. La aptitud para serie debe confirmarse con ensayos del cliente."
+          }
+        ],
+        "parameters": [
+          [
+            "Recepción",
+            "Lote, gramaje, espesor en seco y presión."
+          ],
+          [
+            "Montaje",
+            "Placas, capas, separación y compresión objetivo."
+          ],
+          [
+            "Llenado",
+            "Densidad, temperatura, cantidad, reposo y método."
+          ],
+          [
+            "Ciclos",
+            "Estado seco/húmedo, límites, número, frecuencia y temperatura."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Formato de suministro",
+          "title": "Elegir rollo o lámina según el proceso",
+          "items": [
+            [
+              "Rollos de separador AGM",
+              "Adecuados para producción continua, corte longitudinal o corte interno antes del montaje.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rollos de separador AGM"
+            ],
+            [
+              "Calidad",
+              "La información clara mejora la evaluación de muestras y la revisión de especificaciones.",
+              "/images/agm-quality-control-1200.webp",
+              "Calidad"
+            ],
+            [
+              "Láminas de separador AGM",
+              "Adecuadas cuando se requieren dimensiones precortadas para simplificar el montaje.",
+              "/images/sheets1-900.webp",
+              "Láminas de separador AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Revisión de compra",
+          "title": "Confirmar requisitos antes de la muestra",
+          "text": "La información clara mejora la evaluación de muestras y la revisión de especificaciones.",
+          "items": [
+            "Presión de espesor",
+            "Grupo de placas y separación",
+            "Condiciones del electrolito",
+            "Presión o separación constante",
+            "Ciclos y resultados de batería"
+          ]
+        },
+        "related": {
+          "eyebrow": "Recursos relacionados",
+          "title": "Continuar la evaluación de producto y proveedor",
+          "items": [
+            [
+              "¿Qué es un separador AGM?",
+              "/es/blog/what-is-agm-separator/"
+            ],
+            [
+              "Parámetros técnicos clave del separador AGM",
+              "/es/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Cómo elegir un separador AGM",
+              "/es/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Separadores AGM de fibra de vidrio frente a PVC",
+              "/es/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Conversación técnica",
+          "title": "Envíe su aplicación y dimensiones",
+          "text": "Comparta la información disponible para revisar formato, muestras y capacidad de suministro.",
+          "checklist": [
+            "Aplicación y tipo de batería",
+            "Espesor, ancho o tamaño de lámina",
+            "Rollo/lámina y requisitos de embalaje"
+          ],
+          "placeholders": {
+            "message": "Describa aplicación, especificaciones objetivo, cantidad de muestras o embalaje."
+          }
+        },
+        "footer": {
+          "description": "Separadores AGM de fibra de vidrio en rollos y láminas para fabricantes de baterías VRLA.",
+          "wechat": "Cuenta oficial de Viking AGM en WeChat",
+          "mobile": "Visitar Viking AGM desde el móvil"
+        },
+        "references": {
+          "eyebrow": "Referencias",
+          "title": "Métodos publicados y límites",
+          "text": "Las condiciones citadas explican métodos de comparación; no son especificaciones Viking ni valores universales.",
+          "items": [
+            [
+              "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+              "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+            ],
+            [
+              "Journal of Power Sources — compression and positive active mass performance",
+              "https://doi.org/10.1016/S0378-7753(99)00018-X"
+            ],
+            [
+              "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+              "https://doi.org/10.1016/S0378-7753(01)00925-9"
+            ]
+          ]
+        }
+      },
+      "pt": {
+        "nav": {
+          "company": "Empresa",
+          "products": "Produtos",
+          "quality": "Qualidade",
+          "resources": "Recursos",
+          "applications": "Aplicações",
+          "contact": "Contato"
+        },
+        "language": "PT",
+        "homePath": "/pt/",
+        "languagePath": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Solicitar amostra",
+        "hero": {
+          "eyebrow": "Guia técnico de separadores AGM",
+          "title": "O separador AGM mantém pressão após enchimento e ciclagem?",
+          "subtitle": "A espessura inicial é apenas o começo; contração úmida, recuperação e força residual representam melhor a condição de longo prazo.",
+          "primary": "Solicitar amostra e análise de especificações",
+          "secondary": "Ver checklist de compra",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "O separador AGM mantém pressão após enchimento e ciclagem?",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "A avaliação costuma parar na espessura seca e na montagem inicial, mas o enchimento com ácido e os ciclos alteram a manta de fibra de vidro. A mesma amostra deve ser acompanhada por etapas.",
+          "A espessura inicial é apenas o começo; contração úmida, recuperação e força residual representam melhor a condição de longo prazo."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Espessura seca",
+            "title": "Toda espessura precisa da pressão de medição",
+            "text": "AGM é compressível. Materiais próximos em um ponto podem ter curvas e recuperação diferentes. As condições 1,25 mm/50 kPa e a espessura a 10 kPa da H&V ilustram comparação, não valores universais."
+          },
+          {
+            "eyebrow": "Após enchimento",
+            "title": "O umedecimento é a primeira fronteira da mudança de pressão",
+            "text": "O eletrólito altera a interação das fibras e pode causar retração. Fixe densidade, temperatura, volume, repouso e informe se o ensaio usa pressão ou vão constante."
+          },
+          {
+            "eyebrow": "Após ciclagem",
+            "title": "A força residual se aproxima mais da condição de serviço",
+            "text": "Um ensaio proxy de ciclagem compara retenção mecânica, mas não substitui a bateria completa. Vida também depende de placas, grades, ácido, temperatura, carga e montagem."
+          },
+          {
+            "eyebrow": "Registro reproduzível",
+            "title": "Conectar quatro etapas pelo mesmo método",
+            "text": "Registre recebimento, montagem, enchimento e ciclos com condições rastreáveis e relacione a retenção à capacidade, resistência interna e desmontagem."
+          },
+          {
+            "eyebrow": "Coordenação",
+            "title": "A Viking alinha primeiro o limite do ensaio",
+            "text": "Informe aplicação, grupo de placas, vão, espessura alvo, pressão e método de enchimento ou ciclagem. A aprovação para série depende dos testes do cliente."
+          }
+        ],
+        "parameters": [
+          [
+            "Recebimento",
+            "Lote, gramatura, espessura seca e pressão."
+          ],
+          [
+            "Montagem",
+            "Placas, camadas, vão e compressão alvo."
+          ],
+          [
+            "Enchimento",
+            "Densidade, temperatura, volume, repouso e método."
+          ],
+          [
+            "Ciclagem",
+            "Estado seco/úmido, limites, ciclos, frequência e temperatura."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Formato de fornecimento",
+          "title": "Escolher rolo ou folha conforme o processo",
+          "items": [
+            [
+              "Rolos de separador AGM",
+              "Adequados para produção contínua, corte longitudinal ou corte interno antes da montagem.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rolos de separador AGM"
+            ],
+            [
+              "Qualidade",
+              "Informações claras tornam a avaliação de amostras e especificações mais eficiente.",
+              "/images/agm-quality-control-1200.webp",
+              "Qualidade"
+            ],
+            [
+              "Folhas de separador AGM",
+              "Adequadas quando dimensões pré-cortadas simplificam a preparação da montagem.",
+              "/images/sheets1-900.webp",
+              "Folhas de separador AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Análise de compra",
+          "title": "Confirmar requisitos antes da amostra",
+          "text": "Informações claras tornam a avaliação de amostras e especificações mais eficiente.",
+          "items": [
+            "Pressão de espessura",
+            "Grupo de placas e vão",
+            "Condições do eletrólito",
+            "Pressão ou vão constante",
+            "Ciclos e resultados da bateria"
+          ]
+        },
+        "related": {
+          "eyebrow": "Recursos relacionados",
+          "title": "Continuar a avaliação de produto e fornecedor",
+          "items": [
+            [
+              "O que é um separador AGM?",
+              "/pt/blog/what-is-agm-separator/"
+            ],
+            [
+              "Principais parâmetros técnicos do separador AGM",
+              "/pt/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Como escolher um separador AGM",
+              "/pt/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Separadores AGM de fibra de vidro versus PVC",
+              "/pt/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Conversa técnica",
+          "title": "Envie sua aplicação e dimensões",
+          "text": "Compartilhe o que já possui para analisarmos formato, amostras e capacidade de fornecimento.",
+          "checklist": [
+            "Aplicação e tipo de bateria",
+            "Espessura, largura ou tamanho da folha",
+            "Rolo/folha e requisitos de embalagem"
+          ],
+          "placeholders": {
+            "message": "Descreva aplicação, especificações-alvo, quantidade de amostras ou embalagem."
+          }
+        },
+        "footer": {
+          "description": "Separadores AGM de fibra de vidro em rolos e folhas para fabricantes de baterias VRLA.",
+          "wechat": "Conta oficial Viking AGM no WeChat",
+          "mobile": "Visitar o site Viking AGM pelo celular"
+        },
+        "references": {
+          "eyebrow": "Referências",
+          "title": "Métodos publicados e limites",
+          "text": "As condições citadas explicam métodos de comparação; não são especificações Viking nem valores universais.",
+          "items": [
+            [
+              "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+              "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+            ],
+            [
+              "Journal of Power Sources — compression and positive active mass performance",
+              "https://doi.org/10.1016/S0378-7753(99)00018-X"
+            ],
+            [
+              "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+              "https://doi.org/10.1016/S0378-7753(01)00925-9"
+            ]
+          ]
+        }
+      },
+      "ru": {
+        "nav": {
+          "company": "Компания",
+          "products": "Продукция",
+          "quality": "Качество",
+          "resources": "Материалы",
+          "applications": "Применение",
+          "contact": "Контакты"
+        },
+        "language": "RU",
+        "homePath": "/ru/",
+        "languagePath": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Запросить образец",
+        "hero": {
+          "eyebrow": "Техническое руководство по AGM",
+          "title": "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?",
+          "subtitle": "Начальная толщина — лишь отправная точка; влажная усадка, восстановление и остаточное усилие лучше отражают длительное состояние в аккумуляторе.",
+          "primary": "Запросить образец и проверку характеристик",
+          "secondary": "Смотреть чек-лист закупки",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "Оценка AGM часто заканчивается сухой толщиной и первичной сборкой, но заливка электролита и циклы меняют стекловолоконный мат. Один образец следует отслеживать на нескольких этапах.",
+          "Начальная толщина — лишь отправная точка; влажная усадка, восстановление и остаточное усилие лучше отражают длительное состояние в аккумуляторе."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Сухая толщина",
+            "title": "Толщина должна указываться вместе с давлением измерения",
+            "text": "AGM сжимаем. Материалы могут совпадать в одной точке, но различаться кривой и восстановлением. Условия H&V 1,25 мм/50 кПа и толщина при 10 кПа показывают метод сравнения, а не универсальные значения."
+          },
+          {
+            "eyebrow": "После заливки",
+            "title": "Смачивание — первая граница изменения усилия",
+            "text": "Электролит меняет взаимодействие волокон и может вызывать усадку. Нужно фиксировать плотность, температуру, объём, выдержку и указывать постоянное давление или постоянный зазор."
+          },
+          {
+            "eyebrow": "После циклов",
+            "title": "Остаточное усилие ближе к рабочему состоянию",
+            "text": "Proxy-циклирование материала помогает сравнить механическое удержание, но не заменяет испытание батареи. Ресурс зависит также от пластин, решёток, кислоты, температуры, заряда и сборки."
+          },
+          {
+            "eyebrow": "Воспроизводимая запись",
+            "title": "Связать четыре этапа единым методом",
+            "text": "Условия входного контроля, сборки, заливки и циклов должны быть прослеживаемыми, а удержание — сопоставлено с ёмкостью, сопротивлением и разборкой батареи."
+          },
+          {
+            "eyebrow": "Согласование",
+            "title": "Viking сначала согласует границы испытания",
+            "text": "Сообщите применение, конструкцию блока, зазор, целевую толщину, давление и метод заливки или циклов. Серийная пригодность подтверждается испытаниями клиента."
+          }
+        ],
+        "parameters": [
+          [
+            "Входной контроль",
+            "Партия, плотность, сухая толщина и давление."
+          ],
+          [
+            "Сборка",
+            "Пластины, слои, зазор и целевое сжатие."
+          ],
+          [
+            "Заливка",
+            "Плотность, температура, объём, выдержка и метод."
+          ],
+          [
+            "Циклы",
+            "Сухое/влажное состояние, пределы, число, частота и температура."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Форма поставки",
+          "title": "Выберите рулон или лист по процессу производства",
+          "items": [
+            [
+              "AGM-сепаратор в рулонах",
+              "Для непрерывного производства, продольной резки или внутреннего раскроя перед сборкой.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM-сепаратор в рулонах"
+            ],
+            [
+              "Качество",
+              "Чёткая информация повышает эффективность оценки образца и согласования спецификации.",
+              "/images/agm-quality-control-1200.webp",
+              "Качество"
+            ],
+            [
+              "AGM-сепаратор в листах",
+              "Для поставки готовых размеров и упрощения подготовки к сборке.",
+              "/images/sheets1-900.webp",
+              "AGM-сепаратор в листах"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Проверка закупки",
+          "title": "Подтвердите требования до заказа образца",
+          "text": "Чёткая информация повышает эффективность оценки образца и согласования спецификации.",
+          "items": [
+            "Давление измерения",
+            "Блок пластин и зазор",
+            "Условия электролита",
+            "Постоянное давление или зазор",
+            "Циклы и результаты батареи"
+          ]
+        },
+        "related": {
+          "eyebrow": "Связанные материалы",
+          "title": "Продолжить оценку продукции и поставщика",
+          "items": [
+            [
+              "Что такое AGM-сепаратор?",
+              "/ru/blog/what-is-agm-separator/"
+            ],
+            [
+              "Ключевые технические параметры AGM-сепаратора",
+              "/ru/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Как выбрать AGM-сепаратор",
+              "/ru/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Стекловолоконный AGM и ПВХ-сепаратор",
+              "/ru/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Обсуждение спецификации",
+          "title": "Отправьте данные о применении и размерах",
+          "text": "Передайте имеющуюся информацию для проверки формы продукции, образцов и возможностей поставки.",
+          "checklist": [
+            "Применение и тип батареи",
+            "Толщина, ширина или размер листа",
+            "Рулон/лист и требования к упаковке"
+          ],
+          "placeholders": {
+            "message": "Опишите применение, целевые параметры, количество образцов или упаковку."
+          }
+        },
+        "footer": {
+          "description": "Стекловолоконные AGM-сепараторы в рулонах и листах для производителей VRLA-батарей.",
+          "wechat": "Официальный аккаунт Viking AGM в WeChat",
+          "mobile": "Открыть сайт Viking AGM на телефоне"
+        },
+        "references": {
+          "eyebrow": "Источники",
+          "title": "Опубликованные методы и границы",
+          "text": "Условия приведены для объяснения сравнения и не являются спецификацией Viking или универсальными значениями.",
+          "items": [
+            [
+              "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+              "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+            ],
+            [
+              "Journal of Power Sources — compression and positive active mass performance",
+              "https://doi.org/10.1016/S0378-7753(99)00018-X"
+            ],
+            [
+              "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
+              "https://doi.org/10.1016/S0378-7753(01)00925-9"
+            ]
+          ]
+        }
+      }
+    },
     "agmGlassFiberVsPvcSeparator": {
       "en": {
         "nav": {
@@ -39263,6 +41137,192 @@
         ],
         "datePublished": "2026-08-11",
         "dateModified": "2026-08-11"
+      }
+    },
+    "agmSeparatorPressureRetention": {
+      "en": {
+        "path": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "alternatePath": "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "AGM Separator Pressure Retention After Filling and Cycling | Viking AGM",
+        "description": "Learn how test pressure, wet shrinkage, compression recovery and residual force affect AGM separator evaluation after acid filling and cycling.",
+        "keywords": [
+          "AGM separator pressure retention",
+          "AGM separator compression recovery",
+          "AGM wet thickness",
+          "VRLA separator cycling test",
+          "AGM separator test pressure"
+        ],
+        "pageName": "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+        "articleDescription": "A practical guide to dry thickness, wet compression, residual force and reproducible four-stage testing for AGM separators in VRLA batteries.",
+        "breadcrumbs": [
+          "Home",
+          "Resources",
+          "AGM Separator Pressure Retention"
+        ]
+      },
+      "zh": {
+        "path": "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "alternatePath": "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "AGM 隔板填酸与循环后的压力保持怎么评估？| 湖北维京AGM",
+        "description": "从测试压力、湿态收缩、压缩回弹和循环后残余压力，了解 AGM 隔板四阶段打样记录与整电池验证边界。",
+        "keywords": [
+          "AGM 隔板压力保持",
+          "AGM 隔板压缩回弹",
+          "AGM 隔板湿态厚度",
+          "VRLA 隔板循环测试",
+          "AGM 隔板测试压力"
+        ],
+        "pageName": "隔板装进去没问题，循环以后还能保持压力吗？",
+        "articleDescription": "面向 VRLA 电池打样，从干态厚度、填酸、循环和可复现记录说明 AGM 隔板压力保持的评估方法与适用边界。",
+        "breadcrumbs": [
+          "首页",
+          "资料",
+          "AGM 隔板压力保持"
+        ]
+      },
+      "vi": {
+        "path": "/vi/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM Việt Nam",
+        "title": "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không? | Viking AGM",
+        "description": "Độ dày ban đầu chỉ là điểm xuất phát; co ngót khi ướt, khả năng hồi phục và lực còn lại mới gần với trạng thái làm việc lâu dài trong ắc quy.",
+        "keywords": [
+          "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không?",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không?",
+        "articleDescription": "Độ dày ban đầu chỉ là điểm xuất phát; co ngót khi ướt, khả năng hồi phục và lực còn lại mới gần với trạng thái làm việc lâu dài trong ắc quy.",
+        "breadcrumbs": [
+          "Công ty",
+          "Tài liệu",
+          "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không?"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "ko": {
+        "path": "/ko/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM Korea",
+        "title": "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요? | Viking AGM",
+        "description": "초기 두께는 시작점입니다. 습윤 수축, 회복과 잔류 압력이 배터리 내부의 장기 상태에 더 가깝습니다.",
+        "keywords": [
+          "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요?",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요?",
+        "articleDescription": "초기 두께는 시작점입니다. 습윤 수축, 회복과 잔류 압력이 배터리 내부의 장기 상태에 더 가깝습니다.",
+        "breadcrumbs": [
+          "회사",
+          "자료",
+          "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요?"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "ja": {
+        "path": "/ja/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM Japan",
+        "title": "AGMセパレーターは注液・サイクル後も圧力を保持できるか | Viking AGM",
+        "description": "初期厚さは出発点です。湿潤収縮、回復、残留圧力の方が電池内部の長期状態に近い指標です。",
+        "keywords": [
+          "AGMセパレーターは注液・サイクル後も圧力を保持できるか",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "AGMセパレーターは注液・サイクル後も圧力を保持できるか",
+        "articleDescription": "初期厚さは出発点です。湿潤収縮、回復、残留圧力の方が電池内部の長期状態に近い指標です。",
+        "breadcrumbs": [
+          "会社",
+          "資料",
+          "AGMセパレーターは注液・サイクル後も圧力を保持できるか"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "es": {
+        "path": "/es/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "¿Mantiene presión el separador AGM después del llenado y los ciclos? | Viking AGM",
+        "description": "El espesor inicial es solo el punto de partida; la contracción húmeda, la recuperación y la fuerza residual describen mejor su estado a largo plazo.",
+        "keywords": [
+          "¿Mantiene presión el separador AGM después del llenado y los ciclos?",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "¿Mantiene presión el separador AGM después del llenado y los ciclos?",
+        "articleDescription": "El espesor inicial es solo el punto de partida; la contracción húmeda, la recuperación y la fuerza residual describen mejor su estado a largo plazo.",
+        "breadcrumbs": [
+          "Empresa",
+          "Recursos",
+          "¿Mantiene presión el separador AGM después del llenado y los ciclos?"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "pt": {
+        "path": "/pt/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM Brasil",
+        "title": "O separador AGM mantém pressão após enchimento e ciclagem? | Viking AGM",
+        "description": "A espessura inicial é apenas o começo; contração úmida, recuperação e força residual representam melhor a condição de longo prazo.",
+        "keywords": [
+          "O separador AGM mantém pressão após enchimento e ciclagem?",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "O separador AGM mantém pressão após enchimento e ciclagem?",
+        "articleDescription": "A espessura inicial é apenas o começo; contração úmida, recuperação e força residual representam melhor a condição de longo prazo.",
+        "breadcrumbs": [
+          "Empresa",
+          "Recursos",
+          "O separador AGM mantém pressão após enchimento e ciclagem?"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "ru": {
+        "path": "/ru/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "Сохраняет ли AGM-сепаратор давление после заливки и циклирования? | Viking AGM",
+        "description": "Начальная толщина — лишь отправная точка; влажная усадка, восстановление и остаточное усилие лучше отражают длительное состояние в аккумуляторе.",
+        "keywords": [
+          "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?",
+        "articleDescription": "Начальная толщина — лишь отправная точка; влажная усадка, восстановление и остаточное усилие лучше отражают длительное состояние в аккумуляторе.",
+        "breadcrumbs": [
+          "Компания",
+          "Материалы",
+          "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
       }
     },
     "agmGlassFiberVsPvcSeparator": {
