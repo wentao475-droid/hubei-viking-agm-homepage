@@ -216,6 +216,14 @@ const pages = [
     changefreq: "monthly",
     lastmod: "2026-08-07",
     secondaryLastmod: "2026-08-07"
+  },
+  {
+    en: "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+    zh: "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-08-11",
+    secondaryLastmod: "2026-08-11"
   }
 ];
 

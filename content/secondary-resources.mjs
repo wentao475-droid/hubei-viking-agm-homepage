@@ -9,7 +9,8 @@ export const articleKinds = [
   "agmSeparatorPerformanceConsistency",
   "agmSeparatorExportSupplyReadiness",
   "upsVrlaTechnologySelection",
-  "dataCenterBackupPowerAgmSeparator"
+  "dataCenterBackupPowerAgmSeparator",
+  "earlyChinaLeadAcidBatteryManufacturing"
 ];
 
 export const articleDefinitions = {
@@ -21,7 +22,8 @@ export const articleDefinitions = {
   agmSeparatorPerformanceConsistency: ["agm-separator-performance-consistency", "manufacturingQuality", "2026-07-10"],
   agmSeparatorExportSupplyReadiness: ["agm-separator-export-supply-readiness", "industryApplications", "2026-07-11"],
   upsVrlaTechnologySelection: ["why-ups-projects-still-use-vrla-batteries", "industryApplications", "2026-07-23"],
-  dataCenterBackupPowerAgmSeparator: ["agm-separator-for-data-center-backup-power", "industryApplications", "2026-08-07", "2026-08-07"]
+  dataCenterBackupPowerAgmSeparator: ["agm-separator-for-data-center-backup-power", "industryApplications", "2026-08-07", "2026-08-07"],
+  earlyChinaLeadAcidBatteryManufacturing: ["how-chinas-earliest-lead-acid-batteries-were-made", "manufacturingQuality", "2026-08-11", "2026-08-11"]
 };
 
 const images = {
@@ -33,7 +35,8 @@ const images = {
   agmSeparatorPerformanceConsistency: ["/images/agm-quality-control-1200.webp", 1200, 900],
   agmSeparatorExportSupplyReadiness: ["/images/evidence/shipping-pallet-01.webp", 1200, 900],
   upsVrlaTechnologySelection: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
-  dataCenterBackupPowerAgmSeparator: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900]
+  dataCenterBackupPowerAgmSeparator: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
+  earlyChinaLeadAcidBatteryManufacturing: ["/images/agm-hero-production-1600.webp", 1600, 1000]
 };
 
 export const secondaryResourceData = {
@@ -307,6 +310,126 @@ Object.assign(secondaryResourceData, {
   })
 });
 
+const earlyLeadAcidManufacturingTopics = {
+  vi: {
+    title: "Những ắc quy chì-axit đầu tiên tại Trung Quốc được sản xuất như thế nào?",
+    summary: "Từ lưới cực đúc thủ công và tấm ngăn gỗ đến AGM hiện đại: cách vật liệu, thiết bị và kiểm soát lô đã thay đổi hơn một thế kỷ.",
+    intro: "Các mốc 1912, 1921 và 1939 xuất hiện trong những nguồn tư liệu khác nhau vì chúng mô tả các khái niệm khác nhau: sản xuất do người Trung Quốc vận hành, điểm khởi đầu của ngành và nhà máy chuyên môn hóa. Vì vậy cần xác định rõ tiêu chí trước khi nói đến ‘đầu tiên’.",
+    sections: [
+      ["Ba mốc lịch sử", "1912, 1921 và 1939 không nhất thiết mâu thuẫn", "Địa chí Thượng Hải ghi nhận hoạt động sản xuất ắc quy ô tô do doanh nghiệp Trung Quốc tổ chức từ năm 1912; tài liệu ngành dùng năm 1921 làm điểm khởi đầu; còn quy hoạch chính thức của Thẩm Dương gọi nhà máy thành lập năm 1939 là nhà máy ắc quy chì-axit đầu tiên. Mỗi nguồn đang dùng một phạm vi khác nhau."],
+      ["Sản xuất ban đầu", "Lưới cực dày và nhiều công đoạn phụ thuộc vào tay nghề", "Lưới cực thường được đúc thủ công; trát cao, xử lý bản cực, hóa thành và lắp bộ cực chưa có thiết bị liên tục như ngày nay. Thùng có thể dùng gỗ lót, cao su cứng hoặc thủy tinh, còn tấm ngăn gồm gỗ, cao su cứng, celluloid và thủy tinh."],
+      ["Kiểm soát quá trình", "Trình tự quen thuộc nhưng khả năng đo lường còn hạn chế", "Đúc lưới, trát cao, đóng rắn, hóa thành, ghép bản cực, châm điện phân và thử nghiệm đã tạo thành chuỗi sản xuất cơ bản. Tuy nhiên độ đồng đều, độ khô và mức hóa thành còn phụ thuộc nhiều vào kinh nghiệm của người vận hành."],
+      ["Công nghiệp hóa", "Sản xuất chuyên môn hóa chuyển mục tiêu sang khả năng lặp lại", "Khi thiết bị và phương pháp thử được chuẩn hóa hơn, nhà máy không chỉ cần làm ra một bình dùng được mà phải duy trì kích thước, lắp ráp, hiệu suất và lịch giao giữa nhiều lô."],
+      ["Tiến hóa tấm ngăn", "Từ gỗ đến vật liệu vi xốp và sợi thủy tinh AGM", "Sau tấm ngăn gỗ, ngành sử dụng cao su vi xốp, PVC thiêu kết, PE và PP để kiểm soát tốt hơn độ bền axit, cơ tính và lỗ rỗng. Từ cuối thập niên 1960, giấy sợi thủy tinh siêu mịn trở thành nền tảng của hệ VRLA-AGM."],
+      ["Sản xuất hiện đại", "Tốc độ dây chuyền càng cao, sai khác vật liệu càng dễ lộ rõ", "Trong sản xuất hiện đại, độ dày, định lượng, hút chất lỏng, nén, khổ cuộn và kích thước tấm phải được kiểm soát theo lô. Hình ảnh trên trang là tư liệu sản xuất AGM hiện đại của Viking, không phải ảnh lịch sử."]
+    ],
+    parameters: [["1912", "Sản xuất ắc quy ô tô do doanh nghiệp Trung Quốc tại Thượng Hải theo địa chí."], ["1921", "Mốc khởi đầu ngành được một tài liệu ngành sử dụng."], ["1939", "Mốc nhà máy chuyên môn hóa theo tài liệu chính thức của Thẩm Dương."], ["1967–1971", "Phát triển pin VRLA dùng giấy sợi thủy tinh siêu mịn và đưa sản phẩm ra thị trường."], ["Hiện nay", "Sản xuất cơ giới hóa, kiểm tra và quản lý nhất quán theo lô."]],
+    checklist: ["Ứng dụng ắc quy VRLA", "Độ dày và trạng thái nén mục tiêu", "Khổ cuộn hoặc kích thước tấm", "Phương pháp thử và dung sai", "Giai đoạn mẫu hoặc sản xuất hàng loạt"]
+  },
+  ko: {
+    title: "중국의 초기 납축전지는 어떻게 만들어졌을까요?",
+    summary: "수작업 주조 그리드와 목재 분리막에서 현대 AGM까지, 한 세기 넘는 소재·설비·로트 관리의 변화를 살펴봅니다.",
+    intro: "1912년, 1921년, 1939년이라는 연도는 서로 다른 ‘최초’의 정의에서 나옵니다. 중국계 생산의 시작, 산업의 출발점, 전문 공장 생산을 구분해야 초기 역사를 정확히 이해할 수 있습니다.",
+    sections: [
+      ["세 가지 연도", "1912·1921·1939는 반드시 모순되는 기록이 아닙니다", "상하이 지방지는 1912년 중국계 자동차용 축전지 생산을 기록하고, 산업 자료는 1921년을 산업의 시작으로 보며, 선양의 공식 계획은 1939년 설립 공장을 최초의 납축전지 공장으로 설명합니다. 각 자료의 범위가 다릅니다."],
+      ["초기 제조", "두꺼운 수작업 그리드와 숙련자 중심의 공정", "그리드는 손으로 주조되는 경우가 많았고 도포, 극판 처리, 화성, 극군 조립은 오늘날의 연속 설비와 거리가 있었습니다. 용기는 라이닝 목재, 경질 고무, 유리를 사용했고 분리막은 목재, 경질 고무, 셀룰로이드, 유리 등이었습니다."],
+      ["공정 관리", "기본 순서는 익숙했지만 측정과 제어는 제한적이었습니다", "그리드, 활물질, 숙성, 화성, 극판 조립, 전해액 주입, 시험이라는 기본 흐름은 존재했습니다. 다만 균일도, 건조와 화성 완성도는 작업자의 경험에 크게 의존했습니다."],
+      ["산업화", "전문 공장 생산은 반복 가능성을 목표로 바꾸었습니다", "설비와 시험법이 표준화되면서 한 개의 사용 가능한 전지를 만드는 것만으로는 부족해졌습니다. 여러 로트에서 치수, 조립성, 성능과 납기를 반복해야 했습니다."],
+      ["분리막 변화", "목재에서 미세다공 소재와 AGM 유리섬유로", "목재 이후 미세다공 고무, 소결 PVC, PE와 PP가 내산성, 강도와 기공 구조 제어를 개선했습니다. 1960년대 후반부터 초미세 유리섬유 종이가 VRLA-AGM 구조의 기반이 되었습니다."],
+      ["현대 생산", "라인이 빨라질수록 소재 편차는 더 잘 드러납니다", "현대 생산에서는 두께, 평량, 흡액, 압축, 롤 폭과 시트 치수를 로트별로 관리해야 합니다. 페이지의 사진은 Viking의 현대 AGM 생산 자료이며 역사 사진이 아닙니다."]
+    ],
+    parameters: [["1912", "지방지에 기록된 상하이 중국계 자동차용 축전지 생산."], ["1921", "산업 자료가 제시하는 중국 납축전지 산업의 출발점."], ["1939", "선양 공식 자료의 전문 납축전지 공장 이정표."], ["1967–1971", "초미세 유리섬유 기반 VRLA 개발과 시장 출시."], ["현재", "기계화 생산, 검사 및 로트 일관성 관리."]],
+    checklist: ["VRLA 배터리 용도", "목표 두께와 압축 상태", "롤 폭 또는 시트 치수", "시험법과 공차", "샘플 또는 양산 단계"]
+  },
+  ja: {
+    title: "中国初期の鉛蓄電池はどのように製造されたのか",
+    summary: "手鋳造グリッドと木製セパレーターから現代のAGMまで、100年以上にわたる材料・設備・ロット管理の変化をたどります。",
+    intro: "1912年、1921年、1939年という記録は、華資による生産、産業の起点、専門工場という異なる基準を示しています。『最初』を論じる前に定義を分ける必要があります。",
+    sections: [
+      ["三つの年代", "1912年・1921年・1939年は必ずしも矛盾しません", "上海の地方誌は1912年の華資による自動車用蓄電池生産を記録し、業界資料は1921年を産業の起点とし、瀋陽の公式計画は1939年設立の工場を最初の鉛蓄電池工場としています。それぞれ対象範囲が異なります。"],
+      ["初期製造", "厚い手鋳造グリッドと技能依存の工程", "グリッドは手作業で鋳造され、ペースト充填、極板処理、化成、群組立は現在の連続設備とは大きく異なりました。槽には内張り木材、硬質ゴム、ガラス、セパレーターには木材、硬質ゴム、セルロイド、ガラスなどが使われました。"],
+      ["工程管理", "基本工程は似ていても測定と制御は限定的でした", "グリッド、活物質、熟成、化成、極板群、注液、試験という流れはありましたが、均一性、乾燥、化成状態は作業者の経験に大きく左右されました。"],
+      ["工業化", "専門工場は目標を再現性へ変えました", "設備と試験が標準化されると、一個の使用可能な電池を作るだけでは不十分になり、複数ロットで寸法、組立性、性能、納期を再現する必要が生まれました。"],
+      ["セパレーターの進化", "木材から微多孔材料、AGMガラス繊維へ", "木材の後、微多孔ゴム、焼結PVC、PE、PPが耐酸性、強度、空孔制御を改善しました。1960年代後半には極細ガラス繊維紙がVRLA-AGMの基盤となりました。"],
+      ["現代製造", "高速ラインほど材料差が顕在化します", "現代では厚さ、坪量、吸液、圧縮、ロール幅、シート寸法をロット単位で管理します。掲載写真はVikingの現代AGM生産資料であり、歴史写真ではありません。"]
+    ],
+    parameters: [["1912", "地方誌が記録する上海での華資自動車用蓄電池生産。"], ["1921", "業界資料が採用する中国鉛蓄電池産業の起点。"], ["1939", "瀋陽公式資料における専門工場の節目。"], ["1967–1971", "極細ガラス繊維VRLAの開発と市場投入。"], ["現在", "機械化生産、検査、ロット一貫性管理。"]],
+    checklist: ["VRLA電池用途", "目標厚さと圧縮状態", "ロール幅またはシート寸法", "試験法と公差", "サンプルまたは量産段階"]
+  },
+  es: {
+    title: "Cómo se fabricaron las primeras baterías de plomo-ácido en China",
+    summary: "De rejillas coladas a mano y separadores de madera al AGM moderno: más de un siglo de cambios en materiales, equipos y control de lotes.",
+    intro: "Los años 1912, 1921 y 1939 responden a definiciones distintas: producción de capital chino, inicio de una industria y fabricación especializada en fábrica. Hay que definir ‘primera’ antes de comparar las fechas.",
+    sections: [
+      ["Tres fechas", "1912, 1921 y 1939 no son necesariamente contradictorios", "La gaceta de Shanghái registra producción china de baterías automotrices en 1912; una fuente sectorial usa 1921 como inicio de la industria; y un plan oficial de Shenyang describe la fábrica fundada en 1939 como la primera fábrica de baterías de plomo-ácido. El alcance de cada fuente es diferente."],
+      ["Fabricación inicial", "Rejillas gruesas coladas a mano y procesos dependientes del oficio", "Las rejillas solían colarse manualmente. El empastado, tratamiento, formación y montaje estaban lejos de las líneas continuas actuales. Se usaban recipientes de madera revestida, caucho duro o vidrio, y separadores de madera, caucho duro, celuloide o vidrio."],
+      ["Control del proceso", "La secuencia era reconocible, pero la medición era limitada", "Rejilla, material activo, curado, formación, agrupado, llenado y prueba ya formaban una secuencia básica. La uniformidad, el secado y la formación dependían en gran medida de la experiencia del operario."],
+      ["Industrialización", "La fábrica especializada cambió el objetivo hacia la repetibilidad", "Con equipos y ensayos más normalizados ya no bastaba producir una batería utilizable. Dimensiones, montaje, desempeño y entrega debían repetirse entre lotes."],
+      ["Evolución del separador", "De la madera a materiales microporosos y fibra de vidrio AGM", "Después de la madera se adoptaron caucho microporoso, PVC sinterizado, PE y PP para controlar mejor resistencia al ácido, fuerza y poros. Desde finales de los años sesenta, el papel de microfibra de vidrio sustentó la arquitectura VRLA-AGM."],
+      ["Producción moderna", "Una línea más rápida hace más visible la variación", "Espesor, gramaje, absorción, compresión, ancho de rollo y dimensiones de lámina se controlan por lote. Las imágenes de la página muestran producción AGM moderna de Viking; no son fotografías históricas."]
+    ],
+    parameters: [["1912", "Producción china de baterías automotrices registrada en una gaceta local."], ["1921", "Inicio sectorial empleado por una fuente de la industria."], ["1939", "Hito de fábrica especializada en una fuente oficial de Shenyang."], ["1967–1971", "Desarrollo y lanzamiento de VRLA con microfibra de vidrio."], ["Actualidad", "Producción mecanizada, inspección y consistencia por lotes."]],
+    checklist: ["Aplicación de la batería VRLA", "Espesor y compresión objetivo", "Ancho de rollo o tamaño de lámina", "Método de ensayo y tolerancias", "Etapa de muestra o producción"]
+  },
+  pt: {
+    title: "Como foram fabricadas as primeiras baterias chumbo-ácido da China",
+    summary: "De grades fundidas à mão e separadores de madeira ao AGM moderno: mais de um século de mudanças em materiais, equipamentos e controle de lotes.",
+    intro: "Os anos 1912, 1921 e 1939 representam critérios diferentes: produção de capital chinês, início da indústria e fabricação especializada. É preciso definir ‘primeira’ antes de comparar as datas.",
+    sections: [
+      ["Três datas", "1912, 1921 e 1939 não são necessariamente registros conflitantes", "A crônica de Xangai registra produção chinesa de baterias automotivas em 1912; uma fonte setorial usa 1921 como início da indústria; e um plano oficial de Shenyang chama a fábrica fundada em 1939 de primeira fábrica de baterias chumbo-ácido. Cada fonte usa um escopo diferente."],
+      ["Fabricação inicial", "Grades grossas fundidas à mão e processos dependentes da experiência", "As grades eram frequentemente fundidas manualmente. Empastamento, tratamento, formação e montagem ainda estavam longe das linhas contínuas atuais. Recipientes podiam usar madeira revestida, borracha dura ou vidro; separadores incluíam madeira, borracha dura, celuloide e vidro."],
+      ["Controle de processo", "A sequência era familiar, mas a medição era limitada", "Grade, material ativo, cura, formação, agrupamento, enchimento e teste formavam a lógica básica. Uniformidade, secagem e formação dependiam muito da experiência do operador."],
+      ["Industrialização", "A fábrica especializada mudou o objetivo para repetibilidade", "Com equipamentos e ensaios mais padronizados, produzir uma bateria utilizável deixou de ser suficiente. Dimensões, montagem, desempenho e entrega precisavam se repetir entre lotes."],
+      ["Evolução do separador", "Da madeira a materiais microporosos e fibra de vidro AGM", "Depois da madeira vieram borracha microporosa, PVC sinterizado, PE e PP, com melhor controle de resistência ao ácido, força e poros. No fim dos anos 1960, o papel de microfibra de vidro passou a sustentar a arquitetura VRLA-AGM."],
+      ["Produção moderna", "Linhas mais rápidas tornam a variação mais visível", "Espessura, gramatura, absorção, compressão, largura do rolo e dimensões das folhas são controladas por lote. As imagens mostram a produção AGM moderna da Viking e não são fotografias históricas."]
+    ],
+    parameters: [["1912", "Produção chinesa de baterias automotivas registrada em crônica local."], ["1921", "Marco inicial usado por uma fonte setorial."], ["1939", "Marco de fábrica especializada em fonte oficial de Shenyang."], ["1967–1971", "Desenvolvimento e lançamento do VRLA com microfibra de vidro."], ["Hoje", "Produção mecanizada, inspeção e consistência entre lotes."]],
+    checklist: ["Aplicação da bateria VRLA", "Espessura e compressão alvo", "Largura do rolo ou tamanho da folha", "Método de teste e tolerâncias", "Etapa de amostra ou produção"]
+  },
+  ru: {
+    title: "Как производились первые свинцово-кислотные аккумуляторы в Китае",
+    summary: "От ручного литья решёток и деревянных сепараторов до современного AGM: более века изменений материалов, оборудования и контроля партий.",
+    intro: "Даты 1912, 1921 и 1939 относятся к разным определениям: китайское производство, начало отрасли и специализированный завод. Перед сравнением дат необходимо определить, что считается ‘первым’.",
+    sections: [
+      ["Три даты", "1912, 1921 и 1939 годы не обязательно противоречат друг другу", "Шанхайская хроника фиксирует китайское производство автомобильных аккумуляторов в 1912 году; отраслевой источник считает 1921 год началом отрасли; официальный план Шэньяна называет предприятие 1939 года первым заводом свинцово-кислотных аккумуляторов. Источники используют разные рамки."],
+      ["Раннее производство", "Толстые литые вручную решётки и зависимость от мастерства", "Решётки часто отливали вручную, а намазка, обработка пластин, формирование и сборка ещё не выполнялись на непрерывных линиях. Корпуса делали из футерованного дерева, твёрдой резины или стекла, сепараторы — из дерева, твёрдой резины, целлулоида и стекла."],
+      ["Управление процессом", "Последовательность была знакомой, но измерения оставались ограниченными", "Решётка, активная масса, сушка, формирование, сборка блока, заливка электролита и испытание уже составляли базовый процесс. Однородность и полнота операций во многом зависели от опыта рабочих."],
+      ["Индустриализация", "Специализированный завод перенёс цель на повторяемость", "По мере стандартизации оборудования и испытаний стало недостаточно изготовить один работоспособный аккумулятор. Размеры, сборка, характеристики и поставка должны были повторяться от партии к партии."],
+      ["Эволюция сепаратора", "От дерева к микропористым материалам и стекловолокну AGM", "После дерева применялись микропористая резина, спечённый ПВХ, ПЭ и ПП с более управляемой кислотостойкостью, прочностью и порами. В конце 1960-х микростекловолоконная бумага стала основой VRLA-AGM."],
+      ["Современное производство", "Высокая скорость линии быстрее выявляет разброс материала", "Толщина, поверхностная плотность, впитывание, сжатие, ширина рулона и размеры листа контролируются по партиям. Изображения показывают современное производство AGM компании Viking и не являются историческими фотографиями."]
+    ],
+    parameters: [["1912", "Китайское производство автомобильных аккумуляторов по местной хронике."], ["1921", "Отраслевая дата начала производства по отраслевому источнику."], ["1939", "Веха специализированного завода по официальному документу Шэньяна."], ["1967–1971", "Разработка и вывод на рынок VRLA с микростекловолокном."], ["Сегодня", "Механизированное производство, контроль и стабильность партий."]],
+    checklist: ["Применение батареи VRLA", "Целевая толщина и сжатие", "Ширина рулона или размер листа", "Метод испытаний и допуски", "Этап образца или серийного производства"]
+  }
+};
+
+const earlyLeadAcidTimelineCopy = {
+  vi: ["Mốc sản xuất", "Năm mốc cho các định nghĩa khác nhau", "Các mốc dưới đây không khẳng định một đáp án duy nhất cho khái niệm ‘đầu tiên’."],
+  ko: ["제조 연표", "서로 다른 정의를 보여 주는 다섯 이정표", "아래 연도는 하나의 절대적인 ‘최초’를 주장하지 않습니다."],
+  ja: ["製造年表", "異なる定義を示す五つの節目", "以下の年代は単一の絶対的な『最初』を主張するものではありません。"],
+  es: ["Cronología industrial", "Cinco hitos con definiciones diferentes", "Estas fechas no pretenden establecer una única respuesta absoluta a la palabra ‘primera’."],
+  pt: ["Linha do tempo", "Cinco marcos com definições diferentes", "As datas não estabelecem uma única resposta absoluta para a palavra ‘primeira’."],
+  ru: ["Хронология производства", "Пять вех с разными определениями", "Эти даты не устанавливают единственный абсолютный ответ на вопрос о ‘первом’ производстве."]
+};
+
+const earlyLeadAcidReferenceCopy = {
+  vi: ["Tài liệu tham khảo", "Nguồn lịch sử và kỹ thuật", "Nguồn sử dụng các định nghĩa khác nhau về hoạt động sản xuất ban đầu. Bản địa chí Thượng Hải được liên kết qua bản sao công khai."],
+  ko: ["참고 자료", "역사 및 기술 자료", "초기 제조를 설명하는 기준은 출처마다 다릅니다. 상하이 지방지는 공개 미러를 통해 연결됩니다."],
+  ja: ["参考資料", "歴史・技術資料", "初期製造の定義は資料ごとに異なります。上海地方誌は公開ミラーへのリンクです。"],
+  es: ["Referencias", "Fuentes históricas y técnicas", "Las fuentes utilizan definiciones distintas para la producción inicial. La gaceta de Shanghái se enlaza mediante una copia pública."],
+  pt: ["Referências", "Fontes históricas e técnicas", "As fontes usam definições diferentes para a produção inicial. A crônica de Xangai é vinculada por meio de uma cópia pública."],
+  ru: ["Источники", "Исторические и технические материалы", "Источники используют разные определения раннего производства. Шанхайская хроника доступна по ссылке на публичную копию."]
+};
+
+const earlyLeadAcidReferenceItems = [
+  ["Shanghai Gazetteer — public mirror of the 1912 record", "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"],
+  ["SMM — development of lead-acid battery technology in China", "https://news.smm.cn/news/102815366"],
+  ["Shenyang Development and Reform Commission — Energy Storage Industry Development Plan", "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"],
+  ["Journal of Power Sources — Aspects of lead/acid battery technology: Separators", "https://doi.org/10.1016/0378-7753(93)80038-Q"],
+  ["Lead-Acid Batteries: Science and Technology", "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"],
+  ["Journal of Power Sources — Development of the first valve-regulated lead/acid cell", "https://doi.org/10.1016/S0378-7753(96)02516-5"]
+];
+
 const dataCenterBackupPowerTopics = {
   vi: {
     title: "Nguồn điện dự phòng trung tâm dữ liệu đang tăng: cần xem gì ở tấm ngăn AGM?",
@@ -424,17 +547,30 @@ const dataCenterReferenceItems = [
 ];
 
 const secondaryHubCounts = {
-  vi: "9 bài viết kỹ thuật", ko: "기술 글 9편", ja: "技術記事 9件",
-  es: "9 artículos técnicos", pt: "9 artigos técnicos", ru: "9 технических статей"
+  vi: "10 bài viết kỹ thuật", ko: "기술 글 10편", ja: "技術記事 10件",
+  es: "10 artículos técnicos", pt: "10 artigos técnicos", ru: "10 технических статей"
 };
 
 for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].topics.dataCenterBackupPowerAgmSeparator = dataCenterBackupPowerTopics[locale];
+  secondaryResourceData[locale].topics.earlyChinaLeadAcidBatteryManufacturing = earlyLeadAcidManufacturingTopics[locale];
   secondaryResourceData[locale].dataCenterReferences = {
     eyebrow: dataCenterReferences[locale][0],
     title: dataCenterReferences[locale][1],
     text: dataCenterReferences[locale][2],
     items: dataCenterReferenceItems
+  };
+  secondaryResourceData[locale].earlyLeadAcidTimeline = {
+    eyebrow: earlyLeadAcidTimelineCopy[locale][0],
+    title: earlyLeadAcidTimelineCopy[locale][1],
+    note: earlyLeadAcidTimelineCopy[locale][2],
+    items: earlyLeadAcidManufacturingTopics[locale].parameters
+  };
+  secondaryResourceData[locale].earlyLeadAcidReferences = {
+    eyebrow: earlyLeadAcidReferenceCopy[locale][0],
+    title: earlyLeadAcidReferenceCopy[locale][1],
+    text: earlyLeadAcidReferenceCopy[locale][2],
+    items: earlyLeadAcidReferenceItems
   };
   secondaryResourceData[locale].hub.count = secondaryHubCounts[locale];
 }
@@ -512,6 +648,20 @@ function buildArticle(locale, kind, localeData) {
 
   if (kind === "dataCenterBackupPowerAgmSeparator") {
     result.references = localeData.dataCenterReferences;
+    result.formats = {
+      eyebrow: common.formatsEyebrow,
+      title: common.formatsTitle,
+      items: [
+        [common.roll[0], common.roll[1], "/images/viking-finished-separator-roll-900.webp", common.roll[0]],
+        [localeData.nav.quality, common.checklistText, "/images/agm-quality-control-1200.webp", localeData.nav.quality],
+        [common.sheet[0], common.sheet[1], "/images/evidence/shipping-pallet-01.webp", common.sheet[0]]
+      ]
+    };
+  }
+
+  if (kind === "earlyChinaLeadAcidBatteryManufacturing") {
+    result.timeline = localeData.earlyLeadAcidTimeline;
+    result.references = localeData.earlyLeadAcidReferences;
     result.formats = {
       eyebrow: common.formatsEyebrow,
       title: common.formatsTitle,

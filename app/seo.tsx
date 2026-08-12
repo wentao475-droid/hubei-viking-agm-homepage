@@ -1808,6 +1808,51 @@ const dataCenterBackupPowerAgmSeparatorSeo = {
   }
 } as const;
 
+const earlyChinaLeadAcidBatteryManufacturingSeo = {
+  en: {
+    path: "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+    alternatePath: "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "How China’s Earliest Lead-Acid Batteries Were Made | Viking AGM",
+    description:
+      "A sourced history of China’s early lead-acid battery manufacturing, from hand-cast grids and wooden separators to industrial production and modern AGM.",
+    keywords: [
+      "early lead-acid battery manufacturing China",
+      "lead-acid battery history China",
+      "wooden battery separator",
+      "AGM separator history",
+      "VRLA AGM manufacturing"
+    ],
+    pageName: "How China’s Earliest Lead-Acid Batteries Were Made",
+    articleDescription:
+      "A source-aware account of early Chinese lead-acid battery production, separator material evolution and the move toward repeatable modern AGM manufacturing.",
+    breadcrumbs: ["Home", "Resources", "Early Lead-Acid Battery Manufacturing in China"]
+  },
+  zh: {
+    path: "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+    alternatePath: "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "中国早期铅酸蓄电池是怎样制造的？| 湖北维京AGM",
+    description:
+      "从手工铸造板栅、木质隔板到专业化工厂和现代 AGM，梳理中国早期铅酸蓄电池制造及隔板材料演进。",
+    keywords: [
+      "中国铅酸蓄电池制造史",
+      "早期铅酸电池生产",
+      "木质电池隔板",
+      "AGM 隔板历史",
+      "VRLA AGM 制造"
+    ],
+    pageName: "中国早期铅酸蓄电池是怎样制造的？",
+    articleDescription:
+      "以不同历史口径梳理中国早期铅酸蓄电池生产、隔板材料演进和现代 AGM 批次制造要求。",
+    breadcrumbs: ["首页", "资料", "中国早期铅酸蓄电池制造史"]
+  }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2439,6 +2484,32 @@ export function buildDataCenterBackupPowerAgmSeparatorMetadata(
       url: UPS_APPLICATION_IMAGE,
       width: 1200,
       height: 900
+    }
+  });
+}
+
+export function buildEarlyChinaLeadAcidBatteryManufacturingMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "earlyChinaLeadAcidBatteryManufacturing",
+    lang,
+    earlyChinaLeadAcidBatteryManufacturingSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    ...articleLocalePaths("earlyChinaLeadAcidBatteryManufacturing"),
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
+      width: 1600,
+      height: 1000
     }
   });
 }
@@ -3737,6 +3808,80 @@ export function DataCenterBackupPowerAgmSeparatorStructuredData({
           "UPS VRLA batteries",
           "telecom backup power",
           "AGM separator specification matching"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${getResourcesPath(lang)}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function EarlyChinaLeadAcidBatteryManufacturingStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "earlyChinaLeadAcidBatteryManufacturing",
+    lang,
+    earlyChinaLeadAcidBatteryManufacturingSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const image = `${SITE_URL}/images/agm-hero-production-1600.webp`;
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: image,
+          width: 1600,
+          height: 1000
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image,
+        url,
+        datePublished: "2026-08-11",
+        dateModified: "2026-08-11",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "history of lead-acid battery manufacturing in China",
+          "battery separator material history",
+          "AGM separator manufacturing",
+          "VRLA lead-acid batteries"
         ],
         inLanguage: current.language
       },

@@ -22,7 +22,8 @@ export type BlogArticleKind =
   | "agmSeparatorExportSupplyReadiness"
   | "upsVrlaTechnologySelection"
   | "agmGlassFiberVsPvcSeparator"
-  | "dataCenterBackupPowerAgmSeparator";
+  | "dataCenterBackupPowerAgmSeparator"
+  | "earlyChinaLeadAcidBatteryManufacturing";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -58,6 +59,12 @@ type ArticlePageData = {
     title: string;
     columns: [string, string, string];
     rows: Array<[string, string, string]>;
+  };
+  timeline?: {
+    eyebrow: string;
+    title: string;
+    note: string;
+    items: Array<[string, string]>;
   };
   references?: {
     eyebrow: string;
@@ -2571,6 +2578,241 @@ const dataCenterBackupPowerAgmSeparatorCopy = {
   }
 } as const;
 
+const earlyLeadAcidReferenceItems: Array<[string, string]> = [
+  ["Shanghai Gazetteer — public mirror of the 1912 record", "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"],
+  ["SMM — development of lead-acid battery technology in China", "https://news.smm.cn/news/102815366"],
+  ["Shenyang Development and Reform Commission — Energy Storage Industry Development Plan", "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"],
+  ["Journal of Power Sources — Aspects of lead/acid battery technology: Separators", "https://doi.org/10.1016/0378-7753(93)80038-Q"],
+  ["Lead-Acid Batteries: Science and Technology", "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"],
+  ["Journal of Power Sources — Development of the first valve-regulated lead/acid cell", "https://doi.org/10.1016/S0378-7753(96)02516-5"]
+];
+
+const earlyChinaLeadAcidBatteryManufacturingCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request Sample",
+    hero: {
+      eyebrow: "Manufacturing History",
+      title: "How China’s Earliest Lead-Acid Batteries Were Made",
+      subtitle:
+        "From hand-cast grids and wooden separators to modern AGM, more than a century of manufacturing change is contained inside a lead-acid battery.",
+      primary: "Request a Sample & Specification Match",
+      secondary: "Review the timeline",
+      image: {
+        src: "/images/agm-hero-production-1600.webp",
+        alt: "Modern Viking AGM separator production line",
+        width: 1600,
+        height: 1000
+      }
+    },
+    intro: [
+      "Search for the beginning of lead-acid battery manufacturing in China and several dates appear. The Shanghai Gazetteer records Chinese-owned automotive battery production in 1912, an industry source uses 1921 as an industrial starting point, and an official Shenyang plan describes a specialized factory founded in 1939.",
+      "These accounts use different definitions rather than proving one universal ‘first’. This article separates those definitions, explains the early production sequence and follows the separator’s development from wood and microporous materials to AGM. The factory photographs shown here document modern Viking production; they are not historical images."
+    ],
+    timeline: {
+      eyebrow: "Manufacturing Timeline",
+      title: "Five milestones, each answering a different historical question",
+      note:
+        "Company founding, an industry starting point and specialized factory production are different criteria. The dates below should not be read as a single absolute claim.",
+      items: [
+        ["1912", "The Shanghai Gazetteer records Hu Guoguang founding the China Storage Battery Factory and producing automotive batteries."],
+        ["1921", "An industry source uses the Shanghai-based factory as the starting point of China’s lead-acid battery industry."],
+        ["1939", "An official Shenyang plan describes the founded Shenyang Storage Battery Factory as a specialized lead-acid battery manufacturing milestone."],
+        ["1967–1971", "Microglass-fiber VRLA development began in 1967 and related products entered the market four years later."],
+        ["Today", "Mechanized production, agreed test methods and batch management replace one-off manual adjustment."]
+      ]
+    },
+    sections: [
+      {
+        eyebrow: "Different Definitions",
+        title: "Why 1912, 1921 and 1939 do not necessarily conflict",
+        text:
+          "Early factory history is distributed across local gazetteers, industry reviews and official planning records. One source identifies Chinese-owned automotive battery production, another chooses an industry starting point and a third emphasizes specialized, systematic factory production. The useful conclusion is not a single slogan about the ‘first’ factory, but a sequence in which local production appeared before larger-scale professional manufacturing took shape."
+      },
+      {
+        eyebrow: "Early Materials",
+        title: "Hand-cast grids, pasted plates and containers made from wood, rubber or glass",
+        text:
+          "Historical battery literature describes relatively thick grids, manual or semi-manual pasting, plate treatment, formation and element assembly. Containers could use lined wood, hard rubber or glass. Separators included wood, hard rubber, celluloid and glass. Each separator still had to prevent plate contact while allowing ionic movement, but acid resistance, dimensional consistency and long-term stability were difficult to control together."
+      },
+      {
+        eyebrow: "Process Control",
+        title: "The production sequence was familiar, but repeatability depended heavily on experience",
+        text:
+          "Grids received active material, plates were cured and formed, and positive and negative plates were grouped with separators before electrolyte filling, charging and testing. What differed was the available measurement and control. Natural wooden separators varied in thickness, porosity and strength, so small batches could be selected and trimmed by hand. That approach became impractical as output increased."
+      },
+      {
+        eyebrow: "Industrial Production",
+        title: "Specialized factories changed the objective from one usable battery to repeatable batches",
+        text:
+          "The 1939 Shenyang milestone represents the rise of a more specialized factory system, not proof that earlier production did not exist. As the industry expanded, grid dimensions, mixing, pasting, curing, formation, grouping, acid filling and initial charging increasingly followed equipment-based requirements. Dedicated capacity and discharge testing made consistent delivery for vehicles and industrial equipment more achievable."
+      },
+      {
+        eyebrow: "Separator Evolution",
+        title: "From wood and microporous synthetics to a separator that participates in VRLA operation",
+        text:
+          "The industry adopted microporous rubber, sintered PVC, polyethylene and polypropylene as materials became more controllable and scalable. AGM changed the separator’s role again. In a VRLA-AGM battery, ultrafine glass fibers retain electrolyte, maintain ionic pathways, support oxygen transfer and help hold the plates in the intended compressed state. AGM is therefore part of the internal operating mechanism, not only a physical barrier."
+      },
+      {
+        eyebrow: "Modern Manufacturing",
+        title: "Faster lines make material and batch variation more visible",
+        text:
+          "Modern grid, pasting, curing, assembly, formation and testing processes are increasingly mechanized. A continuous line cannot pause to trim every separator individually. Differences in AGM thickness, basis weight, absorption, compression behavior, roll width or sheet dimensions can create setup changes, inspection and rework. Today the practical requirement is to carry an agreed specification consistently from sample validation into recurring supply."
+      }
+    ],
+    parameters: [
+      ["Battery application", "Define the VRLA battery use and operating conditions before selecting a separator."],
+      ["Compression design", "Review nominal thickness together with the intended wet and compressed state."],
+      ["Roll or sheet dimensions", "Confirm width, core, roll diameter or finished sheet size for the assembly process."],
+      ["Test method", "Compare samples and batches using agreed conditions and tolerances."],
+      ["Project stage", "Separate initial sample requirements from pilot and recurring volume supply."]
+    ],
+    formats: {
+      eyebrow: "Modern Manufacturing Evidence",
+      title: "Current Viking production materials — not historical photographs",
+      items: [
+        ["AGM separator rolls", "Modern roll production requires controlled width, winding and handling for repeatable assembly.", "/images/viking-finished-separator-roll-900.webp", "Modern Viking AGM separator roll"],
+        ["Quality inspection", "Agreed methods help compare dimensions and functional characteristics across samples and batches.", "/images/agm-quality-control-1200.webp", "Modern Viking AGM separator inspection"],
+        ["Packing and shipment", "Identification, moisture protection and pallet handling support consistent downstream use.", "/images/evidence/shipping-pallet-01.webp", "Modern Viking AGM separator packing"]
+      ]
+    },
+    checklist: {
+      eyebrow: "Specification Review",
+      title: "Move from manufacturing history to a testable AGM separator specification",
+      text:
+        "Modern repeatability starts with the battery design and a shared test basis, not with nominal thickness alone.",
+      items: ["VRLA battery application", "Target thickness and compression", "Roll width or sheet dimensions", "Test method and tolerance", "Sample or volume stage"]
+    },
+    references: {
+      eyebrow: "References",
+      title: "Historical scope and technical sources",
+      text:
+        "The sources use different definitions for early manufacturing. The Shanghai Gazetteer is linked through a public mirror. Unverified claims about workforce, hand-cranked formation equipment and annual output are not used as established facts.",
+      items: earlyLeadAcidReferenceItems
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with modern AGM manufacturing, testing and specification guidance",
+      items: [
+        ["AGM Separator Manufacturing, Quality and Delivery", "/blog/agm-separator-manufacturing-quality-delivery/"],
+        ["Why AGM Separator Consistency Matters", "/blog/agm-separator-performance-consistency/"],
+        ["What Is an AGM Separator?", "/blog/what-is-agm-separator/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Review an AGM separator for your VRLA battery design",
+      text:
+        "Share the battery application, target thickness, roll or sheet dimensions and current project stage. We can begin with specification matching and sample review.",
+      checklist: ["Battery application", "Thickness and compression", "Roll or sheet dimensions", "Sample and volume stage"],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        message: "Battery application, target thickness, compression, roll or sheet dimensions, test method and project stage"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+    brandName: articleCopy.zh.brandName,
+    quote: "申请样品",
+    hero: {
+      eyebrow: "制造历史",
+      title: "中国早期铅酸蓄电池是怎样制造的？",
+      subtitle: "从手工铸造板栅、木质隔板到现代 AGM，一只铅酸蓄电池里浓缩了一个多世纪的制造变化。",
+      primary: "申请样品与规格匹配",
+      secondary: "查看历史时间线",
+      image: {
+        src: "/images/agm-hero-production-1600.webp",
+        alt: "湖北维京现代 AGM 隔板生产线",
+        width: 1600,
+        height: 1000
+      }
+    },
+    intro: [
+      "查找中国铅酸蓄电池制造的起点，会看到 1912、1921 和 1939 三种说法。上海地方志记载了 1912 年的华资汽车蓄电池生产，行业资料将 1921 年作为产业起点，而沈阳官方规划把 1939 年创办的工厂描述为专业化铅酸蓄电池制造的重要起点。",
+      "这些资料采用的是企业创办、行业起点和专业化工厂三种不同标准，并不适合压缩成一个绝对的‘唯一第一’。本文梳理早期制造流程和隔板材料演进。页面中的维京工厂图片均为现代 AGM 生产资料，不是历史影像。"
+    ],
+    timeline: {
+      eyebrow: "制造时间线",
+      title: "五个节点，对应不同的历史判断标准",
+      note: "企业创办、行业起点和专业化工厂不是同一个概念，下列年份不用于宣称唯一公认的‘第一家’。",
+      items: [
+        ["1912", "上海地方志记载胡国光创办中国蓄电池厂，并开始生产汽车蓄电池。"],
+        ["1921", "行业资料采用上海中国蓄电池厂作为中国铅酸蓄电池产业起点。"],
+        ["1939", "沈阳官方规划将当年创办的沈阳蓄电池厂视为专业化制造的重要节点。"],
+        ["1967–1971", "采用微玻璃纤维隔板的 VRLA 技术于 1967 年开始开发，相关产品四年后进入市场。"],
+        ["今天", "机械化生产、约定检测方法和批次管理取代一次性的人工调整。"]
+      ]
+    },
+    sections: [
+      { eyebrow: "不同口径", title: "1912、1921 和 1939 为什么不一定互相冲突", text: "早期工厂史分散在地方志、行业回顾和官方规划中。不同资料分别强调华资汽车蓄电池生产、行业起点和专业化系统生产。更稳妥的理解是：本地制造先在上海出现，随后专业化和规模化工厂体系逐步形成，而不是用一句‘唯一第一’覆盖所有历史口径。" },
+      { eyebrow: "早期材料", title: "手工铸造板栅、涂膏极板，以及木材、硬橡胶或玻璃容器", text: "专业资料显示，早期产品常使用较厚板栅，涂膏、极板处理、化成和极群装配远没有今天的连续设备。电池槽可使用衬里的木材、硬橡胶或玻璃，隔板材料包括木材、硬橡胶、赛璐珞和玻璃。隔板同样要阻止极板接触并保持离子通道，但耐酸、尺寸一致和长期稳定很难同时控制。" },
+      { eyebrow: "过程控制", title: "基本流程并不陌生，但可重复性高度依赖经验", text: "板栅填入活性物质后，极板经过固化和化成，再与隔板组成极群，随后装槽、加酸、充电和检测。区别在于当时可用的测量和控制手段有限。天然木质隔板的厚度、孔隙和强度存在差异，小批量还能逐片挑选和修整，产量增加后便难以继续依靠这种方式。" },
+      { eyebrow: "工业化生产", title: "专业工厂把目标从做出一只可用电池变成连续生产稳定批次", text: "1939 年沈阳的节点代表更专业化的工厂体系出现，并不否认此前已有生产。随着行业发展，板栅尺寸、混膏、涂板、固化、化成、装配、加酸和初充电逐步纳入设备和工艺要求。容量及放电检测也更专门化，工厂开始面对连续批次能否按同一条件装配、测试和交付的问题。" },
+      { eyebrow: "隔板演进", title: "从木材和微孔合成材料，到参与 VRLA 内部工作的 AGM", text: "木质隔板之后，行业使用过微孔橡胶、烧结 PVC、聚乙烯和聚丙烯等材料。AGM 再次改变了隔板角色：在 VRLA-AGM 电池中，超细玻璃纤维孔隙吸附电解液、保持离子通道、支持氧气传输，并帮助极板维持设计压缩状态。它不再只是物理阻隔，而是电池内部运行机制的一部分。" },
+      { eyebrow: "现代制造", title: "生产线越快，材料和批次波动越容易被放大", text: "现代板栅、涂板、固化、装配、化成和检测越来越机械化。连续生产线无法像早期工人那样逐片修整隔板。AGM 的厚度、克重、吸液、受压表现、卷材宽度或片材尺寸发生波动，都可能带来调机、复检和返工。今天更重要的是把确认后的规格从样品验证持续延续到后续批次。" }
+    ],
+    parameters: [
+      ["电池应用", "先明确 VRLA 电池用途和运行工况，再讨论隔板规格。"],
+      ["压缩设计", "把标称厚度与吸液后的受压状态一起评估。"],
+      ["卷材或片材尺寸", "确认宽度、纸管、卷径或成品片材尺寸是否适合装配。"],
+      ["检测方法", "使用双方约定的条件和公差比较样品及后续批次。"],
+      ["项目阶段", "区分初始样品、试产和持续批量供货要求。"]
+    ],
+    formats: {
+      eyebrow: "现代制造资料",
+      title: "以下为维京当前生产资料，不是历史影像",
+      items: [
+        ["AGM 隔板卷材", "现代卷材生产需要稳定控制宽度、收卷和搬运要求。", "/images/viking-finished-separator-roll-900.webp", "湖北维京现代 AGM 隔板卷材"],
+        ["质量检测", "按约定方法对比样品和批次的尺寸及功能指标。", "/images/agm-quality-control-1200.webp", "湖北维京现代 AGM 隔板检测"],
+        ["包装与出运", "标识、防潮和托盘搬运也是重复稳定使用的一部分。", "/images/evidence/shipping-pallet-01.webp", "湖北维京现代 AGM 隔板包装"]
+      ]
+    },
+    checklist: {
+      eyebrow: "规格确认",
+      title: "从制造历史回到可测试的 AGM 隔板规格",
+      text: "现代批次稳定从电池设计和共同检测基础开始，而不只看一个标称厚度。",
+      items: ["VRLA 电池应用", "目标厚度与压缩设计", "卷材宽度或片材尺寸", "检测方法与公差", "样品或批量阶段"]
+    },
+    references: {
+      eyebrow: "参考资料",
+      title: "历史口径与技术资料说明",
+      text: "不同来源对早期制造采用不同定义。上海地方志链接为公开镜像版本。未经匹配原始厂史证实的工人数、手摇发电机和年产量说法，不作为本文正式事实。",
+      items: earlyLeadAcidReferenceItems
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续了解现代 AGM 制造、检测与规格选择",
+      items: [
+        ["AGM 隔板生产、质量与交付", "/zh/blog/agm-separator-manufacturing-quality-delivery/"],
+        ["AGM 隔板一致性为什么重要", "/zh/blog/agm-separator-performance-consistency/"],
+        ["什么是 AGM 隔板？", "/zh/blog/what-is-agm-separator/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "确认 VRLA 电池设计所需的 AGM 隔板",
+      text: "请提供电池应用、目标厚度、卷材或片材尺寸和当前项目阶段，我们可以从规格匹配与样品评审开始沟通。",
+      checklist: ["电池应用", "厚度与压缩", "卷材或片材尺寸", "样品与批量阶段"],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        message: "电池应用、目标厚度、压缩设计、卷材或片材尺寸、检测方法和项目阶段"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -2621,6 +2863,8 @@ export function BlogArticlePage({
                   ? agmGlassFiberVsPvcSeparatorCopy[primaryLang]
                   : page === "dataCenterBackupPowerAgmSeparator"
                     ? dataCenterBackupPowerAgmSeparatorCopy[primaryLang]
+                    : page === "earlyChinaLeadAcidBatteryManufacturing"
+                      ? earlyChinaLeadAcidBatteryManufacturingCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -2682,6 +2926,8 @@ export function BlogArticlePage({
                   ? ["electrolyte-management", "agm-structure", "pvc-profile", "replacement-boundary", "buyer-review", "viking-coordination"]
                   : page === "dataCenterBackupPowerAgmSeparator"
                     ? ["demand-signal", "public-procurement", "high-rate-discharge", "float-compression", "oxygen-cycle", "batch-consistency", "application-fit"]
+                    : page === "earlyChinaLeadAcidBatteryManufacturing"
+                      ? ["historical-definitions", "early-materials", "process-control", "industrial-production", "separator-evolution", "modern-manufacturing"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
@@ -2691,6 +2937,7 @@ export function BlogArticlePage({
           height: 675
         };
   const comparison = t.comparison;
+  const timeline = t.timeline;
 
   return (
     <main className="min-h-screen bg-frost text-ink">
@@ -2748,13 +2995,16 @@ export function BlogArticlePage({
 
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1fr]">
-          <aside className="lg:sticky lg:top-28 lg:self-start">
+          <aside className="min-w-0 lg:sticky lg:top-28 lg:self-start">
             <div className="rounded-md border border-line bg-white p-6 shadow-sm">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
                 {localizedUi.contents}
               </p>
               <div className="mt-5 grid gap-3 text-sm font-semibold text-graphite">
                 {[
+                  ...(timeline
+                    ? [[timeline.eyebrow, "#timeline"]]
+                    : []),
                   ...(comparison
                     ? [[comparison.eyebrow, "#comparison"]]
                     : []),
@@ -2777,12 +3027,38 @@ export function BlogArticlePage({
             </div>
           </aside>
 
-          <article className="rounded-md border border-line bg-white p-6 shadow-industrial sm:p-10">
+          <article className="min-w-0 rounded-md border border-line bg-white p-6 shadow-industrial sm:p-10">
             <div className="grid gap-5 text-lg leading-9 text-graphite">
               {t.intro.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+
+            {timeline && (
+              <section
+                id="timeline"
+                className="mt-10 scroll-mt-28 border-t border-line pt-10"
+              >
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
+                  {timeline.eyebrow}
+                </p>
+                <h2 className="mt-3 text-3xl font-bold leading-tight text-ink">
+                  {timeline.title}
+                </h2>
+                <p className="mt-4 text-sm leading-7 text-steel">{timeline.note}</p>
+                <ol className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
+                  {timeline.items.map(([year, text]) => (
+                    <li
+                      key={year}
+                      className="rounded-md border border-line bg-frost p-5"
+                    >
+                      <p className="text-xl font-black text-signal">{year}</p>
+                      <p className="mt-3 text-sm leading-6 text-steel">{text}</p>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )}
 
             {comparison && (
               <section
@@ -2924,7 +3200,8 @@ export function BlogArticlePage({
         <div
           className={`mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2 ${
             page === "upsVrlaTechnologySelection" ||
-            page === "dataCenterBackupPowerAgmSeparator"
+            page === "dataCenterBackupPowerAgmSeparator" ||
+            page === "earlyChinaLeadAcidBatteryManufacturing"
               ? "lg:grid-cols-3"
               : ""
           }`}

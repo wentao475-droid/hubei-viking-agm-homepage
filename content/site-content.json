@@ -17567,7 +17567,7 @@
         "eyebrow": "Trung tâm tài liệu tấm ngăn AGM",
         "title": "Tài liệu kỹ thuật dành cho đội ngũ mua hàng tấm ngăn AGM",
         "subtitle": "Hướng dẫn thực tế về thông số, sản xuất, chất lượng và ứng dụng giúp chuẩn bị yêu cầu kỹ thuật, mẫu thử và trao đổi với nhà cung cấp.",
-        "count": "9 bài viết kỹ thuật",
+        "count": "10 bài viết kỹ thuật",
         "actionEyebrow": "Bắt đầu trao đổi mua hàng",
         "actionTitle": "Từ nghiên cứu đến đối chiếu thông số",
         "actionText": "Chia sẻ thông tin hiện có hoặc tải hồ sơ năng lực EN/ZH trước khi liên hệ đội ngũ của chúng tôi.",
@@ -18112,6 +18112,72 @@
             "Phương pháp thử và tiêu chí chấp nhận",
             "Giai đoạn mẫu và kế hoạch sản lượng"
           ]
+        },
+        "earlyChinaLeadAcidBatteryManufacturing": {
+          "title": "Những ắc quy chì-axit đầu tiên tại Trung Quốc được sản xuất như thế nào?",
+          "summary": "Từ lưới cực đúc thủ công và tấm ngăn gỗ đến AGM hiện đại: cách vật liệu, thiết bị và kiểm soát lô đã thay đổi hơn một thế kỷ.",
+          "intro": "Các mốc 1912, 1921 và 1939 xuất hiện trong những nguồn tư liệu khác nhau vì chúng mô tả các khái niệm khác nhau: sản xuất do người Trung Quốc vận hành, điểm khởi đầu của ngành và nhà máy chuyên môn hóa. Vì vậy cần xác định rõ tiêu chí trước khi nói đến ‘đầu tiên’.",
+          "sections": [
+            [
+              "Ba mốc lịch sử",
+              "1912, 1921 và 1939 không nhất thiết mâu thuẫn",
+              "Địa chí Thượng Hải ghi nhận hoạt động sản xuất ắc quy ô tô do doanh nghiệp Trung Quốc tổ chức từ năm 1912; tài liệu ngành dùng năm 1921 làm điểm khởi đầu; còn quy hoạch chính thức của Thẩm Dương gọi nhà máy thành lập năm 1939 là nhà máy ắc quy chì-axit đầu tiên. Mỗi nguồn đang dùng một phạm vi khác nhau."
+            ],
+            [
+              "Sản xuất ban đầu",
+              "Lưới cực dày và nhiều công đoạn phụ thuộc vào tay nghề",
+              "Lưới cực thường được đúc thủ công; trát cao, xử lý bản cực, hóa thành và lắp bộ cực chưa có thiết bị liên tục như ngày nay. Thùng có thể dùng gỗ lót, cao su cứng hoặc thủy tinh, còn tấm ngăn gồm gỗ, cao su cứng, celluloid và thủy tinh."
+            ],
+            [
+              "Kiểm soát quá trình",
+              "Trình tự quen thuộc nhưng khả năng đo lường còn hạn chế",
+              "Đúc lưới, trát cao, đóng rắn, hóa thành, ghép bản cực, châm điện phân và thử nghiệm đã tạo thành chuỗi sản xuất cơ bản. Tuy nhiên độ đồng đều, độ khô và mức hóa thành còn phụ thuộc nhiều vào kinh nghiệm của người vận hành."
+            ],
+            [
+              "Công nghiệp hóa",
+              "Sản xuất chuyên môn hóa chuyển mục tiêu sang khả năng lặp lại",
+              "Khi thiết bị và phương pháp thử được chuẩn hóa hơn, nhà máy không chỉ cần làm ra một bình dùng được mà phải duy trì kích thước, lắp ráp, hiệu suất và lịch giao giữa nhiều lô."
+            ],
+            [
+              "Tiến hóa tấm ngăn",
+              "Từ gỗ đến vật liệu vi xốp và sợi thủy tinh AGM",
+              "Sau tấm ngăn gỗ, ngành sử dụng cao su vi xốp, PVC thiêu kết, PE và PP để kiểm soát tốt hơn độ bền axit, cơ tính và lỗ rỗng. Từ cuối thập niên 1960, giấy sợi thủy tinh siêu mịn trở thành nền tảng của hệ VRLA-AGM."
+            ],
+            [
+              "Sản xuất hiện đại",
+              "Tốc độ dây chuyền càng cao, sai khác vật liệu càng dễ lộ rõ",
+              "Trong sản xuất hiện đại, độ dày, định lượng, hút chất lỏng, nén, khổ cuộn và kích thước tấm phải được kiểm soát theo lô. Hình ảnh trên trang là tư liệu sản xuất AGM hiện đại của Viking, không phải ảnh lịch sử."
+            ]
+          ],
+          "parameters": [
+            [
+              "1912",
+              "Sản xuất ắc quy ô tô do doanh nghiệp Trung Quốc tại Thượng Hải theo địa chí."
+            ],
+            [
+              "1921",
+              "Mốc khởi đầu ngành được một tài liệu ngành sử dụng."
+            ],
+            [
+              "1939",
+              "Mốc nhà máy chuyên môn hóa theo tài liệu chính thức của Thẩm Dương."
+            ],
+            [
+              "1967–1971",
+              "Phát triển pin VRLA dùng giấy sợi thủy tinh siêu mịn và đưa sản phẩm ra thị trường."
+            ],
+            [
+              "Hiện nay",
+              "Sản xuất cơ giới hóa, kiểm tra và quản lý nhất quán theo lô."
+            ]
+          ],
+          "checklist": [
+            "Ứng dụng ắc quy VRLA",
+            "Độ dày và trạng thái nén mục tiêu",
+            "Khổ cuộn hoặc kích thước tấm",
+            "Phương pháp thử và dung sai",
+            "Giai đoạn mẫu hoặc sản xuất hàng loạt"
+          ]
         }
       },
       "comparison": {
@@ -18186,6 +18252,64 @@
             "https://news.smm.cn/news/103776664"
           ]
         ]
+      },
+      "earlyLeadAcidTimeline": {
+        "eyebrow": "Mốc sản xuất",
+        "title": "Năm mốc cho các định nghĩa khác nhau",
+        "note": "Các mốc dưới đây không khẳng định một đáp án duy nhất cho khái niệm ‘đầu tiên’.",
+        "items": [
+          [
+            "1912",
+            "Sản xuất ắc quy ô tô do doanh nghiệp Trung Quốc tại Thượng Hải theo địa chí."
+          ],
+          [
+            "1921",
+            "Mốc khởi đầu ngành được một tài liệu ngành sử dụng."
+          ],
+          [
+            "1939",
+            "Mốc nhà máy chuyên môn hóa theo tài liệu chính thức của Thẩm Dương."
+          ],
+          [
+            "1967–1971",
+            "Phát triển pin VRLA dùng giấy sợi thủy tinh siêu mịn và đưa sản phẩm ra thị trường."
+          ],
+          [
+            "Hiện nay",
+            "Sản xuất cơ giới hóa, kiểm tra và quản lý nhất quán theo lô."
+          ]
+        ]
+      },
+      "earlyLeadAcidReferences": {
+        "eyebrow": "Tài liệu tham khảo",
+        "title": "Nguồn lịch sử và kỹ thuật",
+        "text": "Nguồn sử dụng các định nghĩa khác nhau về hoạt động sản xuất ban đầu. Bản địa chí Thượng Hải được liên kết qua bản sao công khai.",
+        "items": [
+          [
+            "Shanghai Gazetteer — public mirror of the 1912 record",
+            "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+          ],
+          [
+            "SMM — development of lead-acid battery technology in China",
+            "https://news.smm.cn/news/102815366"
+          ],
+          [
+            "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+            "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+          ],
+          [
+            "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+            "https://doi.org/10.1016/0378-7753(93)80038-Q"
+          ],
+          [
+            "Lead-Acid Batteries: Science and Technology",
+            "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+          ],
+          [
+            "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+            "https://doi.org/10.1016/S0378-7753(96)02516-5"
+          ]
+        ]
       }
     },
     "ko": {
@@ -18226,7 +18350,7 @@
         "eyebrow": "AGM 분리막 자료 센터",
         "title": "AGM 분리막 구매·기술팀을 위한 실무 자료",
         "subtitle": "사양 작성, 샘플 평가 및 공급업체 협의를 준비할 수 있도록 기술 파라미터, 제조, 품질과 응용 정보를 제공합니다.",
-        "count": "기술 글 9편",
+        "count": "기술 글 10편",
         "actionEyebrow": "구매 협의 시작",
         "actionTitle": "자료 검토에서 사양 매칭까지",
         "actionText": "현재 확보한 요구사항을 보내거나 문의 전에 EN/ZH 기술 역량 자료를 확인하십시오.",
@@ -18766,6 +18890,72 @@
             "시험법과 합격 기준",
             "샘플 단계와 예상 수량"
           ]
+        },
+        "earlyChinaLeadAcidBatteryManufacturing": {
+          "title": "중국의 초기 납축전지는 어떻게 만들어졌을까요?",
+          "summary": "수작업 주조 그리드와 목재 분리막에서 현대 AGM까지, 한 세기 넘는 소재·설비·로트 관리의 변화를 살펴봅니다.",
+          "intro": "1912년, 1921년, 1939년이라는 연도는 서로 다른 ‘최초’의 정의에서 나옵니다. 중국계 생산의 시작, 산업의 출발점, 전문 공장 생산을 구분해야 초기 역사를 정확히 이해할 수 있습니다.",
+          "sections": [
+            [
+              "세 가지 연도",
+              "1912·1921·1939는 반드시 모순되는 기록이 아닙니다",
+              "상하이 지방지는 1912년 중국계 자동차용 축전지 생산을 기록하고, 산업 자료는 1921년을 산업의 시작으로 보며, 선양의 공식 계획은 1939년 설립 공장을 최초의 납축전지 공장으로 설명합니다. 각 자료의 범위가 다릅니다."
+            ],
+            [
+              "초기 제조",
+              "두꺼운 수작업 그리드와 숙련자 중심의 공정",
+              "그리드는 손으로 주조되는 경우가 많았고 도포, 극판 처리, 화성, 극군 조립은 오늘날의 연속 설비와 거리가 있었습니다. 용기는 라이닝 목재, 경질 고무, 유리를 사용했고 분리막은 목재, 경질 고무, 셀룰로이드, 유리 등이었습니다."
+            ],
+            [
+              "공정 관리",
+              "기본 순서는 익숙했지만 측정과 제어는 제한적이었습니다",
+              "그리드, 활물질, 숙성, 화성, 극판 조립, 전해액 주입, 시험이라는 기본 흐름은 존재했습니다. 다만 균일도, 건조와 화성 완성도는 작업자의 경험에 크게 의존했습니다."
+            ],
+            [
+              "산업화",
+              "전문 공장 생산은 반복 가능성을 목표로 바꾸었습니다",
+              "설비와 시험법이 표준화되면서 한 개의 사용 가능한 전지를 만드는 것만으로는 부족해졌습니다. 여러 로트에서 치수, 조립성, 성능과 납기를 반복해야 했습니다."
+            ],
+            [
+              "분리막 변화",
+              "목재에서 미세다공 소재와 AGM 유리섬유로",
+              "목재 이후 미세다공 고무, 소결 PVC, PE와 PP가 내산성, 강도와 기공 구조 제어를 개선했습니다. 1960년대 후반부터 초미세 유리섬유 종이가 VRLA-AGM 구조의 기반이 되었습니다."
+            ],
+            [
+              "현대 생산",
+              "라인이 빨라질수록 소재 편차는 더 잘 드러납니다",
+              "현대 생산에서는 두께, 평량, 흡액, 압축, 롤 폭과 시트 치수를 로트별로 관리해야 합니다. 페이지의 사진은 Viking의 현대 AGM 생산 자료이며 역사 사진이 아닙니다."
+            ]
+          ],
+          "parameters": [
+            [
+              "1912",
+              "지방지에 기록된 상하이 중국계 자동차용 축전지 생산."
+            ],
+            [
+              "1921",
+              "산업 자료가 제시하는 중국 납축전지 산업의 출발점."
+            ],
+            [
+              "1939",
+              "선양 공식 자료의 전문 납축전지 공장 이정표."
+            ],
+            [
+              "1967–1971",
+              "초미세 유리섬유 기반 VRLA 개발과 시장 출시."
+            ],
+            [
+              "현재",
+              "기계화 생산, 검사 및 로트 일관성 관리."
+            ]
+          ],
+          "checklist": [
+            "VRLA 배터리 용도",
+            "목표 두께와 압축 상태",
+            "롤 폭 또는 시트 치수",
+            "시험법과 공차",
+            "샘플 또는 양산 단계"
+          ]
         }
       },
       "comparison": {
@@ -18840,6 +19030,64 @@
             "https://news.smm.cn/news/103776664"
           ]
         ]
+      },
+      "earlyLeadAcidTimeline": {
+        "eyebrow": "제조 연표",
+        "title": "서로 다른 정의를 보여 주는 다섯 이정표",
+        "note": "아래 연도는 하나의 절대적인 ‘최초’를 주장하지 않습니다.",
+        "items": [
+          [
+            "1912",
+            "지방지에 기록된 상하이 중국계 자동차용 축전지 생산."
+          ],
+          [
+            "1921",
+            "산업 자료가 제시하는 중국 납축전지 산업의 출발점."
+          ],
+          [
+            "1939",
+            "선양 공식 자료의 전문 납축전지 공장 이정표."
+          ],
+          [
+            "1967–1971",
+            "초미세 유리섬유 기반 VRLA 개발과 시장 출시."
+          ],
+          [
+            "현재",
+            "기계화 생산, 검사 및 로트 일관성 관리."
+          ]
+        ]
+      },
+      "earlyLeadAcidReferences": {
+        "eyebrow": "참고 자료",
+        "title": "역사 및 기술 자료",
+        "text": "초기 제조를 설명하는 기준은 출처마다 다릅니다. 상하이 지방지는 공개 미러를 통해 연결됩니다.",
+        "items": [
+          [
+            "Shanghai Gazetteer — public mirror of the 1912 record",
+            "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+          ],
+          [
+            "SMM — development of lead-acid battery technology in China",
+            "https://news.smm.cn/news/102815366"
+          ],
+          [
+            "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+            "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+          ],
+          [
+            "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+            "https://doi.org/10.1016/0378-7753(93)80038-Q"
+          ],
+          [
+            "Lead-Acid Batteries: Science and Technology",
+            "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+          ],
+          [
+            "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+            "https://doi.org/10.1016/S0378-7753(96)02516-5"
+          ]
+        ]
       }
     },
     "pt": {
@@ -18880,7 +19128,7 @@
         "eyebrow": "Centro de recursos de separadores AGM",
         "title": "Recursos técnicos para compradores de separadores AGM",
         "subtitle": "Guias práticos sobre parâmetros, fabricação, qualidade e aplicações para preparar especificações, amostras e conversas com fornecedores.",
-        "count": "9 artigos técnicos",
+        "count": "10 artigos técnicos",
         "actionEyebrow": "Iniciar uma conversa de compra",
         "actionTitle": "Da pesquisa à análise de especificações",
         "actionText": "Compartilhe as informações disponíveis ou consulte o PDF técnico EN/ZH antes de falar com nossa equipe.",
@@ -19420,6 +19668,72 @@
             "Método de teste e aceitação",
             "Etapa de amostra e volume esperado"
           ]
+        },
+        "earlyChinaLeadAcidBatteryManufacturing": {
+          "title": "Como foram fabricadas as primeiras baterias chumbo-ácido da China",
+          "summary": "De grades fundidas à mão e separadores de madeira ao AGM moderno: mais de um século de mudanças em materiais, equipamentos e controle de lotes.",
+          "intro": "Os anos 1912, 1921 e 1939 representam critérios diferentes: produção de capital chinês, início da indústria e fabricação especializada. É preciso definir ‘primeira’ antes de comparar as datas.",
+          "sections": [
+            [
+              "Três datas",
+              "1912, 1921 e 1939 não são necessariamente registros conflitantes",
+              "A crônica de Xangai registra produção chinesa de baterias automotivas em 1912; uma fonte setorial usa 1921 como início da indústria; e um plano oficial de Shenyang chama a fábrica fundada em 1939 de primeira fábrica de baterias chumbo-ácido. Cada fonte usa um escopo diferente."
+            ],
+            [
+              "Fabricação inicial",
+              "Grades grossas fundidas à mão e processos dependentes da experiência",
+              "As grades eram frequentemente fundidas manualmente. Empastamento, tratamento, formação e montagem ainda estavam longe das linhas contínuas atuais. Recipientes podiam usar madeira revestida, borracha dura ou vidro; separadores incluíam madeira, borracha dura, celuloide e vidro."
+            ],
+            [
+              "Controle de processo",
+              "A sequência era familiar, mas a medição era limitada",
+              "Grade, material ativo, cura, formação, agrupamento, enchimento e teste formavam a lógica básica. Uniformidade, secagem e formação dependiam muito da experiência do operador."
+            ],
+            [
+              "Industrialização",
+              "A fábrica especializada mudou o objetivo para repetibilidade",
+              "Com equipamentos e ensaios mais padronizados, produzir uma bateria utilizável deixou de ser suficiente. Dimensões, montagem, desempenho e entrega precisavam se repetir entre lotes."
+            ],
+            [
+              "Evolução do separador",
+              "Da madeira a materiais microporosos e fibra de vidro AGM",
+              "Depois da madeira vieram borracha microporosa, PVC sinterizado, PE e PP, com melhor controle de resistência ao ácido, força e poros. No fim dos anos 1960, o papel de microfibra de vidro passou a sustentar a arquitetura VRLA-AGM."
+            ],
+            [
+              "Produção moderna",
+              "Linhas mais rápidas tornam a variação mais visível",
+              "Espessura, gramatura, absorção, compressão, largura do rolo e dimensões das folhas são controladas por lote. As imagens mostram a produção AGM moderna da Viking e não são fotografias históricas."
+            ]
+          ],
+          "parameters": [
+            [
+              "1912",
+              "Produção chinesa de baterias automotivas registrada em crônica local."
+            ],
+            [
+              "1921",
+              "Marco inicial usado por uma fonte setorial."
+            ],
+            [
+              "1939",
+              "Marco de fábrica especializada em fonte oficial de Shenyang."
+            ],
+            [
+              "1967–1971",
+              "Desenvolvimento e lançamento do VRLA com microfibra de vidro."
+            ],
+            [
+              "Hoje",
+              "Produção mecanizada, inspeção e consistência entre lotes."
+            ]
+          ],
+          "checklist": [
+            "Aplicação da bateria VRLA",
+            "Espessura e compressão alvo",
+            "Largura do rolo ou tamanho da folha",
+            "Método de teste e tolerâncias",
+            "Etapa de amostra ou produção"
+          ]
         }
       },
       "comparison": {
@@ -19494,6 +19808,64 @@
             "https://news.smm.cn/news/103776664"
           ]
         ]
+      },
+      "earlyLeadAcidTimeline": {
+        "eyebrow": "Linha do tempo",
+        "title": "Cinco marcos com definições diferentes",
+        "note": "As datas não estabelecem uma única resposta absoluta para a palavra ‘primeira’.",
+        "items": [
+          [
+            "1912",
+            "Produção chinesa de baterias automotivas registrada em crônica local."
+          ],
+          [
+            "1921",
+            "Marco inicial usado por uma fonte setorial."
+          ],
+          [
+            "1939",
+            "Marco de fábrica especializada em fonte oficial de Shenyang."
+          ],
+          [
+            "1967–1971",
+            "Desenvolvimento e lançamento do VRLA com microfibra de vidro."
+          ],
+          [
+            "Hoje",
+            "Produção mecanizada, inspeção e consistência entre lotes."
+          ]
+        ]
+      },
+      "earlyLeadAcidReferences": {
+        "eyebrow": "Referências",
+        "title": "Fontes históricas e técnicas",
+        "text": "As fontes usam definições diferentes para a produção inicial. A crônica de Xangai é vinculada por meio de uma cópia pública.",
+        "items": [
+          [
+            "Shanghai Gazetteer — public mirror of the 1912 record",
+            "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+          ],
+          [
+            "SMM — development of lead-acid battery technology in China",
+            "https://news.smm.cn/news/102815366"
+          ],
+          [
+            "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+            "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+          ],
+          [
+            "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+            "https://doi.org/10.1016/0378-7753(93)80038-Q"
+          ],
+          [
+            "Lead-Acid Batteries: Science and Technology",
+            "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+          ],
+          [
+            "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+            "https://doi.org/10.1016/S0378-7753(96)02516-5"
+          ]
+        ]
       }
     },
     "ru": {
@@ -19534,7 +19906,7 @@
         "eyebrow": "Центр материалов по AGM-сепараторам",
         "title": "Технические материалы для закупщиков AGM-сепараторов",
         "subtitle": "Практические руководства по параметрам, производству, качеству и применению для подготовки спецификаций, образцов и переговоров с поставщиком.",
-        "count": "9 технических статей",
+        "count": "10 технических статей",
         "actionEyebrow": "Начать обсуждение закупки",
         "actionTitle": "От изучения к проверке спецификации",
         "actionText": "Перед обращением передайте имеющиеся требования или ознакомьтесь с техническим PDF на EN/ZH.",
@@ -20074,6 +20446,72 @@
             "Метод испытания и приёмка",
             "Этап образца и ожидаемый объём"
           ]
+        },
+        "earlyChinaLeadAcidBatteryManufacturing": {
+          "title": "Как производились первые свинцово-кислотные аккумуляторы в Китае",
+          "summary": "От ручного литья решёток и деревянных сепараторов до современного AGM: более века изменений материалов, оборудования и контроля партий.",
+          "intro": "Даты 1912, 1921 и 1939 относятся к разным определениям: китайское производство, начало отрасли и специализированный завод. Перед сравнением дат необходимо определить, что считается ‘первым’.",
+          "sections": [
+            [
+              "Три даты",
+              "1912, 1921 и 1939 годы не обязательно противоречат друг другу",
+              "Шанхайская хроника фиксирует китайское производство автомобильных аккумуляторов в 1912 году; отраслевой источник считает 1921 год началом отрасли; официальный план Шэньяна называет предприятие 1939 года первым заводом свинцово-кислотных аккумуляторов. Источники используют разные рамки."
+            ],
+            [
+              "Раннее производство",
+              "Толстые литые вручную решётки и зависимость от мастерства",
+              "Решётки часто отливали вручную, а намазка, обработка пластин, формирование и сборка ещё не выполнялись на непрерывных линиях. Корпуса делали из футерованного дерева, твёрдой резины или стекла, сепараторы — из дерева, твёрдой резины, целлулоида и стекла."
+            ],
+            [
+              "Управление процессом",
+              "Последовательность была знакомой, но измерения оставались ограниченными",
+              "Решётка, активная масса, сушка, формирование, сборка блока, заливка электролита и испытание уже составляли базовый процесс. Однородность и полнота операций во многом зависели от опыта рабочих."
+            ],
+            [
+              "Индустриализация",
+              "Специализированный завод перенёс цель на повторяемость",
+              "По мере стандартизации оборудования и испытаний стало недостаточно изготовить один работоспособный аккумулятор. Размеры, сборка, характеристики и поставка должны были повторяться от партии к партии."
+            ],
+            [
+              "Эволюция сепаратора",
+              "От дерева к микропористым материалам и стекловолокну AGM",
+              "После дерева применялись микропористая резина, спечённый ПВХ, ПЭ и ПП с более управляемой кислотостойкостью, прочностью и порами. В конце 1960-х микростекловолоконная бумага стала основой VRLA-AGM."
+            ],
+            [
+              "Современное производство",
+              "Высокая скорость линии быстрее выявляет разброс материала",
+              "Толщина, поверхностная плотность, впитывание, сжатие, ширина рулона и размеры листа контролируются по партиям. Изображения показывают современное производство AGM компании Viking и не являются историческими фотографиями."
+            ]
+          ],
+          "parameters": [
+            [
+              "1912",
+              "Китайское производство автомобильных аккумуляторов по местной хронике."
+            ],
+            [
+              "1921",
+              "Отраслевая дата начала производства по отраслевому источнику."
+            ],
+            [
+              "1939",
+              "Веха специализированного завода по официальному документу Шэньяна."
+            ],
+            [
+              "1967–1971",
+              "Разработка и вывод на рынок VRLA с микростекловолокном."
+            ],
+            [
+              "Сегодня",
+              "Механизированное производство, контроль и стабильность партий."
+            ]
+          ],
+          "checklist": [
+            "Применение батареи VRLA",
+            "Целевая толщина и сжатие",
+            "Ширина рулона или размер листа",
+            "Метод испытаний и допуски",
+            "Этап образца или серийного производства"
+          ]
         }
       },
       "comparison": {
@@ -20148,6 +20586,64 @@
             "https://news.smm.cn/news/103776664"
           ]
         ]
+      },
+      "earlyLeadAcidTimeline": {
+        "eyebrow": "Хронология производства",
+        "title": "Пять вех с разными определениями",
+        "note": "Эти даты не устанавливают единственный абсолютный ответ на вопрос о ‘первом’ производстве.",
+        "items": [
+          [
+            "1912",
+            "Китайское производство автомобильных аккумуляторов по местной хронике."
+          ],
+          [
+            "1921",
+            "Отраслевая дата начала производства по отраслевому источнику."
+          ],
+          [
+            "1939",
+            "Веха специализированного завода по официальному документу Шэньяна."
+          ],
+          [
+            "1967–1971",
+            "Разработка и вывод на рынок VRLA с микростекловолокном."
+          ],
+          [
+            "Сегодня",
+            "Механизированное производство, контроль и стабильность партий."
+          ]
+        ]
+      },
+      "earlyLeadAcidReferences": {
+        "eyebrow": "Источники",
+        "title": "Исторические и технические материалы",
+        "text": "Источники используют разные определения раннего производства. Шанхайская хроника доступна по ссылке на публичную копию.",
+        "items": [
+          [
+            "Shanghai Gazetteer — public mirror of the 1912 record",
+            "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+          ],
+          [
+            "SMM — development of lead-acid battery technology in China",
+            "https://news.smm.cn/news/102815366"
+          ],
+          [
+            "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+            "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+          ],
+          [
+            "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+            "https://doi.org/10.1016/0378-7753(93)80038-Q"
+          ],
+          [
+            "Lead-Acid Batteries: Science and Technology",
+            "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+          ],
+          [
+            "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+            "https://doi.org/10.1016/S0378-7753(96)02516-5"
+          ]
+        ]
       }
     },
     "ja": {
@@ -20188,7 +20684,7 @@
         "eyebrow": "AGMセパレーター資料センター",
         "title": "AGMセパレーターの購買・技術担当者向け実務資料",
         "subtitle": "仕様作成、サンプル評価、サプライヤー協議に役立つ技術特性、製造、品質、用途情報をまとめています。",
-        "count": "技術記事 9件",
+        "count": "技術記事 10件",
         "actionEyebrow": "購買相談を始める",
         "actionTitle": "情報収集から仕様照合へ",
         "actionText": "現在の要求事項を共有するか、お問い合わせ前に EN/ZH 技術能力資料をご確認ください。",
@@ -20728,6 +21224,72 @@
             "試験法と合格基準",
             "サンプル段階と想定数量"
           ]
+        },
+        "earlyChinaLeadAcidBatteryManufacturing": {
+          "title": "中国初期の鉛蓄電池はどのように製造されたのか",
+          "summary": "手鋳造グリッドと木製セパレーターから現代のAGMまで、100年以上にわたる材料・設備・ロット管理の変化をたどります。",
+          "intro": "1912年、1921年、1939年という記録は、華資による生産、産業の起点、専門工場という異なる基準を示しています。『最初』を論じる前に定義を分ける必要があります。",
+          "sections": [
+            [
+              "三つの年代",
+              "1912年・1921年・1939年は必ずしも矛盾しません",
+              "上海の地方誌は1912年の華資による自動車用蓄電池生産を記録し、業界資料は1921年を産業の起点とし、瀋陽の公式計画は1939年設立の工場を最初の鉛蓄電池工場としています。それぞれ対象範囲が異なります。"
+            ],
+            [
+              "初期製造",
+              "厚い手鋳造グリッドと技能依存の工程",
+              "グリッドは手作業で鋳造され、ペースト充填、極板処理、化成、群組立は現在の連続設備とは大きく異なりました。槽には内張り木材、硬質ゴム、ガラス、セパレーターには木材、硬質ゴム、セルロイド、ガラスなどが使われました。"
+            ],
+            [
+              "工程管理",
+              "基本工程は似ていても測定と制御は限定的でした",
+              "グリッド、活物質、熟成、化成、極板群、注液、試験という流れはありましたが、均一性、乾燥、化成状態は作業者の経験に大きく左右されました。"
+            ],
+            [
+              "工業化",
+              "専門工場は目標を再現性へ変えました",
+              "設備と試験が標準化されると、一個の使用可能な電池を作るだけでは不十分になり、複数ロットで寸法、組立性、性能、納期を再現する必要が生まれました。"
+            ],
+            [
+              "セパレーターの進化",
+              "木材から微多孔材料、AGMガラス繊維へ",
+              "木材の後、微多孔ゴム、焼結PVC、PE、PPが耐酸性、強度、空孔制御を改善しました。1960年代後半には極細ガラス繊維紙がVRLA-AGMの基盤となりました。"
+            ],
+            [
+              "現代製造",
+              "高速ラインほど材料差が顕在化します",
+              "現代では厚さ、坪量、吸液、圧縮、ロール幅、シート寸法をロット単位で管理します。掲載写真はVikingの現代AGM生産資料であり、歴史写真ではありません。"
+            ]
+          ],
+          "parameters": [
+            [
+              "1912",
+              "地方誌が記録する上海での華資自動車用蓄電池生産。"
+            ],
+            [
+              "1921",
+              "業界資料が採用する中国鉛蓄電池産業の起点。"
+            ],
+            [
+              "1939",
+              "瀋陽公式資料における専門工場の節目。"
+            ],
+            [
+              "1967–1971",
+              "極細ガラス繊維VRLAの開発と市場投入。"
+            ],
+            [
+              "現在",
+              "機械化生産、検査、ロット一貫性管理。"
+            ]
+          ],
+          "checklist": [
+            "VRLA電池用途",
+            "目標厚さと圧縮状態",
+            "ロール幅またはシート寸法",
+            "試験法と公差",
+            "サンプルまたは量産段階"
+          ]
         }
       },
       "comparison": {
@@ -20802,6 +21364,64 @@
             "https://news.smm.cn/news/103776664"
           ]
         ]
+      },
+      "earlyLeadAcidTimeline": {
+        "eyebrow": "製造年表",
+        "title": "異なる定義を示す五つの節目",
+        "note": "以下の年代は単一の絶対的な『最初』を主張するものではありません。",
+        "items": [
+          [
+            "1912",
+            "地方誌が記録する上海での華資自動車用蓄電池生産。"
+          ],
+          [
+            "1921",
+            "業界資料が採用する中国鉛蓄電池産業の起点。"
+          ],
+          [
+            "1939",
+            "瀋陽公式資料における専門工場の節目。"
+          ],
+          [
+            "1967–1971",
+            "極細ガラス繊維VRLAの開発と市場投入。"
+          ],
+          [
+            "現在",
+            "機械化生産、検査、ロット一貫性管理。"
+          ]
+        ]
+      },
+      "earlyLeadAcidReferences": {
+        "eyebrow": "参考資料",
+        "title": "歴史・技術資料",
+        "text": "初期製造の定義は資料ごとに異なります。上海地方誌は公開ミラーへのリンクです。",
+        "items": [
+          [
+            "Shanghai Gazetteer — public mirror of the 1912 record",
+            "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+          ],
+          [
+            "SMM — development of lead-acid battery technology in China",
+            "https://news.smm.cn/news/102815366"
+          ],
+          [
+            "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+            "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+          ],
+          [
+            "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+            "https://doi.org/10.1016/0378-7753(93)80038-Q"
+          ],
+          [
+            "Lead-Acid Batteries: Science and Technology",
+            "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+          ],
+          [
+            "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+            "https://doi.org/10.1016/S0378-7753(96)02516-5"
+          ]
+        ]
       }
     },
     "es": {
@@ -20842,7 +21462,7 @@
         "eyebrow": "Centro de recursos de separadores AGM",
         "title": "Recursos técnicos para compradores de separadores AGM",
         "subtitle": "Guías prácticas sobre parámetros, fabricación, calidad y aplicaciones para preparar especificaciones, muestras y conversaciones con proveedores.",
-        "count": "9 artículos técnicos",
+        "count": "10 artículos técnicos",
         "actionEyebrow": "Iniciar una conversación de compra",
         "actionTitle": "De la investigación a la revisión de especificaciones",
         "actionText": "Comparta la información disponible o revise el PDF técnico EN/ZH antes de contactar a nuestro equipo.",
@@ -21382,6 +22002,72 @@
             "Método de ensayo y aceptación",
             "Etapa de muestra y volumen esperado"
           ]
+        },
+        "earlyChinaLeadAcidBatteryManufacturing": {
+          "title": "Cómo se fabricaron las primeras baterías de plomo-ácido en China",
+          "summary": "De rejillas coladas a mano y separadores de madera al AGM moderno: más de un siglo de cambios en materiales, equipos y control de lotes.",
+          "intro": "Los años 1912, 1921 y 1939 responden a definiciones distintas: producción de capital chino, inicio de una industria y fabricación especializada en fábrica. Hay que definir ‘primera’ antes de comparar las fechas.",
+          "sections": [
+            [
+              "Tres fechas",
+              "1912, 1921 y 1939 no son necesariamente contradictorios",
+              "La gaceta de Shanghái registra producción china de baterías automotrices en 1912; una fuente sectorial usa 1921 como inicio de la industria; y un plan oficial de Shenyang describe la fábrica fundada en 1939 como la primera fábrica de baterías de plomo-ácido. El alcance de cada fuente es diferente."
+            ],
+            [
+              "Fabricación inicial",
+              "Rejillas gruesas coladas a mano y procesos dependientes del oficio",
+              "Las rejillas solían colarse manualmente. El empastado, tratamiento, formación y montaje estaban lejos de las líneas continuas actuales. Se usaban recipientes de madera revestida, caucho duro o vidrio, y separadores de madera, caucho duro, celuloide o vidrio."
+            ],
+            [
+              "Control del proceso",
+              "La secuencia era reconocible, pero la medición era limitada",
+              "Rejilla, material activo, curado, formación, agrupado, llenado y prueba ya formaban una secuencia básica. La uniformidad, el secado y la formación dependían en gran medida de la experiencia del operario."
+            ],
+            [
+              "Industrialización",
+              "La fábrica especializada cambió el objetivo hacia la repetibilidad",
+              "Con equipos y ensayos más normalizados ya no bastaba producir una batería utilizable. Dimensiones, montaje, desempeño y entrega debían repetirse entre lotes."
+            ],
+            [
+              "Evolución del separador",
+              "De la madera a materiales microporosos y fibra de vidrio AGM",
+              "Después de la madera se adoptaron caucho microporoso, PVC sinterizado, PE y PP para controlar mejor resistencia al ácido, fuerza y poros. Desde finales de los años sesenta, el papel de microfibra de vidrio sustentó la arquitectura VRLA-AGM."
+            ],
+            [
+              "Producción moderna",
+              "Una línea más rápida hace más visible la variación",
+              "Espesor, gramaje, absorción, compresión, ancho de rollo y dimensiones de lámina se controlan por lote. Las imágenes de la página muestran producción AGM moderna de Viking; no son fotografías históricas."
+            ]
+          ],
+          "parameters": [
+            [
+              "1912",
+              "Producción china de baterías automotrices registrada en una gaceta local."
+            ],
+            [
+              "1921",
+              "Inicio sectorial empleado por una fuente de la industria."
+            ],
+            [
+              "1939",
+              "Hito de fábrica especializada en una fuente oficial de Shenyang."
+            ],
+            [
+              "1967–1971",
+              "Desarrollo y lanzamiento de VRLA con microfibra de vidrio."
+            ],
+            [
+              "Actualidad",
+              "Producción mecanizada, inspección y consistencia por lotes."
+            ]
+          ],
+          "checklist": [
+            "Aplicación de la batería VRLA",
+            "Espesor y compresión objetivo",
+            "Ancho de rollo o tamaño de lámina",
+            "Método de ensayo y tolerancias",
+            "Etapa de muestra o producción"
+          ]
         }
       },
       "comparison": {
@@ -21454,6 +22140,64 @@
           [
             "SMM — lead-acid batteries in storage and base-station backup",
             "https://news.smm.cn/news/103776664"
+          ]
+        ]
+      },
+      "earlyLeadAcidTimeline": {
+        "eyebrow": "Cronología industrial",
+        "title": "Cinco hitos con definiciones diferentes",
+        "note": "Estas fechas no pretenden establecer una única respuesta absoluta a la palabra ‘primera’.",
+        "items": [
+          [
+            "1912",
+            "Producción china de baterías automotrices registrada en una gaceta local."
+          ],
+          [
+            "1921",
+            "Inicio sectorial empleado por una fuente de la industria."
+          ],
+          [
+            "1939",
+            "Hito de fábrica especializada en una fuente oficial de Shenyang."
+          ],
+          [
+            "1967–1971",
+            "Desarrollo y lanzamiento de VRLA con microfibra de vidrio."
+          ],
+          [
+            "Actualidad",
+            "Producción mecanizada, inspección y consistencia por lotes."
+          ]
+        ]
+      },
+      "earlyLeadAcidReferences": {
+        "eyebrow": "Referencias",
+        "title": "Fuentes históricas y técnicas",
+        "text": "Las fuentes utilizan definiciones distintas para la producción inicial. La gaceta de Shanghái se enlaza mediante una copia pública.",
+        "items": [
+          [
+            "Shanghai Gazetteer — public mirror of the 1912 record",
+            "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+          ],
+          [
+            "SMM — development of lead-acid battery technology in China",
+            "https://news.smm.cn/news/102815366"
+          ],
+          [
+            "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+            "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+          ],
+          [
+            "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+            "https://doi.org/10.1016/0378-7753(93)80038-Q"
+          ],
+          [
+            "Lead-Acid Batteries: Science and Technology",
+            "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+          ],
+          [
+            "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+            "https://doi.org/10.1016/S0378-7753(96)02516-5"
           ]
         ]
       }
@@ -31419,6 +32163,1808 @@
         }
       }
     },
+    "earlyChinaLeadAcidBatteryManufacturing": {
+      "en": {
+        "nav": {
+          "company": "Company",
+          "products": "Products",
+          "applications": "Applications",
+          "quality": "Quality",
+          "resources": "Resources",
+          "contact": "Contact"
+        },
+        "language": "中文",
+        "homePath": "/",
+        "languagePath": "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Request Sample",
+        "hero": {
+          "eyebrow": "Manufacturing History",
+          "title": "How China’s Earliest Lead-Acid Batteries Were Made",
+          "subtitle": "From hand-cast grids and wooden separators to modern AGM, more than a century of manufacturing change is contained inside a lead-acid battery.",
+          "primary": "Request a Sample & Specification Match",
+          "secondary": "Review the timeline",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "Modern Viking AGM separator production line",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "Search for the beginning of lead-acid battery manufacturing in China and several dates appear. The Shanghai Gazetteer records Chinese-owned automotive battery production in 1912, an industry source uses 1921 as an industrial starting point, and an official Shenyang plan describes a specialized factory founded in 1939.",
+          "These accounts use different definitions rather than proving one universal ‘first’. This article separates those definitions, explains the early production sequence and follows the separator’s development from wood and microporous materials to AGM. The factory photographs shown here document modern Viking production; they are not historical images."
+        ],
+        "timeline": {
+          "eyebrow": "Manufacturing Timeline",
+          "title": "Five milestones, each answering a different historical question",
+          "note": "Company founding, an industry starting point and specialized factory production are different criteria. The dates below should not be read as a single absolute claim.",
+          "items": [
+            [
+              "1912",
+              "The Shanghai Gazetteer records Hu Guoguang founding the China Storage Battery Factory and producing automotive batteries."
+            ],
+            [
+              "1921",
+              "An industry source uses the Shanghai-based factory as the starting point of China’s lead-acid battery industry."
+            ],
+            [
+              "1939",
+              "An official Shenyang plan describes the founded Shenyang Storage Battery Factory as a specialized lead-acid battery manufacturing milestone."
+            ],
+            [
+              "1967–1971",
+              "Microglass-fiber VRLA development began in 1967 and related products entered the market four years later."
+            ],
+            [
+              "Today",
+              "Mechanized production, agreed test methods and batch management replace one-off manual adjustment."
+            ]
+          ]
+        },
+        "sections": [
+          {
+            "eyebrow": "Different Definitions",
+            "title": "Why 1912, 1921 and 1939 do not necessarily conflict",
+            "text": "Early factory history is distributed across local gazetteers, industry reviews and official planning records. One source identifies Chinese-owned automotive battery production, another chooses an industry starting point and a third emphasizes specialized, systematic factory production. The useful conclusion is not a single slogan about the ‘first’ factory, but a sequence in which local production appeared before larger-scale professional manufacturing took shape."
+          },
+          {
+            "eyebrow": "Early Materials",
+            "title": "Hand-cast grids, pasted plates and containers made from wood, rubber or glass",
+            "text": "Historical battery literature describes relatively thick grids, manual or semi-manual pasting, plate treatment, formation and element assembly. Containers could use lined wood, hard rubber or glass. Separators included wood, hard rubber, celluloid and glass. Each separator still had to prevent plate contact while allowing ionic movement, but acid resistance, dimensional consistency and long-term stability were difficult to control together."
+          },
+          {
+            "eyebrow": "Process Control",
+            "title": "The production sequence was familiar, but repeatability depended heavily on experience",
+            "text": "Grids received active material, plates were cured and formed, and positive and negative plates were grouped with separators before electrolyte filling, charging and testing. What differed was the available measurement and control. Natural wooden separators varied in thickness, porosity and strength, so small batches could be selected and trimmed by hand. That approach became impractical as output increased."
+          },
+          {
+            "eyebrow": "Industrial Production",
+            "title": "Specialized factories changed the objective from one usable battery to repeatable batches",
+            "text": "The 1939 Shenyang milestone represents the rise of a more specialized factory system, not proof that earlier production did not exist. As the industry expanded, grid dimensions, mixing, pasting, curing, formation, grouping, acid filling and initial charging increasingly followed equipment-based requirements. Dedicated capacity and discharge testing made consistent delivery for vehicles and industrial equipment more achievable."
+          },
+          {
+            "eyebrow": "Separator Evolution",
+            "title": "From wood and microporous synthetics to a separator that participates in VRLA operation",
+            "text": "The industry adopted microporous rubber, sintered PVC, polyethylene and polypropylene as materials became more controllable and scalable. AGM changed the separator’s role again. In a VRLA-AGM battery, ultrafine glass fibers retain electrolyte, maintain ionic pathways, support oxygen transfer and help hold the plates in the intended compressed state. AGM is therefore part of the internal operating mechanism, not only a physical barrier."
+          },
+          {
+            "eyebrow": "Modern Manufacturing",
+            "title": "Faster lines make material and batch variation more visible",
+            "text": "Modern grid, pasting, curing, assembly, formation and testing processes are increasingly mechanized. A continuous line cannot pause to trim every separator individually. Differences in AGM thickness, basis weight, absorption, compression behavior, roll width or sheet dimensions can create setup changes, inspection and rework. Today the practical requirement is to carry an agreed specification consistently from sample validation into recurring supply."
+          }
+        ],
+        "parameters": [
+          [
+            "Battery application",
+            "Define the VRLA battery use and operating conditions before selecting a separator."
+          ],
+          [
+            "Compression design",
+            "Review nominal thickness together with the intended wet and compressed state."
+          ],
+          [
+            "Roll or sheet dimensions",
+            "Confirm width, core, roll diameter or finished sheet size for the assembly process."
+          ],
+          [
+            "Test method",
+            "Compare samples and batches using agreed conditions and tolerances."
+          ],
+          [
+            "Project stage",
+            "Separate initial sample requirements from pilot and recurring volume supply."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Modern Manufacturing Evidence",
+          "title": "Current Viking production materials — not historical photographs",
+          "items": [
+            [
+              "AGM separator rolls",
+              "Modern roll production requires controlled width, winding and handling for repeatable assembly.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Modern Viking AGM separator roll"
+            ],
+            [
+              "Quality inspection",
+              "Agreed methods help compare dimensions and functional characteristics across samples and batches.",
+              "/images/agm-quality-control-1200.webp",
+              "Modern Viking AGM separator inspection"
+            ],
+            [
+              "Packing and shipment",
+              "Identification, moisture protection and pallet handling support consistent downstream use.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "Modern Viking AGM separator packing"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Specification Review",
+          "title": "Move from manufacturing history to a testable AGM separator specification",
+          "text": "Modern repeatability starts with the battery design and a shared test basis, not with nominal thickness alone.",
+          "items": [
+            "VRLA battery application",
+            "Target thickness and compression",
+            "Roll width or sheet dimensions",
+            "Test method and tolerance",
+            "Sample or volume stage"
+          ]
+        },
+        "references": {
+          "eyebrow": "References",
+          "title": "Historical scope and technical sources",
+          "text": "The sources use different definitions for early manufacturing. The Shanghai Gazetteer is linked through a public mirror. Unverified claims about workforce, hand-cranked formation equipment and annual output are not used as established facts.",
+          "items": [
+            [
+              "Shanghai Gazetteer — public mirror of the 1912 record",
+              "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+            ],
+            [
+              "SMM — development of lead-acid battery technology in China",
+              "https://news.smm.cn/news/102815366"
+            ],
+            [
+              "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+              "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+            ],
+            [
+              "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+              "https://doi.org/10.1016/0378-7753(93)80038-Q"
+            ],
+            [
+              "Lead-Acid Batteries: Science and Technology",
+              "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+            ],
+            [
+              "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+              "https://doi.org/10.1016/S0378-7753(96)02516-5"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Related Pages",
+          "title": "Continue with modern AGM manufacturing, testing and specification guidance",
+          "items": [
+            [
+              "AGM Separator Manufacturing, Quality and Delivery",
+              "/blog/agm-separator-manufacturing-quality-delivery/"
+            ],
+            [
+              "Why AGM Separator Consistency Matters",
+              "/blog/agm-separator-performance-consistency/"
+            ],
+            [
+              "What Is an AGM Separator?",
+              "/blog/what-is-agm-separator/"
+            ],
+            [
+              "AGM Separator Testing",
+              "/quality-control/agm-separator-testing/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Inquiry",
+          "title": "Review an AGM separator for your VRLA battery design",
+          "text": "Share the battery application, target thickness, roll or sheet dimensions and current project stage. We can begin with specification matching and sample review.",
+          "checklist": [
+            "Battery application",
+            "Thickness and compression",
+            "Roll or sheet dimensions",
+            "Sample and volume stage"
+          ],
+          "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+          },
+          "placeholders": {
+            "name": "Your full name",
+            "company": "Company name",
+            "email": "name@company.com",
+            "country": "Country / region",
+            "application": "VRLA, UPS, telecom, motorcycle...",
+            "message": "Battery application, target thickness, compression, roll or sheet dimensions, test method and project stage"
+          },
+          "submit": "Send Inquiry",
+          "submitting": "Sending...",
+          "required": "Please complete all required fields before submitting.",
+          "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+          "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+          "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+        },
+        "footer": {
+          "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+          "wechat": "Official WeChat account",
+          "mobile": "Mobile website"
+        }
+      },
+      "zh": {
+        "nav": {
+          "company": "公司",
+          "products": "产品",
+          "applications": "应用",
+          "quality": "质量",
+          "resources": "资料",
+          "contact": "联系"
+        },
+        "language": "EN",
+        "homePath": "/zh/",
+        "languagePath": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "brandName": "湖北维京科技有限公司",
+        "quote": "申请样品",
+        "hero": {
+          "eyebrow": "制造历史",
+          "title": "中国早期铅酸蓄电池是怎样制造的？",
+          "subtitle": "从手工铸造板栅、木质隔板到现代 AGM，一只铅酸蓄电池里浓缩了一个多世纪的制造变化。",
+          "primary": "申请样品与规格匹配",
+          "secondary": "查看历史时间线",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "湖北维京现代 AGM 隔板生产线",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "查找中国铅酸蓄电池制造的起点，会看到 1912、1921 和 1939 三种说法。上海地方志记载了 1912 年的华资汽车蓄电池生产，行业资料将 1921 年作为产业起点，而沈阳官方规划把 1939 年创办的工厂描述为专业化铅酸蓄电池制造的重要起点。",
+          "这些资料采用的是企业创办、行业起点和专业化工厂三种不同标准，并不适合压缩成一个绝对的‘唯一第一’。本文梳理早期制造流程和隔板材料演进。页面中的维京工厂图片均为现代 AGM 生产资料，不是历史影像。"
+        ],
+        "timeline": {
+          "eyebrow": "制造时间线",
+          "title": "五个节点，对应不同的历史判断标准",
+          "note": "企业创办、行业起点和专业化工厂不是同一个概念，下列年份不用于宣称唯一公认的‘第一家’。",
+          "items": [
+            [
+              "1912",
+              "上海地方志记载胡国光创办中国蓄电池厂，并开始生产汽车蓄电池。"
+            ],
+            [
+              "1921",
+              "行业资料采用上海中国蓄电池厂作为中国铅酸蓄电池产业起点。"
+            ],
+            [
+              "1939",
+              "沈阳官方规划将当年创办的沈阳蓄电池厂视为专业化制造的重要节点。"
+            ],
+            [
+              "1967–1971",
+              "采用微玻璃纤维隔板的 VRLA 技术于 1967 年开始开发，相关产品四年后进入市场。"
+            ],
+            [
+              "今天",
+              "机械化生产、约定检测方法和批次管理取代一次性的人工调整。"
+            ]
+          ]
+        },
+        "sections": [
+          {
+            "eyebrow": "不同口径",
+            "title": "1912、1921 和 1939 为什么不一定互相冲突",
+            "text": "早期工厂史分散在地方志、行业回顾和官方规划中。不同资料分别强调华资汽车蓄电池生产、行业起点和专业化系统生产。更稳妥的理解是：本地制造先在上海出现，随后专业化和规模化工厂体系逐步形成，而不是用一句‘唯一第一’覆盖所有历史口径。"
+          },
+          {
+            "eyebrow": "早期材料",
+            "title": "手工铸造板栅、涂膏极板，以及木材、硬橡胶或玻璃容器",
+            "text": "专业资料显示，早期产品常使用较厚板栅，涂膏、极板处理、化成和极群装配远没有今天的连续设备。电池槽可使用衬里的木材、硬橡胶或玻璃，隔板材料包括木材、硬橡胶、赛璐珞和玻璃。隔板同样要阻止极板接触并保持离子通道，但耐酸、尺寸一致和长期稳定很难同时控制。"
+          },
+          {
+            "eyebrow": "过程控制",
+            "title": "基本流程并不陌生，但可重复性高度依赖经验",
+            "text": "板栅填入活性物质后，极板经过固化和化成，再与隔板组成极群，随后装槽、加酸、充电和检测。区别在于当时可用的测量和控制手段有限。天然木质隔板的厚度、孔隙和强度存在差异，小批量还能逐片挑选和修整，产量增加后便难以继续依靠这种方式。"
+          },
+          {
+            "eyebrow": "工业化生产",
+            "title": "专业工厂把目标从做出一只可用电池变成连续生产稳定批次",
+            "text": "1939 年沈阳的节点代表更专业化的工厂体系出现，并不否认此前已有生产。随着行业发展，板栅尺寸、混膏、涂板、固化、化成、装配、加酸和初充电逐步纳入设备和工艺要求。容量及放电检测也更专门化，工厂开始面对连续批次能否按同一条件装配、测试和交付的问题。"
+          },
+          {
+            "eyebrow": "隔板演进",
+            "title": "从木材和微孔合成材料，到参与 VRLA 内部工作的 AGM",
+            "text": "木质隔板之后，行业使用过微孔橡胶、烧结 PVC、聚乙烯和聚丙烯等材料。AGM 再次改变了隔板角色：在 VRLA-AGM 电池中，超细玻璃纤维孔隙吸附电解液、保持离子通道、支持氧气传输，并帮助极板维持设计压缩状态。它不再只是物理阻隔，而是电池内部运行机制的一部分。"
+          },
+          {
+            "eyebrow": "现代制造",
+            "title": "生产线越快，材料和批次波动越容易被放大",
+            "text": "现代板栅、涂板、固化、装配、化成和检测越来越机械化。连续生产线无法像早期工人那样逐片修整隔板。AGM 的厚度、克重、吸液、受压表现、卷材宽度或片材尺寸发生波动，都可能带来调机、复检和返工。今天更重要的是把确认后的规格从样品验证持续延续到后续批次。"
+          }
+        ],
+        "parameters": [
+          [
+            "电池应用",
+            "先明确 VRLA 电池用途和运行工况，再讨论隔板规格。"
+          ],
+          [
+            "压缩设计",
+            "把标称厚度与吸液后的受压状态一起评估。"
+          ],
+          [
+            "卷材或片材尺寸",
+            "确认宽度、纸管、卷径或成品片材尺寸是否适合装配。"
+          ],
+          [
+            "检测方法",
+            "使用双方约定的条件和公差比较样品及后续批次。"
+          ],
+          [
+            "项目阶段",
+            "区分初始样品、试产和持续批量供货要求。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "现代制造资料",
+          "title": "以下为维京当前生产资料，不是历史影像",
+          "items": [
+            [
+              "AGM 隔板卷材",
+              "现代卷材生产需要稳定控制宽度、收卷和搬运要求。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "湖北维京现代 AGM 隔板卷材"
+            ],
+            [
+              "质量检测",
+              "按约定方法对比样品和批次的尺寸及功能指标。",
+              "/images/agm-quality-control-1200.webp",
+              "湖北维京现代 AGM 隔板检测"
+            ],
+            [
+              "包装与出运",
+              "标识、防潮和托盘搬运也是重复稳定使用的一部分。",
+              "/images/evidence/shipping-pallet-01.webp",
+              "湖北维京现代 AGM 隔板包装"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "规格确认",
+          "title": "从制造历史回到可测试的 AGM 隔板规格",
+          "text": "现代批次稳定从电池设计和共同检测基础开始，而不只看一个标称厚度。",
+          "items": [
+            "VRLA 电池应用",
+            "目标厚度与压缩设计",
+            "卷材宽度或片材尺寸",
+            "检测方法与公差",
+            "样品或批量阶段"
+          ]
+        },
+        "references": {
+          "eyebrow": "参考资料",
+          "title": "历史口径与技术资料说明",
+          "text": "不同来源对早期制造采用不同定义。上海地方志链接为公开镜像版本。未经匹配原始厂史证实的工人数、手摇发电机和年产量说法，不作为本文正式事实。",
+          "items": [
+            [
+              "Shanghai Gazetteer — public mirror of the 1912 record",
+              "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+            ],
+            [
+              "SMM — development of lead-acid battery technology in China",
+              "https://news.smm.cn/news/102815366"
+            ],
+            [
+              "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+              "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+            ],
+            [
+              "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+              "https://doi.org/10.1016/0378-7753(93)80038-Q"
+            ],
+            [
+              "Lead-Acid Batteries: Science and Technology",
+              "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+            ],
+            [
+              "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+              "https://doi.org/10.1016/S0378-7753(96)02516-5"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "相关页面",
+          "title": "继续了解现代 AGM 制造、检测与规格选择",
+          "items": [
+            [
+              "AGM 隔板生产、质量与交付",
+              "/zh/blog/agm-separator-manufacturing-quality-delivery/"
+            ],
+            [
+              "AGM 隔板一致性为什么重要",
+              "/zh/blog/agm-separator-performance-consistency/"
+            ],
+            [
+              "什么是 AGM 隔板？",
+              "/zh/blog/what-is-agm-separator/"
+            ],
+            [
+              "AGM 隔板检测",
+              "/zh/quality-control/agm-separator-testing/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "询盘",
+          "title": "确认 VRLA 电池设计所需的 AGM 隔板",
+          "text": "请提供电池应用、目标厚度、卷材或片材尺寸和当前项目阶段，我们可以从规格匹配与样品评审开始沟通。",
+          "checklist": [
+            "电池应用",
+            "厚度与压缩",
+            "卷材或片材尺寸",
+            "样品与批量阶段"
+          ],
+          "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+          },
+          "placeholders": {
+            "name": "您的姓名",
+            "company": "公司名称",
+            "email": "name@company.com",
+            "country": "国家或地区",
+            "application": "VRLA、UPS、通信、摩托车等",
+            "message": "电池应用、目标厚度、压缩设计、卷材或片材尺寸、检测方法和项目阶段"
+          },
+          "submit": "发送询盘",
+          "submitting": "发送中...",
+          "required": "请先填写所有必填字段。",
+          "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+          "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+          "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+        },
+        "footer": {
+          "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+          "wechat": "官方微信公众号",
+          "mobile": "移动官网"
+        }
+      },
+      "vi": {
+        "nav": {
+          "company": "Công ty",
+          "products": "Sản phẩm",
+          "quality": "Chất lượng",
+          "resources": "Tài liệu",
+          "applications": "Ứng dụng",
+          "contact": "Liên hệ"
+        },
+        "language": "VI",
+        "homePath": "/vi/",
+        "languagePath": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Yêu cầu mẫu",
+        "hero": {
+          "eyebrow": "Hướng dẫn kỹ thuật AGM",
+          "title": "Những ắc quy chì-axit đầu tiên tại Trung Quốc được sản xuất như thế nào?",
+          "subtitle": "Từ lưới cực đúc thủ công và tấm ngăn gỗ đến AGM hiện đại: cách vật liệu, thiết bị và kiểm soát lô đã thay đổi hơn một thế kỷ.",
+          "primary": "Yêu cầu mẫu và đối chiếu thông số",
+          "secondary": "Xem danh sách kiểm tra mua hàng",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "Những ắc quy chì-axit đầu tiên tại Trung Quốc được sản xuất như thế nào?",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "Các mốc 1912, 1921 và 1939 xuất hiện trong những nguồn tư liệu khác nhau vì chúng mô tả các khái niệm khác nhau: sản xuất do người Trung Quốc vận hành, điểm khởi đầu của ngành và nhà máy chuyên môn hóa. Vì vậy cần xác định rõ tiêu chí trước khi nói đến ‘đầu tiên’.",
+          "Từ lưới cực đúc thủ công và tấm ngăn gỗ đến AGM hiện đại: cách vật liệu, thiết bị và kiểm soát lô đã thay đổi hơn một thế kỷ."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Ba mốc lịch sử",
+            "title": "1912, 1921 và 1939 không nhất thiết mâu thuẫn",
+            "text": "Địa chí Thượng Hải ghi nhận hoạt động sản xuất ắc quy ô tô do doanh nghiệp Trung Quốc tổ chức từ năm 1912; tài liệu ngành dùng năm 1921 làm điểm khởi đầu; còn quy hoạch chính thức của Thẩm Dương gọi nhà máy thành lập năm 1939 là nhà máy ắc quy chì-axit đầu tiên. Mỗi nguồn đang dùng một phạm vi khác nhau."
+          },
+          {
+            "eyebrow": "Sản xuất ban đầu",
+            "title": "Lưới cực dày và nhiều công đoạn phụ thuộc vào tay nghề",
+            "text": "Lưới cực thường được đúc thủ công; trát cao, xử lý bản cực, hóa thành và lắp bộ cực chưa có thiết bị liên tục như ngày nay. Thùng có thể dùng gỗ lót, cao su cứng hoặc thủy tinh, còn tấm ngăn gồm gỗ, cao su cứng, celluloid và thủy tinh."
+          },
+          {
+            "eyebrow": "Kiểm soát quá trình",
+            "title": "Trình tự quen thuộc nhưng khả năng đo lường còn hạn chế",
+            "text": "Đúc lưới, trát cao, đóng rắn, hóa thành, ghép bản cực, châm điện phân và thử nghiệm đã tạo thành chuỗi sản xuất cơ bản. Tuy nhiên độ đồng đều, độ khô và mức hóa thành còn phụ thuộc nhiều vào kinh nghiệm của người vận hành."
+          },
+          {
+            "eyebrow": "Công nghiệp hóa",
+            "title": "Sản xuất chuyên môn hóa chuyển mục tiêu sang khả năng lặp lại",
+            "text": "Khi thiết bị và phương pháp thử được chuẩn hóa hơn, nhà máy không chỉ cần làm ra một bình dùng được mà phải duy trì kích thước, lắp ráp, hiệu suất và lịch giao giữa nhiều lô."
+          },
+          {
+            "eyebrow": "Tiến hóa tấm ngăn",
+            "title": "Từ gỗ đến vật liệu vi xốp và sợi thủy tinh AGM",
+            "text": "Sau tấm ngăn gỗ, ngành sử dụng cao su vi xốp, PVC thiêu kết, PE và PP để kiểm soát tốt hơn độ bền axit, cơ tính và lỗ rỗng. Từ cuối thập niên 1960, giấy sợi thủy tinh siêu mịn trở thành nền tảng của hệ VRLA-AGM."
+          },
+          {
+            "eyebrow": "Sản xuất hiện đại",
+            "title": "Tốc độ dây chuyền càng cao, sai khác vật liệu càng dễ lộ rõ",
+            "text": "Trong sản xuất hiện đại, độ dày, định lượng, hút chất lỏng, nén, khổ cuộn và kích thước tấm phải được kiểm soát theo lô. Hình ảnh trên trang là tư liệu sản xuất AGM hiện đại của Viking, không phải ảnh lịch sử."
+          }
+        ],
+        "parameters": [
+          [
+            "1912",
+            "Sản xuất ắc quy ô tô do doanh nghiệp Trung Quốc tại Thượng Hải theo địa chí."
+          ],
+          [
+            "1921",
+            "Mốc khởi đầu ngành được một tài liệu ngành sử dụng."
+          ],
+          [
+            "1939",
+            "Mốc nhà máy chuyên môn hóa theo tài liệu chính thức của Thẩm Dương."
+          ],
+          [
+            "1967–1971",
+            "Phát triển pin VRLA dùng giấy sợi thủy tinh siêu mịn và đưa sản phẩm ra thị trường."
+          ],
+          [
+            "Hiện nay",
+            "Sản xuất cơ giới hóa, kiểm tra và quản lý nhất quán theo lô."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Dạng cung cấp",
+          "title": "Chọn dạng cuộn hoặc tấm theo quy trình sản xuất",
+          "items": [
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "Phù hợp dây chuyền liên tục, chia cuộn hoặc cắt nội bộ trước khi lắp ráp.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Tấm ngăn AGM dạng cuộn"
+            ],
+            [
+              "Chất lượng",
+              "Thông tin rõ ràng giúp đánh giá mẫu và trao đổi thông số hiệu quả hơn.",
+              "/images/agm-quality-control-1200.webp",
+              "Chất lượng"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "Phù hợp khi cần kích thước cắt sẵn để đơn giản hóa khâu chuẩn bị lắp ráp.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "Tấm ngăn AGM dạng tấm"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Kiểm tra mua hàng",
+          "title": "Xác nhận yêu cầu trước khi lấy mẫu",
+          "text": "Thông tin rõ ràng giúp đánh giá mẫu và trao đổi thông số hiệu quả hơn.",
+          "items": [
+            "Ứng dụng ắc quy VRLA",
+            "Độ dày và trạng thái nén mục tiêu",
+            "Khổ cuộn hoặc kích thước tấm",
+            "Phương pháp thử và dung sai",
+            "Giai đoạn mẫu hoặc sản xuất hàng loạt"
+          ]
+        },
+        "related": {
+          "eyebrow": "Tài liệu liên quan",
+          "title": "Tiếp tục đánh giá sản phẩm và nhà cung cấp",
+          "items": [
+            [
+              "Tấm ngăn AGM là gì?",
+              "/vi/blog/what-is-agm-separator/"
+            ],
+            [
+              "Các thông số kỹ thuật chính của tấm ngăn AGM",
+              "/vi/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Cách lựa chọn tấm ngăn AGM",
+              "/vi/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Tấm ngăn sợi thủy tinh AGM và tấm ngăn PVC khác nhau thế nào?",
+              "/vi/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Trao đổi thông số",
+          "title": "Gửi yêu cầu ứng dụng và kích thước",
+          "text": "Chia sẻ thông tin bạn đã có. Chúng tôi sẽ trao đổi về dạng sản phẩm, mẫu thử và khả năng phối hợp.",
+          "checklist": [
+            "Ứng dụng và loại ắc quy",
+            "Độ dày, chiều rộng hoặc kích thước tấm",
+            "Dạng cuộn hoặc tấm và yêu cầu đóng gói"
+          ],
+          "placeholders": {
+            "message": "Mô tả ứng dụng, thông số mục tiêu, số lượng mẫu hoặc yêu cầu đóng gói."
+          }
+        },
+        "footer": {
+          "description": "Tấm ngăn sợi thủy tinh AGM dạng cuộn và tấm cho nhà sản xuất ắc quy VRLA.",
+          "wechat": "Theo dõi tài khoản WeChat của Viking AGM",
+          "mobile": "Truy cập trang web Viking AGM trên điện thoại"
+        },
+        "timeline": {
+          "eyebrow": "Mốc sản xuất",
+          "title": "Năm mốc cho các định nghĩa khác nhau",
+          "note": "Các mốc dưới đây không khẳng định một đáp án duy nhất cho khái niệm ‘đầu tiên’.",
+          "items": [
+            [
+              "1912",
+              "Sản xuất ắc quy ô tô do doanh nghiệp Trung Quốc tại Thượng Hải theo địa chí."
+            ],
+            [
+              "1921",
+              "Mốc khởi đầu ngành được một tài liệu ngành sử dụng."
+            ],
+            [
+              "1939",
+              "Mốc nhà máy chuyên môn hóa theo tài liệu chính thức của Thẩm Dương."
+            ],
+            [
+              "1967–1971",
+              "Phát triển pin VRLA dùng giấy sợi thủy tinh siêu mịn và đưa sản phẩm ra thị trường."
+            ],
+            [
+              "Hiện nay",
+              "Sản xuất cơ giới hóa, kiểm tra và quản lý nhất quán theo lô."
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "Tài liệu tham khảo",
+          "title": "Nguồn lịch sử và kỹ thuật",
+          "text": "Nguồn sử dụng các định nghĩa khác nhau về hoạt động sản xuất ban đầu. Bản địa chí Thượng Hải được liên kết qua bản sao công khai.",
+          "items": [
+            [
+              "Shanghai Gazetteer — public mirror of the 1912 record",
+              "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+            ],
+            [
+              "SMM — development of lead-acid battery technology in China",
+              "https://news.smm.cn/news/102815366"
+            ],
+            [
+              "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+              "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+            ],
+            [
+              "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+              "https://doi.org/10.1016/0378-7753(93)80038-Q"
+            ],
+            [
+              "Lead-Acid Batteries: Science and Technology",
+              "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+            ],
+            [
+              "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+              "https://doi.org/10.1016/S0378-7753(96)02516-5"
+            ]
+          ]
+        }
+      },
+      "ko": {
+        "nav": {
+          "company": "회사",
+          "products": "제품",
+          "quality": "품질",
+          "resources": "자료",
+          "applications": "응용 분야",
+          "contact": "문의"
+        },
+        "language": "KO",
+        "homePath": "/ko/",
+        "languagePath": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "샘플 요청",
+        "hero": {
+          "eyebrow": "AGM 분리막 기술 가이드",
+          "title": "중국의 초기 납축전지는 어떻게 만들어졌을까요?",
+          "subtitle": "수작업 주조 그리드와 목재 분리막에서 현대 AGM까지, 한 세기 넘는 소재·설비·로트 관리의 변화를 살펴봅니다.",
+          "primary": "샘플 및 사양 검토 요청",
+          "secondary": "구매 체크리스트 보기",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "중국의 초기 납축전지는 어떻게 만들어졌을까요?",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "1912년, 1921년, 1939년이라는 연도는 서로 다른 ‘최초’의 정의에서 나옵니다. 중국계 생산의 시작, 산업의 출발점, 전문 공장 생산을 구분해야 초기 역사를 정확히 이해할 수 있습니다.",
+          "수작업 주조 그리드와 목재 분리막에서 현대 AGM까지, 한 세기 넘는 소재·설비·로트 관리의 변화를 살펴봅니다."
+        ],
+        "sections": [
+          {
+            "eyebrow": "세 가지 연도",
+            "title": "1912·1921·1939는 반드시 모순되는 기록이 아닙니다",
+            "text": "상하이 지방지는 1912년 중국계 자동차용 축전지 생산을 기록하고, 산업 자료는 1921년을 산업의 시작으로 보며, 선양의 공식 계획은 1939년 설립 공장을 최초의 납축전지 공장으로 설명합니다. 각 자료의 범위가 다릅니다."
+          },
+          {
+            "eyebrow": "초기 제조",
+            "title": "두꺼운 수작업 그리드와 숙련자 중심의 공정",
+            "text": "그리드는 손으로 주조되는 경우가 많았고 도포, 극판 처리, 화성, 극군 조립은 오늘날의 연속 설비와 거리가 있었습니다. 용기는 라이닝 목재, 경질 고무, 유리를 사용했고 분리막은 목재, 경질 고무, 셀룰로이드, 유리 등이었습니다."
+          },
+          {
+            "eyebrow": "공정 관리",
+            "title": "기본 순서는 익숙했지만 측정과 제어는 제한적이었습니다",
+            "text": "그리드, 활물질, 숙성, 화성, 극판 조립, 전해액 주입, 시험이라는 기본 흐름은 존재했습니다. 다만 균일도, 건조와 화성 완성도는 작업자의 경험에 크게 의존했습니다."
+          },
+          {
+            "eyebrow": "산업화",
+            "title": "전문 공장 생산은 반복 가능성을 목표로 바꾸었습니다",
+            "text": "설비와 시험법이 표준화되면서 한 개의 사용 가능한 전지를 만드는 것만으로는 부족해졌습니다. 여러 로트에서 치수, 조립성, 성능과 납기를 반복해야 했습니다."
+          },
+          {
+            "eyebrow": "분리막 변화",
+            "title": "목재에서 미세다공 소재와 AGM 유리섬유로",
+            "text": "목재 이후 미세다공 고무, 소결 PVC, PE와 PP가 내산성, 강도와 기공 구조 제어를 개선했습니다. 1960년대 후반부터 초미세 유리섬유 종이가 VRLA-AGM 구조의 기반이 되었습니다."
+          },
+          {
+            "eyebrow": "현대 생산",
+            "title": "라인이 빨라질수록 소재 편차는 더 잘 드러납니다",
+            "text": "현대 생산에서는 두께, 평량, 흡액, 압축, 롤 폭과 시트 치수를 로트별로 관리해야 합니다. 페이지의 사진은 Viking의 현대 AGM 생산 자료이며 역사 사진이 아닙니다."
+          }
+        ],
+        "parameters": [
+          [
+            "1912",
+            "지방지에 기록된 상하이 중국계 자동차용 축전지 생산."
+          ],
+          [
+            "1921",
+            "산업 자료가 제시하는 중국 납축전지 산업의 출발점."
+          ],
+          [
+            "1939",
+            "선양 공식 자료의 전문 납축전지 공장 이정표."
+          ],
+          [
+            "1967–1971",
+            "초미세 유리섬유 기반 VRLA 개발과 시장 출시."
+          ],
+          [
+            "현재",
+            "기계화 생산, 검사 및 로트 일관성 관리."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "공급 형태",
+          "title": "생산 공정에 맞는 롤 또는 시트 선택",
+          "items": [
+            [
+              "AGM 분리막 롤",
+              "연속 생산, 슬리팅 또는 조립 전 사내 절단에 적합합니다.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM 분리막 롤"
+            ],
+            [
+              "품질",
+              "명확한 정보는 샘플 평가와 사양 협의를 더 효율적으로 만듭니다.",
+              "/images/agm-quality-control-1200.webp",
+              "품질"
+            ],
+            [
+              "AGM 분리막 시트",
+              "절단된 규격으로 공급하여 조립 준비를 단순화할 때 적합합니다.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGM 분리막 시트"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "구매 확인",
+          "title": "샘플 전에 요구사항 확인",
+          "text": "명확한 정보는 샘플 평가와 사양 협의를 더 효율적으로 만듭니다.",
+          "items": [
+            "VRLA 배터리 용도",
+            "목표 두께와 압축 상태",
+            "롤 폭 또는 시트 치수",
+            "시험법과 공차",
+            "샘플 또는 양산 단계"
+          ]
+        },
+        "related": {
+          "eyebrow": "관련 자료",
+          "title": "제품 및 공급업체 평가 계속하기",
+          "items": [
+            [
+              "AGM 분리막이란 무엇입니까?",
+              "/ko/blog/what-is-agm-separator/"
+            ],
+            [
+              "AGM 분리막의 핵심 기술 파라미터",
+              "/ko/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGM 분리막 선택 방법",
+              "/ko/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "AGM 유리섬유와 PVC 배터리 분리막 비교",
+              "/ko/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "사양 협의",
+          "title": "용도와 치수 요구사항을 보내 주세요",
+          "text": "현재 보유한 정보를 공유하면 제품 형태, 샘플과 공급 가능성을 함께 검토할 수 있습니다.",
+          "checklist": [
+            "배터리 용도와 형식",
+            "두께, 폭 또는 시트 치수",
+            "롤/시트 및 포장 요구사항"
+          ],
+          "placeholders": {
+            "message": "용도, 목표 사양, 샘플 수량 또는 포장 요구사항을 적어 주세요."
+          }
+        },
+        "footer": {
+          "description": "VRLA 배터리 제조사를 위한 롤 및 시트형 AGM 유리섬유 분리막.",
+          "wechat": "Viking AGM WeChat 공식 계정",
+          "mobile": "모바일에서 Viking AGM 웹사이트 방문"
+        },
+        "timeline": {
+          "eyebrow": "제조 연표",
+          "title": "서로 다른 정의를 보여 주는 다섯 이정표",
+          "note": "아래 연도는 하나의 절대적인 ‘최초’를 주장하지 않습니다.",
+          "items": [
+            [
+              "1912",
+              "지방지에 기록된 상하이 중국계 자동차용 축전지 생산."
+            ],
+            [
+              "1921",
+              "산업 자료가 제시하는 중국 납축전지 산업의 출발점."
+            ],
+            [
+              "1939",
+              "선양 공식 자료의 전문 납축전지 공장 이정표."
+            ],
+            [
+              "1967–1971",
+              "초미세 유리섬유 기반 VRLA 개발과 시장 출시."
+            ],
+            [
+              "현재",
+              "기계화 생산, 검사 및 로트 일관성 관리."
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "참고 자료",
+          "title": "역사 및 기술 자료",
+          "text": "초기 제조를 설명하는 기준은 출처마다 다릅니다. 상하이 지방지는 공개 미러를 통해 연결됩니다.",
+          "items": [
+            [
+              "Shanghai Gazetteer — public mirror of the 1912 record",
+              "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+            ],
+            [
+              "SMM — development of lead-acid battery technology in China",
+              "https://news.smm.cn/news/102815366"
+            ],
+            [
+              "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+              "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+            ],
+            [
+              "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+              "https://doi.org/10.1016/0378-7753(93)80038-Q"
+            ],
+            [
+              "Lead-Acid Batteries: Science and Technology",
+              "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+            ],
+            [
+              "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+              "https://doi.org/10.1016/S0378-7753(96)02516-5"
+            ]
+          ]
+        }
+      },
+      "ja": {
+        "nav": {
+          "company": "会社",
+          "products": "製品",
+          "quality": "品質",
+          "resources": "資料",
+          "applications": "用途",
+          "contact": "お問い合わせ"
+        },
+        "language": "JA",
+        "homePath": "/ja/",
+        "languagePath": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "サンプル依頼",
+        "hero": {
+          "eyebrow": "AGMセパレーター技術ガイド",
+          "title": "中国初期の鉛蓄電池はどのように製造されたのか",
+          "subtitle": "手鋳造グリッドと木製セパレーターから現代のAGMまで、100年以上にわたる材料・設備・ロット管理の変化をたどります。",
+          "primary": "サンプル・仕様確認を依頼",
+          "secondary": "購買チェックリストを見る",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "中国初期の鉛蓄電池はどのように製造されたのか",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "1912年、1921年、1939年という記録は、華資による生産、産業の起点、専門工場という異なる基準を示しています。『最初』を論じる前に定義を分ける必要があります。",
+          "手鋳造グリッドと木製セパレーターから現代のAGMまで、100年以上にわたる材料・設備・ロット管理の変化をたどります。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "三つの年代",
+            "title": "1912年・1921年・1939年は必ずしも矛盾しません",
+            "text": "上海の地方誌は1912年の華資による自動車用蓄電池生産を記録し、業界資料は1921年を産業の起点とし、瀋陽の公式計画は1939年設立の工場を最初の鉛蓄電池工場としています。それぞれ対象範囲が異なります。"
+          },
+          {
+            "eyebrow": "初期製造",
+            "title": "厚い手鋳造グリッドと技能依存の工程",
+            "text": "グリッドは手作業で鋳造され、ペースト充填、極板処理、化成、群組立は現在の連続設備とは大きく異なりました。槽には内張り木材、硬質ゴム、ガラス、セパレーターには木材、硬質ゴム、セルロイド、ガラスなどが使われました。"
+          },
+          {
+            "eyebrow": "工程管理",
+            "title": "基本工程は似ていても測定と制御は限定的でした",
+            "text": "グリッド、活物質、熟成、化成、極板群、注液、試験という流れはありましたが、均一性、乾燥、化成状態は作業者の経験に大きく左右されました。"
+          },
+          {
+            "eyebrow": "工業化",
+            "title": "専門工場は目標を再現性へ変えました",
+            "text": "設備と試験が標準化されると、一個の使用可能な電池を作るだけでは不十分になり、複数ロットで寸法、組立性、性能、納期を再現する必要が生まれました。"
+          },
+          {
+            "eyebrow": "セパレーターの進化",
+            "title": "木材から微多孔材料、AGMガラス繊維へ",
+            "text": "木材の後、微多孔ゴム、焼結PVC、PE、PPが耐酸性、強度、空孔制御を改善しました。1960年代後半には極細ガラス繊維紙がVRLA-AGMの基盤となりました。"
+          },
+          {
+            "eyebrow": "現代製造",
+            "title": "高速ラインほど材料差が顕在化します",
+            "text": "現代では厚さ、坪量、吸液、圧縮、ロール幅、シート寸法をロット単位で管理します。掲載写真はVikingの現代AGM生産資料であり、歴史写真ではありません。"
+          }
+        ],
+        "parameters": [
+          [
+            "1912",
+            "地方誌が記録する上海での華資自動車用蓄電池生産。"
+          ],
+          [
+            "1921",
+            "業界資料が採用する中国鉛蓄電池産業の起点。"
+          ],
+          [
+            "1939",
+            "瀋陽公式資料における専門工場の節目。"
+          ],
+          [
+            "1967–1971",
+            "極細ガラス繊維VRLAの開発と市場投入。"
+          ],
+          [
+            "現在",
+            "機械化生産、検査、ロット一貫性管理。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "供給形状",
+          "title": "生産工程に合わせてロールまたはシートを選択",
+          "items": [
+            [
+              "AGMセパレーターロール",
+              "連続生産、スリット、組立前の社内裁断に適しています。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGMセパレーターロール"
+            ],
+            [
+              "品質",
+              "情報を明確にすると、サンプル評価と仕様協議が効率化します。",
+              "/images/agm-quality-control-1200.webp",
+              "品質"
+            ],
+            [
+              "AGMセパレーターシート",
+              "裁断済み寸法で供給し、組立準備を簡素化する場合に適しています。",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGMセパレーターシート"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "購買確認",
+          "title": "サンプル前に要求事項を確認",
+          "text": "情報を明確にすると、サンプル評価と仕様協議が効率化します。",
+          "items": [
+            "VRLA電池用途",
+            "目標厚さと圧縮状態",
+            "ロール幅またはシート寸法",
+            "試験法と公差",
+            "サンプルまたは量産段階"
+          ]
+        },
+        "related": {
+          "eyebrow": "関連資料",
+          "title": "製品・サプライヤー評価を続ける",
+          "items": [
+            [
+              "AGMセパレーターとは？",
+              "/ja/blog/what-is-agm-separator/"
+            ],
+            [
+              "AGMセパレーターの主要技術特性",
+              "/ja/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGMセパレーターの選び方",
+              "/ja/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "AGMガラス繊維とPVC電池セパレーターの違い",
+              "/ja/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "仕様相談",
+          "title": "用途と寸法要求をお送りください",
+          "text": "現在お持ちの情報から製品形状、サンプル、供給可否を確認します。",
+          "checklist": [
+            "電池用途と形式",
+            "厚さ、幅またはシート寸法",
+            "ロール／シートと梱包要求"
+          ],
+          "placeholders": {
+            "message": "用途、目標仕様、サンプル数量、梱包要求をご記入ください。"
+          }
+        },
+        "footer": {
+          "description": "VRLA電池メーカー向けロール・シート形状のAGMガラス繊維セパレーター。",
+          "wechat": "Viking AGM WeChat公式アカウント",
+          "mobile": "モバイルでViking AGMサイトを表示"
+        },
+        "timeline": {
+          "eyebrow": "製造年表",
+          "title": "異なる定義を示す五つの節目",
+          "note": "以下の年代は単一の絶対的な『最初』を主張するものではありません。",
+          "items": [
+            [
+              "1912",
+              "地方誌が記録する上海での華資自動車用蓄電池生産。"
+            ],
+            [
+              "1921",
+              "業界資料が採用する中国鉛蓄電池産業の起点。"
+            ],
+            [
+              "1939",
+              "瀋陽公式資料における専門工場の節目。"
+            ],
+            [
+              "1967–1971",
+              "極細ガラス繊維VRLAの開発と市場投入。"
+            ],
+            [
+              "現在",
+              "機械化生産、検査、ロット一貫性管理。"
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "参考資料",
+          "title": "歴史・技術資料",
+          "text": "初期製造の定義は資料ごとに異なります。上海地方誌は公開ミラーへのリンクです。",
+          "items": [
+            [
+              "Shanghai Gazetteer — public mirror of the 1912 record",
+              "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+            ],
+            [
+              "SMM — development of lead-acid battery technology in China",
+              "https://news.smm.cn/news/102815366"
+            ],
+            [
+              "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+              "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+            ],
+            [
+              "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+              "https://doi.org/10.1016/0378-7753(93)80038-Q"
+            ],
+            [
+              "Lead-Acid Batteries: Science and Technology",
+              "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+            ],
+            [
+              "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+              "https://doi.org/10.1016/S0378-7753(96)02516-5"
+            ]
+          ]
+        }
+      },
+      "es": {
+        "nav": {
+          "company": "Empresa",
+          "products": "Productos",
+          "quality": "Calidad",
+          "resources": "Recursos",
+          "applications": "Aplicaciones",
+          "contact": "Contacto"
+        },
+        "language": "ES",
+        "homePath": "/es/",
+        "languagePath": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Solicitar muestra",
+        "hero": {
+          "eyebrow": "Guía técnica de separadores AGM",
+          "title": "Cómo se fabricaron las primeras baterías de plomo-ácido en China",
+          "subtitle": "De rejillas coladas a mano y separadores de madera al AGM moderno: más de un siglo de cambios en materiales, equipos y control de lotes.",
+          "primary": "Solicitar muestra y revisión de especificaciones",
+          "secondary": "Ver lista de compra",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "Cómo se fabricaron las primeras baterías de plomo-ácido en China",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "Los años 1912, 1921 y 1939 responden a definiciones distintas: producción de capital chino, inicio de una industria y fabricación especializada en fábrica. Hay que definir ‘primera’ antes de comparar las fechas.",
+          "De rejillas coladas a mano y separadores de madera al AGM moderno: más de un siglo de cambios en materiales, equipos y control de lotes."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Tres fechas",
+            "title": "1912, 1921 y 1939 no son necesariamente contradictorios",
+            "text": "La gaceta de Shanghái registra producción china de baterías automotrices en 1912; una fuente sectorial usa 1921 como inicio de la industria; y un plan oficial de Shenyang describe la fábrica fundada en 1939 como la primera fábrica de baterías de plomo-ácido. El alcance de cada fuente es diferente."
+          },
+          {
+            "eyebrow": "Fabricación inicial",
+            "title": "Rejillas gruesas coladas a mano y procesos dependientes del oficio",
+            "text": "Las rejillas solían colarse manualmente. El empastado, tratamiento, formación y montaje estaban lejos de las líneas continuas actuales. Se usaban recipientes de madera revestida, caucho duro o vidrio, y separadores de madera, caucho duro, celuloide o vidrio."
+          },
+          {
+            "eyebrow": "Control del proceso",
+            "title": "La secuencia era reconocible, pero la medición era limitada",
+            "text": "Rejilla, material activo, curado, formación, agrupado, llenado y prueba ya formaban una secuencia básica. La uniformidad, el secado y la formación dependían en gran medida de la experiencia del operario."
+          },
+          {
+            "eyebrow": "Industrialización",
+            "title": "La fábrica especializada cambió el objetivo hacia la repetibilidad",
+            "text": "Con equipos y ensayos más normalizados ya no bastaba producir una batería utilizable. Dimensiones, montaje, desempeño y entrega debían repetirse entre lotes."
+          },
+          {
+            "eyebrow": "Evolución del separador",
+            "title": "De la madera a materiales microporosos y fibra de vidrio AGM",
+            "text": "Después de la madera se adoptaron caucho microporoso, PVC sinterizado, PE y PP para controlar mejor resistencia al ácido, fuerza y poros. Desde finales de los años sesenta, el papel de microfibra de vidrio sustentó la arquitectura VRLA-AGM."
+          },
+          {
+            "eyebrow": "Producción moderna",
+            "title": "Una línea más rápida hace más visible la variación",
+            "text": "Espesor, gramaje, absorción, compresión, ancho de rollo y dimensiones de lámina se controlan por lote. Las imágenes de la página muestran producción AGM moderna de Viking; no son fotografías históricas."
+          }
+        ],
+        "parameters": [
+          [
+            "1912",
+            "Producción china de baterías automotrices registrada en una gaceta local."
+          ],
+          [
+            "1921",
+            "Inicio sectorial empleado por una fuente de la industria."
+          ],
+          [
+            "1939",
+            "Hito de fábrica especializada en una fuente oficial de Shenyang."
+          ],
+          [
+            "1967–1971",
+            "Desarrollo y lanzamiento de VRLA con microfibra de vidrio."
+          ],
+          [
+            "Actualidad",
+            "Producción mecanizada, inspección y consistencia por lotes."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Formato de suministro",
+          "title": "Elegir rollo o lámina según el proceso",
+          "items": [
+            [
+              "Rollos de separador AGM",
+              "Adecuados para producción continua, corte longitudinal o corte interno antes del montaje.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rollos de separador AGM"
+            ],
+            [
+              "Calidad",
+              "La información clara mejora la evaluación de muestras y la revisión de especificaciones.",
+              "/images/agm-quality-control-1200.webp",
+              "Calidad"
+            ],
+            [
+              "Láminas de separador AGM",
+              "Adecuadas cuando se requieren dimensiones precortadas para simplificar el montaje.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "Láminas de separador AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Revisión de compra",
+          "title": "Confirmar requisitos antes de la muestra",
+          "text": "La información clara mejora la evaluación de muestras y la revisión de especificaciones.",
+          "items": [
+            "Aplicación de la batería VRLA",
+            "Espesor y compresión objetivo",
+            "Ancho de rollo o tamaño de lámina",
+            "Método de ensayo y tolerancias",
+            "Etapa de muestra o producción"
+          ]
+        },
+        "related": {
+          "eyebrow": "Recursos relacionados",
+          "title": "Continuar la evaluación de producto y proveedor",
+          "items": [
+            [
+              "¿Qué es un separador AGM?",
+              "/es/blog/what-is-agm-separator/"
+            ],
+            [
+              "Parámetros técnicos clave del separador AGM",
+              "/es/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Cómo elegir un separador AGM",
+              "/es/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Separadores AGM de fibra de vidrio frente a PVC",
+              "/es/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Conversación técnica",
+          "title": "Envíe su aplicación y dimensiones",
+          "text": "Comparta la información disponible para revisar formato, muestras y capacidad de suministro.",
+          "checklist": [
+            "Aplicación y tipo de batería",
+            "Espesor, ancho o tamaño de lámina",
+            "Rollo/lámina y requisitos de embalaje"
+          ],
+          "placeholders": {
+            "message": "Describa aplicación, especificaciones objetivo, cantidad de muestras o embalaje."
+          }
+        },
+        "footer": {
+          "description": "Separadores AGM de fibra de vidrio en rollos y láminas para fabricantes de baterías VRLA.",
+          "wechat": "Cuenta oficial de Viking AGM en WeChat",
+          "mobile": "Visitar Viking AGM desde el móvil"
+        },
+        "timeline": {
+          "eyebrow": "Cronología industrial",
+          "title": "Cinco hitos con definiciones diferentes",
+          "note": "Estas fechas no pretenden establecer una única respuesta absoluta a la palabra ‘primera’.",
+          "items": [
+            [
+              "1912",
+              "Producción china de baterías automotrices registrada en una gaceta local."
+            ],
+            [
+              "1921",
+              "Inicio sectorial empleado por una fuente de la industria."
+            ],
+            [
+              "1939",
+              "Hito de fábrica especializada en una fuente oficial de Shenyang."
+            ],
+            [
+              "1967–1971",
+              "Desarrollo y lanzamiento de VRLA con microfibra de vidrio."
+            ],
+            [
+              "Actualidad",
+              "Producción mecanizada, inspección y consistencia por lotes."
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "Referencias",
+          "title": "Fuentes históricas y técnicas",
+          "text": "Las fuentes utilizan definiciones distintas para la producción inicial. La gaceta de Shanghái se enlaza mediante una copia pública.",
+          "items": [
+            [
+              "Shanghai Gazetteer — public mirror of the 1912 record",
+              "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+            ],
+            [
+              "SMM — development of lead-acid battery technology in China",
+              "https://news.smm.cn/news/102815366"
+            ],
+            [
+              "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+              "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+            ],
+            [
+              "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+              "https://doi.org/10.1016/0378-7753(93)80038-Q"
+            ],
+            [
+              "Lead-Acid Batteries: Science and Technology",
+              "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+            ],
+            [
+              "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+              "https://doi.org/10.1016/S0378-7753(96)02516-5"
+            ]
+          ]
+        }
+      },
+      "pt": {
+        "nav": {
+          "company": "Empresa",
+          "products": "Produtos",
+          "quality": "Qualidade",
+          "resources": "Recursos",
+          "applications": "Aplicações",
+          "contact": "Contato"
+        },
+        "language": "PT",
+        "homePath": "/pt/",
+        "languagePath": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Solicitar amostra",
+        "hero": {
+          "eyebrow": "Guia técnico de separadores AGM",
+          "title": "Como foram fabricadas as primeiras baterias chumbo-ácido da China",
+          "subtitle": "De grades fundidas à mão e separadores de madeira ao AGM moderno: mais de um século de mudanças em materiais, equipamentos e controle de lotes.",
+          "primary": "Solicitar amostra e análise de especificações",
+          "secondary": "Ver checklist de compra",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "Como foram fabricadas as primeiras baterias chumbo-ácido da China",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "Os anos 1912, 1921 e 1939 representam critérios diferentes: produção de capital chinês, início da indústria e fabricação especializada. É preciso definir ‘primeira’ antes de comparar as datas.",
+          "De grades fundidas à mão e separadores de madeira ao AGM moderno: mais de um século de mudanças em materiais, equipamentos e controle de lotes."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Três datas",
+            "title": "1912, 1921 e 1939 não são necessariamente registros conflitantes",
+            "text": "A crônica de Xangai registra produção chinesa de baterias automotivas em 1912; uma fonte setorial usa 1921 como início da indústria; e um plano oficial de Shenyang chama a fábrica fundada em 1939 de primeira fábrica de baterias chumbo-ácido. Cada fonte usa um escopo diferente."
+          },
+          {
+            "eyebrow": "Fabricação inicial",
+            "title": "Grades grossas fundidas à mão e processos dependentes da experiência",
+            "text": "As grades eram frequentemente fundidas manualmente. Empastamento, tratamento, formação e montagem ainda estavam longe das linhas contínuas atuais. Recipientes podiam usar madeira revestida, borracha dura ou vidro; separadores incluíam madeira, borracha dura, celuloide e vidro."
+          },
+          {
+            "eyebrow": "Controle de processo",
+            "title": "A sequência era familiar, mas a medição era limitada",
+            "text": "Grade, material ativo, cura, formação, agrupamento, enchimento e teste formavam a lógica básica. Uniformidade, secagem e formação dependiam muito da experiência do operador."
+          },
+          {
+            "eyebrow": "Industrialização",
+            "title": "A fábrica especializada mudou o objetivo para repetibilidade",
+            "text": "Com equipamentos e ensaios mais padronizados, produzir uma bateria utilizável deixou de ser suficiente. Dimensões, montagem, desempenho e entrega precisavam se repetir entre lotes."
+          },
+          {
+            "eyebrow": "Evolução do separador",
+            "title": "Da madeira a materiais microporosos e fibra de vidro AGM",
+            "text": "Depois da madeira vieram borracha microporosa, PVC sinterizado, PE e PP, com melhor controle de resistência ao ácido, força e poros. No fim dos anos 1960, o papel de microfibra de vidro passou a sustentar a arquitetura VRLA-AGM."
+          },
+          {
+            "eyebrow": "Produção moderna",
+            "title": "Linhas mais rápidas tornam a variação mais visível",
+            "text": "Espessura, gramatura, absorção, compressão, largura do rolo e dimensões das folhas são controladas por lote. As imagens mostram a produção AGM moderna da Viking e não são fotografias históricas."
+          }
+        ],
+        "parameters": [
+          [
+            "1912",
+            "Produção chinesa de baterias automotivas registrada em crônica local."
+          ],
+          [
+            "1921",
+            "Marco inicial usado por uma fonte setorial."
+          ],
+          [
+            "1939",
+            "Marco de fábrica especializada em fonte oficial de Shenyang."
+          ],
+          [
+            "1967–1971",
+            "Desenvolvimento e lançamento do VRLA com microfibra de vidro."
+          ],
+          [
+            "Hoje",
+            "Produção mecanizada, inspeção e consistência entre lotes."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Formato de fornecimento",
+          "title": "Escolher rolo ou folha conforme o processo",
+          "items": [
+            [
+              "Rolos de separador AGM",
+              "Adequados para produção contínua, corte longitudinal ou corte interno antes da montagem.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rolos de separador AGM"
+            ],
+            [
+              "Qualidade",
+              "Informações claras tornam a avaliação de amostras e especificações mais eficiente.",
+              "/images/agm-quality-control-1200.webp",
+              "Qualidade"
+            ],
+            [
+              "Folhas de separador AGM",
+              "Adequadas quando dimensões pré-cortadas simplificam a preparação da montagem.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "Folhas de separador AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Análise de compra",
+          "title": "Confirmar requisitos antes da amostra",
+          "text": "Informações claras tornam a avaliação de amostras e especificações mais eficiente.",
+          "items": [
+            "Aplicação da bateria VRLA",
+            "Espessura e compressão alvo",
+            "Largura do rolo ou tamanho da folha",
+            "Método de teste e tolerâncias",
+            "Etapa de amostra ou produção"
+          ]
+        },
+        "related": {
+          "eyebrow": "Recursos relacionados",
+          "title": "Continuar a avaliação de produto e fornecedor",
+          "items": [
+            [
+              "O que é um separador AGM?",
+              "/pt/blog/what-is-agm-separator/"
+            ],
+            [
+              "Principais parâmetros técnicos do separador AGM",
+              "/pt/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Como escolher um separador AGM",
+              "/pt/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Separadores AGM de fibra de vidro versus PVC",
+              "/pt/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Conversa técnica",
+          "title": "Envie sua aplicação e dimensões",
+          "text": "Compartilhe o que já possui para analisarmos formato, amostras e capacidade de fornecimento.",
+          "checklist": [
+            "Aplicação e tipo de bateria",
+            "Espessura, largura ou tamanho da folha",
+            "Rolo/folha e requisitos de embalagem"
+          ],
+          "placeholders": {
+            "message": "Descreva aplicação, especificações-alvo, quantidade de amostras ou embalagem."
+          }
+        },
+        "footer": {
+          "description": "Separadores AGM de fibra de vidro em rolos e folhas para fabricantes de baterias VRLA.",
+          "wechat": "Conta oficial Viking AGM no WeChat",
+          "mobile": "Visitar o site Viking AGM pelo celular"
+        },
+        "timeline": {
+          "eyebrow": "Linha do tempo",
+          "title": "Cinco marcos com definições diferentes",
+          "note": "As datas não estabelecem uma única resposta absoluta para a palavra ‘primeira’.",
+          "items": [
+            [
+              "1912",
+              "Produção chinesa de baterias automotivas registrada em crônica local."
+            ],
+            [
+              "1921",
+              "Marco inicial usado por uma fonte setorial."
+            ],
+            [
+              "1939",
+              "Marco de fábrica especializada em fonte oficial de Shenyang."
+            ],
+            [
+              "1967–1971",
+              "Desenvolvimento e lançamento do VRLA com microfibra de vidro."
+            ],
+            [
+              "Hoje",
+              "Produção mecanizada, inspeção e consistência entre lotes."
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "Referências",
+          "title": "Fontes históricas e técnicas",
+          "text": "As fontes usam definições diferentes para a produção inicial. A crônica de Xangai é vinculada por meio de uma cópia pública.",
+          "items": [
+            [
+              "Shanghai Gazetteer — public mirror of the 1912 record",
+              "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+            ],
+            [
+              "SMM — development of lead-acid battery technology in China",
+              "https://news.smm.cn/news/102815366"
+            ],
+            [
+              "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+              "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+            ],
+            [
+              "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+              "https://doi.org/10.1016/0378-7753(93)80038-Q"
+            ],
+            [
+              "Lead-Acid Batteries: Science and Technology",
+              "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+            ],
+            [
+              "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+              "https://doi.org/10.1016/S0378-7753(96)02516-5"
+            ]
+          ]
+        }
+      },
+      "ru": {
+        "nav": {
+          "company": "Компания",
+          "products": "Продукция",
+          "quality": "Качество",
+          "resources": "Материалы",
+          "applications": "Применение",
+          "contact": "Контакты"
+        },
+        "language": "RU",
+        "homePath": "/ru/",
+        "languagePath": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Запросить образец",
+        "hero": {
+          "eyebrow": "Техническое руководство по AGM",
+          "title": "Как производились первые свинцово-кислотные аккумуляторы в Китае",
+          "subtitle": "От ручного литья решёток и деревянных сепараторов до современного AGM: более века изменений материалов, оборудования и контроля партий.",
+          "primary": "Запросить образец и проверку характеристик",
+          "secondary": "Смотреть чек-лист закупки",
+          "image": {
+            "src": "/images/agm-hero-production-1600.webp",
+            "alt": "Как производились первые свинцово-кислотные аккумуляторы в Китае",
+            "width": 1600,
+            "height": 1000
+          }
+        },
+        "intro": [
+          "Даты 1912, 1921 и 1939 относятся к разным определениям: китайское производство, начало отрасли и специализированный завод. Перед сравнением дат необходимо определить, что считается ‘первым’.",
+          "От ручного литья решёток и деревянных сепараторов до современного AGM: более века изменений материалов, оборудования и контроля партий."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Три даты",
+            "title": "1912, 1921 и 1939 годы не обязательно противоречат друг другу",
+            "text": "Шанхайская хроника фиксирует китайское производство автомобильных аккумуляторов в 1912 году; отраслевой источник считает 1921 год началом отрасли; официальный план Шэньяна называет предприятие 1939 года первым заводом свинцово-кислотных аккумуляторов. Источники используют разные рамки."
+          },
+          {
+            "eyebrow": "Раннее производство",
+            "title": "Толстые литые вручную решётки и зависимость от мастерства",
+            "text": "Решётки часто отливали вручную, а намазка, обработка пластин, формирование и сборка ещё не выполнялись на непрерывных линиях. Корпуса делали из футерованного дерева, твёрдой резины или стекла, сепараторы — из дерева, твёрдой резины, целлулоида и стекла."
+          },
+          {
+            "eyebrow": "Управление процессом",
+            "title": "Последовательность была знакомой, но измерения оставались ограниченными",
+            "text": "Решётка, активная масса, сушка, формирование, сборка блока, заливка электролита и испытание уже составляли базовый процесс. Однородность и полнота операций во многом зависели от опыта рабочих."
+          },
+          {
+            "eyebrow": "Индустриализация",
+            "title": "Специализированный завод перенёс цель на повторяемость",
+            "text": "По мере стандартизации оборудования и испытаний стало недостаточно изготовить один работоспособный аккумулятор. Размеры, сборка, характеристики и поставка должны были повторяться от партии к партии."
+          },
+          {
+            "eyebrow": "Эволюция сепаратора",
+            "title": "От дерева к микропористым материалам и стекловолокну AGM",
+            "text": "После дерева применялись микропористая резина, спечённый ПВХ, ПЭ и ПП с более управляемой кислотостойкостью, прочностью и порами. В конце 1960-х микростекловолоконная бумага стала основой VRLA-AGM."
+          },
+          {
+            "eyebrow": "Современное производство",
+            "title": "Высокая скорость линии быстрее выявляет разброс материала",
+            "text": "Толщина, поверхностная плотность, впитывание, сжатие, ширина рулона и размеры листа контролируются по партиям. Изображения показывают современное производство AGM компании Viking и не являются историческими фотографиями."
+          }
+        ],
+        "parameters": [
+          [
+            "1912",
+            "Китайское производство автомобильных аккумуляторов по местной хронике."
+          ],
+          [
+            "1921",
+            "Отраслевая дата начала производства по отраслевому источнику."
+          ],
+          [
+            "1939",
+            "Веха специализированного завода по официальному документу Шэньяна."
+          ],
+          [
+            "1967–1971",
+            "Разработка и вывод на рынок VRLA с микростекловолокном."
+          ],
+          [
+            "Сегодня",
+            "Механизированное производство, контроль и стабильность партий."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Форма поставки",
+          "title": "Выберите рулон или лист по процессу производства",
+          "items": [
+            [
+              "AGM-сепаратор в рулонах",
+              "Для непрерывного производства, продольной резки или внутреннего раскроя перед сборкой.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM-сепаратор в рулонах"
+            ],
+            [
+              "Качество",
+              "Чёткая информация повышает эффективность оценки образца и согласования спецификации.",
+              "/images/agm-quality-control-1200.webp",
+              "Качество"
+            ],
+            [
+              "AGM-сепаратор в листах",
+              "Для поставки готовых размеров и упрощения подготовки к сборке.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGM-сепаратор в листах"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Проверка закупки",
+          "title": "Подтвердите требования до заказа образца",
+          "text": "Чёткая информация повышает эффективность оценки образца и согласования спецификации.",
+          "items": [
+            "Применение батареи VRLA",
+            "Целевая толщина и сжатие",
+            "Ширина рулона или размер листа",
+            "Метод испытаний и допуски",
+            "Этап образца или серийного производства"
+          ]
+        },
+        "related": {
+          "eyebrow": "Связанные материалы",
+          "title": "Продолжить оценку продукции и поставщика",
+          "items": [
+            [
+              "Что такое AGM-сепаратор?",
+              "/ru/blog/what-is-agm-separator/"
+            ],
+            [
+              "Ключевые технические параметры AGM-сепаратора",
+              "/ru/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Как выбрать AGM-сепаратор",
+              "/ru/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Стекловолоконный AGM и ПВХ-сепаратор",
+              "/ru/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Обсуждение спецификации",
+          "title": "Отправьте данные о применении и размерах",
+          "text": "Передайте имеющуюся информацию для проверки формы продукции, образцов и возможностей поставки.",
+          "checklist": [
+            "Применение и тип батареи",
+            "Толщина, ширина или размер листа",
+            "Рулон/лист и требования к упаковке"
+          ],
+          "placeholders": {
+            "message": "Опишите применение, целевые параметры, количество образцов или упаковку."
+          }
+        },
+        "footer": {
+          "description": "Стекловолоконные AGM-сепараторы в рулонах и листах для производителей VRLA-батарей.",
+          "wechat": "Официальный аккаунт Viking AGM в WeChat",
+          "mobile": "Открыть сайт Viking AGM на телефоне"
+        },
+        "timeline": {
+          "eyebrow": "Хронология производства",
+          "title": "Пять вех с разными определениями",
+          "note": "Эти даты не устанавливают единственный абсолютный ответ на вопрос о ‘первом’ производстве.",
+          "items": [
+            [
+              "1912",
+              "Китайское производство автомобильных аккумуляторов по местной хронике."
+            ],
+            [
+              "1921",
+              "Отраслевая дата начала производства по отраслевому источнику."
+            ],
+            [
+              "1939",
+              "Веха специализированного завода по официальному документу Шэньяна."
+            ],
+            [
+              "1967–1971",
+              "Разработка и вывод на рынок VRLA с микростекловолокном."
+            ],
+            [
+              "Сегодня",
+              "Механизированное производство, контроль и стабильность партий."
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "Источники",
+          "title": "Исторические и технические материалы",
+          "text": "Источники используют разные определения раннего производства. Шанхайская хроника доступна по ссылке на публичную копию.",
+          "items": [
+            [
+              "Shanghai Gazetteer — public mirror of the 1912 record",
+              "https://docs.abwen.com/china/%E4%B8%8A%E6%B5%B7%E9%80%9A%E5%BF%97.pdf"
+            ],
+            [
+              "SMM — development of lead-acid battery technology in China",
+              "https://news.smm.cn/news/102815366"
+            ],
+            [
+              "Shenyang Development and Reform Commission — Energy Storage Industry Development Plan",
+              "https://fgw.shenyang.gov.cn/zwgk/fdzdgknr/bmwj/202407/P020240731519907537824.pdf"
+            ],
+            [
+              "Journal of Power Sources — Aspects of lead/acid battery technology: Separators",
+              "https://doi.org/10.1016/0378-7753(93)80038-Q"
+            ],
+            [
+              "Lead-Acid Batteries: Science and Technology",
+              "https://www.sciencedirect.com/book/9780444595522/lead-acid-batteries-science-and-technology"
+            ],
+            [
+              "Journal of Power Sources — Development of the first valve-regulated lead/acid cell",
+              "https://doi.org/10.1016/S0378-7753(96)02516-5"
+            ]
+          ]
+        }
+      }
+    },
     "agmGlassFiberVsPvcSeparator": {
       "en": {
         "nav": {
@@ -36531,6 +39077,192 @@
         ],
         "datePublished": "2026-08-07",
         "dateModified": "2026-08-07"
+      }
+    },
+    "earlyChinaLeadAcidBatteryManufacturing": {
+      "en": {
+        "path": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "alternatePath": "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "How China’s Earliest Lead-Acid Batteries Were Made | Viking AGM",
+        "description": "A sourced history of China’s early lead-acid battery manufacturing, from hand-cast grids and wooden separators to industrial production and modern AGM.",
+        "keywords": [
+          "early lead-acid battery manufacturing China",
+          "lead-acid battery history China",
+          "wooden battery separator",
+          "AGM separator history",
+          "VRLA AGM manufacturing"
+        ],
+        "pageName": "How China’s Earliest Lead-Acid Batteries Were Made",
+        "articleDescription": "A source-aware account of early Chinese lead-acid battery production, separator material evolution and the move toward repeatable modern AGM manufacturing.",
+        "breadcrumbs": [
+          "Home",
+          "Resources",
+          "Early Lead-Acid Battery Manufacturing in China"
+        ]
+      },
+      "zh": {
+        "path": "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "alternatePath": "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "中国早期铅酸蓄电池是怎样制造的？| 湖北维京AGM",
+        "description": "从手工铸造板栅、木质隔板到专业化工厂和现代 AGM，梳理中国早期铅酸蓄电池制造及隔板材料演进。",
+        "keywords": [
+          "中国铅酸蓄电池制造史",
+          "早期铅酸电池生产",
+          "木质电池隔板",
+          "AGM 隔板历史",
+          "VRLA AGM 制造"
+        ],
+        "pageName": "中国早期铅酸蓄电池是怎样制造的？",
+        "articleDescription": "以不同历史口径梳理中国早期铅酸蓄电池生产、隔板材料演进和现代 AGM 批次制造要求。",
+        "breadcrumbs": [
+          "首页",
+          "资料",
+          "中国早期铅酸蓄电池制造史"
+        ]
+      },
+      "vi": {
+        "path": "/vi/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM Việt Nam",
+        "title": "Những ắc quy chì-axit đầu tiên tại Trung Quốc được sản xuất như thế nào? | Viking AGM",
+        "description": "Từ lưới cực đúc thủ công và tấm ngăn gỗ đến AGM hiện đại: cách vật liệu, thiết bị và kiểm soát lô đã thay đổi hơn một thế kỷ.",
+        "keywords": [
+          "Những ắc quy chì-axit đầu tiên tại Trung Quốc được sản xuất như thế nào?",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Những ắc quy chì-axit đầu tiên tại Trung Quốc được sản xuất như thế nào?",
+        "articleDescription": "Từ lưới cực đúc thủ công và tấm ngăn gỗ đến AGM hiện đại: cách vật liệu, thiết bị và kiểm soát lô đã thay đổi hơn một thế kỷ.",
+        "breadcrumbs": [
+          "Công ty",
+          "Tài liệu",
+          "Những ắc quy chì-axit đầu tiên tại Trung Quốc được sản xuất như thế nào?"
+        ],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "ko": {
+        "path": "/ko/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM Korea",
+        "title": "중국의 초기 납축전지는 어떻게 만들어졌을까요? | Viking AGM",
+        "description": "수작업 주조 그리드와 목재 분리막에서 현대 AGM까지, 한 세기 넘는 소재·설비·로트 관리의 변화를 살펴봅니다.",
+        "keywords": [
+          "중국의 초기 납축전지는 어떻게 만들어졌을까요?",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "중국의 초기 납축전지는 어떻게 만들어졌을까요?",
+        "articleDescription": "수작업 주조 그리드와 목재 분리막에서 현대 AGM까지, 한 세기 넘는 소재·설비·로트 관리의 변화를 살펴봅니다.",
+        "breadcrumbs": [
+          "회사",
+          "자료",
+          "중국의 초기 납축전지는 어떻게 만들어졌을까요?"
+        ],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "ja": {
+        "path": "/ja/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM Japan",
+        "title": "中国初期の鉛蓄電池はどのように製造されたのか | Viking AGM",
+        "description": "手鋳造グリッドと木製セパレーターから現代のAGMまで、100年以上にわたる材料・設備・ロット管理の変化をたどります。",
+        "keywords": [
+          "中国初期の鉛蓄電池はどのように製造されたのか",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "中国初期の鉛蓄電池はどのように製造されたのか",
+        "articleDescription": "手鋳造グリッドと木製セパレーターから現代のAGMまで、100年以上にわたる材料・設備・ロット管理の変化をたどります。",
+        "breadcrumbs": [
+          "会社",
+          "資料",
+          "中国初期の鉛蓄電池はどのように製造されたのか"
+        ],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "es": {
+        "path": "/es/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "Cómo se fabricaron las primeras baterías de plomo-ácido en China | Viking AGM",
+        "description": "De rejillas coladas a mano y separadores de madera al AGM moderno: más de un siglo de cambios en materiales, equipos y control de lotes.",
+        "keywords": [
+          "Cómo se fabricaron las primeras baterías de plomo-ácido en China",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Cómo se fabricaron las primeras baterías de plomo-ácido en China",
+        "articleDescription": "De rejillas coladas a mano y separadores de madera al AGM moderno: más de un siglo de cambios en materiales, equipos y control de lotes.",
+        "breadcrumbs": [
+          "Empresa",
+          "Recursos",
+          "Cómo se fabricaron las primeras baterías de plomo-ácido en China"
+        ],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "pt": {
+        "path": "/pt/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM Brasil",
+        "title": "Como foram fabricadas as primeiras baterias chumbo-ácido da China | Viking AGM",
+        "description": "De grades fundidas à mão e separadores de madeira ao AGM moderno: mais de um século de mudanças em materiais, equipamentos e controle de lotes.",
+        "keywords": [
+          "Como foram fabricadas as primeiras baterias chumbo-ácido da China",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Como foram fabricadas as primeiras baterias chumbo-ácido da China",
+        "articleDescription": "De grades fundidas à mão e separadores de madeira ao AGM moderno: mais de um século de mudanças em materiais, equipamentos e controle de lotes.",
+        "breadcrumbs": [
+          "Empresa",
+          "Recursos",
+          "Como foram fabricadas as primeiras baterias chumbo-ácido da China"
+        ],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "ru": {
+        "path": "/ru/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "Как производились первые свинцово-кислотные аккумуляторы в Китае | Viking AGM",
+        "description": "От ручного литья решёток и деревянных сепараторов до современного AGM: более века изменений материалов, оборудования и контроля партий.",
+        "keywords": [
+          "Как производились первые свинцово-кислотные аккумуляторы в Китае",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Как производились первые свинцово-кислотные аккумуляторы в Китае",
+        "articleDescription": "От ручного литья решёток и деревянных сепараторов до современного AGM: более века изменений материалов, оборудования и контроля партий.",
+        "breadcrumbs": [
+          "Компания",
+          "Материалы",
+          "Как производились первые свинцово-кислотные аккумуляторы в Китае"
+        ],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
       }
     },
     "agmGlassFiberVsPvcSeparator": {

@@ -265,6 +265,23 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/agm-separator-for-data-center-backup-power/",
       zh: "/zh/blog/agm-separator-for-data-center-backup-power/"
     }
+  },
+  {
+    id: "early-lead-acid-manufacturing-history",
+    category: "manufacturingQuality",
+    publishedAt: "2026-08-11",
+    title: {
+      en: "How China’s Earliest Lead-Acid Batteries Were Made",
+      zh: "中国早期铅酸蓄电池是怎样制造的？"
+    },
+    description: {
+      en: "From hand-cast grids and early separators to industrial production and modern AGM batch control.",
+      zh: "从手工铸造板栅和早期隔板材料，了解专业化生产与现代 AGM 批次控制的演进。"
+    },
+    href: {
+      en: "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
+      zh: "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/"
+    }
   }
 ];
 
@@ -277,7 +294,8 @@ const articleKindById: Record<string, string> = {
   "performance-consistency": "agmSeparatorPerformanceConsistency",
   "export-supply-readiness": "agmSeparatorExportSupplyReadiness",
   "ups-vrla-selection": "upsVrlaTechnologySelection",
-  "data-center-backup-power": "dataCenterBackupPowerAgmSeparator"
+  "data-center-backup-power": "dataCenterBackupPowerAgmSeparator",
+  "early-lead-acid-manufacturing-history": "earlyChinaLeadAcidBatteryManufacturing"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

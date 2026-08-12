@@ -187,6 +187,7 @@ const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "exportSupplyReadinessCopy",
   "upsVrlaTechnologySelectionCopy",
   "dataCenterBackupPowerAgmSeparatorCopy",
+  "earlyChinaLeadAcidBatteryManufacturingCopy",
   "agmGlassFiberVsPvcSeparatorCopy"
 ]);
 const seoConstants = collectConstants("app/seo.tsx", [
@@ -208,6 +209,7 @@ const seoConstants = collectConstants("app/seo.tsx", [
   "agmSeparatorExportSupplyReadinessSeo",
   "upsVrlaTechnologySelectionSeo",
   "dataCenterBackupPowerAgmSeparatorSeo",
+  "earlyChinaLeadAcidBatteryManufacturingSeo",
   "agmGlassFiberVsPvcSeparatorSeo"
 ]);
 
@@ -489,6 +491,8 @@ const articles = {
     articleConstants.upsVrlaTechnologySelectionCopy,
   dataCenterBackupPowerAgmSeparator:
     articleConstants.dataCenterBackupPowerAgmSeparatorCopy,
+  earlyChinaLeadAcidBatteryManufacturing:
+    articleConstants.earlyChinaLeadAcidBatteryManufacturingCopy,
   agmGlassFiberVsPvcSeparator:
     articleConstants.agmGlassFiberVsPvcSeparatorCopy
 };
@@ -507,6 +511,8 @@ const articleSeo = {
     seoConstants.upsVrlaTechnologySelectionSeo,
   dataCenterBackupPowerAgmSeparator:
     seoConstants.dataCenterBackupPowerAgmSeparatorSeo,
+  earlyChinaLeadAcidBatteryManufacturing:
+    seoConstants.earlyChinaLeadAcidBatteryManufacturingSeo,
   agmGlassFiberVsPvcSeparator:
     seoConstants.agmGlassFiberVsPvcSeparatorSeo
 };
