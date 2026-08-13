@@ -17567,7 +17567,7 @@
         "eyebrow": "Trung tâm tài liệu tấm ngăn AGM",
         "title": "Tài liệu kỹ thuật dành cho đội ngũ mua hàng tấm ngăn AGM",
         "subtitle": "Hướng dẫn thực tế về thông số, sản xuất, chất lượng và ứng dụng giúp chuẩn bị yêu cầu kỹ thuật, mẫu thử và trao đổi với nhà cung cấp.",
-        "count": "11 bài viết kỹ thuật",
+        "count": "12 bài viết kỹ thuật",
         "actionEyebrow": "Bắt đầu trao đổi mua hàng",
         "actionTitle": "Từ nghiên cứu đến đối chiếu thông số",
         "actionText": "Chia sẻ thông tin hiện có hoặc tải hồ sơ năng lực EN/ZH trước khi liên hệ đội ngũ của chúng tôi.",
@@ -18235,6 +18235,73 @@
             "Áp lực cố định hoặc khe hở cố định",
             "Chu kỳ và kết quả ắc quy"
           ]
+        },
+        "agmSeparatorBatchProcessControl": {
+          "title": "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt?",
+          "summary": "Giá trị trung bình đạt yêu cầu chỉ mô tả mẫu đã lấy; sản xuất liên tục cần độ ổn định giữa vị trí, cuộn và lô.",
+          "intro": "Mẫu đầu có thể đạt và lắp ráp thuận lợi, nhưng lô sau vẫn buộc dây chuyền điều chỉnh. Đánh giá hàng loạt phải nhìn độ phân tán và xu hướng, không chỉ một chứng nhận đạt.",
+          "sections": [
+            [
+              "Dữ liệu quá trình",
+              "Khách hàng hạ nguồn đang quản lý tính nhất quán bằng dữ liệu quá trình",
+              "Thông tin sản xuất tháng 7/2026 của KSTAR nêu dây chuyền bản cực tự động, hàn đúc robot, MES và nền tảng chất lượng digital twin. Đây là ví dụ của nhà sản xuất ắc quy, không phải bằng chứng về hệ thống Viking; nó cho thấy một giá trị trung bình không đủ giải thích khả năng lặp lại."
+            ],
+            [
+              "Kiểm tra đơn",
+              "Một báo cáo đạt chỉ trả lời các điểm đã lấy mẫu",
+              "Báo cáo không tự chứng minh đầu, giữa và cuối cuộn gần nhau hay cuộn và lô tiếp theo sẽ lặp lại. Ít điểm lấy mẫu cố định có thể bỏ sót dao động chỉ xuất hiện khi chạy liên tục."
+            ],
+            [
+              "Ảnh hưởng lắp ráp",
+              "Dao động vật liệu tiếp tục truyền vào cụm bản cực",
+              "Độ dày làm thay đổi nén; định lượng và cấu trúc liên quan đến phân bố sợi, hút axit và lỗ rỗng; khổ rộng, mép và độ cuốn ảnh hưởng cấp liệu và tổn hao. Tấm ngăn không quyết định một mình kết quả ắc quy, nhưng vật liệu ổn định giúp giảm biến số."
+            ],
+            [
+              "Đánh giá thống kê",
+              "Không thể chỉ nhìn giá trị trung bình",
+              "Trung bình cho biết tâm dữ liệu; min, max và khoảng biến thiên cho biết độ trải; độ lệch chuẩn và hệ số biến thiên hỗ trợ so sánh; biểu đồ xu hướng giúp phát hiện trôi. Cp/Cpk chỉ có ý nghĩa khi hệ đo đáng tin cậy và quá trình đã ổn định."
+            ],
+            [
+              "Kế hoạch lấy mẫu",
+              "Không ghi vị trí thì độ phân tán có thể bị hiểu sai",
+              "Theo rủi ro, hãy so đầu, giữa, cuối cuộn và cả vị trí ngang với cuộn rộng. Đánh giá giữa lô phải bao phủ nhiều cuộn và lô; với tấm, cần ghi cuộn nguồn, vị trí xẻ và ảnh hưởng của xếp chồng, đóng gói."
+            ],
+            [
+              "Đánh giá truy xuất",
+              "Truy xuất hữu ích phải chỉ ra đoạn phát sinh bất thường",
+              "Hồ sơ nên liên kết lô giao hàng, mã cuộn hoặc tấm, lô sản xuất, kiểm tra và đóng gói. Đây là khung đánh giá, không phải tuyên bố Viking có MES hay nền tảng truy xuất số đầy đủ."
+            ],
+            [
+              "Phối hợp Viking",
+              "Thống nhất phương pháp đánh giá ngay từ giai đoạn mẫu",
+              "Hãy gửi quy cách, chỉ tiêu trọng yếu và danh sách đánh giá nhà cung cấp. Hai bên có thể thống nhất phương pháp, vị trí, tần suất, giới hạn và mã lô; quyết định dùng hàng loạt vẫn dựa trên xác nhận vật liệu, lắp ráp và ắc quy của khách hàng."
+            ]
+          ],
+          "parameters": [
+            [
+              "Trung bình",
+              "Cho biết tâm nhưng có thể che dao động hai đầu."
+            ],
+            [
+              "Khoảng biến thiên",
+              "Cho biết độ trải quan sát được; cần xem cùng số lượng và vị trí mẫu."
+            ],
+            [
+              "Độ lệch chuẩn & CV",
+              "Mô tả phân tán khi phương pháp thử không đổi."
+            ],
+            [
+              "Xu hướng, Cp & Cpk",
+              "Dùng xu hướng tìm trôi; chỉ dùng chỉ số năng lực sau khi quá trình ổn định."
+            ]
+          ],
+          "checklist": [
+            "Phương pháp thử và tiền xử lý",
+            "Vị trí dọc và ngang cuộn",
+            "Tần suất theo giai đoạn dự án",
+            "Giới hạn và xem xét xu hướng",
+            "Mã lô và xử lý bất thường"
+          ]
         }
       },
       "comparison": {
@@ -18386,6 +18453,43 @@
             "https://doi.org/10.1016/S0378-7753(01)00925-9"
           ]
         ]
+      },
+      "batchProcessControlReferences": {
+        "eyebrow": "Tài liệu tham khảo",
+        "title": "Ví dụ công khai về quản lý chất lượng theo quá trình",
+        "text": "Nguồn KSTAR mô tả nhà sản xuất ắc quy và không xác nhận thiết bị, MES hay phạm vi truy xuất của Viking.",
+        "items": [
+          [
+            "KSTAR — intelligent manufacturing and full-process quality management",
+            "https://www.kstar.com/cn/index.php/news/info/1269.html"
+          ]
+        ]
+      },
+      "batchProcessControlComparison": {
+        "eyebrow": "Dữ liệu minh họa",
+        "title": "Cùng trung bình, độ phân tán khác",
+        "columns": [
+          "So sánh",
+          "Mẫu A",
+          "Mẫu B"
+        ],
+        "rows": [
+          [
+            "Các phép đo",
+            "1.50 / 1.50 / 1.50 mm",
+            "1.44 / 1.50 / 1.56 mm"
+          ],
+          [
+            "Trung bình",
+            "1.50 mm",
+            "1.50 mm"
+          ],
+          [
+            "Khoảng biến thiên",
+            "0.00 mm",
+            "0.12 mm"
+          ]
+        ]
       }
     },
     "ko": {
@@ -18426,7 +18530,7 @@
         "eyebrow": "AGM 분리막 자료 센터",
         "title": "AGM 분리막 구매·기술팀을 위한 실무 자료",
         "subtitle": "사양 작성, 샘플 평가 및 공급업체 협의를 준비할 수 있도록 기술 파라미터, 제조, 품질과 응용 정보를 제공합니다.",
-        "count": "기술 글 11편",
+        "count": "기술 글 12편",
         "actionEyebrow": "구매 협의 시작",
         "actionTitle": "자료 검토에서 사양 매칭까지",
         "actionText": "현재 확보한 요구사항을 보내거나 문의 전에 EN/ZH 기술 역량 자료를 확인하십시오.",
@@ -19089,6 +19193,73 @@
             "일정 압력 또는 일정 간극",
             "사이클 및 배터리 결과"
           ]
+        },
+        "agmSeparatorBatchProcessControl": {
+          "title": "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유",
+          "summary": "평균값 합격은 채취한 시료만 설명합니다. 연속 조립에는 위치·롤·생산 로트 간 반복성이 필요합니다.",
+          "intro": "첫 샘플이 합격하고 조립도 원활해도 다음 로트에서 라인 조정이 늘 수 있습니다. 양산 평가는 한 장의 성적서보다 산포와 추세를 확인해야 합니다.",
+          "sections": [
+            [
+              "공정 데이터",
+              "하류 제조사는 공정 데이터로 일관성을 관리합니다",
+              "KSTAR의 2026년 7월 자료는 자동 극판 라인, 로봇 주조 용접, MES와 디지털 트윈 품질 플랫폼을 설명합니다. 이는 배터리 업체 사례이며 Viking 시스템의 증거가 아닙니다. 다만 평균값 하나로 반복성을 설명하기 어렵다는 구매 신호를 보여 줍니다."
+            ],
+            [
+              "단일 검사",
+              "합격 성적서는 채취 지점의 통과 여부만 답합니다",
+              "롤의 시작·중간·끝이 비슷한지, 다음 롤과 로트가 재현되는지는 별도 확인이 필요합니다. 적은 고정 지점만 검사하면 연속 권출 때 나타나는 국부 변동을 놓칠 수 있습니다."
+            ],
+            [
+              "조립 영향",
+              "분리막 변동은 극군 조립으로 이어집니다",
+              "두께는 실제 압축을, 평량과 구조는 섬유 분포·흡액·기공·압축 거동을, 폭과 권취는 공급성과 손실을 바꿀 수 있습니다. 분리막만으로 배터리 성능이 결정되지는 않지만 안정된 소재는 분석 변수를 줄입니다."
+            ],
+            [
+              "통계 검토",
+              "평균값만으로 양산 안정성을 판단할 수 없습니다",
+              "평균은 중심, 최소·최대·범위는 관찰 폭, 표준편차와 변동계수는 산포를 보여 줍니다. 시계열 추세는 이동을 조기에 찾습니다. Cp/Cpk는 규격, 측정 신뢰성과 통계적 안정이 확보된 뒤에만 사용해야 합니다."
+            ],
+            [
+              "샘플링 계획",
+              "채취 위치가 없으면 산포도 왜곡될 수 있습니다",
+              "위험에 따라 롤 시작·중간·끝과 폭 방향을 비교합니다. 로트 평가는 여러 생산 로트와 롤을 포함하고, 시트는 원롤과 슬리팅 위치, 적층·포장 후 치수 변화를 기록해야 합니다."
+            ],
+            [
+              "추적성 검토",
+              "유용한 추적성은 이상이 발생한 구간을 답해야 합니다",
+              "출하 로트, 롤·시트 ID, 생산 로트, 시험 및 포장 기록의 연결을 검토합니다. 이는 감사 프레임이며 Viking이 MES나 완전한 디지털 추적 플랫폼을 운영한다는 주장이 아닙니다."
+            ],
+            [
+              "Viking 협의",
+              "샘플 단계에서 양산 평가 방법을 맞춥니다",
+              "현행 규격서, 핵심 시험 항목과 공급업체 감사 목록을 공유해 주세요. 방법, 위치, 빈도, 판정 범위와 로트 표시를 먼저 맞추며, 양산 적합성은 고객의 소재·조립·완성 배터리 검증으로 확인합니다."
+            ]
+          ],
+          "parameters": [
+            [
+              "평균",
+              "중심을 보여 주지만 양 끝의 변동을 숨길 수 있습니다."
+            ],
+            [
+              "범위",
+              "관찰 폭을 빠르게 보여 주며 시료 수와 위치를 함께 봅니다."
+            ],
+            [
+              "표준편차 & CV",
+              "동일한 시험 조건에서 산포를 설명합니다."
+            ],
+            [
+              "추세, Cp & Cpk",
+              "추세로 이동을 찾고 공정 안정 후 능력지수를 사용합니다."
+            ]
+          ],
+          "checklist": [
+            "시험법과 전처리",
+            "롤 길이·폭 방향 위치",
+            "단계별 검사 빈도",
+            "판정 범위와 추세 검토",
+            "로트 ID와 이상 처리"
+          ]
         }
       },
       "comparison": {
@@ -19240,6 +19411,43 @@
             "https://doi.org/10.1016/S0378-7753(01)00925-9"
           ]
         ]
+      },
+      "batchProcessControlReferences": {
+        "eyebrow": "참고 자료",
+        "title": "공정 기반 품질 관리의 공개 사례",
+        "text": "KSTAR 자료는 배터리 제조사 사례이며 Viking의 설비, MES 또는 추적 범위를 입증하지 않습니다.",
+        "items": [
+          [
+            "KSTAR — intelligent manufacturing and full-process quality management",
+            "https://www.kstar.com/cn/index.php/news/info/1269.html"
+          ]
+        ]
+      },
+      "batchProcessControlComparison": {
+        "eyebrow": "예시 데이터",
+        "title": "같은 평균, 다른 산포",
+        "columns": [
+          "비교",
+          "시료 A",
+          "시료 B"
+        ],
+        "rows": [
+          [
+            "측정값",
+            "1.50 / 1.50 / 1.50 mm",
+            "1.44 / 1.50 / 1.56 mm"
+          ],
+          [
+            "평균",
+            "1.50 mm",
+            "1.50 mm"
+          ],
+          [
+            "범위",
+            "0.00 mm",
+            "0.12 mm"
+          ]
+        ]
       }
     },
     "pt": {
@@ -19280,7 +19488,7 @@
         "eyebrow": "Centro de recursos de separadores AGM",
         "title": "Recursos técnicos para compradores de separadores AGM",
         "subtitle": "Guias práticos sobre parâmetros, fabricação, qualidade e aplicações para preparar especificações, amostras e conversas com fornecedores.",
-        "count": "11 artigos técnicos",
+        "count": "12 artigos técnicos",
         "actionEyebrow": "Iniciar uma conversa de compra",
         "actionTitle": "Da pesquisa à análise de especificações",
         "actionText": "Compartilhe as informações disponíveis ou consulte o PDF técnico EN/ZH antes de falar com nossa equipe.",
@@ -19943,6 +20151,73 @@
             "Pressão ou vão constante",
             "Ciclos e resultados da bateria"
           ]
+        },
+        "agmSeparatorBatchProcessControl": {
+          "title": "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série",
+          "summary": "Uma média conforme descreve apenas a amostra; a produção contínua exige repetibilidade entre posições, rolos e lotes.",
+          "intro": "A primeira amostra pode aprovar e montar bem, enquanto o lote seguinte exige ajustes. A avaliação em série precisa observar dispersão e tendência, não apenas um certificado.",
+          "sections": [
+            [
+              "Dados de processo",
+              "A indústria de baterias já gerencia consistência com dados",
+              "A publicação da KSTAR de julho de 2026 descreve linhas automáticas de placas, soldagem robotizada, MES e qualidade digital twin. É um exemplo do fabricante de baterias, não prova do sistema Viking; mostra por que uma média isolada não explica repetibilidade."
+            ],
+            [
+              "Inspeção pontual",
+              "Um relatório aprovado responde apenas pelos pontos amostrados",
+              "Ele não demonstra que início, meio e fim do rolo são próximos ou que outro rolo e lote repetirão o resultado. Poucos pontos fixos podem perder variações que aparecem no desenrolamento contínuo."
+            ],
+            [
+              "Impacto na montagem",
+              "A variação do separador segue para o grupo de placas",
+              "Espessura altera compressão; gramatura e estrutura se relacionam a fibras, absorção, poros e resposta mecânica; largura, bordas e bobinamento afetam alimentação e perdas. O separador não define sozinho a bateria, mas material estável reduz variáveis."
+            ],
+            [
+              "Revisão estatística",
+              "A estabilidade em série exige mais que a média",
+              "Média, mínimo, máximo e amplitude descrevem centro e dispersão; desvio padrão e CV ajudam a comparar; tendências mostram deriva. Cp/Cpk só deve ser usado com limites definidos, medição confiável e processo estatisticamente estável."
+            ],
+            [
+              "Plano de amostragem",
+              "Sem posição documentada, a dispersão pode enganar",
+              "Conforme o risco, compare início, meio, fim e posições transversais. A verificação entre lotes deve incluir vários lotes e rolos; folhas devem registrar rolo de origem, corte e alteração após empilhamento ou embalagem."
+            ],
+            [
+              "Rastreabilidade",
+              "Uma auditoria útil pergunta onde surgiu a anomalia",
+              "Verifique a ligação entre lote de envio, ID do rolo ou folha, produção, ensaio e embalagem. É um roteiro de auditoria, não uma afirmação de MES ou rastreabilidade digital completa na Viking."
+            ],
+            [
+              "Coordenação Viking",
+              "Alinhar o método desde a amostra",
+              "Envie especificação, ensaios prioritários e lista de auditoria. Podemos alinhar método, posições, frequência, limites e identificação; a aptidão em série depende da validação do cliente."
+            ]
+          ],
+          "parameters": [
+            [
+              "Média",
+              "Localiza o centro, mas pode ocultar variação nas extremidades."
+            ],
+            [
+              "Amplitude",
+              "Mostra a faixa observada junto com quantidade e posição de amostras."
+            ],
+            [
+              "Desvio padrão e CV",
+              "Descrevem dispersão sob condições de teste constantes."
+            ],
+            [
+              "Tendência, Cp e Cpk",
+              "Use tendência para deriva e capacidade só após estabilidade."
+            ]
+          ],
+          "checklist": [
+            "Método e condicionamento",
+            "Posições longitudinais e transversais",
+            "Frequência por etapa",
+            "Limites e tendência",
+            "Identificação e tratamento de anomalias"
+          ]
         }
       },
       "comparison": {
@@ -20094,6 +20369,43 @@
             "https://doi.org/10.1016/S0378-7753(01)00925-9"
           ]
         ]
+      },
+      "batchProcessControlReferences": {
+        "eyebrow": "Referência",
+        "title": "Exemplo público de qualidade baseada em processo",
+        "text": "A fonte KSTAR descreve um fabricante de baterias e não comprova equipamentos, MES ou rastreabilidade da Viking.",
+        "items": [
+          [
+            "KSTAR — intelligent manufacturing and full-process quality management",
+            "https://www.kstar.com/cn/index.php/news/info/1269.html"
+          ]
+        ]
+      },
+      "batchProcessControlComparison": {
+        "eyebrow": "Dados ilustrativos",
+        "title": "Mesma média, dispersão diferente",
+        "columns": [
+          "Comparação",
+          "Amostra A",
+          "Amostra B"
+        ],
+        "rows": [
+          [
+            "Medições",
+            "1.50 / 1.50 / 1.50 mm",
+            "1.44 / 1.50 / 1.56 mm"
+          ],
+          [
+            "Média",
+            "1.50 mm",
+            "1.50 mm"
+          ],
+          [
+            "Amplitude",
+            "0.00 mm",
+            "0.12 mm"
+          ]
+        ]
       }
     },
     "ru": {
@@ -20134,7 +20446,7 @@
         "eyebrow": "Центр материалов по AGM-сепараторам",
         "title": "Технические материалы для закупщиков AGM-сепараторов",
         "subtitle": "Практические руководства по параметрам, производству, качеству и применению для подготовки спецификаций, образцов и переговоров с поставщиком.",
-        "count": "11 технических статей",
+        "count": "12 технических статей",
         "actionEyebrow": "Начать обсуждение закупки",
         "actionTitle": "От изучения к проверке спецификации",
         "actionText": "Перед обращением передайте имеющиеся требования или ознакомьтесь с техническим PDF на EN/ZH.",
@@ -20797,6 +21109,73 @@
             "Постоянное давление или зазор",
             "Циклы и результаты батареи"
           ]
+        },
+        "agmSeparatorBatchProcessControl": {
+          "title": "Почему одного теста недостаточно для серийного производства AGM-сепаратора",
+          "summary": "Соответствие среднего значения описывает только выборку; непрерывная сборка требует повторяемости по позициям, рулонам и партиям.",
+          "intro": "Первый образец может пройти контроль и хорошо собраться, а следующая партия потребует переналадки линии. Для серии важны разброс и тренд, а не только один сертификат.",
+          "sections": [
+            [
+              "Данные процесса",
+              "Производители батарей уже управляют стабильностью по данным",
+              "Публикация KSTAR июля 2026 года описывает автоматические линии пластин, роботизированную сварку, MES и digital twin контроля качества. Это пример производителя батарей, а не подтверждение системы Viking; он показывает, почему одного среднего недостаточно для оценки повторяемости."
+            ],
+            [
+              "Разовая проверка",
+              "Протокол отвечает только за отобранные точки",
+              "Он не доказывает близость начала, середины и конца рулона или повторяемость следующего рулона и партии. Малое число фиксированных точек может пропустить локальные колебания, заметные при непрерывной размотке."
+            ],
+            [
+              "Влияние на сборку",
+              "Разброс сепаратора передаётся в блок пластин",
+              "Толщина меняет сжатие; поверхностная плотность и структура связаны с волокнами, впитыванием, порами и механикой; ширина, кромка и намотка влияют на подачу и отходы. Сепаратор не определяет батарею один, но стабильный материал уменьшает число переменных."
+            ],
+            [
+              "Статистическая оценка",
+              "Для серийной стабильности среднего недостаточно",
+              "Среднее показывает центр, минимум, максимум и размах — ширину, стандартное отклонение и CV — рассеяние, тренд — смещение. Cp/Cpk применяют только при заданных пределах, надёжном измерении и статистически стабильном процессе."
+            ],
+            [
+              "План отбора",
+              "Без места отбора разброс может быть искажён",
+              "По риску сравнивают начало, середину, конец и поперечные позиции. Межпартийная оценка должна включать несколько партий и рулонов; для листов фиксируют исходный рулон, место резки и изменения после укладки и упаковки."
+            ],
+            [
+              "Прослеживаемость",
+              "Полезный аудит отвечает, где возникло отклонение",
+              "Проверяют связь отгрузочной партии, ID рулона или листов, производственной партии, испытаний и упаковки. Это схема аудита, а не заявление о наличии у Viking MES или полной цифровой прослеживаемости."
+            ],
+            [
+              "Работа с Viking",
+              "Метод серийной оценки согласуют на этапе образца",
+              "Передайте спецификацию, приоритетные испытания и аудит-лист. Можно согласовать метод, позиции, частоту, пределы и маркировку; пригодность для серии подтверждается испытаниями материала, сборки и батареи у клиента."
+            ]
+          ],
+          "parameters": [
+            [
+              "Среднее",
+              "Показывает центр, но может скрыть крайние колебания."
+            ],
+            [
+              "Размах",
+              "Показывает наблюдаемую ширину с учётом числа и места проб."
+            ],
+            [
+              "Стандартное отклонение и CV",
+              "Описывают разброс при неизменных условиях испытаний."
+            ],
+            [
+              "Тренд, Cp и Cpk",
+              "Тренд выявляет дрейф; способность оценивают после стабилизации."
+            ]
+          ],
+          "checklist": [
+            "Метод и кондиционирование",
+            "Продольные и поперечные позиции",
+            "Частота по этапам",
+            "Пределы и анализ тренда",
+            "ID партии и работа с отклонениями"
+          ]
         }
       },
       "comparison": {
@@ -20948,6 +21327,43 @@
             "https://doi.org/10.1016/S0378-7753(01)00925-9"
           ]
         ]
+      },
+      "batchProcessControlReferences": {
+        "eyebrow": "Источник",
+        "title": "Открытый пример процессного управления качеством",
+        "text": "Источник KSTAR описывает производителя батарей и не подтверждает оборудование, MES или прослеживаемость Viking.",
+        "items": [
+          [
+            "KSTAR — intelligent manufacturing and full-process quality management",
+            "https://www.kstar.com/cn/index.php/news/info/1269.html"
+          ]
+        ]
+      },
+      "batchProcessControlComparison": {
+        "eyebrow": "Пример данных",
+        "title": "Одинаковое среднее, разный разброс",
+        "columns": [
+          "Сравнение",
+          "Выборка A",
+          "Выборка B"
+        ],
+        "rows": [
+          [
+            "Измерения",
+            "1.50 / 1.50 / 1.50 mm",
+            "1.44 / 1.50 / 1.56 mm"
+          ],
+          [
+            "Среднее",
+            "1.50 mm",
+            "1.50 mm"
+          ],
+          [
+            "Размах",
+            "0.00 mm",
+            "0.12 mm"
+          ]
+        ]
       }
     },
     "ja": {
@@ -20988,7 +21404,7 @@
         "eyebrow": "AGMセパレーター資料センター",
         "title": "AGMセパレーターの購買・技術担当者向け実務資料",
         "subtitle": "仕様作成、サンプル評価、サプライヤー協議に役立つ技術特性、製造、品質、用途情報をまとめています。",
-        "count": "技術記事 11件",
+        "count": "技術記事 12件",
         "actionEyebrow": "購買相談を始める",
         "actionTitle": "情報収集から仕様照合へ",
         "actionText": "現在の要求事項を共有するか、お問い合わせ前に EN/ZH 技術能力資料をご確認ください。",
@@ -21651,6 +22067,73 @@
             "一定圧力または一定間隙",
             "サイクルと電池結果"
           ]
+        },
+        "agmSeparatorBatchProcessControl": {
+          "title": "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由",
+          "summary": "平均値の合格は採取した試料を示すだけです。連続組立には位置、ロール、製造ロット間の再現性が必要です。",
+          "intro": "初回サンプルが合格し組立も順調でも、次ロットでライン調整が増えることがあります。量産評価では一枚の合格書より、ばらつきと推移を確認します。",
+          "sections": [
+            [
+              "工程データ",
+              "下流メーカーは工程データで一貫性を管理しています",
+              "KSTARの2026年7月資料は自動極板ライン、ロボット鋳焊、MES、デジタルツイン品質管理を紹介しています。これは電池メーカーの事例でありVikingの設備を示すものではありませんが、平均値だけでは再現性を説明できないという調達側の変化を示します。"
+            ],
+            [
+              "単回検査",
+              "合格報告は採取点が基準を通ったことだけを示します",
+              "ロール先端・中央・後端が近いか、次のロールやロットで再現できるかは別の問題です。少数の固定点だけでは、連続巻出し時の局部変動を見落とす可能性があります。"
+            ],
+            [
+              "組立への影響",
+              "材料の変動は極群組立へ伝わります",
+              "厚さは実圧縮、坪量と構造は繊維分布・吸液・空孔・圧縮挙動、幅と巻姿は供給と損失に影響します。セパレーター単独で電池性能は決まりませんが、材料が安定すれば解析変数を減らせます。"
+            ],
+            [
+              "統計評価",
+              "平均値だけを見ても量産安定性は分かりません",
+              "平均は中心、最小・最大・レンジは広がり、標準偏差と変動係数は散らばりを示します。時系列グラフはドリフトの早期発見に有効です。Cp/Cpkは規格、測定信頼性、統計的安定がそろった後に使用します。"
+            ],
+            [
+              "サンプリング",
+              "採取位置が不明ではばらつきも歪みます",
+              "リスクに応じて先端・中央・後端と幅方向を比較します。ロット評価は複数ロット・ロールを含め、シートは元ロール、スリット位置、積層・包装後の寸法を記録します。"
+            ],
+            [
+              "トレーサビリティ",
+              "異常がどの工程から来たかを答えられることが重要です",
+              "出荷ロット、ロール・シートID、製造ロット、検査・包装記録の関連を確認します。これは監査の枠組みであり、VikingがMESや完全なデジタル追跡を運用しているという主張ではありません。"
+            ],
+            [
+              "Vikingの対応",
+              "サンプル段階から量産評価方法を合わせます",
+              "現行仕様書、重点試験、供給者監査リストをご提示ください。方法、位置、頻度、判定範囲、ロット表示を合わせ、量産適性はお客様の材料・組立・完成電池検証で確認します。"
+            ]
+          ],
+          "parameters": [
+            [
+              "平均",
+              "中心を示しますが両端の変動を隠すことがあります。"
+            ],
+            [
+              "レンジ",
+              "観察幅を示し、試料数と位置を併せて判断します。"
+            ],
+            [
+              "標準偏差・CV",
+              "同一試験条件で散らばりを表します。"
+            ],
+            [
+              "推移・Cp・Cpk",
+              "推移でドリフトを検出し、安定後に工程能力を評価します。"
+            ]
+          ],
+          "checklist": [
+            "試験法と前処理",
+            "ロール長手・幅方向の位置",
+            "段階別の検査頻度",
+            "判定範囲と推移レビュー",
+            "ロットIDと異常処置"
+          ]
         }
       },
       "comparison": {
@@ -21802,6 +22285,43 @@
             "https://doi.org/10.1016/S0378-7753(01)00925-9"
           ]
         ]
+      },
+      "batchProcessControlReferences": {
+        "eyebrow": "参考資料",
+        "title": "工程品質管理の公開事例",
+        "text": "KSTAR資料は電池メーカーの事例であり、Vikingの設備、MES、追跡範囲を証明するものではありません。",
+        "items": [
+          [
+            "KSTAR — intelligent manufacturing and full-process quality management",
+            "https://www.kstar.com/cn/index.php/news/info/1269.html"
+          ]
+        ]
+      },
+      "batchProcessControlComparison": {
+        "eyebrow": "例示データ",
+        "title": "同じ平均でも異なるばらつき",
+        "columns": [
+          "比較",
+          "試料A",
+          "試料B"
+        ],
+        "rows": [
+          [
+            "測定値",
+            "1.50 / 1.50 / 1.50 mm",
+            "1.44 / 1.50 / 1.56 mm"
+          ],
+          [
+            "平均",
+            "1.50 mm",
+            "1.50 mm"
+          ],
+          [
+            "範囲",
+            "0.00 mm",
+            "0.12 mm"
+          ]
+        ]
       }
     },
     "es": {
@@ -21842,7 +22362,7 @@
         "eyebrow": "Centro de recursos de separadores AGM",
         "title": "Recursos técnicos para compradores de separadores AGM",
         "subtitle": "Guías prácticas sobre parámetros, fabricación, calidad y aplicaciones para preparar especificaciones, muestras y conversaciones con proveedores.",
-        "count": "11 artículos técnicos",
+        "count": "12 artículos técnicos",
         "actionEyebrow": "Iniciar una conversación de compra",
         "actionTitle": "De la investigación a la revisión de especificaciones",
         "actionText": "Comparta la información disponible o revise el PDF técnico EN/ZH antes de contactar a nuestro equipo.",
@@ -22505,6 +23025,73 @@
             "Presión o separación constante",
             "Ciclos y resultados de batería"
           ]
+        },
+        "agmSeparatorBatchProcessControl": {
+          "title": "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie",
+          "summary": "Un promedio conforme solo describe la muestra tomada; la producción continua exige repetibilidad entre posiciones, rollos y lotes.",
+          "intro": "La primera muestra puede aprobar y montarse bien, mientras el lote siguiente obliga a ajustar la línea. La evaluación en serie debe mirar dispersión y tendencia, no solo un certificado.",
+          "sections": [
+            [
+              "Datos de proceso",
+              "Los fabricantes de baterías ya gestionan la consistencia con datos",
+              "La publicación de KSTAR de julio de 2026 describe líneas automáticas de placas, soldadura robotizada, MES y control digital twin. Es un ejemplo del fabricante de baterías, no una prueba del sistema de Viking; sí muestra por qué un promedio aislado ya no explica la repetibilidad."
+            ],
+            [
+              "Inspección puntual",
+              "Un informe conforme solo responde por los puntos muestreados",
+              "No demuestra que cabeza, centro y cola del rollo sean similares ni que otro rollo o lote repita el resultado. Pocos puntos fijos pueden omitir variaciones que aparecen durante el desbobinado continuo."
+            ],
+            [
+              "Impacto en montaje",
+              "La variación del separador continúa en el grupo de placas",
+              "El espesor cambia la compresión; el gramaje y la estructura se relacionan con fibras, absorción, poros y respuesta mecánica; ancho, bordes y bobinado afectan alimentación y desperdicio. El separador no determina solo la batería, pero reduce variables si es estable."
+            ],
+            [
+              "Revisión estadística",
+              "La estabilidad de serie requiere más que el promedio",
+              "Promedio, mínimo, máximo y rango describen centro y amplitud; desviación estándar y CV ayudan a comparar dispersión; la tendencia detecta deriva. Cp/Cpk solo debe usarse con límites definidos, medición fiable y proceso estadísticamente estable."
+            ],
+            [
+              "Plan de muestreo",
+              "Sin ubicación documentada, la dispersión puede engañar",
+              "Según el riesgo, compare cabeza, centro, cola y posiciones transversales. La verificación entre lotes debe incluir varios lotes y rollos; las hojas deben conservar su rollo de origen, posición de corte y cambio dimensional tras apilado o embalaje."
+            ],
+            [
+              "Trazabilidad",
+              "Una auditoría útil pregunta de dónde surgió la anomalía",
+              "Revise la relación entre lote de envío, ID de rollo u hoja, lote de producción, ensayo y embalaje. Es un marco de auditoría, no una afirmación de que Viking disponga de MES o trazabilidad digital completa."
+            ],
+            [
+              "Coordinación Viking",
+              "Alinear el método de evaluación desde la muestra",
+              "Comparta especificación, ensayos prioritarios y lista de auditoría. Podemos alinear método, posiciones, frecuencia, límites e identificación; la aptitud en serie depende de la validación de material, montaje y batería del cliente."
+            ]
+          ],
+          "parameters": [
+            [
+              "Promedio",
+              "Sitúa el centro, pero puede ocultar variación en los extremos."
+            ],
+            [
+              "Rango",
+              "Muestra la amplitud observada junto con cantidad y posición de muestras."
+            ],
+            [
+              "Desviación estándar y CV",
+              "Describen dispersión bajo condiciones de ensayo constantes."
+            ],
+            [
+              "Tendencia, Cp y Cpk",
+              "La tendencia detecta deriva; la capacidad se usa después de estabilizar el proceso."
+            ]
+          ],
+          "checklist": [
+            "Método y acondicionamiento",
+            "Posiciones longitudinales y transversales",
+            "Frecuencia por etapa",
+            "Límites y revisión de tendencia",
+            "Identificación y tratamiento de anomalías"
+          ]
         }
       },
       "comparison": {
@@ -22654,6 +23241,43 @@
           [
             "Journal of Power Sources — characterisation of separator papers for VRLA batteries",
             "https://doi.org/10.1016/S0378-7753(01)00925-9"
+          ]
+        ]
+      },
+      "batchProcessControlReferences": {
+        "eyebrow": "Referencia",
+        "title": "Ejemplo público de calidad basada en procesos",
+        "text": "La fuente KSTAR describe a un fabricante de baterías y no verifica equipos, MES ni trazabilidad de Viking.",
+        "items": [
+          [
+            "KSTAR — intelligent manufacturing and full-process quality management",
+            "https://www.kstar.com/cn/index.php/news/info/1269.html"
+          ]
+        ]
+      },
+      "batchProcessControlComparison": {
+        "eyebrow": "Datos ilustrativos",
+        "title": "Mismo promedio, distinta dispersión",
+        "columns": [
+          "Comparación",
+          "Muestra A",
+          "Muestra B"
+        ],
+        "rows": [
+          [
+            "Mediciones",
+            "1.50 / 1.50 / 1.50 mm",
+            "1.44 / 1.50 / 1.56 mm"
+          ],
+          [
+            "Promedio",
+            "1.50 mm",
+            "1.50 mm"
+          ],
+          [
+            "Rango",
+            "0.00 mm",
+            "0.12 mm"
           ]
         ]
       }
@@ -35839,6 +36463,1658 @@
         }
       }
     },
+    "agmSeparatorBatchProcessControl": {
+      "en": {
+        "nav": {
+          "company": "Company",
+          "products": "Products",
+          "applications": "Applications",
+          "quality": "Quality",
+          "resources": "Resources",
+          "contact": "Contact"
+        },
+        "language": "中文",
+        "homePath": "/",
+        "languagePath": "/zh/blog/agm-separator-batch-consistency-and-process-control/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Request Sample",
+        "hero": {
+          "eyebrow": "Batch Consistency",
+          "title": "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+          "subtitle": "Thickness, basis weight and absorption passing one inspection only describe that sample. Continuous assembly depends on variation between positions, rolls and production batches.",
+          "primary": "Request a Sample & Specification Match",
+          "secondary": "Review the audit checklist",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "AGM separator quality inspection at Hubei Viking",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "A first sample can pass inspection and assemble smoothly, while the next batch still requires repeated line adjustment. The issue is not always an out-of-spec result. A single inspection describes a point; volume production exposes variation across time, rolls and sampling positions.",
+          "For buyers and quality teams, the useful question is therefore not only whether the reported average passes. It is whether the agreed method can show repeatable performance from roll head to tail and from sample approval through pilot and volume supply."
+        ],
+        "comparison": {
+          "eyebrow": "Illustrative Data",
+          "title": "The same average can hide very different dispersion",
+          "columns": [
+            "Comparison",
+            "Sample set A",
+            "Sample set B"
+          ],
+          "rows": [
+            [
+              "Measurements",
+              "1.50 / 1.50 / 1.50 mm",
+              "1.44 / 1.50 / 1.56 mm"
+            ],
+            [
+              "Average",
+              "1.50 mm",
+              "1.50 mm"
+            ],
+            [
+              "Range",
+              "0.00 mm",
+              "0.12 mm"
+            ],
+            [
+              "Interpretation",
+              "All three points coincide in this illustration.",
+              "The same average masks wider point-to-point variation."
+            ]
+          ]
+        },
+        "sections": [
+          {
+            "eyebrow": "Process Data",
+            "title": "Downstream manufacturing is already managing consistency with process data",
+            "text": "KSTAR's July 2026 manufacturing update describes automated plate lines, robot cast welding, MES and a digital-twin quality platform covering incoming material, processing, finished-product inspection and outgoing verification. This is a downstream battery-company example, not evidence of Viking's production system. The sourcing signal is still relevant: as battery plants manage more of the process digitally, a supplier average and one certificate are no longer enough to explain repeatability."
+          },
+          {
+            "eyebrow": "Single Inspection",
+            "title": "A passing report only answers whether the sampled points crossed the line",
+            "text": "A certificate does not by itself show where the sample came from, whether roll head, middle and tail are similar, or whether another roll and production batch will reproduce the result. Sampling too few fixed positions can miss local movement that later appears during continuous unwinding and assembly. The illustrative thickness values above are not Viking specifications; they simply show why equal averages can carry different process risk."
+          },
+          {
+            "eyebrow": "Assembly Impact",
+            "title": "Separator variation continues into the plate-group assembly process",
+            "text": "Thickness variation changes actual compression within a fixed group gap. Basis-weight and structure variation may correspond to changes in fiber distribution, absorption, porosity and compression behavior. Width, sheet dimensions, roll edges and winding affect line feeding, adjustment and material loss. None of these variables alone determines battery performance, but more stable incoming material removes variables from assembly and failure analysis."
+          },
+          {
+            "eyebrow": "Statistical Review",
+            "title": "Volume readiness requires more than an average",
+            "text": "Average locates the center; maximum, minimum and range show the observed spread; standard deviation and coefficient of variation help compare dispersion; and a time-ordered trend can reveal drift before the pass rate changes. Cp and Cpk are useful only when specification limits are defined, the measurement system is reliable and the process is statistically stable. They cannot be responsibly inferred from a few samples or used instead of battery assembly and performance validation."
+          },
+          {
+            "eyebrow": "Sampling Plan",
+            "title": "Dispersion is only meaningful when sampling locations are documented",
+            "text": "For rolls, a risk-based plan can compare head, middle and tail and, where relevant, positions across the web. Cross-batch work should cover multiple production batches and rolls rather than repeated readings from one roll. Sheet sampling should identify source rolls and slit positions and check whether stacking and packing affect dimensions. Sample, pilot and stable-production frequencies may differ, but every change needs a documented basis."
+          },
+          {
+            "eyebrow": "Traceability Review",
+            "title": "A useful audit asks where an abnormal result came from",
+            "text": "Supplier review can ask how shipment batches, roll or sheet identifiers, production batches, test records and packing records are linked; which properties are checked by roll or batch; and how abnormal data are isolated and reviewed. This is an audit framework, not a claim that Viking currently operates MES or a fully digital traceability platform. Coding, record-retention and sample-retention requirements should be confirmed for the specific project."
+          },
+          {
+            "eyebrow": "Viking Coordination",
+            "title": "Align the volume-evaluation method during the sample stage",
+            "text": "Viking manufactures AGM glass-fiber separator rolls and sheets for VRLA applications and can discuss thickness, width, sheet size and packing. For a project moving toward volume production, share the current specification, priority test items and supplier-audit checklist. We can first align the test method, sampling locations, inspection frequency, acceptance range and required batch identification; suitability remains subject to the customer's material, assembly and complete-battery validation."
+          }
+        ],
+        "parameters": [
+          [
+            "Average",
+            "Shows where the data center sits, but can conceal movement at the upper and lower ends."
+          ],
+          [
+            "Range",
+            "Quickly shows the observed span; interpret it with sample size, position and possible outliers."
+          ],
+          [
+            "Standard deviation & CV",
+            "Describe dispersion and support comparison, provided the method and conditions remain the same."
+          ],
+          [
+            "Trend, Cp & Cpk",
+            "Use trends to detect drift; use capability indices only after measurement and process stability are established."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Production Evidence",
+          "title": "Sampling, inspection and shipment records should describe the same batch",
+          "items": [
+            [
+              "Roll-position sampling",
+              "Identify roll, batch and head/middle/tail positions before comparing dispersion.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Viking AGM separator roll for position-based sampling"
+            ],
+            [
+              "Consistent test conditions",
+              "Equipment, conditioning, pressure and sample location must stay consistent for comparable results.",
+              "/images/agm-quality-control-1200.webp",
+              "AGM separator quality inspection"
+            ],
+            [
+              "Packing and shipment link",
+              "Project-specific coding should connect accepted material with packing and shipment records.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGM separator packing and shipment"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Supplier Audit Checklist",
+          "title": "Confirm these boundaries before pilot or volume production",
+          "text": "A shared sampling and acceptance method is more useful than a single attractive report because it makes later batches comparable and exceptions reviewable.",
+          "items": [
+            "Test method and conditioning",
+            "Roll and cross-web sampling positions",
+            "Inspection frequency by project stage",
+            "Acceptance limits and trend review",
+            "Batch identifiers and exception handling"
+          ]
+        },
+        "references": {
+          "eyebrow": "Reference",
+          "title": "A downstream example of process-based quality management",
+          "text": "The KSTAR source describes a battery manufacturer's system and is cited only to illustrate downstream expectations. It does not verify Viking's equipment, MES, traceability scope or record-retention period.",
+          "items": [
+            [
+              "KSTAR — intelligent manufacturing and full-process quality management",
+              "https://www.kstar.com/cn/index.php/news/info/1269.html"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "Related Pages",
+          "title": "Continue with consistency, testing and sample evaluation",
+          "items": [
+            [
+              "Why AGM Separator Consistency Matters",
+              "/blog/agm-separator-performance-consistency/"
+            ],
+            [
+              "AGM Separator Testing",
+              "/quality-control/agm-separator-testing/"
+            ],
+            [
+              "Key Technical Parameters of AGM Separators",
+              "/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Request a Sample & Specification Match",
+              "/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Inquiry",
+          "title": "Review the sampling and acceptance method for volume production",
+          "text": "Share your specification, priority test items, intended sampling locations and supplier-audit checklist so the comparison boundary is clear before pilot production.",
+          "checklist": [
+            "Application and battery design",
+            "Specification and test method",
+            "Sampling positions and frequency",
+            "Pilot or volume-production stage"
+          ],
+          "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+          },
+          "placeholders": {
+            "name": "Your full name",
+            "company": "Company name",
+            "email": "name@company.com",
+            "country": "Country / region",
+            "application": "VRLA, UPS, telecom, motorcycle...",
+            "message": "Application, specification, priority tests, sampling plan, acceptance limits and current project stage"
+          },
+          "submit": "Send Inquiry",
+          "submitting": "Sending...",
+          "required": "Please complete all required fields before submitting.",
+          "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+          "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+          "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+        },
+        "footer": {
+          "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+          "wechat": "Official WeChat account",
+          "mobile": "Mobile website"
+        }
+      },
+      "zh": {
+        "nav": {
+          "company": "公司",
+          "products": "产品",
+          "applications": "应用",
+          "quality": "质量",
+          "resources": "资料",
+          "contact": "联系"
+        },
+        "language": "EN",
+        "homePath": "/zh/",
+        "languagePath": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "brandName": "湖北维京科技有限公司",
+        "quote": "申请样品",
+        "hero": {
+          "eyebrow": "批次一致性",
+          "title": "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+          "subtitle": "厚度、克重和吸液量达到要求，只能说明这次抽检过关。连续装配更关心不同批次、不同卷材和同一卷不同位置能否保持稳定。",
+          "primary": "申请样品与规格匹配",
+          "secondary": "查看供应商审核清单",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "湖北维京 AGM 隔板质量检测",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "第一批样品检测合格、装配顺利，第二批参数仍在规格范围内，生产线却开始频繁调整。这类问题不一定来自某个参数不合格，更多时候是单次检测只看到了一个点，没有看到连续生产中的波动。",
+          "对采购和质量团队来说，真正要确认的不只是报告平均值是否合格，而是同一评价方法能否覆盖卷头、卷中、卷尾，不同卷材和不同生产批次，并从样品、试产延续到批量阶段。"
+        ],
+        "comparison": {
+          "eyebrow": "示例数据",
+          "title": "平均值相同，离散程度可以完全不同",
+          "columns": [
+            "比较项",
+            "样本 A",
+            "样本 B"
+          ],
+          "rows": [
+            [
+              "检测值",
+              "1.50 / 1.50 / 1.50 mm",
+              "1.44 / 1.50 / 1.56 mm"
+            ],
+            [
+              "平均值",
+              "1.50 mm",
+              "1.50 mm"
+            ],
+            [
+              "极差",
+              "0.00 mm",
+              "0.12 mm"
+            ],
+            [
+              "说明",
+              "示例中的三个点完全重合。",
+              "相同平均值掩盖了更大的点位波动。"
+            ]
+          ]
+        },
+        "sections": [
+          {
+            "eyebrow": "过程数据",
+            "title": "下游已经开始用过程数据管理一致性",
+            "text": "科士达 2026 年 7 月发布的制造信息提到自动化极板生产线、机器人铸焊，以及覆盖原料、加工、成品检测和出厂核验的 MES 与数字孪生质控平台。这是下游电池企业的公开案例，不能等同于维京自身的生产体系。但它传递出的采购信号很清楚：当电池厂越来越重视过程数据，上游材料只提供一个平均值和一张合格报告，通常已经不足以解释可重复性。"
+          },
+          {
+            "eyebrow": "单次抽检",
+            "title": "一张合格报告，只能回答这次抽样有没有过线",
+            "text": "合格证无法单独说明样品取自卷材哪个位置，卷头、卷中和卷尾是否接近，也不能证明换一卷或换一个生产批次后仍能复现。如果取样少且位置固定，局部波动可能直到连续放卷和装配时才显现。上方厚度数据仅用于说明统计差异，不代表维京产品规格或公差。"
+          },
+          {
+            "eyebrow": "装配影响",
+            "title": "隔板的波动，会沿着装配过程继续传递",
+            "text": "厚度波动会改变固定极群间隙中的实际压缩状态；克重和结构波动可能对应纤维分布、吸液、孔隙和受压表现差异；宽度、片材尺寸、端面和收卷状态则直接影响放卷、调机和材料损耗。隔板并不单独决定最终电池结果，但上游材料越稳定，电池厂装配和问题排查时面对的变量就越少。"
+          },
+          {
+            "eyebrow": "统计评估",
+            "title": "判断批量稳定，不能只盯着平均值",
+            "text": "平均值说明数据中心位置，最大值、最小值和极差展示已观察到的跨度，标准差与变异系数用于辅助比较离散程度，按时间或批次排列的趋势图则有助于提前发现漂移。只有在规格上下限明确、测量系统可靠且过程处于统计稳定状态时，才适合进一步使用 Cp、Cpk。少量样品计算出的漂亮数值，不能替代装配和整电池验证。"
+          },
+          {
+            "eyebrow": "取样方案",
+            "title": "取样位置不写清，离散度也可能失真",
+            "text": "卷材可以根据项目风险比较卷头、卷中和卷尾，较宽卷材还可关注横向不同位置。跨批次验证应覆盖多个生产批次和多卷产品，而不是把同一卷多测几次当作批次稳定性。片材则要记录来源卷材、分切位置，并确认堆叠和包装后尺寸是否变化。样品、试产和稳定量产阶段可以采用不同频次，但调整依据需要留痕。"
+          },
+          {
+            "eyebrow": "追溯审核",
+            "title": "质量追溯，要能回答异常来自哪一段",
+            "text": "供应商审核可以继续追问出货批次、卷材或片材编号、生产批次、检测记录与包装记录如何关联；哪些参数按卷检测、哪些按批检测；异常数据如何隔离和复核。这是一套审核框架，不代表维京目前已部署 MES 或完整数字化追溯平台。具体批次编码、记录保存和留样要求，应按项目单独确认。"
+          },
+          {
+            "eyebrow": "维京配合",
+            "title": "从样品阶段开始确认批量评价方法",
+            "text": "维京持续专注 VRLA 电池用 AGM 玻璃纤维隔板制造，可提供卷材和片材，并支持厚度、宽度、片材尺寸及包装沟通。准备进入批量的项目，可以提供现行规格书、重点检测项目和供应商审核清单，先共同确认测试方法、取样位置、检测频次、判定范围和批次标识要求。最终是否适合批量使用，仍应以客户的材料、装配和整电池验证为准。"
+          }
+        ],
+        "parameters": [
+          [
+            "平均值",
+            "说明过程大致落在哪里，但可能掩盖上下两端的波动。"
+          ],
+          [
+            "最大值、最小值与极差",
+            "快速展示已观察到的跨度，需要结合取样数量、位置和异常值判断。"
+          ],
+          [
+            "标准差与变异系数",
+            "描述离散程度并辅助跨指标比较，前提是测试方法和条件一致。"
+          ],
+          [
+            "趋势图、Cp 与 Cpk",
+            "趋势用于发现漂移；过程能力指数应在测量可靠且过程稳定后使用。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "生产证据",
+          "title": "取样、检测与出货记录应指向同一批产品",
+          "items": [
+            [
+              "卷材位置取样",
+              "比较离散度前，先明确卷号、批次和卷头、卷中、卷尾位置。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "湖北维京 AGM 隔板卷材位置取样"
+            ],
+            [
+              "统一检测条件",
+              "设备、预处理、测试压力和取样位置一致，数据才具有可比性。",
+              "/images/agm-quality-control-1200.webp",
+              "湖北维京 AGM 隔板质量检测"
+            ],
+            [
+              "包装与出货关联",
+              "项目确认的批次标识应能把合格材料与包装、出货记录关联起来。",
+              "/images/evidence/shipping-pallet-01.webp",
+              "湖北维京 AGM 隔板包装与出货"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "供应商审核清单",
+          "title": "试产或批量前，先确认这些评价边界",
+          "text": "共同的取样和判定方法比一张漂亮报告更有价值，因为后续批次可以比较，异常也有依据复核。",
+          "items": [
+            "测试方法与样品预处理",
+            "卷向与横向取样位置",
+            "不同项目阶段的检测频次",
+            "判定范围与趋势复核",
+            "批次标识与异常处置要求"
+          ]
+        },
+        "references": {
+          "eyebrow": "资料来源",
+          "title": "下游过程质量管理的公开案例",
+          "text": "科士达资料用于说明电池制造端的过程管理趋势，不用于证明维京的设备、MES、追溯范围或记录保存周期。",
+          "items": [
+            [
+              "KSTAR — intelligent manufacturing and full-process quality management",
+              "https://www.kstar.com/cn/index.php/news/info/1269.html"
+            ]
+          ]
+        },
+        "related": {
+          "eyebrow": "相关页面",
+          "title": "继续了解一致性、检测和样品评估",
+          "items": [
+            [
+              "AGM 隔板一致性为什么重要",
+              "/zh/blog/agm-separator-performance-consistency/"
+            ],
+            [
+              "AGM 隔板检测",
+              "/zh/quality-control/agm-separator-testing/"
+            ],
+            [
+              "AGM 隔板关键技术参数",
+              "/zh/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "申请样品与规格匹配",
+              "/zh/request-agm-separator-sample/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "询盘",
+          "title": "确认批量试产的取样与判定方法",
+          "text": "请提供现行规格书、重点检测项目、计划取样位置和供应商审核清单，先把比较边界确认清楚。",
+          "checklist": [
+            "电池应用与结构",
+            "规格书与测试方法",
+            "取样位置与检测频次",
+            "试产或批量阶段"
+          ],
+          "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+          },
+          "placeholders": {
+            "name": "您的姓名",
+            "company": "公司名称",
+            "email": "name@company.com",
+            "country": "国家或地区",
+            "application": "VRLA、UPS、通信、摩托车等",
+            "message": "电池应用、规格书、重点检测项目、取样方案、判定范围和当前项目阶段"
+          },
+          "submit": "发送询盘",
+          "submitting": "发送中...",
+          "required": "请先填写所有必填字段。",
+          "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+          "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+          "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+        },
+        "footer": {
+          "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+          "wechat": "官方微信公众号",
+          "mobile": "移动官网"
+        }
+      },
+      "vi": {
+        "nav": {
+          "company": "Công ty",
+          "products": "Sản phẩm",
+          "quality": "Chất lượng",
+          "resources": "Tài liệu",
+          "applications": "Ứng dụng",
+          "contact": "Liên hệ"
+        },
+        "language": "VI",
+        "homePath": "/vi/",
+        "languagePath": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Yêu cầu mẫu",
+        "hero": {
+          "eyebrow": "Hướng dẫn kỹ thuật AGM",
+          "title": "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt?",
+          "subtitle": "Giá trị trung bình đạt yêu cầu chỉ mô tả mẫu đã lấy; sản xuất liên tục cần độ ổn định giữa vị trí, cuộn và lô.",
+          "primary": "Yêu cầu mẫu và đối chiếu thông số",
+          "secondary": "Xem danh sách kiểm tra mua hàng",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt?",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "Mẫu đầu có thể đạt và lắp ráp thuận lợi, nhưng lô sau vẫn buộc dây chuyền điều chỉnh. Đánh giá hàng loạt phải nhìn độ phân tán và xu hướng, không chỉ một chứng nhận đạt.",
+          "Giá trị trung bình đạt yêu cầu chỉ mô tả mẫu đã lấy; sản xuất liên tục cần độ ổn định giữa vị trí, cuộn và lô."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Dữ liệu quá trình",
+            "title": "Khách hàng hạ nguồn đang quản lý tính nhất quán bằng dữ liệu quá trình",
+            "text": "Thông tin sản xuất tháng 7/2026 của KSTAR nêu dây chuyền bản cực tự động, hàn đúc robot, MES và nền tảng chất lượng digital twin. Đây là ví dụ của nhà sản xuất ắc quy, không phải bằng chứng về hệ thống Viking; nó cho thấy một giá trị trung bình không đủ giải thích khả năng lặp lại."
+          },
+          {
+            "eyebrow": "Kiểm tra đơn",
+            "title": "Một báo cáo đạt chỉ trả lời các điểm đã lấy mẫu",
+            "text": "Báo cáo không tự chứng minh đầu, giữa và cuối cuộn gần nhau hay cuộn và lô tiếp theo sẽ lặp lại. Ít điểm lấy mẫu cố định có thể bỏ sót dao động chỉ xuất hiện khi chạy liên tục."
+          },
+          {
+            "eyebrow": "Ảnh hưởng lắp ráp",
+            "title": "Dao động vật liệu tiếp tục truyền vào cụm bản cực",
+            "text": "Độ dày làm thay đổi nén; định lượng và cấu trúc liên quan đến phân bố sợi, hút axit và lỗ rỗng; khổ rộng, mép và độ cuốn ảnh hưởng cấp liệu và tổn hao. Tấm ngăn không quyết định một mình kết quả ắc quy, nhưng vật liệu ổn định giúp giảm biến số."
+          },
+          {
+            "eyebrow": "Đánh giá thống kê",
+            "title": "Không thể chỉ nhìn giá trị trung bình",
+            "text": "Trung bình cho biết tâm dữ liệu; min, max và khoảng biến thiên cho biết độ trải; độ lệch chuẩn và hệ số biến thiên hỗ trợ so sánh; biểu đồ xu hướng giúp phát hiện trôi. Cp/Cpk chỉ có ý nghĩa khi hệ đo đáng tin cậy và quá trình đã ổn định."
+          },
+          {
+            "eyebrow": "Kế hoạch lấy mẫu",
+            "title": "Không ghi vị trí thì độ phân tán có thể bị hiểu sai",
+            "text": "Theo rủi ro, hãy so đầu, giữa, cuối cuộn và cả vị trí ngang với cuộn rộng. Đánh giá giữa lô phải bao phủ nhiều cuộn và lô; với tấm, cần ghi cuộn nguồn, vị trí xẻ và ảnh hưởng của xếp chồng, đóng gói."
+          },
+          {
+            "eyebrow": "Đánh giá truy xuất",
+            "title": "Truy xuất hữu ích phải chỉ ra đoạn phát sinh bất thường",
+            "text": "Hồ sơ nên liên kết lô giao hàng, mã cuộn hoặc tấm, lô sản xuất, kiểm tra và đóng gói. Đây là khung đánh giá, không phải tuyên bố Viking có MES hay nền tảng truy xuất số đầy đủ."
+          },
+          {
+            "eyebrow": "Phối hợp Viking",
+            "title": "Thống nhất phương pháp đánh giá ngay từ giai đoạn mẫu",
+            "text": "Hãy gửi quy cách, chỉ tiêu trọng yếu và danh sách đánh giá nhà cung cấp. Hai bên có thể thống nhất phương pháp, vị trí, tần suất, giới hạn và mã lô; quyết định dùng hàng loạt vẫn dựa trên xác nhận vật liệu, lắp ráp và ắc quy của khách hàng."
+          }
+        ],
+        "parameters": [
+          [
+            "Trung bình",
+            "Cho biết tâm nhưng có thể che dao động hai đầu."
+          ],
+          [
+            "Khoảng biến thiên",
+            "Cho biết độ trải quan sát được; cần xem cùng số lượng và vị trí mẫu."
+          ],
+          [
+            "Độ lệch chuẩn & CV",
+            "Mô tả phân tán khi phương pháp thử không đổi."
+          ],
+          [
+            "Xu hướng, Cp & Cpk",
+            "Dùng xu hướng tìm trôi; chỉ dùng chỉ số năng lực sau khi quá trình ổn định."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Dạng cung cấp",
+          "title": "Chọn dạng cuộn hoặc tấm theo quy trình sản xuất",
+          "items": [
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "Phù hợp dây chuyền liên tục, chia cuộn hoặc cắt nội bộ trước khi lắp ráp.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Tấm ngăn AGM dạng cuộn"
+            ],
+            [
+              "Chất lượng",
+              "Thông tin rõ ràng giúp đánh giá mẫu và trao đổi thông số hiệu quả hơn.",
+              "/images/agm-quality-control-1200.webp",
+              "Chất lượng"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "Phù hợp khi cần kích thước cắt sẵn để đơn giản hóa khâu chuẩn bị lắp ráp.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "Tấm ngăn AGM dạng tấm"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Kiểm tra mua hàng",
+          "title": "Xác nhận yêu cầu trước khi lấy mẫu",
+          "text": "Thông tin rõ ràng giúp đánh giá mẫu và trao đổi thông số hiệu quả hơn.",
+          "items": [
+            "Phương pháp thử và tiền xử lý",
+            "Vị trí dọc và ngang cuộn",
+            "Tần suất theo giai đoạn dự án",
+            "Giới hạn và xem xét xu hướng",
+            "Mã lô và xử lý bất thường"
+          ]
+        },
+        "related": {
+          "eyebrow": "Tài liệu liên quan",
+          "title": "Tiếp tục đánh giá sản phẩm và nhà cung cấp",
+          "items": [
+            [
+              "Tấm ngăn AGM là gì?",
+              "/vi/blog/what-is-agm-separator/"
+            ],
+            [
+              "Các thông số kỹ thuật chính của tấm ngăn AGM",
+              "/vi/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Cách lựa chọn tấm ngăn AGM",
+              "/vi/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Tấm ngăn sợi thủy tinh AGM và tấm ngăn PVC khác nhau thế nào?",
+              "/vi/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Trao đổi thông số",
+          "title": "Gửi yêu cầu ứng dụng và kích thước",
+          "text": "Chia sẻ thông tin bạn đã có. Chúng tôi sẽ trao đổi về dạng sản phẩm, mẫu thử và khả năng phối hợp.",
+          "checklist": [
+            "Ứng dụng và loại ắc quy",
+            "Độ dày, chiều rộng hoặc kích thước tấm",
+            "Dạng cuộn hoặc tấm và yêu cầu đóng gói"
+          ],
+          "placeholders": {
+            "message": "Mô tả ứng dụng, thông số mục tiêu, số lượng mẫu hoặc yêu cầu đóng gói."
+          }
+        },
+        "footer": {
+          "description": "Tấm ngăn sợi thủy tinh AGM dạng cuộn và tấm cho nhà sản xuất ắc quy VRLA.",
+          "wechat": "Theo dõi tài khoản WeChat của Viking AGM",
+          "mobile": "Truy cập trang web Viking AGM trên điện thoại"
+        },
+        "comparison": {
+          "eyebrow": "Dữ liệu minh họa",
+          "title": "Cùng trung bình, độ phân tán khác",
+          "columns": [
+            "So sánh",
+            "Mẫu A",
+            "Mẫu B"
+          ],
+          "rows": [
+            [
+              "Các phép đo",
+              "1.50 / 1.50 / 1.50 mm",
+              "1.44 / 1.50 / 1.56 mm"
+            ],
+            [
+              "Trung bình",
+              "1.50 mm",
+              "1.50 mm"
+            ],
+            [
+              "Khoảng biến thiên",
+              "0.00 mm",
+              "0.12 mm"
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "Tài liệu tham khảo",
+          "title": "Ví dụ công khai về quản lý chất lượng theo quá trình",
+          "text": "Nguồn KSTAR mô tả nhà sản xuất ắc quy và không xác nhận thiết bị, MES hay phạm vi truy xuất của Viking.",
+          "items": [
+            [
+              "KSTAR — intelligent manufacturing and full-process quality management",
+              "https://www.kstar.com/cn/index.php/news/info/1269.html"
+            ]
+          ]
+        }
+      },
+      "ko": {
+        "nav": {
+          "company": "회사",
+          "products": "제품",
+          "quality": "품질",
+          "resources": "자료",
+          "applications": "응용 분야",
+          "contact": "문의"
+        },
+        "language": "KO",
+        "homePath": "/ko/",
+        "languagePath": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "샘플 요청",
+        "hero": {
+          "eyebrow": "AGM 분리막 기술 가이드",
+          "title": "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유",
+          "subtitle": "평균값 합격은 채취한 시료만 설명합니다. 연속 조립에는 위치·롤·생산 로트 간 반복성이 필요합니다.",
+          "primary": "샘플 및 사양 검토 요청",
+          "secondary": "구매 체크리스트 보기",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "첫 샘플이 합격하고 조립도 원활해도 다음 로트에서 라인 조정이 늘 수 있습니다. 양산 평가는 한 장의 성적서보다 산포와 추세를 확인해야 합니다.",
+          "평균값 합격은 채취한 시료만 설명합니다. 연속 조립에는 위치·롤·생산 로트 간 반복성이 필요합니다."
+        ],
+        "sections": [
+          {
+            "eyebrow": "공정 데이터",
+            "title": "하류 제조사는 공정 데이터로 일관성을 관리합니다",
+            "text": "KSTAR의 2026년 7월 자료는 자동 극판 라인, 로봇 주조 용접, MES와 디지털 트윈 품질 플랫폼을 설명합니다. 이는 배터리 업체 사례이며 Viking 시스템의 증거가 아닙니다. 다만 평균값 하나로 반복성을 설명하기 어렵다는 구매 신호를 보여 줍니다."
+          },
+          {
+            "eyebrow": "단일 검사",
+            "title": "합격 성적서는 채취 지점의 통과 여부만 답합니다",
+            "text": "롤의 시작·중간·끝이 비슷한지, 다음 롤과 로트가 재현되는지는 별도 확인이 필요합니다. 적은 고정 지점만 검사하면 연속 권출 때 나타나는 국부 변동을 놓칠 수 있습니다."
+          },
+          {
+            "eyebrow": "조립 영향",
+            "title": "분리막 변동은 극군 조립으로 이어집니다",
+            "text": "두께는 실제 압축을, 평량과 구조는 섬유 분포·흡액·기공·압축 거동을, 폭과 권취는 공급성과 손실을 바꿀 수 있습니다. 분리막만으로 배터리 성능이 결정되지는 않지만 안정된 소재는 분석 변수를 줄입니다."
+          },
+          {
+            "eyebrow": "통계 검토",
+            "title": "평균값만으로 양산 안정성을 판단할 수 없습니다",
+            "text": "평균은 중심, 최소·최대·범위는 관찰 폭, 표준편차와 변동계수는 산포를 보여 줍니다. 시계열 추세는 이동을 조기에 찾습니다. Cp/Cpk는 규격, 측정 신뢰성과 통계적 안정이 확보된 뒤에만 사용해야 합니다."
+          },
+          {
+            "eyebrow": "샘플링 계획",
+            "title": "채취 위치가 없으면 산포도 왜곡될 수 있습니다",
+            "text": "위험에 따라 롤 시작·중간·끝과 폭 방향을 비교합니다. 로트 평가는 여러 생산 로트와 롤을 포함하고, 시트는 원롤과 슬리팅 위치, 적층·포장 후 치수 변화를 기록해야 합니다."
+          },
+          {
+            "eyebrow": "추적성 검토",
+            "title": "유용한 추적성은 이상이 발생한 구간을 답해야 합니다",
+            "text": "출하 로트, 롤·시트 ID, 생산 로트, 시험 및 포장 기록의 연결을 검토합니다. 이는 감사 프레임이며 Viking이 MES나 완전한 디지털 추적 플랫폼을 운영한다는 주장이 아닙니다."
+          },
+          {
+            "eyebrow": "Viking 협의",
+            "title": "샘플 단계에서 양산 평가 방법을 맞춥니다",
+            "text": "현행 규격서, 핵심 시험 항목과 공급업체 감사 목록을 공유해 주세요. 방법, 위치, 빈도, 판정 범위와 로트 표시를 먼저 맞추며, 양산 적합성은 고객의 소재·조립·완성 배터리 검증으로 확인합니다."
+          }
+        ],
+        "parameters": [
+          [
+            "평균",
+            "중심을 보여 주지만 양 끝의 변동을 숨길 수 있습니다."
+          ],
+          [
+            "범위",
+            "관찰 폭을 빠르게 보여 주며 시료 수와 위치를 함께 봅니다."
+          ],
+          [
+            "표준편차 & CV",
+            "동일한 시험 조건에서 산포를 설명합니다."
+          ],
+          [
+            "추세, Cp & Cpk",
+            "추세로 이동을 찾고 공정 안정 후 능력지수를 사용합니다."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "공급 형태",
+          "title": "생산 공정에 맞는 롤 또는 시트 선택",
+          "items": [
+            [
+              "AGM 분리막 롤",
+              "연속 생산, 슬리팅 또는 조립 전 사내 절단에 적합합니다.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM 분리막 롤"
+            ],
+            [
+              "품질",
+              "명확한 정보는 샘플 평가와 사양 협의를 더 효율적으로 만듭니다.",
+              "/images/agm-quality-control-1200.webp",
+              "품질"
+            ],
+            [
+              "AGM 분리막 시트",
+              "절단된 규격으로 공급하여 조립 준비를 단순화할 때 적합합니다.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGM 분리막 시트"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "구매 확인",
+          "title": "샘플 전에 요구사항 확인",
+          "text": "명확한 정보는 샘플 평가와 사양 협의를 더 효율적으로 만듭니다.",
+          "items": [
+            "시험법과 전처리",
+            "롤 길이·폭 방향 위치",
+            "단계별 검사 빈도",
+            "판정 범위와 추세 검토",
+            "로트 ID와 이상 처리"
+          ]
+        },
+        "related": {
+          "eyebrow": "관련 자료",
+          "title": "제품 및 공급업체 평가 계속하기",
+          "items": [
+            [
+              "AGM 분리막이란 무엇입니까?",
+              "/ko/blog/what-is-agm-separator/"
+            ],
+            [
+              "AGM 분리막의 핵심 기술 파라미터",
+              "/ko/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGM 분리막 선택 방법",
+              "/ko/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "AGM 유리섬유와 PVC 배터리 분리막 비교",
+              "/ko/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "사양 협의",
+          "title": "용도와 치수 요구사항을 보내 주세요",
+          "text": "현재 보유한 정보를 공유하면 제품 형태, 샘플과 공급 가능성을 함께 검토할 수 있습니다.",
+          "checklist": [
+            "배터리 용도와 형식",
+            "두께, 폭 또는 시트 치수",
+            "롤/시트 및 포장 요구사항"
+          ],
+          "placeholders": {
+            "message": "용도, 목표 사양, 샘플 수량 또는 포장 요구사항을 적어 주세요."
+          }
+        },
+        "footer": {
+          "description": "VRLA 배터리 제조사를 위한 롤 및 시트형 AGM 유리섬유 분리막.",
+          "wechat": "Viking AGM WeChat 공식 계정",
+          "mobile": "모바일에서 Viking AGM 웹사이트 방문"
+        },
+        "comparison": {
+          "eyebrow": "예시 데이터",
+          "title": "같은 평균, 다른 산포",
+          "columns": [
+            "비교",
+            "시료 A",
+            "시료 B"
+          ],
+          "rows": [
+            [
+              "측정값",
+              "1.50 / 1.50 / 1.50 mm",
+              "1.44 / 1.50 / 1.56 mm"
+            ],
+            [
+              "평균",
+              "1.50 mm",
+              "1.50 mm"
+            ],
+            [
+              "범위",
+              "0.00 mm",
+              "0.12 mm"
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "참고 자료",
+          "title": "공정 기반 품질 관리의 공개 사례",
+          "text": "KSTAR 자료는 배터리 제조사 사례이며 Viking의 설비, MES 또는 추적 범위를 입증하지 않습니다.",
+          "items": [
+            [
+              "KSTAR — intelligent manufacturing and full-process quality management",
+              "https://www.kstar.com/cn/index.php/news/info/1269.html"
+            ]
+          ]
+        }
+      },
+      "ja": {
+        "nav": {
+          "company": "会社",
+          "products": "製品",
+          "quality": "品質",
+          "resources": "資料",
+          "applications": "用途",
+          "contact": "お問い合わせ"
+        },
+        "language": "JA",
+        "homePath": "/ja/",
+        "languagePath": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "サンプル依頼",
+        "hero": {
+          "eyebrow": "AGMセパレーター技術ガイド",
+          "title": "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由",
+          "subtitle": "平均値の合格は採取した試料を示すだけです。連続組立には位置、ロール、製造ロット間の再現性が必要です。",
+          "primary": "サンプル・仕様確認を依頼",
+          "secondary": "購買チェックリストを見る",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "初回サンプルが合格し組立も順調でも、次ロットでライン調整が増えることがあります。量産評価では一枚の合格書より、ばらつきと推移を確認します。",
+          "平均値の合格は採取した試料を示すだけです。連続組立には位置、ロール、製造ロット間の再現性が必要です。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "工程データ",
+            "title": "下流メーカーは工程データで一貫性を管理しています",
+            "text": "KSTARの2026年7月資料は自動極板ライン、ロボット鋳焊、MES、デジタルツイン品質管理を紹介しています。これは電池メーカーの事例でありVikingの設備を示すものではありませんが、平均値だけでは再現性を説明できないという調達側の変化を示します。"
+          },
+          {
+            "eyebrow": "単回検査",
+            "title": "合格報告は採取点が基準を通ったことだけを示します",
+            "text": "ロール先端・中央・後端が近いか、次のロールやロットで再現できるかは別の問題です。少数の固定点だけでは、連続巻出し時の局部変動を見落とす可能性があります。"
+          },
+          {
+            "eyebrow": "組立への影響",
+            "title": "材料の変動は極群組立へ伝わります",
+            "text": "厚さは実圧縮、坪量と構造は繊維分布・吸液・空孔・圧縮挙動、幅と巻姿は供給と損失に影響します。セパレーター単独で電池性能は決まりませんが、材料が安定すれば解析変数を減らせます。"
+          },
+          {
+            "eyebrow": "統計評価",
+            "title": "平均値だけを見ても量産安定性は分かりません",
+            "text": "平均は中心、最小・最大・レンジは広がり、標準偏差と変動係数は散らばりを示します。時系列グラフはドリフトの早期発見に有効です。Cp/Cpkは規格、測定信頼性、統計的安定がそろった後に使用します。"
+          },
+          {
+            "eyebrow": "サンプリング",
+            "title": "採取位置が不明ではばらつきも歪みます",
+            "text": "リスクに応じて先端・中央・後端と幅方向を比較します。ロット評価は複数ロット・ロールを含め、シートは元ロール、スリット位置、積層・包装後の寸法を記録します。"
+          },
+          {
+            "eyebrow": "トレーサビリティ",
+            "title": "異常がどの工程から来たかを答えられることが重要です",
+            "text": "出荷ロット、ロール・シートID、製造ロット、検査・包装記録の関連を確認します。これは監査の枠組みであり、VikingがMESや完全なデジタル追跡を運用しているという主張ではありません。"
+          },
+          {
+            "eyebrow": "Vikingの対応",
+            "title": "サンプル段階から量産評価方法を合わせます",
+            "text": "現行仕様書、重点試験、供給者監査リストをご提示ください。方法、位置、頻度、判定範囲、ロット表示を合わせ、量産適性はお客様の材料・組立・完成電池検証で確認します。"
+          }
+        ],
+        "parameters": [
+          [
+            "平均",
+            "中心を示しますが両端の変動を隠すことがあります。"
+          ],
+          [
+            "レンジ",
+            "観察幅を示し、試料数と位置を併せて判断します。"
+          ],
+          [
+            "標準偏差・CV",
+            "同一試験条件で散らばりを表します。"
+          ],
+          [
+            "推移・Cp・Cpk",
+            "推移でドリフトを検出し、安定後に工程能力を評価します。"
+          ]
+        ],
+        "formats": {
+          "eyebrow": "供給形状",
+          "title": "生産工程に合わせてロールまたはシートを選択",
+          "items": [
+            [
+              "AGMセパレーターロール",
+              "連続生産、スリット、組立前の社内裁断に適しています。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGMセパレーターロール"
+            ],
+            [
+              "品質",
+              "情報を明確にすると、サンプル評価と仕様協議が効率化します。",
+              "/images/agm-quality-control-1200.webp",
+              "品質"
+            ],
+            [
+              "AGMセパレーターシート",
+              "裁断済み寸法で供給し、組立準備を簡素化する場合に適しています。",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGMセパレーターシート"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "購買確認",
+          "title": "サンプル前に要求事項を確認",
+          "text": "情報を明確にすると、サンプル評価と仕様協議が効率化します。",
+          "items": [
+            "試験法と前処理",
+            "ロール長手・幅方向の位置",
+            "段階別の検査頻度",
+            "判定範囲と推移レビュー",
+            "ロットIDと異常処置"
+          ]
+        },
+        "related": {
+          "eyebrow": "関連資料",
+          "title": "製品・サプライヤー評価を続ける",
+          "items": [
+            [
+              "AGMセパレーターとは？",
+              "/ja/blog/what-is-agm-separator/"
+            ],
+            [
+              "AGMセパレーターの主要技術特性",
+              "/ja/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGMセパレーターの選び方",
+              "/ja/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "AGMガラス繊維とPVC電池セパレーターの違い",
+              "/ja/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "仕様相談",
+          "title": "用途と寸法要求をお送りください",
+          "text": "現在お持ちの情報から製品形状、サンプル、供給可否を確認します。",
+          "checklist": [
+            "電池用途と形式",
+            "厚さ、幅またはシート寸法",
+            "ロール／シートと梱包要求"
+          ],
+          "placeholders": {
+            "message": "用途、目標仕様、サンプル数量、梱包要求をご記入ください。"
+          }
+        },
+        "footer": {
+          "description": "VRLA電池メーカー向けロール・シート形状のAGMガラス繊維セパレーター。",
+          "wechat": "Viking AGM WeChat公式アカウント",
+          "mobile": "モバイルでViking AGMサイトを表示"
+        },
+        "comparison": {
+          "eyebrow": "例示データ",
+          "title": "同じ平均でも異なるばらつき",
+          "columns": [
+            "比較",
+            "試料A",
+            "試料B"
+          ],
+          "rows": [
+            [
+              "測定値",
+              "1.50 / 1.50 / 1.50 mm",
+              "1.44 / 1.50 / 1.56 mm"
+            ],
+            [
+              "平均",
+              "1.50 mm",
+              "1.50 mm"
+            ],
+            [
+              "範囲",
+              "0.00 mm",
+              "0.12 mm"
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "参考資料",
+          "title": "工程品質管理の公開事例",
+          "text": "KSTAR資料は電池メーカーの事例であり、Vikingの設備、MES、追跡範囲を証明するものではありません。",
+          "items": [
+            [
+              "KSTAR — intelligent manufacturing and full-process quality management",
+              "https://www.kstar.com/cn/index.php/news/info/1269.html"
+            ]
+          ]
+        }
+      },
+      "es": {
+        "nav": {
+          "company": "Empresa",
+          "products": "Productos",
+          "quality": "Calidad",
+          "resources": "Recursos",
+          "applications": "Aplicaciones",
+          "contact": "Contacto"
+        },
+        "language": "ES",
+        "homePath": "/es/",
+        "languagePath": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Solicitar muestra",
+        "hero": {
+          "eyebrow": "Guía técnica de separadores AGM",
+          "title": "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie",
+          "subtitle": "Un promedio conforme solo describe la muestra tomada; la producción continua exige repetibilidad entre posiciones, rollos y lotes.",
+          "primary": "Solicitar muestra y revisión de especificaciones",
+          "secondary": "Ver lista de compra",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "La primera muestra puede aprobar y montarse bien, mientras el lote siguiente obliga a ajustar la línea. La evaluación en serie debe mirar dispersión y tendencia, no solo un certificado.",
+          "Un promedio conforme solo describe la muestra tomada; la producción continua exige repetibilidad entre posiciones, rollos y lotes."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Datos de proceso",
+            "title": "Los fabricantes de baterías ya gestionan la consistencia con datos",
+            "text": "La publicación de KSTAR de julio de 2026 describe líneas automáticas de placas, soldadura robotizada, MES y control digital twin. Es un ejemplo del fabricante de baterías, no una prueba del sistema de Viking; sí muestra por qué un promedio aislado ya no explica la repetibilidad."
+          },
+          {
+            "eyebrow": "Inspección puntual",
+            "title": "Un informe conforme solo responde por los puntos muestreados",
+            "text": "No demuestra que cabeza, centro y cola del rollo sean similares ni que otro rollo o lote repita el resultado. Pocos puntos fijos pueden omitir variaciones que aparecen durante el desbobinado continuo."
+          },
+          {
+            "eyebrow": "Impacto en montaje",
+            "title": "La variación del separador continúa en el grupo de placas",
+            "text": "El espesor cambia la compresión; el gramaje y la estructura se relacionan con fibras, absorción, poros y respuesta mecánica; ancho, bordes y bobinado afectan alimentación y desperdicio. El separador no determina solo la batería, pero reduce variables si es estable."
+          },
+          {
+            "eyebrow": "Revisión estadística",
+            "title": "La estabilidad de serie requiere más que el promedio",
+            "text": "Promedio, mínimo, máximo y rango describen centro y amplitud; desviación estándar y CV ayudan a comparar dispersión; la tendencia detecta deriva. Cp/Cpk solo debe usarse con límites definidos, medición fiable y proceso estadísticamente estable."
+          },
+          {
+            "eyebrow": "Plan de muestreo",
+            "title": "Sin ubicación documentada, la dispersión puede engañar",
+            "text": "Según el riesgo, compare cabeza, centro, cola y posiciones transversales. La verificación entre lotes debe incluir varios lotes y rollos; las hojas deben conservar su rollo de origen, posición de corte y cambio dimensional tras apilado o embalaje."
+          },
+          {
+            "eyebrow": "Trazabilidad",
+            "title": "Una auditoría útil pregunta de dónde surgió la anomalía",
+            "text": "Revise la relación entre lote de envío, ID de rollo u hoja, lote de producción, ensayo y embalaje. Es un marco de auditoría, no una afirmación de que Viking disponga de MES o trazabilidad digital completa."
+          },
+          {
+            "eyebrow": "Coordinación Viking",
+            "title": "Alinear el método de evaluación desde la muestra",
+            "text": "Comparta especificación, ensayos prioritarios y lista de auditoría. Podemos alinear método, posiciones, frecuencia, límites e identificación; la aptitud en serie depende de la validación de material, montaje y batería del cliente."
+          }
+        ],
+        "parameters": [
+          [
+            "Promedio",
+            "Sitúa el centro, pero puede ocultar variación en los extremos."
+          ],
+          [
+            "Rango",
+            "Muestra la amplitud observada junto con cantidad y posición de muestras."
+          ],
+          [
+            "Desviación estándar y CV",
+            "Describen dispersión bajo condiciones de ensayo constantes."
+          ],
+          [
+            "Tendencia, Cp y Cpk",
+            "La tendencia detecta deriva; la capacidad se usa después de estabilizar el proceso."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Formato de suministro",
+          "title": "Elegir rollo o lámina según el proceso",
+          "items": [
+            [
+              "Rollos de separador AGM",
+              "Adecuados para producción continua, corte longitudinal o corte interno antes del montaje.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rollos de separador AGM"
+            ],
+            [
+              "Calidad",
+              "La información clara mejora la evaluación de muestras y la revisión de especificaciones.",
+              "/images/agm-quality-control-1200.webp",
+              "Calidad"
+            ],
+            [
+              "Láminas de separador AGM",
+              "Adecuadas cuando se requieren dimensiones precortadas para simplificar el montaje.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "Láminas de separador AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Revisión de compra",
+          "title": "Confirmar requisitos antes de la muestra",
+          "text": "La información clara mejora la evaluación de muestras y la revisión de especificaciones.",
+          "items": [
+            "Método y acondicionamiento",
+            "Posiciones longitudinales y transversales",
+            "Frecuencia por etapa",
+            "Límites y revisión de tendencia",
+            "Identificación y tratamiento de anomalías"
+          ]
+        },
+        "related": {
+          "eyebrow": "Recursos relacionados",
+          "title": "Continuar la evaluación de producto y proveedor",
+          "items": [
+            [
+              "¿Qué es un separador AGM?",
+              "/es/blog/what-is-agm-separator/"
+            ],
+            [
+              "Parámetros técnicos clave del separador AGM",
+              "/es/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Cómo elegir un separador AGM",
+              "/es/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Separadores AGM de fibra de vidrio frente a PVC",
+              "/es/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Conversación técnica",
+          "title": "Envíe su aplicación y dimensiones",
+          "text": "Comparta la información disponible para revisar formato, muestras y capacidad de suministro.",
+          "checklist": [
+            "Aplicación y tipo de batería",
+            "Espesor, ancho o tamaño de lámina",
+            "Rollo/lámina y requisitos de embalaje"
+          ],
+          "placeholders": {
+            "message": "Describa aplicación, especificaciones objetivo, cantidad de muestras o embalaje."
+          }
+        },
+        "footer": {
+          "description": "Separadores AGM de fibra de vidrio en rollos y láminas para fabricantes de baterías VRLA.",
+          "wechat": "Cuenta oficial de Viking AGM en WeChat",
+          "mobile": "Visitar Viking AGM desde el móvil"
+        },
+        "comparison": {
+          "eyebrow": "Datos ilustrativos",
+          "title": "Mismo promedio, distinta dispersión",
+          "columns": [
+            "Comparación",
+            "Muestra A",
+            "Muestra B"
+          ],
+          "rows": [
+            [
+              "Mediciones",
+              "1.50 / 1.50 / 1.50 mm",
+              "1.44 / 1.50 / 1.56 mm"
+            ],
+            [
+              "Promedio",
+              "1.50 mm",
+              "1.50 mm"
+            ],
+            [
+              "Rango",
+              "0.00 mm",
+              "0.12 mm"
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "Referencia",
+          "title": "Ejemplo público de calidad basada en procesos",
+          "text": "La fuente KSTAR describe a un fabricante de baterías y no verifica equipos, MES ni trazabilidad de Viking.",
+          "items": [
+            [
+              "KSTAR — intelligent manufacturing and full-process quality management",
+              "https://www.kstar.com/cn/index.php/news/info/1269.html"
+            ]
+          ]
+        }
+      },
+      "pt": {
+        "nav": {
+          "company": "Empresa",
+          "products": "Produtos",
+          "quality": "Qualidade",
+          "resources": "Recursos",
+          "applications": "Aplicações",
+          "contact": "Contato"
+        },
+        "language": "PT",
+        "homePath": "/pt/",
+        "languagePath": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Solicitar amostra",
+        "hero": {
+          "eyebrow": "Guia técnico de separadores AGM",
+          "title": "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série",
+          "subtitle": "Uma média conforme descreve apenas a amostra; a produção contínua exige repetibilidade entre posições, rolos e lotes.",
+          "primary": "Solicitar amostra e análise de especificações",
+          "secondary": "Ver checklist de compra",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "A primeira amostra pode aprovar e montar bem, enquanto o lote seguinte exige ajustes. A avaliação em série precisa observar dispersão e tendência, não apenas um certificado.",
+          "Uma média conforme descreve apenas a amostra; a produção contínua exige repetibilidade entre posições, rolos e lotes."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Dados de processo",
+            "title": "A indústria de baterias já gerencia consistência com dados",
+            "text": "A publicação da KSTAR de julho de 2026 descreve linhas automáticas de placas, soldagem robotizada, MES e qualidade digital twin. É um exemplo do fabricante de baterias, não prova do sistema Viking; mostra por que uma média isolada não explica repetibilidade."
+          },
+          {
+            "eyebrow": "Inspeção pontual",
+            "title": "Um relatório aprovado responde apenas pelos pontos amostrados",
+            "text": "Ele não demonstra que início, meio e fim do rolo são próximos ou que outro rolo e lote repetirão o resultado. Poucos pontos fixos podem perder variações que aparecem no desenrolamento contínuo."
+          },
+          {
+            "eyebrow": "Impacto na montagem",
+            "title": "A variação do separador segue para o grupo de placas",
+            "text": "Espessura altera compressão; gramatura e estrutura se relacionam a fibras, absorção, poros e resposta mecânica; largura, bordas e bobinamento afetam alimentação e perdas. O separador não define sozinho a bateria, mas material estável reduz variáveis."
+          },
+          {
+            "eyebrow": "Revisão estatística",
+            "title": "A estabilidade em série exige mais que a média",
+            "text": "Média, mínimo, máximo e amplitude descrevem centro e dispersão; desvio padrão e CV ajudam a comparar; tendências mostram deriva. Cp/Cpk só deve ser usado com limites definidos, medição confiável e processo estatisticamente estável."
+          },
+          {
+            "eyebrow": "Plano de amostragem",
+            "title": "Sem posição documentada, a dispersão pode enganar",
+            "text": "Conforme o risco, compare início, meio, fim e posições transversais. A verificação entre lotes deve incluir vários lotes e rolos; folhas devem registrar rolo de origem, corte e alteração após empilhamento ou embalagem."
+          },
+          {
+            "eyebrow": "Rastreabilidade",
+            "title": "Uma auditoria útil pergunta onde surgiu a anomalia",
+            "text": "Verifique a ligação entre lote de envio, ID do rolo ou folha, produção, ensaio e embalagem. É um roteiro de auditoria, não uma afirmação de MES ou rastreabilidade digital completa na Viking."
+          },
+          {
+            "eyebrow": "Coordenação Viking",
+            "title": "Alinhar o método desde a amostra",
+            "text": "Envie especificação, ensaios prioritários e lista de auditoria. Podemos alinhar método, posições, frequência, limites e identificação; a aptidão em série depende da validação do cliente."
+          }
+        ],
+        "parameters": [
+          [
+            "Média",
+            "Localiza o centro, mas pode ocultar variação nas extremidades."
+          ],
+          [
+            "Amplitude",
+            "Mostra a faixa observada junto com quantidade e posição de amostras."
+          ],
+          [
+            "Desvio padrão e CV",
+            "Descrevem dispersão sob condições de teste constantes."
+          ],
+          [
+            "Tendência, Cp e Cpk",
+            "Use tendência para deriva e capacidade só após estabilidade."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Formato de fornecimento",
+          "title": "Escolher rolo ou folha conforme o processo",
+          "items": [
+            [
+              "Rolos de separador AGM",
+              "Adequados para produção contínua, corte longitudinal ou corte interno antes da montagem.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rolos de separador AGM"
+            ],
+            [
+              "Qualidade",
+              "Informações claras tornam a avaliação de amostras e especificações mais eficiente.",
+              "/images/agm-quality-control-1200.webp",
+              "Qualidade"
+            ],
+            [
+              "Folhas de separador AGM",
+              "Adequadas quando dimensões pré-cortadas simplificam a preparação da montagem.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "Folhas de separador AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Análise de compra",
+          "title": "Confirmar requisitos antes da amostra",
+          "text": "Informações claras tornam a avaliação de amostras e especificações mais eficiente.",
+          "items": [
+            "Método e condicionamento",
+            "Posições longitudinais e transversais",
+            "Frequência por etapa",
+            "Limites e tendência",
+            "Identificação e tratamento de anomalias"
+          ]
+        },
+        "related": {
+          "eyebrow": "Recursos relacionados",
+          "title": "Continuar a avaliação de produto e fornecedor",
+          "items": [
+            [
+              "O que é um separador AGM?",
+              "/pt/blog/what-is-agm-separator/"
+            ],
+            [
+              "Principais parâmetros técnicos do separador AGM",
+              "/pt/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Como escolher um separador AGM",
+              "/pt/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Separadores AGM de fibra de vidro versus PVC",
+              "/pt/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Conversa técnica",
+          "title": "Envie sua aplicação e dimensões",
+          "text": "Compartilhe o que já possui para analisarmos formato, amostras e capacidade de fornecimento.",
+          "checklist": [
+            "Aplicação e tipo de bateria",
+            "Espessura, largura ou tamanho da folha",
+            "Rolo/folha e requisitos de embalagem"
+          ],
+          "placeholders": {
+            "message": "Descreva aplicação, especificações-alvo, quantidade de amostras ou embalagem."
+          }
+        },
+        "footer": {
+          "description": "Separadores AGM de fibra de vidro em rolos e folhas para fabricantes de baterias VRLA.",
+          "wechat": "Conta oficial Viking AGM no WeChat",
+          "mobile": "Visitar o site Viking AGM pelo celular"
+        },
+        "comparison": {
+          "eyebrow": "Dados ilustrativos",
+          "title": "Mesma média, dispersão diferente",
+          "columns": [
+            "Comparação",
+            "Amostra A",
+            "Amostra B"
+          ],
+          "rows": [
+            [
+              "Medições",
+              "1.50 / 1.50 / 1.50 mm",
+              "1.44 / 1.50 / 1.56 mm"
+            ],
+            [
+              "Média",
+              "1.50 mm",
+              "1.50 mm"
+            ],
+            [
+              "Amplitude",
+              "0.00 mm",
+              "0.12 mm"
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "Referência",
+          "title": "Exemplo público de qualidade baseada em processo",
+          "text": "A fonte KSTAR descreve um fabricante de baterias e não comprova equipamentos, MES ou rastreabilidade da Viking.",
+          "items": [
+            [
+              "KSTAR — intelligent manufacturing and full-process quality management",
+              "https://www.kstar.com/cn/index.php/news/info/1269.html"
+            ]
+          ]
+        }
+      },
+      "ru": {
+        "nav": {
+          "company": "Компания",
+          "products": "Продукция",
+          "quality": "Качество",
+          "resources": "Материалы",
+          "applications": "Применение",
+          "contact": "Контакты"
+        },
+        "language": "RU",
+        "homePath": "/ru/",
+        "languagePath": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Запросить образец",
+        "hero": {
+          "eyebrow": "Техническое руководство по AGM",
+          "title": "Почему одного теста недостаточно для серийного производства AGM-сепаратора",
+          "subtitle": "Соответствие среднего значения описывает только выборку; непрерывная сборка требует повторяемости по позициям, рулонам и партиям.",
+          "primary": "Запросить образец и проверку характеристик",
+          "secondary": "Смотреть чек-лист закупки",
+          "image": {
+            "src": "/images/agm-quality-control-1200.webp",
+            "alt": "Почему одного теста недостаточно для серийного производства AGM-сепаратора",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        "intro": [
+          "Первый образец может пройти контроль и хорошо собраться, а следующая партия потребует переналадки линии. Для серии важны разброс и тренд, а не только один сертификат.",
+          "Соответствие среднего значения описывает только выборку; непрерывная сборка требует повторяемости по позициям, рулонам и партиям."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Данные процесса",
+            "title": "Производители батарей уже управляют стабильностью по данным",
+            "text": "Публикация KSTAR июля 2026 года описывает автоматические линии пластин, роботизированную сварку, MES и digital twin контроля качества. Это пример производителя батарей, а не подтверждение системы Viking; он показывает, почему одного среднего недостаточно для оценки повторяемости."
+          },
+          {
+            "eyebrow": "Разовая проверка",
+            "title": "Протокол отвечает только за отобранные точки",
+            "text": "Он не доказывает близость начала, середины и конца рулона или повторяемость следующего рулона и партии. Малое число фиксированных точек может пропустить локальные колебания, заметные при непрерывной размотке."
+          },
+          {
+            "eyebrow": "Влияние на сборку",
+            "title": "Разброс сепаратора передаётся в блок пластин",
+            "text": "Толщина меняет сжатие; поверхностная плотность и структура связаны с волокнами, впитыванием, порами и механикой; ширина, кромка и намотка влияют на подачу и отходы. Сепаратор не определяет батарею один, но стабильный материал уменьшает число переменных."
+          },
+          {
+            "eyebrow": "Статистическая оценка",
+            "title": "Для серийной стабильности среднего недостаточно",
+            "text": "Среднее показывает центр, минимум, максимум и размах — ширину, стандартное отклонение и CV — рассеяние, тренд — смещение. Cp/Cpk применяют только при заданных пределах, надёжном измерении и статистически стабильном процессе."
+          },
+          {
+            "eyebrow": "План отбора",
+            "title": "Без места отбора разброс может быть искажён",
+            "text": "По риску сравнивают начало, середину, конец и поперечные позиции. Межпартийная оценка должна включать несколько партий и рулонов; для листов фиксируют исходный рулон, место резки и изменения после укладки и упаковки."
+          },
+          {
+            "eyebrow": "Прослеживаемость",
+            "title": "Полезный аудит отвечает, где возникло отклонение",
+            "text": "Проверяют связь отгрузочной партии, ID рулона или листов, производственной партии, испытаний и упаковки. Это схема аудита, а не заявление о наличии у Viking MES или полной цифровой прослеживаемости."
+          },
+          {
+            "eyebrow": "Работа с Viking",
+            "title": "Метод серийной оценки согласуют на этапе образца",
+            "text": "Передайте спецификацию, приоритетные испытания и аудит-лист. Можно согласовать метод, позиции, частоту, пределы и маркировку; пригодность для серии подтверждается испытаниями материала, сборки и батареи у клиента."
+          }
+        ],
+        "parameters": [
+          [
+            "Среднее",
+            "Показывает центр, но может скрыть крайние колебания."
+          ],
+          [
+            "Размах",
+            "Показывает наблюдаемую ширину с учётом числа и места проб."
+          ],
+          [
+            "Стандартное отклонение и CV",
+            "Описывают разброс при неизменных условиях испытаний."
+          ],
+          [
+            "Тренд, Cp и Cpk",
+            "Тренд выявляет дрейф; способность оценивают после стабилизации."
+          ]
+        ],
+        "formats": {
+          "eyebrow": "Форма поставки",
+          "title": "Выберите рулон или лист по процессу производства",
+          "items": [
+            [
+              "AGM-сепаратор в рулонах",
+              "Для непрерывного производства, продольной резки или внутреннего раскроя перед сборкой.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM-сепаратор в рулонах"
+            ],
+            [
+              "Качество",
+              "Чёткая информация повышает эффективность оценки образца и согласования спецификации.",
+              "/images/agm-quality-control-1200.webp",
+              "Качество"
+            ],
+            [
+              "AGM-сепаратор в листах",
+              "Для поставки готовых размеров и упрощения подготовки к сборке.",
+              "/images/evidence/shipping-pallet-01.webp",
+              "AGM-сепаратор в листах"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Проверка закупки",
+          "title": "Подтвердите требования до заказа образца",
+          "text": "Чёткая информация повышает эффективность оценки образца и согласования спецификации.",
+          "items": [
+            "Метод и кондиционирование",
+            "Продольные и поперечные позиции",
+            "Частота по этапам",
+            "Пределы и анализ тренда",
+            "ID партии и работа с отклонениями"
+          ]
+        },
+        "related": {
+          "eyebrow": "Связанные материалы",
+          "title": "Продолжить оценку продукции и поставщика",
+          "items": [
+            [
+              "Что такое AGM-сепаратор?",
+              "/ru/blog/what-is-agm-separator/"
+            ],
+            [
+              "Ключевые технические параметры AGM-сепаратора",
+              "/ru/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Как выбрать AGM-сепаратор",
+              "/ru/blog/how-to-choose-agm-separator/"
+            ],
+            [
+              "Стекловолоконный AGM и ПВХ-сепаратор",
+              "/ru/blog/agm-glass-fiber-vs-pvc-battery-separator/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Обсуждение спецификации",
+          "title": "Отправьте данные о применении и размерах",
+          "text": "Передайте имеющуюся информацию для проверки формы продукции, образцов и возможностей поставки.",
+          "checklist": [
+            "Применение и тип батареи",
+            "Толщина, ширина или размер листа",
+            "Рулон/лист и требования к упаковке"
+          ],
+          "placeholders": {
+            "message": "Опишите применение, целевые параметры, количество образцов или упаковку."
+          }
+        },
+        "footer": {
+          "description": "Стекловолоконные AGM-сепараторы в рулонах и листах для производителей VRLA-батарей.",
+          "wechat": "Официальный аккаунт Viking AGM в WeChat",
+          "mobile": "Открыть сайт Viking AGM на телефоне"
+        },
+        "comparison": {
+          "eyebrow": "Пример данных",
+          "title": "Одинаковое среднее, разный разброс",
+          "columns": [
+            "Сравнение",
+            "Выборка A",
+            "Выборка B"
+          ],
+          "rows": [
+            [
+              "Измерения",
+              "1.50 / 1.50 / 1.50 mm",
+              "1.44 / 1.50 / 1.56 mm"
+            ],
+            [
+              "Среднее",
+              "1.50 mm",
+              "1.50 mm"
+            ],
+            [
+              "Размах",
+              "0.00 mm",
+              "0.12 mm"
+            ]
+          ]
+        },
+        "references": {
+          "eyebrow": "Источник",
+          "title": "Открытый пример процессного управления качеством",
+          "text": "Источник KSTAR описывает производителя батарей и не подтверждает оборудование, MES или прослеживаемость Viking.",
+          "items": [
+            [
+              "KSTAR — intelligent manufacturing and full-process quality management",
+              "https://www.kstar.com/cn/index.php/news/info/1269.html"
+            ]
+          ]
+        }
+      }
+    },
     "agmGlassFiberVsPvcSeparator": {
       "en": {
         "nav": {
@@ -41320,6 +43596,192 @@
           "Компания",
           "Материалы",
           "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      }
+    },
+    "agmSeparatorBatchProcessControl": {
+      "en": {
+        "path": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "alternatePath": "/zh/blog/agm-separator-batch-consistency-and-process-control/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "AGM Separator Batch Consistency and Process Control | Viking AGM",
+        "description": "Learn why one passing AGM separator test does not prove volume readiness, and how sampling, dispersion, trends and traceability support batch evaluation.",
+        "keywords": [
+          "AGM separator batch consistency",
+          "AGM separator process control",
+          "AGM separator sampling plan",
+          "AGM separator Cp Cpk",
+          "AGM separator supplier audit"
+        ],
+        "pageName": "Why One Passing Test Does Not Prove AGM Separator Volume Readiness",
+        "articleDescription": "A buyer-focused guide to sample dispersion, roll-position sampling, process trends, capability indices and traceability questions for AGM separator volume production.",
+        "breadcrumbs": [
+          "Home",
+          "Resources",
+          "AGM Separator Batch Consistency"
+        ]
+      },
+      "zh": {
+        "path": "/zh/blog/agm-separator-batch-consistency-and-process-control/",
+        "alternatePath": "/blog/agm-separator-batch-consistency-and-process-control/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "AGM 隔板单次检测合格，为什么不等于批量稳定？| 湖北维京AGM",
+        "description": "从平均值、极差、标准差、趋势、取样位置和批次追溯，了解 AGM 隔板从样品合格到批量稳定的评价方法。",
+        "keywords": [
+          "AGM 隔板批次一致性",
+          "AGM 隔板过程控制",
+          "AGM 隔板取样方案",
+          "AGM 隔板 Cp Cpk",
+          "AGM 隔板供应商审核"
+        ],
+        "pageName": "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+        "articleDescription": "面向采购与质量团队，从数据离散、卷材取样、趋势、过程能力和追溯审核说明 AGM 隔板批量评价方法。",
+        "breadcrumbs": [
+          "首页",
+          "资料",
+          "AGM 隔板批次一致性"
+        ]
+      },
+      "vi": {
+        "path": "/vi/blog/agm-separator-batch-consistency-and-process-control/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM Việt Nam",
+        "title": "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt? | Viking AGM",
+        "description": "Giá trị trung bình đạt yêu cầu chỉ mô tả mẫu đã lấy; sản xuất liên tục cần độ ổn định giữa vị trí, cuộn và lô.",
+        "keywords": [
+          "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt?",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt?",
+        "articleDescription": "Giá trị trung bình đạt yêu cầu chỉ mô tả mẫu đã lấy; sản xuất liên tục cần độ ổn định giữa vị trí, cuộn và lô.",
+        "breadcrumbs": [
+          "Công ty",
+          "Tài liệu",
+          "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt?"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "ko": {
+        "path": "/ko/blog/agm-separator-batch-consistency-and-process-control/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM Korea",
+        "title": "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유 | Viking AGM",
+        "description": "평균값 합격은 채취한 시료만 설명합니다. 연속 조립에는 위치·롤·생산 로트 간 반복성이 필요합니다.",
+        "keywords": [
+          "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유",
+        "articleDescription": "평균값 합격은 채취한 시료만 설명합니다. 연속 조립에는 위치·롤·생산 로트 간 반복성이 필요합니다.",
+        "breadcrumbs": [
+          "회사",
+          "자료",
+          "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "ja": {
+        "path": "/ja/blog/agm-separator-batch-consistency-and-process-control/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM Japan",
+        "title": "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由 | Viking AGM",
+        "description": "平均値の合格は採取した試料を示すだけです。連続組立には位置、ロール、製造ロット間の再現性が必要です。",
+        "keywords": [
+          "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由",
+        "articleDescription": "平均値の合格は採取した試料を示すだけです。連続組立には位置、ロール、製造ロット間の再現性が必要です。",
+        "breadcrumbs": [
+          "会社",
+          "資料",
+          "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "es": {
+        "path": "/es/blog/agm-separator-batch-consistency-and-process-control/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie | Viking AGM",
+        "description": "Un promedio conforme solo describe la muestra tomada; la producción continua exige repetibilidad entre posiciones, rollos y lotes.",
+        "keywords": [
+          "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie",
+        "articleDescription": "Un promedio conforme solo describe la muestra tomada; la producción continua exige repetibilidad entre posiciones, rollos y lotes.",
+        "breadcrumbs": [
+          "Empresa",
+          "Recursos",
+          "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "pt": {
+        "path": "/pt/blog/agm-separator-batch-consistency-and-process-control/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM Brasil",
+        "title": "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série | Viking AGM",
+        "description": "Uma média conforme descreve apenas a amostra; a produção contínua exige repetibilidade entre posições, rolos e lotes.",
+        "keywords": [
+          "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série",
+        "articleDescription": "Uma média conforme descreve apenas a amostra; a produção contínua exige repetibilidade entre posições, rolos e lotes.",
+        "breadcrumbs": [
+          "Empresa",
+          "Recursos",
+          "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série"
+        ],
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12"
+      },
+      "ru": {
+        "path": "/ru/blog/agm-separator-batch-consistency-and-process-control/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "Почему одного теста недостаточно для серийного производства AGM-сепаратора | Viking AGM",
+        "description": "Соответствие среднего значения описывает только выборку; непрерывная сборка требует повторяемости по позициям, рулонам и партиям.",
+        "keywords": [
+          "Почему одного теста недостаточно для серийного производства AGM-сепаратора",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Почему одного теста недостаточно для серийного производства AGM-сепаратора",
+        "articleDescription": "Соответствие среднего значения описывает только выборку; непрерывная сборка требует повторяемости по позициям, рулонам и партиям.",
+        "breadcrumbs": [
+          "Компания",
+          "Материалы",
+          "Почему одного теста недостаточно для серийного производства AGM-сепаратора"
         ],
         "datePublished": "2026-08-12",
         "dateModified": "2026-08-12"

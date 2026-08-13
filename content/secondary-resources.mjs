@@ -11,7 +11,8 @@ export const articleKinds = [
   "upsVrlaTechnologySelection",
   "dataCenterBackupPowerAgmSeparator",
   "earlyChinaLeadAcidBatteryManufacturing",
-  "agmSeparatorPressureRetention"
+  "agmSeparatorPressureRetention",
+  "agmSeparatorBatchProcessControl"
 ];
 
 export const articleDefinitions = {
@@ -25,7 +26,8 @@ export const articleDefinitions = {
   upsVrlaTechnologySelection: ["why-ups-projects-still-use-vrla-batteries", "industryApplications", "2026-07-23"],
   dataCenterBackupPowerAgmSeparator: ["agm-separator-for-data-center-backup-power", "industryApplications", "2026-08-07", "2026-08-07"],
   earlyChinaLeadAcidBatteryManufacturing: ["how-chinas-earliest-lead-acid-batteries-were-made", "manufacturingQuality", "2026-08-11", "2026-08-11"],
-  agmSeparatorPressureRetention: ["agm-separator-pressure-retention-after-acid-filling-and-cycling", "manufacturingQuality", "2026-08-12", "2026-08-12"]
+  agmSeparatorPressureRetention: ["agm-separator-pressure-retention-after-acid-filling-and-cycling", "manufacturingQuality", "2026-08-12", "2026-08-12"],
+  agmSeparatorBatchProcessControl: ["agm-separator-batch-consistency-and-process-control", "manufacturingQuality", "2026-08-12", "2026-08-12"]
 };
 
 const images = {
@@ -39,7 +41,8 @@ const images = {
   upsVrlaTechnologySelection: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
   dataCenterBackupPowerAgmSeparator: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
   earlyChinaLeadAcidBatteryManufacturing: ["/images/agm-hero-production-1600.webp", 1600, 1000],
-  agmSeparatorPressureRetention: ["/images/agm-quality-control-1200.webp", 1200, 800]
+  agmSeparatorPressureRetention: ["/images/agm-quality-control-1200.webp", 1200, 800],
+  agmSeparatorBatchProcessControl: ["/images/agm-quality-control-1200.webp", 1200, 800]
 };
 
 export const secondaryResourceData = {
@@ -508,6 +511,134 @@ const pressureRetentionReferenceItems = [
   ["Journal of Power Sources — characterisation of separator papers for VRLA batteries", "https://doi.org/10.1016/S0378-7753(01)00925-9"]
 ];
 
+const batchProcessControlTopics = {
+  vi: {
+    title: "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt?",
+    summary: "Giá trị trung bình đạt yêu cầu chỉ mô tả mẫu đã lấy; sản xuất liên tục cần độ ổn định giữa vị trí, cuộn và lô.",
+    intro: "Mẫu đầu có thể đạt và lắp ráp thuận lợi, nhưng lô sau vẫn buộc dây chuyền điều chỉnh. Đánh giá hàng loạt phải nhìn độ phân tán và xu hướng, không chỉ một chứng nhận đạt.",
+    sections: [
+      ["Dữ liệu quá trình", "Khách hàng hạ nguồn đang quản lý tính nhất quán bằng dữ liệu quá trình", "Thông tin sản xuất tháng 7/2026 của KSTAR nêu dây chuyền bản cực tự động, hàn đúc robot, MES và nền tảng chất lượng digital twin. Đây là ví dụ của nhà sản xuất ắc quy, không phải bằng chứng về hệ thống Viking; nó cho thấy một giá trị trung bình không đủ giải thích khả năng lặp lại."],
+      ["Kiểm tra đơn", "Một báo cáo đạt chỉ trả lời các điểm đã lấy mẫu", "Báo cáo không tự chứng minh đầu, giữa và cuối cuộn gần nhau hay cuộn và lô tiếp theo sẽ lặp lại. Ít điểm lấy mẫu cố định có thể bỏ sót dao động chỉ xuất hiện khi chạy liên tục."],
+      ["Ảnh hưởng lắp ráp", "Dao động vật liệu tiếp tục truyền vào cụm bản cực", "Độ dày làm thay đổi nén; định lượng và cấu trúc liên quan đến phân bố sợi, hút axit và lỗ rỗng; khổ rộng, mép và độ cuốn ảnh hưởng cấp liệu và tổn hao. Tấm ngăn không quyết định một mình kết quả ắc quy, nhưng vật liệu ổn định giúp giảm biến số."],
+      ["Đánh giá thống kê", "Không thể chỉ nhìn giá trị trung bình", "Trung bình cho biết tâm dữ liệu; min, max và khoảng biến thiên cho biết độ trải; độ lệch chuẩn và hệ số biến thiên hỗ trợ so sánh; biểu đồ xu hướng giúp phát hiện trôi. Cp/Cpk chỉ có ý nghĩa khi hệ đo đáng tin cậy và quá trình đã ổn định."],
+      ["Kế hoạch lấy mẫu", "Không ghi vị trí thì độ phân tán có thể bị hiểu sai", "Theo rủi ro, hãy so đầu, giữa, cuối cuộn và cả vị trí ngang với cuộn rộng. Đánh giá giữa lô phải bao phủ nhiều cuộn và lô; với tấm, cần ghi cuộn nguồn, vị trí xẻ và ảnh hưởng của xếp chồng, đóng gói."],
+      ["Đánh giá truy xuất", "Truy xuất hữu ích phải chỉ ra đoạn phát sinh bất thường", "Hồ sơ nên liên kết lô giao hàng, mã cuộn hoặc tấm, lô sản xuất, kiểm tra và đóng gói. Đây là khung đánh giá, không phải tuyên bố Viking có MES hay nền tảng truy xuất số đầy đủ."],
+      ["Phối hợp Viking", "Thống nhất phương pháp đánh giá ngay từ giai đoạn mẫu", "Hãy gửi quy cách, chỉ tiêu trọng yếu và danh sách đánh giá nhà cung cấp. Hai bên có thể thống nhất phương pháp, vị trí, tần suất, giới hạn và mã lô; quyết định dùng hàng loạt vẫn dựa trên xác nhận vật liệu, lắp ráp và ắc quy của khách hàng."]
+    ],
+    parameters: [["Trung bình", "Cho biết tâm nhưng có thể che dao động hai đầu."], ["Khoảng biến thiên", "Cho biết độ trải quan sát được; cần xem cùng số lượng và vị trí mẫu."], ["Độ lệch chuẩn & CV", "Mô tả phân tán khi phương pháp thử không đổi."], ["Xu hướng, Cp & Cpk", "Dùng xu hướng tìm trôi; chỉ dùng chỉ số năng lực sau khi quá trình ổn định."]],
+    checklist: ["Phương pháp thử và tiền xử lý", "Vị trí dọc và ngang cuộn", "Tần suất theo giai đoạn dự án", "Giới hạn và xem xét xu hướng", "Mã lô và xử lý bất thường"]
+  },
+  ko: {
+    title: "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유",
+    summary: "평균값 합격은 채취한 시료만 설명합니다. 연속 조립에는 위치·롤·생산 로트 간 반복성이 필요합니다.",
+    intro: "첫 샘플이 합격하고 조립도 원활해도 다음 로트에서 라인 조정이 늘 수 있습니다. 양산 평가는 한 장의 성적서보다 산포와 추세를 확인해야 합니다.",
+    sections: [
+      ["공정 데이터", "하류 제조사는 공정 데이터로 일관성을 관리합니다", "KSTAR의 2026년 7월 자료는 자동 극판 라인, 로봇 주조 용접, MES와 디지털 트윈 품질 플랫폼을 설명합니다. 이는 배터리 업체 사례이며 Viking 시스템의 증거가 아닙니다. 다만 평균값 하나로 반복성을 설명하기 어렵다는 구매 신호를 보여 줍니다."],
+      ["단일 검사", "합격 성적서는 채취 지점의 통과 여부만 답합니다", "롤의 시작·중간·끝이 비슷한지, 다음 롤과 로트가 재현되는지는 별도 확인이 필요합니다. 적은 고정 지점만 검사하면 연속 권출 때 나타나는 국부 변동을 놓칠 수 있습니다."],
+      ["조립 영향", "분리막 변동은 극군 조립으로 이어집니다", "두께는 실제 압축을, 평량과 구조는 섬유 분포·흡액·기공·압축 거동을, 폭과 권취는 공급성과 손실을 바꿀 수 있습니다. 분리막만으로 배터리 성능이 결정되지는 않지만 안정된 소재는 분석 변수를 줄입니다."],
+      ["통계 검토", "평균값만으로 양산 안정성을 판단할 수 없습니다", "평균은 중심, 최소·최대·범위는 관찰 폭, 표준편차와 변동계수는 산포를 보여 줍니다. 시계열 추세는 이동을 조기에 찾습니다. Cp/Cpk는 규격, 측정 신뢰성과 통계적 안정이 확보된 뒤에만 사용해야 합니다."],
+      ["샘플링 계획", "채취 위치가 없으면 산포도 왜곡될 수 있습니다", "위험에 따라 롤 시작·중간·끝과 폭 방향을 비교합니다. 로트 평가는 여러 생산 로트와 롤을 포함하고, 시트는 원롤과 슬리팅 위치, 적층·포장 후 치수 변화를 기록해야 합니다."],
+      ["추적성 검토", "유용한 추적성은 이상이 발생한 구간을 답해야 합니다", "출하 로트, 롤·시트 ID, 생산 로트, 시험 및 포장 기록의 연결을 검토합니다. 이는 감사 프레임이며 Viking이 MES나 완전한 디지털 추적 플랫폼을 운영한다는 주장이 아닙니다."],
+      ["Viking 협의", "샘플 단계에서 양산 평가 방법을 맞춥니다", "현행 규격서, 핵심 시험 항목과 공급업체 감사 목록을 공유해 주세요. 방법, 위치, 빈도, 판정 범위와 로트 표시를 먼저 맞추며, 양산 적합성은 고객의 소재·조립·완성 배터리 검증으로 확인합니다."]
+    ],
+    parameters: [["평균", "중심을 보여 주지만 양 끝의 변동을 숨길 수 있습니다."], ["범위", "관찰 폭을 빠르게 보여 주며 시료 수와 위치를 함께 봅니다."], ["표준편차 & CV", "동일한 시험 조건에서 산포를 설명합니다."], ["추세, Cp & Cpk", "추세로 이동을 찾고 공정 안정 후 능력지수를 사용합니다."]],
+    checklist: ["시험법과 전처리", "롤 길이·폭 방향 위치", "단계별 검사 빈도", "판정 범위와 추세 검토", "로트 ID와 이상 처리"]
+  },
+  ja: {
+    title: "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由",
+    summary: "平均値の合格は採取した試料を示すだけです。連続組立には位置、ロール、製造ロット間の再現性が必要です。",
+    intro: "初回サンプルが合格し組立も順調でも、次ロットでライン調整が増えることがあります。量産評価では一枚の合格書より、ばらつきと推移を確認します。",
+    sections: [
+      ["工程データ", "下流メーカーは工程データで一貫性を管理しています", "KSTARの2026年7月資料は自動極板ライン、ロボット鋳焊、MES、デジタルツイン品質管理を紹介しています。これは電池メーカーの事例でありVikingの設備を示すものではありませんが、平均値だけでは再現性を説明できないという調達側の変化を示します。"],
+      ["単回検査", "合格報告は採取点が基準を通ったことだけを示します", "ロール先端・中央・後端が近いか、次のロールやロットで再現できるかは別の問題です。少数の固定点だけでは、連続巻出し時の局部変動を見落とす可能性があります。"],
+      ["組立への影響", "材料の変動は極群組立へ伝わります", "厚さは実圧縮、坪量と構造は繊維分布・吸液・空孔・圧縮挙動、幅と巻姿は供給と損失に影響します。セパレーター単独で電池性能は決まりませんが、材料が安定すれば解析変数を減らせます。"],
+      ["統計評価", "平均値だけを見ても量産安定性は分かりません", "平均は中心、最小・最大・レンジは広がり、標準偏差と変動係数は散らばりを示します。時系列グラフはドリフトの早期発見に有効です。Cp/Cpkは規格、測定信頼性、統計的安定がそろった後に使用します。"],
+      ["サンプリング", "採取位置が不明ではばらつきも歪みます", "リスクに応じて先端・中央・後端と幅方向を比較します。ロット評価は複数ロット・ロールを含め、シートは元ロール、スリット位置、積層・包装後の寸法を記録します。"],
+      ["トレーサビリティ", "異常がどの工程から来たかを答えられることが重要です", "出荷ロット、ロール・シートID、製造ロット、検査・包装記録の関連を確認します。これは監査の枠組みであり、VikingがMESや完全なデジタル追跡を運用しているという主張ではありません。"],
+      ["Vikingの対応", "サンプル段階から量産評価方法を合わせます", "現行仕様書、重点試験、供給者監査リストをご提示ください。方法、位置、頻度、判定範囲、ロット表示を合わせ、量産適性はお客様の材料・組立・完成電池検証で確認します。"]
+    ],
+    parameters: [["平均", "中心を示しますが両端の変動を隠すことがあります。"], ["レンジ", "観察幅を示し、試料数と位置を併せて判断します。"], ["標準偏差・CV", "同一試験条件で散らばりを表します。"], ["推移・Cp・Cpk", "推移でドリフトを検出し、安定後に工程能力を評価します。"]],
+    checklist: ["試験法と前処理", "ロール長手・幅方向の位置", "段階別の検査頻度", "判定範囲と推移レビュー", "ロットIDと異常処置"]
+  },
+  es: {
+    title: "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie",
+    summary: "Un promedio conforme solo describe la muestra tomada; la producción continua exige repetibilidad entre posiciones, rollos y lotes.",
+    intro: "La primera muestra puede aprobar y montarse bien, mientras el lote siguiente obliga a ajustar la línea. La evaluación en serie debe mirar dispersión y tendencia, no solo un certificado.",
+    sections: [
+      ["Datos de proceso", "Los fabricantes de baterías ya gestionan la consistencia con datos", "La publicación de KSTAR de julio de 2026 describe líneas automáticas de placas, soldadura robotizada, MES y control digital twin. Es un ejemplo del fabricante de baterías, no una prueba del sistema de Viking; sí muestra por qué un promedio aislado ya no explica la repetibilidad."],
+      ["Inspección puntual", "Un informe conforme solo responde por los puntos muestreados", "No demuestra que cabeza, centro y cola del rollo sean similares ni que otro rollo o lote repita el resultado. Pocos puntos fijos pueden omitir variaciones que aparecen durante el desbobinado continuo."],
+      ["Impacto en montaje", "La variación del separador continúa en el grupo de placas", "El espesor cambia la compresión; el gramaje y la estructura se relacionan con fibras, absorción, poros y respuesta mecánica; ancho, bordes y bobinado afectan alimentación y desperdicio. El separador no determina solo la batería, pero reduce variables si es estable."],
+      ["Revisión estadística", "La estabilidad de serie requiere más que el promedio", "Promedio, mínimo, máximo y rango describen centro y amplitud; desviación estándar y CV ayudan a comparar dispersión; la tendencia detecta deriva. Cp/Cpk solo debe usarse con límites definidos, medición fiable y proceso estadísticamente estable."],
+      ["Plan de muestreo", "Sin ubicación documentada, la dispersión puede engañar", "Según el riesgo, compare cabeza, centro, cola y posiciones transversales. La verificación entre lotes debe incluir varios lotes y rollos; las hojas deben conservar su rollo de origen, posición de corte y cambio dimensional tras apilado o embalaje."],
+      ["Trazabilidad", "Una auditoría útil pregunta de dónde surgió la anomalía", "Revise la relación entre lote de envío, ID de rollo u hoja, lote de producción, ensayo y embalaje. Es un marco de auditoría, no una afirmación de que Viking disponga de MES o trazabilidad digital completa."],
+      ["Coordinación Viking", "Alinear el método de evaluación desde la muestra", "Comparta especificación, ensayos prioritarios y lista de auditoría. Podemos alinear método, posiciones, frecuencia, límites e identificación; la aptitud en serie depende de la validación de material, montaje y batería del cliente."]
+    ],
+    parameters: [["Promedio", "Sitúa el centro, pero puede ocultar variación en los extremos."], ["Rango", "Muestra la amplitud observada junto con cantidad y posición de muestras."], ["Desviación estándar y CV", "Describen dispersión bajo condiciones de ensayo constantes."], ["Tendencia, Cp y Cpk", "La tendencia detecta deriva; la capacidad se usa después de estabilizar el proceso."]],
+    checklist: ["Método y acondicionamiento", "Posiciones longitudinales y transversales", "Frecuencia por etapa", "Límites y revisión de tendencia", "Identificación y tratamiento de anomalías"]
+  },
+  pt: {
+    title: "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série",
+    summary: "Uma média conforme descreve apenas a amostra; a produção contínua exige repetibilidade entre posições, rolos e lotes.",
+    intro: "A primeira amostra pode aprovar e montar bem, enquanto o lote seguinte exige ajustes. A avaliação em série precisa observar dispersão e tendência, não apenas um certificado.",
+    sections: [
+      ["Dados de processo", "A indústria de baterias já gerencia consistência com dados", "A publicação da KSTAR de julho de 2026 descreve linhas automáticas de placas, soldagem robotizada, MES e qualidade digital twin. É um exemplo do fabricante de baterias, não prova do sistema Viking; mostra por que uma média isolada não explica repetibilidade."],
+      ["Inspeção pontual", "Um relatório aprovado responde apenas pelos pontos amostrados", "Ele não demonstra que início, meio e fim do rolo são próximos ou que outro rolo e lote repetirão o resultado. Poucos pontos fixos podem perder variações que aparecem no desenrolamento contínuo."],
+      ["Impacto na montagem", "A variação do separador segue para o grupo de placas", "Espessura altera compressão; gramatura e estrutura se relacionam a fibras, absorção, poros e resposta mecânica; largura, bordas e bobinamento afetam alimentação e perdas. O separador não define sozinho a bateria, mas material estável reduz variáveis."],
+      ["Revisão estatística", "A estabilidade em série exige mais que a média", "Média, mínimo, máximo e amplitude descrevem centro e dispersão; desvio padrão e CV ajudam a comparar; tendências mostram deriva. Cp/Cpk só deve ser usado com limites definidos, medição confiável e processo estatisticamente estável."],
+      ["Plano de amostragem", "Sem posição documentada, a dispersão pode enganar", "Conforme o risco, compare início, meio, fim e posições transversais. A verificação entre lotes deve incluir vários lotes e rolos; folhas devem registrar rolo de origem, corte e alteração após empilhamento ou embalagem."],
+      ["Rastreabilidade", "Uma auditoria útil pergunta onde surgiu a anomalia", "Verifique a ligação entre lote de envio, ID do rolo ou folha, produção, ensaio e embalagem. É um roteiro de auditoria, não uma afirmação de MES ou rastreabilidade digital completa na Viking."],
+      ["Coordenação Viking", "Alinhar o método desde a amostra", "Envie especificação, ensaios prioritários e lista de auditoria. Podemos alinhar método, posições, frequência, limites e identificação; a aptidão em série depende da validação do cliente."]
+    ],
+    parameters: [["Média", "Localiza o centro, mas pode ocultar variação nas extremidades."], ["Amplitude", "Mostra a faixa observada junto com quantidade e posição de amostras."], ["Desvio padrão e CV", "Descrevem dispersão sob condições de teste constantes."], ["Tendência, Cp e Cpk", "Use tendência para deriva e capacidade só após estabilidade."]],
+    checklist: ["Método e condicionamento", "Posições longitudinais e transversais", "Frequência por etapa", "Limites e tendência", "Identificação e tratamento de anomalias"]
+  },
+  ru: {
+    title: "Почему одного теста недостаточно для серийного производства AGM-сепаратора",
+    summary: "Соответствие среднего значения описывает только выборку; непрерывная сборка требует повторяемости по позициям, рулонам и партиям.",
+    intro: "Первый образец может пройти контроль и хорошо собраться, а следующая партия потребует переналадки линии. Для серии важны разброс и тренд, а не только один сертификат.",
+    sections: [
+      ["Данные процесса", "Производители батарей уже управляют стабильностью по данным", "Публикация KSTAR июля 2026 года описывает автоматические линии пластин, роботизированную сварку, MES и digital twin контроля качества. Это пример производителя батарей, а не подтверждение системы Viking; он показывает, почему одного среднего недостаточно для оценки повторяемости."],
+      ["Разовая проверка", "Протокол отвечает только за отобранные точки", "Он не доказывает близость начала, середины и конца рулона или повторяемость следующего рулона и партии. Малое число фиксированных точек может пропустить локальные колебания, заметные при непрерывной размотке."],
+      ["Влияние на сборку", "Разброс сепаратора передаётся в блок пластин", "Толщина меняет сжатие; поверхностная плотность и структура связаны с волокнами, впитыванием, порами и механикой; ширина, кромка и намотка влияют на подачу и отходы. Сепаратор не определяет батарею один, но стабильный материал уменьшает число переменных."],
+      ["Статистическая оценка", "Для серийной стабильности среднего недостаточно", "Среднее показывает центр, минимум, максимум и размах — ширину, стандартное отклонение и CV — рассеяние, тренд — смещение. Cp/Cpk применяют только при заданных пределах, надёжном измерении и статистически стабильном процессе."],
+      ["План отбора", "Без места отбора разброс может быть искажён", "По риску сравнивают начало, середину, конец и поперечные позиции. Межпартийная оценка должна включать несколько партий и рулонов; для листов фиксируют исходный рулон, место резки и изменения после укладки и упаковки."],
+      ["Прослеживаемость", "Полезный аудит отвечает, где возникло отклонение", "Проверяют связь отгрузочной партии, ID рулона или листов, производственной партии, испытаний и упаковки. Это схема аудита, а не заявление о наличии у Viking MES или полной цифровой прослеживаемости."],
+      ["Работа с Viking", "Метод серийной оценки согласуют на этапе образца", "Передайте спецификацию, приоритетные испытания и аудит-лист. Можно согласовать метод, позиции, частоту, пределы и маркировку; пригодность для серии подтверждается испытаниями материала, сборки и батареи у клиента."]
+    ],
+    parameters: [["Среднее", "Показывает центр, но может скрыть крайние колебания."], ["Размах", "Показывает наблюдаемую ширину с учётом числа и места проб."], ["Стандартное отклонение и CV", "Описывают разброс при неизменных условиях испытаний."], ["Тренд, Cp и Cpk", "Тренд выявляет дрейф; способность оценивают после стабилизации."]],
+    checklist: ["Метод и кондиционирование", "Продольные и поперечные позиции", "Частота по этапам", "Пределы и анализ тренда", "ID партии и работа с отклонениями"]
+  }
+};
+
+const batchProcessControlReferenceCopy = {
+  vi: ["Tài liệu tham khảo", "Ví dụ công khai về quản lý chất lượng theo quá trình", "Nguồn KSTAR mô tả nhà sản xuất ắc quy và không xác nhận thiết bị, MES hay phạm vi truy xuất của Viking."],
+  ko: ["참고 자료", "공정 기반 품질 관리의 공개 사례", "KSTAR 자료는 배터리 제조사 사례이며 Viking의 설비, MES 또는 추적 범위를 입증하지 않습니다."],
+  ja: ["参考資料", "工程品質管理の公開事例", "KSTAR資料は電池メーカーの事例であり、Vikingの設備、MES、追跡範囲を証明するものではありません。"],
+  es: ["Referencia", "Ejemplo público de calidad basada en procesos", "La fuente KSTAR describe a un fabricante de baterías y no verifica equipos, MES ni trazabilidad de Viking."],
+  pt: ["Referência", "Exemplo público de qualidade baseada em processo", "A fonte KSTAR descreve um fabricante de baterias e não comprova equipamentos, MES ou rastreabilidade da Viking."],
+  ru: ["Источник", "Открытый пример процессного управления качеством", "Источник KSTAR описывает производителя батарей и не подтверждает оборудование, MES или прослеживаемость Viking."]
+};
+
+const batchProcessControlReferenceItems = [["KSTAR — intelligent manufacturing and full-process quality management", "https://www.kstar.com/cn/index.php/news/info/1269.html"]];
+
+const batchProcessControlComparison = {
+  vi: ["Dữ liệu minh họa", "Cùng trung bình, độ phân tán khác", ["So sánh", "Mẫu A", "Mẫu B"]],
+  ko: ["예시 데이터", "같은 평균, 다른 산포", ["비교", "시료 A", "시료 B"]],
+  ja: ["例示データ", "同じ平均でも異なるばらつき", ["比較", "試料A", "試料B"]],
+  es: ["Datos ilustrativos", "Mismo promedio, distinta dispersión", ["Comparación", "Muestra A", "Muestra B"]],
+  pt: ["Dados ilustrativos", "Mesma média, dispersão diferente", ["Comparação", "Amostra A", "Amostra B"]],
+  ru: ["Пример данных", "Одинаковое среднее, разный разброс", ["Сравнение", "Выборка A", "Выборка B"]]
+};
+
+const batchProcessControlComparisonRows = {
+  vi: [["Các phép đo", "1.50 / 1.50 / 1.50 mm", "1.44 / 1.50 / 1.56 mm"], ["Trung bình", "1.50 mm", "1.50 mm"], ["Khoảng biến thiên", "0.00 mm", "0.12 mm"]],
+  ko: [["측정값", "1.50 / 1.50 / 1.50 mm", "1.44 / 1.50 / 1.56 mm"], ["평균", "1.50 mm", "1.50 mm"], ["범위", "0.00 mm", "0.12 mm"]],
+  ja: [["測定値", "1.50 / 1.50 / 1.50 mm", "1.44 / 1.50 / 1.56 mm"], ["平均", "1.50 mm", "1.50 mm"], ["範囲", "0.00 mm", "0.12 mm"]],
+  es: [["Mediciones", "1.50 / 1.50 / 1.50 mm", "1.44 / 1.50 / 1.56 mm"], ["Promedio", "1.50 mm", "1.50 mm"], ["Rango", "0.00 mm", "0.12 mm"]],
+  pt: [["Medições", "1.50 / 1.50 / 1.50 mm", "1.44 / 1.50 / 1.56 mm"], ["Média", "1.50 mm", "1.50 mm"], ["Amplitude", "0.00 mm", "0.12 mm"]],
+  ru: [["Измерения", "1.50 / 1.50 / 1.50 mm", "1.44 / 1.50 / 1.56 mm"], ["Среднее", "1.50 mm", "1.50 mm"], ["Размах", "0.00 mm", "0.12 mm"]]
+};
+
 const earlyLeadAcidTimelineCopy = {
   vi: ["Mốc sản xuất", "Năm mốc cho các định nghĩa khác nhau", "Các mốc dưới đây không khẳng định một đáp án duy nhất cho khái niệm ‘đầu tiên’."],
   ko: ["제조 연표", "서로 다른 정의를 보여 주는 다섯 이정표", "아래 연도는 하나의 절대적인 ‘최초’를 주장하지 않습니다."],
@@ -652,14 +783,15 @@ const dataCenterReferenceItems = [
 ];
 
 const secondaryHubCounts = {
-  vi: "11 bài viết kỹ thuật", ko: "기술 글 11편", ja: "技術記事 11件",
-  es: "11 artículos técnicos", pt: "11 artigos técnicos", ru: "11 технических статей"
+  vi: "12 bài viết kỹ thuật", ko: "기술 글 12편", ja: "技術記事 12件",
+  es: "12 artículos técnicos", pt: "12 artigos técnicos", ru: "12 технических статей"
 };
 
 for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].topics.dataCenterBackupPowerAgmSeparator = dataCenterBackupPowerTopics[locale];
   secondaryResourceData[locale].topics.earlyChinaLeadAcidBatteryManufacturing = earlyLeadAcidManufacturingTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorPressureRetention = pressureRetentionTopics[locale];
+  secondaryResourceData[locale].topics.agmSeparatorBatchProcessControl = batchProcessControlTopics[locale];
   secondaryResourceData[locale].dataCenterReferences = {
     eyebrow: dataCenterReferences[locale][0],
     title: dataCenterReferences[locale][1],
@@ -683,6 +815,18 @@ for (const locale of secondaryResourceLocales) {
     title: pressureRetentionReferenceCopy[locale][1],
     text: pressureRetentionReferenceCopy[locale][2],
     items: pressureRetentionReferenceItems
+  };
+  secondaryResourceData[locale].batchProcessControlReferences = {
+    eyebrow: batchProcessControlReferenceCopy[locale][0],
+    title: batchProcessControlReferenceCopy[locale][1],
+    text: batchProcessControlReferenceCopy[locale][2],
+    items: batchProcessControlReferenceItems
+  };
+  secondaryResourceData[locale].batchProcessControlComparison = {
+    eyebrow: batchProcessControlComparison[locale][0],
+    title: batchProcessControlComparison[locale][1],
+    columns: batchProcessControlComparison[locale][2],
+    rows: batchProcessControlComparisonRows[locale]
   };
   secondaryResourceData[locale].hub.count = secondaryHubCounts[locale];
 }
@@ -794,6 +938,20 @@ function buildArticle(locale, kind, localeData) {
         [common.roll[0], common.roll[1], "/images/viking-finished-separator-roll-900.webp", common.roll[0]],
         [localeData.nav.quality, common.checklistText, "/images/agm-quality-control-1200.webp", localeData.nav.quality],
         [common.sheet[0], common.sheet[1], "/images/sheets1-900.webp", common.sheet[0]]
+      ]
+    };
+  }
+
+  if (kind === "agmSeparatorBatchProcessControl") {
+    result.comparison = localeData.batchProcessControlComparison;
+    result.references = localeData.batchProcessControlReferences;
+    result.formats = {
+      eyebrow: common.formatsEyebrow,
+      title: common.formatsTitle,
+      items: [
+        [common.roll[0], common.roll[1], "/images/viking-finished-separator-roll-900.webp", common.roll[0]],
+        [localeData.nav.quality, common.checklistText, "/images/agm-quality-control-1200.webp", localeData.nav.quality],
+        [common.sheet[0], common.sheet[1], "/images/evidence/shipping-pallet-01.webp", common.sheet[0]]
       ]
     };
   }

@@ -299,6 +299,23 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
       zh: "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
     }
+  },
+  {
+    id: "agm-separator-batch-process-control",
+    category: "manufacturingQuality",
+    publishedAt: "2026-08-12",
+    title: {
+      en: "AGM Separator Batch Consistency & Process Control",
+      zh: "AGM 隔板批次一致性与过程控制"
+    },
+    description: {
+      en: "How sampling positions, dispersion, trends and traceability support volume-production evaluation.",
+      zh: "从取样位置、离散程度、趋势和追溯审核判断 AGM 隔板批量稳定性。"
+    },
+    href: {
+      en: "/blog/agm-separator-batch-consistency-and-process-control/",
+      zh: "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+    }
   }
 ];
 
@@ -313,7 +330,8 @@ const articleKindById: Record<string, string> = {
   "ups-vrla-selection": "upsVrlaTechnologySelection",
   "data-center-backup-power": "dataCenterBackupPowerAgmSeparator",
   "early-lead-acid-manufacturing-history": "earlyChinaLeadAcidBatteryManufacturing",
-  "agm-separator-pressure-retention": "agmSeparatorPressureRetention"
+  "agm-separator-pressure-retention": "agmSeparatorPressureRetention",
+  "agm-separator-batch-process-control": "agmSeparatorBatchProcessControl"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

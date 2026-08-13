@@ -232,6 +232,14 @@ const pages = [
     changefreq: "monthly",
     lastmod: "2026-08-12",
     secondaryLastmod: "2026-08-12"
+  },
+  {
+    en: "/blog/agm-separator-batch-consistency-and-process-control/",
+    zh: "/zh/blog/agm-separator-batch-consistency-and-process-control/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-08-12",
+    secondaryLastmod: "2026-08-12"
   }
 ];
 

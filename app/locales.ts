@@ -24,7 +24,8 @@ const synchronizedResourcePaths = [
   "blog/why-ups-projects-still-use-vrla-batteries",
   "blog/agm-separator-for-data-center-backup-power",
   "blog/how-chinas-earliest-lead-acid-batteries-were-made",
-  "blog/agm-separator-pressure-retention-after-acid-filling-and-cycling"
+  "blog/agm-separator-pressure-retention-after-acid-filling-and-cycling",
+  "blog/agm-separator-batch-consistency-and-process-control"
 ] as const;
 
 function allLocalePaths(suffix: string): Record<SiteLocale, string> {

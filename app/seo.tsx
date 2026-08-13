@@ -1898,6 +1898,51 @@ const agmSeparatorPressureRetentionSeo = {
   }
 } as const;
 
+const agmSeparatorBatchProcessControlSeo = {
+  en: {
+    path: "/blog/agm-separator-batch-consistency-and-process-control/",
+    alternatePath: "/zh/blog/agm-separator-batch-consistency-and-process-control/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator Batch Consistency and Process Control | Viking AGM",
+    description:
+      "Learn why one passing AGM separator test does not prove volume readiness, and how sampling, dispersion, trends and traceability support batch evaluation.",
+    keywords: [
+      "AGM separator batch consistency",
+      "AGM separator process control",
+      "AGM separator sampling plan",
+      "AGM separator Cp Cpk",
+      "AGM separator supplier audit"
+    ],
+    pageName: "Why One Passing Test Does Not Prove AGM Separator Volume Readiness",
+    articleDescription:
+      "A buyer-focused guide to sample dispersion, roll-position sampling, process trends, capability indices and traceability questions for AGM separator volume production.",
+    breadcrumbs: ["Home", "Resources", "AGM Separator Batch Consistency"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-batch-consistency-and-process-control/",
+    alternatePath: "/blog/agm-separator-batch-consistency-and-process-control/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "AGM 隔板单次检测合格，为什么不等于批量稳定？| 湖北维京AGM",
+    description:
+      "从平均值、极差、标准差、趋势、取样位置和批次追溯，了解 AGM 隔板从样品合格到批量稳定的评价方法。",
+    keywords: [
+      "AGM 隔板批次一致性",
+      "AGM 隔板过程控制",
+      "AGM 隔板取样方案",
+      "AGM 隔板 Cp Cpk",
+      "AGM 隔板供应商审核"
+    ],
+    pageName: "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+    articleDescription:
+      "面向采购与质量团队，从数据离散、卷材取样、趋势、过程能力和追溯审核说明 AGM 隔板批量评价方法。",
+    breadcrumbs: ["首页", "资料", "AGM 隔板批次一致性"]
+  }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2574,6 +2619,32 @@ export function buildAgmSeparatorPressureRetentionMetadata(
     keywords: [...current.keywords],
     path: current.path,
     ...articleLocalePaths("agmSeparatorPressureRetention"),
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: QUALITY_PREVIEW_IMAGE,
+      width: 1200,
+      height: 800
+    }
+  });
+}
+
+export function buildAgmSeparatorBatchProcessControlMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "agmSeparatorBatchProcessControl",
+    lang,
+    agmSeparatorBatchProcessControlSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    ...articleLocalePaths("agmSeparatorBatchProcessControl"),
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -4026,6 +4097,79 @@ export function AgmSeparatorPressureRetentionStructuredData({
           "compression recovery after acid filling",
           "VRLA battery separator cycling test",
           "AGM separator test pressure"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${getResourcesPath(lang)}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorBatchProcessControlStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmSeparatorBatchProcessControl",
+    lang,
+    agmSeparatorBatchProcessControlSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: QUALITY_PREVIEW_IMAGE,
+          width: 1200,
+          height: 800
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image: QUALITY_PREVIEW_IMAGE,
+        url,
+        datePublished: "2026-08-12",
+        dateModified: "2026-08-12",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "AGM separator batch consistency",
+          "AGM separator process control",
+          "sampling and statistical process review",
+          "VRLA battery supplier audit"
         ],
         inLanguage: current.language
       },

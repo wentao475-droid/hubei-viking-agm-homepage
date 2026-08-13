@@ -24,7 +24,8 @@ export type BlogArticleKind =
   | "agmGlassFiberVsPvcSeparator"
   | "dataCenterBackupPowerAgmSeparator"
   | "earlyChinaLeadAcidBatteryManufacturing"
-  | "agmSeparatorPressureRetention";
+  | "agmSeparatorPressureRetention"
+  | "agmSeparatorBatchProcessControl";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -3012,6 +3013,278 @@ const agmSeparatorPressureRetentionCopy = {
   }
 } as const;
 
+const batchProcessControlReferenceItems: Array<[string, string]> = [
+  [
+    "KSTAR — intelligent manufacturing and full-process quality management",
+    "https://www.kstar.com/cn/index.php/news/info/1269.html"
+  ]
+];
+
+const agmSeparatorBatchProcessControlCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/agm-separator-batch-consistency-and-process-control/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request Sample",
+    hero: {
+      eyebrow: "Batch Consistency",
+      title: "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+      subtitle:
+        "Thickness, basis weight and absorption passing one inspection only describe that sample. Continuous assembly depends on variation between positions, rolls and production batches.",
+      primary: "Request a Sample & Specification Match",
+      secondary: "Review the audit checklist",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "AGM separator quality inspection at Hubei Viking",
+        width: 1200,
+        height: 800
+      }
+    },
+    intro: [
+      "A first sample can pass inspection and assemble smoothly, while the next batch still requires repeated line adjustment. The issue is not always an out-of-spec result. A single inspection describes a point; volume production exposes variation across time, rolls and sampling positions.",
+      "For buyers and quality teams, the useful question is therefore not only whether the reported average passes. It is whether the agreed method can show repeatable performance from roll head to tail and from sample approval through pilot and volume supply."
+    ],
+    comparison: {
+      eyebrow: "Illustrative Data",
+      title: "The same average can hide very different dispersion",
+      columns: ["Comparison", "Sample set A", "Sample set B"],
+      rows: [
+        ["Measurements", "1.50 / 1.50 / 1.50 mm", "1.44 / 1.50 / 1.56 mm"],
+        ["Average", "1.50 mm", "1.50 mm"],
+        ["Range", "0.00 mm", "0.12 mm"],
+        ["Interpretation", "All three points coincide in this illustration.", "The same average masks wider point-to-point variation."]
+      ]
+    },
+    sections: [
+      {
+        eyebrow: "Process Data",
+        title: "Downstream manufacturing is already managing consistency with process data",
+        text:
+          "KSTAR's July 2026 manufacturing update describes automated plate lines, robot cast welding, MES and a digital-twin quality platform covering incoming material, processing, finished-product inspection and outgoing verification. This is a downstream battery-company example, not evidence of Viking's production system. The sourcing signal is still relevant: as battery plants manage more of the process digitally, a supplier average and one certificate are no longer enough to explain repeatability."
+      },
+      {
+        eyebrow: "Single Inspection",
+        title: "A passing report only answers whether the sampled points crossed the line",
+        text:
+          "A certificate does not by itself show where the sample came from, whether roll head, middle and tail are similar, or whether another roll and production batch will reproduce the result. Sampling too few fixed positions can miss local movement that later appears during continuous unwinding and assembly. The illustrative thickness values above are not Viking specifications; they simply show why equal averages can carry different process risk."
+      },
+      {
+        eyebrow: "Assembly Impact",
+        title: "Separator variation continues into the plate-group assembly process",
+        text:
+          "Thickness variation changes actual compression within a fixed group gap. Basis-weight and structure variation may correspond to changes in fiber distribution, absorption, porosity and compression behavior. Width, sheet dimensions, roll edges and winding affect line feeding, adjustment and material loss. None of these variables alone determines battery performance, but more stable incoming material removes variables from assembly and failure analysis."
+      },
+      {
+        eyebrow: "Statistical Review",
+        title: "Volume readiness requires more than an average",
+        text:
+          "Average locates the center; maximum, minimum and range show the observed spread; standard deviation and coefficient of variation help compare dispersion; and a time-ordered trend can reveal drift before the pass rate changes. Cp and Cpk are useful only when specification limits are defined, the measurement system is reliable and the process is statistically stable. They cannot be responsibly inferred from a few samples or used instead of battery assembly and performance validation."
+      },
+      {
+        eyebrow: "Sampling Plan",
+        title: "Dispersion is only meaningful when sampling locations are documented",
+        text:
+          "For rolls, a risk-based plan can compare head, middle and tail and, where relevant, positions across the web. Cross-batch work should cover multiple production batches and rolls rather than repeated readings from one roll. Sheet sampling should identify source rolls and slit positions and check whether stacking and packing affect dimensions. Sample, pilot and stable-production frequencies may differ, but every change needs a documented basis."
+      },
+      {
+        eyebrow: "Traceability Review",
+        title: "A useful audit asks where an abnormal result came from",
+        text:
+          "Supplier review can ask how shipment batches, roll or sheet identifiers, production batches, test records and packing records are linked; which properties are checked by roll or batch; and how abnormal data are isolated and reviewed. This is an audit framework, not a claim that Viking currently operates MES or a fully digital traceability platform. Coding, record-retention and sample-retention requirements should be confirmed for the specific project."
+      },
+      {
+        eyebrow: "Viking Coordination",
+        title: "Align the volume-evaluation method during the sample stage",
+        text:
+          "Viking manufactures AGM glass-fiber separator rolls and sheets for VRLA applications and can discuss thickness, width, sheet size and packing. For a project moving toward volume production, share the current specification, priority test items and supplier-audit checklist. We can first align the test method, sampling locations, inspection frequency, acceptance range and required batch identification; suitability remains subject to the customer's material, assembly and complete-battery validation."
+      }
+    ],
+    parameters: [
+      ["Average", "Shows where the data center sits, but can conceal movement at the upper and lower ends."],
+      ["Range", "Quickly shows the observed span; interpret it with sample size, position and possible outliers."],
+      ["Standard deviation & CV", "Describe dispersion and support comparison, provided the method and conditions remain the same."],
+      ["Trend, Cp & Cpk", "Use trends to detect drift; use capability indices only after measurement and process stability are established."]
+    ],
+    formats: {
+      eyebrow: "Production Evidence",
+      title: "Sampling, inspection and shipment records should describe the same batch",
+      items: [
+        ["Roll-position sampling", "Identify roll, batch and head/middle/tail positions before comparing dispersion.", "/images/viking-finished-separator-roll-900.webp", "Viking AGM separator roll for position-based sampling"],
+        ["Consistent test conditions", "Equipment, conditioning, pressure and sample location must stay consistent for comparable results.", "/images/agm-quality-control-1200.webp", "AGM separator quality inspection"],
+        ["Packing and shipment link", "Project-specific coding should connect accepted material with packing and shipment records.", "/images/evidence/shipping-pallet-01.webp", "AGM separator packing and shipment"]
+      ]
+    },
+    checklist: {
+      eyebrow: "Supplier Audit Checklist",
+      title: "Confirm these boundaries before pilot or volume production",
+      text:
+        "A shared sampling and acceptance method is more useful than a single attractive report because it makes later batches comparable and exceptions reviewable.",
+      items: ["Test method and conditioning", "Roll and cross-web sampling positions", "Inspection frequency by project stage", "Acceptance limits and trend review", "Batch identifiers and exception handling"]
+    },
+    references: {
+      eyebrow: "Reference",
+      title: "A downstream example of process-based quality management",
+      text:
+        "The KSTAR source describes a battery manufacturer's system and is cited only to illustrate downstream expectations. It does not verify Viking's equipment, MES, traceability scope or record-retention period.",
+      items: batchProcessControlReferenceItems
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with consistency, testing and sample evaluation",
+      items: [
+        ["Why AGM Separator Consistency Matters", "/blog/agm-separator-performance-consistency/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["Key Technical Parameters of AGM Separators", "/blog/key-technical-parameters-of-agm-separator/"],
+        ["Request a Sample & Specification Match", "/request-agm-separator-sample/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Review the sampling and acceptance method for volume production",
+      text:
+        "Share your specification, priority test items, intended sampling locations and supplier-audit checklist so the comparison boundary is clear before pilot production.",
+      checklist: ["Application and battery design", "Specification and test method", "Sampling positions and frequency", "Pilot or volume-production stage"],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        message: "Application, specification, priority tests, sampling plan, acceptance limits and current project stage"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/agm-separator-batch-consistency-and-process-control/",
+    brandName: articleCopy.zh.brandName,
+    quote: "申请样品",
+    hero: {
+      eyebrow: "批次一致性",
+      title: "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+      subtitle:
+        "厚度、克重和吸液量达到要求，只能说明这次抽检过关。连续装配更关心不同批次、不同卷材和同一卷不同位置能否保持稳定。",
+      primary: "申请样品与规格匹配",
+      secondary: "查看供应商审核清单",
+      image: {
+        src: "/images/agm-quality-control-1200.webp",
+        alt: "湖北维京 AGM 隔板质量检测",
+        width: 1200,
+        height: 800
+      }
+    },
+    intro: [
+      "第一批样品检测合格、装配顺利，第二批参数仍在规格范围内，生产线却开始频繁调整。这类问题不一定来自某个参数不合格，更多时候是单次检测只看到了一个点，没有看到连续生产中的波动。",
+      "对采购和质量团队来说，真正要确认的不只是报告平均值是否合格，而是同一评价方法能否覆盖卷头、卷中、卷尾，不同卷材和不同生产批次，并从样品、试产延续到批量阶段。"
+    ],
+    comparison: {
+      eyebrow: "示例数据",
+      title: "平均值相同，离散程度可以完全不同",
+      columns: ["比较项", "样本 A", "样本 B"],
+      rows: [
+        ["检测值", "1.50 / 1.50 / 1.50 mm", "1.44 / 1.50 / 1.56 mm"],
+        ["平均值", "1.50 mm", "1.50 mm"],
+        ["极差", "0.00 mm", "0.12 mm"],
+        ["说明", "示例中的三个点完全重合。", "相同平均值掩盖了更大的点位波动。"]
+      ]
+    },
+    sections: [
+      {
+        eyebrow: "过程数据",
+        title: "下游已经开始用过程数据管理一致性",
+        text:
+          "科士达 2026 年 7 月发布的制造信息提到自动化极板生产线、机器人铸焊，以及覆盖原料、加工、成品检测和出厂核验的 MES 与数字孪生质控平台。这是下游电池企业的公开案例，不能等同于维京自身的生产体系。但它传递出的采购信号很清楚：当电池厂越来越重视过程数据，上游材料只提供一个平均值和一张合格报告，通常已经不足以解释可重复性。"
+      },
+      {
+        eyebrow: "单次抽检",
+        title: "一张合格报告，只能回答这次抽样有没有过线",
+        text:
+          "合格证无法单独说明样品取自卷材哪个位置，卷头、卷中和卷尾是否接近，也不能证明换一卷或换一个生产批次后仍能复现。如果取样少且位置固定，局部波动可能直到连续放卷和装配时才显现。上方厚度数据仅用于说明统计差异，不代表维京产品规格或公差。"
+      },
+      {
+        eyebrow: "装配影响",
+        title: "隔板的波动，会沿着装配过程继续传递",
+        text:
+          "厚度波动会改变固定极群间隙中的实际压缩状态；克重和结构波动可能对应纤维分布、吸液、孔隙和受压表现差异；宽度、片材尺寸、端面和收卷状态则直接影响放卷、调机和材料损耗。隔板并不单独决定最终电池结果，但上游材料越稳定，电池厂装配和问题排查时面对的变量就越少。"
+      },
+      {
+        eyebrow: "统计评估",
+        title: "判断批量稳定，不能只盯着平均值",
+        text:
+          "平均值说明数据中心位置，最大值、最小值和极差展示已观察到的跨度，标准差与变异系数用于辅助比较离散程度，按时间或批次排列的趋势图则有助于提前发现漂移。只有在规格上下限明确、测量系统可靠且过程处于统计稳定状态时，才适合进一步使用 Cp、Cpk。少量样品计算出的漂亮数值，不能替代装配和整电池验证。"
+      },
+      {
+        eyebrow: "取样方案",
+        title: "取样位置不写清，离散度也可能失真",
+        text:
+          "卷材可以根据项目风险比较卷头、卷中和卷尾，较宽卷材还可关注横向不同位置。跨批次验证应覆盖多个生产批次和多卷产品，而不是把同一卷多测几次当作批次稳定性。片材则要记录来源卷材、分切位置，并确认堆叠和包装后尺寸是否变化。样品、试产和稳定量产阶段可以采用不同频次，但调整依据需要留痕。"
+      },
+      {
+        eyebrow: "追溯审核",
+        title: "质量追溯，要能回答异常来自哪一段",
+        text:
+          "供应商审核可以继续追问出货批次、卷材或片材编号、生产批次、检测记录与包装记录如何关联；哪些参数按卷检测、哪些按批检测；异常数据如何隔离和复核。这是一套审核框架，不代表维京目前已部署 MES 或完整数字化追溯平台。具体批次编码、记录保存和留样要求，应按项目单独确认。"
+      },
+      {
+        eyebrow: "维京配合",
+        title: "从样品阶段开始确认批量评价方法",
+        text:
+          "维京持续专注 VRLA 电池用 AGM 玻璃纤维隔板制造，可提供卷材和片材，并支持厚度、宽度、片材尺寸及包装沟通。准备进入批量的项目，可以提供现行规格书、重点检测项目和供应商审核清单，先共同确认测试方法、取样位置、检测频次、判定范围和批次标识要求。最终是否适合批量使用，仍应以客户的材料、装配和整电池验证为准。"
+      }
+    ],
+    parameters: [
+      ["平均值", "说明过程大致落在哪里，但可能掩盖上下两端的波动。"],
+      ["最大值、最小值与极差", "快速展示已观察到的跨度，需要结合取样数量、位置和异常值判断。"],
+      ["标准差与变异系数", "描述离散程度并辅助跨指标比较，前提是测试方法和条件一致。"],
+      ["趋势图、Cp 与 Cpk", "趋势用于发现漂移；过程能力指数应在测量可靠且过程稳定后使用。"]
+    ],
+    formats: {
+      eyebrow: "生产证据",
+      title: "取样、检测与出货记录应指向同一批产品",
+      items: [
+        ["卷材位置取样", "比较离散度前，先明确卷号、批次和卷头、卷中、卷尾位置。", "/images/viking-finished-separator-roll-900.webp", "湖北维京 AGM 隔板卷材位置取样"],
+        ["统一检测条件", "设备、预处理、测试压力和取样位置一致，数据才具有可比性。", "/images/agm-quality-control-1200.webp", "湖北维京 AGM 隔板质量检测"],
+        ["包装与出货关联", "项目确认的批次标识应能把合格材料与包装、出货记录关联起来。", "/images/evidence/shipping-pallet-01.webp", "湖北维京 AGM 隔板包装与出货"]
+      ]
+    },
+    checklist: {
+      eyebrow: "供应商审核清单",
+      title: "试产或批量前，先确认这些评价边界",
+      text: "共同的取样和判定方法比一张漂亮报告更有价值，因为后续批次可以比较，异常也有依据复核。",
+      items: ["测试方法与样品预处理", "卷向与横向取样位置", "不同项目阶段的检测频次", "判定范围与趋势复核", "批次标识与异常处置要求"]
+    },
+    references: {
+      eyebrow: "资料来源",
+      title: "下游过程质量管理的公开案例",
+      text:
+        "科士达资料用于说明电池制造端的过程管理趋势，不用于证明维京的设备、MES、追溯范围或记录保存周期。",
+      items: batchProcessControlReferenceItems
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续了解一致性、检测和样品评估",
+      items: [
+        ["AGM 隔板一致性为什么重要", "/zh/blog/agm-separator-performance-consistency/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["AGM 隔板关键技术参数", "/zh/blog/key-technical-parameters-of-agm-separator/"],
+        ["申请样品与规格匹配", "/zh/request-agm-separator-sample/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "确认批量试产的取样与判定方法",
+      text: "请提供现行规格书、重点检测项目、计划取样位置和供应商审核清单，先把比较边界确认清楚。",
+      checklist: ["电池应用与结构", "规格书与测试方法", "取样位置与检测频次", "试产或批量阶段"],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        message: "电池应用、规格书、重点检测项目、取样方案、判定范围和当前项目阶段"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -3066,6 +3339,8 @@ export function BlogArticlePage({
                       ? earlyChinaLeadAcidBatteryManufacturingCopy[primaryLang]
                       : page === "agmSeparatorPressureRetention"
                         ? agmSeparatorPressureRetentionCopy[primaryLang]
+                        : page === "agmSeparatorBatchProcessControl"
+                          ? agmSeparatorBatchProcessControlCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -3131,6 +3406,8 @@ export function BlogArticlePage({
                       ? ["historical-definitions", "early-materials", "process-control", "industrial-production", "separator-evolution", "modern-manufacturing"]
                       : page === "agmSeparatorPressureRetention"
                         ? ["dry-thickness", "after-filling", "after-cycling", "reproducible-record", "viking-coordination"]
+                        : page === "agmSeparatorBatchProcessControl"
+                          ? ["process-data", "single-sample", "assembly-impact", "statistical-review", "sampling-plan", "traceability", "viking-coordination"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
@@ -3405,7 +3682,8 @@ export function BlogArticlePage({
             page === "upsVrlaTechnologySelection" ||
             page === "dataCenterBackupPowerAgmSeparator" ||
             page === "earlyChinaLeadAcidBatteryManufacturing" ||
-            page === "agmSeparatorPressureRetention"
+            page === "agmSeparatorPressureRetention" ||
+            page === "agmSeparatorBatchProcessControl"
               ? "lg:grid-cols-3"
               : ""
           }`}

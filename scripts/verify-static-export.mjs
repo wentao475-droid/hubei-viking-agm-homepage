@@ -15,7 +15,8 @@ const synchronizedResourceSlugs = [
   "why-ups-projects-still-use-vrla-batteries",
   "agm-separator-for-data-center-backup-power",
   "how-chinas-earliest-lead-acid-batteries-were-made",
-  "agm-separator-pressure-retention-after-acid-filling-and-cycling"
+  "agm-separator-pressure-retention-after-acid-filling-and-cycling",
+  "agm-separator-batch-consistency-and-process-control"
 ];
 const synchronizedResourceFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/resources/index.html`,
@@ -89,6 +90,8 @@ const requiredFiles = [
   "zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/index.html",
   "blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/index.html",
   "zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/index.html",
+  "blog/agm-separator-batch-consistency-and-process-control/index.html",
+  "zh/blog/agm-separator-batch-consistency-and-process-control/index.html",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -329,6 +332,8 @@ const secondaryResourcesComplete = synchronizedLocaleCodes.every((locale) => {
               ? "2026-08-11"
               : slug === "agm-separator-pressure-retention-after-acid-filling-and-cycling"
                 ? "2026-08-12"
+                : slug === "agm-separator-batch-consistency-and-process-control"
+                  ? "2026-08-12"
                 : "2026-08-05"
         }"`
       )
@@ -961,10 +966,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 184) {
-  pass("sitemap.xml lists the expected 184 localized public URLs");
+if (sitemapUrls.length === 192) {
+  pass("sitemap.xml lists the expected 192 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 184`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 192`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -1105,6 +1110,18 @@ const expectedSitemapLastmod = [
   ],
   ...synchronizedLocaleCodes.map((locale) => [
     `https://www.vikingagm.com/${locale}/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/`,
+    "2026-08-12"
+  ]),
+  [
+    "https://www.vikingagm.com/blog/agm-separator-batch-consistency-and-process-control/",
+    "2026-08-12"
+  ],
+  [
+    "https://www.vikingagm.com/zh/blog/agm-separator-batch-consistency-and-process-control/",
+    "2026-08-12"
+  ],
+  ...synchronizedLocaleCodes.map((locale) => [
+    `https://www.vikingagm.com/${locale}/blog/agm-separator-batch-consistency-and-process-control/`,
     "2026-08-12"
   ]),
   [
