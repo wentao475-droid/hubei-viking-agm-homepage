@@ -888,8 +888,17 @@ const baseCopy = {
   },
 } as const;
 
-const copy = {
+const copy: Record<SiteLocale, any> = {
   ...baseCopy,
+  ar: {
+    ...baseCopy.en,
+    nav: { company: "الشركة", products: "المنتجات", applications: "التطبيقات", quality: "الجودة", contact: "اتصل بنا" },
+    language: "العربية",
+    hero: { ...baseCopy.en.hero, badge: "شركة هوبي فايكينغ للتكنولوجيا المحدودة", title: ["شركة متخصصة في تصنيع", "فواصل AGM من الألياف الزجاجية"], subtitle: "تصنيع وتوريد مستقر لفواصل AGM من الألياف الزجاجية لمصنعي بطاريات الرصاص الحمضية.", quote: "اطلب عرضًا", products: "عرض المنتجات", proof: ["فواصل AGM من الألياف الزجاجية", "إنتاج مضبوط بالعمليات", "توريد للتصدير"], image: { ...baseCopy.en.hero.image, alt: "خط إنتاج فواصل AGM" } },
+    video: { eyebrow: "نظرة عامة على المصنع", title: "شاهد جولة فايكينغ AGM في المصنع خلال دقيقة واحدة", text: "نظرة سريعة على إنتاج فواصل AGM ومناولة اللفائف وفحص الجودة والتعبئة.", duration: "فيديو مصنع لمدة دقيقة", play: "تشغيل الفيديو", close: "إغلاق الفيديو", aria: "تشغيل فيديو نظرة عامة على مصنع Viking AGM" },
+    stats: [{ value: "AGM", label: "تصنيع فواصل الألياف الزجاجية" }, { value: "OEM", label: "مناقشة اللفائف والألواح حسب المواصفات" }, { value: "QC", label: "الفحص ومتابعة العملية" }],
+    applications: { eyebrow: "التطبيقات", title: "مواد فواصل لقطاعات بطاريات الرصاص الحمضية الرئيسية", items: ["بطاريات VRLA", "بطاريات UPS", "بطاريات الدراجات النارية", "بطاريات السيارات", "أنظمة تخزين الطاقة"] }
+  },
   ko: {
     ...baseCopy.en,
     nav: {
@@ -1829,7 +1838,7 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
   const lang = initialLang;
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const t = homeContent(lang, copy[lang]);
+  const t = homeContent(lang, copy[lang]) as typeof baseCopy.en;
   const footerColumns = Object.entries(t.footer.columns) as Array<
     [string, readonly FooterLink[]]
   >;

@@ -36,6 +36,41 @@ const ENERGY_STORAGE_APPLICATION_IMAGE = `${SITE_URL}/images/applications/energy
 const HOME_VIDEO_URL = `${SITE_URL}/videos/viking-agm-promo-720p.mp4`;
 const HOME_VIDEO_POSTER = `${SITE_URL}/images/viking-agm-promo-poster.webp`;
 
+const arabicSeoTitles: Record<string, string> = {
+  "/": "شركة تصنيع فواصل AGM لبطاريات VRLA | Viking AGM",
+  "/request-agm-separator-sample/": "طلب عينة فاصل AGM ومراجعة المواصفات | Viking AGM",
+  "/products/agm-separator/": "فاصل AGM من الألياف الزجاجية لبطاريات VRLA | Viking AGM",
+  "/products/agm-separator-rolls/": "لفائف فواصل AGM لبطاريات VRLA | Viking AGM",
+  "/products/agm-separator-sheets/": "ألواح فواصل AGM لبطاريات VRLA | Viking AGM",
+  "/products/glass-fiber-thermal-insulation-paper/": "ورق عزل حراري من الألياف الزجاجية | Viking AGM",
+  "/quality-control/agm-separator-testing/": "اختبار جودة فواصل AGM | Viking AGM",
+  "/applications/agm-separator-for-vrla-battery/": "فواصل AGM لبطاريات VRLA | Viking AGM",
+  "/applications/agm-separator-for-ups-battery/": "فواصل AGM لبطاريات UPS VRLA | Viking AGM",
+  "/applications/agm-separator-for-motorcycle-battery/": "فواصل AGM لبطاريات الدراجات النارية | Viking AGM",
+  "/applications/agm-separator-for-energy-storage-battery/": "فواصل AGM لبطاريات تخزين الطاقة | Viking AGM"
+};
+
+function pageSeo<T extends Record<string, any>>(entries: T, lang: SiteLocale): any {
+  const fallback = entries.en ?? entries.vi;
+  if (lang !== "ar") return entries[lang as keyof T];
+  const sourcePath = fallback.path as string;
+  return {
+    ...fallback,
+    path: sourcePath === "/" ? "/ar/" : `/ar${sourcePath}`,
+    alternatePath: sourcePath,
+    locale: "ar",
+    language: "ar",
+    siteName: "Viking AGM",
+    alternateSiteName: "Hubei Viking AGM",
+    title: arabicSeoTitles[sourcePath] ?? "فواصل AGM لبطاريات الرصاص الحمضية | Viking AGM",
+    description: "تصنيع فواصل AGM من الألياف الزجاجية ولفائف وألواح لبطاريات الرصاص الحمضية، مع مناقشة المواصفات والفحص والتعبئة.",
+    pageName: arabicSeoTitles[sourcePath] ?? "Viking AGM",
+    productName: arabicSeoTitles[sourcePath] ?? "فاصل AGM",
+    serviceName: "تصنيع فواصل AGM من الألياف الزجاجية",
+    serviceDescription: "فواصل AGM على شكل لفائف وألواح لمصنعي بطاريات الرصاص الحمضية."
+  };
+}
+
 const homeSeo = {
   en: {
     path: "/",
@@ -1991,7 +2026,7 @@ const agmGlassFiberVsPvcSeparatorSeo = {
 } as const;
 
 export function buildHomeMetadata(lang: SiteLocale): Metadata {
-  const current = seoContent("home", lang, homeSeo[lang]);
+  const current = seoContent("home", lang, pageSeo(homeSeo, lang));
 
   return buildMetadata({
     title: current.title,
@@ -2006,6 +2041,7 @@ export function buildHomeMetadata(lang: SiteLocale): Metadata {
     esPath: "/es/",
     ptPath: "/pt/",
     ruPath: "/ru/",
+    arPath: "/ar/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.serviceName
@@ -2094,7 +2130,7 @@ export function buildSecondaryArticleMetadata(
 }
 
 export function buildSampleRequestMetadata(lang: SiteLocale): Metadata {
-  const current = sampleRequestSeo[lang];
+  const current = pageSeo(sampleRequestSeo, lang);
 
   return buildMetadata({
     title: current.title,
@@ -2109,6 +2145,7 @@ export function buildSampleRequestMetadata(lang: SiteLocale): Metadata {
     esPath: "/es/request-agm-separator-sample/",
     ptPath: "/pt/request-agm-separator-sample/",
     ruPath: "/ru/request-agm-separator-sample/",
+    arPath: "/ar/request-agm-separator-sample/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -2121,7 +2158,7 @@ export function buildSampleRequestMetadata(lang: SiteLocale): Metadata {
 }
 
 export function buildAgmSeparatorMetadata(lang: SiteLocale): Metadata {
-  const current = seoContent("agmSeparator", lang, agmSeparatorSeo[lang]);
+  const current = seoContent("agmSeparator", lang, pageSeo(agmSeparatorSeo, lang));
 
   return buildMetadata({
     title: current.title,
@@ -2136,6 +2173,7 @@ export function buildAgmSeparatorMetadata(lang: SiteLocale): Metadata {
     esPath: "/es/products/agm-separator/",
     ptPath: "/pt/products/agm-separator/",
     ruPath: "/ru/products/agm-separator/",
+    arPath: "/ar/products/agm-separator/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName
@@ -2143,7 +2181,7 @@ export function buildAgmSeparatorMetadata(lang: SiteLocale): Metadata {
 }
 
 export function buildAgmSeparatorRollsMetadata(lang: SiteLocale): Metadata {
-  const current = seoContent("agmSeparatorRolls", lang, agmSeparatorRollsSeo[lang]);
+  const current = seoContent("agmSeparatorRolls", lang, pageSeo(agmSeparatorRollsSeo, lang));
 
   return buildMetadata({
     title: current.title,
@@ -2158,6 +2196,7 @@ export function buildAgmSeparatorRollsMetadata(lang: SiteLocale): Metadata {
     esPath: "/es/products/agm-separator-rolls/",
     ptPath: "/pt/products/agm-separator-rolls/",
     ruPath: "/ru/products/agm-separator-rolls/",
+    arPath: "/ar/products/agm-separator-rolls/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName
@@ -2165,7 +2204,7 @@ export function buildAgmSeparatorRollsMetadata(lang: SiteLocale): Metadata {
 }
 
 export function buildAgmSeparatorSheetsMetadata(lang: SiteLocale): Metadata {
-  const current = seoContent("agmSeparatorSheets", lang, agmSeparatorSheetsSeo[lang]);
+  const current = seoContent("agmSeparatorSheets", lang, pageSeo(agmSeparatorSheetsSeo, lang));
 
   return buildMetadata({
     title: current.title,
@@ -2180,6 +2219,7 @@ export function buildAgmSeparatorSheetsMetadata(lang: SiteLocale): Metadata {
     esPath: "/es/products/agm-separator-sheets/",
     ptPath: "/pt/products/agm-separator-sheets/",
     ruPath: "/ru/products/agm-separator-sheets/",
+    arPath: "/ar/products/agm-separator-sheets/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName,
@@ -2197,7 +2237,7 @@ export function buildGlassFiberThermalInsulationPaperMetadata(
   const current = seoContent(
     "glassFiberThermalInsulationPaper",
     lang,
-    thermalInsulationPaperSeo[lang]
+    pageSeo(thermalInsulationPaperSeo, lang)
   );
 
   return buildMetadata({
@@ -2213,6 +2253,7 @@ export function buildGlassFiberThermalInsulationPaperMetadata(
     esPath: "/es/products/glass-fiber-thermal-insulation-paper/",
     ptPath: "/pt/products/glass-fiber-thermal-insulation-paper/",
     ruPath: "/ru/products/glass-fiber-thermal-insulation-paper/",
+    arPath: "/ar/products/glass-fiber-thermal-insulation-paper/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.productName,
@@ -2225,7 +2266,7 @@ export function buildGlassFiberThermalInsulationPaperMetadata(
 }
 
 export function buildAgmSeparatorTestingMetadata(lang: SiteLocale): Metadata {
-  const current = seoContent("agmSeparatorTesting", lang, agmSeparatorTestingSeo[lang]);
+  const current = seoContent("agmSeparatorTesting", lang, pageSeo(agmSeparatorTestingSeo, lang));
 
   return buildMetadata({
     title: current.title,
@@ -2240,6 +2281,7 @@ export function buildAgmSeparatorTestingMetadata(lang: SiteLocale): Metadata {
     esPath: "/es/quality-control/agm-separator-testing/",
     ptPath: "/pt/quality-control/agm-separator-testing/",
     ruPath: "/ru/quality-control/agm-separator-testing/",
+    arPath: "/ar/quality-control/agm-separator-testing/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -2257,7 +2299,7 @@ export function buildAgmSeparatorVrlaApplicationMetadata(
   const current = seoContent(
     "agmSeparatorVrlaApplication",
     lang,
-    agmSeparatorVrlaApplicationSeo[lang]
+    pageSeo(agmSeparatorVrlaApplicationSeo, lang)
   );
 
   return buildApplicationDetailMetadata(
@@ -2270,7 +2312,8 @@ export function buildAgmSeparatorVrlaApplicationMetadata(
     "/ja/applications/agm-separator-for-vrla-battery/",
     "/es/applications/agm-separator-for-vrla-battery/",
     "/pt/applications/agm-separator-for-vrla-battery/",
-    "/ru/applications/agm-separator-for-vrla-battery/"
+    "/ru/applications/agm-separator-for-vrla-battery/",
+    "/ar/applications/agm-separator-for-vrla-battery/"
   );
 }
 
@@ -2284,7 +2327,8 @@ function buildApplicationDetailMetadata(
   jaPath?: string,
   esPath?: string,
   ptPath?: string,
-  ruPath?: string
+  ruPath?: string,
+  arPath?: string
 ): Metadata {
   return buildMetadata({
     title: current.title,
@@ -2299,6 +2343,7 @@ function buildApplicationDetailMetadata(
     esPath,
     ptPath,
     ruPath,
+    arPath,
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -2318,7 +2363,7 @@ export function buildAgmSeparatorUpsApplicationMetadata(
     seoContent(
       "agmSeparatorUpsApplication",
       lang,
-      agmSeparatorUpsApplicationSeo[lang]
+      pageSeo(agmSeparatorUpsApplicationSeo, lang)
     ),
     "/applications/agm-separator-for-ups-battery/",
     "/zh/applications/agm-separator-for-ups-battery/",
@@ -2327,7 +2372,8 @@ export function buildAgmSeparatorUpsApplicationMetadata(
     "/ja/applications/agm-separator-for-ups-battery/",
     "/es/applications/agm-separator-for-ups-battery/",
     "/pt/applications/agm-separator-for-ups-battery/",
-    "/ru/applications/agm-separator-for-ups-battery/"
+    "/ru/applications/agm-separator-for-ups-battery/",
+    "/ar/applications/agm-separator-for-ups-battery/"
   );
 }
 
@@ -2339,7 +2385,7 @@ export function buildAgmSeparatorMotorcycleApplicationMetadata(
     seoContent(
       "agmSeparatorMotorcycleApplication",
       lang,
-      agmSeparatorMotorcycleApplicationSeo[lang]
+      pageSeo(agmSeparatorMotorcycleApplicationSeo, lang)
     ),
     "/applications/agm-separator-for-motorcycle-battery/",
     "/zh/applications/agm-separator-for-motorcycle-battery/",
@@ -2348,7 +2394,8 @@ export function buildAgmSeparatorMotorcycleApplicationMetadata(
     "/ja/applications/agm-separator-for-motorcycle-battery/",
     "/es/applications/agm-separator-for-motorcycle-battery/",
     "/pt/applications/agm-separator-for-motorcycle-battery/",
-    "/ru/applications/agm-separator-for-motorcycle-battery/"
+    "/ru/applications/agm-separator-for-motorcycle-battery/",
+    "/ar/applications/agm-separator-for-motorcycle-battery/"
   );
 }
 
@@ -2360,7 +2407,7 @@ export function buildAgmSeparatorEnergyStorageApplicationMetadata(
     seoContent(
       "agmSeparatorEnergyStorageApplication",
       lang,
-      agmSeparatorEnergyStorageApplicationSeo[lang]
+      pageSeo(agmSeparatorEnergyStorageApplicationSeo, lang)
     ),
     "/applications/agm-separator-for-energy-storage-battery/",
     "/zh/applications/agm-separator-for-energy-storage-battery/",
@@ -2369,7 +2416,8 @@ export function buildAgmSeparatorEnergyStorageApplicationMetadata(
     "/ja/applications/agm-separator-for-energy-storage-battery/",
     "/es/applications/agm-separator-for-energy-storage-battery/",
     "/pt/applications/agm-separator-for-energy-storage-battery/",
-    "/ru/applications/agm-separator-for-energy-storage-battery/"
+    "/ru/applications/agm-separator-for-energy-storage-battery/",
+    "/ar/applications/agm-separator-for-energy-storage-battery/"
   );
 }
 
@@ -2696,6 +2744,7 @@ function buildMetadata({
   esPath,
   ptPath,
   ruPath,
+  arPath,
   locale,
   siteName,
   imageAlt,
@@ -2717,6 +2766,7 @@ function buildMetadata({
   esPath?: string;
   ptPath?: string;
   ruPath?: string;
+  arPath?: string;
   locale: string;
   siteName: string;
   imageAlt: string;
@@ -2741,6 +2791,7 @@ function buildMetadata({
         ...(esPath ? { es: esPath } : {}),
         ...(ptPath ? { "pt-BR": ptPath } : {}),
         ...(ruPath ? { "ru-RU": ruPath } : {}),
+        ...(arPath ? { ar: arPath } : {}),
         "x-default": enPath
       }
     },
@@ -2770,7 +2821,7 @@ function buildMetadata({
 }
 
 export function StructuredData({ lang }: { lang: SiteLocale }) {
-  const current = seoContent("home", lang, homeSeo[lang]);
+  const current = seoContent("home", lang, pageSeo(homeSeo, lang));
   const url = `${SITE_URL}${current.path}`;
   const data = {
     "@context": "https://schema.org",
@@ -2853,7 +2904,7 @@ export function StructuredData({ lang }: { lang: SiteLocale }) {
 }
 
 export function SampleRequestStructuredData({ lang }: { lang: SiteLocale }) {
-  const current = sampleRequestSeo[lang];
+  const current = pageSeo(sampleRequestSeo, lang);
   const url = `${SITE_URL}${current.path}`;
   const homePath = localeHomePaths[lang];
   const data = {
@@ -2919,7 +2970,7 @@ export function SampleRequestStructuredData({ lang }: { lang: SiteLocale }) {
 }
 
 export function AgmSeparatorStructuredData({ lang }: { lang: SiteLocale }) {
-  const current = seoContent("agmSeparator", lang, agmSeparatorSeo[lang]);
+  const current = seoContent("agmSeparator", lang, pageSeo(agmSeparatorSeo, lang));
   const url = `${SITE_URL}${current.path}`;
   const homePath = localeHomePaths[lang];
   const data = {
@@ -2980,7 +3031,7 @@ export function AgmSeparatorStructuredData({ lang }: { lang: SiteLocale }) {
 }
 
 export function AgmSeparatorRollsStructuredData({ lang }: { lang: SiteLocale }) {
-  const current = seoContent("agmSeparatorRolls", lang, agmSeparatorRollsSeo[lang]);
+  const current = seoContent("agmSeparatorRolls", lang, pageSeo(agmSeparatorRollsSeo, lang));
   const url = `${SITE_URL}${current.path}`;
   const homePath = localeHomePaths[lang];
   const data = {
@@ -3022,7 +3073,7 @@ export function AgmSeparatorRollsStructuredData({ lang }: { lang: SiteLocale }) 
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
-        itemListElement: current.breadcrumbs.map((name, index) => ({
+        itemListElement: current.breadcrumbs.map((name: string, index: number) => ({
           "@type": "ListItem",
           position: index + 1,
           name,
@@ -3041,7 +3092,7 @@ export function AgmSeparatorRollsStructuredData({ lang }: { lang: SiteLocale }) 
 }
 
 export function AgmSeparatorSheetsStructuredData({ lang }: { lang: SiteLocale }) {
-  const current = seoContent("agmSeparatorSheets", lang, agmSeparatorSheetsSeo[lang]);
+  const current = seoContent("agmSeparatorSheets", lang, pageSeo(agmSeparatorSheetsSeo, lang));
   const url = `${SITE_URL}${current.path}`;
   const homePath = localeHomePaths[lang];
   const data = {
@@ -3083,7 +3134,7 @@ export function AgmSeparatorSheetsStructuredData({ lang }: { lang: SiteLocale })
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
-        itemListElement: current.breadcrumbs.map((name, index) => ({
+        itemListElement: current.breadcrumbs.map((name: string, index: number) => ({
           "@type": "ListItem",
           position: index + 1,
           name,
@@ -3109,7 +3160,7 @@ export function GlassFiberThermalInsulationPaperStructuredData({
   const current = seoContent(
     "glassFiberThermalInsulationPaper",
     lang,
-    thermalInsulationPaperSeo[lang]
+    pageSeo(thermalInsulationPaperSeo, lang)
   );
   const url = `${SITE_URL}${current.path}`;
   const homePath = localeHomePaths[lang];
@@ -3185,7 +3236,7 @@ export function GlassFiberThermalInsulationPaperStructuredData({
 }
 
 export function AgmSeparatorTestingStructuredData({ lang }: { lang: SiteLocale }) {
-  const current = seoContent("agmSeparatorTesting", lang, agmSeparatorTestingSeo[lang]);
+  const current = seoContent("agmSeparatorTesting", lang, pageSeo(agmSeparatorTestingSeo, lang));
   const url = `${SITE_URL}${current.path}`;
   const homePath = localeHomePaths[lang];
   const data = {
@@ -3227,7 +3278,7 @@ export function AgmSeparatorTestingStructuredData({ lang }: { lang: SiteLocale }
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
-        itemListElement: current.breadcrumbs.map((name, index) => ({
+        itemListElement: current.breadcrumbs.map((name: string, index: number) => ({
           "@type": "ListItem",
           position: index + 1,
           name,
@@ -3256,7 +3307,7 @@ export function AgmSeparatorVrlaApplicationStructuredData({
       current={seoContent(
         "agmSeparatorVrlaApplication",
         lang,
-        agmSeparatorVrlaApplicationSeo[lang]
+        pageSeo(agmSeparatorVrlaApplicationSeo, lang)
       )}
     />
   );
@@ -3339,7 +3390,7 @@ export function AgmSeparatorUpsApplicationStructuredData({
       current={seoContent(
         "agmSeparatorUpsApplication",
         lang,
-        agmSeparatorUpsApplicationSeo[lang]
+        pageSeo(agmSeparatorUpsApplicationSeo, lang)
       )}
     />
   );
@@ -3356,7 +3407,7 @@ export function AgmSeparatorMotorcycleApplicationStructuredData({
       current={seoContent(
         "agmSeparatorMotorcycleApplication",
         lang,
-        agmSeparatorMotorcycleApplicationSeo[lang]
+        pageSeo(agmSeparatorMotorcycleApplicationSeo, lang)
       )}
     />
   );
@@ -3373,7 +3424,7 @@ export function AgmSeparatorEnergyStorageApplicationStructuredData({
       current={seoContent(
         "agmSeparatorEnergyStorageApplication",
         lang,
-        agmSeparatorEnergyStorageApplicationSeo[lang]
+        pageSeo(agmSeparatorEnergyStorageApplicationSeo, lang)
       )}
     />
   );

@@ -86,7 +86,7 @@ function formatDate(date: string, lang: SiteLocale) {
 
   const dateLocales: Record<SiteLocale, string> = {
     en: "en-US", zh: "zh-CN", vi: "vi-VN", ko: "ko-KR",
-    ja: "ja-JP", es: "es", pt: "pt-BR", ru: "ru-RU"
+    ja: "ja-JP", es: "es", pt: "pt-BR", ru: "ru-RU", ar: "ar"
   };
   return new Intl.DateTimeFormat(dateLocales[lang], {
     year: "numeric",

@@ -244,6 +244,25 @@ const pages = [
 ];
 
 const secondaryLocales = ["vi", "ko", "ja", "es", "pt", "ru"];
+const arabicLastmod = "2026-08-23";
+for (const page of pages.filter(({ en }) =>
+  [
+    "/",
+    "/products/agm-separator/",
+    "/products/agm-separator-rolls/",
+    "/products/agm-separator-sheets/",
+    "/products/glass-fiber-thermal-insulation-paper/",
+    "/quality-control/agm-separator-testing/",
+    "/applications/agm-separator-for-vrla-battery/",
+    "/applications/agm-separator-for-ups-battery/",
+    "/applications/agm-separator-for-motorcycle-battery/",
+    "/applications/agm-separator-for-energy-storage-battery/",
+    "/request-agm-separator-sample/"
+  ].includes(en)
+)) {
+  page.ar = `/ar${page.en}`;
+  page.arabicLastmod = arabicLastmod;
+}
 for (const page of pages.filter(
   ({ en }) => en === "/resources/" || en.startsWith("/blog/")
 )) {
@@ -261,6 +280,7 @@ function urlEntry(path, alternate) {
   const isSecondaryLocale = secondaryLocales.some((locale) =>
     path.startsWith(`/${locale}/`)
   );
+  const isArabic = path.startsWith("/ar/");
   const viAlternate = alternate.vi
     ? `\n    <xhtml:link rel="alternate" hreflang="vi-VN" href="${absolute(alternate.vi)}" />`
     : "";
@@ -279,19 +299,22 @@ function urlEntry(path, alternate) {
   const ruAlternate = alternate.ru
     ? `\n    <xhtml:link rel="alternate" hreflang="ru-RU" href="${absolute(alternate.ru)}" />`
     : "";
+  const arAlternate = alternate.ar
+    ? `\n    <xhtml:link rel="alternate" hreflang="ar" href="${absolute(alternate.ar)}" />`
+    : "";
   return `  <url>
     <loc>${absolute(path)}</loc>
-    <lastmod>${isSecondaryLocale && alternate.secondaryLastmod ? alternate.secondaryLastmod : alternate.lastmod}</lastmod>
+    <lastmod>${isArabic && alternate.arabicLastmod ? alternate.arabicLastmod : isSecondaryLocale && alternate.secondaryLastmod ? alternate.secondaryLastmod : alternate.lastmod}</lastmod>
     <changefreq>${alternate.changefreq}</changefreq>
     <priority>${alternate.priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${absolute(alternate.en)}" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="${absolute(alternate.zh)}" />${viAlternate}${koAlternate}${jaAlternate}${esAlternate}${ptAlternate}${ruAlternate}
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="${absolute(alternate.zh)}" />${viAlternate}${koAlternate}${jaAlternate}${esAlternate}${ptAlternate}${ruAlternate}${arAlternate}
     <xhtml:link rel="alternate" hreflang="x-default" href="${absolute(alternate.en)}" />
   </url>`;
 }
 
 const entries = pages.flatMap((page) =>
-  [page.en, page.zh, page.vi, page.ko, page.ja, page.es, page.pt, page.ru]
+  [page.en, page.zh, page.vi, page.ko, page.ja, page.es, page.pt, page.ru, page.ar]
     .filter(Boolean)
     .map((path) => urlEntry(path, page))
 );

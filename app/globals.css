@@ -19,6 +19,19 @@ body {
     "Segoe UI", sans-serif;
 }
 
+html[lang="ar"] body {
+  font-family: Tahoma, Arial, system-ui, sans-serif;
+}
+
+html[dir="rtl"] .rtl-ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .rtl-mirror {
+  transform: scaleX(-1);
+}
+
 * {
   box-sizing: border-box;
 }

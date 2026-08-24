@@ -112,6 +112,15 @@ const sharedMessages = {
       interestedProduct: "AGM 隔板卷材、片材或暂不确定"
     }
   },
+  ar: {
+    copied: "تم النسخ",
+    copyPhone: "نسخ رقم الهاتف",
+    copyEmail: "نسخ البريد الإلكتروني",
+    openWechat: "عرض رمز QR لـ WeChat",
+    backToTop: "العودة إلى الأعلى",
+    fields: { name: "الاسم", contact: "البريد الإلكتروني / واتساب / الهاتف", company: "الشركة", interestedProduct: "المنتج محل الاهتمام", message: "الرسالة" },
+    placeholders: { name: "الاسم الكامل", contact: "البريد الإلكتروني أو واتساب أو الهاتف", company: "اسم الشركة", interestedProduct: "لفائف أو ألواح فواصل AGM أو لم يتحدد بعد" }
+  },
   vi: {
     copied: "Đã sao chép",
     copyPhone: "Sao chép số điện thoại",
@@ -480,6 +489,16 @@ const leadCaptureCopy = {
     emailFallback:
       "Открыто почтовое приложение с подготовленными данными. Отправьте письмо, чтобы завершить запрос.",
     ...productFaqCopy.ru
+  },
+  ar: {
+    heroPrompt: "اتركوا بريدكم الإلكتروني أو واتساب أو رقم الهاتف. سنساعد في مراجعة مواصفات فاصل AGM المناسبة.",
+    formText: "اتركوا بيانات الاتصال أولاً. وسيتابع فريقنا تفاصيل السمك والعرض والكمية والاستخدام.",
+    checklist: ["يكفي الاسم وبيانات الاتصال لبدء النقاش", "نساعد في مراجعة المواصفات المناسبة", "يمكن مناقشة السمك والعرض والكمية لاحقاً"],
+    messagePlaceholder: "اختياري: تطبيق البطارية أو الكمية التقديرية أو احتياجات العينة أو سؤال تقني",
+    required: "يرجى إدخال الاسم وبيانات الاتصال قبل الإرسال.",
+    success: "شكراً لكم. سنتواصل لتأكيد متطلبات فاصل AGM.",
+    emailFallback: "تم فتح برنامج البريد الإلكتروني مع بيانات الاتصال. أرسلوا الرسالة لإكمال الاستفسار.",
+    ...productFaqCopy.ar
   }
 } as const;
 
@@ -531,6 +550,11 @@ const footerCopy = {
       "Производитель стекловолоконных AGM-сепараторов для производителей свинцово-кислотных аккумуляторов и торговых партнеров.",
     wechat: "Официальный аккаунт WeChat",
     mobile: "Мобильная версия сайта"
+  },
+  ar: {
+    description: "شركة مصنّعة لفواصل AGM من الألياف الزجاجية لخدمة منتجي بطاريات الرصاص الحمضية وشركاء التجارة حول العالم.",
+    wechat: "حساب WeChat الرسمي",
+    mobile: "موقع الجوال"
   }
 } as const;
 
@@ -4174,6 +4198,101 @@ const additionalMotorcycleContent = Object.fromEntries(
   ])
 ) as Record<AdditionalMotorcycleLocale, ProductContent>;
 
+const arabicPageText: Record<
+  Exclude<ProductPageKind, "glassFiberThermalInsulationPaper">,
+  { eyebrow: string; title: string; subtitle: string; form: string; application: string }
+> = {
+  agmSeparator: { eyebrow: "فواصل AGM لبطاريات VRLA", title: "فاصل AGM من الألياف الزجاجية لبطاريات VRLA", subtitle: "لفائف وألواح من فاصل AGM من الألياف الزجاجية لمناقشة بطاريات الرصاص الحمضية VRLA ومطابقة المواصفات.", form: "لفائف وألواح فاصل AGM", application: "بطاريات الرصاص الحمضية VRLA" },
+  agmSeparatorRolls: { eyebrow: "لفائف فاصل AGM", title: "لفائف فاصل AGM لخطوط إنتاج البطاريات", subtitle: "مادة AGM من الألياف الزجاجية في لفائف للقص الطولي والتحويل الداخلي وإنتاج بطاريات VRLA.", form: "اللفائف النهائية والإنتاج والتعبئة", application: "إنتاج البطاريات والقص المستمر" },
+  agmSeparatorSheets: { eyebrow: "ألواح فاصل AGM", title: "ألواح فاصل AGM مقصوصة لتجميع بطاريات VRLA", subtitle: "ألواح AGM من الألياف الزجاجية بمقاسات متفق عليها لتقييم العينات وتجميع البطاريات.", form: "الألواح المقصوصة والحواف والتعبئة", application: "تجميع بطاريات VRLA" },
+  agmSeparatorTesting: { eyebrow: "الاختبار ومراقبة الجودة", title: "اختبار ومراقبة جودة فاصل AGM", subtitle: "تتم مراجعة السمك والوزن المساحي وامتصاص الحمض والمقاومة الكهربائية والمظهر وفق متطلبات العميل.", form: "عمليات مراقبة الجودة", application: "بنود الاختبار المتفق عليها" },
+  agmSeparatorVrlaApplication: { eyebrow: "تطبيق بطاريات VRLA", title: "فاصل AGM لبطاريات الرصاص الحمضية VRLA", subtitle: "مراجعة مواصفات فاصل AGM وفق بنية البطارية والألواح وعملية التجميع وظروف الاستخدام.", form: "لفائف وألواح لتطبيقات VRLA", application: "تطبيقات بطاريات VRLA" },
+  agmSeparatorUpsApplication: { eyebrow: "تطبيق بطاريات UPS", title: "فاصل AGM لبطاريات UPS VRLA", subtitle: "مناقشة فاصل AGM لأنظمة UPS والطاقة الاحتياطية وبطاريات VRLA في وضع الاستعداد.", form: "لفائف وألواح لإنتاج بطاريات UPS", application: "UPS والطاقة الاحتياطية" },
+  agmSeparatorMotorcycleApplication: { eyebrow: "تطبيق بطاريات الدراجات النارية", title: "فاصل AGM لبطاريات بدء تشغيل الدراجات النارية", subtitle: "مراجعة اللفائف والألواح ومواصفات العينات لبطاريات VRLA المدمجة للدراجات النارية.", form: "لفائف وألواح للتجميع المدمج", application: "بطاريات بدء تشغيل الدراجات النارية" },
+  agmSeparatorEnergyStorageApplication: { eyebrow: "تطبيق تخزين الطاقة", title: "فاصل AGM لبطاريات الرصاص الحمضية لتخزين الطاقة", subtitle: "مناقشة فاصل AGM لبطاريات تخزين الطاقة والطاقة الاحتياطية وبطاريات VRLA في وضع الاستعداد.", form: "فواصل لمشاريع التخزين والطاقة الاحتياطية", application: "تخزين الطاقة والطاقة الاحتياطية" }
+};
+
+function arabicProductContent(
+  page: Exclude<ProductPageKind, "glassFiberThermalInsulationPaper">
+): ProductContent {
+  const base = content.agmSeparator.en;
+  const t = arabicPageText[page];
+  const related: LinkItem[] = [
+    ["فاصل AGM لبطاريات VRLA", "/ar/products/agm-separator/"],
+    ["لفائف فاصل AGM", "/ar/products/agm-separator-rolls/"],
+    ["اختبار فاصل AGM", "/ar/quality-control/agm-separator-testing/"],
+    ["طلب عينة ومطابقة المواصفات", "/ar/request-agm-separator-sample/"]
+  ];
+  const formImages = base.forms.items;
+
+  return {
+    homePath: "/ar/",
+    languagePath: "/products/agm-separator/",
+    quote: "طلب عينة",
+    hero: {
+      eyebrow: t.eyebrow,
+      title: t.title,
+      subtitle: t.subtitle,
+      primary: "طلب عينة ومطابقة المواصفات",
+      secondary: "إرسال متطلباتكم",
+      proof: ["لفائف وألواح", "مراجعة المواصفات", "دعم تقييم العينات"],
+      image: { ...base.hero.image, alt: t.title }
+    },
+    overview: {
+      eyebrow: "مراجعة التطبيق",
+      title: `فاصل AGM يحتاج إلى مطابقة مع ${t.application}`,
+      paragraphs: [
+        "يعمل فاصل AGM بين الألواح الموجبة والسالبة للمساعدة في الاحتفاظ بالإلكتروليت والحد من التلامس المباشر داخل بطارية VRLA.",
+        "تتم مراجعة السمك والعرض والوزن المساحي وامتصاص الحمض والمقاومة الكهربائية وشكل التوريد مع تصميم البطارية وطريقة التجميع لدى العميل."
+      ]
+    },
+    parameters: {
+      eyebrow: "تأكيد المواصفات",
+      title: "ابدأوا من بنية البطارية وعملية التجميع",
+      text: "المواصفات النهائية تُراجع مع تصميم الألواح وعينة البطارية وطريقة الاختبار وشكل اللفائف أو الألواح المطلوب.",
+      items: [["السمك والعرض", "يُراجعان مع الفجوة بين الألواح وظروف الضغط وطريقة التجميع."], ["الوزن المساحي والبنية", "تُناقش مع احتياجات التعامل والأداء وفق طريقة الاختبار المتفق عليها."], ["امتصاص الحمض والمقاومة", "تُراجع مع تطبيق البطارية ومتطلبات العميل."], ["شكل المنتج والتعبئة", "يُؤكد شكل اللفافة أو اللوح والمقاسات والتعبئة قبل العينة أو الإنتاج."]]
+    },
+    forms: {
+      eyebrow: "أشكال التوريد",
+      title: t.form,
+      items: formImages.map(([,,src,,width,height], index) => [
+        ["لفائف فاصل AGM", "ألواح فاصل AGM", "تأكيد العينة", "التعبئة والتسليم"][index] || "فاصل AGM",
+        ["لفائف لخطوط الإنتاج والقص وفق التصميم.", "ألواح مقصوصة لتجميع البطاريات وتقييم العينات.", "تأكيد التطبيق والمقاسات وبنود الاختبار قبل التوريد.", "مراجعة العلامات والتعبئة وحماية المنتج قبل الشحن."][index] || "مادة AGM من الألياف الزجاجية لتطبيقات بطاريات VRLA.",
+        src,
+        t.title,
+        width,
+        height
+      ])
+    },
+    applications: {
+      eyebrow: "مجالات التطبيق",
+      title: "تطبيقات بطاريات يمكن مراجعتها",
+      items: ["بطاريات UPS والطاقة الاحتياطية", "بطاريات الاتصالات", "بطاريات الدراجات النارية", "بطاريات تخزين الطاقة", "بطاريات بدء التشغيل", "بطاريات VRLA أخرى"]
+    },
+    quality: {
+      eyebrow: "مراجعة الجودة",
+      title: "يُؤكد الأداء وفق الاختبارات المتفق عليها",
+      text: "تُراجع بنود الاختبار وقيمها المستهدفة وطريقة القياس ومعايير القبول مع العميل قبل العينة أو طلب الإنتاج.",
+      cards: [["فحص الأبعاد", "السمك والعرض ومقاس اللوح وفق طريقة متفق عليها."], ["فحص خصائص المادة", "الوزن المساحي وامتصاص الحمض والمقاومة وفق التطبيق ومتطلبات الاختبار."], ["اتساق التوريد", "تُراجع متطلبات اللفائف أو الألواح والتعبئة والتوريد على دفعات."]]
+    },
+    related: { eyebrow: "صفحات ذات صلة", title: "تابعوا مراجعة المنتج والعينة", items: related },
+    inquiry: {
+      eyebrow: "ابدأوا النقاش",
+      title: "أرسلوا متطلبات فاصل AGM",
+      text: "شاركوا تطبيق البطارية والسمك والعرض وشكل المنتج والعينة أو متطلبات الاختبار المتاحة لمراجعة أكثر فائدة.",
+      checklist: ["تطبيق البطارية", "السمك والعرض أو مقاس اللوح", "لفائف أو ألواح", "العينة والاختبار والتعبئة"],
+      placeholder: "تطبيق البطارية والسمك والعرض ومقاس اللوح وشكل المنتج واحتياجات العينة أو الاختبار",
+      submit: "إرسال المتطلبات",
+      submitting: "جارٍ الإرسال...",
+      required: "يرجى إدخال الاسم وبيانات الاتصال.",
+      success: "شكراً لكم. سنتواصل لتأكيد المتطلبات.",
+      failure: "تعذر إرسال الطلب حالياً. يرجى المحاولة لاحقاً.",
+      emailFallback: "تم فتح برنامج البريد الإلكتروني. أرسلوا الرسالة المعدة لإكمال الاستفسار."
+    },
+    footer: footerCopy.ar
+  };
+}
+
 function asset(path: string) {
   return `${basePath}${path}`;
 }
@@ -4187,7 +4306,8 @@ function localeText(
   ja = en,
   es = en,
   pt = en,
-  ru = en
+  ru = en,
+  ar = en
 ) {
   return lang === "zh"
     ? zh
@@ -4203,6 +4323,8 @@ function localeText(
               ? pt
               : lang === "ru"
                 ? ru
+                : lang === "ar"
+                  ? ar
                 : en;
 }
 
@@ -4361,6 +4483,7 @@ export function ProductPage({
   const localizedDetail =
     lang !== "en" &&
     lang !== "zh" &&
+    lang !== "ar" &&
     (page === "agmSeparatorRolls" ||
       page === "agmSeparatorSheets" ||
       page === "agmSeparatorTesting")
@@ -4369,6 +4492,7 @@ export function ProductPage({
   const localizedApplication =
     lang !== "en" &&
     lang !== "zh" &&
+    lang !== "ar" &&
     (page === "agmSeparatorVrlaApplication" ||
       page === "agmSeparatorUpsApplication" ||
       page === "agmSeparatorEnergyStorageApplication")
@@ -4380,7 +4504,9 @@ export function ProductPage({
       : undefined) ??
     localizedDetail ??
     localizedApplication ??
-    (lang === "vi"
+    (lang === "ar"
+      ? arabicProductContent(agmPage)
+      : lang === "vi"
       ? viContent[agmPage]
       : lang === "ko"
         ? koContent[agmPage] ??
@@ -4420,7 +4546,9 @@ export function ProductPage({
             ? "AGM 분리막 롤"
             : lang === "ja"
               ? "AGMセパレーター ロール"
-          : "AGM separator rolls"
+          : lang === "ar"
+            ? "لفائف فاصل AGM"
+            : "AGM separator rolls"
       : page === "agmSeparatorSheets"
         ? lang === "zh"
           ? "AGM 隔板片材"
@@ -4430,7 +4558,9 @@ export function ProductPage({
               ? "AGM 분리막 시트"
               : lang === "ja"
                 ? "AGMセパレーター シート"
-            : "AGM separator sheets"
+            : lang === "ar"
+              ? "ألواح فاصل AGM"
+              : "AGM separator sheets"
         : lang === "zh"
           ? "AGM 隔板样品与规格匹配"
           : lang === "vi"
@@ -4445,6 +4575,8 @@ export function ProductPage({
                     ? "Amostra de separador AGM e análise de especificações"
                     : lang === "ru"
                       ? "Образец AGM-сепаратора и проверка характеристик"
+                      : lang === "ar"
+                        ? "عينة فاصل AGM ومطابقة المواصفات"
             : "AGM separator sample and specification match";
 
   return (

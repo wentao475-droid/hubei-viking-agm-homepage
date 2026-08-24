@@ -428,6 +428,21 @@ const copy = {
     phone: "Позвонить или отправить сообщение",
     subject:
       "Запрос образца и проверка характеристик AGM-сепаратора - Viking AGM"
+  },
+  ar: {
+    fields: { name: "الاسم", contact: "البريد الإلكتروني / واتساب / الهاتف", company: "الشركة", country: "الدولة / المنطقة", application: "تطبيق البطارية", interestedProduct: "شكل المنتج", message: "ملاحظات المواصفات أو العينة" },
+    placeholders: {
+      name: "الاسم الكامل", contact: "البريد الإلكتروني أو واتساب أو رقم الهاتف", company: "اسم الشركة (اختياري)", country: "الدولة أو المنطقة (اختياري)", application: "اختر تطبيق البطارية (اختياري)", interestedProduct: "اختر شكل المنتج (اختياري)", message: "اختياري: السمك أو العرض أو مقاس اللوح أو الكمية أو متطلبات العينة أو الاختبار"
+    },
+    options: {
+      applications: [["UPS / standby power", "UPS / طاقة احتياطية"], ["Energy storage battery", "بطارية تخزين الطاقة"], ["Motorcycle battery", "بطارية بدء تشغيل الدراجة النارية"], ["Automotive starting battery", "بطارية بدء تشغيل السيارات"], ["Telecom backup power", "طاقة احتياطية للاتصالات"], ["E-bike battery", "بطارية دراجة كهربائية"], ["Other VRLA lead-acid battery", "بطارية رصاصية حمضية VRLA أخرى"], ["Not sure", "غير محدد بعد"]],
+      productFormats: [["AGM separator rolls", "لفائف فاصل AGM"], ["AGM separator sheets", "ألواح فاصل AGM"], ["Rolls and sheets", "لفائف وألواح"], ["Not sure", "غير محدد بعد"]]
+    },
+    submit: "طلب عينة ومطابقة المواصفات", submitting: "جارٍ الإرسال...", required: "يرجى إدخال الاسم وطريقة اتصال واحدة على الأقل.",
+    success: "شكراً لكم. تم حفظ طلبكم وسيتواصل فريقنا لتأكيد الخطوة التالية.",
+    failure: "تعذر إرسال النموذج عبر الإنترنت. يرجى التواصل معنا مباشرة بالبريد الإلكتروني أو الهاتف.",
+    emailFallback: "تم فتح برنامج البريد الإلكتروني. أرسلوا الرسالة المعدة لإكمال الطلب.",
+    email: "راسلونا بالبريد", phone: "اتصال أو رسالة", subject: "طلب عينة ومطابقة مواصفات فاصل AGM - Viking AGM"
   }
 } as const;
 
@@ -565,6 +580,7 @@ export function InquiryForm({
           label={t.fields.contact}
           placeholder={t.placeholders.contact}
           required
+          direction="ltr"
         />
         <Field
           name="company"
@@ -596,6 +612,7 @@ export function InquiryForm({
             name="message"
             rows={5}
             placeholder={messagePlaceholder || t.placeholders.message}
+            dir="auto"
             className="mt-2 w-full resize-none rounded-md border border-line bg-frost px-4 py-3 text-sm outline-none transition placeholder:text-steel/70 focus:border-signal focus:bg-white"
           />
         </label>
@@ -651,13 +668,15 @@ function Field({
   label,
   placeholder,
   defaultValue,
-  required = false
+  required = false,
+  direction = "auto"
 }: {
   name: string;
   label: string;
   placeholder: string;
   defaultValue?: string;
   required?: boolean;
+  direction?: "auto" | "ltr";
 }) {
   return (
     <label>
@@ -668,6 +687,7 @@ function Field({
         required={required}
         defaultValue={defaultValue}
         placeholder={placeholder}
+        dir={direction}
         className="mt-2 w-full rounded-md border border-line bg-frost px-4 py-3 text-sm outline-none transition placeholder:text-steel/70 focus:border-signal focus:bg-white"
       />
     </label>
@@ -693,6 +713,7 @@ function SelectField({
       <select
         name={name}
         defaultValue={defaultValue}
+        dir="auto"
         className="mt-2 w-full cursor-pointer rounded-md border border-line bg-frost px-4 py-3 text-sm text-ink outline-none transition focus:border-signal focus:bg-white"
       >
         <option value="">{placeholder}</option>

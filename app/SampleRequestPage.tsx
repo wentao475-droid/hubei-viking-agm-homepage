@@ -658,12 +658,31 @@ const pageCopy = {
   }
 } as const;
 
+const arabicPageCopy = {
+  ...pageCopy.en,
+  homePath: "/ar/",
+  languagePath: "/request-agm-separator-sample/",
+  eyebrow: "طلب عينة ومراجعة المواصفات",
+  title: "اطلب عينة من فاصل AGM ومطابقة المواصفات",
+  subtitle: "شارك تطبيق البطارية والمعلومات المتاحة عن الفاصل. يمكن لفريق Viking AGM مراجعة اتجاه اللفائف أو الألواح المناسب قبل مناقشة العينة أو العرض.",
+  primary: "ابدأ طلب العينة",
+  secondary: "تحميل ملف القدرات الفنية",
+  proof: ["لفائف وألواح", "مناقشة حسب التطبيق", "متطلبات الجودة والتعبئة"],
+  requirements: { ...pageCopy.en.requirements, eyebrow: "قائمة المعلومات", title: "ما الذي يساعد في المراجعة الأولية", text: "لا يلزم إنهاء كل المعايير قبل التواصل. أرسل المعلومات المتاحة وحدد النقاط قيد المراجعة." },
+  process: { ...pageCopy.en.process, eyebrow: "ما الخطوة التالية", title: "مسار عملي من الاستفسار إلى مناقشة العينة" },
+  evidence: { ...pageCopy.en.evidence, eyebrow: "دليل التصنيع", title: "راجع الإنتاج والفحص والاستعداد للتسليم" },
+  download: { ...pageCopy.en.download, eyebrow: "مرجع للمشتري", title: "حمّل ملف القدرات الفنية لـ Viking AGM", text: "ملف بالإنجليزية والصينية عن أشكال المنتجات والتطبيقات والفحص والتعبئة ومعلومات مراجعة المواصفات.", button: "تحميل PDF بالإنجليزية/الصينية" },
+  faq: { eyebrow: "الأسئلة المتكررة", title: "أسئلة قبل طلب العينة" },
+  form: { ...pageCopy.en.form, eyebrow: "ابدأ المناقشة", title: "أرسل المعلومات المتاحة", text: "يكفي الاسم ووسيلة الاتصال للبدء. التطبيق والشكل والأبعاد تساعد على إعداد رد أكثر دقة.", hints: ["تطبيق البطارية", "لفائف أو ألواح", "السماكة أو العرض أو حجم اللوح", "متطلبات العينة أو الاختبار أو التعبئة"], message: "اختياري: التطبيق والسماكة المستهدفة وعرض اللفافة أو حجم اللوح وكمية العينة والمتطلبات الفنية أو التعبئة" },
+  footer: "تصنيع فواصل AGM من الألياف الزجاجية ومراجعة الجودة وتنسيق التوريد لبطاريات الرصاص الحمضية."
+} as const;
+
 function asset(path: string) {
   return `${basePath}${path}`;
 }
 
 export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
-  const t = pageCopy[lang];
+  const t = (lang === "ar" ? arabicPageCopy : pageCopy[lang as Exclude<SiteLocale, "ar">]) as typeof pageCopy.en;
 
   return (
     <main className="min-h-screen overflow-hidden bg-frost text-ink">

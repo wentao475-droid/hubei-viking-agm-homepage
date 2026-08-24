@@ -1,5 +1,5 @@
 export type Lang = "en" | "zh";
-export type SiteLocale = Lang | "vi" | "ko" | "ja" | "es" | "pt" | "ru";
+export type SiteLocale = Lang | "vi" | "ko" | "ja" | "es" | "pt" | "ru" | "ar";
 
 export const localeHomePaths: Record<SiteLocale, string> = {
   en: "/",
@@ -9,7 +9,8 @@ export const localeHomePaths: Record<SiteLocale, string> = {
   ja: "/ja/",
   es: "/es/",
   pt: "/pt/",
-  ru: "/ru/"
+  ru: "/ru/",
+  ar: "/ar/"
 };
 
 const synchronizedResourcePaths = [
@@ -28,7 +29,7 @@ const synchronizedResourcePaths = [
   "blog/agm-separator-batch-consistency-and-process-control"
 ] as const;
 
-function allLocalePaths(suffix: string): Record<SiteLocale, string> {
+function allLocalePaths(suffix: string): Partial<Record<SiteLocale, string>> {
   return {
     en: `/${suffix}/`,
     zh: `/zh/${suffix}/`,
@@ -41,6 +42,13 @@ function allLocalePaths(suffix: string): Record<SiteLocale, string> {
   };
 }
 
+function allCoreLocalePaths(suffix: string): Record<SiteLocale, string> {
+  return {
+    ...allLocalePaths(suffix),
+    ar: `/ar/${suffix}/`
+  } as Record<SiteLocale, string>;
+}
+
 export const localizedRouteGroups = [
   localeHomePaths,
   {
@@ -51,7 +59,8 @@ export const localizedRouteGroups = [
     ja: "/ja/products/agm-separator/",
     es: "/es/products/agm-separator/",
     pt: "/pt/products/agm-separator/",
-    ru: "/ru/products/agm-separator/"
+    ru: "/ru/products/agm-separator/",
+    ar: "/ar/products/agm-separator/"
   },
   {
     en: "/products/agm-separator-rolls/",
@@ -61,7 +70,8 @@ export const localizedRouteGroups = [
     ja: "/ja/products/agm-separator-rolls/",
     es: "/es/products/agm-separator-rolls/",
     pt: "/pt/products/agm-separator-rolls/",
-    ru: "/ru/products/agm-separator-rolls/"
+    ru: "/ru/products/agm-separator-rolls/",
+    ar: "/ar/products/agm-separator-rolls/"
   },
   {
     en: "/products/agm-separator-sheets/",
@@ -71,9 +81,10 @@ export const localizedRouteGroups = [
     ja: "/ja/products/agm-separator-sheets/",
     es: "/es/products/agm-separator-sheets/",
     pt: "/pt/products/agm-separator-sheets/",
-    ru: "/ru/products/agm-separator-sheets/"
+    ru: "/ru/products/agm-separator-sheets/",
+    ar: "/ar/products/agm-separator-sheets/"
   },
-  allLocalePaths("products/glass-fiber-thermal-insulation-paper"),
+  allCoreLocalePaths("products/glass-fiber-thermal-insulation-paper"),
   {
     en: "/quality-control/agm-separator-testing/",
     zh: "/zh/quality-control/agm-separator-testing/",
@@ -82,7 +93,8 @@ export const localizedRouteGroups = [
     ja: "/ja/quality-control/agm-separator-testing/",
     es: "/es/quality-control/agm-separator-testing/",
     pt: "/pt/quality-control/agm-separator-testing/",
-    ru: "/ru/quality-control/agm-separator-testing/"
+    ru: "/ru/quality-control/agm-separator-testing/",
+    ar: "/ar/quality-control/agm-separator-testing/"
   },
   {
     en: "/applications/agm-separator-for-vrla-battery/",
@@ -92,7 +104,8 @@ export const localizedRouteGroups = [
     ja: "/ja/applications/agm-separator-for-vrla-battery/",
     es: "/es/applications/agm-separator-for-vrla-battery/",
     pt: "/pt/applications/agm-separator-for-vrla-battery/",
-    ru: "/ru/applications/agm-separator-for-vrla-battery/"
+    ru: "/ru/applications/agm-separator-for-vrla-battery/",
+    ar: "/ar/applications/agm-separator-for-vrla-battery/"
   },
   {
     en: "/applications/agm-separator-for-ups-battery/",
@@ -102,7 +115,8 @@ export const localizedRouteGroups = [
     ja: "/ja/applications/agm-separator-for-ups-battery/",
     es: "/es/applications/agm-separator-for-ups-battery/",
     pt: "/pt/applications/agm-separator-for-ups-battery/",
-    ru: "/ru/applications/agm-separator-for-ups-battery/"
+    ru: "/ru/applications/agm-separator-for-ups-battery/",
+    ar: "/ar/applications/agm-separator-for-ups-battery/"
   },
   {
     en: "/applications/agm-separator-for-motorcycle-battery/",
@@ -112,7 +126,8 @@ export const localizedRouteGroups = [
     ja: "/ja/applications/agm-separator-for-motorcycle-battery/",
     es: "/es/applications/agm-separator-for-motorcycle-battery/",
     pt: "/pt/applications/agm-separator-for-motorcycle-battery/",
-    ru: "/ru/applications/agm-separator-for-motorcycle-battery/"
+    ru: "/ru/applications/agm-separator-for-motorcycle-battery/",
+    ar: "/ar/applications/agm-separator-for-motorcycle-battery/"
   },
   {
     en: "/applications/agm-separator-for-energy-storage-battery/",
@@ -122,7 +137,8 @@ export const localizedRouteGroups = [
     ja: "/ja/applications/agm-separator-for-energy-storage-battery/",
     es: "/es/applications/agm-separator-for-energy-storage-battery/",
     pt: "/pt/applications/agm-separator-for-energy-storage-battery/",
-    ru: "/ru/applications/agm-separator-for-energy-storage-battery/"
+    ru: "/ru/applications/agm-separator-for-energy-storage-battery/",
+    ar: "/ar/applications/agm-separator-for-energy-storage-battery/"
   },
   {
     en: "/request-agm-separator-sample/",
@@ -132,7 +148,8 @@ export const localizedRouteGroups = [
     ja: "/ja/request-agm-separator-sample/",
     es: "/es/request-agm-separator-sample/",
     pt: "/pt/request-agm-separator-sample/",
-    ru: "/ru/request-agm-separator-sample/"
+    ru: "/ru/request-agm-separator-sample/",
+    ar: "/ar/request-agm-separator-sample/"
   },
   ...synchronizedResourcePaths.map(allLocalePaths)
 ] satisfies Array<Partial<Record<SiteLocale, string>>>;

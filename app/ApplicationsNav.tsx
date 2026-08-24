@@ -228,6 +228,13 @@ const applicationsNavItems = {
       description: "Согласование для систем хранения энергии и резервного питания.",
       href: "/ru/applications/agm-separator-for-energy-storage-battery/"
     }
+  ],
+  ar: [
+    { title: "نظرة عامة على التطبيقات", description: "تطبيقات بطاريات الرصاص الحمضية التي تستخدم فاصل AGM.", href: "/ar/#applications" },
+    { title: "فاصل AGM لبطاريات VRLA", description: "مراجعة مواصفات بطاريات الرصاص الحمضية VRLA المغلقة.", href: "/ar/applications/agm-separator-for-vrla-battery/" },
+    { title: "فاصل AGM لبطاريات UPS", description: "مراجعة المواصفات لبطاريات UPS والطاقة الاحتياطية.", href: "/ar/applications/agm-separator-for-ups-battery/" },
+    { title: "فاصل AGM لبطاريات الدراجات النارية", description: "مراجعة الأبعاد والأشكال لبطاريات بدء التشغيل المدمجة.", href: "/ar/applications/agm-separator-for-motorcycle-battery/" },
+    { title: "فاصل AGM لتخزين الطاقة", description: "مراجعة المواصفات لبطاريات تخزين الطاقة والطاقة الاحتياطية.", href: "/ar/applications/agm-separator-for-energy-storage-battery/" }
   ]
 } as const;
 
@@ -240,6 +247,8 @@ const applicationsNavEyebrow = {
   es: "Aplicación",
   pt: "Aplicação",
   ru: "Применение"
+  ,
+  ar: "التطبيقات"
 } as const;
 
 function asset(path: string) {

@@ -45,6 +45,11 @@ const copy = {
     heading: "Официальные каналы",
     tiktok: "Открыть страницу Viking AGM в TikTok",
     linkedin: "Открыть страницу Viking AGM в LinkedIn"
+  },
+  ar: {
+    heading: "تابعونا",
+    tiktok: "زيارة Viking AGM على TikTok",
+    linkedin: "زيارة Viking AGM على LinkedIn"
   }
 } as const;
 

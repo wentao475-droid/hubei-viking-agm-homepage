@@ -24,11 +24,13 @@ for (const file of walk(outDir)) {
               ? "pt-BR"
               : outputPath.startsWith("ru/")
                 ? "ru"
+                : outputPath.startsWith("ar/")
+                  ? "ar"
                 : "en";
   const source = readFileSync(file, "utf8");
   const result = source.replace(
     /<html\s+lang="[^"]*"/,
-    `<html lang="${expectedLanguage}"`
+    `<html lang="${expectedLanguage}"${expectedLanguage === "ar" ? " dir=\"rtl\"" : ""}`
   );
 
   if (result !== source) {

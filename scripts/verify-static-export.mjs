@@ -29,7 +29,7 @@ const synchronizedDetailFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/products/agm-separator-sheets/index.html`,
   `${locale}/quality-control/agm-separator-testing/index.html`
 ]);
-const thermalInsulationPaperFiles = ["", "zh", ...synchronizedLocaleCodes].map(
+const thermalInsulationPaperFiles = ["", "zh", ...synchronizedLocaleCodes, "ar"].map(
   (locale) =>
     `${locale ? `${locale}/` : ""}products/glass-fiber-thermal-insulation-paper/index.html`
 );
@@ -73,6 +73,17 @@ const requiredFiles = [
   "ru/request-agm-separator-sample/index.html",
   "ru/products/agm-separator/index.html",
   "ru/applications/agm-separator-for-motorcycle-battery/index.html",
+  "ar/index.html",
+  "ar/products/agm-separator/index.html",
+  "ar/products/agm-separator-rolls/index.html",
+  "ar/products/agm-separator-sheets/index.html",
+  "ar/products/glass-fiber-thermal-insulation-paper/index.html",
+  "ar/quality-control/agm-separator-testing/index.html",
+  "ar/applications/agm-separator-for-vrla-battery/index.html",
+  "ar/applications/agm-separator-for-ups-battery/index.html",
+  "ar/applications/agm-separator-for-motorcycle-battery/index.html",
+  "ar/applications/agm-separator-for-energy-storage-battery/index.html",
+  "ar/request-agm-separator-sample/index.html",
   "applications/agm-separator-for-ups-battery/index.html",
   "zh/applications/agm-separator-for-ups-battery/index.html",
   "applications/agm-separator-for-motorcycle-battery/index.html",
@@ -190,6 +201,9 @@ const ruMotorcycleHtml = readOutFile(
 const ruSampleHtml = readOutFile(
   "ru/request-agm-separator-sample/index.html"
 );
+const arHtml = readOutFile("ar/index.html");
+const arProductHtml = readOutFile("ar/products/agm-separator/index.html");
+const arSampleHtml = readOutFile("ar/request-agm-separator-sample/index.html");
 const synchronizedDetailHtml = Object.fromEntries(
   synchronizedLocaleCodes.map((locale) => [
     locale,
@@ -265,7 +279,8 @@ const thermalInsulationPagesComplete = [
   ["ja", "ja"],
   ["es", "es"],
   ["pt", "pt-BR"],
-  ["ru", "ru"]
+  ["ru", "ru"],
+  ["ar", "ar"]
 ].every(([locale, htmlLang]) => {
   const path = `${locale ? `${locale}/` : ""}products/glass-fiber-thermal-insulation-paper/index.html`;
   const publicPath = `/${locale ? `${locale}/` : ""}products/glass-fiber-thermal-insulation-paper/`;
@@ -282,7 +297,7 @@ const thermalInsulationPagesComplete = [
 });
 
 if (thermalInsulationPagesComplete) {
-  pass("glass fiber thermal insulation paper pages are complete in 8 languages");
+  pass("glass fiber thermal insulation paper pages are complete in 9 languages");
 } else {
   fail("glass fiber thermal insulation paper page validation failed");
 }
@@ -489,6 +504,17 @@ if (ruHtml.includes('<html lang="ru"')) {
   pass("Russian homepage declares lang=ru");
 } else {
   fail("Russian homepage does not declare lang=ru");
+}
+
+if (
+  arHtml.includes('<html lang="ar" dir="rtl"') &&
+  arHtml.includes("https://www.vikingagm.com/ar/") &&
+  arProductHtml.includes("https://www.vikingagm.com/ar/products/agm-separator/") &&
+  arSampleHtml.includes('name="language" value="ar"')
+) {
+  pass("Arabic core pages declare RTL, canonical URLs and form language=ar");
+} else {
+  fail("Arabic core pages are missing RTL, SEO or form language metadata");
 }
 
 const vietnamesePages = [
@@ -946,7 +972,7 @@ if (
   fail("sitemap.xml does not list both public pages");
 }
 
-const applicationLocalePrefixes = ["", "zh", ...synchronizedLocaleCodes];
+const applicationLocalePrefixes = ["", "zh", ...synchronizedLocaleCodes, "ar"];
 const allApplicationSlugs = [
   "agm-separator-for-vrla-battery",
   "agm-separator-for-ups-battery",
@@ -966,10 +992,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 192) {
-  pass("sitemap.xml lists the expected 192 localized public URLs");
+if (sitemapUrls.length === 203) {
+  pass("sitemap.xml lists the expected 203 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 192`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 203`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(

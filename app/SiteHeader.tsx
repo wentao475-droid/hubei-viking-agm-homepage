@@ -104,6 +104,17 @@ const headerCopy = {
     companyName: "Hubei Viking Technology Co., Ltd.",
     menuOpen: "Открыть меню навигации",
     menuClose: "Закрыть меню навигации"
+  },
+  ar: {
+    company: "الشركة",
+    products: "المنتجات",
+    quality: "الجودة",
+    resources: "الموارد",
+    applications: "التطبيقات",
+    contact: "اتصل بنا",
+    companyName: "شركة هوبي فايكينغ للتكنولوجيا المحدودة",
+    menuOpen: "فتح قائمة التنقل",
+    menuClose: "إغلاق قائمة التنقل"
   }
 } as const;
 
@@ -186,7 +197,7 @@ export function SiteHeader({
   const [menuOpen, setMenuOpen] = useState(false);
   const t = headerCopy[lang];
   const homeHref = asset(homePath);
-  const hasResources = true;
+  const hasResources = lang !== "ar";
   const hasApplications = true;
 
   const navItemsBeforeProducts = [[t.company, `${homeHref}#company`]] as const;

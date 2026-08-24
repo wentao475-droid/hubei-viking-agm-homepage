@@ -50,6 +50,11 @@ const localeCopy = {
     short: "RU",
     name: "Русский",
     aria: "Текущий язык — русский. Изменить язык"
+  },
+  ar: {
+    short: "AR",
+    name: "العربية",
+    aria: "اللغة الحالية العربية. تغيير اللغة"
   }
 } as const;
 
@@ -121,7 +126,7 @@ export function LanguageSwitcher({
         <div
           id={menuId}
           role="menu"
-          className="absolute right-0 top-full z-[70] mt-2 max-h-[min(24rem,calc(100vh-5rem))] w-56 overflow-y-auto rounded-md border border-line bg-white p-1.5 shadow-industrial"
+          className="absolute right-0 top-full z-[70] mt-2 max-h-[min(24rem,calc(100vh-5rem))] w-56 overflow-y-auto rounded-md border border-line bg-white p-1.5 shadow-industrial rtl:left-0 rtl:right-auto"
         >
           {(Object.keys(localeCopy) as SiteLocale[]).map((locale) => {
             const item = localeCopy[locale];
@@ -143,6 +148,8 @@ export function LanguageSwitcher({
                           ? "pt-BR"
                           : locale === "ru"
                             ? "ru-RU"
+                            : locale === "ar"
+                              ? "ar"
                             : locale
                 }
                 onClick={() => setOpen(false)}
@@ -169,7 +176,7 @@ export function LanguageSwitcher({
 }
 
 function LocaleIcon({ locale }: { locale: SiteLocale }) {
-  if (locale === "en") {
+  if (locale === "en" || locale === "ar") {
     return (
       <svg
         aria-hidden="true"

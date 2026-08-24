@@ -189,6 +189,12 @@ const productNavItems = {
       description: "Рулоны, листы и резка по размерам для промышленной теплоизоляции.",
       href: "/ru/products/glass-fiber-thermal-insulation-paper/"
     }
+  ],
+  ar: [
+    { title: "فاصل AGM لبطاريات VRLA", description: "لفائف وألواح لتطبيقات بطاريات الرصاص الحمضية VRLA.", href: "/ar/products/agm-separator/" },
+    { title: "لفائف فاصل AGM", description: "توريد لفائف لخطوط البطاريات والقص والتحويل الداخلي.", href: "/ar/products/agm-separator-rolls/" },
+    { title: "ألواح فاصل AGM", description: "ألواح مقصوصة لتجميع بطاريات VRLA وتقييم العينات.", href: "/ar/products/agm-separator-sheets/" },
+    { title: "ورق عزل حراري من الألياف الزجاجية", description: "لفائف وألواح وقطع مخصصة للعزل الحراري الصناعي.", href: "/ar/products/glass-fiber-thermal-insulation-paper/" }
   ]
 } as const;
 
@@ -201,6 +207,8 @@ const productNavEyebrow = {
   es: "Producto",
   pt: "Produto",
   ru: "Продукция"
+  ,
+  ar: "المنتجات"
 } as const;
 
 function asset(path: string) {

@@ -38,6 +38,9 @@ const qualityNavItems = {
   ],
   ru: [
     { title: "Испытания AGM-сепаратора", description: "Контроль толщины, плотности, впитывания кислоты, сопротивления и внешнего вида.", href: "/ru/quality-control/agm-separator-testing/" }
+  ],
+  ar: [
+    { title: "اختبار فاصل AGM", description: "مراجعة السمك والوزن المساحي وامتصاص الحمض والمقاومة وفق المتطلبات المتفق عليها.", href: "/ar/quality-control/agm-separator-testing/" }
   ]
 } as const;
 
@@ -50,6 +53,8 @@ const qualityNavEyebrow = {
   es: "Calidad",
   pt: "Qualidade",
   ru: "Качество"
+  ,
+  ar: "الجودة"
 } as const;
 
 function asset(path: string) {
