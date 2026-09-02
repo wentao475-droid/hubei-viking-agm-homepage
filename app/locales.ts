@@ -151,6 +151,10 @@ export const localizedRouteGroups = [
     ru: "/ru/request-agm-separator-sample/",
     ar: "/ar/request-agm-separator-sample/"
   },
+  {
+    en: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"
+  },
   ...synchronizedResourcePaths.map(allLocalePaths)
 ] satisfies Array<Partial<Record<SiteLocale, string>>>;
 

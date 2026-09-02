@@ -25,7 +25,8 @@ export type BlogArticleKind =
   | "dataCenterBackupPowerAgmSeparator"
   | "earlyChinaLeadAcidBatteryManufacturing"
   | "agmSeparatorPressureRetention"
-  | "agmSeparatorBatchProcessControl";
+  | "agmSeparatorBatchProcessControl"
+  | "agmSeparatorSupplyChain";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -3285,6 +3286,270 @@ const agmSeparatorBatchProcessControlCopy = {
   }
 } as const;
 
+const agmSeparatorSupplyChainReferenceItems: Array<[string, string]> = [
+  [
+    "Changzhou Haixin — public company profile",
+    "https://www.cz-haixin.com.cn/about.html"
+  ],
+  [
+    "Huayang Industrial — glass blocks, ultrafine glass fiber wool and AGM separator product information",
+    "https://www.huayangagm.com/product/5/"
+  ],
+  [
+    "Yingkou Rijie — public company profile",
+    "https://www.ykrijie.com/boluo_company/"
+  ],
+  [
+    "Leoch — public AGM separator production-line technical material",
+    "https://leochlithium.cn/uploads/ueditor/file/20220708/6379287233502083425967267.pdf"
+  ]
+];
+
+const agmSeparatorSupplyChainCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request Sample",
+    hero: {
+      eyebrow: "AGM Supply Chain",
+      title: "From Glass Block to Separator: What an AGM Supply Chain Really Involves",
+      subtitle:
+        "An AGM separator is the visible end of a longer material chain. Fiber condition, wet-laid processing, drying, winding, conversion and records all affect what a battery factory receives.",
+      primary: "Request a Sample & Specification Match",
+      secondary: "Review the sourcing checklist",
+      image: {
+        src: "/images/agm-hero-production-1600.webp",
+        alt: "Modern AGM separator production equipment at Hubei Viking",
+        width: 1600,
+        height: 1000
+      }
+    },
+    intro: [
+      "An AGM separator may arrive as a finished roll or a cut sheet, but its suitability for VRLA battery production begins earlier. The supply chain normally spans glass preparation, ultrafine fiber conversion, slurry preparation, wet-laid forming, drying, winding, inspection, slitting or sheeting, packing and shipment.",
+      "Public company materials in the AGM sector describe parts of this chain, but they should not be read as one universal factory process or as proof of a supplier's quality system. For buyers, the practical issue is whether the material, process controls and delivery records can support the agreed battery design repeatedly."
+    ],
+    sections: [
+      {
+        eyebrow: "Starting Material",
+        title: "The chain begins before separator making",
+        text:
+          "AGM separator production depends on a glass composition suitable for conversion into very fine fibers. Public sector materials commonly describe glass blocks or glass feedstock, followed by ultrafine glass fiber wool and AGM separator products. This sequence is useful for understanding the material path, but it does not mean every supplier uses identical glass chemistry, equipment or acceptance criteria. The relevant question is whether incoming material controls and change communication are adequate for the project."
+      },
+      {
+        eyebrow: "Fiber Condition",
+        title: "Fine glass fiber must become a controlled furnish",
+        text:
+          "Before a separator web is formed, fiber preparation and dispersion determine the furnish entering the wet-laid process. Fiber length distribution, clumps, foreign material and moisture condition can change how the web forms and handles later. A buyer does not need to prescribe a supplier's internal recipe, but should align the properties that matter for the battery design and ask how material changes are identified before they reach an approved specification."
+      },
+      {
+        eyebrow: "Wet-Laid Forming",
+        title: "A separator web is formed, not simply cut from a fiber roll",
+        text:
+          "AGM separator is generally made through a wet-laid process in which dispersed glass fibers are formed into a continuous web, then dewatered and dried. Production-line descriptions from the sector refer to pulping, forming, drying and winding stages. The finished material therefore reflects the interaction of fiber furnish and process conditions, not just a nominal thickness printed on a specification sheet."
+      },
+      {
+        eyebrow: "Conversion",
+        title: "Drying, winding and cutting are part of the delivered material",
+        text:
+          "After web formation, drying and winding establish the roll that will later be handled, slit or converted into sheets. Roll width, edge condition, winding quality, core, diameter and sheet dimensions affect feeding and assembly at the battery factory. These conversion details should be agreed as part of the product form, because a material that passes laboratory checks can still create avoidable handling or line-adjustment issues."
+      },
+      {
+        eyebrow: "Quality Boundary",
+        title: "Upstream integration is not a substitute for evidence",
+        text:
+          "A supplier that participates in more upstream stages may have more direct influence over material availability and change control. It does not automatically prove suitable fiber quality, stable separator performance or reliable delivery for a particular battery. Technical evaluation still needs agreed tests, representative samples, batch comparison and complete-battery validation. Buyers should evaluate evidence, not only the number of stages shown in a supply-chain diagram."
+      },
+      {
+        eyebrow: "Traceability",
+        title: "A useful supply chain can explain what was delivered",
+        text:
+          "For pilot and volume work, a practical record chain connects shipment batch, finished roll or sheet identifier, conversion record, production batch and relevant inspection results. The exact depth of traceability should be agreed by project. What matters is that an abnormal assembly result can be investigated with a defined batch boundary instead of relying on a general statement that the material came from the same product family."
+      },
+      {
+        eyebrow: "Viking Coordination",
+        title: "Start with the battery design and the delivery form",
+        text:
+          "Viking manufactures AGM glass-fiber separator rolls and sheets for VRLA battery applications. To begin a useful technical discussion, share the battery application, target thickness, plate-group dimensions, roll or sheet format, packing requirements and current project stage. We can first align the specification boundary and sample information; final suitability remains subject to the customer's material, assembly and complete-battery validation."
+      }
+    ],
+    parameters: [
+      ["Starting material", "Ask what project-level material changes require communication and how approved specifications are protected."],
+      ["Web formation", "Compare thickness, basis weight, absorption-related behavior and mechanical handling under agreed methods."],
+      ["Product conversion", "Confirm roll width, core, diameter, edge condition or sheet dimensions for the intended assembly route."],
+      ["Delivery records", "Define the identifiers and inspection records needed to compare samples, pilot material and volume batches."]
+    ],
+    formats: {
+      eyebrow: "Supply-Chain Evidence",
+      title: "The delivered separator should connect material, conversion and shipment",
+      items: [
+        ["Continuous separator web", "A finished roll reflects forming, drying and winding before it is converted for a battery line.", "/images/agm-hero-production-1600.webp", "AGM separator production equipment at Hubei Viking"],
+        ["Inspection before release", "Project requirements should define comparable test methods and the records associated with accepted material.", "/images/agm-quality-control-1200.webp", "AGM separator quality inspection at Hubei Viking"],
+        ["Rolls, sheets and packing", "Delivery form, identification and packing should match receiving, storage and assembly conditions.", "/images/evidence/shipping-pallet-01.webp", "Packed AGM separator shipment on pallets"]
+      ]
+    },
+    checklist: {
+      eyebrow: "Sourcing Checklist",
+      title: "Questions that make a supply-chain discussion actionable",
+      text:
+        "A clear project boundary is more useful than a broad claim about vertical integration. Use these points to connect raw material, separator performance and delivery expectations.",
+      items: ["Battery application and plate-group design", "Target thickness and agreed test conditions", "Roll or sheet dimensions and packing", "Sample, pilot and volume batch comparison", "Change communication and required delivery records"]
+    },
+    references: {
+      eyebrow: "Reference Materials",
+      title: "Public industry materials used to explain the chain",
+      text:
+        "These references describe parts of the AGM supply chain or production equipment. They are not used to verify Viking's upstream sources, equipment configuration or quality-system scope. Specific project requirements should be confirmed directly during technical review.",
+      items: agmSeparatorSupplyChainReferenceItems
+    },
+    related: {
+      eyebrow: "Related Pages",
+      title: "Continue with manufacturing, consistency and specification review",
+      items: [
+        ["AGM Separator Manufacturing & Delivery", "/blog/agm-separator-manufacturing-quality-delivery/"],
+        ["AGM Separator Batch Consistency & Process Control", "/blog/agm-separator-batch-consistency-and-process-control/"],
+        ["AGM Separator Testing", "/quality-control/agm-separator-testing/"],
+        ["Request a Sample & Specification Match", "/request-agm-separator-sample/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.en.inquiry,
+      title: "Review AGM separator supply and conversion requirements",
+      text:
+        "Share the battery application, target thickness, dimensions, roll or sheet format, packing needs and project stage so the specification discussion starts with a defined delivery boundary.",
+      checklist: ["Battery application and dimensions", "Target separator thickness", "Roll or sheet delivery form", "Packing and batch-record requirements"],
+      placeholders: {
+        ...articleCopy.en.inquiry.placeholders,
+        message: "Battery application, target thickness, plate-group dimensions, roll or sheet format, packing requirements and project stage"
+      }
+    },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    brandName: articleCopy.zh.brandName,
+    quote: "申请样品",
+    hero: {
+      eyebrow: "AGM 供应链",
+      title: "从玻璃料块到成品隔板：AGM 隔板供应链到底包含哪些环节？",
+      subtitle:
+        "一卷或一片成品 AGM 隔板背后，涉及纤维状态、湿法成型、干燥、收卷、分切、包装和记录管理。电池厂最终收到的材料，来自这整条链路的共同作用。",
+      primary: "申请样品与规格匹配",
+      secondary: "查看采购确认清单",
+      image: {
+        src: "/images/agm-hero-production-1600.webp",
+        alt: "湖北维京现代 AGM 隔板生产设备",
+        width: 1600,
+        height: 1000
+      }
+    },
+    intro: [
+      "AGM 隔板交到电池厂时，可能是一卷卷材，也可能是裁切好的片材。但它是否适合 VRLA 电池生产，判断并不从收货那一刻才开始。通常还要经过玻璃原料、超细玻璃纤维、制浆分散、湿法成型、脱水干燥、收卷、检测、分切或裁片、包装与出货等环节。",
+      "行业企业公开资料能够帮助理解这条材料路径，但不能把任何一家企业的流程当成统一行业标准，也不能据此判断另一家供应商的质量能力。对采购团队而言，更实际的问题是：材料、过程控制和交付记录能否持续支撑已确认的电池设计。"
+    ],
+    sections: [
+      {
+        eyebrow: "起始材料",
+        title: "隔板制造开始于成网之前",
+        text:
+          "AGM 隔板的生产依赖适合进一步拉制为超细纤维的玻璃组成。行业公开资料中常见玻璃料块或玻璃原料、超细玻璃纤维棉、AGM 隔板等产品环节。这一顺序有助于理解材料来源，但不代表所有供应商采用相同的玻璃配方、设备或验收标准。项目真正需要确认的是，来料控制和材料变更沟通能否满足既定规格。"
+      },
+      {
+        eyebrow: "纤维状态",
+        title: "超细玻璃纤维需要先成为可控的成网原料",
+        text:
+          "在隔板成网之前，纤维制备和分散会影响进入湿法成型环节的浆料状态。纤维长度分布、结团、异物和含水状态，都可能改变后续成网与加工表现。采购方不需要规定供应商的内部配方，但应围绕电池设计确认关键性能，并了解材料变化如何在进入已批准规格前被识别和沟通。"
+      },
+      {
+        eyebrow: "湿法成型",
+        title: "AGM 隔板是成网形成的材料，不是从纤维卷上直接裁下来的产品",
+        text:
+          "AGM 隔板通常通过湿法工艺制造：分散后的玻璃纤维形成连续纤维网，再经过脱水与干燥。行业生产线资料常提到制浆、成型、干燥和收卷等步骤。因此，成品状态来自纤维原料与过程条件的共同作用，而不只是规格书上某一个标称厚度。"
+      },
+      {
+        eyebrow: "后道加工",
+        title: "干燥、收卷和裁切也是交付材料的一部分",
+        text:
+          "成网之后，干燥和收卷形成后续供给、分切或裁片的卷材。卷材宽度、边部状态、收卷质量、纸芯、卷径和片材尺寸都会影响电池厂的上机与装配。它们应当作为产品形式的一部分提前确认，因为一款实验室检测合格的材料，仍可能在现场造成不必要的送料、调机或损耗问题。"
+      },
+      {
+        eyebrow: "质量边界",
+        title: "上游环节更多，不等于质量已经得到证明",
+        text:
+          "供应商参与更多上游环节，可能意味着对材料可得性和变更控制拥有更直接的影响，但这并不能自动证明其纤维质量、隔板表现或对某款电池的交付可靠性。技术评价仍需要统一的测试方法、代表性样品、批次对比和整电池验证。采购应评估可核对的证据，而不只看供应链图上覆盖了多少环节。"
+      },
+      {
+        eyebrow: "追溯与交付",
+        title: "有效的供应链需要能解释这批材料从哪里来",
+        text:
+          "进入试产和批量阶段后，实用的记录链应能把出货批次、成品卷材或片材编号、后道转换记录、生产批次和相关检测结果关联起来。具体追溯深度可按项目约定，但核心是：当电池装配出现异常时，双方能在明确批次边界内排查，而不是只得到“属于同一产品系列”的笼统说法。"
+      },
+      {
+        eyebrow: "维京配合",
+        title: "先从电池设计和交付形式开始确认",
+        text:
+          "维京持续专注于 VRLA 电池用 AGM 玻璃纤维隔板制造，可提供卷材、片材等产品形式。开始沟通时，建议提供电池应用、目标厚度、极群尺寸、卷材或片材形式、包装要求和当前项目阶段。我们会先配合确认规格边界和样品信息；是否适合后续使用，仍应以客户的材料、装配与整电池验证结果为准。"
+      }
+    ],
+    parameters: [
+      ["起始材料", "确认哪些项目级材料变更需要沟通，以及已确认规格如何得到持续保护。"],
+      ["成网过程", "在统一方法下比较厚度、克重、吸液相关表现和加工强度。"],
+      ["产品形式", "按实际装配方式确认卷材宽度、纸芯、卷径、边部状态或片材尺寸。"],
+      ["交付记录", "明确样品、试产与批量材料比较所需的编号和检测记录。"]
+    ],
+    formats: {
+      eyebrow: "供应链证据",
+      title: "交付的隔板应能连接材料、后道加工和出货信息",
+      items: [
+        ["连续隔板纤维网", "成品卷材反映了成网、干燥和收卷等过程，之后才进入电池厂的转换与装配。", "/images/agm-hero-production-1600.webp", "湖北维京 AGM 隔板生产设备"],
+        ["放行前检测", "项目应先明确可比较的测试方法，以及与合格材料关联的检测记录。", "/images/agm-quality-control-1200.webp", "湖北维京 AGM 隔板质量检测"],
+        ["卷材、片材与包装", "产品形式、标识和包装应匹配客户收货、存放和装配条件。", "/images/evidence/shipping-pallet-01.webp", "AGM 隔板包装出货"]
+      ]
+    },
+    checklist: {
+      eyebrow: "采购确认清单",
+      title: "让供应链讨论真正落到项目上的问题",
+      text:
+        "与其泛泛讨论是否一体化，更有价值的是把原料、隔板表现和交付要求放进同一套项目边界里确认。",
+      items: ["电池应用和极群结构", "目标厚度与统一测试条件", "卷材或片材尺寸及包装", "样品、试产与批量的批次比较", "变更沟通和所需交付记录"]
+    },
+    references: {
+      eyebrow: "参考资料",
+      title: "用于说明供应链环节的公开行业资料",
+      text:
+        "这些资料用于说明 AGM 供应链或生产线中的部分环节，不用于证明维京的上游来源、设备配置或质量体系范围。具体项目要求仍应在技术评审中逐项确认。",
+      items: agmSeparatorSupplyChainReferenceItems
+    },
+    related: {
+      eyebrow: "相关页面",
+      title: "继续了解生产、批次一致性和规格确认",
+      items: [
+        ["AGM 隔板生产与交付", "/zh/blog/agm-separator-manufacturing-quality-delivery/"],
+        ["AGM 隔板批次一致性与过程控制", "/zh/blog/agm-separator-batch-consistency-and-process-control/"],
+        ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"],
+        ["申请样品与规格匹配", "/zh/request-agm-separator-sample/"]
+      ]
+    },
+    inquiry: {
+      ...articleCopy.zh.inquiry,
+      title: "确认 AGM 隔板供应与后道加工要求",
+      text:
+        "请提供电池应用、目标厚度、尺寸、卷材或片材形式、包装要求和当前项目阶段，让规格沟通从清晰的交付边界开始。",
+      checklist: ["电池应用与尺寸", "目标隔板厚度", "卷材或片材交付形式", "包装与批次记录要求"],
+      placeholders: {
+        ...articleCopy.zh.inquiry.placeholders,
+        message: "电池应用、目标厚度、极群尺寸、卷材或片材形式、包装要求和当前项目阶段"
+      }
+    },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -3341,6 +3606,8 @@ export function BlogArticlePage({
                         ? agmSeparatorPressureRetentionCopy[primaryLang]
                         : page === "agmSeparatorBatchProcessControl"
                           ? agmSeparatorBatchProcessControlCopy[primaryLang]
+                          : page === "agmSeparatorSupplyChain"
+                            ? agmSeparatorSupplyChainCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -3408,6 +3675,8 @@ export function BlogArticlePage({
                         ? ["dry-thickness", "after-filling", "after-cycling", "reproducible-record", "viking-coordination"]
                         : page === "agmSeparatorBatchProcessControl"
                           ? ["process-data", "single-sample", "assembly-impact", "statistical-review", "sampling-plan", "traceability", "viking-coordination"]
+                          : page === "agmSeparatorSupplyChain"
+                            ? ["starting-material", "fiber-condition", "wet-laid-forming", "conversion", "quality-boundary", "traceability", "viking-coordination"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
@@ -3683,7 +3952,8 @@ export function BlogArticlePage({
             page === "dataCenterBackupPowerAgmSeparator" ||
             page === "earlyChinaLeadAcidBatteryManufacturing" ||
             page === "agmSeparatorPressureRetention" ||
-            page === "agmSeparatorBatchProcessControl"
+            page === "agmSeparatorBatchProcessControl" ||
+            page === "agmSeparatorSupplyChain"
               ? "lg:grid-cols-3"
               : ""
           }`}

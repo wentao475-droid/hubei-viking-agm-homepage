@@ -244,7 +244,7 @@ export function ResourcesHubPage({ lang }: { lang: SiteLocale }) {
                   </div>
 
                   <div className="grid gap-4">
-                    {getArticlesByCategory(category).map((article) => (
+                    {getArticlesByCategory(category, lang).map((article) => (
                       <a
                         key={article.id}
                         href={asset(localizeHref(article.href, lang))}

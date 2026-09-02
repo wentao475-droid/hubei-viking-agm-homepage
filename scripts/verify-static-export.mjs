@@ -103,6 +103,8 @@ const requiredFiles = [
   "zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/index.html",
   "blog/agm-separator-batch-consistency-and-process-control/index.html",
   "zh/blog/agm-separator-batch-consistency-and-process-control/index.html",
+  "blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/index.html",
+  "zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/index.html",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -258,6 +260,12 @@ const agmVsPvcArticleHtml = readOutFile(
 );
 const zhAgmVsPvcArticleHtml = readOutFile(
   "zh/blog/agm-glass-fiber-vs-pvc-battery-separator/index.html"
+);
+const agmSupplyChainArticleHtml = readOutFile(
+  "blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/index.html"
+);
+const zhAgmSupplyChainArticleHtml = readOutFile(
+  "zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/index.html"
 );
 const sitemap = readOutFile("sitemap.xml");
 const robots = readOutFile("robots.txt");
@@ -964,6 +972,28 @@ if (
 }
 
 if (
+  agmSupplyChainArticleHtml.includes(
+    "https://www.vikingagm.com/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"
+  ) &&
+  zhAgmSupplyChainArticleHtml.includes(
+    "https://www.vikingagm.com/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"
+  ) &&
+  agmSupplyChainArticleHtml.includes('"@type":"BlogPosting"') &&
+  agmSupplyChainArticleHtml.includes('"datePublished":"2026-09-01"') &&
+  zhAgmSupplyChainArticleHtml.includes('"datePublished":"2026-09-01"') &&
+  agmSupplyChainArticleHtml.includes("wet-laid") &&
+  zhAgmSupplyChainArticleHtml.includes("湿法成型") &&
+  agmSupplyChainArticleHtml.includes("https://www.huayangagm.com/product/5/") &&
+  wechatPlaceholders.every(
+    (placeholder) => !zhAgmSupplyChainArticleHtml.includes(placeholder)
+  )
+) {
+  pass("AGM supply-chain articles include bilingual content, references and metadata");
+} else {
+  fail("AGM supply-chain articles are missing content, references or metadata");
+}
+
+if (
   sitemap.includes("https://www.vikingagm.com/") &&
   sitemap.includes("https://www.vikingagm.com/zh/")
 ) {
@@ -992,10 +1022,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 203) {
-  pass("sitemap.xml lists the expected 203 localized public URLs");
+if (sitemapUrls.length === 205) {
+  pass("sitemap.xml lists the expected 205 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 203`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 205`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -1145,6 +1175,14 @@ const expectedSitemapLastmod = [
   [
     "https://www.vikingagm.com/zh/blog/agm-separator-batch-consistency-and-process-control/",
     "2026-08-12"
+  ],
+  [
+    "https://www.vikingagm.com/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    "2026-09-01"
+  ],
+  [
+    "https://www.vikingagm.com/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    "2026-09-01"
   ],
   ...synchronizedLocaleCodes.map((locale) => [
     `https://www.vikingagm.com/${locale}/blog/agm-separator-batch-consistency-and-process-control/`,

@@ -155,7 +155,7 @@ export function ResourcesNavDropdown({
                       {localizeText(resourceCategoryCopy[category].title, lang)}
                     </a>
                     <div className="mt-2 grid gap-1">
-                      {getArticlesByCategory(category).map((article) => (
+                      {getArticlesByCategory(category, lang).map((article) => (
                         <a
                           key={article.id}
                           href={asset(localizeHref(article.href, lang))}

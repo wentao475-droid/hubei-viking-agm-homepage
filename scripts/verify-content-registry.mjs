@@ -59,6 +59,12 @@ const articles = [
   ]
 ];
 const allLocales = ["en", "zh", ...secondaryResourceLocales];
+const primaryOnlyArticles = [
+  [
+    "agmSeparatorSupplyChain",
+    "agm-separator-supply-chain-from-glass-block-to-finished-roll"
+  ]
+];
 
 let failed = false;
 
@@ -79,6 +85,37 @@ for (const [key, slug] of articles) {
   check(existsSync(enRoute) && existsSync(zhRoute), `${key} has both route files`);
   check(
     seoSource.includes(`"${key}"`) || seoSource.includes(`${key}Seo`),
+    `${key} is registered in app/seo.tsx`
+  );
+  check(
+    sitemapSource.includes(`/blog/${slug}/`) &&
+      sitemapSource.includes(`/zh/blog/${slug}/`),
+    `${key} is registered in the sitemap`
+  );
+  check(
+    resourceCatalogSource.includes(`/blog/${slug}/`) &&
+      resourceCatalogSource.includes(`/zh/blog/${slug}/`),
+    `${key} is registered in the resource catalog`
+  );
+}
+
+for (const [key, slug] of primaryOnlyArticles) {
+  const article = content.articles?.[key];
+  const seo = content.seo?.[key];
+  const enRoute = join(root, "app/blog", slug, "page.tsx");
+  const zhRoute = join(root, "app/zh/blog", slug, "page.tsx");
+
+  check(
+    Boolean(article?.en) && Boolean(article?.zh),
+    `${key} has English and Chinese article content`
+  );
+  check(
+    Boolean(seo?.en) && Boolean(seo?.zh),
+    `${key} has English and Chinese SEO content`
+  );
+  check(existsSync(enRoute) && existsSync(zhRoute), `${key} has both route files`);
+  check(
+    seoSource.includes(`${key}Seo`),
     `${key} is registered in app/seo.tsx`
   );
   check(

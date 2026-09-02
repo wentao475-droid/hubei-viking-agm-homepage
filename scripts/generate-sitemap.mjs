@@ -240,6 +240,14 @@ const pages = [
     changefreq: "monthly",
     lastmod: "2026-08-12",
     secondaryLastmod: "2026-08-12"
+  },
+  {
+    en: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-09-01",
+    secondary: false
   }
 ];
 
@@ -264,7 +272,8 @@ for (const page of pages.filter(({ en }) =>
   page.arabicLastmod = arabicLastmod;
 }
 for (const page of pages.filter(
-  ({ en }) => en === "/resources/" || en.startsWith("/blog/")
+  ({ en, secondary = true }) =>
+    secondary && (en === "/resources/" || en.startsWith("/blog/"))
 )) {
   for (const locale of secondaryLocales) {
     page[locale] = `/${locale}${page.en}`;

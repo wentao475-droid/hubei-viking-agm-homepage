@@ -316,6 +316,23 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/agm-separator-batch-consistency-and-process-control/",
       zh: "/zh/blog/agm-separator-batch-consistency-and-process-control/"
     }
+  },
+  {
+    id: "agm-separator-supply-chain",
+    category: "manufacturingQuality",
+    publishedAt: "2026-09-01",
+    title: {
+      en: "From Glass Block to Separator: AGM Supply Chain Guide",
+      zh: "从玻璃料块到成品隔板：AGM 隔板供应链指南"
+    },
+    description: {
+      en: "A practical look at glass feedstock, ultrafine fiber, wet-laid forming, conversion, inspection and delivery records.",
+      zh: "从玻璃原料、超细玻璃纤维、湿法成型到后道加工、检测与出货记录，理解隔板交付背后的链路。"
+    },
+    href: {
+      en: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+      zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"
+    }
   }
 ];
 
@@ -353,6 +370,7 @@ for (const locale of secondaryResourceLocales as SiteLocale[]) {
 
   for (const article of resourceArticles) {
     const kind = articleKindById[article.id];
+    if (!kind) continue;
     const slug = articleDefinitions[kind][0];
     article.title[locale] = localeData.topics[kind].title;
     article.description[locale] = localeData.topics[kind].summary;
@@ -379,8 +397,13 @@ export function getResourceCategoryPath(
   return `${getResourcesPath(lang)}#${category}`;
 }
 
-export function getArticlesByCategory(category: ResourceCategory) {
+export function getArticlesByCategory(
+  category: ResourceCategory,
+  lang?: ResourceLang
+) {
   return resourceArticles
-    .filter((article) => article.category === category)
+    .filter(
+      (article) => article.category === category && (!lang || Boolean(article.href[lang]))
+    )
     .sort((left, right) => right.publishedAt.localeCompare(left.publishedAt));
 }

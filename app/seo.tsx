@@ -1978,6 +1978,51 @@ const agmSeparatorBatchProcessControlSeo = {
   }
 } as const;
 
+const agmSeparatorSupplyChainSeo = {
+  en: {
+    path: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    alternatePath: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "From Glass Block to AGM Separator: Supply Chain Guide | Viking AGM",
+    description:
+      "Understand the AGM separator supply chain from glass feedstock and ultrafine fiber through wet-laid forming, drying, conversion, inspection and delivery records.",
+    keywords: [
+      "AGM separator supply chain",
+      "AGM separator manufacturing process",
+      "ultrafine glass fiber AGM separator",
+      "wet-laid AGM separator",
+      "AGM separator rolls and sheets"
+    ],
+    pageName: "From Glass Block to Separator: What an AGM Supply Chain Really Involves",
+    articleDescription:
+      "A buyer guide to the material, wet-laid forming, conversion, quality evidence and delivery-record questions behind AGM separator rolls and sheets for VRLA batteries.",
+    breadcrumbs: ["Home", "Resources", "AGM Separator Supply Chain"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    alternatePath: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "从玻璃料块到成品隔板：AGM 隔板供应链包含哪些环节？| 湖北维京AGM",
+    description:
+      "从玻璃原料、超细玻璃纤维、湿法成型到干燥、分切、检测和出货记录，了解 AGM 隔板供应链的采购确认重点。",
+    keywords: [
+      "AGM 隔板供应链",
+      "AGM 隔板生产工艺",
+      "超细玻璃纤维 AGM 隔板",
+      "AGM 隔板湿法成型",
+      "AGM 隔板卷材片材"
+    ],
+    pageName: "从玻璃料块到成品隔板：AGM 隔板供应链到底包含哪些环节？",
+    articleDescription:
+      "面向 VRLA 电池采购团队，梳理 AGM 隔板从材料、湿法成型、后道加工到检测与交付记录的关键确认问题。",
+    breadcrumbs: ["首页", "资料", "AGM 隔板供应链"]
+  }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2700,6 +2745,31 @@ export function buildAgmSeparatorBatchProcessControlMetadata(
       url: QUALITY_PREVIEW_IMAGE,
       width: 1200,
       height: 800
+    }
+  });
+}
+
+export function buildAgmSeparatorSupplyChainMetadata(lang: Lang): Metadata {
+  const current = seoContent(
+    "agmSeparatorSupplyChain",
+    lang,
+    agmSeparatorSupplyChainSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    zhPath: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: {
+      url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
+      width: 1600,
+      height: 1000
     }
   });
 }
@@ -4221,6 +4291,80 @@ export function AgmSeparatorBatchProcessControlStructuredData({
           "AGM separator process control",
           "sampling and statistical process review",
           "VRLA battery supplier audit"
+        ],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item:
+            index === 0
+              ? `${SITE_URL}${homePath}`
+              : index === 1
+                ? `${SITE_URL}${getResourcesPath(lang)}`
+                : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorSupplyChainStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmSeparatorSupplyChain",
+    lang,
+    agmSeparatorSupplyChainSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const image = `${SITE_URL}/images/agm-hero-production-1600.webp`;
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.title,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: image,
+          width: 1600,
+          height: 1000
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        name: current.pageName,
+        description: current.articleDescription,
+        image,
+        url,
+        datePublished: "2026-09-01",
+        dateModified: "2026-09-01",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: [
+          "AGM separator supply chain",
+          "ultrafine glass fiber",
+          "wet-laid AGM separator production",
+          "AGM separator conversion and delivery"
         ],
         inLanguage: current.language
       },
