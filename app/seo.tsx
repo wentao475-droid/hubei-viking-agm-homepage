@@ -2023,6 +2023,35 @@ const agmSeparatorSupplyChainSeo = {
   }
 } as const;
 
+const agmStartStopBatteryProcurementSeo = {
+  en: {
+    path: "/blog/agm-start-stop-battery-separator-procurement-guide/",
+    alternatePath: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "Automotive AGM Start-Stop Battery Separator Procurement Guide | Viking AGM",
+    description: "A buyer guide to confirming AGM separator conditions for automotive start-stop battery validation, including thickness pressure, assembly inputs and batch evidence.",
+    keywords: ["automotive AGM separator", "start-stop battery separator", "AGM separator thickness pressure", "AGM battery procurement guide"],
+    pageName: "Automotive AGM Start-Stop Batteries: What Separator Buyers Should Confirm",
+    articleDescription: "A procurement guide for reading segmented automotive lead-acid demand and validating AGM separator conditions within a complete start-stop battery system.",
+    breadcrumbs: ["Home", "Resources", "Automotive AGM Start-Stop Battery Guide"]
+  },
+  zh: {
+    path: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/",
+    alternatePath: "/blog/agm-start-stop-battery-separator-procurement-guide/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "汽车 AGM 启停电池隔板采购指南：需要确认哪些事项？| 湖北维京AGM",
+    description: "从测试压力、装配输入到批次证据，了解汽车 AGM 启停电池项目中隔板采购与验证需要确认的材料条件。",
+    keywords: ["汽车 AGM 隔板", "启停电池隔板", "AGM 隔板测试压力", "AGM 电池采购指南"],
+    pageName: "汽车 AGM 启停电池：隔板采购需要确认哪些事项？",
+    articleDescription: "面向汽车启停电池项目的采购指南，说明如何在整电池系统中确认 AGM 隔板的材料状态和验证边界。",
+    breadcrumbs: ["首页", "资料", "汽车 AGM 启停电池采购指南"]
+  }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2771,6 +2800,27 @@ export function buildAgmSeparatorSupplyChainMetadata(lang: Lang): Metadata {
       width: 1600,
       height: 1000
     }
+  });
+}
+
+export function buildAgmStartStopBatteryProcurementMetadata(lang: Lang): Metadata {
+  const current = seoContent(
+    "agmStartStopBatteryProcurement",
+    lang,
+    agmStartStopBatteryProcurementSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/agm-start-stop-battery-separator-procurement-guide/",
+    zhPath: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: { url: QUALITY_PREVIEW_IMAGE, width: 1200, height: 800 }
   });
 }
 
@@ -4381,6 +4431,62 @@ export function AgmSeparatorSupplyChainStructuredData({
               : index === 1
                 ? `${SITE_URL}${getResourcesPath(lang)}`
                 : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmStartStopBatteryProcurementStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmStartStopBatteryProcurement",
+    lang,
+    agmStartStopBatteryProcurementSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.pageName,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        description: current.articleDescription,
+        image: QUALITY_PREVIEW_IMAGE,
+        url,
+        datePublished: "2026-09-10",
+        dateModified: "2026-09-10",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: ["automotive AGM start-stop batteries", "AGM separator procurement", "separator thickness under pressure", "VRLA battery validation"],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url
         }))
       }
     ]

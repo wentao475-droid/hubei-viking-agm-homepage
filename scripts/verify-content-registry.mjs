@@ -63,6 +63,10 @@ const primaryOnlyArticles = [
   [
     "agmSeparatorSupplyChain",
     "agm-separator-supply-chain-from-glass-block-to-finished-roll"
+  ],
+  [
+    "agmStartStopBatteryProcurement",
+    "agm-start-stop-battery-separator-procurement-guide"
   ]
 ];
 

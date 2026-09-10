@@ -182,6 +182,23 @@ export const resourceArticles: ResourceArticle[] = [
     }
   },
   {
+    id: "agm-start-stop-battery-procurement",
+    category: "buyerGuides",
+    publishedAt: "2026-09-10",
+    title: {
+      en: "Automotive AGM Start-Stop Battery Separator Guide",
+      zh: "汽车 AGM 启停电池隔板采购指南"
+    },
+    description: {
+      en: "What to confirm for separator validation: test pressure, assembly inputs and batch evidence.",
+      zh: "从测试压力、装配输入到批次证据，确认隔板验证所需的材料条件。"
+    },
+    href: {
+      en: "/blog/agm-start-stop-battery-separator-procurement-guide/",
+      zh: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/"
+    }
+  },
+  {
     id: "manufacturing-quality-delivery",
     category: "manufacturingQuality",
     publishedAt: "2026-07-07",

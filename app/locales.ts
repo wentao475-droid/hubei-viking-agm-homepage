@@ -155,6 +155,10 @@ export const localizedRouteGroups = [
     en: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
     zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"
   },
+  {
+    en: "/blog/agm-start-stop-battery-separator-procurement-guide/",
+    zh: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/"
+  },
   ...synchronizedResourcePaths.map(allLocalePaths)
 ] satisfies Array<Partial<Record<SiteLocale, string>>>;
 

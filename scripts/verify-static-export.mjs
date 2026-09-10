@@ -105,6 +105,8 @@ const requiredFiles = [
   "zh/blog/agm-separator-batch-consistency-and-process-control/index.html",
   "blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/index.html",
   "zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/index.html",
+  "blog/agm-start-stop-battery-separator-procurement-guide/index.html",
+  "zh/blog/agm-start-stop-battery-separator-procurement-guide/index.html",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -1022,10 +1024,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 205) {
-  pass("sitemap.xml lists the expected 205 localized public URLs");
+if (sitemapUrls.length === 207) {
+  pass("sitemap.xml lists the expected 207 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 205`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 207`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(

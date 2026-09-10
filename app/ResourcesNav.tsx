@@ -20,12 +20,14 @@ const resourcesNavCopy = {
   en: {
     start: "Start here",
     browse: "Browse by topic",
+    viewMore: "View more",
     viewAll: "View all resources",
     viewAllDescription: "Explore all buyer guides, manufacturing notes and industry articles."
   },
   zh: {
     start: "采购入口",
     browse: "按主题浏览",
+    viewMore: "查看更多",
     viewAll: "查看全部资料",
     viewAllDescription: "集中查看采购指南、生产质量说明和行业应用文章。"
   }
@@ -50,6 +52,7 @@ export function ResourcesNavDropdown({
       : {
           start: secondaryResourceData[lang].hub.actionEyebrow,
           browse: secondaryResourceData[lang].hub.libraryTitle,
+          viewMore: secondaryResourceData[lang].hub.libraryEyebrow,
           viewAll: secondaryResourceData[lang].hub.libraryEyebrow,
           viewAllDescription: secondaryResourceData[lang].hub.subtitle
         };
@@ -155,7 +158,9 @@ export function ResourcesNavDropdown({
                       {localizeText(resourceCategoryCopy[category].title, lang)}
                     </a>
                     <div className="mt-2 grid gap-1">
-                      {getArticlesByCategory(category, lang).map((article) => (
+                      {getArticlesByCategory(category, lang)
+                        .slice(0, 5)
+                        .map((article) => (
                         <a
                           key={article.id}
                           href={asset(localizeHref(article.href, lang))}
@@ -166,6 +171,16 @@ export function ResourcesNavDropdown({
                         </a>
                       ))}
                     </div>
+                    {getArticlesByCategory(category, lang).length > 5 && (
+                      <a
+                        href={asset(getResourceCategoryPath(category, lang))}
+                        onClick={() => setOpen(false)}
+                        className="mt-2 inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-bold text-signal transition hover:bg-frost focus:bg-frost focus:outline-none"
+                      >
+                        {t.viewMore}
+                        <span aria-hidden="true">→</span>
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>

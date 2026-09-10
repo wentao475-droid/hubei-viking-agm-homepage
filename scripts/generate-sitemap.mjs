@@ -248,6 +248,14 @@ const pages = [
     changefreq: "monthly",
     lastmod: "2026-09-01",
     secondary: false
+  },
+  {
+    en: "/blog/agm-start-stop-battery-separator-procurement-guide/",
+    zh: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-09-10",
+    secondary: false
   }
 ];
 

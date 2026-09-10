@@ -26,7 +26,8 @@ export type BlogArticleKind =
   | "earlyChinaLeadAcidBatteryManufacturing"
   | "agmSeparatorPressureRetention"
   | "agmSeparatorBatchProcessControl"
-  | "agmSeparatorSupplyChain";
+  | "agmSeparatorSupplyChain"
+  | "agmStartStopBatteryProcurement";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -3550,6 +3551,100 @@ const agmSeparatorSupplyChainCopy = {
   }
 } as const;
 
+const agmStartStopBatteryProcurementReferenceItems: Array<[string, string]> = [
+  ["Camel Group Co., Ltd. 2026 Interim Report", "http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-22/601311_20260822_JQ85.pdf"],
+  ["Hollingsworth & Vose — AGM Separator", "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"],
+  ["Hollingsworth & Vose — PowerFill AGM", "https://info.hollingsworth-vose.com/powerfill"]
+];
+
+const agmStartStopBatteryProcurementCopy = {
+  en: {
+    nav: articleCopy.en.nav,
+    language: articleCopy.en.language,
+    homePath: "/",
+    languagePath: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/",
+    brandName: articleCopy.en.brandName,
+    quote: "Request a Sample",
+    hero: {
+      eyebrow: "Automotive AGM Buyer Guide",
+      title: "Automotive AGM Start-Stop Batteries: What Separator Buyers Should Confirm",
+      subtitle: "A procurement guide to reading a segmented automotive lead-acid market and validating AGM separator conditions for start-stop battery projects.",
+      primary: "Request a Sample & Specification Match",
+      secondary: "View the procurement checklist",
+      image: { src: "/images/agm-quality-control-1200.webp", alt: "AGM separator quality inspection", width: 1200, height: 900 }
+    },
+    intro: [
+      "Camel Group's 2026 interim report illustrates why total automotive lead-acid volume should not be used as a direct proxy for every battery segment. The report states that its first-half automotive low-voltage lead-acid battery sales declined year on year, while its AGM start-stop battery sales increased. These figures describe Camel Group's reporting scope, not a national or global AGM market forecast.",
+      "For battery manufacturers, start-stop demand is not only a volume question. Frequent restarts, electrical loads with the engine off and partial-state-of-charge operation make the validation window more specific. An AGM separator should therefore be evaluated as part of the plate group and complete battery system—not as an isolated guarantee of cycle life or vehicle performance."
+    ],
+    sections: [
+      { eyebrow: "Market signal", title: "Read automotive demand by product segment, not total KVAH alone", text: "Camel Group reported 17.99 million KVAH of automotive low-voltage lead-acid battery sales for the first half of 2026, down 6.12% year on year. Its report also disclosed differing movements in OEM, replacement and start-stop products. The useful procurement conclusion is limited: a decline in total volume does not automatically translate into the same change for every separator specification, customer program or battery route." },
+      { eyebrow: "Start-stop duty", title: "Start-stop batteries face more than one cranking event", text: "Compared with a conventional starter battery, a start-stop battery can experience repeated engine restarts, engine-off electrical loads, partial-state-of-charge operation and, in some vehicles, regenerative-braking-related charging. AGM and EFB address different levels of duty and recovery requirements. The original battery route and target duty cycle must be confirmed; the two technologies are not automatically interchangeable." },
+      { eyebrow: "Separator role", title: "Repeated cycling makes material conditions more visible", text: "In a VRLA-AGM battery, the separator keeps the plates apart, retains electrolyte and provides an ion-transport path. Plate-group compression also affects electrolyte distribution and oxygen-transport conditions. Under repeated discharge and recovery, small differences in wetting, compressed condition or dimensions can become more visible. That does not make the separator the sole determinant of battery performance; plate design, active material, acid quantity, charging strategy and thermal conditions remain part of the same validation system." },
+      { eyebrow: "Measurement conditions", title: "A thickness value needs its test pressure", text: "Nominal dry thickness is an incoming-material measurement, not the complete condition inside a filled and compressed battery. The relevant compression range depends on plate thickness, assembly clearance and the design target. For automotive AGM projects, procurement and engineering teams should state the measurement pressure alongside the target thickness and use comparable sample preparation and test methods when comparing suppliers or batches." },
+      { eyebrow: "Consistency", title: "Batch variation carries into assembly", text: "Differences in basis weight, thickness under an agreed pressure, dimensions or roll condition may be adjusted during sampling but become more consequential in continuous assembly. They can increase line adjustment, change plate-group condition and raise the cost of quality control. The practical objective is to reproduce the agreed material condition from samples through pilot work and later production batches." },
+      { eyebrow: "Procurement checklist", title: "Confirm the same specification across purchasing, engineering and production", text: "Before sampling or introducing an AGM separator, align the original battery route, plate dimensions, separator format, target thickness and test pressure. Also define the acid-filling and formation conditions that require coordination, the planned incoming checks, and the batch-identification, packaging and feedback records expected for sample, pilot and volume material. These checks support—not replace—complete-battery validation." },
+      { eyebrow: "Viking coordination", title: "Begin with material conditions that can be tested and reproduced", text: "Viking Technology manufactures AGM glass-fiber separators for VRLA lead-acid battery applications and can discuss rolls or sheets, thickness, width, sheet dimensions and packaging. For automotive AGM programs, we can align material-level conditions such as thickness under an agreed pressure, basis weight, absorption-related testing, dimensions, roll condition and incoming-inspection methods. Dynamic charge acceptance, temperature resistance, cycle life and vehicle compatibility must still be confirmed by the customer through complete battery design and testing." }
+    ],
+    parameters: [
+      ["Battery route", "Confirm the original AGM or EFB route and whether the project serves OEM or replacement use."],
+      ["Compression condition", "State target thickness together with measurement pressure, sample state and agreed method."],
+      ["Assembly inputs", "Align plate dimensions, roll or sheet format, acid filling and formation conditions."],
+      ["Batch evidence", "Define incoming checks, batch identification, packing and feedback records for each project stage."]
+    ],
+    formats: {
+      eyebrow: "Material form and evidence",
+      title: "Make the supplied format match the validation plan",
+      items: [
+        ["AGM separator rolls", "Confirm width, core, roll condition and packing against the customer's feeding and conversion process.", "/images/viking-finished-separator-roll-900.webp", "Finished AGM separator roll"],
+        ["Quality review", "Use agreed conditions to compare thickness, basis weight, dimensions and absorption-related results.", "/images/agm-quality-control-1200.webp", "AGM separator quality inspection"],
+        ["AGM separator sheets", "Confirm cut size, edge condition and packing when the assembly process uses sheets.", "/images/sheets1-900.webp", "AGM separator sheets"]
+      ]
+    },
+    checklist: { eyebrow: "Buyer checklist", title: "Inputs to share before an automotive AGM separator sample", text: "A defined project boundary helps the material supplier, assembly team and battery test team evaluate the same conditions.", items: ["Original battery route and target application", "Plate dimensions, separator format, target thickness and test pressure", "Acid-filling and formation conditions requiring coordination", "Planned checks for absorption, thickness, dimensions and roll condition", "Batch identification, packaging and feedback procedure"] },
+    references: { eyebrow: "Sources and technical boundary", title: "Public materials used for this buyer guide", text: "Camel Group's figures are company-specific disclosures and are not used as national or global market-growth rates. The AGM materials below describe technical context only; they do not verify Viking product specifications or guarantee complete-battery results.", items: agmStartStopBatteryProcurementReferenceItems },
+    related: { eyebrow: "Related pages", title: "Continue with AGM separator evaluation", items: [["Key AGM Separator Parameters", "/blog/key-technical-parameters-of-agm-separator/"], ["How to Choose an AGM Separator", "/blog/how-to-choose-agm-separator/"], ["AGM Separator Pressure Retention", "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"], ["Request a Sample & Specification Match", "/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.en.inquiry, title: "Discuss an automotive AGM separator specification", text: "Share the battery route, plate dimensions, target thickness and test pressure, preferred roll or sheet format, and the current sample or validation stage.", checklist: ["OEM or replacement application", "Plate dimensions and target separator thickness", "Test pressure and agreed measurement method", "Roll or sheet format, packing and project stage"], placeholders: { ...articleCopy.en.inquiry.placeholders, message: "Battery route, plate dimensions, target thickness and test pressure, roll or sheet format, test conditions and project stage" } },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    nav: articleCopy.zh.nav,
+    language: articleCopy.zh.language,
+    homePath: "/zh/",
+    languagePath: "/blog/agm-start-stop-battery-separator-procurement-guide/",
+    brandName: articleCopy.zh.brandName,
+    quote: "申请样品",
+    hero: {
+      eyebrow: "汽车 AGM 采购指南",
+      title: "汽车 AGM 启停电池：隔板采购需要确认哪些事项？",
+      subtitle: "从细分市场信号到材料验证条件，帮助采购团队为启停电池项目确认 AGM 隔板要求。",
+      primary: "申请样品与规格匹配",
+      secondary: "查看采购确认清单",
+      image: { src: "/images/agm-quality-control-1200.webp", alt: "AGM 隔板质量检测", width: 1200, height: 900 }
+    },
+    intro: [
+      "骆驼集团 2026 年半年报说明，汽车低压铅酸电池总量不能直接代表每个电池细分市场。该报告显示，其上半年汽车低压铅酸蓄电池销量同比下降，而 AGM 启停电池销量增长。这些数据仅代表骆驼集团的披露口径，不构成中国、全球或所有 AGM 产品的市场预测。",
+      "对电池制造商而言，启停产品不仅是销量问题。频繁启停、发动机熄火时的用电负载以及部分荷电状态运行，使验证边界更加具体。AGM 隔板应在极群和整电池系统中评价，不能被视作单独保证循环寿命或整车性能的材料。"
+    ],
+    sections: [
+      { eyebrow: "市场信号", title: "按产品细分理解需求，而不是只看总 KVAH", text: "骆驼集团披露，2026 年上半年汽车低压铅酸蓄电池销量为 1799 万 KVAH，同比下降 6.12%。其 OEM、替换市场和启停产品的变化并不相同。对采购而言，合理的结论是有限的：总量下降不自动等同于每一种隔板规格、客户项目或电池路线的需求变化。" },
+      { eyebrow: "启停工况", title: "启停电池承受的不只是一次启动电流", text: "相较传统启动电池，启停电池可能面临更频繁的发动机重启、发动机熄火期间的电负载、部分荷电状态运行，以及部分车辆中的制动能量回收充电。AGM 和 EFB 面向不同强度的工况与恢复要求。必须确认原始电池路线和目标工况，二者不应被视为可以自动互换。" },
+      { eyebrow: "隔板作用", title: "重复循环会放大材料状态的差异", text: "在 VRLA-AGM 电池中，隔板隔离正负极板、吸收并保持电解液，同时提供离子传输路径。极群压缩也会影响电解液分布和氧传输条件。在反复放电与恢复过程中，润湿、压缩状态或尺寸上的细小差异可能更明显。但隔板并非唯一决定因素，极板设计、活性物质、加酸量、充电策略和热条件仍共同构成验证体系。" },
+      { eyebrow: "测量条件", title: "厚度数值必须附带测试压力", text: "标称干态厚度是来料测量，不等于电池填酸和压缩后的实际状态。合适的压缩范围取决于极板厚度、装配间隙和设计目标。汽车 AGM 项目应在目标厚度之外同时明确测量压力，并以可比的样品状态和方法比较不同供应商或批次。" },
+      { eyebrow: "批次一致性", title: "材料波动会带入连续装配", text: "克重、规定压力下的厚度、尺寸或卷材状态的差异，在打样中或许可以人工调整，但在连续装配中更容易造成影响，例如增加产线调整、改变极群状态并提高质量控制成本。实际目标是从样品、试产到后续批量，持续复现已确认的材料状态。" },
+      { eyebrow: "采购确认", title: "让采购、工程和生产确认同一套规格", text: "打样或导入新的 AGM 隔板前，应统一原始电池路线、极板尺寸、隔板形式、目标厚度与测试压力；还应明确需要与材料供应商协同的加酸和化成条件、来料检查项目，以及样品、试产和批量材料的批次标识、包装和反馈记录。这些工作支持但不能替代整电池验证。" },
+      { eyebrow: "维京配合", title: "从可测试、可复现的材料条件开始", text: "维京科技专注于 VRLA 铅酸电池用 AGM 玻璃纤维隔板制造，可沟通卷材或片材、厚度、宽度、片材尺寸和包装。针对汽车 AGM 项目，可围绕规定压力下的厚度、克重、吸液相关测试、尺寸、卷材状态和来料检验方法确认材料层面的条件。动态充电接受能力、耐温性、循环寿命及车辆适配性仍须由客户通过整电池设计与测试确认。" }
+    ],
+    parameters: [["电池路线", "确认原始 AGM 或 EFB 路线，以及 OEM 或替换市场应用。"], ["压缩条件", "目标厚度应同时说明测量压力、样品状态和统一方法。"], ["装配输入", "统一极板尺寸、卷材或片材形式、加酸和化成条件。"], ["批次证据", "明确各项目阶段的来料检查、批次标识、包装和反馈记录。"]],
+    formats: { eyebrow: "供货形式与证据", title: "让交付形式匹配验证计划", items: [["AGM 隔板卷材", "按客户的上料和加工流程确认宽度、纸芯、卷材状态和包装。", "/images/viking-finished-separator-roll-900.webp", "AGM 隔板成品卷"], ["质量评审", "在统一条件下比较厚度、克重、尺寸和吸液相关结果。", "/images/agm-quality-control-1200.webp", "AGM 隔板质量检测"], ["AGM 隔板片材", "当装配使用片材时，确认裁切尺寸、边部状态与包装。", "/images/sheets1-900.webp", "AGM 隔板片材"]] },
+    checklist: { eyebrow: "采购清单", title: "汽车 AGM 隔板打样前需要提供的信息", text: "清晰的项目边界有助于材料供应商、装配团队与电池测试团队在同一条件下评价。", items: ["原始电池路线与目标应用", "极板尺寸、隔板形式、目标厚度和测试压力", "需要协同的加酸与化成条件", "吸液、厚度、尺寸和卷材状态的计划检查", "批次标识、包装与反馈流程"] },
+    references: { eyebrow: "来源与技术边界", title: "本采购指南使用的公开资料", text: "骆驼集团数据为公司特定披露，不作为国家或全球市场增长率。以下 AGM 资料仅用于说明技术背景，不用于证明维京产品规格或保证整电池结果。", items: agmStartStopBatteryProcurementReferenceItems },
+    related: { eyebrow: "相关页面", title: "继续了解 AGM 隔板评估", items: [["AGM 隔板技术参数", "/zh/blog/key-technical-parameters-of-agm-separator/"], ["如何选择 AGM 隔板", "/zh/blog/how-to-choose-agm-separator/"], ["AGM 隔板填酸与循环后的压力保持", "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"], ["申请样品与规格匹配", "/zh/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.zh.inquiry, title: "沟通汽车 AGM 隔板规格", text: "请提供电池路线、极板尺寸、目标厚度和测试压力、卷材或片材形式，以及当前打样或验证阶段。", checklist: ["OEM 或替换市场应用", "极板尺寸与目标隔板厚度", "测试压力和统一测量方法", "卷材或片材形式、包装和项目阶段"], placeholders: { ...articleCopy.zh.inquiry.placeholders, message: "电池路线、极板尺寸、目标厚度和测试压力、卷材或片材形式、测试条件和项目阶段" } },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -3608,6 +3703,8 @@ export function BlogArticlePage({
                           ? agmSeparatorBatchProcessControlCopy[primaryLang]
                           : page === "agmSeparatorSupplyChain"
                             ? agmSeparatorSupplyChainCopy[primaryLang]
+                            : page === "agmStartStopBatteryProcurement"
+                              ? agmStartStopBatteryProcurementCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -3677,6 +3774,8 @@ export function BlogArticlePage({
                           ? ["process-data", "single-sample", "assembly-impact", "statistical-review", "sampling-plan", "traceability", "viking-coordination"]
                           : page === "agmSeparatorSupplyChain"
                             ? ["starting-material", "fiber-condition", "wet-laid-forming", "conversion", "quality-boundary", "traceability", "viking-coordination"]
+                            : page === "agmStartStopBatteryProcurement"
+                              ? ["market-signal", "start-stop-duty", "separator-role", "measurement-conditions", "consistency", "procurement-checklist", "viking-coordination"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
