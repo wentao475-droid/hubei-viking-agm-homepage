@@ -22,6 +22,7 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
       PORT: String(port),
       INQUIRY_DB_PATH: dbPath,
       INQUIRY_ALLOWED_ORIGINS: "https://www.vikingagm.com",
+      INQUIRY_RATE_LIMIT_MAX: "10",
       INQUIRY_TEST_CONTACTS: "qa@vikingagm.com",
       ADMIN_USERNAME: "admin",
       ADMIN_PASSWORD: "test-password",
@@ -88,7 +89,7 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   });
   assert.equal(duplicate.status, 202);
   assert.equal(changedRequirement.status, 202);
-  assert.equal(ad.status, 202);
+  assert.equal(ad.status, 204);
   assert.equal(internal.status, 202);
 
   await new Promise((resolve) => setTimeout(resolve, 80));
@@ -96,16 +97,17 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   context.after(() => db.close());
   const rows = db
     .prepare(
-      "SELECT id, lead_grade, classification_reason, duplicate_of_id, notification_status FROM inquiries ORDER BY id"
+      "SELECT id, name, lead_grade, classification_reason, duplicate_of_id, notification_status FROM inquiries ORDER BY id"
     )
     .all();
+  assert.equal(rows.length, 4);
+  assert.ok(rows.every((row) => row.name !== "Web Agency"));
   assert.equal(rows[0].lead_grade, "D");
   assert.equal(rows[1].lead_grade, "E");
   assert.equal(rows[1].classification_reason, "duplicate_submission");
   assert.equal(rows[1].duplicate_of_id, rows[0].id);
   assert.equal(rows[2].lead_grade, "D");
-  assert.equal(rows[3].classification_reason, "unrelated_solicitation");
-  assert.equal(rows[4].classification_reason, "internal_test");
+  assert.equal(rows[3].classification_reason, "internal_test");
   assert.equal(rows[1].notification_status, "skipped");
 
   const login = await fetch(`${baseUrl}/admin/login`, {
@@ -121,7 +123,7 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   assert.equal(workQueue.total, 2);
   assert.equal(workQueue.inquiries[0].lead_grade, "D");
   assert.equal(workQueue.stats.D, 2);
-  assert.equal(workQueue.stats.E, 3);
+  assert.equal(workQueue.stats.E, 2);
 
   const manual = await fetch(
     `${baseUrl}/admin/api/inquiries/${rows[0].id}/update`,
@@ -142,7 +144,7 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   assert.equal((await manual.json()).inquiry.lead_grade, "B");
 
   const legacy = await fetch(
-    `${baseUrl}/admin/api/inquiries/${rows[3].id}/status`,
+    `${baseUrl}/admin/api/inquiries/${rows[0].id}/status`,
     {
       method: "POST",
       headers: {
@@ -163,7 +165,7 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
       Cookie: cookie,
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ ids: [rows[1].id, rows[4].id], lead_grade: "E" })
+    body: JSON.stringify({ ids: [rows[1].id, rows[3].id], lead_grade: "E" })
   });
   assert.equal(bulk.status, 200);
   assert.equal((await bulk.json()).updated, 2);

@@ -50,7 +50,7 @@ const inquiryRateLimitWindowMs = positiveIntegerEnv(
   "INQUIRY_RATE_LIMIT_WINDOW_MS",
   10 * 60 * 1000
 );
-const inquiryRateLimitMax = positiveIntegerEnv("INQUIRY_RATE_LIMIT_MAX", 10);
+const inquiryRateLimitMax = positiveIntegerEnv("INQUIRY_RATE_LIMIT_MAX", 3);
 const inquiryRateLimits = new Map();
 const leadGrades = new Set(["A", "B", "C", "D", "E"]);
 const inquiryTestContacts = normalizeTestContacts(
@@ -369,6 +369,12 @@ app.post("/api/inquiry", (request, response) => {
     duplicateOfId: duplicate?.id || null,
     testContacts: inquiryTestContacts
   });
+
+  if (classification.classification_reason === "unrelated_solicitation") {
+    response.status(204).end();
+    return;
+  }
+
   const skipNotifications = classification.lead_grade === "E";
   const storedRecord = {
     ...record,

@@ -80,16 +80,17 @@ test("product intent prevents an unrelated-keyword false positive", () => {
   assert.equal(result.lead_grade, "D");
 });
 
-test("a selected product format prevents automatic E classification", () => {
+test("a selected product format cannot bypass a clear SEO solicitation", () => {
   const result = classifyInquiry({
     inquiry: inquiry({
       interested_product: "Rolls",
       message:
-        "I noticed your website and wanted to reach out about our content writing services."
+        "I noticed your website and can send our Google SEO services package to increase your organic traffic."
     })
   });
 
-  assert.equal(result.lead_grade, "D");
+  assert.equal(result.lead_grade, "E");
+  assert.equal(result.classification_reason, "unrelated_solicitation");
 });
 
 test("contact identity normalizes email casing and surrounding text", () => {

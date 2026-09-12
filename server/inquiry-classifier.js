@@ -1,16 +1,5 @@
 import crypto from "node:crypto";
 
-const productIntentPatterns = [
-  /\bagm\b/i,
-  /battery\s+separator/i,
-  /separator\s+(roll|sheet)/i,
-  /\bvrla\b/i,
-  /lead[-\s]?acid/i,
-  /\bups\s+batter/i,
-  /energy\s+storage\s+batter/i,
-  /隔板|铅酸|蓄电池|电池|卷材|片材|吸液/u
-];
-
 const unrelatedServicePatterns = [
   /\bseo\b/i,
   /web(site)?\s+(design|development|redesign)/i,
@@ -27,7 +16,6 @@ const solicitationPatterns = [
   /\bwe\s+help\b/i,
   /\bwould\s+you\s+like\b/i,
   /\bcan\s+i\s+send\b/i,
-  /\breach(?:ing)?\s+out\b/i,
   /\bour\s+services?\b/i,
   /manufacturer\s+in\s+china/i,
   /looking\s+over\s+(your\s+)?(site|website|vikingagm\.com)/i,
@@ -61,13 +49,6 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
       inquiry.message
     ].join(" ")
   );
-  const hasSelectedProductIntent = [
-    inquiry.application,
-    inquiry.interested_product
-  ].some(hasMeaningfulSelection);
-  const hasProductIntent =
-    hasSelectedProductIntent ||
-    productIntentPatterns.some((pattern) => pattern.test(combined));
   const hasUnrelatedService = unrelatedServicePatterns.some((pattern) =>
     pattern.test(combined)
   );
@@ -75,7 +56,7 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
     pattern.test(combined)
   );
 
-  if (!hasProductIntent && hasUnrelatedService && hasSolicitation) {
+  if (hasUnrelatedService && hasSolicitation) {
     return automaticGrade("E", "unrelated_solicitation");
   }
 
@@ -152,15 +133,5 @@ function isInternalTest(inquiry, testContacts) {
     configuredContacts.has(identity) ||
     testNames.has(name) ||
     message.startsWith("[test]")
-  );
-}
-
-function hasMeaningfulSelection(value) {
-  const normalized = normalizeText(value);
-  return Boolean(
-    normalized &&
-      !new Set(["-", "n/a", "na", "none", "not sure", "暂不确定"]).has(
-        normalized
-      )
   );
 }
