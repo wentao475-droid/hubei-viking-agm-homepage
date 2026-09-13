@@ -81,6 +81,13 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
     message:
       "I noticed design-related issues on your website and wanted to reach out. We help manufacturers with website design."
   });
+  const retailAd = await submit(baseUrl, {
+    name: "Retail Seller",
+    contact: "sales@bags.example",
+    company: "Bags Store",
+    message:
+      "Our new backpacks and sling bags just released. Order now at 50% off with FREE Shipping."
+  });
   const internal = await submit(baseUrl, {
     name: "QA",
     contact: "qa@vikingagm.com",
@@ -90,6 +97,7 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   assert.equal(duplicate.status, 202);
   assert.equal(changedRequirement.status, 202);
   assert.equal(ad.status, 204);
+  assert.equal(retailAd.status, 204);
   assert.equal(internal.status, 202);
 
   await new Promise((resolve) => setTimeout(resolve, 80));
@@ -102,6 +110,7 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
     .all();
   assert.equal(rows.length, 4);
   assert.ok(rows.every((row) => row.name !== "Web Agency"));
+  assert.ok(rows.every((row) => row.name !== "Retail Seller"));
   assert.equal(rows[0].lead_grade, "D");
   assert.equal(rows[1].lead_grade, "E");
   assert.equal(rows[1].classification_reason, "duplicate_submission");

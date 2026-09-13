@@ -8,8 +8,44 @@ const unrelatedServicePatterns = [
   /guest\s+post|blog\s+writing|content\s+writing|backlinks?/i,
   /audio\s+(version|conversion)/i,
   /amusement\s+rides?/i,
+  /digital\s+marketing|social\s+media\s+marketing|google\s+ads|ppc\b/i,
+  /lead\s+generation|email\s+marketing|marketing\s+agency/i,
+  /app\s+(design|development)|software\s+development|graphic\s+design/i,
+  /virtual\s+assistant|data\s+scraping|call\s+center/i,
   /increase\s+(your\s+)?(traffic|rankings?)/i,
-  /网站设计|网站开发|搜索优化|推广视频|博客代写|外链|游乐设备/u
+  /网站设计|网站开发|搜索优化|推广视频|博客代写|外链|游乐设备|数字营销|社媒营销|获客服务|邮件营销|软件开发/u
+];
+
+const unrelatedProductPatterns = [
+  /\b(backpacks?|sling bags?|handbags?|luggage|wallets?|shoes|sneakers?|clothing|apparel|jewell?ry|watches?|cosmetics?|skincare|supplements?|toys?|pet\s+(food|supplies)|furniture|mattresses?|travel\s+packages?|car\s+rental)\b/i,
+  /背包|双肩包|斜挎包|手提包|行李箱|钱包|鞋服|珠宝|手表|化妆品|护肤品|保健品|玩具|宠物用品|家具|床垫|旅游套餐|租车/u
+];
+
+const retailPromotionPatterns = [
+  /\b(order|buy|shop)\s+(now|today|ours)\b/i,
+  /\b\d{1,3}%\s+off\b/i,
+  /\bfree\s+shipping\b/i,
+  /\b(new|just)\s+released\b/i,
+  /\b(available|on sale|limited offer|special offer)\b/i,
+  /限时优惠|立即购买|免费配送|包邮|新品上市/u
+];
+
+const highRiskSpamPatterns = [
+  /\b(casino|sportsbook|betting|slot\s+machine|porn|escort)\b/i,
+  /\b(crypto\s+(investment|trading|signal)|guaranteed\s+returns?)\b/i,
+  /博彩|赌博|色情|成人服务|虚拟币投资|稳赚/u
+];
+
+const genericPromotionPatterns = [
+  /\b(i hope this email finds you well|wanted to let you know)\b/i,
+  /\b(perfect for|high[-\s]quality materials|everyday use)\b/i,
+  /\b(check out|visit our (store|shop)|learn more)\b/i,
+  /希望这封邮件对您有帮助|新品推荐|欢迎选购/u
+];
+
+const relevantInquiryPatterns = [
+  /\b(agm|separator|glass\s+fiber|vrla|lead[-\s]?acid|battery|ups|start[-\s]?stop)\b/i,
+  /隔板|玻璃纤维|蓄电池|铅酸电池|启停电池|不间断电源/u
 ];
 
 const solicitationPatterns = [
@@ -55,8 +91,35 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
   const hasSolicitation = solicitationPatterns.some((pattern) =>
     pattern.test(combined)
   );
+  const hasUnrelatedProduct = unrelatedProductPatterns.some((pattern) =>
+    pattern.test(combined)
+  );
+  const hasRetailPromotion = retailPromotionPatterns.some((pattern) =>
+    pattern.test(combined)
+  );
+  const hasHighRiskSpam = highRiskSpamPatterns.some((pattern) =>
+    pattern.test(combined)
+  );
+  const hasGenericPromotion = genericPromotionPatterns.some((pattern) =>
+    pattern.test(combined)
+  );
+  const inquiryIntent = normalizeText(
+    [inquiry.application, inquiry.interested_product, inquiry.message].join(" ")
+  );
+  const hasRelevantInquiry = relevantInquiryPatterns.some((pattern) =>
+    pattern.test(inquiryIntent)
+  );
+  const hasExternalLink = /\bhttps?:\/\/|\bwww\./i.test(combined);
 
-  if (hasUnrelatedService && hasSolicitation) {
+  if (
+    hasHighRiskSpam ||
+    (hasUnrelatedService && hasSolicitation) ||
+    (hasUnrelatedProduct && (hasRetailPromotion || hasGenericPromotion)) ||
+    (!hasRelevantInquiry &&
+      hasExternalLink &&
+      hasRetailPromotion &&
+      hasGenericPromotion)
+  ) {
     return automaticGrade("E", "unrelated_solicitation");
   }
 

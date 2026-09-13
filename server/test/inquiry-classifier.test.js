@@ -93,6 +93,52 @@ test("a selected product format cannot bypass a clear SEO solicitation", () => {
   assert.equal(result.classification_reason, "unrelated_solicitation");
 });
 
+test("retail backpack promotion is discarded", () => {
+  const result = classifyInquiry({
+    inquiry: inquiry({
+      message:
+        "Our new BANGE backpacks and sling bags just released. Order now at 50% off with FREE Shipping."
+    })
+  });
+
+  assert.equal(result.lead_grade, "E");
+  assert.equal(result.classification_reason, "unrelated_solicitation");
+});
+
+test("high-risk gambling promotion is discarded", () => {
+  const result = classifyInquiry({
+    inquiry: inquiry({
+      message: "Visit our online casino for guaranteed returns from crypto trading."
+    })
+  });
+
+  assert.equal(result.lead_grade, "E");
+  assert.equal(result.classification_reason, "unrelated_solicitation");
+});
+
+test("generic retail campaign with a shop link is discarded", () => {
+  const result = classifyInquiry({
+    inquiry: inquiry({
+      message:
+        "I hope this email finds you well. Our new collection is available now with free shipping: https://shop.example"
+    })
+  });
+
+  assert.equal(result.lead_grade, "E");
+  assert.equal(result.classification_reason, "unrelated_solicitation");
+});
+
+test("battery inquiry with a company link remains allowed", () => {
+  const result = classifyInquiry({
+    inquiry: inquiry({
+      message:
+        "We need AGM separator rolls for VRLA batteries. Our company details are at https://buyer.example."
+    })
+  });
+
+  assert.equal(result.lead_grade, "D");
+});
+
 test("contact identity normalizes email casing and surrounding text", () => {
   assert.equal(
     normalizeContactIdentity({
