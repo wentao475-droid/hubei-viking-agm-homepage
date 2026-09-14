@@ -199,6 +199,23 @@ export const resourceArticles: ResourceArticle[] = [
     }
   },
   {
+    id: "agm-separator-third-pole",
+    category: "buyerGuides",
+    publishedAt: "2026-09-13",
+    title: {
+      en: "The AGM Separator ‘Third Pole’ Explained",
+      zh: "AGM 隔板“第三极”到底是什么？"
+    },
+    description: {
+      en: "Understand plate separation, electrolyte retention, oxygen-pathway conditions and complete-battery verification boundaries.",
+      zh: "了解极板隔离、电解液保持、氧气通道条件以及整电池验证边界。"
+    },
+    href: {
+      en: "/blog/agm-separator-third-pole-explained/",
+      zh: "/zh/blog/agm-separator-third-pole-explained/"
+    }
+  },
+  {
     id: "manufacturing-quality-delivery",
     category: "manufacturingQuality",
     publishedAt: "2026-07-07",
@@ -365,7 +382,8 @@ const articleKindById: Record<string, string> = {
   "data-center-backup-power": "dataCenterBackupPowerAgmSeparator",
   "early-lead-acid-manufacturing-history": "earlyChinaLeadAcidBatteryManufacturing",
   "agm-separator-pressure-retention": "agmSeparatorPressureRetention",
-  "agm-separator-batch-process-control": "agmSeparatorBatchProcessControl"
+  "agm-separator-batch-process-control": "agmSeparatorBatchProcessControl",
+  "agm-separator-third-pole": "agmSeparatorThirdPole"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

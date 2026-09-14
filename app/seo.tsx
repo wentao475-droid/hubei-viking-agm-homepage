@@ -2052,6 +2052,35 @@ const agmStartStopBatteryProcurementSeo = {
   }
 } as const;
 
+const agmSeparatorThirdPoleSeo = {
+  en: {
+    path: "/blog/agm-separator-third-pole-explained/",
+    alternatePath: "/zh/blog/agm-separator-third-pole-explained/",
+    locale: "en_US",
+    language: "en",
+    siteName: "Viking AGM",
+    title: "AGM Separator ‘Third Pole’: What It Actually Does | Viking AGM",
+    description: "Understand why an AGM separator is sometimes called a battery’s ‘third pole’, and how plate separation, electrolyte retention, oxygen transport conditions and compression must be verified in the complete VRLA battery.",
+    keywords: ["AGM separator third pole", "AGM separator function", "VRLA oxygen transport", "AGM separator electrolyte retention"],
+    pageName: "The Battery’s ‘Third Pole’: What an AGM Separator Actually Does",
+    articleDescription: "A technical guide to the AGM separator’s role in plate separation, electrolyte retention, ion transport, oxygen-pathway conditions and compression within a VRLA battery system.",
+    breadcrumbs: ["Home", "Resources", "AGM Separator Third Pole"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-third-pole-explained/",
+    alternatePath: "/blog/agm-separator-third-pole-explained/",
+    locale: "zh_CN",
+    language: "zh-CN",
+    siteName: "湖北维京AGM",
+    title: "电池“第三极”是什么？AGM 隔板的实际作用 | 湖北维京AGM",
+    description: "解释 AGM 隔板为何被比喻为电池“第三极”，并说明极板隔离、电解液保持、氧气传输条件和压缩状态为何必须在完整 VRLA 电池中验证。",
+    keywords: ["AGM 隔板第三极", "AGM 隔板作用", "VRLA 氧气传输", "AGM 隔板电解液保持"],
+    pageName: "电池的“第三极”没有端子：AGM 隔板到底在做什么？",
+    articleDescription: "说明 AGM 隔板在极板隔离、电解液保持、离子传输、氧气通道和压缩贴合中的作用，以及整电池验证边界。",
+    breadcrumbs: ["首页", "资料", "AGM 隔板“第三极”"]
+  }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2817,6 +2846,27 @@ export function buildAgmStartStopBatteryProcurementMetadata(lang: Lang): Metadat
     path: current.path,
     enPath: "/blog/agm-start-stop-battery-separator-procurement-guide/",
     zhPath: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: { url: QUALITY_PREVIEW_IMAGE, width: 1200, height: 800 }
+  });
+}
+
+export function buildAgmSeparatorThirdPoleMetadata(lang: Lang): Metadata {
+  const current = seoContent(
+    "agmSeparatorThirdPole",
+    lang,
+    agmSeparatorThirdPoleSeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/agm-separator-third-pole-explained/",
+    zhPath: "/zh/blog/agm-separator-third-pole-explained/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -4477,6 +4527,58 @@ export function AgmStartStopBatteryProcurementStructuredData({
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },
         about: ["automotive AGM start-stop batteries", "AGM separator procurement", "separator thickness under pressure", "VRLA battery validation"],
+        inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name,
+          item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url
+        }))
+      }
+    ]
+  };
+
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorThirdPoleStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent(
+    "agmSeparatorThirdPole",
+    lang,
+    agmSeparatorThirdPoleSeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: current.pageName,
+        description: current.description,
+        inLanguage: current.language,
+        isPartOf: { "@id": `${SITE_URL}/#website` }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#blogposting`,
+        headline: current.pageName,
+        description: current.articleDescription,
+        image: QUALITY_PREVIEW_IMAGE,
+        url,
+        datePublished: "2026-09-13",
+        dateModified: "2026-09-13",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: ["AGM separator function", "VRLA lead-acid battery", "electrolyte retention", "oxygen transport conditions", "separator compression"],
         inLanguage: current.language
       },
       {

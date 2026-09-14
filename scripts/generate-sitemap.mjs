@@ -242,6 +242,14 @@ const pages = [
     secondaryLastmod: "2026-08-12"
   },
   {
+    en: "/blog/agm-separator-third-pole-explained/",
+    zh: "/zh/blog/agm-separator-third-pole-explained/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-09-13",
+    secondaryLastmod: "2026-09-13"
+  },
+  {
     en: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
     zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
     priority: "0.75",

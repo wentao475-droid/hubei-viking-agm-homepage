@@ -27,7 +27,8 @@ export type BlogArticleKind =
   | "agmSeparatorPressureRetention"
   | "agmSeparatorBatchProcessControl"
   | "agmSeparatorSupplyChain"
-  | "agmStartStopBatteryProcurement";
+  | "agmStartStopBatteryProcurement"
+  | "agmSeparatorThirdPole";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -3645,6 +3646,60 @@ const agmStartStopBatteryProcurementCopy = {
   }
 } as const;
 
+const agmSeparatorThirdPoleReferenceItems: Array<[string, string]> = [
+  ["CN105006540B — Battery Separator Production System and Production Method", "https://patents.google.com/patent/CN105006540B/zh"],
+  ["Sandia National Laboratories — SAND2014-17394B", "https://www.osti.gov/servlets/purl/1502636"],
+  ["Hollingsworth & Vose — AGM Battery Separators", "https://www.hollingsworth-vose.com/products/energy-solutions/agm-lead-battery/"],
+  ["Hollingsworth & Vose — Testing Standards", "https://www.hollingsworth-vose.com/innovation/testing-standards/"]
+];
+
+const agmSeparatorThirdPoleCopy = {
+  en: {
+    homePath: "/", languagePath: "/zh/blog/agm-separator-third-pole-explained/", quote: "Request a Sample",
+    nav: { company: "Company", quality: "Quality" },
+    hero: { eyebrow: "AGM Separator Guide", title: "The Battery’s ‘Third Pole’: What an AGM Separator Actually Does", subtitle: "Why the expression is a useful metaphor—not a third electrode—and what buyers should verify within a VRLA battery system.", secondary: "Review the technical boundary", image: { src: "/images/agm-quality-control-1200.webp", alt: "AGM separator quality inspection", width: 1200, height: 800 } },
+    intro: ["An AGM separator has no terminal and does not generate voltage, yet it is sometimes called the ‘third pole’ of a valve-regulated battery. The expression highlights its importance, but it is not a formal electrochemical classification.", "A more accurate description is a critical working interface: it separates the plates, retains electrolyte, supports ion-transport and oxygen-transport conditions, and contributes to plate-group contact. None of these functions independently determines battery life or power."],
+    sections: [
+      { eyebrow: "Meaning", title: "A useful metaphor, not a third electrode", text: "CN105006540B uses ‘third pole’ in its background discussion of AGM separators, while its claims concern a separator production system and method. For purchasing and engineering teams, the phrase is best used as a reminder to evaluate the separator in the complete battery—not as a new electrode category." },
+      { eyebrow: "Electrical separation", title: "It blocks direct electronic contact while ions move through wetted pores", text: "The separator keeps positive and negative plates from directly touching and reduces internal-short risk. It should not provide a direct electronic path; ions involved in battery reactions move through electrolyte-wetted pores. Resistance therefore needs defined electrolyte, plate and test conditions before it can be interpreted." },
+      { eyebrow: "Electrolyte", title: "Glass microfibers retain and distribute electrolyte", text: "In VRLA batteries, the glass-fiber pore structure holds and distributes electrolyte between plates. Higher acid absorption is not automatically better: pore condition, plate absorption demand, acid volume and assembly conditions must be matched to the actual battery design." },
+      { eyebrow: "Oxygen pathway", title: "The separator supports oxygen transport but does not complete recombination alone", text: "Partially saturated, connected pores can provide a path for oxygen generated at the positive plate to reach the negative plate, where it participates in water-forming reactions. State of charge, saturation, plate design, compression and temperature also influence this mechanism; separator data alone cannot prove oxygen-recombination performance." },
+      { eyebrow: "Compression", title: "Contact and compression are part of the design relationship", text: "Thickness, compressed state and recovery interact with plate dimensions, group construction and assembly pressure. Material results are useful for screening and troubleshooting, but they do not predict complete-battery life from one thickness, absorption or compression value." },
+      { eyebrow: "Project review", title: "Validate the separator in the finished battery", text: "Confirm dimensions, material data, acid filling and assembly conditions first; then validate with the agreed complete-battery test plan. Field behavior adds charging strategy, temperature and operating-use effects that a material test cannot reproduce by itself." }
+    ],
+    parameters: [["Plate separation", "Thickness, dimensions and mechanical condition must support assembly without proving a complete battery structure."], ["Electrolyte retention", "Porosity, basis weight and absorption-related behavior require matching with acid volume and plates."], ["Oxygen-transport conditions", "Pore and liquid-retention state are only one part of gas-management behavior."], ["Contact and compression", "Thickness, compression and recovery must be reviewed with the plate group and assembly method."]],
+    formats: { eyebrow: "Supply format", title: "Match the separator form to the battery line", items: [["AGM separator rolls", "Share target width, thickness and roll requirements for the production workflow.", "/images/viking-finished-separator-roll-900.webp", "Finished AGM separator roll"], ["AGM separator sheets", "Share sheet dimensions and assembly conditions for sample discussion.", "/images/sheets1-900.webp", "AGM separator sheets"]] },
+    checklist: { eyebrow: "Sample review", title: "Information to share for a relevant evaluation", text: "A separator sample should be discussed with the battery system rather than as an isolated material grade.", items: ["Battery type and plate or group structure", "Target thickness, width or sheet dimensions", "Acid volume, filling and assembly conditions", "Plate-group pressure and agreed test method", "Sample, pilot or mass-production stage"] },
+    comparison: { eyebrow: "Function boundary", title: "Four functions that still need complete-battery verification", columns: ["Separator function", "Related material condition", "Verification boundary"], rows: [["Separate plates", "Thickness, dimensions and strength", "Material dimensions do not validate the complete battery structure."], ["Retain electrolyte", "Porosity, basis weight and absorption-related behavior", "More absorption does not replace design matching."], ["Support oxygen transport", "Pore, liquid-retention and compression state", "The separator is not the sole agent of oxygen recombination."], ["Maintain contact", "Thickness, compression and recovery", "Evaluate with plates, pressure and complete-battery testing."]] },
+    references: { eyebrow: "Sources and technical boundary", title: "Public materials used for this guide", text: "The patent’s ‘third pole’ wording is treated only as an explanatory expression. The other public materials provide technical context; they do not verify Viking specifications or guarantee battery life, capacity, power or certification.", items: agmSeparatorThirdPoleReferenceItems },
+    related: { eyebrow: "Related pages", title: "Continue the AGM separator review", items: [["Key AGM Separator Parameters", "/blog/key-technical-parameters-of-agm-separator/"], ["How to Choose an AGM Separator", "/blog/how-to-choose-agm-separator/"], ["AGM Separator Pressure Retention", "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"], ["Request a Sample & Specification Match", "/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.en.inquiry, title: "Discuss AGM separator conditions for your battery", text: "Share your battery type, plate-group structure, separator specification, assembly pressure and target operating conditions. We can first align the items to be checked and the boundary of complete-battery validation.", checklist: ["Battery application and plate-group structure", "Target thickness, width or sheet size", "Acid filling and assembly conditions", "Test method and project stage"], placeholders: { ...articleCopy.en.inquiry.placeholders, message: "Battery type, plate-group structure, separator dimensions, acid filling, assembly pressure, test conditions and project stage" } },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    homePath: "/zh/", languagePath: "/blog/agm-separator-third-pole-explained/", quote: "申请样品",
+    nav: { company: "公司", quality: "质量" },
+    hero: { eyebrow: "AGM 隔板指南", title: "电池的“第三极”没有端子：AGM 隔板到底在做什么？", subtitle: "“第三极”只是强调重要性的比喻，不是第三个电极；采购和验证仍应回到完整 VRLA 电池系统。", secondary: "查看技术边界", image: { src: "/images/agm-quality-control-1200.webp", alt: "AGM 隔板质量检查", width: 1200, height: 800 } },
+    intro: ["AGM 隔板没有端子，也不产生电压，却常被称为阀控式电池的“第三极”。这个说法能够提示它的重要性，但并非正式的电化学分类。", "更准确地说，它是电池内部的关键工作界面：隔离极板、保持电解液、支持离子与氧气传输条件，并参与极群接触。任何一项功能都不能单独决定电池寿命或功率表现。"],
+    sections: [
+      { eyebrow: "含义", title: "有用的比喻，不是第三个电极", text: "CN105006540B 在背景技术中使用了“第三极”的表述，但其权利要求针对的是隔板生产系统和方法。对采购与工程团队而言，这个说法更适合用来提醒隔板的重要性，而非把隔板归为新的电极类别。" },
+      { eyebrow: "电隔离", title: "阻止电子直接接触，同时让离子在润湿孔隙中迁移", text: "隔板使正负极板避免直接接触，降低内部短路风险。它不应提供电子的直接通路；参与反应的离子通过被电解液润湿的孔隙迁移。因此，电阻必须结合电解液状态、极板设计和测试方法理解。" },
+      { eyebrow: "电解液", title: "玻璃微纤维保持并分配电解液", text: "VRLA 电池中，玻璃纤维孔隙结构用于保持和分配极板之间的电解液。吸酸量并非越高越好，还需要与孔隙状态、极板吸液需求、酸量和装配条件相匹配。" },
+      { eyebrow: "氧气通道", title: "支持氧气传输，但不独自完成氧复合", text: "部分饱和、连通的孔隙可为正极析出的氧气向负极迁移提供路径，氧气在负极参与生成水的反应。荷电状态、饱和度、极板设计、压缩状态和温度也会影响该机制，不能仅凭隔板参数推断氧复合表现。" },
+      { eyebrow: "压缩", title: "贴合和压缩是另一组设计关系", text: "厚度、受压状态和回弹表现会与极板尺寸、极群结构和装配压力相互作用。材料数据可用于筛选和排查，但不能用一个厚度、吸酸或压缩数值推导整电池寿命。" },
+      { eyebrow: "项目验证", title: "在完整电池中验证隔板匹配性", text: "先确认尺寸、材料数据、加酸与装配条件，再按双方同意的整电池测试计划验证。现场表现还会叠加充电策略、温度和使用工况，这些都不是单项材料测试能够独立复现的。" }
+    ],
+    parameters: [["极板隔离", "厚度、尺寸和机械状态应满足装配，但不能单独证明完整电池结构已验证。"], ["电解液保持", "孔隙率、克重和吸酸相关表现需结合酸量与极板匹配。"], ["氧气传输条件", "孔隙、保液和压缩状态只是气体管理行为的一部分。"], ["贴合与压缩", "厚度、压缩和回弹应与极群和装配方法一同确认。"]],
+    formats: { eyebrow: "供应形式", title: "让隔板形式适配电池产线", items: [["AGM 隔板卷材", "结合生产流程沟通目标宽度、厚度和卷材要求。", "/images/viking-finished-separator-roll-900.webp", "AGM 隔板成品卷"], ["AGM 隔板片材", "结合片材尺寸和装配条件开展样品沟通。", "/images/sheets1-900.webp", "AGM 隔板片材"]] },
+    checklist: { eyebrow: "样品评审", title: "获得相关评估前建议提供的信息", text: "隔板样品应放在电池系统中讨论，而不是作为孤立的材料等级。", items: ["电池类型与极板或极群结构", "目标厚度、宽度或片材尺寸", "酸量、加酸与装配条件", "极群压力和约定测试方法", "样品、试制或批量阶段"] },
+    comparison: { eyebrow: "功能边界", title: "四项功能仍需整电池验证", columns: ["隔板功能", "相关材料状态", "验证边界"], rows: [["隔离极板", "厚度、尺寸和强度", "材料尺寸合格不代表完整电池结构已验证。"], ["保持电解液", "孔隙率、克重和吸酸相关表现", "更高吸酸量不能替代设计匹配。"], ["支持氧气传输", "孔隙、保液和压缩状态", "隔板不是氧复合的唯一作用者。"], ["维持贴合", "厚度、压缩和回弹", "需结合极板、压力和整电池测试评估。"]] },
+    references: { eyebrow: "来源与技术边界", title: "本指南使用的公开资料", text: "专利中的“第三极”仅作为说明性表达使用。其他公开资料仅提供技术背景，不用于证明维京产品规格，也不构成对电池寿命、容量、功率或认证的保证。", items: agmSeparatorThirdPoleReferenceItems },
+    related: { eyebrow: "相关页面", title: "继续了解 AGM 隔板评估", items: [["AGM 隔板技术参数", "/zh/blog/key-technical-parameters-of-agm-separator/"], ["如何选择 AGM 隔板", "/zh/blog/how-to-choose-agm-separator/"], ["AGM 隔板填酸与循环后的压力保持", "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"], ["申请样品与规格匹配", "/zh/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.zh.inquiry, title: "沟通您的 AGM 隔板使用条件", text: "请提供电池类型、极群结构、隔板规格、装配压力和目标工况。我们可先对齐需要检查的项目及后续整电池验证边界。", checklist: ["电池应用与极群结构", "目标厚度、宽度或片材尺寸", "加酸与装配条件", "测试方法与项目阶段"], placeholders: { ...articleCopy.zh.inquiry.placeholders, message: "电池类型、极群结构、隔板尺寸、加酸、装配压力、测试条件和项目阶段" } },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -3705,6 +3760,8 @@ export function BlogArticlePage({
                             ? agmSeparatorSupplyChainCopy[primaryLang]
                             : page === "agmStartStopBatteryProcurement"
                               ? agmStartStopBatteryProcurementCopy[primaryLang]
+                              : page === "agmSeparatorThirdPole"
+                                ? agmSeparatorThirdPoleCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -3776,6 +3833,8 @@ export function BlogArticlePage({
                             ? ["starting-material", "fiber-condition", "wet-laid-forming", "conversion", "quality-boundary", "traceability", "viking-coordination"]
                             : page === "agmStartStopBatteryProcurement"
                               ? ["market-signal", "start-stop-duty", "separator-role", "measurement-conditions", "consistency", "procurement-checklist", "viking-coordination"]
+                              : page === "agmSeparatorThirdPole"
+                                ? ["meaning", "electrical-separation", "electrolyte", "oxygen-pathway", "compression", "project-review"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {

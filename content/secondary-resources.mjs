@@ -12,7 +12,8 @@ export const articleKinds = [
   "dataCenterBackupPowerAgmSeparator",
   "earlyChinaLeadAcidBatteryManufacturing",
   "agmSeparatorPressureRetention",
-  "agmSeparatorBatchProcessControl"
+  "agmSeparatorBatchProcessControl",
+  "agmSeparatorThirdPole"
 ];
 
 export const articleDefinitions = {
@@ -27,7 +28,8 @@ export const articleDefinitions = {
   dataCenterBackupPowerAgmSeparator: ["agm-separator-for-data-center-backup-power", "industryApplications", "2026-08-07", "2026-08-07"],
   earlyChinaLeadAcidBatteryManufacturing: ["how-chinas-earliest-lead-acid-batteries-were-made", "manufacturingQuality", "2026-08-11", "2026-08-11"],
   agmSeparatorPressureRetention: ["agm-separator-pressure-retention-after-acid-filling-and-cycling", "manufacturingQuality", "2026-08-12", "2026-08-12"],
-  agmSeparatorBatchProcessControl: ["agm-separator-batch-consistency-and-process-control", "manufacturingQuality", "2026-08-12", "2026-08-12"]
+  agmSeparatorBatchProcessControl: ["agm-separator-batch-consistency-and-process-control", "manufacturingQuality", "2026-08-12", "2026-08-12"],
+  agmSeparatorThirdPole: ["agm-separator-third-pole-explained", "buyerGuides", "2026-09-13", "2026-09-13"]
 };
 
 const images = {
@@ -42,7 +44,8 @@ const images = {
   dataCenterBackupPowerAgmSeparator: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
   earlyChinaLeadAcidBatteryManufacturing: ["/images/agm-hero-production-1600.webp", 1600, 1000],
   agmSeparatorPressureRetention: ["/images/agm-quality-control-1200.webp", 1200, 800],
-  agmSeparatorBatchProcessControl: ["/images/agm-quality-control-1200.webp", 1200, 800]
+  agmSeparatorBatchProcessControl: ["/images/agm-quality-control-1200.webp", 1200, 800],
+  agmSeparatorThirdPole: ["/images/agm-quality-control-1200.webp", 1200, 800]
 };
 
 export const secondaryResourceData = {
@@ -782,9 +785,34 @@ const dataCenterReferenceItems = [
   ["SMM — lead-acid batteries in storage and base-station backup", "https://news.smm.cn/news/103776664"]
 ];
 
+const thirdPoleTopics = {
+  vi: { title: "‘Cực thứ ba’ của ắc quy là gì? Tấm ngăn AGM thực sự làm gì?", summary: "‘Cực thứ ba’ chỉ là phép ẩn dụ. Tấm ngăn AGM phải được đánh giá cùng toàn bộ hệ VRLA về cách ly bản cực, giữ điện phân, đường oxy và nén.", intro: "Tấm ngăn AGM không có đầu cực và không tạo điện áp. Nó là giao diện làm việc quan trọng giữa các bản cực, không phải điện cực thứ ba.", sections: [["Ý nghĩa", "Ẩn dụ hữu ích, không phải điện cực thứ ba", "Cụm từ này nhấn mạnh tầm quan trọng của tấm ngăn; không phải phân loại điện hóa chính thức."], ["Cách ly", "Ngăn tiếp xúc điện tử trực tiếp", "Tấm ngăn giữ hai bản cực tách nhau, còn ion di chuyển qua các lỗ đã thấm điện phân."], ["Điện phân", "Sợi thủy tinh giữ và phân phối axit", "Độ hấp thụ cần phù hợp với lỗ rỗng, lượng axit, bản cực và điều kiện lắp ráp."], ["Oxy", "Hỗ trợ đường vận chuyển oxy", "Lỗ liên thông và trạng thái bão hòa một phần chỉ là một phần của cơ chế tái hợp oxy."], ["Nén", "Tiếp xúc và nén cần được phối hợp", "Độ dày và trạng thái nén phải được xem cùng nhóm bản cực và phương pháp lắp ráp."], ["Xác nhận", "Kiểm tra trong ắc quy hoàn chỉnh", "Dữ liệu vật liệu hỗ trợ sàng lọc; thử nghiệm ắc quy hoàn chỉnh mới xác nhận mức phù hợp."]], parameters: [["Cách ly bản cực", "Độ dày, kích thước và trạng thái cơ học."], ["Giữ điện phân", "Độ rỗng, định lượng và đặc tính liên quan đến hấp thụ."], ["Đường oxy", "Lỗ rỗng, trạng thái giữ chất lỏng và nén."], ["Tiếp xúc", "Độ dày, nén và hồi phục."]], checklist: ["Loại ắc quy và cấu trúc nhóm bản cực", "Độ dày, chiều rộng hoặc kích thước tấm", "Lượng axit và điều kiện lắp ráp", "Áp lực nhóm bản cực và phương pháp thử", "Giai đoạn mẫu hoặc sản xuất"] },
+  ko: { title: "배터리의 ‘제3극’이란? AGM 분리막이 실제로 하는 일", summary: "‘제3극’은 비유일 뿐입니다. AGM 분리막은 판 분리, 전해액 유지, 산소 통로 및 압축 상태를 VRLA 배터리 전체에서 검증해야 합니다.", intro: "AGM 분리막에는 단자가 없고 전압을 만들지 않습니다. 이는 제3 전극이 아니라 극판 사이의 중요한 작동 인터페이스입니다.", sections: [["의미", "유용한 비유이지 제3 전극은 아님", "이 표현은 분리막의 중요성을 강조하지만 공식 전기화학 분류는 아닙니다."], ["절연", "직접 전자 접촉 방지", "분리막은 양·음극판의 직접 접촉을 막고, 이온은 전해액으로 젖은 기공을 통해 이동합니다."], ["전해액", "유리 미세섬유가 전해액을 유지·분배", "흡액량은 기공, 산량, 극판 및 조립 조건과 함께 맞춰야 합니다."], ["산소", "산소 이동 조건 지원", "연결 기공과 부분 포화는 산소 재결합 조건의 한 요소일 뿐입니다."], ["압축", "접촉과 압축의 조화", "두께와 압축 상태는 극군 구조 및 조립 방법과 함께 검토해야 합니다."], ["검증", "완성 배터리에서 확인", "소재 데이터는 선별에 도움이 되지만 적합성은 완성 배터리 시험으로 확인합니다."]], parameters: [["극판 분리", "두께, 치수 및 기계적 상태."], ["전해액 유지", "공극률, 평량 및 흡액 관련 거동."], ["산소 통로", "기공, 액 보유 상태 및 압축."], ["접촉", "두께, 압축 및 회복."]], checklist: ["배터리 종류와 극군 구조", "목표 두께·폭 또는 시트 치수", "산량과 조립 조건", "극군 압력 및 시험 방법", "샘플 또는 양산 단계"] },
+  ja: { title: "電池の「第三極」とは？AGM セパレーターの実際の役割", summary: "「第三極」は比喩です。AGM セパレーターは極板分離、電解液保持、酸素経路、圧縮状態を VRLA 電池全体で評価する必要があります。", intro: "AGM セパレーターには端子がなく、電圧も発生させません。第三の電極ではなく、極板間の重要な機能界面です。", sections: [["意味", "有用な比喩であり第三電極ではない", "この表現は重要性を示しますが、正式な電気化学分類ではありません。"], ["分離", "直接の電子接触を防ぐ", "セパレーターは極板の接触を防ぎ、イオンは電解液で濡れた孔を通って移動します。"], ["電解液", "ガラス微細繊維が電解液を保持・分配", "吸液性は孔構造、酸量、極板、組立条件と合わせて検討します。"], ["酸素", "酸素移動の条件を支える", "連通孔と部分飽和は酸素再結合条件の一部にすぎません。"], ["圧縮", "接触と圧縮の整合", "厚さと圧縮状態は極群構造・組立方法とともに確認します。"], ["検証", "完成電池で検証する", "材料データは選定を助けますが、適合性は完成電池試験で確認します。"]], parameters: [["極板分離", "厚さ、寸法、機械的状態。"], ["電解液保持", "空隙率、坪量、吸液関連特性。"], ["酸素経路", "孔構造、保液状態、圧縮。"], ["接触", "厚さ、圧縮、復元性。"]], checklist: ["電池種と極群構造", "目標厚さ・幅またはシート寸法", "酸量と組立条件", "極群圧力と試験方法", "サンプルまたは量産段階"] },
+  es: { title: "¿Qué es el ‘tercer polo’ de una batería? La función real del separador AGM", summary: "El ‘tercer polo’ es una metáfora. El separador AGM debe evaluarse en la batería VRLA completa: separación de placas, retención de electrolito, vías de oxígeno y compresión.", intro: "El separador AGM no tiene terminal ni produce voltaje. Es una interfaz de trabajo importante entre placas, no un tercer electrodo.", sections: [["Significado", "Una metáfora útil, no un tercer electrodo", "La expresión destaca la importancia del separador, pero no es una clasificación electroquímica formal."], ["Separación", "Evita el contacto electrónico directo", "Mantiene separadas las placas y los iones migran por poros humedecidos con electrolito."], ["Electrolito", "Las microfibras retienen y distribuyen ácido", "La absorción debe ajustarse a poros, volumen de ácido, placas y montaje."], ["Oxígeno", "Apoya condiciones de transporte de oxígeno", "Los poros conectados y la saturación parcial son solo una parte de la recombinación."], ["Compresión", "El contacto y la compresión deben coincidir", "Espesor y compresión se revisan con el grupo de placas y el método de montaje."], ["Validación", "Confirmar en la batería completa", "Los datos de material ayudan a seleccionar; la validación de la batería completa confirma la compatibilidad."]], parameters: [["Separación de placas", "Espesor, dimensiones y condición mecánica."], ["Retención de electrolito", "Porosidad, gramaje y comportamiento de absorción."], ["Vía de oxígeno", "Poros, estado de líquido y compresión."], ["Contacto", "Espesor, compresión y recuperación."]], checklist: ["Tipo de batería y estructura del grupo", "Espesor, ancho o tamaño de lámina", "Volumen de ácido y montaje", "Presión del grupo y método de ensayo", "Etapa de muestra o producción"] },
+  pt: { title: "O que é o ‘terceiro polo’ da bateria? A função real do separador AGM", summary: "‘Terceiro polo’ é uma metáfora. O separador AGM deve ser avaliado na bateria VRLA completa: separação de placas, retenção de eletrólito, vias de oxigênio e compressão.", intro: "O separador AGM não tem terminal e não produz tensão. É uma interface funcional importante entre as placas, não um terceiro eletrodo.", sections: [["Significado", "Metáfora útil, não terceiro eletrodo", "A expressão destaca a importância do separador, mas não é uma classificação eletroquímica formal."], ["Separação", "Evita contato eletrônico direto", "Mantém as placas separadas; íons migram por poros umedecidos pelo eletrólito."], ["Eletrólito", "Microfibras retêm e distribuem ácido", "A absorção deve corresponder a poros, volume de ácido, placas e montagem."], ["Oxigênio", "Apoia condições para transporte de oxigênio", "Poros conectados e saturação parcial são apenas parte da recombinação."], ["Compressão", "Contato e compressão devem combinar", "Espessura e compressão são avaliadas com o grupo de placas e a montagem."], ["Validação", "Confirmar na bateria completa", "Dados do material ajudam na triagem; o ensaio da bateria completa confirma a compatibilidade."]], parameters: [["Separação de placas", "Espessura, dimensões e condição mecânica."], ["Retenção de eletrólito", "Porosidade, gramatura e comportamento de absorção."], ["Via de oxigênio", "Poros, retenção de líquido e compressão."], ["Contato", "Espessura, compressão e recuperação."]], checklist: ["Tipo de bateria e grupo de placas", "Espessura, largura ou tamanho de folha", "Volume de ácido e montagem", "Pressão do grupo e método de ensaio", "Fase de amostra ou produção"] },
+  ru: { title: "«Третий полюс» батареи: что на самом деле делает AGM-сепаратор?", summary: "«Третий полюс» — это метафора. AGM-сепаратор оценивают в полной VRLA-батарее: разделение пластин, удержание электролита, пути кислорода и сжатие.", intro: "У AGM-сепаратора нет вывода и он не создаёт напряжение. Это важный рабочий интерфейс между пластинами, а не третий электрод.", sections: [["Смысл", "Полезная метафора, но не третий электрод", "Выражение подчёркивает важность сепаратора, но не является формальной электрохимической классификацией."], ["Разделение", "Предотвращает прямой электронный контакт", "Сепаратор разделяет пластины, а ионы перемещаются по смоченным электролитом порам."], ["Электролит", "Микроволокна удерживают и распределяют кислоту", "Поглощение должно соответствовать порам, объёму кислоты, пластинам и сборке."], ["Кислород", "Поддерживает условия переноса кислорода", "Связанные поры и частичное насыщение — лишь часть рекомбинации кислорода."], ["Сжатие", "Контакт и сжатие должны быть согласованы", "Толщину и сжатие проверяют вместе с блоком пластин и способом сборки."], ["Проверка", "Подтверждать в готовой батарее", "Данные материала помогают отбору; совместимость подтверждает испытание полной батареи."]], parameters: [["Разделение пластин", "Толщина, размеры и механическое состояние."], ["Удержание электролита", "Пористость, масса на площадь и поглощение."], ["Путь кислорода", "Поры, удержание жидкости и сжатие."], ["Контакт", "Толщина, сжатие и восстановление."]], checklist: ["Тип батареи и конструкция блока", "Толщина, ширина или размер листа", "Объём кислоты и условия сборки", "Давление блока и метод испытаний", "Стадия образца или серийного выпуска"] }
+};
+
+const thirdPoleReferenceItems = [
+  ["CN105006540B — Battery Separator Production System and Production Method", "https://patents.google.com/patent/CN105006540B/zh"],
+  ["Sandia National Laboratories — SAND2014-17394B", "https://www.osti.gov/servlets/purl/1502636"],
+  ["Hollingsworth & Vose — AGM Battery Separators", "https://www.hollingsworth-vose.com/products/energy-solutions/agm-lead-battery/"],
+  ["Hollingsworth & Vose — Testing Standards", "https://www.hollingsworth-vose.com/innovation/testing-standards/"]
+];
+
+const thirdPoleReferenceNotes = {
+  vi: "Tài liệu công khai chỉ cung cấp bối cảnh kỹ thuật. Chúng không xác nhận thông số Viking hoặc bảo đảm kết quả của ắc quy hoàn chỉnh.",
+  ko: "공개 자료는 기술적 배경만 제공합니다. Viking 사양이나 완성 배터리 결과를 보증하지 않습니다.",
+  ja: "公開資料は技術的背景のみを示します。Viking の仕様や完成電池の結果を保証するものではありません。",
+  es: "Los materiales públicos solo aportan contexto técnico. No verifican especificaciones de Viking ni garantizan resultados de la batería completa.",
+  pt: "Os materiais públicos fornecem apenas contexto técnico. Não confirmam especificações da Viking nem garantem resultados da bateria completa.",
+  ru: "Открытые материалы дают только технический контекст. Они не подтверждают спецификации Viking и не гарантируют результаты готовой батареи."
+};
+
 const secondaryHubCounts = {
-  vi: "12 bài viết kỹ thuật", ko: "기술 글 12편", ja: "技術記事 12件",
-  es: "12 artículos técnicos", pt: "12 artigos técnicos", ru: "12 технических статей"
+  vi: "13 bài viết kỹ thuật", ko: "기술 글 13편", ja: "技術記事 13件",
+  es: "13 artículos técnicos", pt: "13 artigos técnicos", ru: "13 технических статей"
 };
 
 for (const locale of secondaryResourceLocales) {
@@ -792,6 +820,13 @@ for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].topics.earlyChinaLeadAcidBatteryManufacturing = earlyLeadAcidManufacturingTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorPressureRetention = pressureRetentionTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorBatchProcessControl = batchProcessControlTopics[locale];
+  secondaryResourceData[locale].topics.agmSeparatorThirdPole = thirdPoleTopics[locale];
+  secondaryResourceData[locale].thirdPoleReferences = {
+    eyebrow: secondaryResourceData[locale].ui.reference,
+    title: thirdPoleTopics[locale].title,
+    text: thirdPoleReferenceNotes[locale],
+    items: thirdPoleReferenceItems
+  };
   secondaryResourceData[locale].dataCenterReferences = {
     eyebrow: dataCenterReferences[locale][0],
     title: dataCenterReferences[locale][1],
@@ -954,6 +989,10 @@ function buildArticle(locale, kind, localeData) {
         [common.sheet[0], common.sheet[1], "/images/evidence/shipping-pallet-01.webp", common.sheet[0]]
       ]
     };
+  }
+
+  if (kind === "agmSeparatorThirdPole") {
+    result.references = localeData.thirdPoleReferences;
   }
 
   return result;
