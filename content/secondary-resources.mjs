@@ -13,7 +13,8 @@ export const articleKinds = [
   "earlyChinaLeadAcidBatteryManufacturing",
   "agmSeparatorPressureRetention",
   "agmSeparatorBatchProcessControl",
-  "agmSeparatorThirdPole"
+  "agmSeparatorThirdPole",
+  "agmSeparatorEnergyDataDelivery"
 ];
 
 export const articleDefinitions = {
@@ -29,7 +30,8 @@ export const articleDefinitions = {
   earlyChinaLeadAcidBatteryManufacturing: ["how-chinas-earliest-lead-acid-batteries-were-made", "manufacturingQuality", "2026-08-11", "2026-08-11"],
   agmSeparatorPressureRetention: ["agm-separator-pressure-retention-after-acid-filling-and-cycling", "manufacturingQuality", "2026-08-12", "2026-08-12"],
   agmSeparatorBatchProcessControl: ["agm-separator-batch-consistency-and-process-control", "manufacturingQuality", "2026-08-12", "2026-08-12"],
-  agmSeparatorThirdPole: ["agm-separator-third-pole-explained", "buyerGuides", "2026-09-13", "2026-09-13"]
+  agmSeparatorThirdPole: ["agm-separator-third-pole-explained", "buyerGuides", "2026-09-13", "2026-09-13"],
+  agmSeparatorEnergyDataDelivery: ["agm-separator-energy-data-and-delivery-risk", "manufacturingQuality", "2026-09-18", "2026-09-18"]
 };
 
 const images = {
@@ -45,7 +47,8 @@ const images = {
   earlyChinaLeadAcidBatteryManufacturing: ["/images/agm-hero-production-1600.webp", 1600, 1000],
   agmSeparatorPressureRetention: ["/images/agm-quality-control-1200.webp", 1200, 800],
   agmSeparatorBatchProcessControl: ["/images/agm-quality-control-1200.webp", 1200, 800],
-  agmSeparatorThirdPole: ["/images/agm-quality-control-1200.webp", 1200, 800]
+  agmSeparatorThirdPole: ["/images/agm-quality-control-1200.webp", 1200, 800],
+  agmSeparatorEnergyDataDelivery: ["/images/agm-hero-production-1600.webp", 1600, 1000]
 };
 
 export const secondaryResourceData = {
@@ -810,9 +813,28 @@ const thirdPoleReferenceNotes = {
   ru: "Открытые материалы дают только технический контекст. Они не подтверждают спецификации Viking и не гарантируют результаты готовой батареи."
 };
 
+const energyDataDeliveryTopics = {
+  vi: { title: "Dây chuyền tiết kiệm năng lượng: vì sao khách hàng quan tâm hơn đến giao hàng?", summary: "Dữ liệu năng lượng chỉ hỗ trợ đánh giá nhà cung cấp khi ranh giới, sản lượng, thời gian dừng máy và phiên bản dữ liệu có thể truy xuất.", intro: "Tiết kiệm điện không phải cam kết giao hàng, kiểm kê phát thải doanh nghiệp hay dấu chân carbon sản phẩm.", sections: [["Ví dụ", "Tiết kiệm năng lượng là dữ liệu doanh nghiệp", "Clarios công bố đầu tư và tiết kiệm điện tại các nhà máy EMEA; đây là công bố doanh nghiệp, không phải chuẩn ngành AGM hay bằng chứng về Viking."], ["Ranh giới", "Hiệu quả không bảo đảm giao hàng", "Hợp đồng năng lượng, cơ cấu sản phẩm, bảo trì, lịch sản xuất và giao hàng thực tế vẫn quyết định tính liên tục."], ["So sánh", "Tổng tiết kiệm của nhà máy khó so sánh", "Cần thống nhất đơn vị chức năng, sản lượng, phạm vi sản phẩm, kỳ báo cáo, ranh giới và nguồn dữ liệu."], ["Đường cơ sở", "Bắt đầu từ một dây chuyền xác định", "Kết nối điểm đo với sản lượng đạt, quy cách, tỷ lệ hao hụt và thời gian dừng máy."], ["Bằng chứng", "Mỗi loại bằng chứng có giới hạn", "Ước tính, số đọc công tơ, đối chiếu hóa đơn, phân bổ sản phẩm và xác minh độc lập trả lời các câu hỏi khác nhau."], ["Đánh giá", "Thống nhất phạm vi trước", "Xác định đơn vị chức năng, ranh giới và trường dữ liệu trước khi đánh giá yêu cầu cùng quy cách tấm ngăn."]], parameters: [["Điện", "Điểm đo, kỳ đọc, tiêu thụ và sản lượng tương ứng."], ["Tiện ích khác", "Khí, hơi hoặc nước và cơ sở đo khi phù hợp."], ["Sản lượng đạt", "Số lượng, quy cách và kỳ làm mẫu số."], ["Hao hụt và dừng máy", "Phương pháp ghi nhận và dừng có kế hoạch/không kế hoạch."], ["Phiên bản", "Thay đổi ranh giới, ngày cập nhật và phiên bản."]], checklist: ["Đơn vị chức năng và quy cách", "Kỳ báo cáo và nguồn dữ liệu", "Ranh giới sản xuất, tiện ích, đóng gói, vận tải", "Sản lượng, hao hụt và dừng máy", "Phiên bản và mẫu đánh giá"] },
+  ko: { title: "생산라인이 에너지를 절감하면 구매자는 왜 납기를 더 볼까?", summary: "에너지 데이터는 경계, 생산량, 정지 시간과 데이터 버전을 추적할 수 있을 때만 공급업체 평가에 도움이 됩니다.", intro: "에너지 절감은 납기 약속, 기업 배출량 인벤토리 또는 제품 탄소발자국이 아닙니다.", sections: [["사례", "에너지 절감은 기업 공시 데이터", "Clarios의 EMEA 투자·절감은 기업 공시이며 AGM 산업 기준이나 Viking 성과의 증거가 아닙니다."], ["경계", "효율이 납기를 보장하지 않음", "에너지 계약, 제품 구성, 유지보수, 생산 일정과 실제 납기 기록이 연속성을 판단합니다."], ["비교", "공장 총절감은 직접 비교하기 어려움", "기능 단위, 생산량, 제품 범위, 기간, 경계와 데이터 출처를 맞춰야 합니다."], ["기준선", "정의된 라인부터 시작", "계량 지점을 양품 생산량, 사양, 수율, 손실 및 정지 시간과 연결합니다."], ["증거", "증거마다 한계가 다름", "추정치, 계량값, 청구서 대조, 제품 배분 및 독립 검증은 서로 다른 질문에 답합니다."], ["검토", "먼저 범위를 맞춤", "분리막 사양과 함께 기능 단위, 경계 및 필요 필드를 먼저 정합니다."]], parameters: [["전력", "계량 지점, 기간, 소비량 및 해당 생산량."], ["기타 유틸리티", "해당 시 가스·증기·물의 범위와 계량 기준."], ["양품 생산량", "분모가 되는 수량, 사양 및 기간."], ["수율·정지", "손실 기록과 계획/비계획 정지."], ["버전", "경계 변경, 갱신일 및 버전."]], checklist: ["기능 단위와 사양", "보고 기간과 데이터 출처", "생산·유틸리티·포장·운송 경계", "생산량·손실·정지 처리", "버전과 검토 양식"] },
+  ja: { title: "生産ラインが省エネ化すると、なぜ顧客は納入をより重視するのか", summary: "エネルギーデータは、境界・生産量・停止時間・データ版が追跡できる場合にのみ、サプライヤー評価の参考になります。", intro: "省エネは納入保証、企業GHGインベントリ、製品カーボンフットプリントではありません。", sections: [["事例", "省エネは企業開示データ", "ClariosのEMEA投資・節電は企業開示であり、AGM業界ベンチマークやVikingの実績証明ではありません。"], ["境界", "効率は納入を保証しない", "エネルギー契約、製品構成、保全、計画、実納入記録が継続性の判断に必要です。"], ["比較", "工場総節電は直接比較しにくい", "機能単位、生産量、製品範囲、期間、境界、データ源を揃える必要があります。"], ["基準線", "定義したラインから始める", "計量点を良品量、仕様、歩留まり、損失、停止時間に結び付けます。"], ["証拠", "証拠ごとに限界が異なる", "見積り、計量値、請求書照合、製品配分、第三者確認は別の問いに答えます。"], ["レビュー", "先に範囲を合わせる", "分離膜仕様とともに機能単位、境界、必要項目を明確にします。"]], parameters: [["電力", "計量点、期間、消費量、対応する生産量。"], ["その他ユーティリティ", "必要に応じたガス・蒸気・水の範囲と計量基準。"], ["良品生産量", "分母となる数量、仕様、期間。"], ["歩留まり・停止", "損失記録と計画／非計画停止。"], ["版", "境界変更、更新日、版。"]], checklist: ["機能単位と仕様", "報告期間とデータ源", "生産・ユーティリティ・包装・輸送境界", "生産量・損失・停止の扱い", "版とレビュー様式"] },
+  es: { title: "Una línea ahorra energía: ¿por qué al comprador le puede importar más la entrega?", summary: "Los datos energéticos solo ayudan a evaluar a un proveedor cuando el límite, la producción, las paradas y la versión son trazables.", intro: "El ahorro de energía no es una promesa de entrega, un inventario corporativo de GEI ni una huella de carbono de producto.", sections: [["Ejemplo", "El ahorro energético es una divulgación corporativa", "La inversión y el ahorro de Clarios en EMEA son una divulgación corporativa, no un referente AGM ni evidencia de Viking."], ["Límite", "La eficiencia no garantiza la entrega", "Contratos de energía, mezcla de productos, mantenimiento, programación y entregas reales siguen determinando la continuidad."], ["Comparación", "El ahorro total de fábrica no compara proveedores", "Hay que alinear unidad funcional, producción, alcance, periodo, límite y fuente de datos."], ["Línea base", "Empezar por una línea definida", "Vincular puntos de medición con producción conforme, especificaciones, rendimiento, pérdidas y paradas."], ["Evidencia", "Cada evidencia tiene límites", "Estimaciones, medidores, facturas, asignación de producto y verificación independiente responden preguntas distintas."], ["Revisión", "Alinear el alcance primero", "Definir unidad funcional, límite y campos necesarios junto con la especificación del separador."]], parameters: [["Electricidad", "Punto de medición, periodo, consumo y producción correspondiente."], ["Otros servicios", "Alcance y base de medición de gas, vapor o agua."], ["Producción conforme", "Cantidad, especificación y periodo del denominador."], ["Rendimiento y paradas", "Registro de pérdidas y paradas planificadas/no planificadas."], ["Versión", "Cambios de límite, fecha de actualización y versión."]], checklist: ["Unidad funcional y especificación", "Periodo y fuente de datos", "Límite de producción, servicios, embalaje y transporte", "Producción, pérdidas y paradas", "Versión y formato de revisión"] },
+  pt: { title: "Uma linha economiza energia: por que o cliente pode se importar mais com a entrega?", summary: "Dados de energia ajudam a avaliar fornecedores apenas quando limite, produção, paradas e versão são rastreáveis.", intro: "Economia de energia não é promessa de entrega, inventário corporativo de GEE nem pegada de carbono de produto.", sections: [["Exemplo", "Economia é divulgação corporativa", "O investimento e a economia da Clarios em EMEA são divulgação corporativa, não referência AGM nem evidência da Viking."], ["Limite", "Eficiência não garante entrega", "Contratos de energia, mix de produtos, manutenção, programação e entregas reais ainda determinam continuidade."], ["Comparação", "Economia total da fábrica não compara fornecedores", "É preciso alinhar unidade funcional, produção, escopo, período, limite e fonte de dados."], ["Linha de base", "Começar por uma linha definida", "Ligar pontos de medição à produção aprovada, especificações, rendimento, perdas e paradas."], ["Evidência", "Cada evidência tem limites", "Estimativas, medidores, faturas, alocação de produto e verificação independente respondem perguntas diferentes."], ["Revisão", "Alinhar o escopo primeiro", "Definir unidade funcional, limite e campos necessários junto com a especificação do separador."]], parameters: [["Eletricidade", "Ponto de medição, período, consumo e produção correspondente."], ["Outras utilidades", "Escopo e base de medição de gás, vapor ou água."], ["Produção aprovada", "Quantidade, especificação e período do denominador."], ["Rendimento e paradas", "Registro de perdas e paradas planejadas/não planejadas."], ["Versão", "Mudanças de limite, data de atualização e versão."]], checklist: ["Unidade funcional e especificação", "Período e fonte de dados", "Limite de produção, utilidades, embalagem e transporte", "Produção, perdas e paradas", "Versão e formato de revisão"] },
+  ru: { title: "Линия экономит энергию: почему покупателя может больше волновать поставка?", summary: "Энергетические данные помогают оценке поставщика только при прослеживаемых границе, выпуске, простоях и версии набора данных.", intro: "Экономия энергии не является обещанием поставки, корпоративным инвентарём выбросов или углеродным следом продукта.", sections: [["Пример", "Экономия энергии — корпоративное раскрытие", "Инвестиции и экономия Clarios в EMEA — корпоративное раскрытие, а не AGM-бенчмарк и не доказательство показателей Viking."], ["Граница", "Эффективность не гарантирует поставку", "Энергоконтракты, ассортимент, обслуживание, график и фактические поставки определяют непрерывность."], ["Сравнение", "Суммарная экономия завода не сравнивает поставщиков", "Нужно согласовать функциональную единицу, выпуск, ассортимент, период, границу и источник данных."], ["Базовая линия", "Начинать с определённой линии", "Связать точки учёта с годным выпуском, спецификацией, выходом, потерями и простоями."], ["Доказательства", "У каждого вида доказательств есть границы", "Оценки, счётчики, счета, распределение по продукту и независимая проверка отвечают на разные вопросы."], ["Проверка", "Сначала согласовать охват", "Определить функциональную единицу, границу и нужные поля вместе со спецификацией сепаратора."]], parameters: [["Электричество", "Точка учёта, период, потребление и соответствующий выпуск."], ["Прочие ресурсы", "Границы и основа учёта газа, пара или воды."], ["Годный выпуск", "Количество, спецификация и период для знаменателя."], ["Выход и простои", "Учёт потерь и плановых/внеплановых простоев."], ["Версия", "Изменения границы, дата обновления и версия."]], checklist: ["Функциональная единица и спецификация", "Период и источник данных", "Граница производства, ресурсов, упаковки и транспорта", "Выпуск, потери и простои", "Версия и формат проверки"] }
+};
+
+const energyDataDeliveryReferenceItems = [["Clarios — Energy efficiency across European operations and supply reliability", "https://www.clarios.com/pt/insights/news/news-detail/clarios-energy-efficiency-europe-supply-reliability"]];
+const energyDataDeliveryReferenceNotes = {
+  vi: "Thông tin đầu tư, địa điểm và tiết kiệm điện là công bố doanh nghiệp Clarios, không phải kiểm toán độc lập, chuẩn ngành AGM hay bằng chứng về Viking.",
+  ko: "투자·공장·절감 정보는 Clarios의 기업 공시이며 독립 감사, AGM 산업 기준 또는 Viking 성과의 증거가 아닙니다.",
+  ja: "投資・工場・節電情報はClariosの企業開示であり、第三者監査、AGM業界基準、Vikingの実績証明ではありません。",
+  es: "La inversión, plantas y ahorro son divulgación corporativa de Clarios, no una auditoría independiente, un referente AGM ni evidencia de Viking.",
+  pt: "O investimento, as plantas e a economia são divulgação corporativa da Clarios, não auditoria independente, referência AGM ou evidência da Viking.",
+  ru: "Инвестиции, заводы и экономия — корпоративное раскрытие Clarios, а не независимый аудит, AGM-бенчмарк или доказательство показателей Viking."
+};
+
 const secondaryHubCounts = {
-  vi: "13 bài viết kỹ thuật", ko: "기술 글 13편", ja: "技術記事 13件",
-  es: "13 artículos técnicos", pt: "13 artigos técnicos", ru: "13 технических статей"
+  vi: "14 bài viết kỹ thuật", ko: "기술 글 14편", ja: "技術記事 14件",
+  es: "14 artículos técnicos", pt: "14 artigos técnicos", ru: "14 технических статей"
 };
 
 for (const locale of secondaryResourceLocales) {
@@ -821,6 +843,13 @@ for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].topics.agmSeparatorPressureRetention = pressureRetentionTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorBatchProcessControl = batchProcessControlTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorThirdPole = thirdPoleTopics[locale];
+  secondaryResourceData[locale].topics.agmSeparatorEnergyDataDelivery = energyDataDeliveryTopics[locale];
+  secondaryResourceData[locale].energyDataDeliveryReferences = {
+    eyebrow: secondaryResourceData[locale].ui.reference,
+    title: energyDataDeliveryTopics[locale].title,
+    text: energyDataDeliveryReferenceNotes[locale],
+    items: energyDataDeliveryReferenceItems
+  };
   secondaryResourceData[locale].thirdPoleReferences = {
     eyebrow: secondaryResourceData[locale].ui.reference,
     title: thirdPoleTopics[locale].title,
@@ -993,6 +1022,10 @@ function buildArticle(locale, kind, localeData) {
 
   if (kind === "agmSeparatorThirdPole") {
     result.references = localeData.thirdPoleReferences;
+  }
+
+  if (kind === "agmSeparatorEnergyDataDelivery") {
+    result.references = localeData.energyDataDeliveryReferences;
   }
 
   return result;

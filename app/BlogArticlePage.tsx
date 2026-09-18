@@ -28,7 +28,8 @@ export type BlogArticleKind =
   | "agmSeparatorBatchProcessControl"
   | "agmSeparatorSupplyChain"
   | "agmStartStopBatteryProcurement"
-  | "agmSeparatorThirdPole";
+  | "agmSeparatorThirdPole"
+  | "agmSeparatorEnergyDataDelivery";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -3700,6 +3701,57 @@ const agmSeparatorThirdPoleCopy = {
   }
 } as const;
 
+const agmSeparatorEnergyDataReferenceItems: Array<[string, string]> = [
+  ["Clarios — Energy efficiency across European operations and supply reliability", "https://www.clarios.com/pt/insights/news/news-detail/clarios-energy-efficiency-europe-supply-reliability"]
+];
+
+const agmSeparatorEnergyDataDeliveryCopy = {
+  en: {
+    homePath: "/", languagePath: "/zh/blog/agm-separator-energy-data-and-delivery-risk/", quote: "Request a Sample",
+    nav: { company: "Company", quality: "Quality" },
+    hero: { eyebrow: "Manufacturing & Quality", title: "A Production Line Saves Energy. Why Might Buyers Care More About Delivery?", subtitle: "Energy data can inform a supplier review only when its operating boundary, output and delivery evidence can be traced.", secondary: "Review the evidence boundary", image: { src: "/images/agm-hero-production-1600.webp", alt: "AGM separator production line", width: 1600, height: 1000 } },
+    intro: ["Annual electricity savings can look like an internal efficiency result. For battery buyers, the more practical question is whether the data is traceable and whether it says anything useful about cost exposure, production continuity or delivery risk.", "Energy records can support a supplier questionnaire, but they are not a delivery guarantee, a corporate greenhouse-gas inventory or a product carbon footprint."],
+    sections: [
+      { eyebrow: "External example", title: "Customers look beyond the electricity saved", text: "Clarios disclosed more than €4 million of EMEA energy-efficiency investment during fiscal year 2025 and annual savings above 8 million kWh at sites in Hanover, Zwickau and Česká Lípa. It linked the projects to reliability and supply security. This is a corporate disclosure, not a third-party audit or an AGM-separator benchmark." },
+      { eyebrow: "Boundary", title: "Energy efficiency is a signal, not a delivery promise", text: "Lower unit energy use may reduce exposure to energy-price volatility, but quotations still depend on contracts, product mix, output and purchasing arrangements. Shutdown records, maintenance plans, production schedules and actual delivery performance remain necessary to assess continuity." },
+      { eyebrow: "Comparison", title: "Total factory savings rarely compare suppliers directly", text: "Factory totals vary with plant size, output, product mix, period and system boundary. A useful unit-energy comparison needs an agreed functional unit, output, product scope, period, boundary and data source. Production-only data is not equivalent to data that includes utilities, packaging, warehousing or internal transport." },
+      { eyebrow: "Line baseline", title: "Start with a defined line or product group", text: "A defined line can connect metering points and periods with qualified output, specifications, yield, loss and shutdown information. The framework below is a suggested starting point, not a claim that Viking has completed a product-level energy baseline or uses every listed field." },
+      { eyebrow: "Evidence", title: "Not all energy evidence has the same weight", text: "An estimate shows an intended direction; meter readings show consumption at defined points and periods; invoice cross-checks test broad consistency. Product-level allocation and third-party verification answer narrower questions under an agreed method. These records do not replace one another." },
+      { eyebrow: "Customer review", title: "Align scope before requesting supplier energy or carbon data", text: "For an AGM separator project, first clarify the functional unit, system boundary, required fields and version-control expectations. Then review relevant product specifications—such as thickness, width, roll or sheet format—alongside the requested data scope and the actual delivery record." }
+    ],
+    parameters: [["Electricity", "Metering point, reading period, consumption and corresponding output."], ["Other utilities", "Fuel gas, steam or water scope and metering basis where relevant."], ["Qualified output", "Quantity, specification and period used as the denominator."], ["Yield and shutdowns", "Loss-recording method plus planned or unplanned downtime."], ["Dataset version", "Boundary changes, update date and version for a reviewable record."]],
+    formats: { eyebrow: "Supply format", title: "Keep product scope visible in the data request", items: [["AGM separator rolls", "Clarify width, thickness, roll requirements and the relevant production scope.", "/images/viking-finished-separator-roll-900.webp", "Finished AGM separator roll"], ["AGM separator sheets", "Clarify sheet dimensions, assembly use and the relevant product scope.", "/images/sheets1-900.webp", "AGM separator sheets"]] },
+    checklist: { eyebrow: "Supplier questionnaire", title: "Items to align before reviewing energy or carbon information", text: "Customer templates and audit formats should take priority. These questions help establish a traceable starting scope.", items: ["Functional unit and product specification", "Reporting period and data source", "Production, utilities, packaging and transport boundary", "Output, yield, loss and shutdown treatment", "Dataset version and required review format"] },
+    comparison: { eyebrow: "Evidence hierarchy", title: "What each record can—and cannot—show", columns: ["Evidence level", "What it can show", "What it cannot yet show"], rows: [["Project estimate", "Expected direction and scale of improvement", "Actual savings or improved delivery."], ["Meter readings", "Consumption changes at defined points during an agreed period", "A result for the whole factory or every product."], ["Invoice cross-check", "Whether purchasing records broadly agree with internal readings", "Accurate allocation to one unit of product."], ["Product-level allocation", "Energy use under a defined unit, boundary and allocation method", "A product footprint or third-party conclusion."], ["Third-party verification", "Independent review within the agreed scope", "Operational promises outside that scope."]] },
+    references: { eyebrow: "Source and scope", title: "Public disclosure used as a discussion example", text: "The investment, plant locations, annual electricity savings and Hanover waste-heat-recovery details are from Clarios’s September 7, 2026 corporate disclosure. They are not third-party-audited conclusions, an AGM separator industry benchmark or evidence of Viking performance.", items: agmSeparatorEnergyDataReferenceItems },
+    related: { eyebrow: "Related pages", title: "Continue the supplier and specification review", items: [["AGM Separator Manufacturing & Delivery", "/blog/agm-separator-manufacturing-quality-delivery/"], ["AGM Separator Batch Consistency & Process Control", "/blog/agm-separator-batch-consistency-and-process-control/"], ["AGM Separator Supply Chain", "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"], ["Request a Sample & Specification Match", "/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.en.inquiry, title: "Align your AGM separator data request", text: "Send your supplier energy or carbon-data template with its functional unit, system boundary and required fields. We can review the requested information scope together with the applicable separator specification.", checklist: ["Battery application and product format", "Thickness, width or sheet dimensions", "Functional unit and reporting period", "System boundary and required data fields"], placeholders: { ...articleCopy.en.inquiry.placeholders, message: "Battery application, separator dimensions, roll or sheet format, functional unit, reporting period, system boundary and required data fields" } },
+    footer: articleCopy.en.footer
+  },
+  zh: {
+    homePath: "/zh/", languagePath: "/blog/agm-separator-energy-data-and-delivery-risk/", quote: "申请样品",
+    nav: { company: "公司", quality: "质量" },
+    hero: { eyebrow: "生产与质量", title: "一条产线节能，客户为什么可能更关心交付？", subtitle: "只有当运行边界、产出和交付证据可追溯时，能耗数据才可能为供应商评估提供参考。", secondary: "查看证据边界", image: { src: "/images/agm-hero-production-1600.webp", alt: "AGM 隔板生产线", width: 1600, height: 1000 } },
+    intro: ["年度节电量看似是内部效率结果。对电池买家而言，更实际的问题是：这些数据能否追溯？它们是否能为成本暴露、生产连续性或交付风险提供有用参考？", "能耗记录可以支持供应商问卷，但不等于交付承诺、企业温室气体盘查或产品碳足迹。"],
+    sections: [
+      { eyebrow: "外部案例", title: "客户看的不只是节省了多少电", text: "Clarios 披露，其在 2025 财年对 EMEA 能效项目投资超过 400 万欧元，Hannover、Zwickau 和捷克 Česká Lípa 工厂的年度节电超过 800 万 kWh，并将项目与生产可靠性和供应安全联系起来。这是企业披露，不是第三方审计，也不是 AGM 隔板行业基准。" },
+      { eyebrow: "边界", title: "能效是一个信号，不是交付保证", text: "单位能耗降低可能减少对能源价格波动的暴露，但报价仍取决于能源合同、产品结构、产出和采购安排。判断连续性仍需查看停机记录、维护计划、生产排程和实际交付表现。" },
+      { eyebrow: "比较", title: "工厂总节约量通常不能直接比较供应商", text: "工厂总量会随规模、产出、产品结构、报告周期和系统边界变化。有效的单位能耗比较需要对齐功能单位、产出、产品范围、周期、边界和数据来源。仅生产环节的数据不等于包含公用工程、包装、仓储或内部运输的数据。" },
+      { eyebrow: "产线基线", title: "从已定义的产线或产品组开始", text: "一条已定义的产线可以将计量点和周期与合格产出、规格、良率、损耗和停机信息相连。下列框架仅是建议起点，不代表维京已经完成产品级能耗基线，也不代表采用了每一项字段。" },
+      { eyebrow: "证据", title: "不同能耗证据的权重不同", text: "项目估算说明预期方向；仪表读数说明指定计量点和周期的消耗；账单交叉核对检验总体一致性。产品级分配和第三方验证只能在约定方法下回答更窄的问题，各类记录不能相互替代。" },
+      { eyebrow: "客户评审", title: "索取能源或碳数据前先对齐范围", text: "AGM 隔板项目应先明确功能单位、系统边界、必填字段和版本控制要求，再将厚度、宽度、卷材或片材等产品规格与所需数据范围、实际交付记录一并评审。" }
+    ],
+    parameters: [["电力", "计量点、读数周期、消耗量及对应产出。"], ["其他公用工程", "适用时确认燃气、蒸汽或用水范围及计量基础。"], ["合格产出", "作为分母的数量、规格和报告周期。"], ["良率与停机", "损耗记录方法以及计划或非计划停机。"], ["数据版本", "边界变化、更新日期和可复核版本。"]],
+    formats: { eyebrow: "供应形式", title: "让数据请求保留产品范围", items: [["AGM 隔板卷材", "明确宽度、厚度、卷材要求和相关生产范围。", "/images/viking-finished-separator-roll-900.webp", "AGM 隔板成品卷"], ["AGM 隔板片材", "明确片材尺寸、装配用途和相关产品范围。", "/images/sheets1-900.webp", "AGM 隔板片材"]] },
+    checklist: { eyebrow: "供应商问卷", title: "评审能源或碳信息前需对齐的事项", text: "客户模板和审核格式应优先。以下问题用于建立可追溯的起始范围。", items: ["功能单位和产品规格", "报告周期和数据来源", "生产、公用工程、包装和运输边界", "产出、良率、损耗和停机处理", "数据版本和要求的评审格式"] },
+    comparison: { eyebrow: "证据层级", title: "各类记录能够说明什么，又不能说明什么", columns: ["证据层级", "能够说明", "暂不能说明"], rows: [["项目估算", "预期改进方向和规模", "实际节约或交付改善。"], ["仪表读数", "约定周期内指定计量点的消耗变化", "整个工厂或每一种产品的结论。"], ["账单交叉核对", "采购记录是否与内部读数总体一致", "准确分配到单个产品单位。"], ["产品级分配", "在确定功能单位、边界和分配方法下的能耗", "产品足迹或第三方结论。"], ["第三方验证", "约定范围内对数据和方法的独立评审", "范围之外的运营承诺。"]] },
+    references: { eyebrow: "来源与范围", title: "作为讨论案例使用的公开披露", text: "投资、工厂地点、年度节电和 Hannover 余热回收信息来自 Clarios 2026 年 9 月 7 日的企业披露。这些信息不是第三方审计结论，不是 AGM 隔板行业基准，也不能作为维京表现的证据。", items: agmSeparatorEnergyDataReferenceItems },
+    related: { eyebrow: "相关页面", title: "继续开展供应与规格评审", items: [["AGM 隔板生产与交付", "/zh/blog/agm-separator-manufacturing-quality-delivery/"], ["AGM 隔板批次一致性与过程控制", "/zh/blog/agm-separator-batch-consistency-and-process-control/"], ["AGM 隔板供应链", "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"], ["申请样品与规格匹配", "/zh/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.zh.inquiry, title: "对齐您的 AGM 隔板数据请求", text: "请提供供应商能源或碳数据模板，包括功能单位、系统边界和必填字段。我们可将所需信息范围与适用的隔板规格一并评审。", checklist: ["电池应用和产品形式", "厚度、宽度或片材尺寸", "功能单位和报告周期", "系统边界和必填数据字段"], placeholders: { ...articleCopy.zh.inquiry.placeholders, message: "电池应用、隔板尺寸、卷材或片材形式、功能单位、报告周期、系统边界和必填数据字段" } },
+    footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -3762,6 +3814,8 @@ export function BlogArticlePage({
                               ? agmStartStopBatteryProcurementCopy[primaryLang]
                               : page === "agmSeparatorThirdPole"
                                 ? agmSeparatorThirdPoleCopy[primaryLang]
+                                : page === "agmSeparatorEnergyDataDelivery"
+                                  ? agmSeparatorEnergyDataDeliveryCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -3835,6 +3889,8 @@ export function BlogArticlePage({
                               ? ["market-signal", "start-stop-duty", "separator-role", "measurement-conditions", "consistency", "procurement-checklist", "viking-coordination"]
                               : page === "agmSeparatorThirdPole"
                                 ? ["meaning", "electrical-separation", "electrolyte", "oxygen-pathway", "compression", "project-review"]
+                                : page === "agmSeparatorEnergyDataDelivery"
+                                  ? ["external-example", "boundary", "comparison", "line-baseline", "evidence", "customer-review"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {

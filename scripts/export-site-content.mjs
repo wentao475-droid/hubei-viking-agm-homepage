@@ -191,6 +191,7 @@ const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "agmSeparatorPressureRetentionCopy",
   "agmSeparatorBatchProcessControlCopy",
   "agmSeparatorThirdPoleCopy",
+  "agmSeparatorEnergyDataDeliveryCopy",
   "agmSeparatorSupplyChainCopy",
   "agmStartStopBatteryProcurementCopy",
   "agmGlassFiberVsPvcSeparatorCopy"
@@ -218,6 +219,7 @@ const seoConstants = collectConstants("app/seo.tsx", [
   "agmSeparatorPressureRetentionSeo",
   "agmSeparatorBatchProcessControlSeo",
   "agmSeparatorThirdPoleSeo",
+  "agmSeparatorEnergyDataDeliverySeo",
   "agmSeparatorSupplyChainSeo",
   "agmStartStopBatteryProcurementSeo",
   "agmGlassFiberVsPvcSeparatorSeo"
@@ -508,6 +510,8 @@ const articles = {
   agmSeparatorBatchProcessControl:
     articleConstants.agmSeparatorBatchProcessControlCopy,
   agmSeparatorThirdPole: articleConstants.agmSeparatorThirdPoleCopy,
+  agmSeparatorEnergyDataDelivery:
+    articleConstants.agmSeparatorEnergyDataDeliveryCopy,
   agmSeparatorSupplyChain: articleConstants.agmSeparatorSupplyChainCopy,
   agmStartStopBatteryProcurement:
     articleConstants.agmStartStopBatteryProcurementCopy,
@@ -536,6 +540,8 @@ const articleSeo = {
   agmSeparatorBatchProcessControl:
     seoConstants.agmSeparatorBatchProcessControlSeo,
   agmSeparatorThirdPole: seoConstants.agmSeparatorThirdPoleSeo,
+  agmSeparatorEnergyDataDelivery:
+    seoConstants.agmSeparatorEnergyDataDeliverySeo,
   agmSeparatorSupplyChain: seoConstants.agmSeparatorSupplyChainSeo,
   agmStartStopBatteryProcurement:
     seoConstants.agmStartStopBatteryProcurementSeo,

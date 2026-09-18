@@ -1024,10 +1024,10 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 215) {
-  pass("sitemap.xml lists the expected 215 localized public URLs");
+if (sitemapUrls.length === 223) {
+  pass("sitemap.xml lists the expected 223 localized public URLs");
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 215`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 223`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(

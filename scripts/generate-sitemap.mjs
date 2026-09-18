@@ -242,6 +242,14 @@ const pages = [
     secondaryLastmod: "2026-08-12"
   },
   {
+    en: "/blog/agm-separator-energy-data-and-delivery-risk/",
+    zh: "/zh/blog/agm-separator-energy-data-and-delivery-risk/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-09-18",
+    secondaryLastmod: "2026-09-18"
+  },
+  {
     en: "/blog/agm-separator-third-pole-explained/",
     zh: "/zh/blog/agm-separator-third-pole-explained/",
     priority: "0.75",

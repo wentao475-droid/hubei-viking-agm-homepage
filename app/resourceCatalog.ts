@@ -216,6 +216,23 @@ export const resourceArticles: ResourceArticle[] = [
     }
   },
   {
+    id: "agm-separator-energy-data-delivery",
+    category: "manufacturingQuality",
+    publishedAt: "2026-09-18",
+    title: {
+      en: "AGM Separator Supplier Energy Data & Delivery Risk",
+      zh: "AGM 隔板供应商能耗数据与交付风险"
+    },
+    description: {
+      en: "How to read energy records alongside output, shutdown and data-boundary evidence in a supplier review.",
+      zh: "在供应商评审中，如何结合产出、停机与数据边界理解能耗记录。"
+    },
+    href: {
+      en: "/blog/agm-separator-energy-data-and-delivery-risk/",
+      zh: "/zh/blog/agm-separator-energy-data-and-delivery-risk/"
+    }
+  },
+  {
     id: "manufacturing-quality-delivery",
     category: "manufacturingQuality",
     publishedAt: "2026-07-07",
@@ -383,7 +400,8 @@ const articleKindById: Record<string, string> = {
   "early-lead-acid-manufacturing-history": "earlyChinaLeadAcidBatteryManufacturing",
   "agm-separator-pressure-retention": "agmSeparatorPressureRetention",
   "agm-separator-batch-process-control": "agmSeparatorBatchProcessControl",
-  "agm-separator-third-pole": "agmSeparatorThirdPole"
+  "agm-separator-third-pole": "agmSeparatorThirdPole",
+  "agm-separator-energy-data-delivery": "agmSeparatorEnergyDataDelivery"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

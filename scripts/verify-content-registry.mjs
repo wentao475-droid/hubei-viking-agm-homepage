@@ -57,7 +57,8 @@ const articles = [
     "agmSeparatorBatchProcessControl",
     "agm-separator-batch-consistency-and-process-control"
   ],
-  ["agmSeparatorThirdPole", "agm-separator-third-pole-explained"]
+  ["agmSeparatorThirdPole", "agm-separator-third-pole-explained"],
+  ["agmSeparatorEnergyDataDelivery", "agm-separator-energy-data-and-delivery-risk"]
 ];
 const allLocales = ["en", "zh", ...secondaryResourceLocales];
 const primaryOnlyArticles = [
@@ -138,7 +139,7 @@ for (const [key, slug] of primaryOnlyArticles) {
 check(
   articleKinds.length === articles.length &&
     articleKinds.every((kind) => articleDefinitions[kind]),
-  "secondary article registry matches the 13 canonical articles"
+  "secondary article registry matches the 14 canonical articles"
 );
 check(
   existsSync(join(root, "app/[locale]/blog/[slug]/page.tsx")),

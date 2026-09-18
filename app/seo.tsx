@@ -2081,6 +2081,31 @@ const agmSeparatorThirdPoleSeo = {
   }
 } as const;
 
+const agmSeparatorEnergyDataDeliverySeo = {
+  en: {
+    path: "/blog/agm-separator-energy-data-and-delivery-risk/",
+    alternatePath: "/zh/blog/agm-separator-energy-data-and-delivery-risk/",
+    locale: "en_US", language: "en", siteName: "Viking AGM",
+    title: "AGM Separator Supplier Energy Data: What It Can Show About Delivery Risk | Viking AGM",
+    description: "A buyer guide to reading supplier energy data alongside output, yield, shutdown, boundary and version records—without treating energy savings as a delivery guarantee or product footprint.",
+    keywords: ["AGM separator supplier energy data", "battery separator delivery risk", "manufacturing energy baseline", "supplier carbon data boundary"],
+    pageName: "A Production Line Saves Energy. Why Might Buyers Care More About Delivery?",
+    articleDescription: "How battery buyers can review energy records, product scope, output, downtime and evidence boundaries when assessing AGM separator supply continuity.",
+    breadcrumbs: ["Home", "Resources", "Supplier Energy Data & Delivery Risk"]
+  },
+  zh: {
+    path: "/zh/blog/agm-separator-energy-data-and-delivery-risk/",
+    alternatePath: "/blog/agm-separator-energy-data-and-delivery-risk/",
+    locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM",
+    title: "AGM 隔板供应商能耗数据：对交付风险能说明什么？| 湖北维京AGM",
+    description: "从产出、良率、停机、系统边界和版本记录理解供应商能耗数据，不把节能等同于交付保证或产品碳足迹。",
+    keywords: ["AGM 隔板供应商能耗数据", "电池隔板交付风险", "产线能耗基线", "供应商碳数据边界"],
+    pageName: "一条产线节能，客户为什么可能更关心交付？",
+    articleDescription: "说明电池买家如何结合能耗记录、产品范围、产出、停机和证据边界评审 AGM 隔板供应连续性。",
+    breadcrumbs: ["首页", "资料", "供应商能耗数据与交付风险"]
+  }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2871,6 +2896,29 @@ export function buildAgmSeparatorThirdPoleMetadata(lang: Lang): Metadata {
     siteName: current.siteName,
     imageAlt: current.pageName,
     image: { url: QUALITY_PREVIEW_IMAGE, width: 1200, height: 800 }
+  });
+}
+
+export function buildAgmSeparatorEnergyDataDeliveryMetadata(
+  lang: Lang
+): Metadata {
+  const current = seoContent(
+    "agmSeparatorEnergyDataDelivery",
+    lang,
+    agmSeparatorEnergyDataDeliverySeo[lang]
+  );
+
+  return buildMetadata({
+    title: current.title,
+    description: current.description,
+    keywords: [...current.keywords],
+    path: current.path,
+    enPath: "/blog/agm-separator-energy-data-and-delivery-risk/",
+    zhPath: "/zh/blog/agm-separator-energy-data-and-delivery-risk/",
+    locale: current.locale,
+    siteName: current.siteName,
+    imageAlt: current.pageName,
+    image: { url: `${SITE_URL}/images/agm-hero-production-1600.webp`, width: 1600, height: 1000 }
   });
 }
 
@@ -4594,6 +4642,39 @@ export function AgmSeparatorThirdPoleStructuredData({ lang }: { lang: Lang }) {
     ]
   };
 
+  return <JsonLd data={data} />;
+}
+
+export function AgmSeparatorEnergyDataDeliveryStructuredData({
+  lang
+}: {
+  lang: Lang;
+}) {
+  const current = seoContent(
+    "agmSeparatorEnergyDataDelivery",
+    lang,
+    agmSeparatorEnergyDataDeliverySeo[lang]
+  );
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  const data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationData(lang, current.description),
+      { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+      {
+        "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName,
+        description: current.articleDescription, image: `${SITE_URL}/images/agm-hero-production-1600.webp`, url,
+        datePublished: "2026-09-18", dateModified: "2026-09-18", mainEntityOfPage: { "@id": `${url}#webpage` },
+        author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` },
+        about: ["supplier energy data", "manufacturing energy baseline", "battery separator supply continuity", "delivery risk evidence"], inLanguage: current.language
+      },
+      {
+        "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`,
+        itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url }))
+      }
+    ]
+  };
   return <JsonLd data={data} />;
 }
 
