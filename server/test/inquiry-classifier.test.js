@@ -105,6 +105,18 @@ test("retail backpack promotion is discarded", () => {
   assert.equal(result.classification_reason, "unrelated_solicitation");
 });
 
+test("posture-corrector promotion is discarded", () => {
+  const result = classifyInquiry({
+    inquiry: inquiry({
+      message:
+        "Our Medico Postura Body Posture Corrector is here to help. Grab it today at a fantastic 60% OFF with FREE shipping: https://medicopostura.com"
+    })
+  });
+
+  assert.equal(result.lead_grade, "E");
+  assert.equal(result.classification_reason, "unrelated_solicitation");
+});
+
 test("high-risk gambling promotion is discarded", () => {
   const result = classifyInquiry({
     inquiry: inquiry({

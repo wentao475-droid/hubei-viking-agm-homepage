@@ -17,8 +17,8 @@ const unrelatedServicePatterns = [
 ];
 
 const unrelatedProductPatterns = [
-  /\b(backpacks?|sling bags?|handbags?|luggage|wallets?|shoes|sneakers?|clothing|apparel|jewell?ry|watches?|cosmetics?|skincare|supplements?|toys?|pet\s+(food|supplies)|furniture|mattresses?|travel\s+packages?|car\s+rental)\b/i,
-  /背包|双肩包|斜挎包|手提包|行李箱|钱包|鞋服|珠宝|手表|化妆品|护肤品|保健品|玩具|宠物用品|家具|床垫|旅游套餐|租车/u
+  /\b(backpacks?|sling bags?|handbags?|luggage|wallets?|shoes|sneakers?|clothing|apparel|jewell?ry|watches?|cosmetics?|skincare|supplements?|toys?|pet\s+(food|supplies)|furniture|mattresses?|travel\s+packages?|car\s+rental|posture\s+correctors?|body\s+braces?|back\s+braces?|orthopedic\s+(devices?|supports?)|pain[-\s]?relief\s+devices?)\b/i,
+  /背包|双肩包|斜挎包|手提包|行李箱|钱包|鞋服|珠宝|手表|化妆品|护肤品|保健品|玩具|宠物用品|家具|床垫|旅游套餐|租车|矫姿器|姿势矫正器|护腰|护具|矫形器|止痛设备/u
 ];
 
 const retailPromotionPatterns = [
@@ -27,6 +27,8 @@ const retailPromotionPatterns = [
   /\bfree\s+shipping\b/i,
   /\b(new|just)\s+released\b/i,
   /\b(available|on sale|limited offer|special offer)\b/i,
+  /\b(grab|get)\s+(it|yours?)\s+(today|now)\b/i,
+  /\bdon't\s+miss\s+out\b/i,
   /限时优惠|立即购买|免费配送|包邮|新品上市/u
 ];
 
