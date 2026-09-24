@@ -45,6 +45,20 @@ const genericPromotionPatterns = [
   /希望这封邮件对您有帮助|新品推荐|欢迎选购/u
 ];
 
+const lowInformationTemplatePatterns = [
+  /\bi would like more information\.?(?: please)? contact me by email\b/i,
+  /\bplease contact me by email\s*[—-]?\s*agm battery separator manufacturer\b/i,
+  /\bhi there!?(?: i'd| i would) like to hear more about your newsletter\b/i,
+  /\bplease keep me posted\b/i,
+  /\bi look forward to hearing from you\b/i,
+  /我想了解更多信息.*请通过邮件联系我|请订阅新闻|请随时通知我/u
+];
+
+const inquiryDetailPatterns = [
+  /\b(quote|price|pricing|thickness|width|length|size|quantity|sample|specification|datasheet|test requirement)\b/i,
+  /报价|价格|厚度|宽度|尺寸|数量|样品|规格|检测要求/u
+];
+
 const relevantInquiryPatterns = [
   /\b(agm|separator|glass\s+fiber|vrla|lead[-\s]?acid|battery|ups|start[-\s]?stop)\b/i,
   /隔板|玻璃纤维|蓄电池|铅酸电池|启停电池|不间断电源/u
@@ -105,6 +119,9 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
   const hasGenericPromotion = genericPromotionPatterns.some((pattern) =>
     pattern.test(combined)
   );
+  const hasLowInformationTemplate = lowInformationTemplatePatterns.some(
+    (pattern) => pattern.test(combined)
+  );
   const inquiryIntent = normalizeText(
     [inquiry.application, inquiry.interested_product, inquiry.message].join(" ")
   );
@@ -112,6 +129,13 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
     pattern.test(inquiryIntent)
   );
   const hasExternalLink = /\bhttps?:\/\/|\bwww\./i.test(combined);
+  const hasCompany = Boolean(normalizeText(inquiry.company));
+  const hasSelectedRequirement = Boolean(
+    normalizeText(inquiry.application) || normalizeText(inquiry.interested_product)
+  );
+  const hasInquiryDetail = inquiryDetailPatterns.some((pattern) =>
+    pattern.test(inquiryIntent)
+  );
 
   if (
     hasHighRiskSpam ||
@@ -123,6 +147,15 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
       hasGenericPromotion)
   ) {
     return automaticGrade("E", "unrelated_solicitation");
+  }
+
+  if (
+    hasLowInformationTemplate &&
+    !hasCompany &&
+    !hasSelectedRequirement &&
+    !hasInquiryDetail
+  ) {
+    return automaticGrade("E", "insufficient_inquiry_detail");
   }
 
   return automaticGrade("D", null);

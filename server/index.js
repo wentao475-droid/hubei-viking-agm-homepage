@@ -161,7 +161,7 @@ const historicalAutomaticSpam = db.prepare(`
 const markHistoricalSpam = db.prepare(`
   UPDATE inquiries
   SET lead_grade = 'E',
-      classification_reason = 'unrelated_solicitation',
+      classification_reason = @classification_reason,
       classified_at = CURRENT_TIMESTAMP,
       notification_status = 'skipped',
       email_notification_status = 'skipped',
@@ -177,10 +177,13 @@ const reclassifyHistoricalAutomaticSpam = db.transaction(() => {
       inquiry,
       testContacts: inquiryTestContacts
     });
-    if (classification.classification_reason !== "unrelated_solicitation") {
+    if (classification.lead_grade !== "E") {
       continue;
     }
-    markHistoricalSpam.run(inquiry.id);
+    markHistoricalSpam.run({
+      id: inquiry.id,
+      classification_reason: classification.classification_reason
+    });
     count += 1;
   }
   return count;

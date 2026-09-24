@@ -117,6 +117,31 @@ test("posture-corrector promotion is discarded", () => {
   assert.equal(result.classification_reason, "unrelated_solicitation");
 });
 
+test("generic contact-by-email template is quarantined", () => {
+  const result = classifyInquiry({
+    inquiry: inquiry({
+      company: "",
+      message:
+        "I would like more information. Please contact me by email — agm battery separator manufacturer."
+    })
+  });
+
+  assert.equal(result.lead_grade, "E");
+  assert.equal(result.classification_reason, "insufficient_inquiry_detail");
+});
+
+test("specific battery request remains allowed without a company name", () => {
+  const result = classifyInquiry({
+    inquiry: inquiry({
+      company: "",
+      message:
+        "Please contact me by email with a quote for 1.2 mm AGM separator rolls and sample availability."
+    })
+  });
+
+  assert.equal(result.lead_grade, "D");
+});
+
 test("high-risk gambling promotion is discarded", () => {
   const result = classifyInquiry({
     inquiry: inquiry({
