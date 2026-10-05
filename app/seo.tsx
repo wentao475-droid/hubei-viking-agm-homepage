@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildArabicPageSeo } from "../content/arabic-seo.mjs";
 import { seoContent } from "./cms-content";
 import { productFaqCopy } from "./seo-faq";
 import { sampleRequestFaq } from "./sample-request-copy";
@@ -9,7 +10,7 @@ import {
   localizeText,
   resourceArticles
 } from "./resourceCatalog";
-import { localeHomePaths } from "./locales";
+import { localeHomePaths, localizedRouteGroups } from "./locales";
 import type { Lang, SiteLocale } from "./locales";
 import {
   articleDefinitions,
@@ -36,39 +37,8 @@ const ENERGY_STORAGE_APPLICATION_IMAGE = `${SITE_URL}/images/applications/energy
 const HOME_VIDEO_URL = `${SITE_URL}/videos/viking-agm-promo-720p.mp4`;
 const HOME_VIDEO_POSTER = `${SITE_URL}/images/viking-agm-promo-poster.webp`;
 
-const arabicSeoTitles: Record<string, string> = {
-  "/": "شركة تصنيع فواصل AGM لبطاريات VRLA | Viking AGM",
-  "/request-agm-separator-sample/": "طلب عينة فاصل AGM ومراجعة المواصفات | Viking AGM",
-  "/products/agm-separator/": "فاصل AGM من الألياف الزجاجية لبطاريات VRLA | Viking AGM",
-  "/products/agm-separator-rolls/": "لفائف فواصل AGM لبطاريات VRLA | Viking AGM",
-  "/products/agm-separator-sheets/": "ألواح فواصل AGM لبطاريات VRLA | Viking AGM",
-  "/products/glass-fiber-thermal-insulation-paper/": "ورق عزل حراري من الألياف الزجاجية | Viking AGM",
-  "/quality-control/agm-separator-testing/": "اختبار جودة فواصل AGM | Viking AGM",
-  "/applications/agm-separator-for-vrla-battery/": "فواصل AGM لبطاريات VRLA | Viking AGM",
-  "/applications/agm-separator-for-ups-battery/": "فواصل AGM لبطاريات UPS VRLA | Viking AGM",
-  "/applications/agm-separator-for-motorcycle-battery/": "فواصل AGM لبطاريات الدراجات النارية | Viking AGM",
-  "/applications/agm-separator-for-energy-storage-battery/": "فواصل AGM لبطاريات تخزين الطاقة | Viking AGM"
-};
-
 function pageSeo<T extends Record<string, any>>(entries: T, lang: SiteLocale): any {
-  const fallback = entries.en ?? entries.vi;
-  if (lang !== "ar") return entries[lang as keyof T];
-  const sourcePath = fallback.path as string;
-  return {
-    ...fallback,
-    path: sourcePath === "/" ? "/ar/" : `/ar${sourcePath}`,
-    alternatePath: sourcePath,
-    locale: "ar",
-    language: "ar",
-    siteName: "Viking AGM",
-    alternateSiteName: "Hubei Viking AGM",
-    title: arabicSeoTitles[sourcePath] ?? "فواصل AGM لبطاريات الرصاص الحمضية | Viking AGM",
-    description: "تصنيع فواصل AGM من الألياف الزجاجية ولفائف وألواح لبطاريات الرصاص الحمضية، مع مناقشة المواصفات والفحص والتعبئة.",
-    pageName: arabicSeoTitles[sourcePath] ?? "Viking AGM",
-    productName: arabicSeoTitles[sourcePath] ?? "فاصل AGM",
-    serviceName: "تصنيع فواصل AGM من الألياف الزجاجية",
-    serviceDescription: "فواصل AGM على شكل لفائف وألواح لمصنعي بطاريات الرصاص الحمضية."
-  };
+  return lang === "ar" ? buildArabicPageSeo(entries.en ?? entries.vi) : entries[lang as keyof T];
 }
 
 const homeSeo = {
@@ -2106,6 +2076,34 @@ const agmSeparatorEnergyDataDeliverySeo = {
   }
 } as const;
 
+const en18060BatteryStandardSeo = {
+  en: {
+    path: "/blog/en-18060-2025-road-vehicle-battery-standard/", alternatePath: "/zh/blog/en-18060-2025-road-vehicle-battery-standard/",
+    locale: "en_US", language: "en", siteName: "Viking AGM",
+    title: "EN 18060:2025: Which Vehicle Batteries Does It Cover? | Viking AGM",
+    description: "What the EN 18060:2025 harmonised-standard listing says about road-vehicle EV batteries, Pb chemistry and the AGM separator evidence boundary.",
+    keywords: ["EN 18060:2025 battery standard", "EU harmonised battery standard Pb", "EN 18060 lead-acid battery", "EV battery performance and durability standard", "AGM battery EU requirements"],
+    pageName: "EN 18060:2025: Road-Vehicle Battery Scope and AGM Evidence Boundary",
+    articleDescription: "A title-level reading of the EU harmonised-standard listing for EN 18060:2025, including its limits for lead-acid battery and AGM separator claims.",
+    breadcrumbs: ["Home", "Resources", "EN 18060:2025 Battery Standard"]
+  },
+  zh: {
+    path: "/zh/blog/en-18060-2025-road-vehicle-battery-standard/", alternatePath: "/blog/en-18060-2025-road-vehicle-battery-standard/",
+    locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM",
+    title: "EN 18060:2025 覆盖哪些车用电池？铅酸与 AGM 供应商应怎样理解 | 湖北维京AGM",
+    description: "解读 EN 18060:2025 协调标准列名对道路车辆 EV 电池、Pb 化学体系及 AGM 隔板证据边界的含义。",
+    keywords: ["EN 18060:2025 电池标准", "欧盟协调电池标准 Pb", "EN 18060 铅酸电池", "EV 电池性能耐久性标准", "AGM 电池欧盟要求"],
+    pageName: "EN 18060:2025：车用电池范围与 AGM 证据边界",
+    articleDescription: "从欧盟协调标准列名出发，说明 EN 18060:2025 对铅酸电池和 AGM 隔板沟通的范围与限制。",
+    breadcrumbs: ["首页", "资料", "EN 18060:2025 电池标准"]
+  }
+} as const;
+
+const dataCenterEvLowVoltageAgmSeo = {
+  en: { path: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", alternatePath: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "Why Data Centers and EVs Still Use Lead-Acid Low-Voltage Power | Viking AGM", description: "Compare data-center VRLA backup and EV 12V AGM battery duties, selection boundaries and AGM separator validation inputs.", keywords: ["data center lead-acid battery", "data center VRLA battery", "EV 12V AGM battery", "Asia lead-acid battery market", "AGM separator applications"], pageName: "Why Data Centers and Electric Vehicles Still Use Lead-Acid Low-Voltage Power", articleDescription: "A system-boundary comparison of data-center backup and EV low-voltage battery duties, based on LEOCH's attributed corporate market perspective.", breadcrumbs: ["Home", "Resources", "Data Center and EV Low-Voltage Power"] },
+  zh: { path: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", alternatePath: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？| 湖北维京AGM", description: "比较数据中心 VRLA 备电与电动车 12V AGM 电池任务、选型边界及 AGM 隔板验证输入。", keywords: ["数据中心铅酸电池", "数据中心 VRLA 电池", "电动车 12V AGM 电池", "亚洲铅酸电池市场", "AGM 隔板应用"], pageName: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？", articleDescription: "基于理士企业市场观点，比较数据中心备电与电动车低压电池任务的系统边界。", breadcrumbs: ["首页", "资料", "数据中心与电动车低压电源"] }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2210,6 +2208,7 @@ export function buildResourcesHubMetadata(lang: SiteLocale): Metadata {
     esPath: "/es/resources/",
     ptPath: "/pt/resources/",
     ruPath: "/ru/resources/",
+    arPath: "/ar/resources/",
     locale: current.locale,
     siteName: current.siteName,
     imageAlt: current.pageName,
@@ -2231,7 +2230,8 @@ function articleLocalePaths(kind: BlogArticleKind) {
     jaPath: `/ja/blog/${slug}/`,
     esPath: `/es/blog/${slug}/`,
     ptPath: `/pt/blog/${slug}/`,
-    ruPath: `/ru/blog/${slug}/`
+    ruPath: `/ru/blog/${slug}/`,
+    arPath: `/ar/blog/${slug}/`
   };
 }
 
@@ -2922,6 +2922,20 @@ export function buildAgmSeparatorEnergyDataDeliveryMetadata(
   });
 }
 
+export function buildEn18060BatteryStandardMetadata(lang: Lang): Metadata {
+  const current = seoContent("en18060BatteryStandard", lang, en18060BatteryStandardSeo[lang]);
+  return buildMetadata({
+    title: current.title, description: current.description, keywords: [...current.keywords], path: current.path,
+    ...articleLocalePaths("en18060BatteryStandard"), locale: current.locale, siteName: current.siteName,
+    imageAlt: current.pageName, image: { url: QUALITY_PREVIEW_IMAGE, width: 1200, height: 900 }
+  });
+}
+
+export function buildDataCenterEvLowVoltageAgmMetadata(lang: Lang): Metadata {
+  const current = seoContent("dataCenterEvLowVoltageAgm", lang, dataCenterEvLowVoltageAgmSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("dataCenterEvLowVoltageAgm"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: UPS_APPLICATION_IMAGE, width: 1200, height: 900 } });
+}
+
 export function buildAgmGlassFiberVsPvcSeparatorMetadata(
   lang: Lang
 ): Metadata {
@@ -3010,6 +3024,12 @@ function buildMetadata({
         ...(ptPath ? { "pt-BR": ptPath } : {}),
         ...(ruPath ? { "ru-RU": ruPath } : {}),
         ...(arPath ? { ar: arPath } : {}),
+        ...Object.fromEntries(
+          Object.entries(localizedRouteGroups.find((group) => group.en === enPath) ?? {}).map(([code, url]) => [
+            ({ zh: "zh-CN", vi: "vi-VN", ko: "ko-KR", ja: "ja-JP", pt: "pt-BR", ru: "ru-RU" } as Record<string, string>)[code] ?? code,
+            url
+          ])
+        ),
         "x-default": enPath
       }
     },
@@ -3088,7 +3108,7 @@ export function StructuredData({ lang }: { lang: SiteLocale }) {
                       ? "Conheça a produção de separadores Viking AGM em 1 minuto"
                       : lang === "ru"
                         ? "Производство AGM-сепараторов Viking за 1 минуту"
-                        : "Watch the 1-minute Viking AGM factory overview",
+                        : lang === "ar" ? "جولة في مصنع Viking AGM خلال دقيقة" : "Watch the 1-minute Viking AGM factory overview",
         description:
           lang === "zh"
             ? "湖北维京 AGM 隔板生产、卷材处理、质量检测和包装出运现场宣传片。"
@@ -3104,7 +3124,7 @@ export function StructuredData({ lang }: { lang: SiteLocale }) {
                       ? "Vídeo de um minuto sobre produção, manuseio de rolos, controle de qualidade e embalagem de separadores Viking AGM."
                       : lang === "ru"
                         ? "Минутный обзор производства, обработки рулонов, контроля качества и упаковки AGM-сепараторов Viking."
-                        : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
+                        : lang === "ar" ? "جولة مدتها دقيقة تعرض إنتاج فواصل AGM ومناولة اللفائف وفحص الجودة والتعبئة." : "A one-minute overview of Viking AGM separator production, roll handling, quality control and packing scenes.",
         thumbnailUrl: [HOME_VIDEO_POSTER],
         uploadDate: "2026-07-01T00:00:00+08:00",
         duration: "PT1M3S",
@@ -4678,6 +4698,30 @@ export function AgmSeparatorEnergyDataDeliveryStructuredData({
   return <JsonLd data={data} />;
 }
 
+export function En18060BatteryStandardStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("en18060BatteryStandard", lang, en18060BatteryStandardSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: QUALITY_PREVIEW_IMAGE, url, datePublished: "2026-10-03", dateModified: "2026-10-03", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["EN 18060:2025", "EU harmonised battery standard", "road-vehicle EV batteries", "lead-acid battery", "AGM separator evidence"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function DataCenterEvLowVoltageAgmStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("dataCenterEvLowVoltageAgm", lang, dataCenterEvLowVoltageAgmSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: UPS_APPLICATION_IMAGE, url, datePublished: "2026-10-04", dateModified: "2026-10-04", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["data center lead-acid battery", "VRLA backup battery", "electric vehicle low-voltage battery", "AGM separator application"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
 export function AgmGlassFiberVsPvcSeparatorStructuredData({
   lang
 }: {
@@ -4817,7 +4861,7 @@ export function SecondaryArticleStructuredData({
   const current = buildSecondaryArticleSeo(lang, kind);
   const url = `${SITE_URL}${current.path}`;
   const published = articleDefinitions[kind][2];
-  const modified = articleDefinitions[kind][3] ?? "2026-08-05";
+  const modified = current.dateModified;
   const data = {
     "@context": "https://schema.org",
     "@graph": [

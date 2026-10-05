@@ -52,7 +52,7 @@ export function ResourcesNavDropdown({
       : {
           start: secondaryResourceData[lang].hub.actionEyebrow,
           browse: secondaryResourceData[lang].hub.libraryTitle,
-          viewMore: secondaryResourceData[lang].hub.libraryEyebrow,
+          viewMore: secondaryResourceData[lang].ui.viewMore,
           viewAll: secondaryResourceData[lang].hub.libraryEyebrow,
           viewAllDescription: secondaryResourceData[lang].hub.subtitle
         };

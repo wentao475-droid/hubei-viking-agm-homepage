@@ -3,21 +3,9 @@ import { join } from "node:path";
 
 const root = process.cwd();
 const outDir = join(root, "out");
-const synchronizedLocaleCodes = ["vi", "ko", "ja", "es", "pt", "ru"];
-const synchronizedResourceSlugs = [
-  "what-is-agm-separator",
-  "key-technical-parameters-of-agm-separator",
-  "how-to-choose-agm-separator",
-  "agm-glass-fiber-vs-pvc-battery-separator",
-  "agm-separator-manufacturing-quality-delivery",
-  "agm-separator-performance-consistency",
-  "agm-separator-export-supply-readiness",
-  "why-ups-projects-still-use-vrla-batteries",
-  "agm-separator-for-data-center-backup-power",
-  "how-chinas-earliest-lead-acid-batteries-were-made",
-  "agm-separator-pressure-retention-after-acid-filling-and-cycling",
-  "agm-separator-batch-consistency-and-process-control"
-];
+import { articleKinds, articleDefinitions, secondaryResourceLocales, buildSecondaryArticleSeo } from "../content/secondary-resources.mjs";
+const synchronizedLocaleCodes = secondaryResourceLocales;
+const synchronizedResourceSlugs = articleKinds.map((kind) => articleDefinitions[kind][0]);
 const synchronizedResourceFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/resources/index.html`,
   ...synchronizedResourceSlugs.map(
@@ -29,7 +17,7 @@ const synchronizedDetailFiles = synchronizedLocaleCodes.flatMap((locale) => [
   `${locale}/products/agm-separator-sheets/index.html`,
   `${locale}/quality-control/agm-separator-testing/index.html`
 ]);
-const thermalInsulationPaperFiles = ["", "zh", ...synchronizedLocaleCodes, "ar"].map(
+const thermalInsulationPaperFiles = ["", "zh", ...synchronizedLocaleCodes].map(
   (locale) =>
     `${locale ? `${locale}/` : ""}products/glass-fiber-thermal-insulation-paper/index.html`
 );
@@ -97,6 +85,8 @@ const requiredFiles = [
   "zh/blog/agm-glass-fiber-vs-pvc-battery-separator/index.html",
   "blog/agm-separator-for-data-center-backup-power/index.html",
   "zh/blog/agm-separator-for-data-center-backup-power/index.html",
+  "blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/index.html",
+  "zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/index.html",
   "blog/how-chinas-earliest-lead-acid-batteries-were-made/index.html",
   "zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/index.html",
   "blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/index.html",
@@ -351,15 +341,7 @@ const secondaryResourcesComplete = synchronizedLocaleCodes.every((locale) => {
       html.includes('"@type":"BlogPosting"') &&
       html.includes(
         `"dateModified":"${
-          slug === "agm-separator-for-data-center-backup-power"
-            ? "2026-08-07"
-            : slug === "how-chinas-earliest-lead-acid-batteries-were-made"
-              ? "2026-08-11"
-              : slug === "agm-separator-pressure-retention-after-acid-filling-and-cycling"
-                ? "2026-08-12"
-                : slug === "agm-separator-batch-consistency-and-process-control"
-                  ? "2026-08-12"
-                : "2026-08-05"
+          buildSecondaryArticleSeo(locale, articleKinds.find((kind) => articleDefinitions[kind][0] === slug)).dateModified
         }"`
       )
   );
@@ -1024,10 +1006,11 @@ if (p0ApplicationUrls.every((url) => sitemap.includes(url))) {
   fail("sitemap.xml is missing one or more P0 application pages");
 }
 
-if (sitemapUrls.length === 223) {
-  pass("sitemap.xml lists the expected 223 localized public URLs");
+const expectedPublicPages = (12 + articleKinds.length) * (2 + secondaryResourceLocales.length);
+if (sitemapUrls.length === expectedPublicPages) {
+  pass(`sitemap.xml lists the expected ${expectedPublicPages} localized public URLs`);
 } else {
-  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of 223`);
+  fail(`sitemap.xml lists ${sitemapUrls.length} URLs instead of ${expectedPublicPages}`);
 }
 
 const sitemapMetadataComplete = sitemapUrlBlocks.every(
@@ -1215,6 +1198,7 @@ const expectedSitemapLastmod = [
 ];
 
 const staleLastmod = expectedSitemapLastmod.filter(([url, date]) => {
+  if (new URL(url).pathname.startsWith("/ar/")) date = url.includes("/blog/") ? "2026-10-04" : "2026-10-05";
   const block = sitemapUrlBlocks.find((entry) => entry.includes(`<loc>${url}</loc>`));
   return !block?.includes(`<lastmod>${date}</lastmod>`);
 });

@@ -29,7 +29,7 @@ for (const file of walk(outDir)) {
                 : "en";
   const source = readFileSync(file, "utf8");
   const result = source.replace(
-    /<html\s+lang="[^"]*"/,
+    /<html\s+lang="[^"]*"(?:\s+dir="[^"]*")?/,
     `<html lang="${expectedLanguage}"${expectedLanguage === "ar" ? " dir=\"rtl\"" : ""}`
   );
 

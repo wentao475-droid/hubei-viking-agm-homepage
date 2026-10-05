@@ -8,6 +8,7 @@ import type { Lang, SiteLocale } from "./locales";
 import { productFaqCopy } from "./seo-faq";
 import { SiteHeader } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
+import { buildArabicProductContent } from "../content/arabic-products.mjs";
 import {
   thermalInsulationPaperContent,
   thermalInsulationPaperLeadCopy
@@ -4198,99 +4199,8 @@ const additionalMotorcycleContent = Object.fromEntries(
   ])
 ) as Record<AdditionalMotorcycleLocale, ProductContent>;
 
-const arabicPageText: Record<
-  Exclude<ProductPageKind, "glassFiberThermalInsulationPaper">,
-  { eyebrow: string; title: string; subtitle: string; form: string; application: string }
-> = {
-  agmSeparator: { eyebrow: "فواصل AGM لبطاريات VRLA", title: "فاصل AGM من الألياف الزجاجية لبطاريات VRLA", subtitle: "لفائف وألواح من فاصل AGM من الألياف الزجاجية لمناقشة بطاريات الرصاص الحمضية VRLA ومطابقة المواصفات.", form: "لفائف وألواح فاصل AGM", application: "بطاريات الرصاص الحمضية VRLA" },
-  agmSeparatorRolls: { eyebrow: "لفائف فاصل AGM", title: "لفائف فاصل AGM لخطوط إنتاج البطاريات", subtitle: "مادة AGM من الألياف الزجاجية في لفائف للقص الطولي والتحويل الداخلي وإنتاج بطاريات VRLA.", form: "اللفائف النهائية والإنتاج والتعبئة", application: "إنتاج البطاريات والقص المستمر" },
-  agmSeparatorSheets: { eyebrow: "ألواح فاصل AGM", title: "ألواح فاصل AGM مقصوصة لتجميع بطاريات VRLA", subtitle: "ألواح AGM من الألياف الزجاجية بمقاسات متفق عليها لتقييم العينات وتجميع البطاريات.", form: "الألواح المقصوصة والحواف والتعبئة", application: "تجميع بطاريات VRLA" },
-  agmSeparatorTesting: { eyebrow: "الاختبار ومراقبة الجودة", title: "اختبار ومراقبة جودة فاصل AGM", subtitle: "تتم مراجعة السمك والوزن المساحي وامتصاص الحمض والمقاومة الكهربائية والمظهر وفق متطلبات العميل.", form: "عمليات مراقبة الجودة", application: "بنود الاختبار المتفق عليها" },
-  agmSeparatorVrlaApplication: { eyebrow: "تطبيق بطاريات VRLA", title: "فاصل AGM لبطاريات الرصاص الحمضية VRLA", subtitle: "مراجعة مواصفات فاصل AGM وفق بنية البطارية والألواح وعملية التجميع وظروف الاستخدام.", form: "لفائف وألواح لتطبيقات VRLA", application: "تطبيقات بطاريات VRLA" },
-  agmSeparatorUpsApplication: { eyebrow: "تطبيق بطاريات UPS", title: "فاصل AGM لبطاريات UPS VRLA", subtitle: "مناقشة فاصل AGM لأنظمة UPS والطاقة الاحتياطية وبطاريات VRLA في وضع الاستعداد.", form: "لفائف وألواح لإنتاج بطاريات UPS", application: "UPS والطاقة الاحتياطية" },
-  agmSeparatorMotorcycleApplication: { eyebrow: "تطبيق بطاريات الدراجات النارية", title: "فاصل AGM لبطاريات بدء تشغيل الدراجات النارية", subtitle: "مراجعة اللفائف والألواح ومواصفات العينات لبطاريات VRLA المدمجة للدراجات النارية.", form: "لفائف وألواح للتجميع المدمج", application: "بطاريات بدء تشغيل الدراجات النارية" },
-  agmSeparatorEnergyStorageApplication: { eyebrow: "تطبيق تخزين الطاقة", title: "فاصل AGM لبطاريات الرصاص الحمضية لتخزين الطاقة", subtitle: "مناقشة فاصل AGM لبطاريات تخزين الطاقة والطاقة الاحتياطية وبطاريات VRLA في وضع الاستعداد.", form: "فواصل لمشاريع التخزين والطاقة الاحتياطية", application: "تخزين الطاقة والطاقة الاحتياطية" }
-};
-
-function arabicProductContent(
-  page: Exclude<ProductPageKind, "glassFiberThermalInsulationPaper">
-): ProductContent {
-  const base = content.agmSeparator.en;
-  const t = arabicPageText[page];
-  const related: LinkItem[] = [
-    ["فاصل AGM لبطاريات VRLA", "/ar/products/agm-separator/"],
-    ["لفائف فاصل AGM", "/ar/products/agm-separator-rolls/"],
-    ["اختبار فاصل AGM", "/ar/quality-control/agm-separator-testing/"],
-    ["طلب عينة ومطابقة المواصفات", "/ar/request-agm-separator-sample/"]
-  ];
-  const formImages = base.forms.items;
-
-  return {
-    homePath: "/ar/",
-    languagePath: "/products/agm-separator/",
-    quote: "طلب عينة",
-    hero: {
-      eyebrow: t.eyebrow,
-      title: t.title,
-      subtitle: t.subtitle,
-      primary: "طلب عينة ومطابقة المواصفات",
-      secondary: "إرسال متطلباتكم",
-      proof: ["لفائف وألواح", "مراجعة المواصفات", "دعم تقييم العينات"],
-      image: { ...base.hero.image, alt: t.title }
-    },
-    overview: {
-      eyebrow: "مراجعة التطبيق",
-      title: `فاصل AGM يحتاج إلى مطابقة مع ${t.application}`,
-      paragraphs: [
-        "يعمل فاصل AGM بين الألواح الموجبة والسالبة للمساعدة في الاحتفاظ بالإلكتروليت والحد من التلامس المباشر داخل بطارية VRLA.",
-        "تتم مراجعة السمك والعرض والوزن المساحي وامتصاص الحمض والمقاومة الكهربائية وشكل التوريد مع تصميم البطارية وطريقة التجميع لدى العميل."
-      ]
-    },
-    parameters: {
-      eyebrow: "تأكيد المواصفات",
-      title: "ابدأوا من بنية البطارية وعملية التجميع",
-      text: "المواصفات النهائية تُراجع مع تصميم الألواح وعينة البطارية وطريقة الاختبار وشكل اللفائف أو الألواح المطلوب.",
-      items: [["السمك والعرض", "يُراجعان مع الفجوة بين الألواح وظروف الضغط وطريقة التجميع."], ["الوزن المساحي والبنية", "تُناقش مع احتياجات التعامل والأداء وفق طريقة الاختبار المتفق عليها."], ["امتصاص الحمض والمقاومة", "تُراجع مع تطبيق البطارية ومتطلبات العميل."], ["شكل المنتج والتعبئة", "يُؤكد شكل اللفافة أو اللوح والمقاسات والتعبئة قبل العينة أو الإنتاج."]]
-    },
-    forms: {
-      eyebrow: "أشكال التوريد",
-      title: t.form,
-      items: formImages.map(([,,src,,width,height], index) => [
-        ["لفائف فاصل AGM", "ألواح فاصل AGM", "تأكيد العينة", "التعبئة والتسليم"][index] || "فاصل AGM",
-        ["لفائف لخطوط الإنتاج والقص وفق التصميم.", "ألواح مقصوصة لتجميع البطاريات وتقييم العينات.", "تأكيد التطبيق والمقاسات وبنود الاختبار قبل التوريد.", "مراجعة العلامات والتعبئة وحماية المنتج قبل الشحن."][index] || "مادة AGM من الألياف الزجاجية لتطبيقات بطاريات VRLA.",
-        src,
-        t.title,
-        width,
-        height
-      ])
-    },
-    applications: {
-      eyebrow: "مجالات التطبيق",
-      title: "تطبيقات بطاريات يمكن مراجعتها",
-      items: ["بطاريات UPS والطاقة الاحتياطية", "بطاريات الاتصالات", "بطاريات الدراجات النارية", "بطاريات تخزين الطاقة", "بطاريات بدء التشغيل", "بطاريات VRLA أخرى"]
-    },
-    quality: {
-      eyebrow: "مراجعة الجودة",
-      title: "يُؤكد الأداء وفق الاختبارات المتفق عليها",
-      text: "تُراجع بنود الاختبار وقيمها المستهدفة وطريقة القياس ومعايير القبول مع العميل قبل العينة أو طلب الإنتاج.",
-      cards: [["فحص الأبعاد", "السمك والعرض ومقاس اللوح وفق طريقة متفق عليها."], ["فحص خصائص المادة", "الوزن المساحي وامتصاص الحمض والمقاومة وفق التطبيق ومتطلبات الاختبار."], ["اتساق التوريد", "تُراجع متطلبات اللفائف أو الألواح والتعبئة والتوريد على دفعات."]]
-    },
-    related: { eyebrow: "صفحات ذات صلة", title: "تابعوا مراجعة المنتج والعينة", items: related },
-    inquiry: {
-      eyebrow: "ابدأوا النقاش",
-      title: "أرسلوا متطلبات فاصل AGM",
-      text: "شاركوا تطبيق البطارية والسمك والعرض وشكل المنتج والعينة أو متطلبات الاختبار المتاحة لمراجعة أكثر فائدة.",
-      checklist: ["تطبيق البطارية", "السمك والعرض أو مقاس اللوح", "لفائف أو ألواح", "العينة والاختبار والتعبئة"],
-      placeholder: "تطبيق البطارية والسمك والعرض ومقاس اللوح وشكل المنتج واحتياجات العينة أو الاختبار",
-      submit: "إرسال المتطلبات",
-      submitting: "جارٍ الإرسال...",
-      required: "يرجى إدخال الاسم وبيانات الاتصال.",
-      success: "شكراً لكم. سنتواصل لتأكيد المتطلبات.",
-      failure: "تعذر إرسال الطلب حالياً. يرجى المحاولة لاحقاً.",
-      emailFallback: "تم فتح برنامج البريد الإلكتروني. أرسلوا الرسالة المعدة لإكمال الاستفسار."
-    },
-    footer: footerCopy.ar
-  };
+function arabicProductContent(page: Exclude<ProductPageKind, "glassFiberThermalInsulationPaper">): ProductContent {
+  return buildArabicProductContent(page, content, footerCopy) as ProductContent;
 }
 
 function asset(path: string) {
@@ -4594,7 +4504,8 @@ export function ProductPage({
           "サンプル依頼",
           "Solicitar muestra",
           "Solicitar amostra",
-          "Запросить образец"
+          "Запросить образец",
+          "طلب عينة"
         )}
       />
 
@@ -4626,7 +4537,8 @@ export function ProductPage({
                   "サンプル・仕様確認を依頼",
                   "Solicitar una muestra y revisión de especificaciones",
                   "Solicitar amostra e análise de especificações",
-                  "Запросить образец и проверку характеристик"
+                  "Запросить образец и проверку характеристик",
+                  "طلب عينة ومطابقة المواصفات"
                 )}
                 <SendIcon size={18} />
               </a>
@@ -4886,7 +4798,8 @@ export function ProductPage({
                 "次のステップ",
                 "Siguiente paso",
                 "Próximo passo",
-                "Следующий шаг"
+                "Следующий шаг",
+                "الخطوة التالية"
               )}
             </p>
             <h2 className="mt-3 text-2xl font-bold">
@@ -4899,7 +4812,8 @@ export function ProductPage({
                 "サンプル・仕様確認を依頼",
                 "Solicitar una muestra y revisión de especificaciones",
                 "Solicitar amostra e análise de especificações",
-                "Запросить образец и проверку характеристик"
+                "Запросить образец и проверку характеристик",
+                "طلب عينة ومطابقة المواصفات"
               )}
             </h2>
             <p className="mt-3 text-sm leading-7 text-white/75">
@@ -4912,7 +4826,8 @@ export function ProductPage({
                 "必要情報、サンプル協議の流れ、製造情報をご確認ください。",
                 "Revise la información necesaria, el proceso de muestras y la evidencia de producción.",
                 "Veja as informações necessárias, o processo de amostras e as evidências de produção.",
-                "Ознакомьтесь с перечнем данных, процессом обсуждения образцов и производственными материалами."
+                "Ознакомьтесь с перечнем данных, процессом обсуждения образцов и производственными материалами.",
+                "راجع قائمة المعلومات ومسار مناقشة العينات ومشاهد الإنتاج."
               )}
             </p>
             <ArrowRight
@@ -4935,7 +4850,8 @@ export function ProductPage({
                 "購買参考資料",
                 "Material para compradores",
                 "Material para compradores",
-                "Материалы для покупателя"
+                "Материалы для покупателя",
+                "مرجع للمشتري"
               )}
             </p>
             <h2 className="mt-3 text-2xl font-bold">
@@ -4948,7 +4864,8 @@ export function ProductPage({
                 "Viking AGM英語・中国語PDFをダウンロード",
                 "Descargar ficha técnica Viking AGM (EN/ZH)",
                 "Baixar ficha técnica Viking AGM (EN/ZH)",
-                "Скачать технический обзор Viking AGM (EN/ZH)"
+                "Скачать технический обзор Viking AGM (EN/ZH)",
+                "تنزيل ملف القدرات الفنية لـ Viking AGM بالإنجليزية والصينية (EN/ZH)"
               )}
             </h2>
             <p className="mt-3 text-sm leading-7 text-steel">
@@ -4961,7 +4878,8 @@ export function ProductPage({
                 "製品形状、用途、品質検査、梱包をまとめた英語・中国語資料です。",
                 "Documento en inglés y chino sobre formatos, aplicaciones, controles de calidad y embalaje.",
                 "Documento em inglês e chinês sobre formatos, aplicações, controles de qualidade e embalagem.",
-                "Материал на английском и китайском языках о формах поставки, применении, контроле качества и упаковке."
+                "Материал на английском и китайском языках о формах поставки, применении, контроле качества и упаковке.",
+                "ملف بالإنجليزية والصينية عن أشكال المنتج ومناقشة التطبيقات وفحوص الجودة والتعبئة."
               )}
             </p>
             <ArrowRight
@@ -5089,7 +5007,8 @@ function Footer({
             "All rights reserved.",
             "Todos los derechos reservados.",
             "Todos os direitos reservados.",
-            "Все права защищены."
+            "Все права защищены.",
+            "جميع الحقوق محفوظة."
           )}
         </div>
         <a

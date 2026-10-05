@@ -1,4 +1,9 @@
-export const secondaryResourceLocales = ["vi", "ko", "ja", "es", "pt", "ru"];
+import { additionalResourceTopics } from "./additional-resource-topics.mjs";
+import { arabicResourceData } from "./arabic-resources.mjs";
+import { completeResourceSections, completedResourceKinds } from "./resource-section-completions.mjs";
+import { resourceComparisons } from "./resource-comparisons.mjs";
+
+export const secondaryResourceLocales = ["vi", "ko", "ja", "es", "pt", "ru", "ar"];
 
 export const articleKinds = [
   "whatIsAgmSeparator",
@@ -14,10 +19,17 @@ export const articleKinds = [
   "agmSeparatorPressureRetention",
   "agmSeparatorBatchProcessControl",
   "agmSeparatorThirdPole",
-  "agmSeparatorEnergyDataDelivery"
+  "agmSeparatorEnergyDataDelivery",
+  "en18060BatteryStandard",
+  "dataCenterEvLowVoltageAgm",
+  "agmSeparatorSupplyChain",
+  "agmStartStopBatteryProcurement"
 ];
 
 export const articleDefinitions = {
+  agmSeparatorSupplyChain: ["agm-separator-supply-chain-from-glass-block-to-finished-roll", "manufacturingQuality", "2026-09-01", "2026-10-03"],
+  agmStartStopBatteryProcurement: ["agm-start-stop-battery-separator-procurement-guide", "buyerGuides", "2026-09-10", "2026-10-03"],
+  dataCenterEvLowVoltageAgm: ["why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power", "industryApplications", "2026-10-04", "2026-10-04"],
   whatIsAgmSeparator: ["what-is-agm-separator", "buyerGuides", "2026-06-11"],
   keyTechnicalParameters: ["key-technical-parameters-of-agm-separator", "buyerGuides", "2026-06-13"],
   howToChooseAgmSeparator: ["how-to-choose-agm-separator", "buyerGuides", "2026-06-13"],
@@ -32,9 +44,12 @@ export const articleDefinitions = {
   agmSeparatorBatchProcessControl: ["agm-separator-batch-consistency-and-process-control", "manufacturingQuality", "2026-08-12", "2026-08-12"],
   agmSeparatorThirdPole: ["agm-separator-third-pole-explained", "buyerGuides", "2026-09-13", "2026-09-13"],
   agmSeparatorEnergyDataDelivery: ["agm-separator-energy-data-and-delivery-risk", "manufacturingQuality", "2026-09-18", "2026-09-18"]
+  ,en18060BatteryStandard: ["en-18060-2025-road-vehicle-battery-standard", "industryApplications", "2026-10-03", "2026-10-03"]
 };
 
 const images = {
+  agmSeparatorSupplyChain: ["/images/agm-hero-production-1600.webp", 1600, 1000],
+  agmStartStopBatteryProcurement: ["/images/agm-quality-control-1200.webp", 1200, 900],
   whatIsAgmSeparator: ["/images/viking-finished-separator-roll-900.webp", 900, 675],
   keyTechnicalParameters: ["/images/agm-quality-control-1200.webp", 1200, 900],
   howToChooseAgmSeparator: ["/images/viking-finished-separator-roll-900.webp", 900, 675],
@@ -44,11 +59,13 @@ const images = {
   agmSeparatorExportSupplyReadiness: ["/images/evidence/shipping-pallet-01.webp", 1200, 900],
   upsVrlaTechnologySelection: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
   dataCenterBackupPowerAgmSeparator: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
+  dataCenterEvLowVoltageAgm: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
   earlyChinaLeadAcidBatteryManufacturing: ["/images/agm-hero-production-1600.webp", 1600, 1000],
   agmSeparatorPressureRetention: ["/images/agm-quality-control-1200.webp", 1200, 800],
   agmSeparatorBatchProcessControl: ["/images/agm-quality-control-1200.webp", 1200, 800],
   agmSeparatorThirdPole: ["/images/agm-quality-control-1200.webp", 1200, 800],
   agmSeparatorEnergyDataDelivery: ["/images/agm-hero-production-1600.webp", 1600, 1000]
+  ,en18060BatteryStandard: ["/images/agm-quality-control-1200.webp", 1200, 900]
 };
 
 export const secondaryResourceData = {
@@ -832,18 +849,38 @@ const energyDataDeliveryReferenceNotes = {
   ru: "Инвестиции, заводы и экономия — корпоративное раскрытие Clarios, а не независимый аудит, AGM-бенчмарк или доказательство показателей Viking."
 };
 
-const secondaryHubCounts = {
-  vi: "14 bài viết kỹ thuật", ko: "기술 글 14편", ja: "技術記事 14件",
-  es: "14 artículos técnicos", pt: "14 artigos técnicos", ru: "14 технических статей"
+const en18060BatteryStandardTopics = {
+  vi: { title: "EN 18060:2025 bao phủ những pin xe đường bộ nào? Nhà cung cấp ắc quy chì và AGM cần hiểu gì?", summary: "Danh mục tiêu chuẩn hài hòa nêu mô-đun và pin EV sạc lại dùng cho xe đường bộ, gồm Li-ion, Na-ion, Pb, NiMH và hóa học kết hợp; điều đó không đồng nghĩa AGM được chứng nhận riêng.", intro: "Quyết định (EU) 2026/2048 liệt kê EN 18060:2025 để hỗ trợ Regulation (EU) 2023/1542. Phạm vi ở cấp tiêu đề không tự xác nhận mọi pin chì-axit, AGM, UPS hoặc pin tĩnh là áp dụng.", sections: [["Danh mục", "Tiêu chuẩn hài hòa được công bố", "Trang Ủy ban châu Âu nêu Quyết định (EU) 2026/2048. Hãy đọc toàn văn tiêu chuẩn trước khi kết luận về sản phẩm."], ["Phạm vi", "Pb được nêu cùng các hóa học khác", "Tiêu đề nói về mô-đun và pin EV sạc lại cho xe đường bộ, gồm Li-ion, Na-ion, Pb, NiMH và hóa học kết hợp."], ["So sánh", "Không phải một thước điểm chung", "Danh mục chung không chứng minh các hóa học dùng cùng phép thử, ngưỡng hoặc kết quả có thể so sánh trực tiếp."], ["AGM", "Tấm ngăn không phải pin được chứng nhận riêng", "Dữ liệu vật liệu AGM không thay thế xác nhận pin hoàn chỉnh, và danh mục không phải tiêu chuẩn chứng nhận riêng cho tấm ngăn."], ["FAQ", "Nhà sản xuất xác nhận áp dụng thế nào?", "Xác định phân loại mô-đun hoặc pin EV xe đường bộ, nghĩa vụ quy định, toàn văn EN 18060:2025 và kế hoạch xác nhận pin hoàn chỉnh."], ["Hành động", "Đối chiếu dữ liệu tấm ngăn với kế hoạch pin", "Cùng thống nhất ứng dụng, cấu trúc nhóm bản cực, kích thước, dạng cuộn hoặc tấm, điều kiện lắp ráp và phạm vi xác nhận."]], parameters: [["Phân loại", "Mô-đun hoặc pin EV sạc lại cho xe đường bộ."], ["Văn bản", "Toàn văn EN 18060:2025 và phiên bản áp dụng."], ["Xác nhận", "Phạm vi và trách nhiệm thử pin hoàn chỉnh."], ["Tấm ngăn", "Thông số, phương pháp, trạng thái mẫu và hồ sơ lô."]], checklist: ["Phân loại sản phẩm và hóa học", "Ứng dụng pin và cấu trúc bản cực", "Độ dày, chiều rộng hoặc kích thước tấm", "Dạng cuộn/tấm và điều kiện lắp ráp", "Phạm vi xác nhận pin hoàn chỉnh và giai đoạn dự án"] },
+  ko: { title: "EN 18060:2025는 어떤 도로 차량 배터리를 포괄하나? 납산·AGM 공급업체가 알아야 할 점", summary: "조화 표준의 제목은 Li-ion, Na-ion, Pb, NiMH 및 복합 화학계를 포함한 도로 차량용 충전식 EV 모듈·배터리를 말합니다. 이것이 AGM 분리막의 별도 인증을 뜻하지는 않습니다.", intro: "결정 (EU) 2026/2048은 Regulation (EU) 2023/1542를 지원하는 EN 18060:2025를 열거합니다. 제목 수준의 범위는 모든 납산, AGM, UPS 또는 고정식 배터리에 대한 적용 판정이 아닙니다.", sections: [["공개 목록", "조화 표준이 공표됨", "유럽위원회 페이지는 결정 (EU) 2026/2048을 제시합니다. 제품 결론 전 표준 전문을 검토해야 합니다."], ["범위", "Pb가 다른 화학계와 함께 열거됨", "제목은 Li-ion, Na-ion, Pb, NiMH 및 복합 화학계의 도로 차량용 충전식 EV 모듈·배터리를 말합니다."], ["비교", "하나의 점수표가 아님", "공통 제목이 동일 시험, 한계값 또는 직접 비교 가능한 결과를 뜻하지는 않습니다."], ["AGM", "분리막은 별도 인증된 배터리가 아님", "AGM 소재 데이터는 완성 배터리 검증을 대체하지 않으며 목록은 분리막 단독 인증 표준이 아닙니다."], ["FAQ", "납산 제조사는 어떻게 확인하나?", "도로 차량 EV 모듈·배터리 분류, 규정 의무, EN 18060:2025 전문과 완성 배터리 검증 계획을 확인합니다."], ["조치", "분리막 증거를 배터리 계획과 맞춤", "용도, 극군 구조, 치수, 롤·시트 형태, 조립 조건 및 검증 범위를 합의합니다."]], parameters: [["분류", "도로 차량용 충전식 EV 모듈 또는 배터리."], ["표준", "EN 18060:2025 전문 및 적용 판."], ["검증", "완성 배터리 시험 범위와 책임."], ["분리막", "사양, 방법, 시료 상태와 배치 기록."]], checklist: ["제품 분류와 화학계", "배터리 용도와 극군 구조", "두께·폭 또는 시트 치수", "롤/시트와 조립 조건", "완성 배터리 검증 범위와 프로젝트 단계"] },
+  ja: { title: "EN 18060:2025 はどの道路車両用電池を対象とするか：鉛蓄電池・AGM 供給者の確認点", summary: "整合規格の題名は、Li-ion、Na-ion、Pb、NiMH、複合化学系を含む道路車両用の充電式 EV モジュール・電池を示します。AGM セパレーター単独の認証を意味しません。", intro: "決定 (EU) 2026/2048 は Regulation (EU) 2023/1542 を支援する EN 18060:2025 を掲載しています。題名の範囲だけで、すべての鉛蓄電池、AGM、UPS、定置用電池への適用は判断できません。", sections: [["掲載", "整合規格として公表", "欧州委員会ページは決定 (EU) 2026/2048 を示します。製品結論の前に規格本文を確認します。"], ["範囲", "Pb は他の化学系と併記", "題名は Li-ion、Na-ion、Pb、NiMH、複合化学系の道路車両用充電式 EV モジュール・電池を対象とします。"], ["比較", "共通の採点表ではない", "同じ題名にあることは、同一試験、閾値、または直接比較可能な結果を示しません。"], ["AGM", "セパレーターは単独認証される電池ではない", "AGM 材料データは完成電池の検証を代替せず、掲載はセパレーター単独認証規格ではありません。"], ["FAQ", "鉛蓄電池メーカーはどう確認するか", "道路車両 EV モジュール・電池の分類、規制上の義務、EN 18060:2025 本文、完成電池検証計画を確認します。"], ["対応", "セパレーター証拠を電池計画と整合", "用途、極群構造、寸法、ロール・シート、組立条件、検証範囲をそろえます。"]], parameters: [["分類", "道路車両用充電式 EV モジュールまたは電池。"], ["規格", "EN 18060:2025 本文と適用版。"], ["検証", "完成電池試験の範囲と責任。"], ["セパレーター", "仕様、方法、試料状態、ロット記録。"]], checklist: ["製品分類と化学系", "電池用途と極群構造", "厚さ・幅またはシート寸法", "ロール/シートと組立条件", "完成電池検証範囲とプロジェクト段階"] },
+  es: { title: "¿Qué baterías de vehículos cubre EN 18060:2025? Lo que deben entender proveedores de plomo-ácido y AGM", summary: "El título de la norma armonizada nombra módulos y baterías EV recargables para vehículos de carretera, incluidos Li-ion, Na-ion, Pb, NiMH y químicas combinadas; no certifica por separado al separador AGM.", intro: "La Decisión (UE) 2026/2048 lista EN 18060:2025 en apoyo del Reglamento (UE) 2023/1542. El alcance del título no confirma la aplicabilidad a toda batería de plomo-ácido, AGM, UPS o estacionaria.", sections: [["Listado", "La norma armonizada se publicó", "La página de la Comisión identifica la Decisión (UE) 2026/2048. Revise el texto completo antes de concluir sobre un producto."], ["Alcance", "Pb figura junto a otras químicas", "El título se refiere a módulos y baterías EV recargables para vehículos de carretera, con Li-ion, Na-ion, Pb, NiMH y químicas combinadas."], ["Comparación", "No es una sola escala", "Un título común no demuestra ensayos, umbrales ni resultados directamente comparables."], ["AGM", "El separador no es una batería certificada por separado", "Los datos de material AGM no sustituyen la validación de la batería completa, y el listado no es una norma de certificación individual del separador."], ["FAQ", "¿Cómo confirma la relevancia un fabricante?", "Confirme la clasificación del módulo o batería EV de carretera, obligaciones regulatorias, el texto de EN 18060:2025 y el plan de validación de batería completa."], ["Acción", "Alinear evidencia del separador y plan de batería", "Alinee aplicación, grupo de placas, dimensiones, formato de rollo o lámina, montaje y alcance de validación."]], parameters: [["Clasificación", "Módulo o batería EV recargable para vehículo de carretera."], ["Norma", "Texto completo y edición aplicable de EN 18060:2025."], ["Validación", "Alcance y responsable de los ensayos de batería completa."], ["Separador", "Especificación, método, estado de muestra y registro de lote."]], checklist: ["Clasificación y química del producto", "Aplicación y grupo de placas", "Espesor, ancho o tamaño de lámina", "Rollo/lámina y montaje", "Alcance de validación de batería completa y fase del proyecto"] },
+  pt: { title: "Quais baterias de veículos EN 18060:2025 cobre? O que fornecedores de chumbo-ácido e AGM devem entender", summary: "O título da norma harmonizada cita módulos e baterias EV recarregáveis para veículos rodoviários, incluindo Li-ion, Na-ion, Pb, NiMH e químicas combinadas; isso não certifica o separador AGM isoladamente.", intro: "A Decisão (UE) 2026/2048 lista a EN 18060:2025 em apoio ao Regulamento (UE) 2023/1542. O escopo do título não confirma aplicação a toda bateria chumbo-ácido, AGM, UPS ou estacionária.", sections: [["Listagem", "A norma harmonizada foi publicada", "A página da Comissão identifica a Decisão (UE) 2026/2048. Leia a norma completa antes de concluir sobre um produto."], ["Escopo", "Pb aparece com outras químicas", "O título trata de módulos e baterias EV recarregáveis para veículos rodoviários com Li-ion, Na-ion, Pb, NiMH e químicas combinadas."], ["Comparação", "Não é uma única régua", "Um título comum não prova ensaios, limites ou resultados diretamente comparáveis."], ["AGM", "O separador não é uma bateria certificada isoladamente", "Dados do material AGM não substituem validação da bateria completa, e a listagem não é norma de certificação individual do separador."], ["FAQ", "Como o fabricante confirma a relevância?", "Confirme a classificação do módulo ou bateria EV rodoviária, obrigações regulatórias, o texto da EN 18060:2025 e o plano de validação da bateria completa."], ["Ação", "Alinhar evidência do separador ao plano da bateria", "Alinhe aplicação, grupo de placas, dimensões, formato em rolo ou folha, montagem e escopo de validação."]], parameters: [["Classificação", "Módulo ou bateria EV recarregável para veículo rodoviário."], ["Norma", "Texto completo e edição aplicável da EN 18060:2025."], ["Validação", "Escopo e responsável pelos ensaios da bateria completa."], ["Separador", "Especificação, método, estado da amostra e registro de lote."]], checklist: ["Classificação e química do produto", "Aplicação e grupo de placas", "Espessura, largura ou dimensão da folha", "Rolo/folha e montagem", "Escopo de validação da bateria completa e fase do projeto"] },
+  ru: { title: "Какие автомобильные батареи охватывает EN 18060:2025: что важно поставщикам свинцово-кислотных батарей и AGM", summary: "Название гармонизированного стандарта указывает перезаряжаемые EV-модули и батареи для дорожных транспортных средств, включая Li-ion, Na-ion, Pb, NiMH и комбинированные химии; оно не сертифицирует AGM-сепаратор отдельно.", intro: "Решение (ЕС) 2026/2048 включает EN 18060:2025 в поддержку Регламента (ЕС) 2023/1542. Уровень названия не подтверждает применимость ко всем свинцово-кислотным, AGM, ИБП или стационарным батареям.", sections: [["Публикация", "Гармонизированный стандарт опубликован", "Страница Комиссии указывает Решение (ЕС) 2026/2048. Перед выводом по продукту изучите полный текст стандарта."], ["Охват", "Pb указан наряду с другими химиями", "Название относится к перезаряжаемым EV-модулям и батареям для дорожных транспортных средств с Li-ion, Na-ion, Pb, NiMH и комбинированными химиями."], ["Сравнение", "Это не единая шкала", "Общее название не доказывает одинаковые испытания, пороги или прямо сопоставимые результаты."], ["AGM", "Сепаратор не является отдельно сертифицированной батареей", "Данные AGM-материала не заменяют проверку готовой батареи, а перечень не является стандартом отдельной сертификации сепаратора."], ["FAQ", "Как изготовителю подтвердить применимость?", "Подтвердите классификацию дорожного EV-модуля или батареи, регуляторные обязанности, текст EN 18060:2025 и план проверки готовой батареи."], ["Действие", "Согласовать доказательства по сепаратору с планом батареи", "Согласуйте применение, конструкцию блока пластин, размеры, рулон или лист, сборку и границы проверки."]], parameters: [["Классификация", "Перезаряжаемый EV-модуль или батарея для дорожного транспорта."], ["Стандарт", "Полный текст EN 18060:2025 и применяемая редакция."], ["Проверка", "Объём и ответственный за испытания готовой батареи."], ["Сепаратор", "Спецификация, метод, состояние образца и запись партии."]], checklist: ["Классификация и химия продукта", "Применение батареи и блок пластин", "Толщина, ширина или размер листа", "Рулон/лист и условия сборки", "Объём проверки готовой батареи и стадия проекта"] }
 };
 
-for (const locale of secondaryResourceLocales) {
+const dataCenterEvLowVoltageAgmTopics = {
+  vi: { title: "Vì sao trung tâm dữ liệu AI và xe điện vẫn có thể cần nguồn điện áp thấp axit-chì?", summary: "Nguồn dự phòng trung tâm dữ liệu và hệ thống điện áp thấp EV có nhiệm vụ khác nhau; việc chọn AGM phải theo thiết kế pin và xác nhận pin hoàn chỉnh.", intro: "LEOCH tại ELBC 2026 nêu quan điểm doanh nghiệp rằng nhu cầu axit-chì ở châu Á được hỗ trợ bởi hạ tầng trung tâm dữ liệu, viễn thông và vai trò nguồn điện áp thấp trong nhiều EV. Đây không phải báo cáo quy mô thị trường độc lập hay dự báo định lượng.", sections: [["Nguồn", "Quan điểm doanh nghiệp, không phải dự báo thị trường", "Trang LEOCH xác nhận sự quy thuộc quan điểm này nhưng không nêu quy mô, tốc độ tăng, tỷ lệ sử dụng hay số liệu theo ứng dụng. Không suy ra nhu cầu dự án hoặc dự báo khu vực từ tuyên bố đó."], ["Trung tâm dữ liệu", "Pin dự phòng được chọn theo hệ thống", "Trong kiến trúc trung tâm dữ liệu hoặc UPS, pin phục vụ trạng thái sẵn sàng và cấp nguồn khi hệ thống yêu cầu. Công nghệ, thời lượng, bảo trì và xác nhận là quyết định của hệ thống; không phải mọi trung tâm dữ liệu dùng cùng hóa học hoặc VRLA."], ["EV", "Pin điện áp thấp là quyết định hệ thống phụ trợ", "Nhiều EV giữ hệ thống điện áp thấp nhưng kiến trúc khác theo xe, thị trường và nhà sản xuất. AGM axit-chì có thể phù hợp cho một số thiết kế, không có nghĩa mọi EV dùng AGM hay nó thay pin kéo."], ["So sánh", "Cùng câu hỏi độ tin cậy, không cùng một thông số", "Dự phòng tập trung vào trạng thái chờ, xả và bảo trì; xe có thể thêm nhiệt độ, rung, nén và tích hợp điện. Cả hai cần điều kiện thử đã thống nhất và xác nhận pin hoàn chỉnh."], ["AGM", "Tấm ngăn là một phần của hệ thống", "Độ dày, định lượng, hấp thụ, điện trở, phản ứng nén và hồ sơ lô hỗ trợ trao đổi vật liệu nhưng không tự chứng minh dung lượng, tuổi thọ, độ tin cậy hay hiệu năng hệ thống."], ["Hành động", "Bắt đầu từ ứng dụng và điều kiện mục tiêu", "Nêu ứng dụng, cấu trúc pin, nhiệm vụ dự phòng hoặc điện áp thấp, kích thước, dạng cuộn/tấm, điều kiện lắp ráp, kiểm tra vật liệu và giai đoạn xác nhận pin hoàn chỉnh."]], parameters: [["Ứng dụng", "Dự phòng trung tâm dữ liệu/UPS, điện áp thấp EV hoặc nhiệm vụ pin đã xác định."], ["Cấu trúc", "Kích thước nhóm bản cực, nén và điều kiện lắp ráp."], ["Xác nhận", "Phạm vi thử pin hoàn chỉnh và giai đoạn dự án."]], checklist: ["Ứng dụng và nhiệm vụ pin", "Cấu trúc pin và kích thước", "Điều kiện vận hành và lắp ráp", "Kiểm tra vật liệu và giai đoạn xác nhận"] },
+  ko: { title: "AI 데이터센터와 전기차에 납산 저전압 전원이 여전히 필요할 수 있는 이유", summary: "데이터센터 백업과 EV 저전압 시스템은 임무가 다르며 AGM 선정은 개별 배터리 설계와 완성 배터리 검증에 맞춰야 합니다.", intro: "LEOCH는 ELBC 2026에서 아시아 납산 시장 수요가 데이터센터·통신 인프라와 많은 EV의 저전압 전원 역할로 뒷받침된다는 기업 관점을 밝혔습니다. 이는 독립 시장규모 보고서나 정량 전망이 아닙니다.", sections: [["출처", "기업 관점이며 시장 예측이 아님", "LEOCH 페이지는 이 관점의 귀속을 뒷받침하지만 시장 규모, 성장률, 채택률이나 용도별 수치를 제공하지 않습니다."], ["데이터센터", "백업 배터리는 시스템 기준으로 선정", "데이터센터·UPS에서는 대기 준비와 필요 시 백업 공급이 배터리 임무가 될 수 있습니다. 기술, 방전, 유지보수와 검증은 시스템 결정이며 모든 데이터센터가 같은 화학계나 VRLA를 쓰지 않습니다."], ["EV", "저전압 배터리는 보조 시스템 선택", "많은 EV에 저전압 시스템이 있지만 차종·시장·제조사마다 구조가 다릅니다. 일부 설계에서 납산 AGM을 고려할 수 있으나 모든 EV가 AGM을 쓴다는 뜻도, 구동 배터리를 대체한다는 뜻도 아닙니다."], ["비교", "같은 신뢰성 질문, 다른 사양", "백업은 대기·방전·정비를, 차량은 온도·진동·압축·전기 통합도 검토할 수 있습니다. 두 경우 모두 합의된 시험과 완성 배터리 검증이 필요합니다."], ["AGM", "분리막은 시스템의 한 부분", "두께, 평량, 흡수, 저항, 압축 반응과 로트 기록은 자재 협의에 쓰이지만 용량, 수명, 신뢰성이나 시스템 성능을 단독으로 증명하지 않습니다."], ["실행", "용도와 목표 조건부터 확인", "용도, 배터리 구조, 저전압·백업 임무, 치수, 롤·시트, 조립 조건, 자재 확인과 완성 배터리 검증 단계를 공유합니다."]], parameters: [["용도", "데이터센터/UPS 백업, EV 저전압 또는 정의된 배터리 임무."], ["구조", "극판군 치수, 압축과 조립 조건."], ["검증", "완성 배터리 시험 범위와 프로젝트 단계."]], checklist: ["용도와 배터리 임무", "배터리 구조와 치수", "운전·조립 조건", "자재 확인과 검증 단계"] },
+  ja: { title: "AIデータセンターと電気自動車で鉛蓄電池の低電圧電源が残る理由", summary: "データセンターのバックアップとEV低電圧系は役割が異なり、AGMの選定は個別の電池設計と完成電池の検証に合わせます。", intro: "LEOCHはELBC 2026で、アジアの鉛蓄電池需要をデータセンター・通信インフラと多くのEVの低電圧電源の役割が支えるという企業見解を示しました。独立した市場規模報告や定量予測ではありません。", sections: [["出典", "企業見解であり市場予測ではない", "LEOCHページは発言の帰属を確認しますが、市場規模、成長率、採用率、用途別数量は示していません。"], ["データセンター", "バックアップ電池はシステムに合わせて選定", "データセンターやUPSでは待機性と必要時のバックアップ給電が任務となります。技術、放電、保守、検証はシステムの決定で、全施設が同じ化学系やVRLAを採用するわけではありません。"], ["EV", "低電圧電池は補機システムの選択", "多くのEVに低電圧系がありますが、構成は車種・地域・メーカーで異なります。一部で鉛蓄電池AGMを検討しても、全EVへの適用や駆動電池の代替を意味しません。"], ["比較", "信頼性の問いは共通、仕様は共通でない", "バックアップでは待機・放電・保守を、車載では温度、振動、圧縮、電装統合も確認します。いずれも合意済み試験と完成電池検証が必要です。"], ["AGM", "セパレーターはシステムの一部", "厚さ、坪量、吸収、抵抗、圧縮応答、ロット記録は材料協議に使えますが、容量、寿命、信頼性、システム性能を単独で証明しません。"], ["次の段階", "用途と目標条件から開始", "用途、電池構造、低電圧・バックアップ任務、寸法、ロール・シート、組立条件、材料確認、完成電池検証段階を共有してください。"]], parameters: [["用途", "データセンター/UPSバックアップ、EV低電圧または定義済みの電池任務。"], ["構造", "極板群寸法、圧縮、組立条件。"], ["検証", "完成電池試験の範囲と案件段階。"]], checklist: ["用途と電池任務", "電池構造と寸法", "運転・組立条件", "材料確認と検証段階"] },
+  es: { title: "Por qué los centros de datos con IA y los vehículos eléctricos aún pueden necesitar energía de baja tensión de plomo-ácido", summary: "El respaldo del centro de datos y el sistema de baja tensión del VE cumplen tareas distintas; la selección AGM debe seguir el diseño de batería y la validación de batería completa.", intro: "En ELBC 2026, LEOCH expuso su perspectiva corporativa: la demanda asiática de plomo-ácido recibe apoyo de infraestructura de centros de datos y telecomunicaciones, y del papel de baja tensión en muchos VE. No es un informe independiente de tamaño de mercado ni un pronóstico cuantificado.", sections: [["Fuente", "Perspectiva corporativa, no previsión de mercado", "La página de LEOCH respalda la atribución, pero no aporta tamaño de mercado, crecimiento, adopción ni datos por aplicación."], ["Centro de datos", "La batería de respaldo se selecciona para un sistema", "En un centro de datos o UPS, la batería puede mantener preparación de reserva y alimentar cuando el sistema lo necesita. Tecnología, descarga, mantenimiento y validación son decisiones del sistema; no todos usan la misma química ni VRLA."], ["VE", "La batería de baja tensión es una decisión auxiliar", "Muchos VE mantienen un sistema de baja tensión, pero la arquitectura varía por vehículo, región y fabricante. AGM de plomo-ácido puede considerarse en algunos diseños, sin que todos los VE la usen ni que sustituya a la batería de tracción."], ["Comparación", "La pregunta de fiabilidad es común; la especificación no", "El respaldo revisa espera, descarga y mantenimiento; el vehículo puede añadir temperatura, vibración, compresión e integración eléctrica. Ambos requieren ensayos acordados y validación de batería completa."], ["AGM", "El separador es parte del sistema", "Espesor, gramaje, absorción, resistencia, respuesta a compresión y registros de lote apoyan la conversación de material, pero no prueban por sí solos capacidad, vida útil, fiabilidad o desempeño del sistema."], ["Acción", "Empezar por aplicación y condiciones objetivo", "Comparta aplicación, estructura de batería, función de respaldo o baja tensión, dimensiones, formato, montaje, controles de material y etapa de validación completa."]], parameters: [["Aplicación", "Respaldo de centro de datos/UPS, baja tensión de VE u otra función definida."], ["Estructura", "Dimensiones del grupo de placas, compresión y montaje."], ["Validación", "Alcance de ensayos de batería completa y etapa del proyecto."]], checklist: ["Aplicación y función", "Estructura y dimensiones", "Condiciones de uso y montaje", "Controles de material y validación"] },
+  pt: { title: "Por que data centers de IA e veículos elétricos ainda podem precisar de energia de baixa tensão com chumbo-ácido", summary: "O backup de data center e o sistema de baixa tensão do VE têm funções diferentes; a seleção de AGM deve seguir o projeto da bateria e sua validação completa.", intro: "No ELBC 2026, a LEOCH apresentou a visão corporativa de que a demanda asiática por chumbo-ácido é apoiada por infraestrutura de data centers e telecomunicações e pelo papel de baixa tensão em muitos VEs. Não é relatório independente de mercado nem previsão quantitativa.", sections: [["Fonte", "Visão corporativa, não previsão de mercado", "A página da LEOCH sustenta a atribuição, mas não traz tamanho de mercado, crescimento, adoção ou dados por aplicação."], ["Data center", "A bateria de backup é selecionada para o sistema", "Em data center ou UPS, a bateria pode manter prontidão e fornecer backup quando acionada. Tecnologia, descarga, manutenção e validação são decisões do sistema; nem todo data center usa a mesma química ou VRLA."], ["VE", "Bateria de baixa tensão é uma decisão auxiliar", "Muitos VEs mantêm um sistema de baixa tensão, mas a arquitetura varia por veículo, mercado e fabricante. AGM chumbo-ácido pode ser considerada em alguns projetos, sem significar uso em todos os VEs ou substituição da bateria de tração."], ["Comparação", "A questão de confiabilidade é comum; a especificação não", "Backup examina espera, descarga e manutenção; veículos podem acrescentar temperatura, vibração, compressão e integração elétrica. Ambos exigem ensaios acordados e validação da bateria completa."], ["AGM", "O separador é parte do sistema", "Espessura, gramatura, absorção, resistência, resposta à compressão e registros de lote ajudam na conversa de material, mas não comprovam isoladamente capacidade, vida, confiabilidade ou desempenho do sistema."], ["Ação", "Começar pela aplicação e condições alvo", "Informe aplicação, estrutura da bateria, função de backup ou baixa tensão, dimensões, formato, montagem, controles de material e etapa de validação completa."]], parameters: [["Aplicação", "Backup de data center/UPS, baixa tensão de VE ou função definida."], ["Estrutura", "Dimensões do grupo de placas, compressão e montagem."], ["Validação", "Escopo de ensaios da bateria completa e etapa do projeto."]], checklist: ["Aplicação e função", "Estrutura e dimensões", "Condições de uso e montagem", "Controles de material e validação"] },
+  ru: { title: "Почему центрам обработки данных с ИИ и электромобилям всё ещё может требоваться низковольтное питание от свинцово-кислотных батарей", summary: "Резерв ЦОД и низковольтная система электромобиля выполняют разные задачи; AGM выбирают по конструкции батареи и проверке готовой батареи.", intro: "На ELBC 2026 компания LEOCH представила корпоративную точку зрения: спрос на свинцово-кислотные батареи в Азии поддерживают инфраструктура ЦОД и связи, а также низковольтная роль в ряде электромобилей. Это не независимый отчёт о рынке и не количественный прогноз.", sections: [["Источник", "Корпоративная точка зрения, а не прогноз рынка", "Страница LEOCH подтверждает атрибуцию, но не содержит размер рынка, темпы роста, проникновение или данные по применениям."], ["ЦОД", "Резервную батарею выбирают для системы", "В ЦОД или UPS батарея может сохранять готовность и подавать резервное питание по запросу системы. Технология, разряд, обслуживание и проверка — системные решения; не все ЦОД используют одинаковую химию или VRLA."], ["Электромобиль", "Низковольтная батарея — решение вспомогательной системы", "Многие электромобили имеют низковольтную систему, но архитектура различается по модели, рынку и изготовителю. Свинцово-кислотная AGM может рассматриваться в отдельных конструкциях, но это не означает её применение во всех EV или замену тяговой батареи."], ["Сравнение", "Вопрос надёжности общий, спецификация — нет", "Резерв требует проверки ожидания, разряда и обслуживания; автомобиль добавляет температуру, вибрацию, сжатие и интеграцию. В обоих случаях нужны согласованные испытания и проверка готовой батареи."], ["AGM", "Сепаратор — часть системы", "Толщина, масса, поглощение, сопротивление, реакция на сжатие и записи партии помогают обсуждать материал, но сами по себе не доказывают ёмкость, срок службы, надёжность или работу системы."], ["Действие", "Начинать с применения и целевых условий", "Укажите применение, конструкцию батареи, функцию резерва или низкого напряжения, размеры, формат, сборку, проверки материала и этап валидации готовой батареи."]], parameters: [["Применение", "Резерв ЦОД/UPS, низкое напряжение EV или заданная функция батареи."], ["Конструкция", "Размеры блока пластин, сжатие и сборка."], ["Проверка", "Объём испытаний готовой батареи и стадия проекта."]], checklist: ["Применение и функция", "Конструкция и размеры", "Условия работы и сборки", "Проверки материала и валидация"] }
+};
+
+const secondaryHubCounts = {
+  vi: "15 bài viết kỹ thuật", ko: "기술 글 15편", ja: "技術記事 15件",
+  es: "15 artículos técnicos", pt: "15 artigos técnicos", ru: "15 технических статей"
+};
+
+for (const locale of secondaryResourceLocales.filter((locale) => locale !== "ar")) {
   secondaryResourceData[locale].topics.dataCenterBackupPowerAgmSeparator = dataCenterBackupPowerTopics[locale];
   secondaryResourceData[locale].topics.earlyChinaLeadAcidBatteryManufacturing = earlyLeadAcidManufacturingTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorPressureRetention = pressureRetentionTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorBatchProcessControl = batchProcessControlTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorThirdPole = thirdPoleTopics[locale];
   secondaryResourceData[locale].topics.agmSeparatorEnergyDataDelivery = energyDataDeliveryTopics[locale];
+  secondaryResourceData[locale].topics.en18060BatteryStandard = en18060BatteryStandardTopics[locale];
+  secondaryResourceData[locale].topics.dataCenterEvLowVoltageAgm = dataCenterEvLowVoltageAgmTopics[locale];
   secondaryResourceData[locale].energyDataDeliveryReferences = {
     eyebrow: secondaryResourceData[locale].ui.reference,
     title: energyDataDeliveryTopics[locale].title,
@@ -895,8 +932,74 @@ for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].hub.count = secondaryHubCounts[locale];
 }
 
-// Remaining locales extend the same data model below. Keeping each locale in one
-// record lets the resource hub, article renderer, SEO and CMS exporter share it.
+secondaryResourceData.ar = arabicResourceData;
+secondaryResourceData.ar.topics.dataCenterEvLowVoltageAgm = {
+  title: "لماذا قد تحتاج مراكز بيانات الذكاء الاصطناعي والمركبات الكهربائية إلى طاقة رصاصية حمضية منخفضة الجهد؟",
+  summary: "تختلف مهمة النسخ الاحتياطي لمركز البيانات عن نظام الجهد المنخفض في المركبة الكهربائية؛ ويجب أن يتبع اختيار AGM تصميم البطارية والتحقق من البطارية الكاملة.",
+  intro: "في ELBC 2026 عرضت LEOCH وجهة نظر مؤسسية تربط الطلب الآسيوي على بطاريات الرصاص الحمضية ببنية مراكز البيانات والاتصالات وبالدور منخفض الجهد في كثير من المركبات الكهربائية. هذه ليست دراسة مستقلة لحجم السوق أو توقعاً كمياً.",
+  sections: [["المصدر", "وجهة نظر مؤسسية وليست توقعاً للسوق", "تؤكد صفحة LEOCH نسبة هذا الرأي، لكنها لا تقدم حجم السوق أو معدل النمو أو بيانات حسب التطبيق."], ["مركز البيانات", "تُختار بطارية النسخ الاحتياطي للنظام", "قد تحافظ البطارية في مركز البيانات أو UPS على الجاهزية وتوفر القدرة عند طلب النظام. التقنية والتفريغ والصيانة والتحقق قرارات نظامية، ولا تستخدم كل المراكز الكيمياء أو VRLA نفسها."], ["المركبة الكهربائية", "بطارية الجهد المنخفض قرار لنظام مساعد", "تحتفظ كثير من المركبات الكهربائية بنظام منخفض الجهد، لكن البنية تختلف حسب المركبة والسوق والمصنع. قد يُنظر إلى AGM الرصاصي الحمضي في بعض التصاميم، وهذا لا يعني استخدامها في كل مركبة أو استبدال بطارية الجر."], ["المقارنة", "سؤال الموثوقية مشترك والمواصفة ليست كذلك", "يراجع النسخ الاحتياطي الجاهزية والتفريغ والصيانة؛ وقد تضيف المركبة الحرارة والاهتزاز والضغط والتكامل الكهربائي. يحتاج كلاهما إلى اختبارات متفق عليها وتحقق من البطارية الكاملة."], ["AGM", "الفاصل جزء من النظام", "يساعد السمك والوزن والامتصاص والمقاومة واستجابة الضغط وسجلات الدفعات في نقاش المادة، لكنها لا تثبت وحدها السعة أو العمر أو موثوقية النظام."], ["الإجراء", "ابدأ بالتطبيق والظروف المستهدفة", "شارك التطبيق وبنية البطارية ومهمة النسخ الاحتياطي أو الجهد المنخفض والأبعاد والشكل وظروف التجميع وفحوص المادة ومرحلة التحقق من البطارية الكاملة."]],
+  parameters: [["التطبيق", "نسخ احتياطي لمركز بيانات/UPS أو جهد منخفض للمركبة أو مهمة بطارية محددة."], ["البنية", "أبعاد مجموعة الألواح والضغط وظروف التجميع."], ["التحقق", "نطاق اختبار البطارية الكاملة ومرحلة المشروع."]],
+  checklist: ["التطبيق ومهمة البطارية", "بنية البطارية والأبعاد", "ظروف التشغيل والتجميع", "فحوص المادة ومرحلة التحقق"]
+};
+
+const supplyChainReferences = [
+  ["Changzhou Haixin", "https://www.cz-haixin.com.cn/about.html"],
+  ["Huayang Industrial", "https://www.huayangagm.com/product/5/"],
+  ["Yingkou Rijie", "https://www.ykrijie.com/boluo_company/"],
+  ["Leoch", "https://leochlithium.cn/uploads/ueditor/file/20220708/6379287233502083425967267.pdf"]
+];
+const automotiveReferences = [
+  ["Camel Group — 2026", "http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-22/601311_20260822_JQ85.pdf"],
+  ["Hollingsworth & Vose — AGM", "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"],
+  ["Hollingsworth & Vose — PowerFill AGM", "https://info.hollingsworth-vose.com/powerfill"]
+];
+for (const [locale, editions] of Object.entries(additionalResourceTopics)) {
+  for (const [edition, kind] of [["supply", "agmSeparatorSupplyChain"], ["automotive", "agmStartStopBatteryProcurement"]]) {
+    const [title, summary, sections, checklist, referenceNote] = editions[edition];
+    secondaryResourceData[locale].topics[kind] = {
+      title, summary, intro: summary, sections, checklist, referenceNote,
+      parameters: sections.slice(0, 4).map(([, title, text]) => [title, text])
+    };
+  }
+}
+
+completeResourceSections(secondaryResourceData);
+
+const articleCountLabels = {
+  vi: "bài viết kỹ thuật", ko: "개의 기술 자료", ja: "件の技術記事", es: "artículos técnicos", pt: "artigos técnicos", ru: "технических статей", ar: "مقالاً فنياً"
+};
+const contactLabels = {
+  vi: ["Điện thoại", "Email", "Sao chép số điện thoại", "Sao chép email", "Về đầu trang", "Đã sao chép", "Sao chép thông tin liên hệ:", "Xem thêm"],
+  ko: ["전화", "이메일", "전화번호 복사", "이메일 복사", "맨 위로", "복사됨", "연락처를 복사하세요:", "더 보기"],
+  ja: ["電話", "メール", "電話番号をコピー", "メールをコピー", "ページ先頭へ", "コピーしました", "連絡先をコピーしてください：", "もっと見る"],
+  es: ["Teléfono", "Correo", "Copiar teléfono", "Copiar correo", "Volver arriba", "Copiado", "Copie este dato de contacto:", "Ver más"],
+  pt: ["Telefone", "E-mail", "Copiar telefone", "Copiar e-mail", "Voltar ao topo", "Copiado", "Copie este contato:", "Ver mais"],
+  ru: ["Телефон", "Почта", "Скопировать телефон", "Скопировать почту", "Наверх", "Скопировано", "Скопируйте контакт:", "Смотреть ещё"],
+  ar: ["الهاتف", "البريد الإلكتروني", "نسخ الهاتف", "نسخ البريد الإلكتروني", "العودة للأعلى", "تم النسخ", "انسخ بيانات التواصل:", "عرض المزيد"]
+};
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].hub.count = `${articleKinds.length} ${articleCountLabels[locale]}`;
+  const [phone, email, copyPhone, copyEmail, backTop, copied, copyPrompt, viewMore] = contactLabels[locale];
+  Object.assign(secondaryResourceData[locale].ui, { phone, email, copyPhone, copyEmail, backTop, copied, copyPrompt, viewMore });
+}
+
+const arabicReferenceNote = "توضح المصادر السياق الفني ولا تثبت مواصفات Viking أو اعتماد المنتج أو أداء البطارية. تُراجع الأرقام وشروطها في المصدر ولا تُعمم على جميع المواد والتطبيقات.";
+const arabicReferences = {
+  agmGlassFiberVsPvcSeparator: secondaryResourceData.vi.references.items,
+  dataCenterBackupPowerAgmSeparator: dataCenterReferenceItems,
+  earlyChinaLeadAcidBatteryManufacturing: earlyLeadAcidReferenceItems,
+  agmSeparatorPressureRetention: pressureRetentionReferenceItems,
+  agmSeparatorBatchProcessControl: batchProcessControlReferenceItems,
+  agmSeparatorThirdPole: thirdPoleReferenceItems,
+  agmSeparatorEnergyDataDelivery: energyDataDeliveryReferenceItems,
+  agmSeparatorSupplyChain: supplyChainReferences,
+  agmStartStopBatteryProcurement: automotiveReferences,
+  en18060BatteryStandard: [
+    ["القرار التنفيذي (EU) 2026/2048", "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D2048"],
+    ["المفوضية الأوروبية — المعايير المنسقة للبطاريات", "https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/eu-battery-regulation_en"]
+  ],
+  dataCenterEvLowVoltageAgm: [["LEOCH at ELBC 2026", "https://www.leoch.com/newsroom/events/leoch-at-elbc-2026"]]
+};
 
 function articleImage(kind, title) {
   const [src, width, height] = images[kind];
@@ -913,6 +1016,8 @@ function buildArticle(locale, kind, localeData) {
   const definitions = Object.entries(articleDefinitions);
   const relatedKinds = kind === "dataCenterBackupPowerAgmSeparator"
     ? ["upsVrlaTechnologySelection", "agmSeparatorPerformanceConsistency", "keyTechnicalParameters", "agmSeparatorManufacturingQualityDelivery"]
+    : kind === "dataCenterEvLowVoltageAgm"
+      ? ["dataCenterBackupPowerAgmSeparator", "upsVrlaTechnologySelection", "agmStartStopBatteryProcurement", "keyTechnicalParameters"]
     : definitions.map(([candidate]) => candidate).filter((candidate) => candidate !== kind).slice(0, 4);
   const related = definitions
     .filter(([candidate]) => relatedKinds.includes(candidate))
@@ -933,7 +1038,7 @@ function buildArticle(locale, kind, localeData) {
       secondary: common.secondary,
       image: articleImage(kind, topic.title)
     },
-    intro: [topic.intro, topic.summary],
+    intro: [...new Set([topic.intro, topic.summary])],
     sections: topic.sections.map(([eyebrow, title, text]) => ({ eyebrow, title, text })),
     parameters: topic.parameters,
     formats: {
@@ -979,6 +1084,15 @@ function buildArticle(locale, kind, localeData) {
     };
   }
 
+  if (kind === "dataCenterEvLowVoltageAgm") {
+    result.references = {
+      eyebrow: localeData.ui.reference,
+      title: topic.title,
+      text: topic.intro,
+      items: [["LEOCH at ELBC 2026", "https://www.leoch.com/newsroom/events/leoch-at-elbc-2026"]]
+    };
+  }
+
   if (kind === "earlyChinaLeadAcidBatteryManufacturing") {
     result.timeline = localeData.earlyLeadAcidTimeline;
     result.references = localeData.earlyLeadAcidReferences;
@@ -1021,11 +1135,40 @@ function buildArticle(locale, kind, localeData) {
   }
 
   if (kind === "agmSeparatorThirdPole") {
+    const [eyebrow, title, columns, rows] = resourceComparisons[locale][0];
+    result.comparison = { eyebrow, title, columns, rows };
     result.references = localeData.thirdPoleReferences;
   }
 
   if (kind === "agmSeparatorEnergyDataDelivery") {
+    const [eyebrow, title, columns, rows] = resourceComparisons[locale][1];
+    result.comparison = { eyebrow, title, columns, rows };
     result.references = localeData.energyDataDeliveryReferences;
+  }
+
+  if (kind === "agmSeparatorSupplyChain" || kind === "agmStartStopBatteryProcurement") {
+    result.references = {
+      eyebrow: localeData.ui.reference, title: topic.title,
+      text: topic.referenceNote || arabicReferenceNote,
+      items: kind === "agmSeparatorSupplyChain" ? supplyChainReferences : automotiveReferences
+    };
+  }
+  if (kind === "en18060BatteryStandard") {
+    result.references = {
+      eyebrow: localeData.ui.reference, title: topic.title, text: topic.intro,
+      items: [["(EU) 2026/2048", "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D2048"], ["(EU) 2023/1542 — EN 18060:2025", "https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/eu-battery-regulation_en"]]
+    };
+  }
+  if (locale === "ar" && arabicReferences[kind]) {
+    result.references = {
+      eyebrow: localeData.ui.reference, title: "المصادر وحدود الاستدلال",
+      text: kind === "agmStartStopBatteryProcurement"
+        ? "أرقام Camel Group خاصة بتقرير الشركة وليست معدلات وطنية أو عالمية. المراجع الفنية لا تثبت مواصفات Viking ولا تضمن نتائج البطارية."
+        : kind === "agmSeparatorSupplyChain"
+          ? "تصف المصادر أجزاء من سلسلة التوريد ولا تثبت مصادر مواد Viking أو معداتها أو نطاق نظام الجودة."
+          : arabicReferenceNote,
+      items: arabicReferences[kind].map(([label, url], index) => [locale === "ar" && kind !== "en18060BatteryStandard" ? `المصدر ${index + 1} — ${new URL(url).hostname}` : label, url])
+    };
   }
 
   return result;
@@ -1057,6 +1200,7 @@ export function buildSecondaryArticleSeo(locale, kind) {
     articleDescription: topic.summary,
     breadcrumbs: [localeData.nav.company, localeData.nav.resources, topic.title],
     datePublished: articleDefinitions[kind][2],
-    dateModified: articleDefinitions[kind][3] ?? "2026-08-05"
+    dateModified: locale === "ar" || completedResourceKinds.includes(kind) || ["agmSeparatorSupplyChain", "agmStartStopBatteryProcurement", "agmSeparatorThirdPole", "agmSeparatorEnergyDataDelivery", "en18060BatteryStandard"].includes(kind)
+      ? "2026-10-04" : articleDefinitions[kind][3] ?? "2026-08-05"
   };
 }

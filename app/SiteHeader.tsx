@@ -197,7 +197,7 @@ export function SiteHeader({
   const [menuOpen, setMenuOpen] = useState(false);
   const t = headerCopy[lang];
   const homeHref = asset(homePath);
-  const hasResources = lang !== "ar";
+  const hasResources = true;
   const hasApplications = true;
 
   const navItemsBeforeProducts = [[t.company, `${homeHref}#company`]] as const;

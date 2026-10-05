@@ -20,57 +20,8 @@ const resourceCatalogSource = readFileSync(
   "utf8"
 );
 
-const articles = [
-  ["whatIsAgmSeparator", "what-is-agm-separator"],
-  ["keyTechnicalParameters", "key-technical-parameters-of-agm-separator"],
-  ["howToChooseAgmSeparator", "how-to-choose-agm-separator"],
-  [
-    "agmSeparatorManufacturingQualityDelivery",
-    "agm-separator-manufacturing-quality-delivery"
-  ],
-  ["agmSeparatorPerformanceConsistency", "agm-separator-performance-consistency"],
-  [
-    "agmSeparatorExportSupplyReadiness",
-    "agm-separator-export-supply-readiness"
-  ],
-  [
-    "upsVrlaTechnologySelection",
-    "why-ups-projects-still-use-vrla-batteries"
-  ],
-  [
-    "agmGlassFiberVsPvcSeparator",
-    "agm-glass-fiber-vs-pvc-battery-separator"
-  ],
-  [
-    "dataCenterBackupPowerAgmSeparator",
-    "agm-separator-for-data-center-backup-power"
-  ],
-  [
-    "earlyChinaLeadAcidBatteryManufacturing",
-    "how-chinas-earliest-lead-acid-batteries-were-made"
-  ],
-  [
-    "agmSeparatorPressureRetention",
-    "agm-separator-pressure-retention-after-acid-filling-and-cycling"
-  ],
-  [
-    "agmSeparatorBatchProcessControl",
-    "agm-separator-batch-consistency-and-process-control"
-  ],
-  ["agmSeparatorThirdPole", "agm-separator-third-pole-explained"],
-  ["agmSeparatorEnergyDataDelivery", "agm-separator-energy-data-and-delivery-risk"]
-];
+const articles = articleKinds.map((kind) => [kind, articleDefinitions[kind][0]]);
 const allLocales = ["en", "zh", ...secondaryResourceLocales];
-const primaryOnlyArticles = [
-  [
-    "agmSeparatorSupplyChain",
-    "agm-separator-supply-chain-from-glass-block-to-finished-roll"
-  ],
-  [
-    "agmStartStopBatteryProcurement",
-    "agm-start-stop-battery-separator-procurement-guide"
-  ]
-];
 
 let failed = false;
 
@@ -82,12 +33,29 @@ for (const [key, slug] of articles) {
 
   check(
     allLocales.every((locale) => article?.[locale]),
-    `${key} has article content in all 8 languages`
+    `${key} has article content in all ${allLocales.length} languages`
   );
   check(
     allLocales.every((locale) => seo?.[locale]),
-    `${key} has SEO content in all 8 languages`
+    `${key} has SEO content in all ${allLocales.length} languages`
   );
+  for (const locale of allLocales) {
+    const copy = article?.[locale];
+    const meta = seo?.[locale];
+    check(
+      Boolean(copy?.hero?.title && copy.hero.subtitle && copy.intro?.length &&
+        copy.sections?.length >= article.en.sections.length &&
+        copy.sections.every((section) => section.title?.trim() && section.text?.trim()) &&
+        copy.checklist?.items?.length && copy.inquiry?.text && (!copy.hero.image || copy.hero.image.alt)),
+      `${key}.${locale} has a complete body, summary, image description and inquiry copy`
+    );
+    for (const module of ["references", "comparison", "timeline"]) {
+      if (article.en[module]) check(Boolean(copy?.[module]), `${key}.${locale} includes ${module}`);
+    }
+    check(Boolean(meta?.title && meta.description && meta.path && meta.pageName && meta.language &&
+      (!secondaryResourceLocales.includes(locale) || (meta.datePublished && meta.dateModified))), `${key}.${locale} has complete SEO metadata`);
+    if (locale !== "en") check(copy?.hero?.title !== article.en.hero.title, `${key}.${locale} does not fall back to the English title`);
+  }
   check(existsSync(enRoute) && existsSync(zhRoute), `${key} has both route files`);
   check(
     seoSource.includes(`"${key}"`) || seoSource.includes(`${key}Seo`),
@@ -105,41 +73,11 @@ for (const [key, slug] of articles) {
   );
 }
 
-for (const [key, slug] of primaryOnlyArticles) {
-  const article = content.articles?.[key];
-  const seo = content.seo?.[key];
-  const enRoute = join(root, "app/blog", slug, "page.tsx");
-  const zhRoute = join(root, "app/zh/blog", slug, "page.tsx");
-
-  check(
-    Boolean(article?.en) && Boolean(article?.zh),
-    `${key} has English and Chinese article content`
-  );
-  check(
-    Boolean(seo?.en) && Boolean(seo?.zh),
-    `${key} has English and Chinese SEO content`
-  );
-  check(existsSync(enRoute) && existsSync(zhRoute), `${key} has both route files`);
-  check(
-    seoSource.includes(`${key}Seo`),
-    `${key} is registered in app/seo.tsx`
-  );
-  check(
-    sitemapSource.includes(`/blog/${slug}/`) &&
-      sitemapSource.includes(`/zh/blog/${slug}/`),
-    `${key} is registered in the sitemap`
-  );
-  check(
-    resourceCatalogSource.includes(`/blog/${slug}/`) &&
-      resourceCatalogSource.includes(`/zh/blog/${slug}/`),
-    `${key} is registered in the resource catalog`
-  );
-}
 
 check(
   articleKinds.length === articles.length &&
     articleKinds.every((kind) => articleDefinitions[kind]),
-  "secondary article registry matches the 14 canonical articles"
+  "secondary article registry matches all canonical articles"
 );
 check(
   existsSync(join(root, "app/[locale]/blog/[slug]/page.tsx")),
@@ -158,7 +96,7 @@ check(
   "resource hub is registered in the sitemap"
 );
 
-const secondaryLocalizedPages = ["vi", "ko", "ja", "es", "pt", "ru"].flatMap((locale) => [
+const secondaryLocalizedPages = secondaryResourceLocales.flatMap((locale) => [
   {
     key: `home.${locale}`,
     route: `app/${locale}/page.tsx`,
@@ -243,7 +181,7 @@ for (const page of secondaryLocalizedPages) {
   check(Boolean(page.seo), `${page.key} has localized SEO content`);
   check(existsSync(join(root, page.route)), `${page.key} has a route`);
   check(
-    sitemapSource.includes(`"${page.path}"`),
+    sitemapSource.includes(`"${page.path}"`) || (page.path.startsWith("/ar/") && sitemapSource.includes(`"${page.path.slice(3)}"`)),
     `${page.key} is registered in the sitemap`
   );
 }
@@ -282,7 +220,7 @@ if (failed) {
 }
 
 console.log(
-  `PASS content registry is complete for ${articles.length} articles in 8 languages and ${secondaryLocalizedPages.length} aligned secondary-language pages`
+  `PASS content registry is complete for ${articles.length} articles in ${allLocales.length} languages and ${secondaryLocalizedPages.length} aligned secondary-language pages`
 );
 
 function check(condition, message) {

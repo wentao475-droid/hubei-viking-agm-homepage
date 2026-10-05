@@ -668,9 +668,9 @@ const arabicPageCopy = {
   primary: "ابدأ طلب العينة",
   secondary: "تحميل ملف القدرات الفنية",
   proof: ["لفائف وألواح", "مناقشة حسب التطبيق", "متطلبات الجودة والتعبئة"],
-  requirements: { ...pageCopy.en.requirements, eyebrow: "قائمة المعلومات", title: "ما الذي يساعد في المراجعة الأولية", text: "لا يلزم إنهاء كل المعايير قبل التواصل. أرسل المعلومات المتاحة وحدد النقاط قيد المراجعة." },
-  process: { ...pageCopy.en.process, eyebrow: "ما الخطوة التالية", title: "مسار عملي من الاستفسار إلى مناقشة العينة" },
-  evidence: { ...pageCopy.en.evidence, eyebrow: "دليل التصنيع", title: "راجع الإنتاج والفحص والاستعداد للتسليم" },
+  requirements: { eyebrow: "قائمة المعلومات", title: "ما الذي يساعد في المراجعة الأولية", text: "لا يلزم إنهاء كل المعايير قبل التواصل. أرسل المعلومات المتاحة وحدد النقاط قيد المراجعة.", items: [["تطبيق البطارية", "VRLA أو UPS أو الدراجات أو السيارات أو التخزين أو تطبيق رصاصي آخر."], ["شكل المنتج", "لفائف أو ألواح مقصوصة أو مقارنة الشكلين."], ["الأبعاد", "السماكة والعرض أو ارتفاع اللوح وعرضه أو رسم موجود."], ["المرجع الفني", "القيم المستهدفة ومعيار العميل وبنود الاختبار أو عينة حالية إن توفرت."], ["الكمية والتعبئة", "كمية العينة أو التجربة أو الإنتاج والقلب والملصقات والتعبئة المطلوبة."]] },
+  process: { eyebrow: "ما الخطوة التالية", title: "مسار عملي من الاستفسار إلى مناقشة العينة", items: [["1", "مراجعة التطبيق", "نراجع تطبيق البطارية وشكل المنتج والمعلومات المتاحة عن المواصفة."], ["2", "تأكيد النقاط الناقصة", "نتابع الأبعاد والعينات المرجعية والفحوص أو تفاصيل التعبئة التي تحتاج إلى توضيح."], ["3", "مناقشة الخطوة التالية", "يناقش الطرفان العينة المناسبة أو المراجعة الفنية أو العرض وفق الاتجاه المتفق عليه."]] },
+  evidence: { eyebrow: "دليل التصنيع", title: "راجع الإنتاج والفحص والاستعداد للتسليم", items: [{ title: "قدرات الإنتاج", text: "يدعم إنتاج فواصل AGM ومناولة اللفائف مناقشة المواصفات وتوريد الدفعات.", src: "/images/agm-factory-capability-1200.webp", alt: "قدرات Viking لتصنيع فواصل AGM" }, { title: "فحص الجودة", text: "تُؤكد متطلبات الفحص وفق تطبيق العميل وبنود الاختبار المتفق عليها.", src: "/images/agm-quality-control-1200.webp", alt: "فحص جودة فواصل AGM" }, { title: "التعبئة والتسليم", text: "يمكن مراجعة اللفائف والألواح والملصقات والمنصات قبل ترتيب العينة أو الطلب.", src: "/images/evidence/shipping-pallet-01.webp", alt: "تجهيز فواصل AGM للشحن على منصات" }] },
   download: { ...pageCopy.en.download, eyebrow: "مرجع للمشتري", title: "حمّل ملف القدرات الفنية لـ Viking AGM", text: "ملف بالإنجليزية والصينية عن أشكال المنتجات والتطبيقات والفحص والتعبئة ومعلومات مراجعة المواصفات.", button: "تحميل PDF بالإنجليزية/الصينية" },
   faq: { eyebrow: "الأسئلة المتكررة", title: "أسئلة قبل طلب العينة" },
   form: { ...pageCopy.en.form, eyebrow: "ابدأ المناقشة", title: "أرسل المعلومات المتاحة", text: "يكفي الاسم ووسيلة الاتصال للبدء. التطبيق والشكل والأبعاد تساعد على إعداد رد أكثر دقة.", hints: ["تطبيق البطارية", "لفائف أو ألواح", "السماكة أو العرض أو حجم اللوح", "متطلبات العينة أو الاختبار أو التعبئة"], message: "اختياري: التطبيق والسماكة المستهدفة وعرض اللفافة أو حجم اللوح وكمية العينة والمتطلبات الفنية أو التعبئة" },
@@ -705,7 +705,7 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
                       ? "Solicitar amostra"
                       : lang === "ru"
                         ? "Запросить образец"
-                  : "Request Sample"
+                  : lang === "ar" ? "طلب عينة" : "Request Sample"
         }
       />
 
@@ -727,7 +727,7 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
                         ? "Linha de produção de separadores AGM da Viking"
                         : lang === "ru"
                           ? "Линия производства AGM-сепараторов Viking"
-                    : "Viking AGM separator production line"
+                    : lang === "ar" ? "خط إنتاج فواصل Viking AGM" : "Viking AGM separator production line"
           }
           fill
           priority
@@ -936,7 +936,7 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
                           ? "Amostra de separador AGM e análise de especificações"
                           : lang === "ru"
                             ? "Образец AGM-сепаратора и проверка характеристик"
-                  : "AGM separator sample and specification match"
+                  : lang === "ar" ? "عينة فاصل AGM ومطابقة المواصفات" : "AGM separator sample and specification match"
             }
             messagePlaceholder={t.form.message}
             className="sm:p-8"
@@ -978,7 +978,7 @@ export function SampleRequestPage({ lang }: { lang: SiteLocale }) {
                         ? "Voltar ao início"
                         : lang === "ru"
                           ? "На главную"
-                    : "Back to homepage"}
+                    : lang === "ar" ? "العودة إلى الرئيسية" : "Back to homepage"}
             <ArrowRight size={16} />
           </a>
         </div>

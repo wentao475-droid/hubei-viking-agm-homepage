@@ -1,5 +1,6 @@
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../content/secondary-resources.mjs";
 
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
@@ -218,6 +219,14 @@ const pages = [
     secondaryLastmod: "2026-08-07"
   },
   {
+    en: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/",
+    zh: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-10-04",
+    secondaryLastmod: "2026-10-04"
+  },
+  {
     en: "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
     zh: "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
     priority: "0.75",
@@ -258,12 +267,20 @@ const pages = [
     secondaryLastmod: "2026-09-13"
   },
   {
+    en: "/blog/en-18060-2025-road-vehicle-battery-standard/",
+    zh: "/zh/blog/en-18060-2025-road-vehicle-battery-standard/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-10-03",
+    secondaryLastmod: "2026-10-03"
+  },
+  {
     en: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
     zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
     priority: "0.75",
     changefreq: "monthly",
     lastmod: "2026-09-01",
-    secondary: false
+    secondaryLastmod: "2026-10-03"
   },
   {
     en: "/blog/agm-start-stop-battery-separator-procurement-guide/",
@@ -271,12 +288,12 @@ const pages = [
     priority: "0.75",
     changefreq: "monthly",
     lastmod: "2026-09-10",
-    secondary: false
+    secondaryLastmod: "2026-10-03"
   }
 ];
 
-const secondaryLocales = ["vi", "ko", "ja", "es", "pt", "ru"];
-const arabicLastmod = "2026-08-23";
+const secondaryLocales = ["vi", "ko", "ja", "es", "pt", "ru", "ar"];
+const arabicLastmod = "2026-10-05";
 for (const page of pages.filter(({ en }) =>
   [
     "/",
@@ -293,7 +310,7 @@ for (const page of pages.filter(({ en }) =>
   ].includes(en)
 )) {
   page.ar = `/ar${page.en}`;
-  page.arabicLastmod = arabicLastmod;
+  page.arabicLastmod = page.en === "/products/glass-fiber-thermal-insulation-paper/" ? "2026-10-04" : arabicLastmod;
 }
 for (const page of pages.filter(
   ({ en, secondary = true }) =>
@@ -302,7 +319,9 @@ for (const page of pages.filter(
   for (const locale of secondaryLocales) {
     page[locale] = `/${locale}${page.en}`;
   }
-  page.secondaryLastmod ??= "2026-08-05";
+  page.arabicLastmod = "2026-10-04";
+  const kind = articleKinds.find((kind) => page.en === `/blog/${articleDefinitions[kind][0]}/`);
+  page.secondaryLastmod = kind ? buildSecondaryArticleSeo("vi", kind).dateModified : "2026-10-04";
 }
 
 function absolute(path) {

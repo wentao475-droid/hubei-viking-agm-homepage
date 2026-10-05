@@ -1,3 +1,5 @@
+import { articleKinds, articleDefinitions } from "../content/secondary-resources.mjs";
+
 export type Lang = "en" | "zh";
 export type SiteLocale = Lang | "vi" | "ko" | "ja" | "es" | "pt" | "ru" | "ar";
 
@@ -15,19 +17,8 @@ export const localeHomePaths: Record<SiteLocale, string> = {
 
 const synchronizedResourcePaths = [
   "resources",
-  "blog/what-is-agm-separator",
-  "blog/key-technical-parameters-of-agm-separator",
-  "blog/how-to-choose-agm-separator",
-  "blog/agm-glass-fiber-vs-pvc-battery-separator",
-  "blog/agm-separator-manufacturing-quality-delivery",
-  "blog/agm-separator-performance-consistency",
-  "blog/agm-separator-export-supply-readiness",
-  "blog/why-ups-projects-still-use-vrla-batteries",
-  "blog/agm-separator-for-data-center-backup-power",
-  "blog/how-chinas-earliest-lead-acid-batteries-were-made",
-  "blog/agm-separator-pressure-retention-after-acid-filling-and-cycling",
-  "blog/agm-separator-batch-consistency-and-process-control"
-] as const;
+  ...articleKinds.map((kind) => `blog/${articleDefinitions[kind][0]}`)
+];
 
 function allLocalePaths(suffix: string): Partial<Record<SiteLocale, string>> {
   return {
@@ -38,7 +29,8 @@ function allLocalePaths(suffix: string): Partial<Record<SiteLocale, string>> {
     ja: `/ja/${suffix}/`,
     es: `/es/${suffix}/`,
     pt: `/pt/${suffix}/`,
-    ru: `/ru/${suffix}/`
+    ru: `/ru/${suffix}/`,
+    ar: `/ar/${suffix}/`
   };
 }
 
@@ -150,14 +142,6 @@ export const localizedRouteGroups = [
     pt: "/pt/request-agm-separator-sample/",
     ru: "/ru/request-agm-separator-sample/",
     ar: "/ar/request-agm-separator-sample/"
-  },
-  {
-    en: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
-    zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"
-  },
-  {
-    en: "/blog/agm-start-stop-battery-separator-procurement-guide/",
-    zh: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/"
   },
   ...synchronizedResourcePaths.map(allLocalePaths)
 ] satisfies Array<Partial<Record<SiteLocale, string>>>;

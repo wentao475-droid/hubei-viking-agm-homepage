@@ -1,6 +1,8 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import ts from "typescript";
+import { buildArabicProductContent } from "../content/arabic-products.mjs";
+import { buildArabicPageSeo } from "../content/arabic-seo.mjs";
 import {
   articleKinds,
   buildSecondaryArticleSeo,
@@ -162,6 +164,7 @@ const home = collectConstants("app/VikingHome.tsx", ["copy"]).copy;
 const sampleRequest = collectConstants("app/SampleRequestPage.tsx", [
   "pageCopy"
 ]).pageCopy;
+sampleRequest.ar = collectConstants("app/SampleRequestPage.tsx", ["arabicPageCopy"]).arabicPageCopy;
 const productConstants = collectConstants("app/ProductPage.tsx", [
   "content",
   "viContent",
@@ -192,6 +195,8 @@ const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "agmSeparatorBatchProcessControlCopy",
   "agmSeparatorThirdPoleCopy",
   "agmSeparatorEnergyDataDeliveryCopy",
+  "en18060BatteryStandardCopy",
+  "dataCenterEvLowVoltageAgmCopy",
   "agmSeparatorSupplyChainCopy",
   "agmStartStopBatteryProcurementCopy",
   "agmGlassFiberVsPvcSeparatorCopy"
@@ -220,12 +225,17 @@ const seoConstants = collectConstants("app/seo.tsx", [
   "agmSeparatorBatchProcessControlSeo",
   "agmSeparatorThirdPoleSeo",
   "agmSeparatorEnergyDataDeliverySeo",
+  "en18060BatteryStandardSeo",
+  "dataCenterEvLowVoltageAgmSeo",
   "agmSeparatorSupplyChainSeo",
   "agmStartStopBatteryProcurementSeo",
   "agmGlassFiberVsPvcSeparatorSeo"
 ]);
 
 const products = structuredClone(productConstants.content);
+for (const page of Object.keys(products)) {
+  products[page].ar = buildArabicProductContent(page, productConstants.content, productConstants.footerCopy);
+}
 for (const [page, value] of Object.entries(productConstants.viContent)) {
   products[page] = {
     ...products[page],
@@ -512,6 +522,8 @@ const articles = {
   agmSeparatorThirdPole: articleConstants.agmSeparatorThirdPoleCopy,
   agmSeparatorEnergyDataDelivery:
     articleConstants.agmSeparatorEnergyDataDeliveryCopy,
+  en18060BatteryStandard: articleConstants.en18060BatteryStandardCopy,
+  dataCenterEvLowVoltageAgm: articleConstants.dataCenterEvLowVoltageAgmCopy,
   agmSeparatorSupplyChain: articleConstants.agmSeparatorSupplyChainCopy,
   agmStartStopBatteryProcurement:
     articleConstants.agmStartStopBatteryProcurementCopy,
@@ -542,6 +554,8 @@ const articleSeo = {
   agmSeparatorThirdPole: seoConstants.agmSeparatorThirdPoleSeo,
   agmSeparatorEnergyDataDelivery:
     seoConstants.agmSeparatorEnergyDataDeliverySeo,
+  en18060BatteryStandard: seoConstants.en18060BatteryStandardSeo,
+  dataCenterEvLowVoltageAgm: seoConstants.dataCenterEvLowVoltageAgmSeo,
   agmSeparatorSupplyChain: seoConstants.agmSeparatorSupplyChainSeo,
   agmStartStopBatteryProcurement:
     seoConstants.agmStartStopBatteryProcurementSeo,
@@ -549,6 +563,11 @@ const articleSeo = {
     seoConstants.agmGlassFiberVsPvcSeparatorSeo
 };
 
+for (const value of Object.values(seoConstants)) {
+  if (value.en?.path && !value.en.path.includes("/blog/")) {
+    value.ar ??= buildArabicPageSeo(value.en);
+  }
+}
 for (const locale of secondaryResourceLocales) {
   for (const kind of articleKinds) {
     articles[kind] = {

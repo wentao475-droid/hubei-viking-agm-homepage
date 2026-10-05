@@ -384,10 +384,46 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
       zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/"
     }
+  },
+  {
+    id: "en-18060-2025-road-vehicle-battery-standard",
+    category: "industryApplications",
+    publishedAt: "2026-10-03",
+    title: {
+      en: "EN 18060:2025: Which Vehicle Batteries Does It Cover?",
+      zh: "EN 18060:2025 覆盖哪些车用电池？"
+    },
+    description: {
+      en: "What the harmonised-standard listing says about road-vehicle EV batteries, Pb and the AGM separator evidence boundary.",
+      zh: "解读协调标准列名对道路车辆 EV 电池、Pb 与 AGM 隔板证据边界的含义。"
+    },
+    href: {
+      en: "/blog/en-18060-2025-road-vehicle-battery-standard/",
+      zh: "/zh/blog/en-18060-2025-road-vehicle-battery-standard/"
+    }
+  },
+  {
+    id: "data-center-ev-low-voltage-lead-acid",
+    category: "industryApplications",
+    publishedAt: "2026-10-04",
+    title: {
+      en: "Why Data Centers and EVs Still Use Lead-Acid Low-Voltage Power",
+      zh: "为什么数据中心和电动车仍可能使用铅酸低压电源？"
+    },
+    description: {
+      en: "Compare data-center backup and EV low-voltage duties, with a clear boundary around LEOCH's corporate market perspective.",
+      zh: "比较数据中心备电与电动车低压任务，并明确理士企业市场观点的证据边界。"
+    },
+    href: {
+      en: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/",
+      zh: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/"
+    }
   }
 ];
 
 const articleKindById: Record<string, string> = {
+  "agm-separator-supply-chain": "agmSeparatorSupplyChain",
+  "agm-start-stop-battery-procurement": "agmStartStopBatteryProcurement",
   "what-is-agm-separator": "whatIsAgmSeparator",
   "key-technical-parameters": "keyTechnicalParameters",
   "how-to-choose-agm-separator": "howToChooseAgmSeparator",
@@ -402,6 +438,8 @@ const articleKindById: Record<string, string> = {
   "agm-separator-batch-process-control": "agmSeparatorBatchProcessControl",
   "agm-separator-third-pole": "agmSeparatorThirdPole",
   "agm-separator-energy-data-delivery": "agmSeparatorEnergyDataDelivery"
+  ,"en-18060-2025-road-vehicle-battery-standard": "en18060BatteryStandard"
+  ,"data-center-ev-low-voltage-lead-acid": "dataCenterEvLowVoltageAgm"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

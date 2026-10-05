@@ -29,7 +29,9 @@ export type BlogArticleKind =
   | "agmSeparatorSupplyChain"
   | "agmStartStopBatteryProcurement"
   | "agmSeparatorThirdPole"
-  | "agmSeparatorEnergyDataDelivery";
+  | "agmSeparatorEnergyDataDelivery"
+  | "en18060BatteryStandard"
+  | "dataCenterEvLowVoltageAgm";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -3752,6 +3754,94 @@ const agmSeparatorEnergyDataDeliveryCopy = {
   }
 } as const;
 
+const en18060BatteryStandardReferenceItems: Array<[string, string]> = [
+  ["Commission Implementing Decision (EU) 2026/2048", "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D2048"],
+  ["European Commission — EU Battery Regulation harmonised standards", "https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/eu-battery-regulation_en"]
+];
+
+const en18060BatteryStandardCopy = {
+  en: {
+    homePath: "/", languagePath: "/zh/blog/en-18060-2025-road-vehicle-battery-standard/", quote: "Request a Sample",
+    nav: { company: "Company", quality: "Quality" },
+    hero: { eyebrow: "Automotive Battery Standards", title: "Which Vehicle Batteries Does EN 18060:2025 Cover? What Lead-Acid and AGM Suppliers Should Know", subtitle: "The harmonised-standard listing names rechargeable EV modules and batteries for road vehicles across Li-ion, Na-ion, Pb, NiMH and combined chemistries. It does not make those chemistries equivalent or certify an AGM separator by itself.", secondary: "Check the applicability boundary", image: { src: "/images/agm-quality-control-1200.webp", alt: "AGM separator quality-control equipment", width: 1200, height: 900 } },
+    intro: ["On 16 September 2026, the Official Journal published Commission Implementing Decision (EU) 2026/2048, which lists EN 18060:2025 in support of Regulation (EU) 2023/1542. The publicly listed title describes performance and durability for rechargeable EV modules and batteries for road vehicles, including Li-ion, Na-ion, Pb, NiMH and combined chemistries.", "This is a scope signal, not a finding that every lead-acid or AGM battery is covered. It does not say that different chemistries use identical tests, thresholds or directly comparable results; nor does it make a battery-material supplier's data a substitute for complete-battery verification."],
+    sections: [
+      { eyebrow: "Published listing", title: "The decision lists EN 18060:2025 as a harmonised standard", text: "The Commission page identifies Decision (EU) 2026/2048 as a harmonised-standard publication supporting Regulation (EU) 2023/1542. Its public listing supports the standard number, decision date and title-level scope; it is not a replacement for obtaining and reading the standard itself." },
+      { eyebrow: "Covered title scope", title: "The listed title includes Pb alongside Li-ion, Na-ion and NiMH", text: "The title refers to rechargeable EV modules and batteries used in road vehicles and names Li-ion, Na-ion, Pb, NiMH and combined chemistries. That wording should not be broadened to every lead-acid product, stationary battery, UPS battery or all AGM batteries. Applicability depends on the regulation, the complete standard and the actual product classification." },
+      { eyebrow: "Not one scorecard", title: "A shared framework does not rank chemistries on one scale", text: "Being named in one standard title does not establish that the same performance values, test items, limits or pass conditions apply across chemistries. Do not use the listing to claim that lead, lithium and sodium batteries are being ranked directly against one another." },
+      { eyebrow: "AGM evidence boundary", title: "An AGM separator is a system material, not a separately certified battery", text: "EN 18060:2025 is not presented here as an AGM separator standard, and this listing does not establish a separate separator-certification requirement. Separator thickness, basis weight, absorption-related behaviour and resistance data can inform a material discussion, but cannot alone prove capacity, durability, reliability or regulatory conformity of a complete VRLA battery." },
+      { eyebrow: "FAQ: applicability", title: "How should a lead-acid battery manufacturer confirm relevance?", text: "Start with the road-vehicle EV module or battery classification, then review the applicable obligations in Regulation (EU) 2023/1542 and the complete EN 18060:2025 text. Record the intended product, chemistry, module or battery level, applicable test scope and the evidence owner. The harmonised-standard listing alone cannot answer every product-specific question." },
+      { eyebrow: "Supplier action", title: "Match separator evidence to the battery validation plan", text: "For an automotive AGM project, align the separator specification with the battery maker's target design and validation plan: application, plate-group construction, thickness, width or sheet size, roll or sheet format, assembly conditions and agreed material checks. Keep supplier material records separate from complete-battery validation and any legal or conformity assessment responsibilities." }
+    ],
+    parameters: [["Product classification", "Road-vehicle rechargeable EV module or battery status; do not infer from chemistry alone."], ["Standard access", "The complete EN 18060:2025 text and the applicable edition or amendments."], ["Battery evidence", "Complete-battery validation scope, method and result ownership."], ["Separator evidence", "Agreed material specification, test method, sample state and batch record."]],
+    formats: { eyebrow: "Specification match", title: "Bring the material discussion back to the battery design", items: [["AGM separator rolls", "Discuss width, thickness, roll handling and the intended battery assembly process.", "/images/viking-finished-separator-roll-900.webp", "Finished AGM separator roll"], ["AGM separator sheets", "Discuss sheet dimensions, plate-group assembly and the planned validation stage.", "/images/sheets1-900.webp", "AGM separator sheets"]] },
+    checklist: { eyebrow: "Buyer checklist", title: "Information to prepare for a sample and specification match", text: "Use the battery maker's applicable standards and validation plan as the controlling documents. The following details help scope a separator discussion without implying a conformity conclusion.", items: ["Road-vehicle battery product classification and chemistry", "Battery application and plate-group construction", "Target separator thickness, width or sheet dimensions", "Roll or sheet format and assembly conditions", "Agreed material checks, complete-battery validation scope and project stage"] },
+    references: { eyebrow: "Official sources checked", title: "Public sources reviewed on 3 October 2026", text: "The EUR-Lex decision and Commission harmonised-standards page support the decision reference, publication context and title-level scope. Neither source is used here to infer unpublished test details, thresholds, pass conditions or a separator certification procedure.", items: en18060BatteryStandardReferenceItems },
+    related: { eyebrow: "Related pages", title: "Continue the AGM separator evaluation", items: [["Automotive AGM Start-Stop Battery Separator Guide", "/blog/agm-start-stop-battery-separator-procurement-guide/"], ["AGM Separator Products", "/products/agm-separator/"], ["AGM Separator Testing", "/quality-control/agm-separator-testing/"], ["Request a Sample & Specification Match", "/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.en.inquiry, title: "Request an automotive AGM separator sample and specification match", text: "Share the battery application, product classification, separator dimensions, supply format, assembly conditions and validation stage. We can align the material discussion with your agreed specification; we do not provide a regulatory certification conclusion.", checklist: ["Battery application and classification", "Thickness, width or sheet size", "Roll or sheet format and assembly conditions", "Material checks and complete-battery validation stage"], placeholders: { ...articleCopy.en.inquiry.placeholders, message: "Battery application and classification, separator dimensions, roll or sheet format, assembly conditions, material checks and validation stage" } }, footer: articleCopy.en.footer
+  },
+  zh: {
+    homePath: "/zh/", languagePath: "/blog/en-18060-2025-road-vehicle-battery-standard/", quote: "申请样品",
+    nav: { company: "公司", quality: "质量" },
+    hero: { eyebrow: "车用电池标准", title: "EN 18060:2025 覆盖哪些车用电池？铅酸与 AGM 供应商应怎样理解", subtitle: "协调标准列名涵盖道路车辆用可充电 EV 模块和电池，包括锂离子、钠离子、铅、镍氢及组合化学体系；这不代表各体系等效，也不代表 AGM 隔板被单独认证。", secondary: "查看适用范围边界", image: { src: "/images/agm-quality-control-1200.webp", alt: "AGM 隔板质量控制设备", width: 1200, height: 900 } },
+    intro: ["欧盟官方公报于 2026 年 9 月 16 日刊载欧盟委员会实施决定 (EU) 2026/2048，将 EN 18060:2025 列为支持 Regulation (EU) 2023/1542 的协调标准。其公开列示题名说明，该标准面向道路车辆用可充电 EV 模块和电池的性能与耐久性，涉及 Li-ion、Na-ion、Pb、NiMH 及组合化学体系。", "这是一项范围信息，不是对所有铅酸或 AGM 电池的适用结论；也不说明不同化学体系采用同一测试项目、阈值或可直接横比的结果。材料供应商的数据同样不能替代整电池验证。"],
+    sections: [
+      { eyebrow: "公开列名", title: "实施决定将 EN 18060:2025 列为协调标准", text: "欧盟委员会协调标准页面将实施决定 (EU) 2026/2048 列为支持 Regulation (EU) 2023/1542 的发布信息。公开资料能够核验标准编号、决定日期和题名层面的范围，但不能替代取得并阅读标准全文。" },
+      { eyebrow: "题名范围", title: "题名同时列出 Pb、Li-ion、Na-ion 和 NiMH", text: "题名所述对象是道路车辆用可充电 EV 模块和电池，并列出 Li-ion、Na-ion、Pb、NiMH 及组合化学体系。不应将其扩大为所有铅酸产品、固定式电池、UPS 电池或所有 AGM 电池；具体适用性仍取决于法规、标准全文和产品分类。" },
+      { eyebrow: "不是同一把分数尺", title: "纳入同一框架不等于按同一数值排名", text: "多种化学体系被列在同一标准题名中，并不证明它们使用相同的性能数值、试验项目、限值或通过条件，更不能据此宣称铅、锂和钠电池可以直接横向排名。" },
+      { eyebrow: "AGM 证据边界", title: "AGM 隔板是系统材料，不是被单独认证的整电池", text: "本文不将 EN 18060:2025 表述为 AGM 隔板标准，公开列名也不能推出隔板需要单独认证。厚度、克重、吸酸相关表现和电阻等材料数据可用于规格沟通，但不能单独证明完整 VRLA 电池的容量、耐久性、可靠性或法规符合性。" },
+      { eyebrow: "FAQ：适用性", title: "铅酸电池制造商应如何确认该标准的适用范围？", text: "先确认道路车辆 EV 模块或电池的产品分类，再结合 Regulation (EU) 2023/1542 的适用义务与 EN 18060:2025 全文核对。记录产品、化学体系、模块或电池层级、适用测试范围和证据责任方；仅凭协调标准列名不能得出具体产品结论。" },
+      { eyebrow: "供应商行动", title: "让隔板证据匹配整电池验证计划", text: "对车用 AGM 项目，应将隔板规格与电池制造商的目标设计和验证计划对齐：应用、极群结构、厚度、宽度或片材尺寸、卷材或片材形式、装配条件和约定材料检查。材料记录应与整电池验证及法规/符合性责任分开管理。" }
+    ],
+    parameters: [["产品分类", "道路车辆用可充电 EV 模块或电池状态，不能只按化学体系判断。"], ["标准获取", "EN 18060:2025 全文及适用版本或修订。"], ["电池证据", "整电池验证范围、方法与结果责任方。"], ["隔板证据", "约定材料规格、试验方法、样品状态和批次记录。"]],
+    formats: { eyebrow: "规格匹配", title: "把材料沟通落回电池设计", items: [["AGM 隔板卷材", "沟通宽度、厚度、卷材使用和目标电池装配过程。", "/images/viking-finished-separator-roll-900.webp", "AGM 隔板成品卷"], ["AGM 隔板片材", "沟通片材尺寸、极群装配和计划验证阶段。", "/images/sheets1-900.webp", "AGM 隔板片材"]] },
+    checklist: { eyebrow: "采购清单", title: "申请样品与规格匹配前应准备的信息", text: "以电池制造商适用的标准和验证计划为准。以下信息用于界定隔板沟通范围，不构成符合性结论。", items: ["道路车辆电池产品分类和化学体系", "电池应用和极群结构", "目标隔板厚度、宽度或片材尺寸", "卷材或片材形式和装配条件", "约定材料检查、整电池验证范围和项目阶段"] },
+    references: { eyebrow: "已核验的官方来源", title: "2026 年 10 月 3 日查阅的公开资料", text: "EUR-Lex 决定与欧盟委员会协调标准页面支持决定编号、发布背景和题名层面的范围。本文不根据这些公开资料推断未读取的具体试验项目、阈值、通过条件或隔板认证程序。", items: en18060BatteryStandardReferenceItems },
+    related: { eyebrow: "相关页面", title: "继续开展 AGM 隔板评审", items: [["汽车 AGM 启停电池隔板采购指南", "/zh/blog/agm-start-stop-battery-separator-procurement-guide/"], ["AGM 隔板产品", "/zh/products/agm-separator/"], ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"], ["申请样品与规格匹配", "/zh/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.zh.inquiry, title: "申请车用 AGM 隔板样品与规格匹配", text: "请提供电池应用、产品分类、隔板尺寸、供货形式、装配条件和验证阶段。我们可围绕约定规格沟通材料信息；不提供法规认证结论。", checklist: ["电池应用和产品分类", "厚度、宽度或片材尺寸", "卷材或片材形式与装配条件", "材料检查和整电池验证阶段"], placeholders: { ...articleCopy.zh.inquiry.placeholders, message: "电池应用和产品分类、隔板尺寸、卷材或片材形式、装配条件、材料检查和验证阶段" } }, footer: articleCopy.zh.footer
+  }
+} as const;
+
+const dataCenterEvLowVoltageAgmReferenceItems: Array<[string, string]> = [
+  ["LEOCH at ELBC 2026: Asia's Lead Battery Market", "https://www.leoch.com/newsroom/events/leoch-at-elbc-2026"]
+];
+
+const dataCenterEvLowVoltageAgmCopy = {
+  en: {
+    homePath: "/", languagePath: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", quote: "Request a Sample",
+    nav: { company: "Company", quality: "Quality" },
+    hero: { eyebrow: "Data Center & EV Low-Voltage Power", title: "Why Do AI Data Centers and Electric Vehicles Still Need Lead-Acid Low-Voltage Power?", subtitle: "Data-center backup and EV low-voltage systems have different duties. Their common point is a system-specific need for reliable auxiliary or standby power—not a universal claim for one battery chemistry.", secondary: "Compare the two applications", image: { src: "/images/applications/ups-vrla-battery-application-1200.webp", alt: "VRLA battery backup application", width: 1200, height: 900 } },
+    intro: ["At ELBC 2026, LEOCH Founder & Chairman Dr. Dong Li described Asia's lead-acid battery market as adapting to demand supported by expanding data-center and telecom infrastructure, and by the continuing low-voltage role of lead-acid in many electric vehicles. This is LEOCH's corporate market perspective, not an independent market-size report or a quantified forecast.", "The useful engineering question is not whether lead-acid competes with every energy-storage route. It is whether a given system needs the standby or low-voltage duty that a specified battery architecture is designed to perform. AGM separator selection must then follow the individual battery design and complete-battery validation plan."],
+    sections: [
+      { eyebrow: "Source boundary", title: "LEOCH reports a market perspective, not a quantified demand study", text: "The LEOCH event recap says its chairman linked new demand patterns in Asia to data-center and telecom infrastructure and to lead-acid's low-voltage role in many EVs. It supplies no market size, growth rate, adoption rate or split by application. This article therefore does not infer a regional forecast, project volume or customer demand from that statement." },
+      { eyebrow: "Data center duty", title: "A backup battery is selected around a standby-power system", text: "In a data center or UPS architecture, battery duty can include maintaining standby readiness and providing backup power when the system calls for it. Battery technology, discharge profile, runtime, maintenance approach and site design are system decisions. Not every data center uses the same battery chemistry or VRLA configuration." },
+      { eyebrow: "EV duty", title: "An EV low-voltage battery is an auxiliary-system decision", text: "Many electric vehicles retain a low-voltage electrical system, but the battery architecture varies by vehicle, market and manufacturer. A lead-acid AGM battery may be considered for a low-voltage role in some designs; this does not mean every EV uses AGM or lead-acid, nor that it replaces the traction battery." },
+      { eyebrow: "Comparison", title: "The two applications share a reliability question, not one universal specification", text: "Data-center backup discussions may focus on standby state, discharge duty, service access and system maintenance. Vehicle discussions may add packaging, temperature exposure, vibration, compression and vehicle electrical integration. For both, material measurements must be tied to the actual battery design, agreed test conditions and complete-battery verification." },
+      { eyebrow: "AGM separator boundary", title: "A separator participates in battery performance; it does not decide it alone", text: "AGM separator thickness, basis weight, absorption-related behaviour, electrical resistance, compression response, roll or sheet dimensions and batch records can be discussed for a battery project. Those material details cannot independently demonstrate capacity, life, cost, reliability, vehicle compatibility or UPS performance. Plate design, electrolyte, assembly, charging, temperature and system controls also matter." },
+      { eyebrow: "Specification match", title: "Start with the application, structure and target operating conditions", text: "For a sample and specification discussion, identify the application, battery structure, low-voltage or standby duty, target dimensions, roll or sheet format, assembly conditions, relevant temperature or vibration conditions, agreed material checks and complete-battery validation stage. Viking can discuss AGM separator supply specifications; the battery maker and customer remain responsible for complete-battery and system validation." }
+    ],
+    parameters: [["Application", "Data-center or UPS backup, EV low-voltage system, or another defined battery duty."], ["Battery structure", "Plate-group dimensions, target compression and electrolyte/assembly conditions."], ["Operating conditions", "Standby/discharge duty, temperature, vibration or service conditions relevant to the project."], ["Material evidence", "Agreed dimensions, test method, sample state and batch records."], ["Validation", "Complete-battery and system test scope, result owner and project stage."]],
+    formats: { eyebrow: "Application comparison", title: "Use the same sourcing discipline, with different operating questions", items: [["Data center / UPS", "Confirm battery architecture, standby and discharge duty, maintenance approach and project validation plan.", "/images/applications/ups-vrla-battery-application-1200.webp", "VRLA battery backup application"], ["EV low-voltage", "Confirm vehicle battery role, packaging, temperature and vibration conditions, assembly inputs and validation plan.", "/images/viking-finished-separator-roll-900.webp", "Finished AGM separator roll"]] },
+    checklist: { eyebrow: "Buyer checklist", title: "Information to provide for AGM separator specification matching", text: "These details scope a material discussion. They do not amount to a promise of battery or system performance.", items: ["Application and defined battery duty", "Battery structure, plate-group dimensions and target compression", "Target thickness, width or sheet dimensions and roll/sheet format", "Operating conditions and agreed material test methods", "Complete-battery validation scope and project stage"] },
+    references: { eyebrow: "Official source checked", title: "LEOCH ELBC 2026 event recap reviewed on 4 October 2026", text: "LEOCH's page supports the attribution to Dr. Dong Li and the stated corporate view on data centers, telecom infrastructure and EV low-voltage power. It does not provide quantified market data or verify Viking specifications, battery performance, customer relationships or project outcomes.", items: dataCenterEvLowVoltageAgmReferenceItems },
+    related: { eyebrow: "Related pages", title: "Continue with application and verification details", items: [["AGM Separator for Data Center Backup Power", "/blog/agm-separator-for-data-center-backup-power/"], ["AGM Separator for UPS Batteries", "/applications/agm-separator-for-ups-battery/"], ["AGM Separator Products", "/products/agm-separator/"], ["AGM Separator Testing", "/quality-control/agm-separator-testing/"]]},
+    inquiry: { ...articleCopy.en.inquiry, title: "Request an AGM separator specification match for your application", text: "Select the application and share the battery structure, target operating conditions, dimensions, roll or sheet format and validation stage. We can discuss an AGM separator specification without making a complete-battery or system-performance promise.", checklist: ["Application and battery duty", "Battery structure and target dimensions", "Operating and assembly conditions", "Material checks and validation stage"], placeholders: { ...articleCopy.en.inquiry.placeholders, message: "Application, battery structure, low-voltage or standby duty, dimensions, operating conditions, test method and validation stage" } }, footer: articleCopy.en.footer
+  },
+  zh: {
+    homePath: "/zh/", languagePath: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", quote: "申请样品",
+    nav: { company: "公司", quality: "质量" },
+    hero: { eyebrow: "数据中心与电动车低压电源", title: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？", subtitle: "数据中心备电与电动车低压系统的工作任务不同；共同点是特定系统对可靠辅助或后备电源的需求，而不是对某一种电池路线的普遍判断。", secondary: "比较两个应用", image: { src: "/images/applications/ups-vrla-battery-application-1200.webp", alt: "VRLA 电池备电应用", width: 1200, height: 900 } },
+    intro: ["理士在 ELBC 2026 的活动回顾中称，其创始人兼董事长将亚洲铅酸电池市场的新需求与数据中心、通信基础设施扩张，以及许多电动车中铅酸作为低压电源的持续角色联系起来。这是理士的企业市场观点，不是独立市场规模报告或量化预测。", "工程上更有价值的问题不是铅酸是否与所有储能路线竞争，而是具体系统是否有某种电池结构所承担的后备或低压任务。AGM 隔板选型仍应回到单个电池设计和整电池验证计划。"],
+    sections: [{ eyebrow: "来源边界", title: "理士披露的是市场观点，不是量化需求研究", text: "活动回顾支持对该企业观点的归因，却没有市场规模、增长率、采用率或分场景数据。本文不据此推导区域预测、项目量或客户需求。" }, { eyebrow: "数据中心任务", title: "后备电池需围绕备用电源系统选型", text: "数据中心或 UPS 架构中的电池可能承担待机准备和系统调用时的后备供电。技术路线、放电曲线、备电时长、维护方式和现场设计均是系统决策，并非所有数据中心采用相同化学体系或 VRLA 配置。" }, { eyebrow: "电动车任务", title: "电动车低压电池是辅助系统架构选择", text: "许多电动车保留低压电气系统，但不同车型、地区和制造商的电池架构并不相同。某些设计可能考虑铅酸 AGM 电池承担低压任务；这不代表所有电动车使用 AGM 或铅酸，也不等于替代动力电池。" }, { eyebrow: "对比", title: "两个场景共享可靠性问题，而不共享一套规格", text: "数据中心备电会关注待机、放电任务、维护和系统验证；车载低压系统还可能关注布置、温度、振动、压缩和电气集成。两者的材料指标都必须联系实际电池设计、约定试验条件和整电池验证。" }, { eyebrow: "AGM 隔板边界", title: "隔板参与电池表现，但不单独决定系统表现", text: "厚度、克重、吸液相关表现、电阻、压缩响应、卷材或片材尺寸和批次记录可用于项目沟通，但不能单独证明容量、寿命、成本、可靠性、车辆适配性或 UPS 表现。极板、电解液、装配、充电、温度和系统控制同样重要。" }, { eyebrow: "规格匹配", title: "从应用、结构和目标工况开始", text: "申请样品前请明确应用、电池结构、低压或备电任务、目标尺寸、卷材或片材形式、装配条件、相关温度或振动条件、约定材料检查和整电池验证阶段。维京可沟通 AGM 隔板供货规格；整电池和系统验证责任仍由电池制造商及客户承担。" }],
+    parameters: [["应用", "数据中心或 UPS 后备、电动车低压系统，或其他已定义的电池任务。"], ["电池结构", "极群尺寸、目标压缩和电解液/装配条件。"], ["工况", "与项目相关的待机/放电、温度、振动或维护条件。"], ["材料证据", "约定尺寸、测试方法、样品状态和批次记录。"], ["验证", "整电池与系统测试范围、结果责任方和项目阶段。"]],
+    formats: { eyebrow: "应用对比", title: "采用相同的规格沟通纪律，但问题不同", items: [["数据中心 / UPS", "确认电池架构、待机与放电任务、维护方式和项目验证计划。", "/images/applications/ups-vrla-battery-application-1200.webp", "VRLA 电池备电应用"], ["电动车低压", "确认车载电池角色、布置、温度与振动条件、装配输入和验证计划。", "/images/viking-finished-separator-roll-900.webp", "AGM 隔板成品卷"]] },
+    checklist: { eyebrow: "采购清单", title: "申请 AGM 隔板规格匹配前请准备", text: "以下信息用于界定材料沟通范围，并非对整电池或系统表现的承诺。", items: ["应用和已定义电池任务", "电池结构、极群尺寸和目标压缩", "目标厚度、宽度或片材尺寸及卷/片形式", "工况和约定材料测试方法", "整电池验证范围和项目阶段"] },
+    references: { eyebrow: "已核验官方来源", title: "2026 年 10 月 4 日查阅的理士 ELBC 2026 回顾", text: "理士页面支持对董李博士及其关于数据中心、通信基础设施和电动车低压电源观点的归因。该页没有提供量化市场数据，也不能证明维京规格、电池表现、客户关系或项目结果。", items: dataCenterEvLowVoltageAgmReferenceItems },
+    related: { eyebrow: "相关页面", title: "继续查看应用与验证信息", items: [["数据中心备电 AGM 隔板", "/zh/blog/agm-separator-for-data-center-backup-power/"], ["UPS 电池 AGM 隔板", "/zh/applications/agm-separator-for-ups-battery/"], ["AGM 隔板产品", "/zh/products/agm-separator/"], ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]]},
+    inquiry: { ...articleCopy.zh.inquiry, title: "申请与应用匹配的 AGM 隔板规格沟通", text: "请选择应用并提供电池结构、目标工况、尺寸、卷材或片材形式和验证阶段。我们可沟通 AGM 隔板规格，不对整电池或系统表现作出承诺。", checklist: ["应用和电池任务", "电池结构和目标尺寸", "工况与装配条件", "材料检查和验证阶段"], placeholders: { ...articleCopy.zh.inquiry.placeholders, message: "应用、电池结构、低压或备电任务、尺寸、工况、测试方法和验证阶段" } }, footer: articleCopy.zh.footer
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -3816,6 +3906,10 @@ export function BlogArticlePage({
                                 ? agmSeparatorThirdPoleCopy[primaryLang]
                                 : page === "agmSeparatorEnergyDataDelivery"
                                   ? agmSeparatorEnergyDataDeliveryCopy[primaryLang]
+                                  : page === "en18060BatteryStandard"
+                                    ? en18060BatteryStandardCopy[primaryLang]
+                                    : page === "dataCenterEvLowVoltageAgm"
+                                      ? dataCenterEvLowVoltageAgmCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -3890,12 +3984,16 @@ export function BlogArticlePage({
                               : page === "agmSeparatorThirdPole"
                                 ? ["meaning", "electrical-separation", "electrolyte", "oxygen-pathway", "compression", "project-review"]
                                 : page === "agmSeparatorEnergyDataDelivery"
-                                  ? ["external-example", "boundary", "comparison", "line-baseline", "evidence", "customer-review"]
+                                  ? ["external-example", "boundary", "supplier-comparison", "line-baseline", "evidence", "customer-review"]
+                                  : page === "en18060BatteryStandard"
+                                    ? ["published-listing", "covered-title-scope", "not-one-scorecard", "agm-evidence-boundary", "faq-applicability", "supplier-action"]
+                                    : page === "dataCenterEvLowVoltageAgm"
+                                      ? ["source-boundary", "data-center-duty", "ev-duty", "comparison", "agm-separator-boundary", "specification-match"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
           src: "/images/viking-finished-separator-roll-900.webp",
-          alt: "Finished AGM separator roll",
+          alt: t.hero.title,
           width: 900,
           height: 675
         };
@@ -3903,7 +4001,7 @@ export function BlogArticlePage({
   const timeline = t.timeline;
 
   return (
-    <main className="min-h-screen bg-frost text-ink">
+    <main dir={lang === "ar" ? "rtl" : undefined} className="min-h-screen bg-frost text-ink">
       <SiteHeader
         lang={lang}
         homePath={t.homePath}
@@ -3930,14 +4028,14 @@ export function BlogArticlePage({
                 href="#contact"
                 className="inline-flex min-h-14 w-full min-w-0 items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-center text-base font-semibold leading-6 text-white shadow-sm transition hover:bg-ink sm:w-auto"
               >
-                <span className="min-w-0 flex-1 whitespace-normal break-words sm:flex-none">{localizedUi.sampleTitle}</span>
+                <span className="min-w-0 flex-1 whitespace-normal break-words">{localizedUi.sampleTitle}</span>
                 <Send className="shrink-0" size={18} />
               </a>
               <a
                 href="#buyer-checklist"
                 className="inline-flex min-h-14 w-full min-w-0 items-center justify-center gap-2 rounded-md border border-line bg-white px-6 py-3.5 text-center text-base font-semibold leading-6 text-ink transition hover:border-signal hover:text-signal sm:w-auto"
               >
-                <span className="min-w-0 flex-1 whitespace-normal break-words sm:flex-none">{t.hero.secondary}</span>
+                <span className="min-w-0 flex-1 whitespace-normal break-words">{t.hero.secondary}</span>
                 <ArrowRight className="shrink-0" size={18} />
               </a>
             </div>
@@ -3973,7 +4071,7 @@ export function BlogArticlePage({
                     : []),
                   ...t.sections.map((section, index) => [
                     section.eyebrow,
-                    `#${sectionIds[index]}`
+                    `#${sectionIds[index] ?? `section-${index + 1}`}`
                   ]),
                   [t.formats.eyebrow, "#formats"],
                   [t.checklist.eyebrow, "#buyer-checklist"]
@@ -4096,7 +4194,7 @@ export function BlogArticlePage({
               {t.sections.map((section, index) => (
                 <section
                   key={section.eyebrow}
-                  id={sectionIds[index]}
+                  id={sectionIds[index] ?? `section-${index + 1}`}
                   className="scroll-mt-28 border-t border-line pt-10"
                 >
                   <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">
@@ -4508,15 +4606,17 @@ function QuickContactDock({ lang }: { lang: SiteLocale }) {
           copyPhone: "复制电话",
           copyEmail: "复制邮箱",
           backTop: "返回顶部",
-          copied: "已复制"
+          copied: "已复制",
+          copyPrompt: "复制此联系方式："
         }
-      : {
+      : lang !== "en" ? secondaryResourceData[lang].ui : {
           phone: "TEL",
           email: "E-mail",
           copyPhone: "Copy phone",
           copyEmail: "Copy email",
           backTop: "Back to top",
-          copied: "Copied"
+          copied: "Copied",
+          copyPrompt: "Copy this contact detail:"
         };
   const items = [
     {
@@ -4539,7 +4639,7 @@ function QuickContactDock({ lang }: { lang: SiteLocale }) {
     const copied = await copyToClipboard(value);
 
     if (!copied) {
-      window.prompt("Copy this contact detail:", value);
+      window.prompt(labels.copyPrompt, value);
       return;
     }
 
@@ -4550,7 +4650,7 @@ function QuickContactDock({ lang }: { lang: SiteLocale }) {
   }
 
   return (
-    <div className="fixed bottom-5 right-4 z-40 flex flex-col gap-2 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2">
+    <div className="fixed right-4 z-40 hidden flex-col gap-2 sm:top-1/2 sm:flex sm:-translate-y-1/2">
       {items.map(({ id, label, value, aria, Icon }) => (
         <button
           key={id}
@@ -4596,13 +4696,14 @@ function CopyContactButton({
   lang: SiteLocale;
 }) {
   const [copied, setCopied] = useState(false);
-  const copiedLabel = lang === "zh" ? "已复制" : "Copied";
+  const copiedLabel = lang === "zh" ? "已复制" : lang === "en" ? "Copied" : secondaryResourceData[lang].ui.copied;
+  const promptLabel = lang === "zh" ? "复制此联系方式：" : lang === "en" ? "Copy this contact detail:" : secondaryResourceData[lang].ui.copyPrompt;
 
   async function copyValue() {
     const didCopy = await copyToClipboard(value);
 
     if (!didCopy) {
-      window.prompt("Copy this contact detail:", value);
+      window.prompt(promptLabel, value);
       return;
     }
 
@@ -4615,7 +4716,7 @@ function CopyContactButton({
       type="button"
       onClick={copyValue}
       className="text-left transition hover:text-white focus:outline-none focus:text-white"
-      aria-label={`Copy ${label}: ${value}`}
+      aria-label={`${promptLabel} ${label}: ${value}`}
     >
       {label}: {copied ? copiedLabel : value}
     </button>

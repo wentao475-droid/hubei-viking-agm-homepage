@@ -19,7 +19,7 @@ const localeMeta = {
   es: { prefix: "/es", html: "es", og: "es_LA", site: "Viking AGM" },
   pt: { prefix: "/pt", html: "pt-BR", og: "pt_BR", site: "Viking AGM" },
   ru: { prefix: "/ru", html: "ru-RU", og: "ru_RU", site: "Viking AGM" },
-  ar: { prefix: "/ar", html: "ar", og: "ar", site: "Viking AGM" }
+  ar: { prefix: "/ar", html: "ar", og: "ar_AR", site: "Viking AGM" }
 };
 
 const copy = {

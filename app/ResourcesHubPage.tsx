@@ -26,7 +26,7 @@ const pageCopy = {
     title: "Technical Resources for AGM Separator Buyers",
     subtitle:
       "Use practical buyer guides, manufacturing notes and application articles to prepare specifications, samples and supplier discussions.",
-    countLabel: `${resourceArticles.length} bilingual technical articles`,
+    countLabel: `${resourceArticles.length} technical articles`,
     actionEyebrow: "Start a purchasing discussion",
     actionTitle: "Move from research to specification matching",
     actionText:
@@ -124,7 +124,7 @@ export function ResourcesHubPage({ lang }: { lang: SiteLocale }) {
         };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-frost text-ink">
+    <main dir={lang === "ar" ? "rtl" : undefined} className="min-h-screen overflow-hidden bg-frost text-ink">
       <SiteHeader
         lang={lang}
         homePath={t.homePath}
@@ -284,7 +284,7 @@ export function ResourcesHubPage({ lang }: { lang: SiteLocale }) {
         </div>
       </section>
 
-      <section className="bg-frost px-4 py-20 sm:px-6 lg:px-8">
+      <section id="contact" className="bg-frost px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 border-l-4 border-signal bg-white p-7 shadow-sm sm:p-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal">

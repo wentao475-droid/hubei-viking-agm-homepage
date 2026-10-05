@@ -16,7 +16,7 @@
     "build": "next build",
     "build:volcengine": "npm run verify:content && npm run verify:assets && npm run seo:sitemap && npm run build && npm run postprocess:static && npm run verify:static",
     "build:pages": "npm run verify:content && npm run verify:assets && npm run seo:sitemap && npm run build && npm run postprocess:static",
-    "verify:static": "node scripts/verify-static-export.mjs",
+    "verify:static": "node scripts/verify-static-export.mjs && node scripts/verify-localization.mjs",
     "verify:prod": "node scripts/verify-production.mjs",
     "start": "next start"
   },

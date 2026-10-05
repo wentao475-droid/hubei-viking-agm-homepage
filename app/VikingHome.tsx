@@ -897,6 +897,46 @@ const copy: Record<SiteLocale, any> = {
     hero: { ...baseCopy.en.hero, badge: "شركة هوبي فايكينغ للتكنولوجيا المحدودة", title: ["شركة متخصصة في تصنيع", "فواصل AGM من الألياف الزجاجية"], subtitle: "تصنيع وتوريد مستقر لفواصل AGM من الألياف الزجاجية لمصنعي بطاريات الرصاص الحمضية.", quote: "اطلب عرضًا", products: "عرض المنتجات", proof: ["فواصل AGM من الألياف الزجاجية", "إنتاج مضبوط بالعمليات", "توريد للتصدير"], image: { ...baseCopy.en.hero.image, alt: "خط إنتاج فواصل AGM" } },
     video: { eyebrow: "نظرة عامة على المصنع", title: "شاهد جولة فايكينغ AGM في المصنع خلال دقيقة واحدة", text: "نظرة سريعة على إنتاج فواصل AGM ومناولة اللفائف وفحص الجودة والتعبئة.", duration: "فيديو مصنع لمدة دقيقة", play: "تشغيل الفيديو", close: "إغلاق الفيديو", aria: "تشغيل فيديو نظرة عامة على مصنع Viking AGM" },
     stats: [{ value: "AGM", label: "تصنيع فواصل الألياف الزجاجية" }, { value: "OEM", label: "مناقشة اللفائف والألواح حسب المواصفات" }, { value: "QC", label: "الفحص ومتابعة العملية" }],
+    company: {
+      ...baseCopy.en.company, eyebrow: "نبذة عن الشركة", title: "شركة تصنيع فواصل AGM قائمة على التقنية في هوبي",
+      text: ["تأسست شركة Hubei Viking Technology Co., Ltd. في ديسمبر 2015 برأس مال مسجل قدره 30 مليون يوان. تقع في منطقة إيتشو للتنمية الاقتصادية والتكنولوجية بمقاطعة هوبي، على مساحة تقارب 65 مو، وتركز على البحث وإنتاج وبيع فواصل الألياف الزجاجية فائقة الدقة.", "تنتج الشركة أساساً فواصل AGM بطاقة سنوية تقارب 4000 طن. وتشغّل عدة خطوط إنتاج لفواصل AGM في الصين، مع أنظمة لمتابعة العمليات والفحص وإدارة الجودة.", "حصلت Viking Technology على شهادة نظام إدارة الجودة ISO9001:2015. يمكن مناقشة تصنيع المواصفات حسب متطلبات العملاء وتطبيقات بطاريات الرصاص الحمضية."],
+      imageLabel: "مبنى الشركة وقاعدة تصنيع Hubei Viking Technology", image: { ...baseCopy.en.company.image, alt: "مبنى شركة Viking وقاعدة التصنيع" },
+      cards: [["تأسست عام 2015", "رأس مال مسجل 30 مليون يوان وتركيز مستمر على تصنيع فواصل AGM."], ["موقع إنتاج بمساحة 65 مو تقريباً", "في منطقة إيتشو للتنمية الاقتصادية والتكنولوجية بمقاطعة هوبي."], ["طاقة سنوية تقارب 4000 طن", "عدة خطوط إنتاج تدعم تنسيق التوريد على دفعات."], ["ISO9001:2015", "شهادة نظام إدارة الجودة تدعم مراجعة المورد لدى العميل."], ["تصنيع حسب المواصفة", "مناقشة المنتجات وفق متطلبات العميل والتطبيق."]]
+    },
+    values: {
+      eyebrow: "خصائص المنتج", title: "مادة مصممة لدعم اتساق أداء البطارية", text: "تُطوّر فواصل AGM لامتصاص مستقر وسلوك ضغط مناسب وأداء قابل للتكرار، مع متابعة العملية من مراجعة المواد إلى الإفراج عن المنتج النهائي. تُؤكد الملاءمة وفق اختبار العميل والبطارية كاملة.",
+      items: [["الامتصاص", "امتصاص الإلكتروليت وتوزيعه عبر شبكة الفاصل وفق التصميم."], ["المقاومة الكهربائية", "مناقشة انتقال الأيونات وأهداف الأداء ضمن شروط قياس محددة."], ["ثبات السماكة", "ضبط الأبعاد لدعم تجميع الألواح وحالة الضغط."], ["مقاومة الشد", "مناولة مناسبة للتحويل والقطع وخطوط التجميع."], ["اتساق الجودة", "متابعة الدفعات للعملاء الذين يحتاجون إلى توريد إنتاج متكرر."]],
+      images: [["لفافة فاصل نهائية", "لفائف AGM لإنتاج البطاريات وخطوط التحويل.", "/images/viking-finished-separator-roll-900.webp"], ["ألواح الفاصل", "ألواح مقصوصة لمراجعة المواصفات ومناقشة العينات.", "/images/viking-separator-sheets-900.webp"]]
+    },
+    factory: {
+      ...baseCopy.en.factory, eyebrow: "القدرات التصنيعية", title: "مشاهد إنتاج يمكن للمشتري مراجعتها", text: "توضح معدات الورشة ومتابعة الخط ومناولة اللفائف كيفية تصنيع المادة وفحصها وتجهيزها للشحن، وتدعم النقاش الفني مع العملاء.",
+      items: [["الإنتاج المستمر", "مشاهد التصنيع تدعم مناقشة استمرارية توريد الفاصل."], ["متابعة الخط", "قراءات المعدات والإنتاج تجعل مراجعة العملية أكثر وضوحاً."], ["التعبئة والشحن", "مراجعة أبعاد اللفائف وطريقة التعبئة وجدول التصدير."], ["المواصفات الخاصة", "مناقشة السماكة والعرض والشكل ومتطلبات التطبيق."]], image: { ...baseCopy.en.factory.image, alt: "ورشة تصنيع فواصل AGM" }
+    },
+    process: {
+      ...baseCopy.en.process, eyebrow: "عملية التصنيع", title: "من اختيار المواد إلى متابعة العميل", text: "يربط سير العمل اختيار المواد وتحضير المعلق والتشكيل والفحص وتحليل الجودة ومتابعة العميل ضمن عملية إنتاج منسقة.",
+      steps: ["اختيار المواد", "فحص المواد الواردة", "معالجة الألياف والمياه", "تحضير المعلق", "التشكيل والتجفيف والمعالجة", "الشق والتجهيز", "تحليل الجودة", "الإفراج عن المنتج", "متابعة العميل"], image: { ...baseCopy.en.process.image, alt: "مخطط عملية تصنيع فواصل AGM" }
+    },
+    quality: {
+      ...baseCopy.en.quality, eyebrow: "مراقبة الجودة", title: "الوثائق والفحص والإفراج عن المنتج", text: "ترتبط وثائق التأهيل بفحص العملية وتحليل المنتج النهائي وضبط الإفراج والتغذية الراجعة من العميل.", items: ["وثائق الشهادات متاحة للمراجعة", "فحص الواردات وأثناء الإنتاج", "تحليل جودة المنتج النهائي", "الإفراج ومتابعة العميل"], image: { ...baseCopy.en.quality.image, alt: "اختبار جودة فواصل AGM" }
+    },
+    certifications: {
+      eyebrow: "الشهادات ووثائق التأهيل", title: "مواد لمراجعة المورد لدى المشتري", text: "تتوفر وثائق الترخيص والشهادات لمراجعة المشتري. يمكن تأكيد أسماء الشهادات وأرقامها وصلاحيتها من المستندات الأصلية عند الطلب.", items: ["وثائق الترخيص التجاري", "وثائق شهادات نظام الإدارة", "وثائق اعتماد المنتج أو المنشأة", "تفاصيل المستندات عند الطلب"], note: "يمكن تقديم الأصول لتأكيد تفاصيل الشهادات أثناء مراجعة المورد."
+    },
+    why: {
+      eyebrow: "التعاون مع Viking", title: "شريك تصنيع لفرق إنتاج البطاريات خارج الصين", items: [["خبرة التصنيع", "تركيز على فواصل AGM لتطبيقات البطاريات الرصاصية."], ["تنسيق التسليم", "ربط جداول الإنتاج والتعبئة بطلبات التصدير المتكررة."], ["دعم المواصفات وOEM", "مناقشة نوع البطارية والعملية وشكل اللفائف."], ["التواصل للتصدير", "توضيح المسائل الفنية والتجارية للمشترين الدوليين."]]
+    },
+    form: {
+      eyebrow: "الاستفسار", title: "أرسل بيانات التواصل", text: "أرسل وسيلة التواصل أولاً. يتابع الفريق معك السماكة والعرض والكمية وتفاصيل التطبيق.", hints: ["يكفي البريد أو WhatsApp أو الهاتف للبدء", "يساعد الفريق في مراجعة المواصفة المناسبة", "يمكن مناقشة السماكة والعرض والكمية لاحقاً"],
+      fields: { name: "الاسم", contact: "البريد / WhatsApp / الهاتف", company: "الشركة", interestedProduct: "المنتج المطلوب", message: "الرسالة" }, placeholders: { name: "الاسم الكامل", contact: "البريد أو WhatsApp أو رقم الهاتف", company: "اسم الشركة", interestedProduct: "لفائف أو ألواح AGM أو لم يُحدد بعد", message: "اختياري: التطبيق أو الكمية أو العينات أو الأسئلة الفنية" }, submit: "إرسال بيانات التواصل", submitting: "جارٍ الإرسال...", success: "شكراً. سنتواصل لتأكيد متطلبات فاصل AGM.", required: "يرجى إدخال الاسم ووسيلة التواصل.", emailFallback: "فُتح برنامج البريد مع التفاصيل؛ أرسل الرسالة لإكمال الاستفسار.", failure: "تعذر الإرسال حالياً. يرجى المحاولة لاحقاً."
+    },
+    faq: {
+      eyebrow: "الأسئلة الشائعة", title: "أسئلة قبل طلب دعم فاصل AGM", items: [["هل يمكن تخصيص السماكة أو العرض؟", "نعم، يمكن مناقشة السماكة والعرض وشكل اللفائف وأبعاد الألواح وفق تصميم البطارية وعملية إنتاج العميل."], ["هل يمكن مناقشة عينات قبل الكميات الكبيرة؟", "تبدأ مناقشة العينة بعد تحديد شكل المنتج والتطبيق واتجاه المواصفة الأساسي."], ["ما التطبيقات التي تدعمها فواصل AGM؟", "يمكن مناقشة الفواصل لتطبيقات VRLA وUPS والدراجات والسيارات وتخزين الطاقة في البطاريات الرصاصية، وفق التصميم والتحقق."], ["ما المعلومات اللازمة للعرض؟", "التطبيق وشكل اللفائف أو الألواح والسماكة والعرض أو الأبعاد والكمية المتوقعة ومتطلبات الاختبار."]]
+    },
+    footer: {
+      ...baseCopy.en.footer, description: "تصنيع فواصل AGM من الألياف الزجاجية لمصنعي بطاريات الرصاص الحمضية وشركاء التجارة.", wechat: "حساب WeChat الرسمي", mobile: "الموقع على الهاتف",
+      columns: { "الشركة": [["حول التصنيع", "/ar/#company"], ["مراقبة الجودة", "/ar/quality-control/agm-separator-testing/"], ["دعم التصدير", "/ar/#contact"]], "المنتجات": [["لفائف AGM", "/ar/products/agm-separator-rolls/"], ["ألواح AGM", "/ar/products/agm-separator-sheets/"], ["مناقشة المواصفات", "/ar/products/agm-separator/"]], "التطبيقات": [["VRLA", "/ar/applications/agm-separator-for-vrla-battery/"], ["UPS", "/ar/applications/agm-separator-for-ups-battery/"], ["السيارات", "/ar/applications/agm-separator-for-vrla-battery/"], ["تخزين الطاقة", "/ar/applications/agm-separator-for-energy-storage-battery/"]], "التواصل": [["طلب عينة", "/ar/request-agm-separator-sample/"], ["استفسار فني", "/ar/#contact"], ["ملف القدرات الفنية EN/ZH", "/downloads/viking-agm-technical-capability.pdf"]] },
+      qrImages: [["حساب WeChat الرسمي", "/images/qrcode_for_logo.jpg"], ["الموقع على الهاتف", "/images/website-logo-180.webp"]]
+    },
     applications: { eyebrow: "التطبيقات", title: "مواد فواصل لقطاعات بطاريات الرصاص الحمضية الرئيسية", items: ["بطاريات VRLA", "بطاريات UPS", "بطاريات الدراجات النارية", "بطاريات السيارات", "أنظمة تخزين الطاقة"] }
   },
   ko: {
@@ -1815,7 +1855,8 @@ function localeText(
   ja = en,
   es = en,
   pt = en,
-  ru = en
+  ru = en,
+  ar = en
 ) {
   return lang === "zh"
     ? zh
@@ -1831,7 +1872,7 @@ function localeText(
               ? pt
               : lang === "ru"
                 ? ru
-                : en;
+                : lang === "ar" ? ar : en;
 }
 
 export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
@@ -1888,7 +1929,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
           "サンプル依頼",
           "Solicitar muestra",
           "Solicitar amostra",
-          "Запросить образец"
+          "Запросить образец",
+          "طلب عينة"
         )}
       />
 
@@ -1934,7 +1976,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                   "サンプル・仕様確認を依頼",
                   "Solicitar una muestra y revisión de especificaciones",
                   "Solicitar amostra e análise de especificações",
-                  "Запросить образец и проверку характеристик"
+                  "Запросить образец и проверку характеристик",
+                  "طلب عينة ومطابقة المواصفات"
                 )}
                 <Send size={18} />
               </a>
@@ -2156,7 +2199,7 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                                   ["4 000 т", "Мощность в год"],
                                   ["ISO9001", "Система качества"]
                                 ]
-                    : [
+                    : lang === "ar" ? [["2015", "التأسيس"], ["65 مو", "موقع الإنتاج"], ["4000 طن تقريباً", "الطاقة السنوية"], ["ISO9001", "نظام الجودة"]] : [
                       ["2015", "Established"],
                       ["65 mu", "Production site"],
                       ["4,000 tons", "Annual capacity"],
@@ -2237,7 +2280,7 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                           ? "/pt/products/agm-separator/"
                           : lang === "ru"
                             ? "/ru/products/agm-separator/"
-                  : "/products/agm-separator/"
+                  : lang === "ar" ? "/ar/products/agm-separator/" : "/products/agm-separator/"
             )}
             className="inline-flex items-center justify-center gap-2 rounded-md border border-signal bg-white px-5 py-3 text-sm font-bold text-signal transition hover:bg-signal hover:text-white"
           >
@@ -2250,7 +2293,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
               "AGMセパレーター製品を見る",
               "Conocer el separador AGM",
               "Conhecer o separador AGM",
-              "Подробнее об AGM-сепараторе"
+              "Подробнее об AGM-сепараторе",
+              "المزيد عن فواصل AGM"
             )}
             <ArrowRight size={16} />
           </a>
@@ -2323,7 +2367,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                 "AGMセパレーター製造工程",
                 "Proceso de fabricación de separadores AGM",
                 "Processo de fabricação de separadores AGM",
-                "Процесс производства AGM-сепараторов"
+                "Процесс производства AGM-сепараторов",
+                "سير تصنيع فواصل AGM"
               )
             }
             replacement="public/images/manufacturing-process-1400.webp"
@@ -2350,7 +2395,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
               "AGMセパレーター生産・ロール仕上げ",
               "Producción y acabado de rollos AGM",
               "Produção e acabamento de rolos AGM",
-              "Производство и отделка рулонов AGM"
+              "Производство и отделка рулонов AGM",
+              "تصنيع فواصل AGM وتجهيز اللفائف"
             )}
             note={
               localeText(
@@ -2362,7 +2408,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                 "AGMセパレーター生産・ロール仕上げ工程",
                 "Producción de separadores AGM y acabado de rollos",
                 "Produção de separadores AGM e acabamento de rolos",
-                "Производство AGM-сепараторов и отделка рулонов"
+                "Производство AGM-сепараторов и отделка рулонов",
+                "عمليات إنتاج فواصل AGM وتجهيز اللفائف"
               )
             }
             replacement="public/images/agm-factory-capability-1200.webp"
@@ -2447,7 +2494,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                   "品質検査工程",
                   "Proceso de control de calidad",
                   "Processo de controle de qualidade",
-                  "Процесс контроля качества"
+                  "Процесс контроля качества",
+                  "عملية مراقبة الجودة"
                 )}
               </div>
             </div>
@@ -2466,7 +2514,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
             "現場情報",
             "Evidencia de fábrica",
             "Evidências da fábrica",
-            "Производственные подтверждения"
+            "Производственные подтверждения",
+            "تفاصيل الإنتاج والفحص"
           )}
           title={localeText(
             lang,
@@ -2477,7 +2526,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
             "生産、検査、出荷の実例",
             "Producción, inspección y preparación de envíos",
             "Produção, inspeção e preparação para envio",
-            "Производство, контроль и подготовка к отгрузке"
+            "Производство, контроль и подготовка к отгрузке",
+            "مشاهد الإنتاج والفحص والتسليم"
           )}
           text={localeText(
             lang,
@@ -2488,7 +2538,8 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
             "原料投入、ロール仕上げ、厚さ検査、出荷準備の実工程を示しています。",
             "Las imágenes muestran la alimentación de materias primas, el acabado de rollos, la inspección de espesor y la preparación del envío.",
             "As imagens mostram a alimentação de matérias-primas, o acabamento de rolos, a inspeção de espessura e a preparação para envio.",
-            "На фотографиях показаны подача сырья, отделка рулонов, контроль толщины и подготовка к отгрузке."
+            "На фотографиях показаны подача сырья, отделка рулонов, контроль толщины и подготовка к отгрузке.",
+            "توضح الصور تغذية المواد وتجهيز اللفائف وقياس السماكة والتحضير للشحن ضمن سير التصنيع."
           )}
         />
         <div className="mx-auto mt-12 grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -2622,7 +2673,12 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                               ["Контроль толщины", "Проверка подтверждает размеры по согласованным требованиям.", "/images/evidence/quality-thickness-test-01.webp", "Контроль толщины AGM-сепаратора"],
                               ["Упаковка и отгрузка", "Рулоны или листы упаковываются в согласованном формате и готовятся к отправке на паллетах.", "/images/evidence/shipping-pallet-01.webp", "Упаковка и отгрузка AGM-сепараторов"]
                             ]
-                          : [
+                          : lang === "ar" ? [
+                            ["تغذية المواد", "تدخل المواد المجهزة عملية التصنيع وفق خطة الإنتاج.", "/images/evidence/factory-raw-material-feed-01.webp", "تغذية مواد فواصل AGM"],
+                            ["تجهيز اللفائف", "تمر اللفائف باللف والشق وتجهيز المواصفات.", "/images/evidence/factory-roll-finishing-01.webp", "تجهيز لفائف فواصل AGM"],
+                            ["قياس السماكة", "تُراجع الأبعاد وفق المتطلبات المتفق عليها مع العميل.", "/images/evidence/quality-thickness-test-01.webp", "قياس سماكة فواصل AGM"],
+                            ["التعبئة والشحن", "تُعبأ اللفائف أو الألواح بالشكل المتفق عليه وتُجهز للشحن على منصات.", "/images/evidence/shipping-pallet-01.webp", "تعبئة وشحن فواصل AGM"]
+                          ] : [
                   [
                     "Raw material feed",
                     "Prepared raw materials enter the manufacturing workflow according to the production plan.",
@@ -2813,7 +2869,7 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
                           ? "Amostra de separador AGM e análise de especificações"
                           : lang === "ru"
                             ? "Образец AGM-сепаратора и проверка характеристик"
-                  : "AGM separator sample and specification match"
+                  : lang === "ar" ? "عينة فاصل AGM ومطابقة المواصفات" : "AGM separator sample and specification match"
             }
             messagePlaceholder={t.form.placeholders.message}
           />
@@ -2987,7 +3043,9 @@ function QuickContactDock({ lang }: { lang: SiteLocale }) {
                       backTop: "Наверх",
                       copied: "Скопировано"
                     }
-        : {
+        : lang === "ar" ? {
+          phone: "الهاتف", wechat: "WeChat", email: "البريد الإلكتروني", copyPhone: "نسخ الهاتف", openWechat: "عرض رمز WeChat", copyEmail: "نسخ البريد الإلكتروني", backTop: "العودة للأعلى", copied: "تم النسخ"
+        } : {
           phone: "TEL",
           wechat: "WeChat",
           email: "E-mail",
@@ -3141,7 +3199,9 @@ function CertificationBanner({ lang }: { lang: SiteLocale }) {
                       item: "Сертификационный документ",
                       counter: "из"
                     }
-        : {
+        : lang === "ar" ? {
+          previous: "وثيقة التأهيل السابقة", next: "وثيقة التأهيل التالية", item: "وثيقة التأهيل", counter: "من"
+        } : {
           previous: "Previous qualification material",
           next: "Next qualification material",
           item: "Qualification material",
@@ -3236,7 +3296,8 @@ function CopyContactButton({
     "コピーしました",
     "Copiado",
     "Copiado",
-    "Скопировано"
+    "Скопировано",
+    "تم النسخ"
   );
 
   async function copyValue() {
