@@ -29,15 +29,22 @@ jobs:
           cache: npm
           cache-dependency-path: server/package-lock.json
 
-      - name: Verify API package
+      - name: Install API dependencies
+        run: npm ci --omit=dev --prefix server
+
+      - name: Audit API dependencies
+        run: npm audit --omit=dev --prefix server
+
+      - name: Test API
+        run: npm test --prefix server
+
+      - name: Check API syntax
         run: |
-          npm ci --omit=dev --prefix server
-          npm audit --omit=dev --prefix server
-          npm test --prefix server
           node --check server/index.js
           node --check server/admin-ui.js
           node --check server/inquiry-classifier.js
           node --check server/lead-grade-migration.js
+          node --check server/review-inquiries.js
 
       - name: Prepare SSH key and pinned host identity
         shell: bash
