@@ -147,53 +147,6 @@ db.exec(`
 
 applyLeadGradeMigration(db);
 
-const historicalAutomaticSpam = db.prepare(`
-  SELECT id, name, contact, company, email, application, interested_product, message
-  FROM inquiries
-  WHERE lead_grade = 'D'
-    AND classification_source = 'automatic'
-    AND classification_reason IS NULL
-    AND status = 'new'
-    AND COALESCE(notes, '') = ''
-    AND next_follow_up_at IS NULL
-`);
-
-const markHistoricalSpam = db.prepare(`
-  UPDATE inquiries
-  SET lead_grade = 'E',
-      classification_reason = @classification_reason,
-      classified_at = CURRENT_TIMESTAMP,
-      notification_status = 'skipped',
-      email_notification_status = 'skipped',
-      feishu_notification_status = 'skipped',
-      handled_at = CURRENT_TIMESTAMP
-  WHERE id = ?
-`);
-
-const reclassifyHistoricalAutomaticSpam = db.transaction(() => {
-  let count = 0;
-  for (const inquiry of historicalAutomaticSpam.all()) {
-    const classification = classifyInquiry({
-      inquiry,
-      testContacts: inquiryTestContacts
-    });
-    if (classification.lead_grade !== "E") {
-      continue;
-    }
-    markHistoricalSpam.run({
-      id: inquiry.id,
-      classification_reason: classification.classification_reason
-    });
-    count += 1;
-  }
-  return count;
-});
-
-const historicalSpamCount = reclassifyHistoricalAutomaticSpam();
-if (historicalSpamCount > 0) {
-  console.info(`Reclassified ${historicalSpamCount} historical spam inquiries`);
-}
-
 const insertInquiry = db.prepare(`
   INSERT INTO inquiries (
     name,
@@ -416,11 +369,6 @@ app.post("/api/inquiry", (request, response) => {
     duplicateOfId: duplicate?.id || null,
     testContacts: inquiryTestContacts
   });
-
-  if (classification.classification_reason === "unrelated_solicitation") {
-    response.status(204).end();
-    return;
-  }
 
   const skipNotifications = classification.lead_grade === "E";
   const storedRecord = {

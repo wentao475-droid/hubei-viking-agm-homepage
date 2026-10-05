@@ -93,7 +93,7 @@ test("a selected product format cannot bypass a clear SEO solicitation", () => {
   assert.equal(result.classification_reason, "unrelated_solicitation");
 });
 
-test("retail backpack promotion is discarded", () => {
+test("retail backpack promotion enters E", () => {
   const result = classifyInquiry({
     inquiry: inquiry({
       message:
@@ -105,7 +105,7 @@ test("retail backpack promotion is discarded", () => {
   assert.equal(result.classification_reason, "unrelated_solicitation");
 });
 
-test("posture-corrector promotion is discarded", () => {
+test("posture-corrector promotion enters E", () => {
   const result = classifyInquiry({
     inquiry: inquiry({
       message:
@@ -127,7 +127,7 @@ test("generic contact-by-email template is quarantined", () => {
   });
 
   assert.equal(result.lead_grade, "E");
-  assert.equal(result.classification_reason, "insufficient_inquiry_detail");
+  assert.equal(result.classification_reason, "known_spam_template");
 });
 
 test("specific battery request remains allowed without a company name", () => {
@@ -142,7 +142,7 @@ test("specific battery request remains allowed without a company name", () => {
   assert.equal(result.lead_grade, "D");
 });
 
-test("high-risk gambling promotion is discarded", () => {
+test("high-risk gambling promotion enters E", () => {
   const result = classifyInquiry({
     inquiry: inquiry({
       message: "Visit our online casino for guaranteed returns from crypto trading."
@@ -153,7 +153,7 @@ test("high-risk gambling promotion is discarded", () => {
   assert.equal(result.classification_reason, "unrelated_solicitation");
 });
 
-test("generic retail campaign with a shop link is discarded", () => {
+test("generic retail campaign with a shop link enters E", () => {
   const result = classifyInquiry({
     inquiry: inquiry({
       message:
@@ -185,6 +185,33 @@ test("contact identity normalizes email casing and surrounding text", () => {
     "buyer@example.net"
   );
 });
+
+for (const message of [
+  "Commercial messages can be sent through contact forms. A free test is available. You can send 50,000 messages during the free trial. The service price for one million messages is $59. Contact us via Telegram https://t.me/FeedbackFormEU",
+  "提供表单群发服务，免费试发，百万条消息优惠。",
+  "I would like more information. Please contact me by email — agm battery separator manufacturer.",
+  "I hope this email finds you well. Our new collection is available now with free shipping: https://shop.example"
+]) {
+  test(`campaign cannot bypass filtering with selected AGM product: ${message.slice(0, 35)}`, () => {
+    assert.equal(classifyInquiry({ inquiry: inquiry({
+      interested_product: "AGM separator sheets", company: "google", message
+    }) }).lead_grade, "E");
+  });
+}
+
+for (const message of [
+  "Price?", "Please send a sample.", "I look forward to hearing from you.",
+  "Please quote AGM sheets for casino UPS backup batteries.",
+  "We need 1.2 mm AGM rolls. Contact me on WhatsApp or Telegram. https://buyer.example",
+  "Can you send separator specifications? Our AGM battery product has a free trial.",
+  "We use commercial messages for sales but need a quote for AGM separator samples."
+]) {
+  test(`legitimate or ambiguous request remains D: ${message}`, () => {
+    assert.equal(classifyInquiry({ inquiry: inquiry({
+      company: "", contact: "buyer@gmail.com", email: "buyer@gmail.com", message
+    }) }).lead_grade, "D");
+  });
+}
 
 function inquiry(overrides = {}) {
   return {

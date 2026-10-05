@@ -7,6 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import Database from "better-sqlite3";
+import { reviewInquiries } from "../review-inquiries.js";
 
 const serverDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -94,29 +95,46 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
     email: "qa@vikingagm.com",
     message: "Form verification"
   });
+  const bulkAd = await submit(baseUrl, {
+    name: "Andrew", contact: "sender@gmail.com", company: "google",
+    interested_product: "AGM separator sheets",
+    message: "Commercial messages through contact forms. Free trial: 50,000 messages. Service price for one million messages is $59. Contact us on Telegram."
+  });
   assert.equal(duplicate.status, 202);
   assert.equal(changedRequirement.status, 202);
-  assert.equal(ad.status, 204);
-  assert.equal(retailAd.status, 204);
+  assert.equal(ad.status, 202);
+  assert.equal(retailAd.status, 202);
   assert.equal(internal.status, 202);
+  assert.equal(bulkAd.status, 202);
+  const bulkResponse = await bulkAd.json();
+  assert.deepEqual(Object.keys(bulkResponse).sort(), ["id", "ok"]);
 
   await new Promise((resolve) => setTimeout(resolve, 80));
   const db = new Database(dbPath, { readonly: true });
   context.after(() => db.close());
   const rows = db
     .prepare(
-      "SELECT id, name, lead_grade, classification_reason, duplicate_of_id, notification_status FROM inquiries ORDER BY id"
+      "SELECT id, name, lead_grade, classification_reason, duplicate_of_id, notification_status, email_notification_status, feishu_notification_status FROM inquiries ORDER BY id"
     )
     .all();
-  assert.equal(rows.length, 4);
-  assert.ok(rows.every((row) => row.name !== "Web Agency"));
-  assert.ok(rows.every((row) => row.name !== "Retail Seller"));
+  assert.equal(rows.length, 7);
+  for (const row of rows.slice(3, 5)) {
+    assert.equal(row.lead_grade, "E");
+    assert.equal(row.classification_reason, "unrelated_solicitation");
+    assert.equal(row.notification_status, "skipped");
+    assert.equal(row.email_notification_status, "skipped");
+    assert.equal(row.feishu_notification_status, "skipped");
+  }
   assert.equal(rows[0].lead_grade, "D");
   assert.equal(rows[1].lead_grade, "E");
   assert.equal(rows[1].classification_reason, "duplicate_submission");
   assert.equal(rows[1].duplicate_of_id, rows[0].id);
   assert.equal(rows[2].lead_grade, "D");
-  assert.equal(rows[3].classification_reason, "internal_test");
+  assert.equal(rows[5].classification_reason, "internal_test");
+  assert.equal(rows[6].classification_reason, "bulk_messaging_solicitation");
+  assert.equal(rows[6].lead_grade, "E");
+  assert.equal(rows[6].email_notification_status, "skipped");
+  assert.equal(rows[6].feishu_notification_status, "skipped");
   assert.equal(rows[1].notification_status, "skipped");
 
   const login = await fetch(`${baseUrl}/admin/login`, {
@@ -132,7 +150,7 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   assert.equal(workQueue.total, 2);
   assert.equal(workQueue.inquiries[0].lead_grade, "D");
   assert.equal(workQueue.stats.D, 2);
-  assert.equal(workQueue.stats.E, 2);
+  assert.equal(workQueue.stats.E, 5);
 
   const manual = await fetch(
     `${baseUrl}/admin/api/inquiries/${rows[0].id}/update`,
@@ -178,6 +196,16 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   });
   assert.equal(bulk.status, 200);
   assert.equal((await bulk.json()).updated, 2);
+
+  const restore = await fetch(`${baseUrl}/admin/api/inquiries/${rows[6].id}/update`, {
+    method: "POST",
+    headers: { Cookie: cookie, "Content-Type": "application/json" },
+    body: JSON.stringify({ lead_grade: "B", notes: "Reviewed by sales" })
+  });
+  assert.equal(restore.status, 200);
+  assert.equal((await restore.json()).inquiry.classification_source, "manual");
+  assert.ok(!reviewInquiries(db).automatic.some((row) => row.id === rows[6].id));
+  assert.ok(reviewInquiries(db).manualReview.some((row) => row.id === rows[6].id));
 });
 
 async function submit(baseUrl, fields) {

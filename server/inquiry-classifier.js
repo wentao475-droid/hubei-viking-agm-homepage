@@ -49,8 +49,6 @@ const lowInformationTemplatePatterns = [
   /\bi would like more information\.?(?: please)? contact me by email\b/i,
   /\bplease contact me by email\s*[—-]?\s*agm battery separator manufacturer\b/i,
   /\bhi there!?(?: i'd| i would) like to hear more about your newsletter\b/i,
-  /\bplease keep me posted\b/i,
-  /\bi look forward to hearing from you\b/i,
   /我想了解更多信息.*请通过邮件联系我|请订阅新闻|请随时通知我/u
 ];
 
@@ -101,6 +99,16 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
       inquiry.message
     ].join(" ")
   );
+  const message = normalizeText(inquiry.message);
+  const bulkDelivery = /\b(contact forms?|commercial messages?|bulk (?:email|messages?)|mass messaging)\b|表单群发|群发邮件/u.test(message);
+  const bulkOffer = /\b(free (?:test|trial)|service price|million messages|[\d,]+ messages|our service)\b|免费试发|百万条|群发服务/u.test(message);
+  if (bulkDelivery && bulkOffer) {
+    return automaticGrade("E", "bulk_messaging_solicitation");
+  }
+  // Match the confirmed campaign, not ordinary short requests for information.
+  if (/^i would like more information\.?\s*please contact me by email\s*[—–-]?\s*agm battery separator manufacturer\.?$/.test(message)) {
+    return automaticGrade("E", "known_spam_template");
+  }
   const hasUnrelatedService = unrelatedServicePatterns.some((pattern) =>
     pattern.test(combined)
   );
@@ -122,9 +130,7 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
   const hasLowInformationTemplate = lowInformationTemplatePatterns.some(
     (pattern) => pattern.test(combined)
   );
-  const inquiryIntent = normalizeText(
-    [inquiry.application, inquiry.interested_product, inquiry.message].join(" ")
-  );
+  const inquiryIntent = message;
   const hasRelevantInquiry = relevantInquiryPatterns.some((pattern) =>
     pattern.test(inquiryIntent)
   );
@@ -138,7 +144,7 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
   );
 
   if (
-    hasHighRiskSpam ||
+    (hasHighRiskSpam && (hasRetailPromotion || hasGenericPromotion || hasSolicitation || /guaranteed\s+returns?|稳赚/i.test(message))) ||
     (hasUnrelatedService && hasSolicitation) ||
     (hasUnrelatedProduct && (hasRetailPromotion || hasGenericPromotion)) ||
     (!hasRelevantInquiry &&
