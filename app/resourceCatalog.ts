@@ -418,6 +418,40 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/",
       zh: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/"
     }
+  },
+  {
+    id: "ai-data-center-backup-power-layers",
+    category: "industryApplications",
+    publishedAt: "2026-10-08",
+    title: {
+      en: "1 MW for 60 Seconds: AI Data Center Backup Power",
+      zh: "1MW 只备 60 秒：AI 数据中心为什么先争快？"
+    },
+    description: {
+      en: "How transient, seconds-scale and minutes-scale backup duties differ, with explicit boundaries around Vision Group’s LiLic Sidecar disclosure.",
+      zh: "以雄韬 LiLic Sidecar 企业披露为案例，说明瞬态、秒级与分钟级备电任务及 AGM 证据边界。"
+    },
+    href: {
+      en: "/blog/ai-data-center-backup-power-1mw-60-seconds/",
+      zh: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/"
+    }
+  },
+  {
+    id: "agm-pasting-paper-energy-validation",
+    category: "manufacturingQuality",
+    publishedAt: "2026-10-09",
+    title: {
+      en: "AGM Pasting Paper: How to Validate Drying-Energy Claims",
+      zh: "一张涂板纸能省下多少烘干能耗？"
+    },
+    description: {
+      en: "How to test a fiberglass pasting-paper drying claim using same-line energy, moisture, plate-quality and battery-validation boundaries.",
+      zh: "用同线单位产量能耗、含水、极板质量与整电池边界，验证 AGM 玻纤涂板纸节能主张。"
+    },
+    href: {
+      en: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/",
+      zh: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/"
+    }
   }
 ];
 
@@ -440,6 +474,8 @@ const articleKindById: Record<string, string> = {
   "agm-separator-energy-data-delivery": "agmSeparatorEnergyDataDelivery"
   ,"en-18060-2025-road-vehicle-battery-standard": "en18060BatteryStandard"
   ,"data-center-ev-low-voltage-lead-acid": "dataCenterEvLowVoltageAgm"
+  ,"ai-data-center-backup-power-layers": "aiDataCenterBackupPowerLayers"
+  ,"agm-pasting-paper-energy-validation": "agmPastingPaperEnergyValidation"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

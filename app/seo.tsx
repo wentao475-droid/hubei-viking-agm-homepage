@@ -2104,6 +2104,16 @@ const dataCenterEvLowVoltageAgmSeo = {
   zh: { path: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", alternatePath: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？| 湖北维京AGM", description: "比较数据中心 VRLA 备电与电动车 12V AGM 电池任务、选型边界及 AGM 隔板验证输入。", keywords: ["数据中心铅酸电池", "数据中心 VRLA 电池", "电动车 12V AGM 电池", "亚洲铅酸电池市场", "AGM 隔板应用"], pageName: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？", articleDescription: "基于理士企业市场观点，比较数据中心备电与电动车低压电池任务的系统边界。", breadcrumbs: ["首页", "资料", "数据中心与电动车低压电源"] }
 } as const;
 
+const aiDataCenterBackupPowerLayersSeo = {
+  en: { path: "/blog/ai-data-center-backup-power-1mw-60-seconds/", alternatePath: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "1 MW for 60 Seconds: AI Data Center Backup Power | Viking AGM", description: "Why AI data center backup power separates transient, seconds-scale and minutes-scale duties—and why AGM data cannot prove system performance.", keywords: ["AI data center backup power", "1MW data center BBU", "800V HVDC backup power", "short-duration high-rate UPS battery", "AGM vs LFP data center backup"], pageName: "1 MW for 60 Seconds: Why AI Data Center Backup Power Prioritizes Speed Before Duration", articleDescription: "A system-level guide to layered AI data center backup power, using Vision Group’s LiLic Sidecar disclosure with explicit evidence boundaries.", breadcrumbs: ["Home", "Resources", "AI Data Center Backup Power"] },
+  zh: { path: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/", alternatePath: "/blog/ai-data-center-backup-power-1mw-60-seconds/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "1MW 只备 60 秒：AI 数据中心为何先争快再争久？| 湖北维京AGM", description: "解释 AI 数据中心备电为何区分瞬态、秒级和分钟级任务，以及 AGM 隔板参数为何不能证明系统表现。", keywords: ["AI 数据中心备电", "1MW 数据中心 BBU", "800V HVDC 备电", "短时高倍率 UPS 电池", "AGM 与 LFP 数据中心备电"], pageName: "1MW 只备 60 秒：AI 数据中心为什么先争“快”，再争“久”？", articleDescription: "以雄韬 LiLic Sidecar 企业披露为案例，解释 AI 数据中心分层备电与 AGM 隔板证据边界。", breadcrumbs: ["首页", "资料", "AI 数据中心备电"] }
+} as const;
+
+const agmPastingPaperEnergyValidationSeo = {
+  en: { path: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "AGM Pasting Paper: Validate Drying-Energy Claims | Viking AGM", description: "How to validate AGM fiberglass pasting-paper energy claims using same-line output, speed, moisture, oven, plate quality and battery-test boundaries.", keywords: ["AGM fiberglass pasting paper", "lead-acid plate pasting energy", "pasting paper drying oven temperature", "fiberglass pasting paper plant fiber replacement", "AGM pasting process validation"], pageName: "How Much Drying Energy Can One Pasting Paper Save?", articleDescription: "A same-line validation guide for AGM fiberglass pasting-paper drying claims, with explicit source, measurement and plate-to-battery evidence boundaries.", breadcrumbs: ["Home", "Resources", "AGM Pasting Paper Energy Validation"] },
+  zh: { path: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 玻纤涂板纸能省多少烘干能耗？验证条件与对照方法 | 湖北维京AGM", description: "华阳页面提出降低窑温或停窑主张但未给量化数据；本文说明 AGM 玻纤涂板纸同线能耗、含水、极板质量和整电池验证方法。", keywords: ["AGM 玻纤涂板纸", "铅酸电池涂板纸节能", "涂板纸干燥窑温度", "玻纤涂板纸替代植物纤维", "AGM 涂板工艺验证"], pageName: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", articleDescription: "以华阳现有产品页的企业主张为边界，说明 AGM 玻纤涂板纸节能主张需要怎样做同线对照。", breadcrumbs: ["首页", "资料", "AGM 玻纤涂板纸节能验证"] }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2934,6 +2944,16 @@ export function buildEn18060BatteryStandardMetadata(lang: Lang): Metadata {
 export function buildDataCenterEvLowVoltageAgmMetadata(lang: Lang): Metadata {
   const current = seoContent("dataCenterEvLowVoltageAgm", lang, dataCenterEvLowVoltageAgmSeo[lang]);
   return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("dataCenterEvLowVoltageAgm"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: UPS_APPLICATION_IMAGE, width: 1200, height: 900 } });
+}
+
+export function buildAiDataCenterBackupPowerLayersMetadata(lang: Lang): Metadata {
+  const current = seoContent("aiDataCenterBackupPowerLayers", lang, aiDataCenterBackupPowerLayersSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("aiDataCenterBackupPowerLayers"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: UPS_APPLICATION_IMAGE, width: 1200, height: 900 } });
+}
+
+export function buildAgmPastingPaperEnergyValidationMetadata(lang: Lang): Metadata {
+  const current = seoContent("agmPastingPaperEnergyValidation", lang, agmPastingPaperEnergyValidationSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmPastingPaperEnergyValidation"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: QUALITY_PREVIEW_IMAGE, width: 1200, height: 900 } });
 }
 
 export function buildAgmGlassFiberVsPvcSeparatorMetadata(
@@ -4722,6 +4742,60 @@ export function DataCenterEvLowVoltageAgmStructuredData({ lang }: { lang: Lang }
   ]}} />;
 }
 
+const aiBackupFaq = {
+  en: [
+    ["Why layer AI data center backup power?", "Transient, seconds-scale and minutes-scale duties have different response, power, duration and recovery requirements."],
+    ["What does 1 MW for at least 60 seconds mean?", "It is Vision Group’s stated capability for a five-module LiLic Sidecar cabinet at a 1 MW load, not an industry benchmark or independent test."],
+    ["Does conventional UPS/VRLA still have a place?", "Potentially, when the architecture, power curve, runtime, environment, maintenance method and complete-system validation support it."],
+    ["Can AGM separator data prove backup performance?", "No. Separator data can support material matching but cannot replace complete-battery and system validation."]
+  ],
+  zh: [
+    ["为什么要分层配置 AI 数据中心备用电源？", "瞬态、秒级和分钟级任务的响应、功率、时长与恢复要求不同。"],
+    ["1MW、至少60秒代表什么？", "这是雄韬对五模块 LiLic Sidecar 单柜在 1MW 负载下的企业披露，不是行业基准或独立测试。"],
+    ["传统 UPS/VRLA 是否仍有位置？", "可能有，前提是架构、功率曲线、时长、环境、维护方式和完整系统验证均支持。"],
+    ["AGM 隔板数据能否证明备电表现？", "不能。隔板数据可支持材料匹配，但不能替代整电池和系统验证。"]
+  ]
+} as const;
+
+export function AiDataCenterBackupPowerLayersStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("aiDataCenterBackupPowerLayers", lang, aiDataCenterBackupPowerLayersSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: UPS_APPLICATION_IMAGE, url, datePublished: "2026-10-08", dateModified: "2026-10-08", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AI data center backup power", "1MW data center BBU", "800V HVDC backup power", "short-duration high-rate UPS battery", "AGM vs LFP data center backup"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: aiBackupFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+const agmPastingPaperFaq = {
+  en: [
+    ["Can fiberglass pasting paper reduce lead-acid battery drying-oven energy?", "Huayang makes that claim for its existing product, but its public page provides no quantified energy data. Verify it on the same line using accepted output, speed, moisture, oven conditions, energy-meter boundaries, plate quality and scrap; material claims do not replace plate or complete-battery validation."],
+    ["Is a lower drying-oven temperature the same as energy saving?", "No. Net energy must use a defined electricity, gas or steam boundary and be normalized by accepted plate area, mass or count, while accounting for speed, downtime and start-stop losses."],
+    ["Are pasting paper and the AGM main separator the same product?", "No. Pasting paper supports plate manufacture, while the AGM main separator is part of the assembled VRLA battery. They require different acceptance and validation evidence."]
+  ],
+  zh: [
+    ["玻纤涂板纸能降低铅酸电池干燥窑能耗吗？", "这是华阳对其现有产品的企业主张，但公开页面没有量化节能数据。需要在同一涂板线上对照单位合格产量、线速、含水状态、窑温与停留时间、能源计量边界、极板质量和报废率；材料主张不能替代极板和整电池验证。"],
+    ["干燥窑温度降低就等于节能吗？", "不等于。净能耗需要明确电、气或蒸汽计量边界，并按合格极板面积、质量或片数归一，同时计入线速、停机和启停损失。"],
+    ["涂板纸和 AGM 主隔板是同一种产品吗？", "不是。涂板纸服务于极板制造，AGM 主隔板用于组装后的 VRLA 电池内部，两者需要不同的验收和验证证据。"]
+  ]
+} as const;
+
+export function AgmPastingPaperEnergyValidationStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("agmPastingPaperEnergyValidation", lang, agmPastingPaperEnergyValidationSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: QUALITY_PREVIEW_IMAGE, url, datePublished: "2026-10-09", dateModified: "2026-10-09", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM fiberglass pasting paper", "lead-acid plate pasting energy", "drying oven validation", "plate quality", "complete-battery validation"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: agmPastingPaperFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
 export function AgmGlassFiberVsPvcSeparatorStructuredData({
   lang
 }: {
@@ -4888,6 +4962,20 @@ export function SecondaryArticleStructuredData({
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: current.language
       },
+      ...(kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation"
+        ? [{
+            "@type": "FAQPage",
+            "@id": `${url}#faq`,
+            mainEntity: [{
+              "@type": "Question",
+              name: secondaryResourceData[lang].topics[kind].sections[kind === "agmPastingPaperEnergyValidation" ? 6 : 5][1],
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: secondaryResourceData[lang].topics[kind].sections[kind === "agmPastingPaperEnergyValidation" ? 6 : 5][2]
+              }
+            }]
+          }]
+        : []),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,

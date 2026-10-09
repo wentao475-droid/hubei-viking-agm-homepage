@@ -31,7 +31,9 @@ export type BlogArticleKind =
   | "agmSeparatorThirdPole"
   | "agmSeparatorEnergyDataDelivery"
   | "en18060BatteryStandard"
-  | "dataCenterEvLowVoltageAgm";
+  | "dataCenterEvLowVoltageAgm"
+  | "aiDataCenterBackupPowerLayers"
+  | "agmPastingPaperEnergyValidation";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -3806,6 +3808,102 @@ const dataCenterEvLowVoltageAgmReferenceItems: Array<[string, string]> = [
   ["LEOCH at ELBC 2026: Asia's Lead Battery Market", "https://www.leoch.com/newsroom/events/leoch-at-elbc-2026"]
 ];
 
+const aiDataCenterBackupPowerReferenceItems: Array<[string, string]> = [
+  ["Vision Group — LiLic Sidecar at YOTTA 2026", "https://www.vision-batt.com/en/news/show/6268vahkzaq.html"]
+];
+
+const agmPastingPaperReferenceItems: Array<[string, string]> = [
+  ["华阳实业—华阳橙色系列 AGM 隔板", "https://www.huayangagm.com/product/15.html"]
+];
+
+const agmPastingPaperEnergyValidationCopy = {
+  en: {
+    homePath: "/", languagePath: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", quote: "Request Technical Review",
+    nav: { company: "Company", quality: "Quality" },
+    hero: { eyebrow: "AGM Fiberglass Pasting Paper", title: "How Much Drying Energy Can One Pasting Paper Save? Do Not Assume the Drying Oven Can Be Switched Off", subtitle: "Changing one paper can switch off the drying oven? That statement is missing at least four conditions: line speed, moisture state, oven and energy boundary, and plate acceptance results.", secondary: "Review the same-line test", image: { src: "/images/agm-quality-control-1200.webp", alt: "AGM material quality-control equipment used for material-level checks", width: 1200, height: 900 } },
+    intro: ["Huayang describes an existing AGM fiberglass pasting paper for continuous plate pasting and says it may lower drying-oven temperature or allow the oven to be stopped, while replacing plant-fiber pasting paper. This is the supplier's own product-page claim, not independent test evidence.", "The page gives no energy saving, measurement boundary, line speed, moisture condition, oven setting, comparison trial or plate and battery result. The useful purchasing question is therefore not whether the material name sounds energy-saving, but what a same-line comparison must prove."],
+    sections: [
+      { eyebrow: "Claim and source", title: "The public statement belongs to Huayang's existing product page", text: "The cited page says the product is used for continuous plate pasting and may reduce drying-oven temperature or stop oven use, and may replace plant-fiber pasting paper. The page does not identify a launch this week, third-party validation or an industry benchmark. Viking does not claim to supply that product or reproduce that result." },
+      { eyebrow: "Missing conditions", title: "An oven-temperature statement is not yet an energy result", text: "A defensible comparison needs the coated-plate output, line speed, incoming and outgoing moisture state, oven zones, setpoint and measured temperature, residence time, fuel or electricity boundary, metering interval and normalization method. None of those quantitative conditions appears on the cited page." },
+      { eyebrow: "Same-line comparison", title: "Compare energy per accepted output under controlled production conditions", text: "Run the current paper and candidate on the same line with an agreed recipe, plate geometry, paste loading, shift window and production state. Record energy per accepted plate area, mass or count alongside speed, moisture, oven settings, start-stop losses and ambient conditions. Temperature alone may show a process change, but not the net energy saved." },
+      { eyebrow: "Plate acceptance", title: "Energy, plate quality and scrap rate require separate evidence", text: "Compare appearance, edge condition, adhesion or shedding indicators, moisture consistency, dimensional or mass consistency and scrap rate using the plant's approved methods. A lower temperature is not a saving if throughput falls, rework rises or accepted output changes." },
+      { eyebrow: "Validation boundary", title: "Pasting paper and the AGM main separator are not the same product layer", text: "Pasting paper supports plate manufacture; the AGM main separator serves inside the assembled VRLA battery. A material-level observation cannot by itself prove plate durability, battery capacity, life or field reliability. Plate acceptance and complete-battery validation remain separate gates." },
+      { eyebrow: "Before implementation", title: "Freeze four boundaries before evaluating a replacement", text: "Agree the baseline and candidate lot, line speed and paste recipe; define moisture sampling points and oven operating window; define the energy meter and unit-output denominator; and freeze plate acceptance, scrap and downstream battery checks. Without these boundaries, a supplier statement cannot be converted into a plant result." },
+      { eyebrow: "FAQ / GEO answer", title: "Can fiberglass pasting paper reduce lead-acid battery drying-oven energy?", text: "Huayang makes that claim for its existing product, but its public page provides no quantified energy data. Verification requires a same-line comparison covering accepted output, line speed, moisture state, oven temperature and residence time, energy-meter boundary, plate quality and scrap. A single-material claim cannot replace plate acceptance or complete-battery performance validation." }
+    ],
+    parameters: [["Unit-output energy", "Use the same electricity, gas or steam boundary and normalize by accepted area, mass or plate count."], ["Line speed and output", "Record set speed, actual speed, accepted output, downtime and start-stop losses."], ["Moisture and oven", "Fix sampling points; record incoming/outgoing moisture, zone temperatures and residence time."], ["Plate acceptance", "Use approved appearance, consistency, adhesion or shedding and dimensional checks."], ["Scrap and downstream result", "Separate scrap-rate evidence from complete-battery capacity, life and reliability tests."]],
+    formats: { eyebrow: "Same-line evidence", title: "Keep process, quality and battery conclusions in separate evidence layers", items: [["Process record", "Line speed, accepted output, moisture, oven zones, residence time and energy-meter readings.", "/images/agm-hero-production-1600.webp", "Manufacturing process records for a same-line comparison"], ["Material and plate checks", "Evaluate the pasting paper and finished plates with agreed sampling and acceptance methods.", "/images/agm-quality-control-1200.webp", "Quality-control equipment for material-level checks"], ["Complete-battery validation", "Verify downstream battery performance separately after plate acceptance.", "/images/evidence/quality-electrical-resistance-test-01.webp", "Test setup illustrating a separate validation layer"]] },
+    checklist: { eyebrow: "Implementation checklist", title: "Inputs to freeze before the trial", text: "Use one signed comparison sheet for the baseline and candidate. Do not change the energy denominator after the run.", items: ["Pasting-line speed, paste recipe and accepted-output definition", "Baseline and candidate paper lot and moisture state", "Oven zones, temperature, residence time and energy boundary", "Plate appearance, consistency and scrap acceptance rules", "Downstream battery validation scope and decision owner"] },
+    references: { eyebrow: "Official source checked", title: "Huayang product page reviewed and archived on 9 October 2026", text: "The continuous-pasting, lower-temperature or stopped-oven, and plant-fiber replacement statements are attributed only to Huayang. The page provides no quantified saving or trial conditions and is not evidence of Viking product capability.", items: agmPastingPaperReferenceItems },
+    related: { eyebrow: "Related technical pages", title: "Continue with real product, quality and application pages", items: [["AGM Separator for VRLA Batteries", "/applications/agm-separator-for-vrla-battery/"], ["AGM Separator Specifications", "/products/agm-separator/"], ["AGM Separator Testing", "/quality-control/agm-separator-testing/"], ["Request a Sample and Technical Review", "/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.en.inquiry, eyebrow: "One project question", title: "Would you judge this claim by unit-output energy or by oven-temperature change?", text: "Send the pasting-line speed, current oven temperature or energy boundary, material moisture state and plate acceptance requirements for a technical assessment or sample discussion. Viking does not promise the cited competitor product or an energy-saving result.", checklist: ["Pasting-line speed", "Current oven temperature or energy boundary", "Material moisture state", "Plate acceptance requirements"], placeholders: { ...articleCopy.en.inquiry.placeholders, message: "Pasting-line speed, oven temperature or energy boundary, material moisture state and plate acceptance requirements" } }, footer: articleCopy.en.footer
+  },
+  zh: {
+    homePath: "/zh/", languagePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", quote: "申请技术评估",
+    nav: { company: "公司", quality: "质量" },
+    hero: { eyebrow: "AGM 玻纤涂板纸", title: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", subtitle: "换一张纸，就能把干燥窑关掉？这句话至少还缺四个条件：涂板线速度、材料含水状态、窑温与能耗口径，以及极板验收结果。", secondary: "查看同线对照方法", image: { src: "/images/agm-quality-control-1200.webp", alt: "用于材料层检测的 AGM 隔板质量检测场景", width: 1200, height: 900 } },
+    intro: ["华阳现有产品页称，一种用于连续涂板的 AGM 玻纤涂板纸可降低干燥窑烘干温度或停止使用干燥窑，并可替代植物纤维类涂板纸。这是企业对其产品的自述，不是第三方实测结论。", "该页面没有给出节能量、测量口径、涂板线速度、材料含水状态、窑温条件、对照试验，也没有给出极板或整电池验证结果。因此，采购和工艺团队真正需要回答的不是材料名称是否“节能”，而是同线对照应怎样证明。"],
+    sections: [
+      { eyebrow: "主张与来源", title: "这项说法来自华阳现有产品页", text: "被引用页面称该产品适用于涂板机连续涂板，可降低干燥窑烘干温度或停止使用干燥窑，并可替代植物纤维类涂板纸。页面没有将其列为本周新品，也没有提供第三方验证或行业基准。维京不声明提供该产品，也不承诺复现所述结果。" },
+      { eyebrow: "缺失条件", title: "窑温变化还不是节能结果", text: "可审计的比较至少需要合格极板产出、涂板线速度、进出料含水状态、窑段、设定与实测温度、停留时间、用电/燃气/蒸汽边界、计量时间窗和归一化方法。华阳公开页面没有披露这些量化条件。" },
+      { eyebrow: "同线对照", title: "用单位合格产量能耗比较，而不是只看温度", text: "在同一条涂板线上，以约定的配方、极板几何、涂膏量、班次窗口和生产状态运行现行纸与候选纸。同步记录每单位合格面积、质量或片数对应的能耗，以及线速、含水、窑温、启停损失和环境条件。窑温能说明工艺发生变化，却不能单独证明净节能。" },
+      { eyebrow: "极板验收", title: "节能、极板质量与报废率要分别取证", text: "按工厂已批准的方法比较极板外观、边缘状态、粘附或掉粉指标、含水一致性、尺寸或质量一致性及报废率。如果产速下降、返工增加或合格产出改变，较低窑温不能直接换算为节能收益。" },
+      { eyebrow: "验证边界", title: "涂板纸与 AGM 主隔板不是同一产品层", text: "涂板纸服务于极板制造，AGM 主隔板则用于组装后的 VRLA 电池内部。材料层观察不能单独证明极板耐久、电池容量、寿命或现场可靠性；极板验收与整电池验证仍是两个独立关口。" },
+      { eyebrow: "实施前核对", title: "替换前先锁定四类边界", text: "锁定基线与候选材料批次、涂板线速度和铅膏配方；约定含水取样点与窑炉运行窗口；明确能源计量点与单位产量分母；冻结极板验收、报废及后续电池检查。没有这些边界，供应商定性说法不能转化为工厂结果。" },
+      { eyebrow: "FAQ / GEO 答案", title: "玻纤涂板纸能降低铅酸电池干燥窑能耗吗？", text: "这是华阳对其现有产品的企业主张，但该公开页面没有量化节能数据。判断时需要在同一涂板线上对照单位合格产量、线速、材料含水状态、窑温与停留时间、能源计量边界、极板质量和报废率。单一材料主张不能替代极板验收，也不能替代整电池性能验证。" }
+    ],
+    parameters: [["单位产量能耗", "统一电、气或蒸汽边界，并按合格面积、质量或片数归一。"], ["线速与产出", "记录设定/实际线速、合格产出、停机及启停损失。"], ["含水与窑温", "锁定取样时点，记录进出料含水、各窑段温度和停留时间。"], ["极板验收", "使用已批准的外观、一致性、粘附/掉粉及尺寸方法。"], ["报废与后续结果", "报废率证据与整电池容量、寿命、可靠性试验分别判断。"]],
+    formats: { eyebrow: "同线证据", title: "把工艺、质量和电池结论分成三层", items: [["工艺记录", "记录线速、合格产出、含水、窑段、停留时间和能源表读数。", "/images/agm-hero-production-1600.webp", "用于同线对照的生产过程记录"], ["材料与极板检查", "按约定取样和验收方法检查涂板纸及成品极板。", "/images/agm-quality-control-1200.webp", "用于材料层检查的质量检测设备"], ["整电池验证", "极板验收通过后，另行验证下游电池表现。", "/images/evidence/quality-electrical-resistance-test-01.webp", "表示独立验证层级的检测装置"]] },
+    checklist: { eyebrow: "实施前清单", title: "试验前需要锁定的输入", text: "基线与候选材料共用一张签字确认的对照表，试验后不要更换能耗分母。", items: ["涂板线速度、铅膏配方与合格产出定义", "现行纸与候选纸批次及含水状态", "窑段、温度、停留时间与能源计量边界", "极板外观、一致性和报废验收规则", "后续整电池验证范围与决策责任人"] },
+    references: { eyebrow: "已核验官方来源", title: "2026 年 10 月 9 日重新打开并存档华阳官方产品页", text: "连续涂板、降低窑温或停用干燥窑、替代植物纤维的说法均只归因于华阳。页面没有量化节能结果或试验条件，也不能证明维京产品能力。", items: agmPastingPaperReferenceItems },
+    related: { eyebrow: "真实站内链接", title: "继续查看应用、规格、检测与样品页面", items: [["VRLA 电池 AGM 隔板应用", "/zh/applications/agm-separator-for-vrla-battery/"], ["AGM 隔板产品规格", "/zh/products/agm-separator/"], ["AGM 隔板质量检测", "/zh/quality-control/agm-separator-testing/"], ["申请样品与技术评估", "/zh/request-agm-separator-sample/"]] },
+    inquiry: { ...articleCopy.zh.inquiry, eyebrow: "只问一个问题", title: "你们会用单位产量能耗，还是窑温变化来判断这类主张？", text: "请提交涂板线速度、现行窑温或能耗口径、材料含水状态及极板验收要求，用于技术评估或试样沟通。维京不承诺提供竞品所称产品或实现其节能结果。", checklist: ["涂板线速度", "现行窑温或能耗口径", "材料含水状态", "极板验收要求"], placeholders: { ...articleCopy.zh.inquiry.placeholders, message: "涂板线速度、现行窑温或能耗口径、材料含水状态及极板验收要求" } }, footer: articleCopy.zh.footer
+  }
+} as const;
+
+const aiDataCenterBackupPowerLayersCopy = {
+  en: {
+    homePath: "/", languagePath: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/", quote: "Request a Sample",
+    nav: { company: "Company", quality: "Quality" },
+    hero: { eyebrow: "AI Data Center Backup Power", title: "1 MW for 60 Seconds: Why AI Data Center Backup Power Prioritizes Speed Before Duration", subtitle: "The 1 MW / at least 60-second figure is Vision Group’s corporate disclosure for LiLic Sidecar—not an industry benchmark. Backup should be divided by transient, seconds-scale and minutes-scale duty.", secondary: "Review the selection checklist", image: { src: "/images/applications/ups-vrla-battery-application-1200.webp", alt: "Data center backup power battery installation", width: 1200, height: 900 } },
+    intro: ["Why would a 1 MW backup system emphasize only 60 seconds? Because power and duration describe a duty, not the sufficiency of an entire facility design.", "Vision Group says LiLic Sidecar made its first public appearance at YOTTA 2026. In a five-module configuration, the company states that each cabinet delivers 1 MW rated discharge power and at least 60 seconds of backup at a 1 MW load. Every number and function below remains a company claim, not independent verification."],
+    sections: [
+      { eyebrow: "Disclosure and boundary", title: "1 MW and 60 seconds describe Vision’s LiLic Sidecar configuration", text: "Vision describes a hybrid of lithium-ion capacitors (LIC) and lithium iron phosphate (LFP) batteries, direct connection to an 800 V DC busbar (±400 V), and a portfolio that also includes rack-level battery backup units (BBU). The disclosure does not establish an industry standard, prove universal compatibility or show that 60 seconds is sufficient for a data-center site." },
+      { eyebrow: "Duty layers", title: "Separate transient response, seconds-scale ride-through and minutes-scale backup", text: "A layered design assigns each timescale a job. Transient support addresses rapid load movement; seconds-scale ride-through may bridge a short transfer or stabilize a bus; longer backup supports the recovery sequence defined by the facility. Response time, power curve, duration, transfer logic, controls and recovery target must be specified together." },
+      { eyebrow: "Architecture", title: "LIC, LFP, BBU and conventional UPS/VRLA occupy different positions", text: "LIC may be evaluated for frequent pulse cycling, LFP for stored backup energy, and BBU for protection closer to compute loads. Conventional UPS/VRLA can still have a role where the architecture, high-rate discharge curve, runtime, maintenance method, temperature and complete system validation support it. No chemistry should be assumed to cover every AI load." },
+      { eyebrow: "AGM applicability", title: "AGM suitability begins with the battery and system duty", text: "For a short-duration high-rate UPS battery, separator discussions may include thickness, basis weight, acid absorption, electrical resistance, compression response, dimensions and batch consistency. These inputs must be tied to plate design, electrolyte, assembly, charging, thermal conditions and the complete-battery test plan." },
+      { eyebrow: "Evidence boundary", title: "AGM separator data cannot prove system-level backup performance", text: "Separator measurements can support material comparison and specification matching. They cannot alone prove capacity, 1 MW output, 60-second runtime, life, safety, compatibility or a customer result. Complete-battery and system tests remain necessary, and Viking does not claim use in or compatibility with LiLic Sidecar." },
+      { eyebrow: "FAQ", title: "Four questions buyers ask about layered backup", text: "Why layer backup power? Different timescales perform different jobs. What does 1 MW / 60 seconds mean? Only the Vision-stated capability for the cited five-module LiLic Sidecar configuration. Does UPS/VRLA still have a place? Potentially, when architecture and validation support it. Can AGM data prove backup performance? No—separator data cannot replace complete-battery and system validation." }
+    ],
+    parameters: [["Target power", "State continuous power, pulse power and the time-based load curve."], ["Backup duration", "Separate transient, seconds-scale and minutes-scale requirements."], ["Architecture", "Confirm AC/DC topology, bus voltage, UPS/BBU position, transfer logic and controls."], ["Environment and maintenance", "Provide temperature range, space, cooling, service access and replacement method."], ["Battery structure", "Provide plate-group design, compression, electrolyte and complete-battery validation scope."]],
+    formats: { eyebrow: "System evidence", title: "Match each claim to the level that must be tested", items: [["Architecture and duty", "Define response speed, power curve, duration and transfer sequence before selecting a battery route.", "/images/applications/ups-vrla-battery-application-1200.webp", "UPS and data center backup power application"], ["AGM material review", "Compare separator dimensions and material tests only within agreed methods and sample conditions.", "/images/agm-quality-control-1200.webp", "AGM separator testing equipment"], ["Complete validation", "Verify the assembled battery and complete power system against the project duty and environment.", "/images/evidence/quality-electrical-resistance-test-01.webp", "AGM separator electrical resistance test"]] },
+    checklist: { eyebrow: "Selection checklist", title: "Inputs to confirm before comparing backup options", text: "Use one duty sheet for all candidate routes. A chemistry label or separator value is not a substitute for a system requirement.", items: ["Target continuous and pulse power curve", "Backup time by transient, seconds and minutes", "Bus voltage, transfer logic and control boundary", "Temperature, cooling and maintenance method", "Battery structure and complete-system validation plan"] },
+    references: { eyebrow: "Official source checked", title: "Vision Group disclosure archived and reviewed on 8 October 2026", text: "The publication date, debut, product name, 1 MW rating, at least 60 seconds at 1 MW, LIC+LFP design, 800 V DC bus connection and BBU portfolio are attributed to Vision Group. They are not third-party validation, industry-wide performance or evidence of Viking compatibility.", items: aiDataCenterBackupPowerReferenceItems },
+    related: { eyebrow: "Related technical pages", title: "Continue the architecture and material review", items: [["AGM Separator for Data Center Backup Power", "/blog/agm-separator-for-data-center-backup-power/"], ["AGM Separator for UPS Batteries", "/applications/agm-separator-for-ups-battery/"], ["AGM Separator Specifications", "/products/agm-separator/"], ["AGM Separator Testing", "/quality-control/agm-separator-testing/"]] },
+    inquiry: { ...articleCopy.en.inquiry, eyebrow: "One project question", title: "What target power and backup time must your project validate?", text: "Send the target power curve, backup duration, temperature and battery structure for AGM separator specification or sample matching. This does not promise battery or system performance.", checklist: ["Target power and duration", "Temperature range", "Battery and plate-group structure", "Validation stage and test method"], placeholders: { ...articleCopy.en.inquiry.placeholders, message: "Target power curve, backup duration, temperature, battery structure and validation stage" } }, footer: articleCopy.en.footer
+  },
+  zh: {
+    homePath: "/zh/", languagePath: "/blog/ai-data-center-backup-power-1mw-60-seconds/", quote: "申请样品",
+    nav: { company: "公司", quality: "质量" },
+    hero: { eyebrow: "AI 数据中心备电", title: "1MW 只备 60 秒：AI 数据中心为什么先争“快”，再争“久”？", subtitle: "1MW/至少60秒是雄韬股份针对 LiLic Sidecar 的企业披露，不是行业基准；备电应按瞬态、秒级和分钟级任务分层。", secondary: "查看选型清单", image: { src: "/images/applications/ups-vrla-battery-application-1200.webp", alt: "数据中心备用电源电池应用", width: 1200, height: 900 } },
+    intro: ["一套 1MW 备电系统为什么只强调 60 秒？因为功率和时长描述的是一项任务，而不是整个机房设计是否充分。", "雄韬股份称 LiLic Sidecar 在 YOTTA 2026 首次公开亮相。企业披露五模块运行配置下单柜额定放电功率 1MW，在 1MW 负载下至少备电 60 秒。本文所有数字和功能均保留企业自述边界，不作为第三方验证。"],
+    sections: [
+      { eyebrow: "披露与边界", title: "1MW 与 60 秒只描述雄韬披露的 LiLic Sidecar 配置", text: "雄韬称其采用 LIC+LFP 混合设计，直连 800V DC 母线（±400V），并展示机架级 BBU。该披露不是行业标准，不能证明普遍兼容，也不能推出 60 秒足以满足某个数据中心项目。" },
+      { eyebrow: "任务分层", title: "把瞬态响应、秒级穿越和分钟级后备分开", text: "分层架构让不同时间尺度承担不同任务：瞬态层处理快速负载变化；秒级层可能用于短时切换或母线稳定；更长时后备服务于项目定义的恢复序列。响应速度、功率曲线、时长、切换逻辑、控制和恢复目标必须一起定义。" },
+      { eyebrow: "架构定位", title: "LIC、LFP、BBU 与传统 UPS/VRLA 回答不同问题", text: "LIC 可针对频繁脉冲循环评估，LFP 可承担储能后备，BBU 把保护放到更靠近计算负载的位置。传统 UPS/VRLA 在架构、高倍率放电曲线、时长、维护方式、温度及完整系统验证均支持时仍可能有位置。不能推断单一化学体系覆盖全部 AI 负载。" },
+      { eyebrow: "AGM 适用条件", title: "AGM 是否适用，要从电池与系统任务开始", text: "高倍率短时 UPS 电池的隔板沟通可包含厚度、克重、吸酸、电阻、压缩响应、尺寸和批次一致性，但这些输入必须与极板设计、电解液、装配、充电、温度及整电池试验计划相连。" },
+      { eyebrow: "证据边界", title: "AGM 隔板数据不能证明系统级备电表现", text: "隔板测试可支持材料比较和规格匹配，却不能单独证明容量、1MW 输出、60 秒时长、寿命、安全、兼容性或客户结果。必须进行整电池和系统验证；维京不声明其产品用于或兼容 LiLic Sidecar。" },
+      { eyebrow: "FAQ", title: "分层备电的四个常见问题", text: "为什么分层？不同时间尺度承担不同任务。1MW/60秒代表什么？仅代表雄韬对所述五模块 LiLic Sidecar 配置的披露。传统 UPS/VRLA 是否仍有位置？可能有，取决于架构与验证。AGM 数据能证明备电表现吗？不能，隔板参数不能替代整电池和系统验证。" }
+    ],
+    parameters: [["目标功率", "给出连续功率、脉冲功率和随时间变化的负载曲线。"], ["备电时长", "分别定义瞬态、秒级和分钟级要求。"], ["系统架构", "确认 AC/DC 拓扑、母线电压、UPS/BBU 位置、切换逻辑和控制。"], ["环境与维护", "提供温度范围、空间、冷却、维护通道和更换方式。"], ["电池结构", "提供极群、压缩、电解液和整电池验证范围。"]],
+    formats: { eyebrow: "系统证据", title: "让每项声明对应应被验证的层级", items: [["架构与任务", "选路线前定义响应速度、功率曲线、时长和切换顺序。", "/images/applications/ups-vrla-battery-application-1200.webp", "UPS 与数据中心备电应用"], ["AGM 材料评审", "仅在约定方法和样品状态下比较隔板尺寸与材料测试。", "/images/agm-quality-control-1200.webp", "AGM 隔板检测设备"], ["完整验证", "按项目任务与环境验证组装电池及完整供电系统。", "/images/evidence/quality-electrical-resistance-test-01.webp", "AGM 隔板电阻测试"]] },
+    checklist: { eyebrow: "选型核对清单", title: "比较备电路线前先确认这些输入", text: "所有候选路线使用同一份任务书。化学体系名称或单个隔板参数不能替代系统要求。", items: ["目标连续/脉冲功率曲线", "瞬态、秒级和分钟级时长", "母线电压、切换逻辑和控制边界", "温度、冷却与维护方式", "电池结构和完整系统验证计划"] },
+    references: { eyebrow: "已核验官方来源", title: "2026 年 10 月 8 日存档并查阅雄韬官方披露", text: "发布日期、首次公开、产品名、1MW 额定值、1MW 下至少 60 秒、LIC+LFP、800V DC 母线和 BBU 信息均归因于雄韬企业披露。它们不是第三方验证、行业普遍值或维京兼容性证据。", items: aiDataCenterBackupPowerReferenceItems },
+    related: { eyebrow: "相关技术页面", title: "继续核对架构与材料", items: [["数据中心备电 AGM 隔板", "/zh/blog/agm-separator-for-data-center-backup-power/"], ["UPS 电池 AGM 隔板", "/zh/applications/agm-separator-for-ups-battery/"], ["AGM 隔板规格", "/zh/products/agm-separator/"], ["AGM 隔板检测", "/zh/quality-control/agm-separator-testing/"]] },
+    inquiry: { ...articleCopy.zh.inquiry, eyebrow: "只问一个项目问题", title: "您的项目目标功率与备电时间是多少？", text: "请同时提交目标功率曲线、备电时长、温度和电池结构，用于 AGM 隔板规格或样品匹配；这不构成电池或系统性能承诺。", checklist: ["目标功率与时长", "温度范围", "电池与极群结构", "验证阶段与测试方法"], placeholders: { ...articleCopy.zh.inquiry.placeholders, message: "目标功率曲线、备电时长、温度、电池结构和验证阶段" } }, footer: articleCopy.zh.footer
+  }
+} as const;
+
 const dataCenterEvLowVoltageAgmCopy = {
   en: {
     homePath: "/", languagePath: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", quote: "Request a Sample",
@@ -3910,6 +4008,10 @@ export function BlogArticlePage({
                                     ? en18060BatteryStandardCopy[primaryLang]
                                     : page === "dataCenterEvLowVoltageAgm"
                                       ? dataCenterEvLowVoltageAgmCopy[primaryLang]
+                                      : page === "aiDataCenterBackupPowerLayers"
+                                        ? aiDataCenterBackupPowerLayersCopy[primaryLang]
+                                        : page === "agmPastingPaperEnergyValidation"
+                                          ? agmPastingPaperEnergyValidationCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -3989,6 +4091,10 @@ export function BlogArticlePage({
                                     ? ["published-listing", "covered-title-scope", "not-one-scorecard", "agm-evidence-boundary", "faq-applicability", "supplier-action"]
                                     : page === "dataCenterEvLowVoltageAgm"
                                       ? ["source-boundary", "data-center-duty", "ev-duty", "comparison", "agm-separator-boundary", "specification-match"]
+                                      : page === "aiDataCenterBackupPowerLayers"
+                                        ? ["vision-disclosure", "duty-layers", "architecture", "agm-applicability", "evidence-boundary", "faq"]
+                                        : page === "agmPastingPaperEnergyValidation"
+                                          ? ["claim-source", "missing-conditions", "same-line-test", "plate-acceptance", "validation-boundary", "implementation-checklist", "faq-geo"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
@@ -4265,7 +4371,9 @@ export function BlogArticlePage({
             page === "earlyChinaLeadAcidBatteryManufacturing" ||
             page === "agmSeparatorPressureRetention" ||
             page === "agmSeparatorBatchProcessControl" ||
-            page === "agmSeparatorSupplyChain"
+            page === "agmSeparatorSupplyChain" ||
+            page === "aiDataCenterBackupPowerLayers" ||
+            page === "agmPastingPaperEnergyValidation"
               ? "lg:grid-cols-3"
               : ""
           }`}
@@ -4383,7 +4491,7 @@ export function BlogArticlePage({
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      {page !== "aiDataCenterBackupPowerLayers" && page !== "agmPastingPaperEnergyValidation" && <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
           <a
             href={asset(
@@ -4427,7 +4535,7 @@ export function BlogArticlePage({
             />
           </a>
         </div>
-      </section>
+      </section>}
 
       <section id="contact" className="bg-ink px-4 py-24 text-white sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">

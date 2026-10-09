@@ -22,11 +22,15 @@ export const articleKinds = [
   "agmSeparatorEnergyDataDelivery",
   "en18060BatteryStandard",
   "dataCenterEvLowVoltageAgm",
+  "aiDataCenterBackupPowerLayers",
+  "agmPastingPaperEnergyValidation",
   "agmSeparatorSupplyChain",
   "agmStartStopBatteryProcurement"
 ];
 
 export const articleDefinitions = {
+  agmPastingPaperEnergyValidation: ["agm-fiberglass-pasting-paper-drying-energy-validation", "manufacturingQuality", "2026-10-09", "2026-10-09"],
+  aiDataCenterBackupPowerLayers: ["ai-data-center-backup-power-1mw-60-seconds", "industryApplications", "2026-10-08", "2026-10-08"],
   agmSeparatorSupplyChain: ["agm-separator-supply-chain-from-glass-block-to-finished-roll", "manufacturingQuality", "2026-09-01", "2026-10-03"],
   agmStartStopBatteryProcurement: ["agm-start-stop-battery-separator-procurement-guide", "buyerGuides", "2026-09-10", "2026-10-03"],
   dataCenterEvLowVoltageAgm: ["why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power", "industryApplications", "2026-10-04", "2026-10-04"],
@@ -48,6 +52,8 @@ export const articleDefinitions = {
 };
 
 const images = {
+  agmPastingPaperEnergyValidation: ["/images/agm-quality-control-1200.webp", 1200, 900],
+  aiDataCenterBackupPowerLayers: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
   agmSeparatorSupplyChain: ["/images/agm-hero-production-1600.webp", 1600, 1000],
   agmStartStopBatteryProcurement: ["/images/agm-quality-control-1200.webp", 1200, 900],
   whatIsAgmSeparator: ["/images/viking-finished-separator-roll-900.webp", 900, 675],
@@ -942,6 +948,146 @@ secondaryResourceData.ar.topics.dataCenterEvLowVoltageAgm = {
   checklist: ["التطبيق ومهمة البطارية", "بنية البطارية والأبعاد", "ظروف التشغيل والتجميع", "فحوص المادة ومرحلة التحقق"]
 };
 
+const aiBackupPowerTopics = {
+  vi: {
+    title: "1 MW trong 60 giây: Vì sao nguồn dự phòng trung tâm dữ liệu AI ưu tiên tốc độ trước thời lượng?",
+    summary: "Con số 1 MW/tối thiểu 60 giây là công bố của Vision Group cho LiLic Sidecar, không phải chuẩn ngành; nguồn dự phòng phải được phân lớp theo nhiệm vụ tức thời, giây và phút.",
+    intro: "Vision Group cho biết LiLic Sidecar lần đầu xuất hiện công khai tại YOTTA 2026. Theo công bố của hãng, cấu hình năm mô-đun trong một tủ có công suất phóng định mức 1 MW và dự phòng ít nhất 60 giây ở tải 1 MW.",
+    sections: [["Móc 3 giây", "Vì sao một hệ 1 MW chỉ nhấn mạnh 60 giây?", "Vì công suất và thời lượng mô tả một nhiệm vụ cụ thể. Một tầng phản ứng nhanh có thể xử lý biến động hoặc khoảng chuyển tiếp ngắn; nó không tự chứng minh rằng 60 giây đủ cho cả phòng máy."], ["Công bố và ranh giới", "Đây là số liệu doanh nghiệp cho LiLic Sidecar", "Vision mô tả thiết kế lai LIC+LFP, nối trực tiếp thanh cái DC 800 V (±400 V), đồng thời giới thiệu BBU cấp rack. Các chức năng, tương thích và con số đều là tự công bố, chưa phải xác minh độc lập."], ["Phân lớp nhiệm vụ", "Tách phản ứng tức thời, dự phòng theo giây và theo phút", "Mỗi tầng phải được xác định bằng tốc độ phản ứng, đường cong công suất, thời lượng, chuyển mạch, điều khiển và mục tiêu khôi phục. Các tầng có thể phối hợp nhưng không thay thế nhau chỉ vì cùng được gọi là dự phòng."], ["Định vị công nghệ", "LIC, LFP, BBU và UPS/VRLA giải quyết các câu hỏi khác nhau", "LIC có thể được chọn cho chu kỳ xung; LFP có thể đóng góp năng lượng dự phòng; BBU đưa bảo vệ gần tải. UPS/VRLA vẫn có thể phù hợp trong kiến trúc đã xác minh với nhiệm vụ phóng, bảo trì và điều kiện môi trường rõ ràng."], ["Ranh giới AGM", "Dữ liệu tấm ngăn không chứng minh hiệu suất hệ thống", "Độ dày, khối lượng định lượng, hấp thụ axit, điện trở và phản ứng nén hỗ trợ khớp vật liệu. Chúng không thể tự chứng minh công suất, thời lượng, dung lượng, tuổi thọ, an toàn hoặc tương thích của pin và hệ thống."], ["FAQ", "Những gì cần xác nhận trước khi chọn", "Vì sao phân lớp? Vì các thang thời gian có nhiệm vụ khác nhau. 1 MW/60 giây nghĩa là gì? Chỉ là mức Vision công bố cho cấu hình nêu trên. UPS/VRLA còn vị trí không? Có thể, nếu phù hợp kiến trúc và được xác minh. Dữ liệu AGM có đủ không? Không; cần thử pin hoàn chỉnh và hệ thống."]],
+    parameters: [["Công suất mục tiêu", "Nêu công suất liên tục, xung và đường cong theo thời gian."], ["Thời lượng", "Tách yêu cầu tức thời, giây và phút."], ["Kiến trúc", "Xác nhận AC/DC, bus, UPS/BBU, chuyển mạch và điều khiển."], ["Môi trường", "Nhiệt độ, không gian, làm mát, bảo trì và thay thế."], ["Cấu trúc pin", "Cấu trúc bản cực, nén, điện phân và phạm vi thử pin hoàn chỉnh."]],
+    checklist: ["Công suất và đường cong tải mục tiêu", "Thời gian dự phòng theo từng tầng", "Nhiệt độ và phương án bảo trì", "Cấu trúc pin và điều kiện lắp ráp", "Kế hoạch thử pin hoàn chỉnh và hệ thống"],
+    inquiry: ["Đối chiếu mẫu và thông số AGM", "Công suất và thời gian dự phòng mục tiêu của dự án là bao nhiêu? Hãy gửi thêm nhiệt độ và cấu trúc pin để trao đổi thông số hoặc mẫu tấm ngăn; việc thử pin và hệ thống hoàn chỉnh vẫn bắt buộc."]
+  },
+  ko: {
+    title: "1 MW를 60초 동안: AI 데이터센터 백업 전원이 지속시간보다 속도를 먼저 보는 이유",
+    summary: "1 MW/최소 60초는 Vision Group의 LiLic Sidecar에 대한 기업 공개 수치이며 업계 표준이 아니다. 백업 전원은 순간·초·분 단위 임무로 구분해야 한다.",
+    intro: "Vision Group은 YOTTA 2026에서 LiLic Sidecar를 처음 공개했다고 밝혔다. 회사에 따르면 5모듈 구성의 캐비닛은 정격 방전전력 1 MW, 1 MW 부하에서 최소 60초 백업을 제공한다.",
+    sections: [["3초 질문", "왜 1 MW 시스템이 60초만 강조하는가?", "전력과 시간은 특정 임무를 설명한다. 빠른 계층은 부하 변동이나 짧은 전환 구간을 담당할 수 있지만, 60초가 전체 데이터센터에 충분하다는 증거는 아니다."], ["공개 범위", "LiLic Sidecar에 한정된 기업 주장", "Vision은 LIC+LFP 하이브리드, 800 V DC(±400 V) 버스 직접 연결, 랙급 BBU를 설명한다. 수치와 기능, 호환성은 모두 회사 설명이며 독립 검증이 아니다."], ["임무 분리", "순간 응답, 초 단위, 분 단위 백업을 구분", "응답 속도, 전력 곡선, 지속시간, 전환, 제어와 복구 목표를 계층별로 정해야 한다. 모두 백업이라는 이유만으로 서로 대체되지는 않는다."], ["기술 위치", "LIC, LFP, BBU와 UPS/VRLA는 서로 다른 질문에 답한다", "LIC는 반복 펄스에, LFP는 백업 에너지에, BBU는 부하 인접 보호에 검토될 수 있다. UPS/VRLA도 방전 임무, 유지보수와 환경이 명확하고 검증된 아키텍처에서는 여전히 선택지가 될 수 있다."], ["AGM 경계", "분리막 데이터만으로 시스템 성능을 증명할 수 없다", "두께, 평량, 산 흡수, 전기저항과 압축 반응은 소재 매칭에 쓰인다. 배터리나 시스템의 전력, 지속시간, 용량, 수명, 안전 또는 호환성을 단독으로 입증하지 못한다."], ["FAQ", "선정 전 무엇을 확인해야 하는가", "왜 계층화하는가? 시간대별 임무가 다르기 때문이다. 1 MW/60초는 무엇인가? 해당 구성에 대한 Vision의 수치다. UPS/VRLA는 남는가? 아키텍처 적합성과 검증에 달렸다. AGM 데이터로 충분한가? 아니다. 완성 배터리와 시스템 시험이 필요하다."]],
+    parameters: [["목표 전력", "연속·펄스 전력과 시간별 곡선."], ["지속시간", "순간·초·분 단위 요구를 분리."], ["아키텍처", "AC/DC, 버스, UPS/BBU, 전환과 제어."], ["환경", "온도, 공간, 냉각, 정비와 교체."], ["배터리 구조", "극군, 압축, 전해액과 완성 배터리 시험 범위."]],
+    checklist: ["목표 전력과 부하 곡선", "계층별 백업 시간", "온도와 유지보수 방식", "배터리 구조와 조립 조건", "완성 배터리·시스템 검증 계획"],
+    inquiry: ["AGM 시료 및 사양 매칭", "프로젝트의 목표 전력과 백업 시간은 얼마입니까? 온도와 배터리 구조도 보내 주시면 분리막 사양 또는 시료를 검토할 수 있습니다. 완성 배터리와 시스템 검증은 별도로 필요합니다."]
+  },
+  ja: {
+    title: "1 MWを60秒：AIデータセンターのバックアップ電源が時間より速さを先に問う理由",
+    summary: "1 MW・最低60秒はVision GroupによるLiLic Sidecarの企業開示値であり業界標準ではない。瞬時、秒、分の役割ごとにバックアップを分けて考える必要がある。",
+    intro: "Vision GroupはYOTTA 2026でLiLic Sidecarを初公開したと発表した。同社によれば、5モジュール構成の1キャビネットは定格放電電力1 MW、1 MW負荷で最低60秒のバックアップを提供する。",
+    sections: [["3秒の問い", "なぜ1 MWのシステムが60秒だけを強調するのか", "電力と時間は特定の任務を示す。高速層は負荷変動や短い切替時間を担えるが、60秒で設備全体に十分だとは証明しない。"], ["開示の境界", "LiLic Sidecarに関する企業主張", "VisionはLIC+LFPハイブリッド、800 V DC（±400 V）バスへの直結、ラック側BBUを説明している。数値、機能、互換性は企業開示であり独立検証ではない。"], ["役割分担", "瞬時、秒単位、分単位を分ける", "応答速度、出力曲線、継続時間、切替、制御、復旧目標を層ごとに定義する。同じバックアップという名称だけで相互代替はできない。"], ["技術の位置", "LIC、LFP、BBUとUPS/VRLAは別の課題に対応する", "LICはパルスサイクル、LFPはバックアップエネルギー、BBUは負荷近傍の保護に検討される。UPS/VRLAも放電任務、保守、環境が明確で検証済みの構成なら選択肢になり得る。"], ["AGMの境界", "セパレーター値だけではシステム性能を証明できない", "厚さ、坪量、吸酸、電気抵抗、圧縮応答は材料照合に使えるが、電池・システムの出力、時間、容量、寿命、安全性、互換性を単独では証明しない。"], ["FAQ", "選定前に確認すること", "なぜ階層化するのか。時間軸ごとに任務が違うため。1 MW/60秒とは、当該構成についてVisionが公表した値。UPS/VRLAに役割はあるか。構成適合と検証次第である。AGMデータだけで十分か。いいえ、完成電池とシステム試験が必要である。"]],
+    parameters: [["目標出力", "連続・パルス出力と時間曲線。"], ["継続時間", "瞬時・秒・分の要件を分離。"], ["構成", "AC/DC、バス、UPS/BBU、切替と制御。"], ["環境", "温度、空間、冷却、保守と交換。"], ["電池構造", "極板群、圧縮、電解液、完成電池試験範囲。"]],
+    checklist: ["目標出力と負荷曲線", "層ごとのバックアップ時間", "温度と保守方式", "電池構造と組立条件", "完成電池・システム検証計画"],
+    inquiry: ["AGMサンプルと仕様照合", "プロジェクトの目標出力とバックアップ時間は何ですか？ 温度と電池構造も共有いただければ、セパレーター仕様またはサンプルを照合できます。完成電池とシステム検証は別途必要です。"]
+  },
+  es: {
+    title: "1 MW durante 60 segundos: por qué el respaldo de centros de datos de IA prioriza primero la rapidez",
+    summary: "1 MW durante al menos 60 segundos es una divulgación corporativa de Vision Group sobre LiLic Sidecar, no una norma sectorial; el respaldo debe separarse en tareas transitorias, de segundos y de minutos.",
+    intro: "Vision Group afirma que LiLic Sidecar debutó públicamente en YOTTA 2026. Según la empresa, un gabinete con cinco módulos entrega 1 MW de potencia nominal de descarga y al menos 60 segundos de respaldo con una carga de 1 MW.",
+    sections: [["Gancho", "¿Por qué un sistema de 1 MW destaca solo 60 segundos?", "Porque potencia y duración describen una tarea concreta. Una capa rápida puede cubrir fluctuaciones o una transición breve; no demuestra que 60 segundos basten para todo el centro de datos."], ["Límite de la fuente", "Es una cifra de empresa para LiLic Sidecar", "Vision describe un híbrido LIC+LFP, conexión directa a un bus de CC de 800 V (±400 V) y BBU a nivel de rack. Cifras, funciones y compatibilidad son declaraciones corporativas, no verificación independiente."], ["Capas", "Separar respuesta transitoria, segundos y minutos", "Cada capa necesita velocidad de respuesta, curva de potencia, duración, transferencia, control y objetivo de recuperación definidos. No son intercambiables solo por llamarse respaldo."], ["Posición técnica", "LIC, LFP, BBU y UPS/VRLA responden a tareas distintas", "LIC puede evaluarse para pulsos; LFP para energía de respaldo; BBU acerca la protección a la carga. UPS/VRLA puede conservar un lugar si la arquitectura, descarga, mantenimiento y entorno se verifican."], ["Límite AGM", "Los datos del separador no prueban el sistema", "Espesor, gramaje, absorción, resistencia eléctrica y respuesta a compresión ayudan a cotejar materiales. No prueban por sí solos potencia, autonomía, capacidad, vida, seguridad o compatibilidad de la batería y el sistema."], ["FAQ", "Qué confirmar antes de seleccionar", "¿Por qué usar capas? Porque cada escala temporal tiene una misión. ¿Qué significa 1 MW/60 s? Solo la cifra de Vision para esa configuración. ¿Sigue habiendo lugar para UPS/VRLA? Depende de arquitectura y validación. ¿Bastan datos AGM? No; hacen falta pruebas de batería completa y sistema."]],
+    parameters: [["Potencia objetivo", "Potencia continua, de pulso y curva temporal."], ["Duración", "Separar requisitos transitorios, de segundos y minutos."], ["Arquitectura", "CA/CC, bus, UPS/BBU, transferencia y control."], ["Entorno", "Temperatura, espacio, refrigeración, mantenimiento y reemplazo."], ["Batería", "Grupo de placas, compresión, electrolito y pruebas completas."]],
+    checklist: ["Potencia objetivo y curva de carga", "Tiempo por cada capa", "Temperatura y mantenimiento", "Estructura de batería y montaje", "Plan de validación de batería y sistema"],
+    inquiry: ["Muestra AGM y cotejo de especificación", "¿Qué potencia objetivo y tiempo de respaldo debe cumplir su proyecto? Envíe también temperatura y estructura de batería para cotejar una especificación o muestra; siguen siendo obligatorias las pruebas de batería completa y sistema."]
+  },
+  pt: {
+    title: "1 MW por 60 segundos: por que o backup de data centers de IA prioriza primeiro a velocidade",
+    summary: "1 MW por pelo menos 60 segundos é uma divulgação corporativa da Vision Group sobre o LiLic Sidecar, não um padrão do setor; o backup deve ser dividido em tarefas transitórias, de segundos e de minutos.",
+    intro: "A Vision Group afirma que o LiLic Sidecar fez sua primeira aparição pública na YOTTA 2026. Segundo a empresa, um gabinete com cinco módulos fornece 1 MW de potência nominal de descarga e pelo menos 60 segundos de backup sob carga de 1 MW.",
+    sections: [["Gancho", "Por que um sistema de 1 MW destaca apenas 60 segundos?", "Porque potência e duração descrevem uma tarefa específica. Uma camada rápida pode cobrir flutuações ou uma transição curta; isso não prova que 60 segundos bastem para todo o data center."], ["Limite da fonte", "É um número corporativo do LiLic Sidecar", "A Vision descreve um híbrido LIC+LFP, conexão direta a um barramento CC de 800 V (±400 V) e BBU em nível de rack. Números, funções e compatibilidade são alegações da empresa, não verificação independente."], ["Camadas", "Separar resposta transitória, segundos e minutos", "Cada camada exige velocidade de resposta, curva de potência, duração, transferência, controle e objetivo de recuperação definidos. Não são intercambiáveis apenas por serem chamadas de backup."], ["Posicionamento", "LIC, LFP, BBU e UPS/VRLA atendem tarefas diferentes", "LIC pode ser avaliado para pulsos; LFP para energia de backup; BBU aproxima a proteção da carga. UPS/VRLA ainda pode ter lugar quando arquitetura, descarga, manutenção e ambiente forem compatíveis e validados."], ["Limite AGM", "Dados do separador não comprovam o sistema", "Espessura, gramatura, absorção, resistência elétrica e resposta à compressão ajudam no pareamento do material. Sozinhos, não comprovam potência, autonomia, capacidade, vida útil, segurança ou compatibilidade da bateria e do sistema."], ["FAQ", "O que confirmar antes da seleção", "Por que usar camadas? Porque cada escala de tempo tem uma missão. O que significa 1 MW/60 s? Apenas o valor divulgado pela Vision para essa configuração. UPS/VRLA ainda tem espaço? Depende da arquitetura e validação. Dados AGM bastam? Não; são necessários testes da bateria completa e do sistema."]],
+    parameters: [["Potência-alvo", "Potência contínua, de pulso e curva no tempo."], ["Duração", "Separar requisitos transitórios, de segundos e minutos."], ["Arquitetura", "CA/CC, barramento, UPS/BBU, transferência e controle."], ["Ambiente", "Temperatura, espaço, refrigeração, manutenção e substituição."], ["Bateria", "Grupo de placas, compressão, eletrólito e testes completos."]],
+    checklist: ["Potência-alvo e curva de carga", "Tempo por camada", "Temperatura e manutenção", "Estrutura da bateria e montagem", "Plano de validação da bateria e do sistema"],
+    inquiry: ["Amostra AGM e pareamento de especificação", "Qual potência-alvo e tempo de backup o seu projeto precisa validar? Envie também temperatura e estrutura da bateria para parear uma especificação ou amostra; os testes da bateria completa e do sistema continuam necessários."]
+  },
+  ru: {
+    title: "1 МВт на 60 секунд: почему резервное питание ИИ-ЦОД сначала требует скорости",
+    summary: "1 МВт минимум на 60 секунд — корпоративное заявление Vision Group о LiLic Sidecar, а не отраслевой норматив; резерв следует делить на мгновенные, секундные и минутные задачи.",
+    intro: "Vision Group заявила, что LiLic Sidecar впервые публично показали на YOTTA 2026. По данным компании, шкаф в пяти-модульной конфигурации имеет номинальную мощность разряда 1 МВт и обеспечивает не менее 60 секунд резерва при нагрузке 1 МВт.",
+    sections: [["Вопрос за 3 секунды", "Почему система 1 МВт подчёркивает только 60 секунд?", "Потому что мощность и длительность описывают конкретную задачу. Быстрый уровень может покрывать колебания или короткий переход, но не доказывает достаточность 60 секунд для всего ЦОД."], ["Граница источника", "Это корпоративные данные о LiLic Sidecar", "Vision описывает гибрид LIC+LFP, прямое подключение к шине 800 В DC (±400 В) и стоечные BBU. Числа, функции и совместимость заявлены компанией и не являются независимой проверкой."], ["Разделение задач", "Отделить мгновенную реакцию, секунды и минуты", "Для каждого уровня задают скорость реакции, кривую мощности, длительность, переключение, управление и цель восстановления. Они не взаимозаменяемы только потому, что относятся к резерву."], ["Роль технологий", "LIC, LFP, BBU и UPS/VRLA решают разные задачи", "LIC может рассматриваться для импульсов, LFP — для энергии резерва, BBU — для защиты ближе к нагрузке. UPS/VRLA может оставаться вариантом при совместимой и проверенной архитектуре, режиме разряда, обслуживании и среде."], ["Граница AGM", "Данные сепаратора не доказывают характеристики системы", "Толщина, масса на площадь, впитывание кислоты, сопротивление и сжатие помогают сопоставлять материал. Они отдельно не доказывают мощность, время, ёмкость, срок службы, безопасность или совместимость батареи и системы."], ["FAQ", "Что проверить до выбора", "Зачем уровни? Масштабы времени имеют разные задачи. Что значит 1 МВт/60 с? Только показатель Vision для указанной конфигурации. Есть ли место UPS/VRLA? Зависит от архитектуры и проверки. Достаточно ли данных AGM? Нет, нужны испытания батареи и системы."]],
+    parameters: [["Целевая мощность", "Непрерывная и импульсная мощность, кривая во времени."], ["Длительность", "Разделить мгновенные, секундные и минутные требования."], ["Архитектура", "AC/DC, шина, UPS/BBU, переключение и управление."], ["Среда", "Температура, место, охлаждение, обслуживание и замена."], ["Батарея", "Группа пластин, сжатие, электролит и полные испытания."]],
+    checklist: ["Целевая мощность и кривая нагрузки", "Время каждого уровня", "Температура и обслуживание", "Конструкция батареи и сборка", "План проверки батареи и системы"],
+    inquiry: ["Образец AGM и подбор спецификации", "Какую целевую мощность и время резерва должен подтвердить ваш проект? Передайте также температуру и конструкцию батареи для подбора спецификации или образца; испытания батареи и системы остаются обязательными."]
+  },
+  ar: {
+    title: "1 ميجاواط لمدة 60 ثانية: لماذا تعطي طاقة احتياط مراكز بيانات الذكاء الاصطناعي الأولوية للسرعة؟",
+    summary: "رقم 1 ميجاواط لمدة لا تقل عن 60 ثانية هو إفصاح من Vision Group عن LiLic Sidecar وليس معياراً صناعياً؛ يجب تقسيم الاحتياط إلى مهام لحظية وبالثواني وبالدقائق.",
+    intro: "تقول Vision Group إن LiLic Sidecar ظهر علناً لأول مرة في YOTTA 2026. ووفقاً للشركة، توفر الخزانة ذات الوحدات الخمس قدرة تفريغ اسمية 1 ميجاواط واحتياطاً لا يقل عن 60 ثانية عند حمل 1 ميجاواط.",
+    sections: [["سؤال سريع", "لماذا يبرز نظام 1 ميجاواط مدة 60 ثانية فقط؟", "لأن القدرة والمدة تصفان مهمة محددة. قد تغطي طبقة سريعة تقلب الحمل أو انتقالاً قصيراً، لكنها لا تثبت أن 60 ثانية تكفي لمركز البيانات كله."], ["حدود المصدر", "هذه بيانات شركة عن LiLic Sidecar", "تصف Vision تصميماً هجيناً LIC+LFP واتصالاً مباشراً بناقل 800V DC ‏(±400V) ووحدات BBU قرب الرف. الأرقام والوظائف والتوافق إفصاحات شركة وليست تحققاً مستقلاً."], ["طبقات المهمة", "افصل الاستجابة اللحظية والثواني والدقائق", "يجب تحديد سرعة الاستجابة ومنحنى القدرة والمدة والتحويل والتحكم وهدف الاستعادة لكل طبقة. لا تتبادل الأدوار لمجرد أنها جميعاً احتياط."], ["موقع التقنيات", "LIC وLFP وBBU وUPS/VRLA لمهام مختلفة", "قد يُدرس LIC للنبضات، وLFP لطاقة الاحتياط، وBBU للحماية قرب الحمل. ويمكن أن يبقى UPS/VRLA خياراً إذا كانت البنية ومهمة التفريغ والصيانة والبيئة متوافقة ومتحققاً منها."], ["حد AGM", "بيانات الفاصل لا تثبت أداء النظام", "تساعد السماكة والوزن والامتصاص والمقاومة واستجابة الضغط في مطابقة المادة، لكنها لا تثبت وحدها قدرة البطارية أو مدتها أو سعتها أو عمرها أو سلامتها أو توافق النظام."], ["الأسئلة الشائعة", "ما الذي يجب تأكيده قبل الاختيار؟", "لماذا الطبقات؟ لأن لكل نطاق زمني مهمة. ماذا يعني 1 ميجاواط/60 ثانية؟ رقم Vision لهذه البنية فقط. هل يبقى دور UPS/VRLA؟ يعتمد على البنية والتحقق. هل تكفي بيانات AGM؟ لا، يلزم اختبار البطارية والنظام الكاملين."]],
+    parameters: [["القدرة المستهدفة", "القدرة المستمرة والنبضية والمنحنى الزمني."], ["المدة", "فصل المتطلبات اللحظية والثواني والدقائق."], ["البنية", "AC/DC والناقل وUPS/BBU والتحويل والتحكم."], ["البيئة", "الحرارة والمساحة والتبريد والصيانة والاستبدال."], ["البطارية", "مجموعة الألواح والضغط والإلكتروليت واختبار البطارية الكاملة."]],
+    checklist: ["القدرة ومنحنى الحمل", "زمن كل طبقة", "الحرارة وطريقة الصيانة", "بنية البطارية وظروف التجميع", "خطة تحقق البطارية والنظام"],
+    inquiry: ["مطابقة عينة ومواصفة AGM", "ما القدرة المستهدفة وزمن الاحتياط اللذان يجب أن يتحقق منهما مشروعك؟ أرسل أيضاً درجة الحرارة وبنية البطارية لمناقشة مواصفة أو عينة فاصل؛ ويبقى اختبار البطارية والنظام الكاملين ضرورياً."]
+  }
+};
+
+for (const [locale, topic] of Object.entries(aiBackupPowerTopics)) {
+  secondaryResourceData[locale].topics.aiDataCenterBackupPowerLayers = topic;
+}
+
+const agmPastingPaperEnergyTopics = {
+  vi: {
+    title: "Giấy trát bản cực sợi thủy tinh AGM tiết kiệm bao nhiêu năng lượng sấy?",
+    summary: "Tuyên bố giảm nhiệt độ hoặc ngừng lò sấy phải được kiểm chứng trên cùng dây chuyền theo năng lượng trên sản lượng đạt, tốc độ, độ ẩm và chất lượng bản cực.",
+    intro: "Huayang đưa ra tuyên bố này cho một sản phẩm hiện có, nhưng trang công khai không có số liệu tiết kiệm hay điều kiện thử nghiệm. Đây không phải bằng chứng độc lập hoặc cam kết của Viking.",
+    sections: [["Nguồn", "Đây là tuyên bố trên trang sản phẩm của Huayang", "Trang nói sản phẩm dùng cho trát bản cực liên tục, có thể giảm nhiệt độ hoặc ngừng lò sấy và thay giấy sợi thực vật. Không có chuẩn ngành hay thử nghiệm bên thứ ba."], ["Điều kiện thiếu", "Nhiệt độ lò chưa phải kết quả năng lượng", "Cần tốc độ dây chuyền, sản lượng đạt, trạng thái ẩm, vùng lò, thời gian lưu, ranh giới đo điện/khí/hơi và mẫu số chuẩn hóa."], ["Đối chứng cùng dây chuyền", "So sánh năng lượng trên sản lượng đạt", "Chạy giấy hiện tại và giấy ứng viên trên cùng dây chuyền, cùng công thức, hình học bản cực, lượng hồ và cửa sổ sản xuất; ghi năng lượng cùng tốc độ, độ ẩm và tổn thất dừng-khởi động."], ["Nghiệm thu bản cực", "Chất lượng và phế phẩm cần bằng chứng riêng", "Đánh giá ngoại quan, mép, độ bám hoặc rơi bột, độ đồng đều ẩm, kích thước/khối lượng và tỷ lệ phế theo phương pháp nhà máy phê duyệt."], ["Ranh giới", "Giấy trát bản cực không phải tấm ngăn AGM chính", "Quan sát ở cấp vật liệu không chứng minh độ bền bản cực, dung lượng, tuổi thọ hoặc độ tin cậy của ắc quy; vẫn cần nghiệm thu bản cực và thử ắc quy hoàn chỉnh."], ["Trước khi áp dụng", "Khóa điều kiện trước khi thay thế", "Khóa lô vật liệu, tốc độ và công thức; điểm lấy mẫu ẩm và cửa sổ lò; đồng hồ và mẫu số năng lượng; tiêu chí bản cực, phế phẩm và kiểm tra ắc quy sau đó."], ["FAQ", "Giấy trát bản cực sợi thủy tinh có giảm năng lượng lò sấy không?", "Đây là tuyên bố của Huayang nhưng trang không có dữ liệu định lượng. Cần đối chứng cùng dây chuyền về sản lượng đạt, tốc độ, độ ẩm, lò, năng lượng, chất lượng và phế phẩm; tuyên bố vật liệu không thay thế kiểm chứng bản cực và ắc quy."]],
+    parameters: [["Năng lượng trên sản lượng", "Cùng ranh giới điện, khí hoặc hơi và cùng mẫu số sản lượng đạt."], ["Tốc độ và sản lượng", "Ghi tốc độ đặt/thực tế, sản lượng đạt và tổn thất dừng máy."], ["Độ ẩm và lò", "Cố định điểm lấy mẫu, nhiệt độ vùng và thời gian lưu."], ["Nghiệm thu bản cực", "Dùng tiêu chí ngoại quan, độ đồng đều và độ bám đã phê duyệt."], ["Phế phẩm và ắc quy", "Tách bằng chứng phế phẩm khỏi thử nghiệm ắc quy hoàn chỉnh."]],
+    checklist: ["Tốc độ dây chuyền và công thức hồ", "Lô giấy và trạng thái ẩm", "Nhiệt độ, thời gian lưu và ranh giới năng lượng", "Tiêu chí bản cực và phế phẩm", "Phạm vi thử ắc quy hoàn chỉnh"],
+    inquiry: ["Đánh giá kỹ thuật giấy trát bản cực AGM", "Bạn sẽ đánh giá tuyên bố này bằng năng lượng trên sản lượng hay bằng thay đổi nhiệt độ lò? Gửi tốc độ dây chuyền, ranh giới năng lượng, trạng thái ẩm và yêu cầu nghiệm thu bản cực."]
+  },
+  ko: {
+    title: "AGM 유리섬유 페이스팅 페이퍼는 건조 에너지를 얼마나 줄일 수 있나?",
+    summary: "건조로 온도 저감 또는 정지 주장은 동일 라인에서 합격 생산량당 에너지, 속도, 수분, 극판 품질로 검증해야 합니다.",
+    intro: "화양은 기존 제품에 대해 이 주장을 하지만 공개 페이지에는 절감량이나 시험 조건이 없습니다. 독립 검증도 Viking의 약속도 아닙니다.",
+    sections: [["출처", "화양 기존 제품 페이지의 기업 주장입니다", "페이지는 연속 페이스팅, 건조로 온도 저감 또는 정지, 식물섬유 페이퍼 대체를 말하지만 제3자 시험이나 산업 기준은 제시하지 않습니다."], ["누락 조건", "로 온도 변화는 에너지 결과가 아닙니다", "라인 속도, 합격 생산량, 수분 상태, 로 구간과 체류시간, 전기·가스·증기 계측 경계와 정규화 기준이 필요합니다."], ["동일 라인 비교", "합격 생산량당 에너지를 비교합니다", "현행재와 후보재를 같은 라인, 배합, 극판 형상, 페이스트 도포량과 생산 창에서 운전하고 에너지와 속도·수분·기동 손실을 함께 기록합니다."], ["극판 승인", "품질과 폐기율은 별도 증거가 필요합니다", "승인된 방법으로 외관, 가장자리, 부착 또는 분진, 수분 균일성, 치수·질량과 폐기율을 비교합니다."], ["경계", "페이스팅 페이퍼와 AGM 주 분리막은 다른 층입니다", "재료 관찰만으로 극판 내구성이나 배터리 용량·수명·신뢰성을 입증할 수 없으며 극판 승인과 완성 배터리 검증이 필요합니다."], ["도입 전", "교체 전에 조건을 고정합니다", "재료 로트·속도·배합, 수분 채취점·로 운전창, 에너지 계기·분모, 극판 승인·폐기 및 후속 배터리 검사를 고정합니다."], ["FAQ", "유리섬유 페이스팅 페이퍼가 건조로 에너지를 줄일 수 있습니까?", "화양의 주장이나 정량 데이터는 없습니다. 동일 라인에서 합격 생산량, 속도, 수분, 로, 에너지, 품질, 폐기율을 비교해야 하며 재료 주장은 극판과 완성 배터리 검증을 대신하지 못합니다."]],
+    parameters: [["단위 생산량 에너지", "동일한 전기·가스·증기 경계와 합격 생산량 분모를 사용합니다."], ["속도와 생산량", "설정/실제 속도, 합격 생산량, 정지 손실을 기록합니다."], ["수분과 건조로", "채취점, 구간 온도, 체류시간을 고정합니다."], ["극판 승인", "승인된 외관·균일성·부착 기준을 사용합니다."], ["폐기와 배터리", "폐기율과 완성 배터리 시험을 분리합니다."]],
+    checklist: ["라인 속도와 페이스트 배합", "페이퍼 로트와 수분 상태", "로 온도·체류시간·에너지 경계", "극판과 폐기 승인 기준", "완성 배터리 검증 범위"],
+    inquiry: ["AGM 페이스팅 페이퍼 기술 검토", "이 주장을 단위 생산량 에너지로 판단합니까, 로 온도 변화로 판단합니까? 라인 속도, 에너지 경계, 수분 상태와 극판 승인 요구를 보내 주십시오."]
+  },
+  ja: {
+    title: "AGMガラス繊維ペースティング紙で乾燥エネルギーはどれだけ減るのか",
+    summary: "乾燥炉の温度低下・停止という主張は、同一ラインで良品当たりエネルギー、速度、水分、極板品質を比較して検証します。",
+    intro: "華陽は既存製品についてこの主張を掲載していますが、公開ページに節減量や試験条件はありません。第三者検証でもVikingの保証でもありません。",
+    sections: [["出典", "華陽の既存製品ページにある企業主張です", "連続ペースティング、乾燥炉温度の低下または停止、植物繊維紙の代替を述べていますが、第三者試験や業界基準は示していません。"], ["不足条件", "炉温の変化だけではエネルギー結果になりません", "ライン速度、良品量、水分状態、炉ゾーンと滞留時間、電気・ガス・蒸気の計量境界、正規化方法が必要です。"], ["同一ライン比較", "良品単位当たりエネルギーを比較する", "現行紙と候補紙を同じライン、配合、極板形状、ペースト量、運転窓で流し、エネルギーと速度、水分、起動停止損失を記録します。"], ["極板受入", "品質と廃棄率は別々に証明する", "承認済み方法で外観、端部、付着・粉落ち、水分均一性、寸法・質量、廃棄率を比較します。"], ["境界", "ペースティング紙とAGM主セパレーターは同じ製品ではありません", "材料レベルの観察だけで極板耐久性や電池容量、寿命、信頼性は証明できず、極板受入と完成電池検証が必要です。"], ["導入前", "置換前に条件を固定する", "材料ロット・速度・配合、水分採取点・炉運転窓、エネルギー計器・分母、極板受入・廃棄と後工程電池検査を固定します。"], ["FAQ", "ガラス繊維ペースティング紙は乾燥炉エネルギーを減らせますか？", "華陽の企業主張ですが定量データはありません。同一ラインで良品量、速度、水分、炉条件、エネルギー、品質、廃棄率を比較し、材料主張とは別に極板と完成電池を検証します。"]],
+    parameters: [["良品単位エネルギー", "同じ電気・ガス・蒸気境界と良品分母を使います。"], ["速度と生産量", "設定/実速度、良品量、停止損失を記録します。"], ["水分と炉", "採取点、ゾーン温度、滞留時間を固定します。"], ["極板受入", "承認済みの外観、均一性、付着基準を使います。"], ["廃棄と電池", "廃棄率と完成電池試験を分けます。"]],
+    checklist: ["ライン速度とペースト配合", "紙ロットと水分状態", "炉温・滞留時間・エネルギー境界", "極板と廃棄の受入基準", "完成電池の検証範囲"],
+    inquiry: ["AGMペースティング紙の技術評価", "この主張を良品単位エネルギーで判断しますか、それとも炉温変化で判断しますか？ ライン速度、エネルギー境界、水分状態、極板受入要件をお送りください。"]
+  },
+  es: {
+    title: "¿Cuánta energía de secado puede ahorrar un papel de empastado AGM de fibra de vidrio?",
+    summary: "La reducción de temperatura o parada del horno debe validarse en la misma línea con energía por producción aceptada, velocidad, humedad y calidad de placa.",
+    intro: "Huayang formula esta afirmación para un producto existente, pero su página pública no aporta ahorro cuantificado ni condiciones de ensayo. No es una verificación independiente ni una promesa de Viking.",
+    sections: [["Fuente", "Es una afirmación de la página de producto de Huayang", "La página menciona empastado continuo, menor temperatura o parada del horno y sustitución del papel vegetal, sin ensayo de terceros ni referencia sectorial."], ["Condiciones ausentes", "La temperatura del horno aún no es un resultado energético", "Se necesitan velocidad, producción aceptada, humedad, zonas y residencia del horno, frontera de electricidad/gas/vapor y método de normalización."], ["Comparación en la misma línea", "Compare energía por producción aceptada", "Ejecute el papel actual y el candidato en la misma línea, receta, geometría, carga de pasta y ventana de producción; registre energía junto con velocidad, humedad y pérdidas de arranque-parada."], ["Aceptación de placa", "Calidad y rechazo requieren evidencia separada", "Compare apariencia, bordes, adhesión o desprendimiento, uniformidad de humedad, dimensión o masa y rechazo con métodos aprobados."], ["Límite", "El papel de empastado no es el separador AGM principal", "Una observación del material no demuestra durabilidad de placa, capacidad, vida o fiabilidad de batería; siguen siendo necesarias la aceptación de placa y la validación de batería completa."], ["Antes de implantar", "Congele las condiciones antes de sustituir", "Fije lote, velocidad y receta; muestreo de humedad y ventana del horno; medidor y denominador energético; aceptación de placa, rechazo y pruebas posteriores de batería."], ["FAQ", "¿El papel de empastado de fibra de vidrio reduce la energía del horno?", "Es una afirmación de Huayang sin datos cuantificados. Se necesita comparación en la misma línea de producción aceptada, velocidad, humedad, horno, energía, calidad y rechazo; la afirmación del material no sustituye validar placa y batería."]],
+    parameters: [["Energía por producción", "Use la misma frontera de electricidad, gas o vapor y el mismo denominador aceptado."], ["Velocidad y producción", "Registre velocidad fijada/real, producción aceptada y pérdidas por parada."], ["Humedad y horno", "Fije puntos de muestreo, temperaturas de zona y residencia."], ["Aceptación de placa", "Use criterios aprobados de apariencia, uniformidad y adhesión."], ["Rechazo y batería", "Separe el rechazo de los ensayos de batería completa."]],
+    checklist: ["Velocidad y receta de pasta", "Lote de papel y humedad", "Temperatura, residencia y frontera energética", "Criterios de placa y rechazo", "Alcance de validación de batería"],
+    inquiry: ["Evaluación técnica del papel de empastado AGM", "¿Juzgarán la afirmación por energía por producción o por cambio de temperatura? Envíen velocidad, frontera energética, humedad y requisitos de aceptación de placa."]
+  },
+  pt: {
+    title: "Quanta energia de secagem um papel de empastamento AGM de fibra de vidro pode economizar?",
+    summary: "A alegação de reduzir a temperatura ou desligar o forno deve ser validada na mesma linha por energia por produção aprovada, velocidade, umidade e qualidade da placa.",
+    intro: "A Huayang faz essa alegação para um produto existente, mas a página pública não traz economia quantificada nem condições de ensaio. Não é validação independente nem promessa da Viking.",
+    sections: [["Fonte", "É uma alegação da página de produto da Huayang", "A página cita empastamento contínuo, menor temperatura ou desligamento do forno e substituição do papel vegetal, sem ensaio de terceiros ou referência setorial."], ["Condições ausentes", "Temperatura do forno ainda não é resultado energético", "São necessários velocidade, produção aprovada, umidade, zonas e residência do forno, fronteira de eletricidade/gás/vapor e método de normalização."], ["Comparação na mesma linha", "Compare energia por produção aprovada", "Rode o papel atual e o candidato na mesma linha, receita, geometria, carga de pasta e janela de produção; registre energia com velocidade, umidade e perdas de partida/parada."], ["Aceitação da placa", "Qualidade e refugo exigem evidências separadas", "Compare aparência, bordas, aderência ou desprendimento, uniformidade de umidade, dimensão ou massa e refugo com métodos aprovados."], ["Limite", "Papel de empastamento não é o separador AGM principal", "Uma observação do material não prova durabilidade da placa, capacidade, vida ou confiabilidade da bateria; continuam necessários aceitação da placa e validação da bateria completa."], ["Antes de implementar", "Congele as condições antes da substituição", "Fixe lote, velocidade e receita; pontos de umidade e janela do forno; medidor e denominador energético; aceitação da placa, refugo e testes posteriores de bateria."], ["FAQ", "O papel de empastamento de fibra de vidro reduz a energia do forno?", "É uma alegação da Huayang sem dados quantificados. Exige comparação na mesma linha de produção aprovada, velocidade, umidade, forno, energia, qualidade e refugo; a alegação do material não substitui validar placa e bateria."]],
+    parameters: [["Energia por produção", "Use a mesma fronteira de eletricidade, gás ou vapor e o mesmo denominador aprovado."], ["Velocidade e produção", "Registre velocidade definida/real, produção aprovada e perdas por parada."], ["Umidade e forno", "Fixe pontos de amostragem, temperaturas de zona e residência."], ["Aceitação da placa", "Use critérios aprovados de aparência, uniformidade e aderência."], ["Refugo e bateria", "Separe refugo dos testes de bateria completa."]],
+    checklist: ["Velocidade e receita da pasta", "Lote de papel e umidade", "Temperatura, residência e fronteira energética", "Critérios de placa e refugo", "Escopo de validação da bateria"],
+    inquiry: ["Avaliação técnica do papel de empastamento AGM", "Vocês julgarão a alegação por energia por produção ou por mudança de temperatura? Enviem velocidade, fronteira energética, umidade e requisitos de aceitação da placa."]
+  },
+  ru: {
+    title: "Сколько энергии сушки может сэкономить стекловолоконная пастировочная бумага AGM?",
+    summary: "Заявление о снижении температуры или отключении сушильной печи проверяют на одной линии по энергии на годную продукцию, скорости, влажности и качеству пластин.",
+    intro: "Huayang заявляет это для существующего продукта, но открытая страница не содержит величины экономии или условий испытания. Это не независимая проверка и не обещание Viking.",
+    sections: [["Источник", "Это корпоративное заявление на странице Huayang", "Страница говорит о непрерывном пастировании, снижении температуры или отключении печи и замене растительной бумаги, но не приводит независимых испытаний или отраслевой нормы."], ["Недостающие условия", "Температура печи еще не является энергетическим результатом", "Нужны скорость, годный выпуск, влажность, зоны и время пребывания, границы учета электричества/газа/пара и нормализация."], ["Сравнение на одной линии", "Сравнивайте энергию на годный выпуск", "Текущую и кандидатную бумагу прогоняют на одной линии с одинаковыми рецептурой, геометрией, загрузкой пасты и окном работы; фиксируют энергию, скорость, влажность и потери пуска-остановки."], ["Приемка пластин", "Качество и брак требуют отдельных доказательств", "По утвержденным методам сравнивают внешний вид, края, адгезию или осыпание, равномерность влажности, размеры/массу и процент брака."], ["Граница", "Пастировочная бумага не является основным AGM-сепаратором", "Наблюдение материала не доказывает долговечность пластин, емкость, ресурс или надежность батареи; нужны приемка пластин и проверка готовой батареи."], ["До внедрения", "Зафиксируйте условия до замены", "Закрепите партии, скорость и рецептуру; точки влажности и окно печи; счетчик и знаменатель энергии; приемку пластин, брак и последующие испытания батареи."], ["FAQ", "Снижает ли стекловолоконная пастировочная бумага энергию сушильной печи?", "Это заявление Huayang без количественных данных. Нужно сравнение на одной линии по годному выпуску, скорости, влажности, печи, энергии, качеству и браку; заявление материала не заменяет проверку пластин и батареи."]],
+    parameters: [["Энергия на выпуск", "Одинаковые границы электричества, газа или пара и знаменатель годной продукции."], ["Скорость и выпуск", "Фиксируйте заданную/фактическую скорость, годный выпуск и потери остановок."], ["Влажность и печь", "Зафиксируйте точки отбора, температуры зон и время пребывания."], ["Приемка пластин", "Используйте утвержденные критерии внешнего вида, однородности и адгезии."], ["Брак и батарея", "Отделяйте процент брака от испытаний готовой батареи."]],
+    checklist: ["Скорость линии и рецептура пасты", "Партия бумаги и влажность", "Температура, время и граница энергии", "Критерии пластин и брака", "Объем проверки готовой батареи"],
+    inquiry: ["Техническая оценка пастировочной бумаги AGM", "Вы оцениваете заявление по энергии на выпуск или по изменению температуры? Передайте скорость, границу энергии, влажность и требования приемки пластин."]
+  },
+  ar: {
+    title: "كم من طاقة التجفيف يمكن أن يوفره ورق طلاء AGM المصنوع من الألياف الزجاجية؟",
+    summary: "يجب التحقق من ادعاء خفض حرارة فرن التجفيف أو إيقافه على الخط نفسه وفق الطاقة لكل إنتاج مقبول والسرعة والرطوبة وجودة اللوح.",
+    intro: "تطرح Huayang هذا الادعاء لمنتج قائم، لكن الصفحة العامة لا تقدم مقدار توفير أو شروط اختبار. وهو ليس تحققاً مستقلاً ولا وعداً من Viking.",
+    sections: [["المصدر", "هذا ادعاء شركة في صفحة منتج Huayang", "تذكر الصفحة الطلاء المستمر وخفض الحرارة أو إيقاف الفرن واستبدال الورق النباتي، من دون اختبار طرف ثالث أو معيار صناعي."], ["الشروط الناقصة", "تغير حرارة الفرن ليس نتيجة طاقة بعد", "يلزم تحديد سرعة الخط والإنتاج المقبول والرطوبة ومناطق الفرن وزمن المكوث وحدود قياس الكهرباء أو الغاز أو البخار وطريقة التطبيع."], ["مقارنة على الخط نفسه", "قارن الطاقة لكل إنتاج مقبول", "شغّل الورق الحالي والمرشح على الخط والوصفة وهندسة اللوح وكمية المعجون ونافذة الإنتاج نفسها، وسجل الطاقة مع السرعة والرطوبة وخسائر البدء والتوقف."], ["قبول اللوح", "الجودة والهالك يحتاجان دليلاً منفصلاً", "قارن المظهر والحواف والالتصاق أو التساقط وتجانس الرطوبة والأبعاد أو الكتلة ونسبة الهالك بطرق المصنع المعتمدة."], ["الحد", "ورق الطلاء ليس فاصل AGM الرئيسي", "ملاحظة المادة لا تثبت متانة اللوح أو سعة البطارية أو عمرها أو موثوقيتها؛ يلزم قبول اللوح والتحقق من البطارية الكاملة."], ["قبل التطبيق", "ثبّت الشروط قبل الاستبدال", "ثبّت الدفعات والسرعة والوصفة؛ نقاط الرطوبة ونافذة الفرن؛ العداد ومقام الطاقة؛ قبول اللوح والهالك واختبارات البطارية اللاحقة."], ["الأسئلة الشائعة", "هل يخفض ورق الطلاء الزجاجي طاقة فرن التجفيف؟", "هو ادعاء Huayang بلا بيانات كمية. يلزم اختبار على الخط نفسه للإنتاج المقبول والسرعة والرطوبة والفرن والطاقة والجودة والهالك؛ ولا يغني ادعاء المادة عن تحقق اللوح والبطارية."]],
+    parameters: [["الطاقة لكل إنتاج", "استخدم حدود الكهرباء أو الغاز أو البخار نفسها ومقام الإنتاج المقبول نفسه."], ["السرعة والإنتاج", "سجل السرعة المضبوطة والفعلية والإنتاج المقبول وخسائر التوقف."], ["الرطوبة والفرن", "ثبّت نقاط العينات وحرارة المناطق وزمن المكوث."], ["قبول اللوح", "استخدم معايير المظهر والتجانس والالتصاق المعتمدة."], ["الهالك والبطارية", "افصل نسبة الهالك عن اختبار البطارية الكاملة."]],
+    checklist: ["سرعة الخط ووصفة المعجون", "دفعة الورق وحالة الرطوبة", "الحرارة وزمن المكوث وحدود الطاقة", "معايير اللوح والهالك", "نطاق تحقق البطارية الكاملة"],
+    inquiry: ["تقييم تقني لورق طلاء AGM", "هل تحكمون على الادعاء بالطاقة لكل إنتاج أم بتغير حرارة الفرن؟ أرسلوا سرعة الخط وحدود الطاقة والرطوبة ومتطلبات قبول اللوح."]
+  }
+};
+
+for (const [locale, topic] of Object.entries(agmPastingPaperEnergyTopics)) {
+  secondaryResourceData[locale].topics.agmPastingPaperEnergyValidation = topic;
+}
+
 const supplyChainReferences = [
   ["Changzhou Haixin", "https://www.cz-haixin.com.cn/about.html"],
   ["Huayang Industrial", "https://www.huayangagm.com/product/5/"],
@@ -998,7 +1144,9 @@ const arabicReferences = {
     ["القرار التنفيذي (EU) 2026/2048", "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D2048"],
     ["المفوضية الأوروبية — المعايير المنسقة للبطاريات", "https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/eu-battery-regulation_en"]
   ],
-  dataCenterEvLowVoltageAgm: [["LEOCH at ELBC 2026", "https://www.leoch.com/newsroom/events/leoch-at-elbc-2026"]]
+  dataCenterEvLowVoltageAgm: [["LEOCH at ELBC 2026", "https://www.leoch.com/newsroom/events/leoch-at-elbc-2026"]],
+  aiDataCenterBackupPowerLayers: [["Vision Group — LiLic Sidecar at YOTTA 2026", "https://www.vision-batt.com/en/news/show/6268vahkzaq.html"]],
+  agmPastingPaperEnergyValidation: [["Huayang — Orange Series AGM Separator", "https://www.huayangagm.com/product/15.html"]]
 };
 
 function articleImage(kind, title) {
@@ -1016,6 +1164,10 @@ function buildArticle(locale, kind, localeData) {
   const definitions = Object.entries(articleDefinitions);
   const relatedKinds = kind === "dataCenterBackupPowerAgmSeparator"
     ? ["upsVrlaTechnologySelection", "agmSeparatorPerformanceConsistency", "keyTechnicalParameters", "agmSeparatorManufacturingQualityDelivery"]
+    : kind === "aiDataCenterBackupPowerLayers"
+      ? ["dataCenterBackupPowerAgmSeparator", "upsVrlaTechnologySelection", "keyTechnicalParameters", "agmSeparatorPerformanceConsistency"]
+    : kind === "agmPastingPaperEnergyValidation"
+      ? ["agmSeparatorEnergyDataDelivery", "agmSeparatorPerformanceConsistency", "keyTechnicalParameters", "agmSeparatorManufacturingQualityDelivery"]
     : kind === "dataCenterEvLowVoltageAgm"
       ? ["dataCenterBackupPowerAgmSeparator", "upsVrlaTechnologySelection", "agmStartStopBatteryProcurement", "keyTechnicalParameters"]
     : definitions.map(([candidate]) => candidate).filter((candidate) => candidate !== kind).slice(0, 4);
@@ -1056,7 +1208,13 @@ function buildArticle(locale, kind, localeData) {
       items: topic.checklist
     },
     related: { eyebrow: common.relatedEyebrow, title: common.relatedTitle, items: related },
-    inquiry: {
+    inquiry: topic.inquiry ? {
+      eyebrow: common.inquiryEyebrow,
+      title: topic.inquiry[0],
+      text: topic.inquiry[1],
+      checklist: topic.checklist.slice(0, 4),
+      placeholders: { message: topic.checklist.join(", ") }
+    } : {
       eyebrow: common.inquiryEyebrow,
       title: common.inquiryTitle,
       text: common.inquiryText,
@@ -1090,6 +1248,33 @@ function buildArticle(locale, kind, localeData) {
       title: topic.title,
       text: topic.intro,
       items: [["LEOCH at ELBC 2026", "https://www.leoch.com/newsroom/events/leoch-at-elbc-2026"]]
+    };
+  }
+
+  if (kind === "aiDataCenterBackupPowerLayers") {
+    result.references = {
+      eyebrow: localeData.ui.reference,
+      title: topic.title,
+      text: topic.intro,
+      items: [["Vision Group — LiLic Sidecar at YOTTA 2026", "https://www.vision-batt.com/en/news/show/6268vahkzaq.html"]]
+    };
+  }
+
+  if (kind === "agmPastingPaperEnergyValidation") {
+    result.references = {
+      eyebrow: localeData.ui.reference,
+      title: topic.title,
+      text: topic.intro,
+      items: [["Huayang — Orange Series AGM Separator", "https://www.huayangagm.com/product/15.html"]]
+    };
+    result.formats = {
+      eyebrow: common.formatsEyebrow,
+      title: topic.sections[2][1],
+      items: [
+        [topic.parameters[0][0], topic.parameters[0][1], "/images/agm-hero-production-1600.webp", topic.parameters[0][0]],
+        [topic.parameters[3][0], topic.parameters[3][1], "/images/agm-quality-control-1200.webp", topic.parameters[3][0]],
+        [topic.parameters[4][0], topic.parameters[4][1], "/images/evidence/quality-electrical-resistance-test-01.webp", topic.parameters[4][0]]
+      ]
     };
   }
 

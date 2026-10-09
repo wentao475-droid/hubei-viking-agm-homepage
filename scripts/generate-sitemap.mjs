@@ -289,6 +289,22 @@ const pages = [
     changefreq: "monthly",
     lastmod: "2026-09-10",
     secondaryLastmod: "2026-10-03"
+  },
+  {
+    en: "/blog/ai-data-center-backup-power-1mw-60-seconds/",
+    zh: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-10-08",
+    secondaryLastmod: "2026-10-08"
+  },
+  {
+    en: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/",
+    zh: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-10-09",
+    secondaryLastmod: "2026-10-09"
   }
 ];
 
