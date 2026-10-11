@@ -10,6 +10,7 @@ type InquiryFormProps = {
   defaultApplication?: string;
   defaultInterestedProduct?: string;
   messagePlaceholder?: string;
+  submitLabel?: string;
   variant?: "agm" | "thermalInsulation";
 };
 
@@ -456,6 +457,7 @@ export function InquiryForm({
   defaultApplication = "",
   defaultInterestedProduct = "",
   messagePlaceholder,
+  submitLabel,
   variant = "agm"
 }: InquiryFormProps) {
   const baseCopy = copy[lang];
@@ -657,7 +659,7 @@ export function InquiryForm({
         disabled={isSubmitting}
         className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-signal px-6 py-3.5 text-base font-semibold text-white transition hover:bg-ink disabled:cursor-not-allowed disabled:bg-steel sm:w-auto"
       >
-        {isSubmitting ? t.submitting : t.submit}
+        {isSubmitting ? t.submitting : submitLabel || t.submit}
       </button>
     </form>
   );

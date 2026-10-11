@@ -2,6 +2,7 @@ import { additionalResourceTopics } from "./additional-resource-topics.mjs";
 import { arabicResourceData } from "./arabic-resources.mjs";
 import { completeResourceSections, completedResourceKinds } from "./resource-section-completions.mjs";
 import { resourceComparisons } from "./resource-comparisons.mjs";
+import { agmSafetyTestTopics } from "./agm-safety-test-topics.mjs";
 
 export const secondaryResourceLocales = ["vi", "ko", "ja", "es", "pt", "ru", "ar"];
 
@@ -24,11 +25,13 @@ export const articleKinds = [
   "dataCenterEvLowVoltageAgm",
   "aiDataCenterBackupPowerLayers",
   "agmPastingPaperEnergyValidation",
+  "agmBatteryDamageDemoSafetyTest",
   "agmSeparatorSupplyChain",
   "agmStartStopBatteryProcurement"
 ];
 
 export const articleDefinitions = {
+  agmBatteryDamageDemoSafetyTest: ["agm-battery-extreme-damage-demo-vs-safety-test", "industryApplications", "2026-10-10", "2026-10-10"],
   agmPastingPaperEnergyValidation: ["agm-fiberglass-pasting-paper-drying-energy-validation", "manufacturingQuality", "2026-10-09", "2026-10-09"],
   aiDataCenterBackupPowerLayers: ["ai-data-center-backup-power-1mw-60-seconds", "industryApplications", "2026-10-08", "2026-10-08"],
   agmSeparatorSupplyChain: ["agm-separator-supply-chain-from-glass-block-to-finished-roll", "manufacturingQuality", "2026-09-01", "2026-10-03"],
@@ -52,6 +55,7 @@ export const articleDefinitions = {
 };
 
 const images = {
+  agmBatteryDamageDemoSafetyTest: ["/images/agm-quality-control-1200.webp", 1200, 900],
   agmPastingPaperEnergyValidation: ["/images/agm-quality-control-1200.webp", 1200, 900],
   aiDataCenterBackupPowerLayers: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
   agmSeparatorSupplyChain: ["/images/agm-hero-production-1600.webp", 1600, 1000],
@@ -1088,6 +1092,10 @@ for (const [locale, topic] of Object.entries(agmPastingPaperEnergyTopics)) {
   secondaryResourceData[locale].topics.agmPastingPaperEnergyValidation = topic;
 }
 
+for (const [locale, topic] of Object.entries(agmSafetyTestTopics)) {
+  secondaryResourceData[locale].topics.agmBatteryDamageDemoSafetyTest = topic;
+}
+
 const supplyChainReferences = [
   ["Changzhou Haixin", "https://www.cz-haixin.com.cn/about.html"],
   ["Huayang Industrial", "https://www.huayangagm.com/product/5/"],
@@ -1147,6 +1155,7 @@ const arabicReferences = {
   dataCenterEvLowVoltageAgm: [["LEOCH at ELBC 2026", "https://www.leoch.com/newsroom/events/leoch-at-elbc-2026"]],
   aiDataCenterBackupPowerLayers: [["Vision Group — LiLic Sidecar at YOTTA 2026", "https://www.vision-batt.com/en/news/show/6268vahkzaq.html"]],
   agmPastingPaperEnergyValidation: [["Huayang — Orange Series AGM Separator", "https://www.huayangagm.com/product/15.html"]]
+  ,agmBatteryDamageDemoSafetyTest: [["Rostec — TOPBAT demonstration in Minsk", "https://www.rostec.ru/en/media/news/rostec-showcases-an-everlasting-batteries-for-civil-and-military-equipment-in-minsk-/"]]
 };
 
 function articleImage(kind, title) {
@@ -1168,6 +1177,8 @@ function buildArticle(locale, kind, localeData) {
       ? ["dataCenterBackupPowerAgmSeparator", "upsVrlaTechnologySelection", "keyTechnicalParameters", "agmSeparatorPerformanceConsistency"]
     : kind === "agmPastingPaperEnergyValidation"
       ? ["agmSeparatorEnergyDataDelivery", "agmSeparatorPerformanceConsistency", "keyTechnicalParameters", "agmSeparatorManufacturingQualityDelivery"]
+    : kind === "agmBatteryDamageDemoSafetyTest"
+      ? ["whatIsAgmSeparator", "agmSeparatorPressureRetention", "keyTechnicalParameters", "agmSeparatorThirdPole"]
     : kind === "dataCenterEvLowVoltageAgm"
       ? ["dataCenterBackupPowerAgmSeparator", "upsVrlaTechnologySelection", "agmStartStopBatteryProcurement", "keyTechnicalParameters"]
     : definitions.map(([candidate]) => candidate).filter((candidate) => candidate !== kind).slice(0, 4);
@@ -1274,6 +1285,24 @@ function buildArticle(locale, kind, localeData) {
         [topic.parameters[0][0], topic.parameters[0][1], "/images/agm-hero-production-1600.webp", topic.parameters[0][0]],
         [topic.parameters[3][0], topic.parameters[3][1], "/images/agm-quality-control-1200.webp", topic.parameters[3][0]],
         [topic.parameters[4][0], topic.parameters[4][1], "/images/evidence/quality-electrical-resistance-test-01.webp", topic.parameters[4][0]]
+      ]
+    };
+  }
+
+  if (kind === "agmBatteryDamageDemoSafetyTest") {
+    result.references = {
+      eyebrow: localeData.ui.reference,
+      title: topic.title,
+      text: topic.intro,
+      items: [["Rostec — TOPBAT demonstration in Minsk", "https://www.rostec.ru/en/media/news/rostec-showcases-an-everlasting-batteries-for-civil-and-military-equipment-in-minsk-/"]]
+    };
+    result.formats = {
+      eyebrow: common.formatsEyebrow,
+      title: topic.sections[2][1],
+      items: [
+        [topic.sections[0][1], topic.sections[0][2], "/images/applications/ups-vrla-battery-application-1200.webp", topic.sections[0][1]],
+        [topic.sections[2][1], topic.sections[2][2], "/images/agm-quality-control-1200.webp", topic.sections[2][1]],
+        [topic.sections[3][1], topic.sections[3][2], "/images/viking-finished-separator-roll-900.webp", topic.sections[3][1]]
       ]
     };
   }
@@ -1385,7 +1414,7 @@ export function buildSecondaryArticleSeo(locale, kind) {
     articleDescription: topic.summary,
     breadcrumbs: [localeData.nav.company, localeData.nav.resources, topic.title],
     datePublished: articleDefinitions[kind][2],
-    dateModified: locale === "ar" || completedResourceKinds.includes(kind) || ["agmSeparatorSupplyChain", "agmStartStopBatteryProcurement", "agmSeparatorThirdPole", "agmSeparatorEnergyDataDelivery", "en18060BatteryStandard"].includes(kind)
-      ? "2026-10-04" : articleDefinitions[kind][3] ?? "2026-08-05"
+    dateModified: articleDefinitions[kind][3] ?? (locale === "ar" || completedResourceKinds.includes(kind) || ["agmSeparatorSupplyChain", "agmStartStopBatteryProcurement", "agmSeparatorThirdPole", "agmSeparatorEnergyDataDelivery", "en18060BatteryStandard"].includes(kind)
+      ? "2026-10-04" : "2026-08-05")
   };
 }

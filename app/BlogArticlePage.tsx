@@ -33,7 +33,8 @@ export type BlogArticleKind =
   | "en18060BatteryStandard"
   | "dataCenterEvLowVoltageAgm"
   | "aiDataCenterBackupPowerLayers"
-  | "agmPastingPaperEnergyValidation";
+  | "agmPastingPaperEnergyValidation"
+  | "agmBatteryDamageDemoSafetyTest";
 type ArticlePageData = {
   homePath: string;
   languagePath: string;
@@ -3816,6 +3817,55 @@ const agmPastingPaperReferenceItems: Array<[string, string]> = [
   ["华阳实业—华阳橙色系列 AGM 隔板", "https://www.huayangagm.com/product/15.html"]
 ];
 
+const agmBatteryDamageDemoReferenceItems: Array<[string, string]> = [
+  ["Rostec — TOPBAT demonstration in Minsk, 1 October 2026", "https://www.rostec.ru/en/media/news/rostec-showcases-an-everlasting-batteries-for-civil-and-military-equipment-in-minsk-/"]
+];
+
+const agmBatteryDamageDemoSafetyTestCopy = {
+  en: {
+    homePath: "/", languagePath: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", quote: "Request AGM Absorption & Wet-State Data",
+    nav: { company: "Company", quality: "Quality" },
+    hero: { eyebrow: "AGM Battery Safety Test", title: "A Battery Still Powers a Load After Fire, Cutting or Gunfire: Safety Test or Demonstration?", subtitle: "If a punctured battery can still light a lamp, does that make it safer? It shows a phenomenon under one disclosed scenario—not a standardized safety conclusion.", secondary: "Review the evidence boundary", image: { src: "/images/agm-quality-control-1200.webp", alt: "AGM separator laboratory quality checks used to document material test conditions", width: 1200, height: 900 } },
+    intro: ["Rostec's official page dated 1 October 2026 presents TOPBAT EFB, AGM, AQUA AGM and AGEL products. It says TOPBAT AGM batteries were placed in a fish bowl, burnt, drilled, power-sawn and shot through, and that a damaged battery still showed the presence of power. The same page attributes −50 to +50 °C operation and deep-discharge resistance to the product range.", "Every statement above remains Rostec or the related company's own claim. The public page does not disclose sample configuration, state of charge, electrical load, duration, temperature rise, leakage quantity, retained capacity, a third-party report or a standard test method. Viking did not participate in the demonstration and does not possess its test results."],
+    sections: [
+      { eyebrow: "Official disclosure", title: "What the Rostec/TOPBAT demonstration actually shows", text: "The official page describes a specific corporate demonstration involving TOPBAT AGM batteries and several forms of damage. It reports continued presence of power after damage. That observation does not establish intact performance, absence of hazard, certification or the behavior of other AGM, VRLA or lead-acid batteries." },
+      { eyebrow: "Missing conditions", title: "The public page omits the conditions needed to reproduce the result", text: "A review cannot reconstruct the sample model and quantity, capacity and age, state of charge, open-circuit voltage, connected load, damage location and dimensions, sequence, test duration, surface and ambient temperature, leakage measurement, voltage and retained-capacity trend, acceptance criteria, laboratory or standard method." },
+      { eyebrow: "Three evidence levels", title: "Separate a visual phenomenon from a standardized battery test and a system-safety conclusion", text: "A lamp remaining on or voltage remaining present is a visual observation at one point in time. A standardized battery test defines samples, conditioning, method, duration, instruments and pass/fail metrics. A system-safety conclusion also needs enclosure, wiring, protection, installation, ventilation, operating duty and foreseeable fault scenarios." },
+      { eyebrow: "AGM separator boundary", title: "Electrolyte absorption and retention matter, but the separator does not decide battery safety alone", text: "An AGM separator's porous glass-fiber network can absorb and retain electrolyte under defined wetting and compression conditions. The outcome of a damaged battery also depends on plate design, electrolyte quantity, compression, case and valve design, terminals, connections, charging, load and complete-battery construction. Material data are one input, not a safety guarantee." },
+      { eyebrow: "Reproducible checklist", title: "Record seven groups of conditions before comparing an extreme-damage result", text: "Identify the sample and control; state of charge; electrical load; damage method, location and geometry; duration; temperature, leakage and retained electrical result; and the governing test method and original report. Without these, a dramatic clip remains a demonstration rather than a repeatable validation package." },
+      { eyebrow: "FAQ / GEO", title: "Does an AGM battery still working after cutting or puncture prove it is safe?", text: "No. The Rostec case is a company-published demonstration. The public page lacks key test conditions, and continued power does not mean performance remained intact or risk was absent. A safety conclusion needs a defined method, measured thermal, leakage and electrical outcomes, and complete-battery or system evaluation." },
+      { eyebrow: "FAQ / GEO", title: "Can an AGM separator alone determine battery safety?", text: "No. The separator is one material input. Absorption, electrolyte retention, wet-state behavior and compression data can support a design review, but plates, acid quantity, enclosure, valve, electrical protection, assembly and complete-battery testing remain necessary." }
+    ],
+    parameters: [["Sample and control", "Record model, rated capacity, age, quantity, preconditioning and comparison sample."], ["State of charge", "Record SOC, resting voltage, charging history and stabilization time."], ["Load and damage", "Define current or load, tool or projectile, location, dimensions, depth and sequence."], ["Duration and temperature", "Measure from damage initiation to end; log surface, terminal and ambient temperature."], ["Leakage and retained result", "Measure leakage, voltage trend, delivered energy or retained capacity and the acceptance limit."], ["Method and report", "Name the standard or internal method, laboratory, instruments, calibration and original report."]],
+    formats: { eyebrow: "Evidence levels", title: "Do not merge three different conclusions", items: [["Observed phenomenon", "A damaged sample still shows voltage or powers a stated load for a stated time.", "/images/applications/ups-vrla-battery-application-1200.webp", "Battery installation illustrating an operating load that must be defined"], ["Standardized battery test", "Samples, conditioning, damage, duration, measurements and acceptance criteria are documented.", "/images/agm-quality-control-1200.webp", "Laboratory quality checks illustrating documented test conditions"], ["System-safety conclusion", "Battery, enclosure, protection, wiring, installation and fault response are evaluated together.", "/images/evidence/quality-electrical-resistance-test-01.webp", "Electrical test setup illustrating a separate system evidence layer"]] },
+    checklist: { eyebrow: "Test-review checklist", title: "Conditions required for a reviewable claim", text: "Use the same signed protocol for every sample and control. Report raw observations as well as the acceptance decision.", items: ["Sample model, capacity, age, quantity and control", "State of charge, resting voltage and charging history", "Electrical load before, during and after damage", "Damage method, location, geometry and sequence", "Duration and stop condition", "Temperature, leakage, voltage and retained-capacity change", "Test method, instruments, laboratory and original report"] },
+    references: { eyebrow: "Official source checked", title: "Rostec page accessed and archived on 10 October 2026", text: "The product range, temperature and deep-discharge statements, and damage demonstration are attributed only to Rostec and the related company. The page is not a third-party certification or a standardized safety report.", items: agmBatteryDamageDemoReferenceItems },
+    related: { eyebrow: "Related technical pages", title: "Continue with existing AGM material and test pages", items: [["What Is an AGM Separator?", "/blog/what-is-agm-separator/"], ["AGM Separator Wet-State Pressure Retention", "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"], ["AGM Separator Testing", "/quality-control/agm-separator-testing/"]] },
+    inquiry: { ...articleCopy.en.inquiry, eyebrow: "One test-boundary question", title: "Which boundary do you want to see first: duration, load or retained capacity?", text: "Share the battery design, separator compression and the material test method you need to compare. Viking can provide available AGM separator absorption and wet-state performance information or test explanations; separator data do not guarantee complete-battery safety.", checklist: ["Battery application and construction", "Target separator dimensions and compression", "Absorption or wet-state data needed", "Test method and project stage"], placeholders: { ...articleCopy.en.inquiry.placeholders, message: "Which boundary first—duration, load or retained capacity? Include battery construction, separator compression and the test method to compare." } }, footer: articleCopy.en.footer
+  },
+  zh: {
+    homePath: "/zh/", languagePath: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", quote: "索取 AGM 隔板吸液与湿态性能资料",
+    nav: { company: "公司", quality: "质量" },
+    hero: { eyebrow: "AGM 电池安全测试", title: "电池被烧、切、射击还能工作：这是安全测试，还是传播演示？", subtitle: "电池被打穿还能亮灯，就等于它更安全吗？这只能说明某个公开场景下出现了某种现象，不能直接变成标准化安全结论。", secondary: "查看证据边界", image: { src: "/images/agm-quality-control-1200.webp", alt: "用于记录材料测试条件的 AGM 隔板实验室质量检测", width: 1200, height: 900 } },
+    intro: ["Rostec 官方页面于 2026 年 10 月 1 日展示 TOPBAT EFB、AGM、AQUA AGM 和 AGEL 产品。页面称 TOPBAT AGM 电池被放入鱼缸、燃烧、钻孔、电锯切割和小型武器射击后，受损电池仍显示有电；同页还将 −50℃ 至 50℃工作和耐深放归于该产品系列。", "以上均按 Rostec 或相关企业自述处理。公开页面没有披露样品配置、荷电状态、电气载荷、持续时间、温升、泄漏量、剩余容量、第三方报告或标准测试方法。维京未参与这次演示，也不拥有其测试结果。"],
+    sections: [
+      { eyebrow: "官方披露", title: "Rostec/TOPBAT 演示实际展示了什么", text: "官方页面描述的是 TOPBAT AGM 电池在特定传播项目中的受损现象，并称受损后仍有电。它没有证明性能完整、没有风险、获得认证，也不能代表其他 AGM、VRLA 或铅酸电池会有相同结果。" },
+      { eyebrow: "公开条件缺口", title: "页面缺少让结果可复核的关键测试条件", text: "无法从页面还原样品型号与数量、容量与使用状态、荷电状态、开路电压、连接载荷、损伤位置与尺寸、操作顺序、试验时长、表面与环境温度、泄漏测量、电压与剩余容量变化、判定标准、实验室或标准方法。" },
+      { eyebrow: "三层证据", title: "区分现象展示、标准化电池测试和系统安全结论", text: "亮灯或仍有电，只是某一时点的现象。标准化电池测试需要明确样品、预处理、方法、时长、仪器和通过指标。系统安全结论还要纳入壳体、布线、保护、安装、通风、运行任务和可预见故障场景。" },
+      { eyebrow: "AGM 隔板边界", title: "吸液与保液很重要，但隔板不能单独决定电池安全", text: "AGM 隔板的多孔玻璃纤维网络可在明确的湿润与压缩条件下吸收并保持电解液。受损电池的结果还取决于极板设计、电解液量、压缩、壳体与阀、端子与连接、充电、载荷和整电池结构。材料数据是设计输入，不是安全保证。" },
+      { eyebrow: "可复核清单", title: "比较极端损伤结果前，至少记录七类条件", text: "明确样品与对照、荷电状态、电气载荷、损伤方式/位置/几何、持续时间、温度/泄漏/剩余电气结果，以及适用的测试方法与原始报告。缺少这些条件，画面再强烈也仍是演示，不是可重复的验证包。" },
+      { eyebrow: "FAQ / GEO", title: "AGM 电池被切割或穿刺后还能工作，能证明它安全吗？", text: "不能。Rostec 个案是企业发布的演示，公开页面缺少关键测试条件；仍供电也不等于性能完整或没有风险。安全结论需要明确方法、温升、泄漏和电气结果，并结合整电池或系统验证。" },
+      { eyebrow: "FAQ / GEO", title: "AGM 隔板能否单独决定电池安全？", text: "不能。隔板只是材料输入的一部分。吸液、保液、湿态表现和压力条件可以支持设计评审，但极板、电解液量、壳体、阀、电气保护、装配和整电池测试同样不可缺少。" }
+    ],
+    parameters: [["样品与对照", "记录型号、额定容量、使用状态、数量、预处理和对照样。"], ["荷电状态", "记录 SOC、静置电压、充电历史和稳定时间。"], ["载荷与损伤", "明确电流或负载、工具或弹体、位置、尺寸、深度和顺序。"], ["持续时间与温度", "从开始损伤记录到结束，并测量表面、端子和环境温度。"], ["泄漏与剩余结果", "测量泄漏量、电压曲线、输出能量或剩余容量及判定限值。"], ["方法与报告", "标明标准或企业方法、实验室、仪器、校准和原始报告。"]],
+    formats: { eyebrow: "证据层级", title: "不要把三种不同结论混在一起", items: [["现象展示", "受损样品在明确载荷和时长下仍显示电压或供电。", "/images/applications/ups-vrla-battery-application-1200.webp", "说明载荷必须被定义的电池应用场景"], ["标准化电池测试", "样品、预处理、损伤方式、时长、测量与通过条件均有记录。", "/images/agm-quality-control-1200.webp", "说明测试条件需要记录的实验室质量检查"], ["系统安全结论", "把电池、壳体、保护、布线、安装和故障响应一并验证。", "/images/evidence/quality-electrical-resistance-test-01.webp", "说明系统证据另有层级的电气测试装置"]] },
+    checklist: { eyebrow: "测试复核清单", title: "让结论可复核所需的条件", text: "所有样品和对照共用同一份签字试验方案，同时保留原始观察和最终判定。", items: ["样品型号、容量、使用状态、数量与对照", "荷电状态、静置电压与充电历史", "损伤前、过程中和损伤后的电气载荷", "损伤方式、位置、几何与顺序", "持续时间与停止条件", "温度、泄漏、电压和剩余容量变化", "测试方法、仪器、实验室与原始报告"] },
+    references: { eyebrow: "已核验官方来源", title: "2026 年 10 月 10 日重新访问并存档 Rostec 官方页面", text: "产品系列、温度与耐深放说法、极端损伤演示均只归因于 Rostec 及相关企业。该页面不是第三方认证或标准化安全测试报告。", items: agmBatteryDamageDemoReferenceItems },
+    related: { eyebrow: "真实站内链接", title: "继续查看现有 AGM 材料与测试页面", items: [["AGM 隔板是什么", "/zh/blog/what-is-agm-separator/"], ["AGM 隔板注酸与循环后的压力保持", "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"], ["AGM 隔板质量检测", "/zh/quality-control/agm-separator-testing/"]] },
+    inquiry: { ...articleCopy.zh.inquiry, eyebrow: "只问一个测试边界", title: "最想先看到哪一项测试边界：时长、载荷，还是剩余容量？", text: "请提供电池结构、隔板压缩条件及希望对照的材料测试方法。维京可沟通现有 AGM 隔板吸液、保液和湿态性能资料或测试说明；隔板数据不保证整电池安全。", checklist: ["电池应用与结构", "目标隔板尺寸与压缩条件", "所需吸液、保液或湿态资料", "测试方法与项目阶段"], placeholders: { ...articleCopy.zh.inquiry.placeholders, message: "最想先看时长、载荷还是剩余容量？请附电池结构、隔板压缩条件和希望对照的测试方法。" } }, footer: articleCopy.zh.footer
+  }
+} as const;
+
 const agmPastingPaperEnergyValidationCopy = {
   en: {
     homePath: "/", languagePath: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", quote: "Request Technical Review",
@@ -4012,6 +4062,8 @@ export function BlogArticlePage({
                                         ? aiDataCenterBackupPowerLayersCopy[primaryLang]
                                         : page === "agmPastingPaperEnergyValidation"
                                           ? agmPastingPaperEnergyValidationCopy[primaryLang]
+                                        : page === "agmBatteryDamageDemoSafetyTest"
+                                          ? agmBatteryDamageDemoSafetyTestCopy[primaryLang]
           : articleCopy[primaryLang]);
   const localizedUi =
     lang === "en"
@@ -4095,6 +4147,8 @@ export function BlogArticlePage({
                                         ? ["vision-disclosure", "duty-layers", "architecture", "agm-applicability", "evidence-boundary", "faq"]
                                         : page === "agmPastingPaperEnergyValidation"
                                           ? ["claim-source", "missing-conditions", "same-line-test", "plate-acceptance", "validation-boundary", "implementation-checklist", "faq-geo"]
+                                        : page === "agmBatteryDamageDemoSafetyTest"
+                                          ? ["official-disclosure", "missing-conditions", "evidence-levels", "agm-separator-boundary", "reviewable-checklist", "faq-damage", "faq-separator"]
       : ["definition", "function", "parameters"];
   const heroImage =
     t.hero.image ?? {
@@ -4112,7 +4166,7 @@ export function BlogArticlePage({
         lang={lang}
         homePath={t.homePath}
         languagePath={t.languagePath}
-        quoteLabel={localizedUi.sample}
+        quoteLabel={page === "agmBatteryDamageDemoSafetyTest" ? t.quote : localizedUi.sample}
       />
 
       <section className="relative overflow-hidden bg-white px-4 pb-20 pt-32 sm:px-6 sm:pt-36 lg:px-8">
@@ -4134,7 +4188,7 @@ export function BlogArticlePage({
                 href="#contact"
                 className="inline-flex min-h-14 w-full min-w-0 items-center justify-center gap-2 rounded-md bg-signal px-6 py-3.5 text-center text-base font-semibold leading-6 text-white shadow-sm transition hover:bg-ink sm:w-auto"
               >
-                <span className="min-w-0 flex-1 whitespace-normal break-words">{localizedUi.sampleTitle}</span>
+                <span className="min-w-0 flex-1 whitespace-normal break-words">{page === "agmBatteryDamageDemoSafetyTest" ? t.quote : localizedUi.sampleTitle}</span>
                 <Send className="shrink-0" size={18} />
               </a>
               <a
@@ -4373,7 +4427,8 @@ export function BlogArticlePage({
             page === "agmSeparatorBatchProcessControl" ||
             page === "agmSeparatorSupplyChain" ||
             page === "aiDataCenterBackupPowerLayers" ||
-            page === "agmPastingPaperEnergyValidation"
+            page === "agmPastingPaperEnergyValidation" ||
+            page === "agmBatteryDamageDemoSafetyTest"
               ? "lg:grid-cols-3"
               : ""
           }`}
@@ -4491,7 +4546,7 @@ export function BlogArticlePage({
         </div>
       </section>
 
-      {page !== "aiDataCenterBackupPowerLayers" && page !== "agmPastingPaperEnergyValidation" && <section className="px-4 py-16 sm:px-6 lg:px-8">
+      {page !== "aiDataCenterBackupPowerLayers" && page !== "agmPastingPaperEnergyValidation" && page !== "agmBatteryDamageDemoSafetyTest" && <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
           <a
             href={asset(
@@ -4589,6 +4644,7 @@ export function BlogArticlePage({
                 : "AGM separator sample and specification match"
             }
             messagePlaceholder={t.inquiry.placeholders.message}
+            submitLabel={page === "agmBatteryDamageDemoSafetyTest" ? t.quote : undefined}
           />
         </div>
       </section>

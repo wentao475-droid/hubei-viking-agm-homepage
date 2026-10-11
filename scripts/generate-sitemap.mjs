@@ -305,6 +305,14 @@ const pages = [
     changefreq: "monthly",
     lastmod: "2026-10-09",
     secondaryLastmod: "2026-10-09"
+  },
+  {
+    en: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/",
+    zh: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/",
+    priority: "0.75",
+    changefreq: "monthly",
+    lastmod: "2026-10-10",
+    secondaryLastmod: "2026-10-10"
   }
 ];
 

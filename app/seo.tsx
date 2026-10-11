@@ -2114,6 +2114,11 @@ const agmPastingPaperEnergyValidationSeo = {
   zh: { path: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 玻纤涂板纸能省多少烘干能耗？验证条件与对照方法 | 湖北维京AGM", description: "华阳页面提出降低窑温或停窑主张但未给量化数据；本文说明 AGM 玻纤涂板纸同线能耗、含水、极板质量和整电池验证方法。", keywords: ["AGM 玻纤涂板纸", "铅酸电池涂板纸节能", "涂板纸干燥窑温度", "玻纤涂板纸替代植物纤维", "AGM 涂板工艺验证"], pageName: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", articleDescription: "以华阳现有产品页的企业主张为边界，说明 AGM 玻纤涂板纸节能主张需要怎样做同线对照。", breadcrumbs: ["首页", "资料", "AGM 玻纤涂板纸节能验证"] }
 } as const;
 
+const agmBatteryDamageDemoSafetyTestSeo = {
+  en: { path: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", alternatePath: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "AGM Battery Damage Demo vs Safety Test | Viking AGM", description: "Why a battery powering a load after fire, cutting or puncture is not a safety conclusion: verify sample, load, duration, temperature, leakage, capacity and method.", keywords: ["AGM battery safety test", "AGM battery leakage test", "lead-acid battery after puncture", "AGM separator electrolyte absorption", "battery extreme damage test"], pageName: "A Battery Still Powers a Load After Fire, Cutting or Gunfire: Safety Test or Demonstration?", articleDescription: "A source-bounded review of Rostec's TOPBAT demonstration and the conditions required to separate a visual phenomenon from standardized battery testing and a system-safety conclusion.", breadcrumbs: ["Home", "Resources", "AGM Battery Damage Demo vs Safety Test"] },
+  zh: { path: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", alternatePath: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 电池安全测试：极端损伤演示不等于安全验证 | 湖北维京AGM", description: "Rostec 的 TOPBAT 燃烧、切割与射击演示能说明什么？用样品、荷电状态、载荷、时长、温升、泄漏、剩余容量和方法边界判断 AGM 电池安全测试。", keywords: ["AGM 电池安全测试", "AGM 电池漏液测试", "铅酸电池穿刺后还能用吗", "AGM 隔板吸液原理", "蓄电池极端测试"], pageName: "电池被烧、切、射击还能工作：这是安全测试，还是传播演示？", articleDescription: "以 Rostec TOPBAT 官方演示为案例，区分受损现象、标准化电池测试和系统安全结论，并说明 AGM 隔板的材料边界。", breadcrumbs: ["首页", "资料", "AGM 电池安全测试边界"] }
+} as const;
+
 const agmGlassFiberVsPvcSeparatorSeo = {
   en: {
     path: "/blog/agm-glass-fiber-vs-pvc-battery-separator/",
@@ -2954,6 +2959,11 @@ export function buildAiDataCenterBackupPowerLayersMetadata(lang: Lang): Metadata
 export function buildAgmPastingPaperEnergyValidationMetadata(lang: Lang): Metadata {
   const current = seoContent("agmPastingPaperEnergyValidation", lang, agmPastingPaperEnergyValidationSeo[lang]);
   return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmPastingPaperEnergyValidation"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: QUALITY_PREVIEW_IMAGE, width: 1200, height: 900 } });
+}
+
+export function buildAgmBatteryDamageDemoSafetyTestMetadata(lang: Lang): Metadata {
+  const current = seoContent("agmBatteryDamageDemoSafetyTest", lang, agmBatteryDamageDemoSafetyTestSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmBatteryDamageDemoSafetyTest"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: QUALITY_PREVIEW_IMAGE, width: 1200, height: 900 } });
 }
 
 export function buildAgmGlassFiberVsPvcSeparatorMetadata(
@@ -4796,6 +4806,30 @@ export function AgmPastingPaperEnergyValidationStructuredData({ lang }: { lang: 
   ]}} />;
 }
 
+const agmBatteryDamageDemoFaq = {
+  en: [
+    ["Does an AGM battery still working after cutting or puncture prove it is safe?", "No. The Rostec case is a company-published demonstration whose public page omits important test conditions. Continued power does not prove intact performance or absence of risk; defined thermal, leakage and electrical measurements plus complete-battery or system evaluation are required."],
+    ["Can an AGM separator alone determine battery safety?", "No. The separator is one material input. Absorption, electrolyte retention, wet-state behavior and compression data can support a design review, but plates, acid quantity, enclosure, valve, protection, assembly and complete-battery tests remain necessary."]
+  ],
+  zh: [
+    ["AGM 电池被切割或穿刺后还能工作，能证明它安全吗？", "不能。Rostec 个案是企业发布的演示，公开页面缺少重要测试条件；仍供电不等于性能完整或没有风险。需要明确温升、泄漏和电气测量，并结合整电池或系统验证。"],
+    ["AGM 隔板能否单独决定电池安全？", "不能。隔板只是材料输入的一部分。吸液、保液、湿态表现和压缩数据可支持设计评审，但极板、电解液量、壳体、阀、保护、装配和整电池测试仍不可缺少。"]
+  ]
+} as const;
+
+export function AgmBatteryDamageDemoSafetyTestStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("agmBatteryDamageDemoSafetyTest", lang, agmBatteryDamageDemoSafetyTestSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: QUALITY_PREVIEW_IMAGE, url, datePublished: "2026-10-10", dateModified: "2026-10-10", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM battery safety test", "AGM battery leakage test", "lead-acid battery puncture", "AGM separator electrolyte retention", "battery damage demonstration"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: agmBatteryDamageDemoFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
 export function AgmGlassFiberVsPvcSeparatorStructuredData({
   lang
 }: {
@@ -4962,18 +4996,18 @@ export function SecondaryArticleStructuredData({
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: current.language
       },
-      ...(kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation"
+      ...(kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
         ? [{
             "@type": "FAQPage",
             "@id": `${url}#faq`,
-            mainEntity: [{
+            mainEntity: (kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
               "@type": "Question",
-              name: secondaryResourceData[lang].topics[kind].sections[kind === "agmPastingPaperEnergyValidation" ? 6 : 5][1],
+              name: secondaryResourceData[lang].topics[kind].sections[sectionIndex][1],
               acceptedAnswer: {
                 "@type": "Answer",
-                text: secondaryResourceData[lang].topics[kind].sections[kind === "agmPastingPaperEnergyValidation" ? 6 : 5][2]
+                text: secondaryResourceData[lang].topics[kind].sections[sectionIndex][2]
               }
-            }]
+            }))
           }]
         : []),
       {

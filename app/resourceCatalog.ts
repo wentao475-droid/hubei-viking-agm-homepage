@@ -452,6 +452,23 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/",
       zh: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/"
     }
+  },
+  {
+    id: "agm-battery-damage-demo-safety-test",
+    category: "industryApplications",
+    publishedAt: "2026-10-10",
+    title: {
+      en: "AGM Battery Damage Demo vs Safety Test",
+      zh: "电池被烧、切、射击还能工作：安全测试还是传播演示？"
+    },
+    description: {
+      en: "Use sample, load, duration, temperature, leakage, retained capacity and method boundaries to separate a damage demonstration from safety validation.",
+      zh: "用样品、载荷、时长、温升、泄漏、剩余容量与方法边界，区分极端演示和标准化安全验证。"
+    },
+    href: {
+      en: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/",
+      zh: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/"
+    }
   }
 ];
 
@@ -476,6 +493,7 @@ const articleKindById: Record<string, string> = {
   ,"data-center-ev-low-voltage-lead-acid": "dataCenterEvLowVoltageAgm"
   ,"ai-data-center-backup-power-layers": "aiDataCenterBackupPowerLayers"
   ,"agm-pasting-paper-energy-validation": "agmPastingPaperEnergyValidation"
+  ,"agm-battery-damage-demo-safety-test": "agmBatteryDamageDemoSafetyTest"
 };
 
 for (const locale of secondaryResourceLocales as SiteLocale[]) {

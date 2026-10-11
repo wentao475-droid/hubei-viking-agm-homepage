@@ -199,6 +199,7 @@ const articleConstants = collectConstants("app/BlogArticlePage.tsx", [
   "dataCenterEvLowVoltageAgmCopy",
   "aiDataCenterBackupPowerLayersCopy",
   "agmPastingPaperEnergyValidationCopy",
+  "agmBatteryDamageDemoSafetyTestCopy",
   "agmSeparatorSupplyChainCopy",
   "agmStartStopBatteryProcurementCopy",
   "agmGlassFiberVsPvcSeparatorCopy"
@@ -231,6 +232,7 @@ const seoConstants = collectConstants("app/seo.tsx", [
   "dataCenterEvLowVoltageAgmSeo",
   "aiDataCenterBackupPowerLayersSeo",
   "agmPastingPaperEnergyValidationSeo",
+  "agmBatteryDamageDemoSafetyTestSeo",
   "agmSeparatorSupplyChainSeo",
   "agmStartStopBatteryProcurementSeo",
   "agmGlassFiberVsPvcSeparatorSeo"
@@ -530,6 +532,7 @@ const articles = {
   dataCenterEvLowVoltageAgm: articleConstants.dataCenterEvLowVoltageAgmCopy,
   aiDataCenterBackupPowerLayers: articleConstants.aiDataCenterBackupPowerLayersCopy,
   agmPastingPaperEnergyValidation: articleConstants.agmPastingPaperEnergyValidationCopy,
+  agmBatteryDamageDemoSafetyTest: articleConstants.agmBatteryDamageDemoSafetyTestCopy,
   agmSeparatorSupplyChain: articleConstants.agmSeparatorSupplyChainCopy,
   agmStartStopBatteryProcurement:
     articleConstants.agmStartStopBatteryProcurementCopy,
@@ -564,6 +567,7 @@ const articleSeo = {
   dataCenterEvLowVoltageAgm: seoConstants.dataCenterEvLowVoltageAgmSeo,
   aiDataCenterBackupPowerLayers: seoConstants.aiDataCenterBackupPowerLayersSeo,
   agmPastingPaperEnergyValidation: seoConstants.agmPastingPaperEnergyValidationSeo,
+  agmBatteryDamageDemoSafetyTest: seoConstants.agmBatteryDamageDemoSafetyTestSeo,
   agmSeparatorSupplyChain: seoConstants.agmSeparatorSupplyChainSeo,
   agmStartStopBatteryProcurement:
     seoConstants.agmStartStopBatteryProcurementSeo,
