@@ -1175,7 +1175,7 @@ const expectedSitemapLastmod = [
   ]),
   [
     "https://www.vikingagm.com/resources/",
-    "2026-07-26"
+    "2026-10-11"
   ],
   ...synchronizedLocaleCodes.flatMap((locale) => [
     [
@@ -1198,7 +1198,11 @@ const expectedSitemapLastmod = [
 ];
 
 const staleLastmod = expectedSitemapLastmod.filter(([url, date]) => {
-  if (new URL(url).pathname.startsWith("/ar/")) date = url.includes("/blog/") ? "2026-10-04" : "2026-10-05";
+  const pathname = new URL(url).pathname;
+  const kind = articleKinds.find((kind) => pathname.endsWith(`/blog/${articleDefinitions[kind][0]}/`));
+  if (kind && pathname.startsWith("/ar/")) date = articleDefinitions[kind][3] === "2026-10-11" ? "2026-10-11" : "2026-10-04";
+  else if (kind && articleDefinitions[kind][3]) date = articleDefinitions[kind][3];
+  else if (pathname.startsWith("/ar/")) date = url.includes("/blog/") ? "2026-10-04" : "2026-10-05";
   const block = sitemapUrlBlocks.find((entry) => entry.includes(`<loc>${url}</loc>`));
   return !block?.includes(`<lastmod>${date}</lastmod>`);
 });

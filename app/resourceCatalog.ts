@@ -411,8 +411,8 @@ export const resourceArticles: ResourceArticle[] = [
       zh: "为什么数据中心和电动车仍可能使用铅酸低压电源？"
     },
     description: {
-      en: "Compare data-center backup and EV low-voltage duties, with a clear boundary around LEOCH's corporate market perspective.",
-      zh: "比较数据中心备电与电动车低压任务，并明确理士企业市场观点的证据边界。"
+      en: "Compare data-center backup and EV low-voltage duties, with a clear boundary around所引企业's corporate market perspective.",
+      zh: "比较数据中心备电与电动车低压任务，并明确所引企业企业市场观点的证据边界。"
     },
     href: {
       en: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/",
@@ -428,8 +428,8 @@ export const resourceArticles: ResourceArticle[] = [
       zh: "1MW 只备 60 秒：AI 数据中心为什么先争快？"
     },
     description: {
-      en: "How transient, seconds-scale and minutes-scale backup duties differ, with explicit boundaries around Vision Group’s LiLic Sidecar disclosure.",
-      zh: "以雄韬 LiLic Sidecar 企业披露为案例，说明瞬态、秒级与分钟级备电任务及 AGM 证据边界。"
+      en: "How transient, seconds-scale and minutes-scale backup duties differ, with explicit boundaries around所引企业’s所述系统 disclosure.",
+      zh: "以所引企业所述系统企业披露为案例，说明瞬态、秒级与分钟级备电任务及 AGM 证据边界。"
     },
     href: {
       en: "/blog/ai-data-center-backup-power-1mw-60-seconds/",

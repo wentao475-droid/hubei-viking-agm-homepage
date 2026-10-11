@@ -2100,23 +2100,23 @@ const en18060BatteryStandardSeo = {
 } as const;
 
 const dataCenterEvLowVoltageAgmSeo = {
-  en: { path: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", alternatePath: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "Why Data Centers and EVs Still Use Lead-Acid Low-Voltage Power | Viking AGM", description: "Compare data-center VRLA backup and EV 12V AGM battery duties, selection boundaries and AGM separator validation inputs.", keywords: ["data center lead-acid battery", "data center VRLA battery", "EV 12V AGM battery", "Asia lead-acid battery market", "AGM separator applications"], pageName: "Why Data Centers and Electric Vehicles Still Use Lead-Acid Low-Voltage Power", articleDescription: "A system-boundary comparison of data-center backup and EV low-voltage battery duties, based on LEOCH's attributed corporate market perspective.", breadcrumbs: ["Home", "Resources", "Data Center and EV Low-Voltage Power"] },
-  zh: { path: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", alternatePath: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？| 湖北维京AGM", description: "比较数据中心 VRLA 备电与电动车 12V AGM 电池任务、选型边界及 AGM 隔板验证输入。", keywords: ["数据中心铅酸电池", "数据中心 VRLA 电池", "电动车 12V AGM 电池", "亚洲铅酸电池市场", "AGM 隔板应用"], pageName: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？", articleDescription: "基于理士企业市场观点，比较数据中心备电与电动车低压电池任务的系统边界。", breadcrumbs: ["首页", "资料", "数据中心与电动车低压电源"] }
+  en: { path: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", alternatePath: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "Why Data Centers and EVs Still Use Lead-Acid Low-Voltage Power | Viking AGM", description: "Compare data-center VRLA backup and EV 12V AGM battery duties, selection boundaries and AGM separator validation inputs.", keywords: ["data center lead-acid battery", "data center VRLA battery", "EV 12V AGM battery", "Asia lead-acid battery market", "AGM separator applications"], pageName: "Why Data Centers and Electric Vehicles Still Use Lead-Acid Low-Voltage Power", articleDescription: "A system-boundary comparison of data-center backup and EV low-voltage battery duties, based on the cited company's attributed corporate market perspective.", breadcrumbs: ["Home", "Resources", "Data Center and EV Low-Voltage Power"] },
+  zh: { path: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", alternatePath: "/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？| 湖北维京AGM", description: "比较数据中心 VRLA 备电与电动车 12V AGM 电池任务、选型边界及 AGM 隔板验证输入。", keywords: ["数据中心铅酸电池", "数据中心 VRLA 电池", "电动车 12V AGM 电池", "亚洲铅酸电池市场", "AGM 隔板应用"], pageName: "为什么 AI 数据中心和电动车仍可能需要铅酸低压电源？", articleDescription: "基于所引企业企业市场观点，比较数据中心备电与电动车低压电池任务的系统边界。", breadcrumbs: ["首页", "资料", "数据中心与电动车低压电源"] }
 } as const;
 
 const aiDataCenterBackupPowerLayersSeo = {
-  en: { path: "/blog/ai-data-center-backup-power-1mw-60-seconds/", alternatePath: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "1 MW for 60 Seconds: AI Data Center Backup Power | Viking AGM", description: "Why AI data center backup power separates transient, seconds-scale and minutes-scale duties—and why AGM data cannot prove system performance.", keywords: ["AI data center backup power", "1MW data center BBU", "800V HVDC backup power", "short-duration high-rate UPS battery", "AGM vs LFP data center backup"], pageName: "1 MW for 60 Seconds: Why AI Data Center Backup Power Prioritizes Speed Before Duration", articleDescription: "A system-level guide to layered AI data center backup power, using Vision Group’s LiLic Sidecar disclosure with explicit evidence boundaries.", breadcrumbs: ["Home", "Resources", "AI Data Center Backup Power"] },
-  zh: { path: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/", alternatePath: "/blog/ai-data-center-backup-power-1mw-60-seconds/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "1MW 只备 60 秒：AI 数据中心为何先争快再争久？| 湖北维京AGM", description: "解释 AI 数据中心备电为何区分瞬态、秒级和分钟级任务，以及 AGM 隔板参数为何不能证明系统表现。", keywords: ["AI 数据中心备电", "1MW 数据中心 BBU", "800V HVDC 备电", "短时高倍率 UPS 电池", "AGM 与 LFP 数据中心备电"], pageName: "1MW 只备 60 秒：AI 数据中心为什么先争“快”，再争“久”？", articleDescription: "以雄韬 LiLic Sidecar 企业披露为案例，解释 AI 数据中心分层备电与 AGM 隔板证据边界。", breadcrumbs: ["首页", "资料", "AI 数据中心备电"] }
+  en: { path: "/blog/ai-data-center-backup-power-1mw-60-seconds/", alternatePath: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "1 MW for 60 Seconds: AI Data Center Backup Power | Viking AGM", description: "Why AI data center backup power separates transient, seconds-scale and minutes-scale duties—and why AGM data cannot prove system performance.", keywords: ["AI data center backup power", "1MW data center BBU", "800V HVDC backup power", "short-duration high-rate UPS battery", "AGM vs LFP data center backup"], pageName: "1 MW for 60 Seconds: Why AI Data Center Backup Power Prioritizes Speed Before Duration", articleDescription: "A system-level guide to layered AI data center backup power, using the cited company’s the disclosed system disclosure with explicit evidence boundaries.", breadcrumbs: ["Home", "Resources", "AI Data Center Backup Power"] },
+  zh: { path: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/", alternatePath: "/blog/ai-data-center-backup-power-1mw-60-seconds/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "1MW 只备 60 秒：AI 数据中心为何先争快再争久？| 湖北维京AGM", description: "解释 AI 数据中心备电为何区分瞬态、秒级和分钟级任务，以及 AGM 隔板参数为何不能证明系统表现。", keywords: ["AI 数据中心备电", "1MW 数据中心 BBU", "800V HVDC 备电", "短时高倍率 UPS 电池", "AGM 与 LFP 数据中心备电"], pageName: "1MW 只备 60 秒：AI 数据中心为什么先争“快”，再争“久”？", articleDescription: "以所引企业所述系统企业披露为案例，解释 AI 数据中心分层备电与 AGM 隔板证据边界。", breadcrumbs: ["首页", "资料", "AI 数据中心备电"] }
 } as const;
 
 const agmPastingPaperEnergyValidationSeo = {
   en: { path: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "AGM Pasting Paper: Validate Drying-Energy Claims | Viking AGM", description: "How to validate AGM fiberglass pasting-paper energy claims using same-line output, speed, moisture, oven, plate quality and battery-test boundaries.", keywords: ["AGM fiberglass pasting paper", "lead-acid plate pasting energy", "pasting paper drying oven temperature", "fiberglass pasting paper plant fiber replacement", "AGM pasting process validation"], pageName: "How Much Drying Energy Can One Pasting Paper Save?", articleDescription: "A same-line validation guide for AGM fiberglass pasting-paper drying claims, with explicit source, measurement and plate-to-battery evidence boundaries.", breadcrumbs: ["Home", "Resources", "AGM Pasting Paper Energy Validation"] },
-  zh: { path: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 玻纤涂板纸能省多少烘干能耗？验证条件与对照方法 | 湖北维京AGM", description: "华阳页面提出降低窑温或停窑主张但未给量化数据；本文说明 AGM 玻纤涂板纸同线能耗、含水、极板质量和整电池验证方法。", keywords: ["AGM 玻纤涂板纸", "铅酸电池涂板纸节能", "涂板纸干燥窑温度", "玻纤涂板纸替代植物纤维", "AGM 涂板工艺验证"], pageName: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", articleDescription: "以华阳现有产品页的企业主张为边界，说明 AGM 玻纤涂板纸节能主张需要怎样做同线对照。", breadcrumbs: ["首页", "资料", "AGM 玻纤涂板纸节能验证"] }
+  zh: { path: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 玻纤涂板纸能省多少烘干能耗？验证条件与对照方法 | 湖北维京AGM", description: "公开供应商资料提出降低窑温或停窑主张但未给量化数据；本文说明 AGM 玻纤涂板纸同线能耗、含水、极板质量和整电池验证方法。", keywords: ["AGM 玻纤涂板纸", "铅酸电池涂板纸节能", "涂板纸干燥窑温度", "玻纤涂板纸替代植物纤维", "AGM 涂板工艺验证"], pageName: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", articleDescription: "以公开产品资料中的供应商主张为边界，说明 AGM 玻纤涂板纸节能主张需要怎样做同线对照。", breadcrumbs: ["首页", "资料", "AGM 玻纤涂板纸节能验证"] }
 } as const;
 
 const agmBatteryDamageDemoSafetyTestSeo = {
-  en: { path: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", alternatePath: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "AGM Battery Damage Demo vs Safety Test | Viking AGM", description: "Why a battery powering a load after fire, cutting or puncture is not a safety conclusion: verify sample, load, duration, temperature, leakage, capacity and method.", keywords: ["AGM battery safety test", "AGM battery leakage test", "lead-acid battery after puncture", "AGM separator electrolyte absorption", "battery extreme damage test"], pageName: "A Battery Still Powers a Load After Fire, Cutting or Gunfire: Safety Test or Demonstration?", articleDescription: "A source-bounded review of Rostec's TOPBAT demonstration and the conditions required to separate a visual phenomenon from standardized battery testing and a system-safety conclusion.", breadcrumbs: ["Home", "Resources", "AGM Battery Damage Demo vs Safety Test"] },
-  zh: { path: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", alternatePath: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 电池安全测试：极端损伤演示不等于安全验证 | 湖北维京AGM", description: "Rostec 的 TOPBAT 燃烧、切割与射击演示能说明什么？用样品、荷电状态、载荷、时长、温升、泄漏、剩余容量和方法边界判断 AGM 电池安全测试。", keywords: ["AGM 电池安全测试", "AGM 电池漏液测试", "铅酸电池穿刺后还能用吗", "AGM 隔板吸液原理", "蓄电池极端测试"], pageName: "电池被烧、切、射击还能工作：这是安全测试，还是传播演示？", articleDescription: "以 Rostec TOPBAT 官方演示为案例，区分受损现象、标准化电池测试和系统安全结论，并说明 AGM 隔板的材料边界。", breadcrumbs: ["首页", "资料", "AGM 电池安全测试边界"] }
+  en: { path: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", alternatePath: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "AGM Battery Damage Demo vs Safety Test | Viking AGM", description: "Why a battery powering a load after fire, cutting or puncture is not a safety conclusion: verify sample, load, duration, temperature, leakage, capacity and method.", keywords: ["AGM battery safety test", "AGM battery leakage test", "lead-acid battery after puncture", "AGM separator electrolyte absorption", "battery extreme damage test"], pageName: "A Battery Still Powers a Load After Fire, Cutting or Gunfire: Safety Test or Demonstration?", articleDescription: "A source-bounded review of the cited company's the cited battery series demonstration and the conditions required to separate a visual phenomenon from standardized battery testing and a system-safety conclusion.", breadcrumbs: ["Home", "Resources", "AGM Battery Damage Demo vs Safety Test"] },
+  zh: { path: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", alternatePath: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 电池安全测试：极端损伤演示不等于安全验证 | 湖北维京AGM", description: "所引企业的所述电池系列燃烧、切割与射击演示能说明什么？用样品、荷电状态、载荷、时长、温升、泄漏、剩余容量和方法边界判断 AGM 电池安全测试。", keywords: ["AGM 电池安全测试", "AGM 电池漏液测试", "铅酸电池穿刺后还能用吗", "AGM 隔板吸液原理", "蓄电池极端测试"], pageName: "电池被烧、切、射击还能工作：这是安全测试，还是传播演示？", articleDescription: "以所引企业所述电池系列官方演示为案例，区分受损现象、标准化电池测试和系统安全结论，并说明 AGM 隔板的材料边界。", breadcrumbs: ["首页", "资料", "AGM 电池安全测试边界"] }
 } as const;
 
 const agmGlassFiberVsPvcSeparatorSeo = {
@@ -4407,7 +4407,7 @@ export function AgmSeparatorPressureRetentionStructuredData({
         image: QUALITY_PREVIEW_IMAGE,
         url,
         datePublished: "2026-08-12",
-        dateModified: "2026-08-12",
+        dateModified: "2026-10-11",
         mainEntityOfPage: { "@id": `${url}#webpage` },
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },
@@ -4480,7 +4480,7 @@ export function AgmSeparatorBatchProcessControlStructuredData({
         image: QUALITY_PREVIEW_IMAGE,
         url,
         datePublished: "2026-08-12",
-        dateModified: "2026-08-12",
+        dateModified: "2026-10-11",
         mainEntityOfPage: { "@id": `${url}#webpage` },
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },
@@ -4554,7 +4554,7 @@ export function AgmSeparatorSupplyChainStructuredData({
         image,
         url,
         datePublished: "2026-09-01",
-        dateModified: "2026-09-01",
+        dateModified: "2026-10-11",
         mainEntityOfPage: { "@id": `${url}#webpage` },
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },
@@ -4620,7 +4620,7 @@ export function AgmStartStopBatteryProcurementStructuredData({
         image: QUALITY_PREVIEW_IMAGE,
         url,
         datePublished: "2026-09-10",
-        dateModified: "2026-09-10",
+        dateModified: "2026-10-11",
         mainEntityOfPage: { "@id": `${url}#webpage` },
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },
@@ -4672,7 +4672,7 @@ export function AgmSeparatorThirdPoleStructuredData({ lang }: { lang: Lang }) {
         image: QUALITY_PREVIEW_IMAGE,
         url,
         datePublished: "2026-09-13",
-        dateModified: "2026-09-13",
+        dateModified: "2026-10-11",
         mainEntityOfPage: { "@id": `${url}#webpage` },
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },
@@ -4715,7 +4715,7 @@ export function AgmSeparatorEnergyDataDeliveryStructuredData({
       {
         "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName,
         description: current.articleDescription, image: `${SITE_URL}/images/agm-hero-production-1600.webp`, url,
-        datePublished: "2026-09-18", dateModified: "2026-09-18", mainEntityOfPage: { "@id": `${url}#webpage` },
+        datePublished: "2026-09-18", dateModified: "2026-10-11", mainEntityOfPage: { "@id": `${url}#webpage` },
         author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` },
         about: ["supplier energy data", "manufacturing energy baseline", "battery separator supply continuity", "delivery risk evidence"], inLanguage: current.language
       },
@@ -4747,7 +4747,7 @@ export function DataCenterEvLowVoltageAgmStructuredData({ lang }: { lang: Lang }
   return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
     organizationData(lang, current.description),
     { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
-    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: UPS_APPLICATION_IMAGE, url, datePublished: "2026-10-04", dateModified: "2026-10-04", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["data center lead-acid battery", "VRLA backup battery", "electric vehicle low-voltage battery", "AGM separator application"], inLanguage: current.language },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: UPS_APPLICATION_IMAGE, url, datePublished: "2026-10-04", dateModified: "2026-10-11", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["data center lead-acid battery", "VRLA backup battery", "electric vehicle low-voltage battery", "AGM separator application"], inLanguage: current.language },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
 }
@@ -4755,13 +4755,13 @@ export function DataCenterEvLowVoltageAgmStructuredData({ lang }: { lang: Lang }
 const aiBackupFaq = {
   en: [
     ["Why layer AI data center backup power?", "Transient, seconds-scale and minutes-scale duties have different response, power, duration and recovery requirements."],
-    ["What does 1 MW for at least 60 seconds mean?", "It is Vision Group’s stated capability for a five-module LiLic Sidecar cabinet at a 1 MW load, not an industry benchmark or independent test."],
+    ["What does 1 MW for at least 60 seconds mean?", "It is the cited company’s stated capability for a five-module cabinet in the disclosure at a 1 MW load, not an industry benchmark or independent test."],
     ["Does conventional UPS/VRLA still have a place?", "Potentially, when the architecture, power curve, runtime, environment, maintenance method and complete-system validation support it."],
     ["Can AGM separator data prove backup performance?", "No. Separator data can support material matching but cannot replace complete-battery and system validation."]
   ],
   zh: [
     ["为什么要分层配置 AI 数据中心备用电源？", "瞬态、秒级和分钟级任务的响应、功率、时长与恢复要求不同。"],
-    ["1MW、至少60秒代表什么？", "这是雄韬对五模块 LiLic Sidecar 单柜在 1MW 负载下的企业披露，不是行业基准或独立测试。"],
+    ["1MW、至少60秒代表什么？", "这是所引企业对五模块所述系统单柜在 1MW 负载下的企业披露，不是行业基准或独立测试。"],
     ["传统 UPS/VRLA 是否仍有位置？", "可能有，前提是架构、功率曲线、时长、环境、维护方式和完整系统验证均支持。"],
     ["AGM 隔板数据能否证明备电表现？", "不能。隔板数据可支持材料匹配，但不能替代整电池和系统验证。"]
   ]
@@ -4774,7 +4774,7 @@ export function AiDataCenterBackupPowerLayersStructuredData({ lang }: { lang: La
   return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
     organizationData(lang, current.description),
     { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
-    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: UPS_APPLICATION_IMAGE, url, datePublished: "2026-10-08", dateModified: "2026-10-08", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AI data center backup power", "1MW data center BBU", "800V HVDC backup power", "short-duration high-rate UPS battery", "AGM vs LFP data center backup"], inLanguage: current.language },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: UPS_APPLICATION_IMAGE, url, datePublished: "2026-10-08", dateModified: "2026-10-11", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AI data center backup power", "1MW data center BBU", "800V HVDC backup power", "short-duration high-rate UPS battery", "AGM vs LFP data center backup"], inLanguage: current.language },
     { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: aiBackupFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
@@ -4782,12 +4782,12 @@ export function AiDataCenterBackupPowerLayersStructuredData({ lang }: { lang: La
 
 const agmPastingPaperFaq = {
   en: [
-    ["Can fiberglass pasting paper reduce lead-acid battery drying-oven energy?", "Huayang makes that claim for its existing product, but its public page provides no quantified energy data. Verify it on the same line using accepted output, speed, moisture, oven conditions, energy-meter boundaries, plate quality and scrap; material claims do not replace plate or complete-battery validation."],
+    ["Can fiberglass pasting paper reduce lead-acid battery drying-oven energy?", "A supplier makes that claim for its existing product, but its public page provides no quantified energy data. Verify it on the same line using accepted output, speed, moisture, oven conditions, energy-meter boundaries, plate quality and scrap; material claims do not replace plate or complete-battery validation."],
     ["Is a lower drying-oven temperature the same as energy saving?", "No. Net energy must use a defined electricity, gas or steam boundary and be normalized by accepted plate area, mass or count, while accounting for speed, downtime and start-stop losses."],
     ["Are pasting paper and the AGM main separator the same product?", "No. Pasting paper supports plate manufacture, while the AGM main separator is part of the assembled VRLA battery. They require different acceptance and validation evidence."]
   ],
   zh: [
-    ["玻纤涂板纸能降低铅酸电池干燥窑能耗吗？", "这是华阳对其现有产品的企业主张，但公开页面没有量化节能数据。需要在同一涂板线上对照单位合格产量、线速、含水状态、窑温与停留时间、能源计量边界、极板质量和报废率；材料主张不能替代极板和整电池验证。"],
+    ["玻纤涂板纸能降低铅酸电池干燥窑能耗吗？", "这是供应商对其现有产品的定性主张，但公开页面没有量化节能数据。需要在同一涂板线上对照单位合格产量、线速、含水状态、窑温与停留时间、能源计量边界、极板质量和报废率；材料主张不能替代极板和整电池验证。"],
     ["干燥窑温度降低就等于节能吗？", "不等于。净能耗需要明确电、气或蒸汽计量边界，并按合格极板面积、质量或片数归一，同时计入线速、停机和启停损失。"],
     ["涂板纸和 AGM 主隔板是同一种产品吗？", "不是。涂板纸服务于极板制造，AGM 主隔板用于组装后的 VRLA 电池内部，两者需要不同的验收和验证证据。"]
   ]
@@ -4800,7 +4800,7 @@ export function AgmPastingPaperEnergyValidationStructuredData({ lang }: { lang: 
   return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
     organizationData(lang, current.description),
     { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
-    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: QUALITY_PREVIEW_IMAGE, url, datePublished: "2026-10-09", dateModified: "2026-10-09", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM fiberglass pasting paper", "lead-acid plate pasting energy", "drying oven validation", "plate quality", "complete-battery validation"], inLanguage: current.language },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: QUALITY_PREVIEW_IMAGE, url, datePublished: "2026-10-09", dateModified: "2026-10-11", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM fiberglass pasting paper", "lead-acid plate pasting energy", "drying oven validation", "plate quality", "complete-battery validation"], inLanguage: current.language },
     { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: agmPastingPaperFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
@@ -4808,11 +4808,11 @@ export function AgmPastingPaperEnergyValidationStructuredData({ lang }: { lang: 
 
 const agmBatteryDamageDemoFaq = {
   en: [
-    ["Does an AGM battery still working after cutting or puncture prove it is safe?", "No. The Rostec case is a company-published demonstration whose public page omits important test conditions. Continued power does not prove intact performance or absence of risk; defined thermal, leakage and electrical measurements plus complete-battery or system evaluation are required."],
+    ["Does an AGM battery still working after cutting or puncture prove it is safe?", "No. The cited company case is a company-published demonstration whose public page omits important test conditions. Continued power does not prove intact performance or absence of risk; defined thermal, leakage and electrical measurements plus complete-battery or system evaluation are required."],
     ["Can an AGM separator alone determine battery safety?", "No. The separator is one material input. Absorption, electrolyte retention, wet-state behavior and compression data can support a design review, but plates, acid quantity, enclosure, valve, protection, assembly and complete-battery tests remain necessary."]
   ],
   zh: [
-    ["AGM 电池被切割或穿刺后还能工作，能证明它安全吗？", "不能。Rostec 个案是企业发布的演示，公开页面缺少重要测试条件；仍供电不等于性能完整或没有风险。需要明确温升、泄漏和电气测量，并结合整电池或系统验证。"],
+    ["AGM 电池被切割或穿刺后还能工作，能证明它安全吗？", "不能。所引企业个案是企业发布的演示，公开页面缺少重要测试条件；仍供电不等于性能完整或没有风险。需要明确温升、泄漏和电气测量，并结合整电池或系统验证。"],
     ["AGM 隔板能否单独决定电池安全？", "不能。隔板只是材料输入的一部分。吸液、保液、湿态表现和压缩数据可支持设计评审，但极板、电解液量、壳体、阀、保护、装配和整电池测试仍不可缺少。"]
   ]
 } as const;
@@ -4824,7 +4824,7 @@ export function AgmBatteryDamageDemoSafetyTestStructuredData({ lang }: { lang: L
   return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
     organizationData(lang, current.description),
     { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
-    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: QUALITY_PREVIEW_IMAGE, url, datePublished: "2026-10-10", dateModified: "2026-10-10", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM battery safety test", "AGM battery leakage test", "lead-acid battery puncture", "AGM separator electrolyte retention", "battery damage demonstration"], inLanguage: current.language },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: QUALITY_PREVIEW_IMAGE, url, datePublished: "2026-10-10", dateModified: "2026-10-11", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM battery safety test", "AGM battery leakage test", "lead-acid battery puncture", "AGM separator electrolyte retention", "battery damage demonstration"], inLanguage: current.language },
     { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: agmBatteryDamageDemoFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
@@ -4870,7 +4870,7 @@ export function AgmGlassFiberVsPvcSeparatorStructuredData({
         image: AGM_ROLL_END_FACE_IMAGE,
         url,
         datePublished: "2026-07-26",
-        dateModified: "2026-07-26",
+        dateModified: "2026-10-11",
         mainEntityOfPage: { "@id": `${url}#webpage` },
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },

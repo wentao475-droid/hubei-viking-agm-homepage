@@ -48,7 +48,7 @@ const pages = [
     zh: "/zh/resources/",
     priority: "0.8",
     changefreq: "weekly",
-    lastmod: "2026-07-26"
+    lastmod: "2026-10-11"
   },
   {
     en: "/products/agm-separator-rolls/",
@@ -208,7 +208,7 @@ const pages = [
     zh: "/zh/blog/agm-glass-fiber-vs-pvc-battery-separator/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-07-26"
+    lastmod: "2026-10-11"
   },
   {
     en: "/blog/agm-separator-for-data-center-backup-power/",
@@ -223,8 +223,8 @@ const pages = [
     zh: "/zh/blog/why-data-centers-and-electric-vehicles-still-use-lead-acid-low-voltage-power/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-10-04",
-    secondaryLastmod: "2026-10-04"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/how-chinas-earliest-lead-acid-batteries-were-made/",
@@ -239,32 +239,32 @@ const pages = [
     zh: "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-08-12",
-    secondaryLastmod: "2026-08-12"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/agm-separator-batch-consistency-and-process-control/",
     zh: "/zh/blog/agm-separator-batch-consistency-and-process-control/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-08-12",
-    secondaryLastmod: "2026-08-12"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/agm-separator-energy-data-and-delivery-risk/",
     zh: "/zh/blog/agm-separator-energy-data-and-delivery-risk/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-09-18",
-    secondaryLastmod: "2026-09-18"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/agm-separator-third-pole-explained/",
     zh: "/zh/blog/agm-separator-third-pole-explained/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-09-13",
-    secondaryLastmod: "2026-09-13"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/en-18060-2025-road-vehicle-battery-standard/",
@@ -279,40 +279,40 @@ const pages = [
     zh: "/zh/blog/agm-separator-supply-chain-from-glass-block-to-finished-roll/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-09-01",
-    secondaryLastmod: "2026-10-03"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/agm-start-stop-battery-separator-procurement-guide/",
     zh: "/zh/blog/agm-start-stop-battery-separator-procurement-guide/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-09-10",
-    secondaryLastmod: "2026-10-03"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/ai-data-center-backup-power-1mw-60-seconds/",
     zh: "/zh/blog/ai-data-center-backup-power-1mw-60-seconds/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-10-08",
-    secondaryLastmod: "2026-10-08"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/",
     zh: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-10-09",
-    secondaryLastmod: "2026-10-09"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   },
   {
     en: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/",
     zh: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/",
     priority: "0.75",
     changefreq: "monthly",
-    lastmod: "2026-10-10",
-    secondaryLastmod: "2026-10-10"
+    lastmod: "2026-10-11",
+    secondaryLastmod: "2026-10-11"
   }
 ];
 
@@ -345,6 +345,7 @@ for (const page of pages.filter(
   }
   page.arabicLastmod = "2026-10-04";
   const kind = articleKinds.find((kind) => page.en === `/blog/${articleDefinitions[kind][0]}/`);
+  if (kind && articleDefinitions[kind][3] === "2026-10-11") page.arabicLastmod = "2026-10-11";
   page.secondaryLastmod = kind ? buildSecondaryArticleSeo("vi", kind).dateModified : "2026-10-04";
 }
 
