@@ -1175,7 +1175,7 @@ const expectedSitemapLastmod = [
   ]),
   [
     "https://www.vikingagm.com/resources/",
-    "2026-10-11"
+    "2026-10-17"
   ],
   ...synchronizedLocaleCodes.flatMap((locale) => [
     [

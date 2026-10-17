@@ -6,6 +6,8 @@ import { agmSafetyTestTopics } from "./agm-safety-test-topics.mjs";
 
 export const secondaryResourceLocales = ["vi", "ko", "ja", "es", "pt", "ru", "ar"];
 
+import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
+
 export const articleKinds = [
   "whatIsAgmSeparator",
   "keyTechnicalParameters",
@@ -27,7 +29,8 @@ export const articleKinds = [
   "agmPastingPaperEnergyValidation",
   "agmBatteryDamageDemoSafetyTest",
   "agmSeparatorSupplyChain",
-  "agmStartStopBatteryProcurement"
+  "agmStartStopBatteryProcurement",
+  "batteryTechnologyProjectComparison"
 ];
 
 export const articleDefinitions = {
@@ -51,10 +54,12 @@ export const articleDefinitions = {
   agmSeparatorBatchProcessControl: ["agm-separator-batch-consistency-and-process-control", "manufacturingQuality", "2026-08-12", "2026-10-11"],
   agmSeparatorThirdPole: ["agm-separator-third-pole-explained", "buyerGuides", "2026-09-13", "2026-10-11"],
   agmSeparatorEnergyDataDelivery: ["agm-separator-energy-data-and-delivery-risk", "manufacturingQuality", "2026-09-18", "2026-10-11"]
+  ,batteryTechnologyProjectComparison: ["compare-lead-lithium-sodium-batteries-by-project-duty", "industryApplications", "2026-10-17", "2026-10-17"]
   ,en18060BatteryStandard: ["en-18060-2025-road-vehicle-battery-standard", "industryApplications", "2026-10-03", "2026-10-03"]
 };
 
 const images = {
+  batteryTechnologyProjectComparison: ["/images/viking-finished-separator-roll-900.webp", 900, 675],
   agmBatteryDamageDemoSafetyTest: ["/images/agm-quality-control-1200.webp", 1200, 900],
   agmPastingPaperEnergyValidation: ["/images/agm-quality-control-1200.webp", 1200, 900],
   aiDataCenterBackupPowerLayers: ["/images/applications/ups-vrla-battery-application-1200.webp", 1200, 900],
@@ -1117,6 +1122,10 @@ for (const [locale, editions] of Object.entries(additionalResourceTopics)) {
   }
 }
 
+for (const [locale, topic] of Object.entries(batteryProjectComparisonTopics)) {
+  secondaryResourceData[locale].topics.batteryTechnologyProjectComparison = topic;
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1234,6 +1243,10 @@ function buildArticle(locale, kind, localeData) {
     },
     footer: { description: common.footer, wechat: common.wechat, mobile: common.mobile }
   };
+
+  if (kind === "batteryTechnologyProjectComparison") {
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[0][1], text: topic.sections[0][2], items: [["ELBC — Lead and Multi-Technology Workshop", "https://www.elbcexpo.org/energy-storage-workshop/"], ["Batteries International — CBI, 2026-09-19", "https://www.batteriesinternational.com/news/new-pivot-for-elbc-as-cbi-opens-doors-to-research-for-all-chemistries/"]] };
+  }
 
   if (kind === "agmGlassFiberVsPvcSeparator") {
     result.comparison = localeData.comparison;

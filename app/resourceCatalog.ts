@@ -469,10 +469,28 @@ export const resourceArticles: ResourceArticle[] = [
       en: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/",
       zh: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/"
     }
+  },
+  {
+  "id": "compare-lead-lithium-sodium-batteries-by-project-duty",
+  "category": "industryApplications",
+  "publishedAt": "2026-10-17",
+  "title": {
+    "en": "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
+    "zh": "铅、锂还是钠？从项目工况比较电池方案"
+  },
+  "description": {
+    "en": "Compare battery options through duty, site conditions, safety, recycling, total cost and evidence. Assess AGM separators only within a defined VRLA battery application.",
+    "zh": "从负载任务、现场条件、安全、回收、总成本和验证证据比较电池方案；将 AGM 隔板放回已明确的 VRLA 电池应用中评估。"
+  },
+  "href": {
+    "en": "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
+    "zh": "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/"
   }
+}
 ];
 
 const articleKindById: Record<string, string> = {
+  "compare-lead-lithium-sodium-batteries-by-project-duty": "batteryTechnologyProjectComparison",
   "agm-separator-supply-chain": "agmSeparatorSupplyChain",
   "agm-start-stop-battery-procurement": "agmStartStopBatteryProcurement",
   "what-is-agm-separator": "whatIsAgmSeparator",

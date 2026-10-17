@@ -2114,6 +2114,55 @@ const agmPastingPaperEnergyValidationSeo = {
   zh: { path: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 玻纤涂板纸能省多少烘干能耗？验证条件与对照方法 | 湖北维京AGM", description: "公开供应商资料提出降低窑温或停窑主张但未给量化数据；本文说明 AGM 玻纤涂板纸同线能耗、含水、极板质量和整电池验证方法。", keywords: ["AGM 玻纤涂板纸", "铅酸电池涂板纸节能", "涂板纸干燥窑温度", "玻纤涂板纸替代植物纤维", "AGM 涂板工艺验证"], pageName: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", articleDescription: "以公开产品资料中的供应商主张为边界，说明 AGM 玻纤涂板纸节能主张需要怎样做同线对照。", breadcrumbs: ["首页", "资料", "AGM 玻纤涂板纸节能验证"] }
 } as const;
 
+const batteryTechnologyProjectComparisonSeo = {
+  "en": {
+    "path": "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
+    "alternatePath": "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty | Viking AGM",
+    "description": "Compare battery options through duty, site conditions, safety, recycling, total cost and evidence. Assess AGM separators only within a defined VRLA battery application.",
+    "keywords": [
+      "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
+      "AGM",
+      "VRLA"
+    ],
+    "pageName": "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
+    "articleDescription": "Compare battery options through duty, site conditions, safety, recycling, total cost and evidence. Assess AGM separators only within a defined VRLA battery application.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty"
+    ],
+    "datePublished": "2026-10-17",
+    "dateModified": "2026-10-17"
+  },
+  "zh": {
+    "path": "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
+    "alternatePath": "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "铅、锂还是钠？从项目工况比较电池方案 | Viking AGM",
+    "description": "从负载任务、现场条件、安全、回收、总成本和验证证据比较电池方案；将 AGM 隔板放回已明确的 VRLA 电池应用中评估。",
+    "keywords": [
+      "铅、锂还是钠？从项目工况比较电池方案",
+      "AGM",
+      "VRLA"
+    ],
+    "pageName": "铅、锂还是钠？从项目工况比较电池方案",
+    "articleDescription": "从负载任务、现场条件、安全、回收、总成本和验证证据比较电池方案；将 AGM 隔板放回已明确的 VRLA 电池应用中评估。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "铅、锂还是钠？从项目工况比较电池方案"
+    ],
+    "datePublished": "2026-10-17",
+    "dateModified": "2026-10-17"
+  }
+} as const;
+
 const agmBatteryDamageDemoSafetyTestSeo = {
   en: { path: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", alternatePath: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", locale: "en_US", language: "en", siteName: "Viking AGM", title: "AGM Battery Damage Demo vs Safety Test | Viking AGM", description: "Why a battery powering a load after fire, cutting or puncture is not a safety conclusion: verify sample, load, duration, temperature, leakage, capacity and method.", keywords: ["AGM battery safety test", "AGM battery leakage test", "lead-acid battery after puncture", "AGM separator electrolyte absorption", "battery extreme damage test"], pageName: "A Battery Still Powers a Load After Fire, Cutting or Gunfire: Safety Test or Demonstration?", articleDescription: "A source-bounded review of the cited company's the cited battery series demonstration and the conditions required to separate a visual phenomenon from standardized battery testing and a system-safety conclusion.", breadcrumbs: ["Home", "Resources", "AGM Battery Damage Demo vs Safety Test"] },
   zh: { path: "/zh/blog/agm-battery-extreme-damage-demo-vs-safety-test/", alternatePath: "/blog/agm-battery-extreme-damage-demo-vs-safety-test/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 电池安全测试：极端损伤演示不等于安全验证 | 湖北维京AGM", description: "所引企业的所述电池系列燃烧、切割与射击演示能说明什么？用样品、荷电状态、载荷、时长、温升、泄漏、剩余容量和方法边界判断 AGM 电池安全测试。", keywords: ["AGM 电池安全测试", "AGM 电池漏液测试", "铅酸电池穿刺后还能用吗", "AGM 隔板吸液原理", "蓄电池极端测试"], pageName: "电池被烧、切、射击还能工作：这是安全测试，还是传播演示？", articleDescription: "以所引企业所述电池系列官方演示为案例，区分受损现象、标准化电池测试和系统安全结论，并说明 AGM 隔板的材料边界。", breadcrumbs: ["首页", "资料", "AGM 电池安全测试边界"] }
@@ -5103,4 +5152,21 @@ function JsonLd({ data }: { data: unknown }) {
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
+}
+
+export function buildBatteryTechnologyProjectComparisonMetadata(lang: Lang): Metadata {
+  const current = seoContent("batteryTechnologyProjectComparison", lang, batteryTechnologyProjectComparisonSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("batteryTechnologyProjectComparison"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/viking-finished-separator-roll-900.webp`, width: 900, height: 675 } });
+}
+
+export function BatteryTechnologyProjectComparisonStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("batteryTechnologyProjectComparison", lang, batteryTechnologyProjectComparisonSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/viking-finished-separator-roll-900.webp`, url, datePublished: "2026-10-17", dateModified: "2026-10-17", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Battery technology comparison", "VRLA", "AGM separator application"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
 }

@@ -4,6 +4,7 @@ import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../c
 
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
+  { en: "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/", zh: "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-17", secondaryLastmod: "2026-10-17", arabicLastmod: "2026-10-17" },
   {
     en: "/",
     zh: "/zh/",
@@ -48,7 +49,9 @@ const pages = [
     zh: "/zh/resources/",
     priority: "0.8",
     changefreq: "weekly",
-    lastmod: "2026-10-11"
+    lastmod: "2026-10-17",
+    secondaryLastmod: "2026-10-17",
+    arabicLastmod: "2026-10-17"
   },
   {
     en: "/products/agm-separator-rolls/",
@@ -347,6 +350,10 @@ for (const page of pages.filter(
   const kind = articleKinds.find((kind) => page.en === `/blog/${articleDefinitions[kind][0]}/`);
   if (kind && articleDefinitions[kind][3] === "2026-10-11") page.arabicLastmod = "2026-10-11";
   page.secondaryLastmod = kind ? buildSecondaryArticleSeo("vi", kind).dateModified : "2026-10-04";
+  if (kind === "batteryTechnologyProjectComparison" || page.en === "/resources/") {
+    page.arabicLastmod = "2026-10-17";
+    page.secondaryLastmod = "2026-10-17";
+  }
 }
 
 function absolute(path) {

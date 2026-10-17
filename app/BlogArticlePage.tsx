@@ -14,6 +14,7 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "batteryTechnologyProjectComparison"
   | "whatIsAgmSeparator"
   | "keyTechnicalParameters"
   | "howToChooseAgmSeparator"
@@ -3990,6 +3991,367 @@ const dataCenterEvLowVoltageAgmCopy = {
   }
 } as const;
 
+const batteryTechnologyProjectComparisonCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Battery Technology Review",
+      "title": "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
+      "subtitle": "Compare battery options through duty, site conditions, safety, recycling, total cost and evidence. Assess AGM separators only within a defined VRLA battery application.",
+      "primary": "Ask for AGM Separator Guide",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/viking-finished-separator-roll-900.webp",
+        "alt": "Finished AGM glass-fiber separator roll for VRLA batteries",
+        "width": 900,
+        "height": 675
+      }
+    },
+    "intro": [
+      "Compare battery options through duty, site conditions, safety, recycling, total cost and evidence. Assess AGM separators only within a defined VRLA battery application."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Research scope",
+        "title": "Broader research does not mean lead research is ending",
+        "text": "ELBC 2026 discussed complementary technologies. Batteries International reported a planned CBI expansion in 2027 while retaining lead research. This is media coverage, not a verified CBI governance document or a completed organizational change."
+      },
+      {
+        "eyebrow": "Operating duty",
+        "title": "Start with the operating result",
+        "text": "Begin with load power and duration, float or cycling duty, temperature, space, charging, controls and maintenance. Compare safety design, monitoring, isolation and incident response within the same system boundary. Verify the local recycling route and responsible parties. Total cost should cover procurement, modifications, operation, maintenance, replacement and recycling; purchase price alone is insufficient."
+      },
+      {
+        "eyebrow": "System architecture",
+        "title": "Multiple technologies do not require a hybrid system",
+        "text": "A hybrid configuration needs a specific duty-based justification. If one technology satisfies the requirements, extra interfaces and controls may add unnecessary complexity. Validate a combined system only when different duties justify it and controls, interfaces, maintenance and responsibilities can be implemented. This is a project review framework, not a universal ranking of chemistries."
+      },
+      {
+        "eyebrow": "AGM boundary",
+        "title": "AGM belongs within a defined VRLA application",
+        "text": "AGM is not a chemistry alongside lead, lithium or sodium: it is an absorbent glass mat construction used in VRLA lead-acid batteries. First establish whether the project includes a suitable VRLA duty, such as validated backup or float service. Check charging, temperature, space, maintenance and battery design. A lithium-ion or sodium-ion project does not automatically require AGM separators."
+      },
+      {
+        "eyebrow": "Validation",
+        "title": "Use the same inputs and acceptance criteria",
+        "text": "Give every candidate the same load profile, operating mode, environment, safety requirements, recycling responsibility and cost boundary. Distinguish material data, sample results, complete-battery validation and operating-system evidence. Define acceptance criteria and the party responsible for each test before treating results as comparable. Material tests alone cannot establish battery life, capacity or system safety."
+      },
+      {
+        "eyebrow": "Viking scope",
+        "title": "Viking’s separator scope",
+        "text": "Hubei Viking Technology focuses on AGM glass-fiber separators for VRLA lead-acid batteries. Discuss roll or sheet format, thickness, width, sheet dimensions, packaging and agreed sample methods. Final suitability depends on battery design, operating duty and customer validation. Share the application, capacity, target dimensions, test conditions and current sample stage for specification matching."
+      }
+    ],
+    "parameters": [
+      [
+        "Start with the operating result",
+        "Load profile, target power and required duration"
+      ],
+      [
+        "Multiple technologies do not require a hybrid system",
+        "Float, cycling or mixed operating mode"
+      ],
+      [
+        "AGM belongs within a defined VRLA application",
+        "Temperature, space, installation and maintenance"
+      ],
+      [
+        "Use the same inputs and acceptance criteria",
+        "Sample, complete-battery and system acceptance criteria"
+      ]
+    ],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Common inputs for a technology review",
+      "text": "Use the same boundaries for every option.",
+      "items": [
+        "Load profile, target power and required duration",
+        "Float, cycling or mixed operating mode",
+        "Temperature, space, installation and maintenance",
+        "Safety, monitoring and incident-response requirements",
+        "Local recycling route and responsible parties",
+        "Procurement, modification, operating and replacement costs",
+        "Sample, complete-battery and system acceptance criteria"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Why Many UPS Projects Still Use VRLA Batteries",
+          "/blog/why-ups-projects-still-use-vrla-batteries/"
+        ],
+        [
+          "What Is AGM Separator?",
+          "/blog/what-is-agm-separator/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "For an existing VRLA project, send the application, capacity, operating duty, thickness, width or sheet dimensions, test conditions and sample stage. Separator data does not replace complete-battery or system validation.",
+      "checklist": [
+        "Load profile, target power and required duration",
+        "Float, cycling or mixed operating mode",
+        "Temperature, space, installation and maintenance",
+        "Safety, monitoring and incident-response requirements"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "For an existing VRLA project, send the application, capacity, operating duty, thickness, width or sheet dimensions, test conditions and sample stage. Separator data does not replace complete-battery or system validation."
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Sources and scope",
+      "title": "Broader research does not mean lead research is ending",
+      "text": "ELBC 2026 discussed complementary technologies. Batteries International reported a planned CBI expansion in 2027 while retaining lead research. This is media coverage, not a verified CBI governance document or a completed organizational change.",
+      "items": [
+        [
+          "ELBC — Lead and Multi-Technology Workshop",
+          "https://www.elbcexpo.org/energy-storage-workshop/"
+        ],
+        [
+          "Batteries International — CBI, 2026-09-19",
+          "https://www.batteriesinternational.com/news/new-pivot-for-elbc-as-cbi-opens-doors-to-research-for-all-chemistries/"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "电池技术方案评审",
+      "title": "铅、锂还是钠？从项目工况比较电池方案",
+      "subtitle": "从负载任务、现场条件、安全、回收、总成本和验证证据比较电池方案；将 AGM 隔板放回已明确的 VRLA 电池应用中评估。",
+      "primary": "索取 AGM 隔板指南",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/viking-finished-separator-roll-900.webp",
+        "alt": "VRLA 电池用 AGM 玻璃纤维隔板成品卷",
+        "width": 900,
+        "height": 675
+      }
+    },
+    "intro": [
+      "从负载任务、现场条件、安全、回收、总成本和验证证据比较电池方案；将 AGM 隔板放回已明确的 VRLA 电池应用中评估。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "研究范围",
+        "title": "研究范围扩大，不等于铅电池研究结束",
+        "text": "ELBC 2026 讨论了不同电池技术的互补。Batteries International 报道 CBI 计划于 2027 年拓宽研究范围，同时保留铅电池研究。这里引用的是媒体报道，并非已核验的 CBI 治理文件，也不表述为已经完成的组织调整。"
+      },
+      {
+        "eyebrow": "运行任务",
+        "title": "先明确项目要获得什么运行结果",
+        "text": "先明确负载功率、持续时间、浮充或循环任务，以及温度、空间、充电、控制和维护条件。在同一系统边界下比较安全设计、监测、隔离和事故响应要求，确认当地可验证的回收渠道及责任方。总成本应覆盖采购、系统改造、运行、维护、更换和回收，不能仅看购置价格。"
+      },
+      {
+        "eyebrow": "系统架构",
+        "title": "多技术路线，不等于每个项目都要混合系统",
+        "text": "混合配置需要具体工况依据。如果一种技术已经满足要求，额外接口和控制可能增加不必要的复杂度。只有不同任务确实需要不同能力，且控制、接口、维护和责任分配可以落地时，才值得进一步验证组合方案。这是一套项目评审框架，不是各种化学体系的通用排名。"
+      },
+      {
+        "eyebrow": "AGM 边界",
+        "title": "AGM 必须从 VRLA 应用边界进入比较",
+        "text": "AGM 不是与铅、锂、钠并列的电池化学体系，而是 VRLA 铅酸电池采用吸液玻璃纤维毡的结构方式。先确认项目是否包含适合 VRLA 且经过验证的备电或浮充任务，再核对充电、温度、空间、维护和整电池设计。项目采用锂离子或钠离子电池，并不会自动产生 AGM 隔板需求。"
+      },
+      {
+        "eyebrow": "验证依据",
+        "title": "统一输入条件和验收标准",
+        "text": "所有候选方案都应采用相同的负载曲线、运行模式、环境、安全要求、回收责任和成本边界。明确区分材料数据、样品结果、整电池验证和运行系统证据。比较前约定验收标准与各项测试的责任方。单凭材料测试不能证明电池寿命、容量或系统安全。"
+      },
+      {
+        "eyebrow": "维京范围",
+        "title": "维京可以配合的隔板范围",
+        "text": "湖北维京科技专注于 VRLA 铅酸电池用 AGM 玻璃纤维隔板，可沟通卷材或片材、厚度、宽度、片材尺寸、包装及约定的样品方法。最终适用性仍取决于电池设计、运行任务和客户验证。申请规格匹配时，请提供应用、容量、目标尺寸、测试条件和当前样品阶段。"
+      }
+    ],
+    "parameters": [
+      [
+        "先明确项目要获得什么运行结果",
+        "负载曲线、目标功率及持续时间"
+      ],
+      [
+        "多技术路线，不等于每个项目都要混合系统",
+        "浮充、循环或混合运行模式"
+      ],
+      [
+        "AGM 必须从 VRLA 应用边界进入比较",
+        "温度、空间、安装和维护条件"
+      ],
+      [
+        "统一输入条件和验收标准",
+        "样品、整电池和系统验收标准"
+      ]
+    ],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "电池技术评审的统一输入",
+      "text": "所有候选方案采用相同边界。",
+      "items": [
+        "负载曲线、目标功率及持续时间",
+        "浮充、循环或混合运行模式",
+        "温度、空间、安装和维护条件",
+        "安全、监测和事故响应要求",
+        "当地回收渠道和责任方",
+        "采购、改造、运行及更换成本",
+        "样品、整电池和系统验收标准"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "UPS 机房都在谈锂电、钠电，为什么很多项目还在继续用 VRLA？",
+          "/zh/blog/why-ups-projects-still-use-vrla-batteries/"
+        ],
+        [
+          "什么是 AGM 隔板？",
+          "/zh/blog/what-is-agm-separator/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "已有 VRLA 项目请提供应用、容量、运行任务、厚度、宽度或片材尺寸、测试条件和样品阶段。隔板数据不能替代整电池和系统验证。",
+      "checklist": [
+        "负载曲线、目标功率及持续时间",
+        "浮充、循环或混合运行模式",
+        "温度、空间、安装和维护条件",
+        "安全、监测和事故响应要求"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "已有 VRLA 项目请提供应用、容量、运行任务、厚度、宽度或片材尺寸、测试条件和样品阶段。隔板数据不能替代整电池和系统验证。"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "来源与范围",
+      "title": "研究范围扩大，不等于铅电池研究结束",
+      "text": "ELBC 2026 讨论了不同电池技术的互补。Batteries International 报道 CBI 计划于 2027 年拓宽研究范围，同时保留铅电池研究。这里引用的是媒体报道，并非已核验的 CBI 治理文件，也不表述为已经完成的组织调整。",
+      "items": [
+        [
+          "ELBC — Lead and Multi-Technology Workshop",
+          "https://www.elbcexpo.org/energy-storage-workshop/"
+        ],
+        [
+          "Batteries International — CBI, 2026-09-19",
+          "https://www.batteriesinternational.com/news/new-pivot-for-elbc-as-cbi-opens-doors-to-research-for-all-chemistries/"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -4024,7 +4386,9 @@ export function BlogArticlePage({
       ? null
       : secondaryArticleCopy[lang][page];
   const defaultArticle: any = secondaryArticle ?? (
-    page === "keyTechnicalParameters"
+    page === "batteryTechnologyProjectComparison"
+      ? batteryTechnologyProjectComparisonCopy[primaryLang]
+      : page === "keyTechnicalParameters"
       ? keyTechnicalCopy[primaryLang]
       : page === "howToChooseAgmSeparator"
         ? howToChooseCopy[primaryLang]
