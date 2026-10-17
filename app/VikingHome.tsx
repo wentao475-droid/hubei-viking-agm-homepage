@@ -7,6 +7,7 @@ import { InquiryForm } from "./InquiryForm";
 import type { Lang, SiteLocale } from "./locales";
 import { SiteHeader } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
+import { FooterQrCodes } from "./FooterQrCodes";
 
 export type { Lang } from "./locales";
 type IconProps = { size?: number; className?: string };
@@ -2909,31 +2910,13 @@ export function VikingHome({ initialLang }: { initialLang: SiteLocale }) {
               </a>
             )}
             <SocialLinks lang={lang} />
-            <div className="mt-6 grid max-w-md gap-4 sm:grid-cols-2">
-              {[
-                ...t.footer.qrImages
-              ].map(([label, src]) => (
-                <div
-                  key={label}
-                  className="rounded-md border border-line bg-frost p-4"
-                >
-                  <Image
-                    src={asset(src)}
-                    alt={label}
-                    width={180}
-                    height={180}
-                    loading="lazy"
-                    className="mx-auto h-28 w-28 rounded-sm bg-white object-contain"
-                  />
-                  <p
-                    id={src === "/images/qrcode_for_logo.jpg" ? "wechat-qr" : undefined}
-                    className="mt-3 scroll-mt-28 text-center text-sm font-semibold leading-6 text-graphite"
-                  >
-                    {label}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <FooterQrCodes
+              lang={lang}
+              wechatLabel={t.footer.qrImages[0][0]}
+              mobileLabel={t.footer.qrImages[1][0]}
+              wechatAnchor
+              className="mt-6 max-w-md"
+            />
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

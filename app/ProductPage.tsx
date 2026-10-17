@@ -8,6 +8,7 @@ import type { Lang, SiteLocale } from "./locales";
 import { productFaqCopy } from "./seo-faq";
 import { SiteHeader } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
+import { FooterQrCodes } from "./FooterQrCodes";
 import { buildArabicProductContent } from "../content/arabic-products.mjs";
 import {
   thermalInsulationPaperContent,
@@ -4963,37 +4964,12 @@ function Footer({
             <SocialLinks lang={lang} />
           </div>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="rounded-md border border-line bg-frost p-4">
-            <Image
-              src={asset("/images/qrcode_for_logo.jpg")}
-              alt={copy.wechat}
-              width={160}
-              height={160}
-              loading="lazy"
-              className="mx-auto h-28 w-28 object-contain"
-            />
-            <p
-              id="wechat-qr"
-              className="mt-3 scroll-mt-28 text-center text-sm font-semibold text-ink"
-            >
-              {copy.wechat}
-            </p>
-          </div>
-          <div className="rounded-md border border-line bg-frost p-4">
-            <Image
-              src={asset("/images/website-logo-180.webp")}
-              alt={copy.mobile}
-              width={160}
-              height={160}
-              loading="lazy"
-              className="mx-auto h-28 w-28 object-contain"
-            />
-            <p className="mt-3 text-center text-sm font-semibold text-ink">
-              {copy.mobile}
-            </p>
-          </div>
-        </div>
+        <FooterQrCodes
+          lang={lang}
+          wechatLabel={copy.wechat}
+          mobileLabel={copy.mobile}
+          wechatAnchor
+        />
       </div>
       <div className="mx-auto mt-10 max-w-7xl border-t border-line pt-6 text-sm text-steel">
         <div>

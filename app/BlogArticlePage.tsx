@@ -6,6 +6,7 @@ import { articleContent } from "./cms-content";
 import { InquiryForm } from "./InquiryForm";
 import { SiteHeader } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
+import { FooterQrCodes } from "./FooterQrCodes";
 import type { SiteLocale } from "./locales";
 import {
   secondaryArticleCopy,
@@ -5036,26 +5037,12 @@ export function BlogArticlePage({
               {t.footer.description}
             </p>
             <SocialLinks lang={lang} />
-            <div className="mt-6 grid max-w-md gap-4 sm:grid-cols-2">
-              {[
-                [t.footer.wechat, "/images/qrcode_for_logo.jpg"],
-                [t.footer.mobile, "/images/website-logo-180.webp"]
-              ].map(([label, src]) => (
-                <div key={label} className="rounded-md border border-line bg-frost p-4">
-                  <Image
-                    src={asset(src)}
-                    alt={label}
-                    width={180}
-                    height={180}
-                    loading="lazy"
-                    className="mx-auto h-28 w-28 rounded-sm bg-white object-contain"
-                  />
-                  <p className="mt-3 text-center text-sm font-semibold leading-6 text-graphite">
-                    {label}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <FooterQrCodes
+              lang={lang}
+              wechatLabel={t.footer.wechat}
+              mobileLabel={t.footer.mobile}
+              className="mt-6 max-w-md"
+            />
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
