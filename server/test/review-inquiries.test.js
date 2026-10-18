@@ -29,10 +29,11 @@ test("history review is read-only by default and protects followed-up leads", as
     grade: "B", source: "automatic", notes: null, followup: null, handled: null, status: "new"
   };
   const fixtures = [
-    {}, { grade: "D" }, { source: "manual" }, { notes: "Discussed sample" },
+    {}, {}, { source: "manual" }, { notes: "Discussed sample" },
     { followup: "2026-10-10" }, { handled: "2026-10-01" }, { status: "quoted" },
     { source: "migration" }, { grade: "A" }, { grade: "C" },
-    { message: "Price for AGM sheets?" }, { message: "Hi there! I'd like to hear more about your newsletter" }
+    { message: "Price for AGM sheets?" }, { message: "Hi there! I'd like to hear more about your newsletter" },
+    { grade: "D" }
   ];
   fixtures.forEach((item, i) => insert.run({ ...base, ...item, id: i + 1 }));
   const before = db.prepare("SELECT * FROM inquiries ORDER BY id").all();

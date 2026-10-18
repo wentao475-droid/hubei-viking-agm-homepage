@@ -6,7 +6,7 @@ import {
   normalizeContactIdentity
 } from "../inquiry-classifier.js";
 
-test("normal VRLA sample inquiry enters D", () => {
+test("normal VRLA sample inquiry enters B", () => {
   const result = classifyInquiry({
     inquiry: inquiry({
       application: "VRLA battery",
@@ -14,7 +14,7 @@ test("normal VRLA sample inquiry enters D", () => {
     })
   });
 
-  assert.equal(result.lead_grade, "D");
+  assert.equal(result.lead_grade, "B");
   assert.equal(result.classification_reason, null);
 });
 
@@ -54,7 +54,7 @@ test("same contact with a different requirement is not a duplicate", () => {
     classifyInquiry({
       inquiry: inquiry({ message: "Need 2.0 mm AGM separator sheets" })
     }).lead_grade,
-    "D"
+    "B"
   );
 });
 
@@ -77,7 +77,7 @@ test("product intent prevents an unrelated-keyword false positive", () => {
     })
   });
 
-  assert.equal(result.lead_grade, "D");
+  assert.equal(result.lead_grade, "B");
 });
 
 test("a selected product format cannot bypass a clear SEO solicitation", () => {
@@ -139,7 +139,7 @@ test("specific battery request remains allowed without a company name", () => {
     })
   });
 
-  assert.equal(result.lead_grade, "D");
+  assert.equal(result.lead_grade, "B");
 });
 
 test("high-risk gambling promotion enters E", () => {
@@ -173,7 +173,7 @@ test("battery inquiry with a company link remains allowed", () => {
     })
   });
 
-  assert.equal(result.lead_grade, "D");
+  assert.equal(result.lead_grade, "B");
 });
 
 test("contact identity normalizes email casing and surrounding text", () => {
@@ -206,10 +206,10 @@ for (const message of [
   "Can you send separator specifications? Our AGM battery product has a free trial.",
   "We use commercial messages for sales but need a quote for AGM separator samples."
 ]) {
-  test(`legitimate or ambiguous request remains D: ${message}`, () => {
+  test(`legitimate or ambiguous request remains B: ${message}`, () => {
     assert.equal(classifyInquiry({ inquiry: inquiry({
       company: "", contact: "buyer@gmail.com", email: "buyer@gmail.com", message
-    }) }).lead_grade, "D");
+    }) }).lead_grade, "B");
   });
 }
 

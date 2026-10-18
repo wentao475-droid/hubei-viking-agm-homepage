@@ -20,6 +20,7 @@ import {
 import { applyLeadGradeMigration } from "./lead-grade-migration.js";
 import { migrateCrm } from "./crm-store.js";
 import { crmRoutes } from "./crm-routes.js";
+import { migrateGradeDefinitions } from "./lead-grades.js";
 
 dotenv.config();
 
@@ -92,7 +93,7 @@ db.exec(`
     notes TEXT,
     next_follow_up_at TEXT,
     handled_at TEXT,
-    lead_grade TEXT NOT NULL DEFAULT 'D',
+    lead_grade TEXT NOT NULL DEFAULT 'B',
     classification_source TEXT NOT NULL DEFAULT 'automatic',
     classification_reason TEXT,
     duplicate_of_id INTEGER,
@@ -136,6 +137,7 @@ db.exec(`
 
 applyLeadGradeMigration(db);
 migrateCrm(db);
+migrateGradeDefinitions(db);
 
 const insertInquiry = db.prepare(`
   INSERT INTO inquiries (

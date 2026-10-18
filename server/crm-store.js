@@ -1,4 +1,5 @@
 import { createMessageFingerprint, normalizeContactIdentity } from "./inquiry-classifier.js";
+import { defaultLeadGrade, gradeSchemaVersion } from "./lead-grades.js";
 
 export const channels = {
   website: "官网", wechat: "微信", whatsapp: "WhatsApp", email: "邮件",
@@ -52,7 +53,7 @@ export function validateLead(input) {
   result.source_channel = Object.keys(channels).find((key) => key === channel.toLowerCase() || channels[key] === channel);
   if (!result.source_channel) fail("请选择有效来源渠道");
   if (result.source_channel === "other" && !result.source_detail) fail("其他渠道需要填写来源说明");
-  result.lead_grade = (result.lead_grade || "D").toUpperCase();
+  result.lead_grade = (result.lead_grade || defaultLeadGrade).toUpperCase();
   if (!/^[ABCDE]$/.test(result.lead_grade)) fail("等级必须为 A、B、C、D 或 E");
   if (result.follow_up_at && !result.initial_follow_up) fail("填写初始沟通时间时需要填写初始跟进内容");
   return result;
@@ -128,10 +129,10 @@ export class CrmStore {
     if ((required || version != null) && (!Number.isInteger(version) || row.version !== version)) fail("此线索已更新，请重新打开后再保存", 409, { code: "stale_version" });
   }
   activity(id, actor, data) {
-    this.db.prepare(`INSERT INTO crm_activities (inquiry_id, kind, happened_at, method, content, next_action, next_follow_up_at, lead_grade, actor, changes_json)
-      VALUES (@id, @kind, @happened_at, @method, @content, @next_action, @next_follow_up_at, @lead_grade, @actor, @changes_json)`).run({
+    this.db.prepare(`INSERT INTO crm_activities (inquiry_id, kind, happened_at, method, content, next_action, next_follow_up_at, lead_grade, actor, changes_json, grade_schema_version)
+      VALUES (@id, @kind, @happened_at, @method, @content, @next_action, @next_follow_up_at, @lead_grade, @actor, @changes_json, @grade_schema_version)`).run({
       id, actor, kind: "update", happened_at: new Date().toISOString(), method: "", content: "资料更新",
-      next_action: null, next_follow_up_at: null, lead_grade: null, changes_json: null, ...data
+      next_action: null, next_follow_up_at: null, lead_grade: null, changes_json: null, grade_schema_version: gradeSchemaVersion, ...data
     });
   }
   duplicates(lead, excludeId = null) {
@@ -195,7 +196,7 @@ export class CrmStore {
   filter(query, includeGrade = true) {
     const terms = [], params = {};
     const grade = query.grade || "work";
-    if (includeGrade && grade === "work") terms.push("lead_grade IN ('A','B','D')");
+    if (includeGrade && grade === "work") terms.push("lead_grade IN ('A','B','C')");
     else if (includeGrade && /^[ABCDE]$/.test(grade)) { terms.push("lead_grade = @grade"); params.grade = grade; }
     if (query.channel && query.channel !== "all") { terms.push("source_channel = @channel"); params.channel = query.channel; }
     if (query.batch) { terms.push("import_batch_id = @batch"); params.batch = query.batch; }
@@ -205,7 +206,7 @@ export class CrmStore {
         OR EXISTS (SELECT 1 FROM crm_activities a WHERE a.inquiry_id = inquiries.id AND a.content LIKE @q))`);
     }
     if (["today", "overdue", "unscheduled"].includes(query.follow_up)) {
-      terms.push("lead_grade IN ('A','B','D')");
+      terms.push("lead_grade IN ('A','B','C')");
       if (query.follow_up === "unscheduled") terms.push("next_follow_up_at IS NULL");
       if (query.follow_up === "today") terms.push("date(next_follow_up_at, '+8 hours') = date('now', '+8 hours')");
       if (query.follow_up === "overdue") terms.push("datetime(next_follow_up_at) < datetime('now')");

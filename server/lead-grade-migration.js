@@ -31,6 +31,7 @@ export function applyLeadGradeMigration(db) {
 
   const migrate = db.transaction(() => {
     populateInquiryFingerprints(db);
+    // Historical v1 vocabulary; lead-grades.js converts these grades to v2 afterwards.
     db.exec(`
       UPDATE inquiries
       SET lead_grade = CASE

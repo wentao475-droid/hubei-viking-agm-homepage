@@ -1,4 +1,5 @@
 import { channels } from "./crm-store.js";
+import { gradeLabels, gradeDescriptions } from "./lead-grades.js";
 
 export function crmBody() {
   const options = Object.entries(channels).map(([value, label]) => `<option value="${value}">${label}</option>`).join("");
@@ -7,16 +8,16 @@ export function crmBody() {
       <div class="topbar-actions"><button id="new-lead" class="primary-button">新增线索</button><button id="import-leads" class="secondary-button">导入线索</button>
       <a class="secondary-button" href="/admin/api/crm/template.csv">下载导入模板</a><form method="POST" action="/admin/logout"><button class="ghost-button">退出</button></form></div></header>
     <div id="notice" role="status" aria-live="polite"></div>
-    <section class="stats-grid" aria-label="线索等级统计">${[["A", "服务中"], ["B", "洽谈中"], ["C", "已流失"], ["D", "待联系"], ["E", "无效"]].map(([grade, label]) => `<button class="stat-card" data-grade="${grade}"><span>${grade} · ${label}</span><strong id="stat-${grade}">0</strong></button>`).join("")}</section>
+    <section class="stats-grid" aria-label="线索等级统计">${Object.entries(gradeLabels).map(([grade, label]) => `<button class="stat-card" data-grade="${grade}"><span>${grade} · ${label}</span><strong id="stat-${grade}">0</strong><small>${gradeDescriptions[grade]}</small></button>`).join("")}</section>
     <section class="panel"><div class="toolbar crm-toolbar">
       <label><span>搜索线索及跟进内容</span><input id="search" type="search" placeholder="姓名、公司、联系方式、需求…"></label>
       <label><span>渠道</span><select id="channel-filter"><option value="all">全部渠道</option>${options}</select></label>
-      <label><span>等级</span><select id="grade-filter"><option value="work">A/B/D 工作队列</option><option value="all">全部等级</option>${["A", "B", "C", "D", "E"].map((g) => `<option>${g}</option>`).join("")}</select></label>
-      <label><span>跟进状态（A/B/D）</span><select id="follow-filter"><option value="all">全部</option><option value="today">今日待跟进</option><option value="overdue">已逾期</option><option value="unscheduled">未安排</option></select></label>
+      <label><span>等级</span><select id="grade-filter"><option value="work">A/B/C 工作队列</option><option value="all">全部等级</option>${Object.entries(gradeLabels).map(([g, label]) => `<option value="${g}">${g} · ${label}</option>`).join("")}</select></label>
+      <label><span>跟进状态（A/B/C）</span><select id="follow-filter"><option value="all">全部</option><option value="today">今日待跟进</option><option value="overdue">已逾期</option><option value="unscheduled">未安排</option></select></label>
       <label><span>排序</span><select id="sort-filter"><option value="created">最新录入优先</option><option value="follow_up">下次跟进时间</option></select></label>
       <label><span>导入批次</span><select id="batch-filter"><option value="">全部批次</option></select></label>
     </div><div class="crm-actions"><a id="export-csv" class="secondary-button">导出线索 CSV</a><a id="export-follow-ups" class="secondary-button">导出完整跟进 CSV</a><span id="status-message" role="status"></span></div>
-    <div id="bulk-actions" class="crm-actions" hidden><span id="selected-count"></span><select id="bulk-grade" aria-label="批量等级">${["A", "B", "C", "D", "E"].map((g) => `<option${g === "D" ? " selected" : ""}>${g}</option>`).join("")}</select><button id="apply-bulk-grade" class="primary-button">应用等级</button><button id="clear-selection" class="secondary-button">清除选择</button></div>
+    <div id="bulk-actions" class="crm-actions" hidden><span id="selected-count"></span><select id="bulk-grade" aria-label="批量等级">${Object.entries(gradeLabels).map(([g, label]) => `<option value="${g}"${g === "B" ? " selected" : ""}>${g} · ${label}</option>`).join("")}</select><button id="apply-bulk-grade" class="primary-button">应用等级</button><button id="clear-selection" class="secondary-button">清除选择</button></div>
     <div id="inquiry-list" class="inquiry-list"></div><div class="pagination"><button id="prev-page" class="secondary-button">上一页</button><span id="page-label"></span><button id="next-page" class="secondary-button">下一页</button></div></section>
     <dialog id="detail-drawer" class="crm-drawer"><button class="close-button" data-close="detail-drawer" aria-label="关闭详情">关闭</button><div id="detail-content"></div></dialog>
     <dialog id="workspace-dialog" class="crm-dialog"><button class="close-button" data-close="workspace-dialog" aria-label="关闭窗口">关闭</button><div id="workspace-content"></div></dialog>
@@ -25,6 +26,7 @@ export function crmBody() {
 
 export const crmStyles = `
   .topbar-actions,.crm-actions { display:flex;gap:10px;flex-wrap:wrap;align-items:center; }
+  .stat-card small { display:block;margin-top:8px;color:var(--steel);font-size:12px;line-height:1.5; }
   .topbar-actions { justify-content:flex-end; }
   .topbar { gap:24px;align-items:flex-start; }
   h1 { line-height:1.2; }
@@ -70,7 +72,7 @@ export function crmClientScript() { return `(${crmClient.toString()})();`; }
 function crmClient() {
   const $ = (id) => document.getElementById(id);
   const esc = (text) => String(text ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-  const grades = { A: "服务中", B: "洽谈中", C: "已流失", D: "待联系", E: "无效" };
+  let grades;
   const state = { page: 1, grade: "work", channel: "all", follow_up: "all", sort: "created", batch: "", q: "" };
   let options, rows = [], selected = new Set(), sequence = 0, draft = null, preview = null, importData = null, importGeneration = 0;
   const format = (value) => {
@@ -88,13 +90,13 @@ function crmClient() {
   };
   const gradeOptions = (value) => Object.entries(grades).map(([g, name]) => `<option value="${g}"${value === g ? " selected" : ""}>${g} · ${name}</option>`).join("");
   const channelOptions = (value = "", allowBlank = false) => (allowBlank ? '<option value="">请选择默认渠道</option>' : "") + Object.entries(options.channels).map(([key, name]) => `<option value="${key}"${value === key ? " selected" : ""}>${name}</option>`).join("");
-  function changesHtml(json) {
+  function changesHtml(json, schemaVersion) {
     const changes = JSON.parse(json);
     const entries = changes.before && changes.after
       ? Object.keys(changes.after).map((key) => [key, { before: changes.before[key], after: changes.after[key] }])
       : Object.entries(changes);
-    const value = (key, text) => text == null || text === "" ? "未设置" : key.endsWith("_at") ? format(text) : key === "lead_grade" ? `${text} · ${grades[text] || text}` : key === "source_channel" ? options.channels[text] || text : text;
-    return '<ul>' + entries.filter(([, item]) => item.before !== item.after).map(([key, item]) => `<li>${esc(options.fields[key] || key)}：${esc(value(key, item.before))} → ${esc(value(key, item.after))}</li>`).join("") + '</ul>';
+    const value = (key, text) => text == null || text === "" ? "未设置" : key.endsWith("_at") ? format(text) : key === "lead_grade" ? `${schemaVersion === 1 ? "旧制 " : ""}${text} · ${(schemaVersion === 1 ? options.legacyGrades : grades)[text] || text}` : key === "source_channel" ? options.channels[text] || text : text;
+    return '<ul>' + entries.filter(([, item]) => item.before !== item.after).map(([key, item]) => `<li>${esc(options.fields[key] || (key === "grade_definition" ? "等级定义" : key))}：${esc(value(key, item.before))} → ${esc(value(key, item.after))}</li>`).join("") + '</ul>';
   }
   async function api(url, body) {
     const response = await fetch("/admin/api" + url, body === undefined ? {} : body instanceof FormData ? { method: "POST", body } : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
@@ -162,7 +164,7 @@ function crmClient() {
           ${field("next_follow_up_at", "下次跟进（留空可清除）", local(row.next_follow_up_at), "datetime-local")}
           <label><span>线索等级</span><select name="lead_grade">${gradeOptions(row.lead_grade)}</select></label>
           <div id="follow-error" class="error-text wide" role="alert"></div><div class="crm-actions wide"><button class="primary-button" type="submit">添加跟进</button><button class="secondary-button" type="button" id="save-plan">仅更新计划/等级</button></div></form>
-        <h3>跟进时间线</h3><ol class="timeline">${data.activities.map((a) => `<li><strong>${esc(a.kind === "legacy_note" ? "历史备注 · 时间未知" : a.kind === "communication" ? (a.happened_at ? format(a.happened_at) : "历史沟通 · 时间未知") + " · " + a.method : "操作记录 · " + format(a.happened_at))}</strong><p>${esc(a.content)}</p>${a.next_action ? `<p>下一步：${esc(a.next_action)}</p>` : ""}${a.changes_json ? `<details><summary>查看变更</summary>${changesHtml(a.changes_json)}</details>` : ""}<small>录入：${esc(format(a.recorded_at))} · ${esc(a.actor)}${a.next_follow_up_at ? " · 下次跟进：" + esc(format(a.next_follow_up_at)) : ""}</small></li>`).join("") || '<li>暂无跟进记录</li>'}</ol>`;
+        <h3>跟进时间线</h3><ol class="timeline">${data.activities.map((a) => `<li><strong>${esc(a.kind === "legacy_note" ? "历史备注 · 时间未知" : a.kind === "communication" ? (a.happened_at ? format(a.happened_at) : "历史沟通 · 时间未知") + " · " + a.method : "操作记录 · " + format(a.happened_at))}</strong><p>${esc(a.content)}</p>${a.next_action ? `<p>下一步：${esc(a.next_action)}</p>` : ""}${a.changes_json ? `<details><summary>查看变更</summary>${changesHtml(a.changes_json, a.grade_schema_version)}</details>` : ""}<small>录入：${esc(format(a.recorded_at))} · ${esc(a.actor)}${a.next_follow_up_at ? " · 下次跟进：" + esc(format(a.next_follow_up_at)) : ""}</small></li>`).join("") || '<li>暂无跟进记录</li>'}</ol>`;
       $("detail-drawer").setAttribute("aria-labelledby", "detail-title"); if (!$("detail-drawer").open) $("detail-drawer").showModal();
       $("edit-basic").onclick = () => editLead(row); $("reload-detail").onclick = () => openDetail(id);
       const submit = async (plan) => {
@@ -184,7 +186,7 @@ function crmClient() {
       ${field("message", website ? "官网原始留言（只读）" : "需求内容", values.message, "textarea", true, website)}
       ${field("interested_product", "产品", values.interested_product)}${field("application", "应用", values.application)}
       ${field("first_contact_at", "首次联系时间（上海时间）", local(values.first_contact_at), "datetime-local")}
-      ${!editing ? `<label><span>等级</span><select name="lead_grade">${gradeOptions("D")}</select></label>${field("next_follow_up_at", "下次跟进时间（上海时间）", "", "datetime-local")}${field("next_action", "下一步")}${field("initial_follow_up", "初始跟进内容（可选）", "", "textarea", true)}${field("follow_up_at", "初始沟通时间（不填则标记时间未知）", "", "datetime-local")}` : ""}
+      ${!editing ? `<label><span>等级</span><select name="lead_grade">${gradeOptions("B")}</select></label>${field("next_follow_up_at", "下次跟进时间（上海时间）", "", "datetime-local")}${field("next_action", "下一步")}${field("initial_follow_up", "初始跟进内容（可选）", "", "textarea", true)}${field("follow_up_at", "初始沟通时间（不填则标记时间未知）", "", "datetime-local")}` : ""}
       <div id="lead-error" class="error-text wide" role="alert"></div><div id="lead-duplicates" class="wide"></div><div class="crm-actions wide"><button class="primary-button" type="submit">${editing ? "保存资料" : "新增线索"}</button></div></form>`;
     $("workspace-dialog").setAttribute("aria-labelledby", "workspace-title"); if (!$("workspace-dialog").open) $("workspace-dialog").showModal();
     let duplicateToken = null;
@@ -268,5 +270,5 @@ function crmClient() {
   $("import-leads").onclick = openImport;
   $("workspace-dialog").addEventListener("close", () => { importGeneration++; if (draft) { const id = draft; draft = null; api(`/crm/imports/${id}/cancel`, {}).catch(() => {}); } });
   $("new-lead").disabled = true; $("import-leads").disabled = true;
-  api("/crm/options").then(async (data) => { options = data; $("new-lead").disabled = false; $("import-leads").disabled = false; await batches(); await load(); }).catch((e) => notice(e.message, true));
+  api("/crm/options").then(async (data) => { options = data; grades = data.grades; $("new-lead").disabled = false; $("import-leads").disabled = false; await batches(); await load(); }).catch((e) => notice(e.message, true));
 }

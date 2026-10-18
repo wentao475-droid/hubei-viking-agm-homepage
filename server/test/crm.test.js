@@ -5,6 +5,7 @@ import { testApi } from "../crm-fixture.js";
 import { crmDate, csvText, identityKeys, migrateCrm, CrmStore, validateLead } from "../crm-store.js";
 import { CrmImports, parseLeadFile } from "../crm-import.js";
 import { zipSync, strToU8 } from "fflate";
+import { migrateGradeDefinitions, gradeMigrationName } from "../lead-grades.js";
 
 const lead = (overrides = {}) => ({ name: "采购联系人", email: "buyer@example.net", source_channel: "wechat", ...overrides });
 
@@ -25,7 +26,7 @@ test("CRM API: manual intake, duplicate confirmation, history, concurrency, filt
   let created = (await api.json("/inquiries", lead({ name: '<img src=x onerror="alert(1)">', initial_follow_up: "此前邮件沟通", follow_up_at: "2026-10-01 09:00", next_follow_up_at: "2026-10-19 09:00" }), 201)).inquiry;
   assert.equal(created.classification_source, "manual"); assert.equal(created.notification_status, "skipped");
   assert.equal(created.email_notification_status, "skipped"); assert.equal(created.feishu_notification_status, "skipped");
-  assert.equal(created.lead_grade, "D");
+  assert.equal(created.lead_grade, "B");
   const conflict = await api.json("/inquiries", lead(), 409);
   assert.equal(conflict.duplicates[0].id, created.id);
   const newDemand = (await api.json("/inquiries", { ...lead(), duplicate_token: conflict.duplicate_token }, 201)).inquiry;
@@ -42,7 +43,7 @@ test("CRM API: manual intake, duplicate confirmation, history, concurrency, filt
   saved = (await api.json(`/inquiries/${created.id}/basic`, { version: saved.version, company: "电池制造商" })).inquiry;
   await api.json(`/inquiries/${created.id}/basic`, { version: oldVersion, company: "过时内容" }, 409);
   await api.json("/inquiries/bulk-grade", { ids: [created.id, newDemand.id], lead_grade: "E", versions: { [created.id]: oldVersion, [newDemand.id]: newDemand.version } }, 409);
-  assert.equal((await api.json(`/inquiries/${newDemand.id}`)).inquiry.lead_grade, "D");
+  assert.equal((await api.json(`/inquiries/${newDemand.id}`)).inquiry.lead_grade, "B");
   saved = (await api.json(`/inquiries/${created.id}/follow-ups`, { version: saved.version, kind: "plan", next_action: "", next_follow_up_at: "" })).inquiry;
   assert.equal(saved.next_follow_up_at, null); assert.equal(saved.next_action, "");
   const filtered = await api.json("/inquiries?channel=wechat&q=寄送样品&grade=all"); assert.equal(filtered.total, 1); assert.equal(filtered.stats.B, 1);
@@ -126,6 +127,52 @@ test("imports preview before writing, flag duplicates, confirm once, expire draf
   assert.equal(db.prepare("SELECT count(*) n FROM inquiries").get().n, before);
   assert.equal(imports.get(rollback.id, "admin").status, "draft");
   imports.cancel(rollback.id, "admin"); assert.equal(db.prepare("SELECT sheets_json FROM crm_import_batches WHERE id = ?").get(rollback.id).sheets_json, null);
+});
+
+test("grade definitions migrate old C/D exactly once, preserve snapshots and keep potential clients active", async (t) => {
+  const api = await testApi(t);
+  const db = new Database(api.dbPath); t.after(() => db.close());
+  const ids = [];
+  for (const grade of ["A", "B", "C", "D", "E"]) {
+    const item = (await api.json("/inquiries", lead({ email: `${grade}@example.net`, name: `旧 ${grade}` }), 201)).inquiry;
+    ids.push(item.id);
+    db.prepare("UPDATE inquiries SET lead_grade = ?, notes = '原始备注', next_follow_up_at = '2020-01-01T00:00:00Z', email_notification_status = 'sent', utm_source = 'Google' WHERE id = ?").run(grade, item.id);
+  }
+  db.prepare("UPDATE crm_activities SET grade_schema_version = 1, lead_grade = 'C', changes_json = ? WHERE inquiry_id = ?").run(JSON.stringify({ before: { lead_grade: "D" }, after: { lead_grade: "C" } }), ids[2]);
+  const originalActivity = db.prepare("SELECT * FROM crm_activities WHERE inquiry_id = ?").all(ids[2]);
+  const oldRows = db.prepare("SELECT * FROM inquiries ORDER BY id").all();
+  const imports = new CrmImports(new CrmStore(db));
+  const draft = imports.stage("旧定义草稿.csv", [{ sheet: "CSV", data: [["姓名", "邮箱"], ["旧草稿", "draft@example.net"]] }], "admin");
+  db.prepare("DELETE FROM schema_migrations WHERE name = ?").run(gradeMigrationName);
+  assert.deepEqual(migrateGradeDefinitions(db), { applied: true, changed: 2 });
+  const migrated = db.prepare("SELECT * FROM inquiries ORDER BY id").all();
+  assert.deepEqual(migrated.map((row) => row.lead_grade), ["A", "B", "D", "B", "E"]);
+  for (let i = 0; i < migrated.length; i++) {
+    assert.equal(migrated[i].version, oldRows[i].version + ([2, 3].includes(i) ? 1 : 0));
+    for (const key of ["notes", "next_follow_up_at", "notification_status", "email_notification_status", "feishu_notification_status", "classification_source", "classification_reason", "utm_source", "message", "contact", "created_at"]) assert.equal(migrated[i][key], oldRows[i][key]);
+  }
+  assert.deepEqual(db.prepare("SELECT * FROM crm_activities WHERE inquiry_id = ? AND kind <> 'grade_migration'").all(ids[2]), originalActivity);
+  assert.equal(db.prepare("SELECT count(*) n FROM crm_activities WHERE kind = 'grade_migration'").get().n, 2);
+  assert.equal(db.prepare("SELECT status FROM crm_import_batches WHERE id = ?").get(draft.id).status, "expired");
+  assert.equal(db.prepare("SELECT sheets_json FROM crm_import_batches WHERE id = ?").get(draft.id).sheets_json, null);
+  assert.deepEqual(migrateGradeDefinitions(db), { applied: false, changed: 0 });
+  assert.equal(db.prepare("SELECT lead_grade FROM inquiries WHERE id = ?").get(ids[2]).lead_grade, "D");
+  await api.json(`/inquiries/${ids[2]}/follow-ups`, { kind: "plan", version: oldRows[2].version, lead_grade: "B" }, 409);
+  const potential = (await api.json("/inquiries", lead({ email: "potential@example.net", lead_grade: "C", next_follow_up_at: "2020-01-01 09:00" }), 201)).inquiry;
+  const active = await api.json("/inquiries");
+  assert.ok(active.inquiries.some((r) => r.id === potential.id));
+  assert.ok(!active.inquiries.some((r) => r.id === ids[2]));
+  const overdue = await api.json("/inquiries?follow_up=overdue&grade=all");
+  assert.ok(overdue.inquiries.some((r) => r.id === potential.id));
+  assert.ok(!overdue.inquiries.some((r) => r.id === ids[2]));
+  assert.equal((await api.json("/inquiries?status=lost")).total, 1);
+  const lost = (await api.json(`/inquiries/${potential.id}/status`, { status: "lost" })).inquiry;
+  assert.equal(lost.lead_grade, "D");
+  assert.equal((await api.json("/inquiries?grade=C")).total, 0);
+  const options = await api.json("/crm/options");
+  assert.equal(options.grades.C, "潜在客户池"); assert.equal(options.grades.D, "已流失"); assert.equal(options.gradeSchemaVersion, 2);
+  assert.match(await (await api.request("/inquiries.csv?grade=D")).text(), /已流失/);
+  assert.match(await (await api.request("/follow-ups.csv?grade=all")).text(), /grade_schema_version/);
 });
 
 function workbook() {

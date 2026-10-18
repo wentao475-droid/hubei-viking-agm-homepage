@@ -10,7 +10,7 @@ const clearSpamReasons = new Set([
 
 export function reviewInquiries(db) {
   const report = { automatic: [], manualReview: [] };
-  for (const row of db.prepare("SELECT * FROM inquiries WHERE lead_grade IN ('B', 'D') ORDER BY id").all()) {
+  for (const row of db.prepare("SELECT * FROM inquiries WHERE lead_grade = 'B' ORDER BY id").all()) {
     const result = classifyInquiry({ inquiry: row });
     if (result.lead_grade !== "E") continue;
     const protections = [];

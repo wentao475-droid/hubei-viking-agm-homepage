@@ -125,11 +125,11 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
     assert.equal(row.email_notification_status, "skipped");
     assert.equal(row.feishu_notification_status, "skipped");
   }
-  assert.equal(rows[0].lead_grade, "D");
+  assert.equal(rows[0].lead_grade, "B");
   assert.equal(rows[1].lead_grade, "E");
   assert.equal(rows[1].classification_reason, "duplicate_submission");
   assert.equal(rows[1].duplicate_of_id, rows[0].id);
-  assert.equal(rows[2].lead_grade, "D");
+  assert.equal(rows[2].lead_grade, "B");
   assert.equal(rows[5].classification_reason, "internal_test");
   assert.equal(rows[6].classification_reason, "bulk_messaging_solicitation");
   assert.equal(rows[6].lead_grade, "E");
@@ -148,8 +148,8 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
 
   const workQueue = await adminJson(`${baseUrl}/admin/api/inquiries`, cookie);
   assert.equal(workQueue.total, 2);
-  assert.equal(workQueue.inquiries[0].lead_grade, "D");
-  assert.equal(workQueue.stats.D, 2);
+  assert.equal(workQueue.inquiries[0].lead_grade, "B");
+  assert.equal(workQueue.stats.B, 2);
   assert.equal(workQueue.stats.E, 5);
 
   const manual = await fetch(

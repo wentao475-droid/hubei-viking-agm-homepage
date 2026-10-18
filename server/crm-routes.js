@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { channels, leadFields, CrmStore, csvText, fail, validateLead } from "./crm-store.js";
 import { CrmImports, parseLeadFile } from "./crm-import.js";
 import { crmClientScript } from "./crm-ui.js";
+import { gradeLabels, gradeDescriptions, legacyGradeLabels, gradeSchemaVersion } from "./lead-grades.js";
 
 export function crmRoutes(db, getSession) {
   const router = express.Router(), store = new CrmStore(db), imports = new CrmImports(store);
@@ -22,7 +23,7 @@ export function crmRoutes(db, getSession) {
   const legacyWrite = (req, res, next) => req.get("origin") || req.get("referer") ? write(req, res, next) : next();
   const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 5 * 1024 * 1024, files: 1, fields: 0 } }).single("file");
   const sendCsv = (res, filename, columns, rows) => res.set("Content-Disposition", `attachment; filename="${filename}"`).type("text/csv; charset=utf-8").send(csvText(columns, rows));
-  const legacyGrades = { won: "A", qualified: "B", sample: "B", quoted: "B", lost: "C", new: "D", contacted: "D", handled: "D" };
+  const legacyGrades = { won: "A", qualified: "B", sample: "B", quoted: "B", lost: "D", new: "B", contacted: "B", handled: "B" };
   const normalizeGrade = (value) => /^[ABCDE]$/i.test(String(value || "")) ? String(value).toUpperCase() : legacyGrades[String(value || "").toLowerCase()] || "";
   const query = (req) => {
     const value = String(req.query.grade ?? req.query.status ?? "work");
@@ -30,7 +31,7 @@ export function crmRoutes(db, getSession) {
   };
 
   router.get("/crm.js", (_req, res) => res.type("application/javascript").send(crmClientScript()));
-  router.get("/crm/options", (_req, res) => res.json({ ok: true, channels, fields: leadFields }));
+  router.get("/crm/options", (_req, res) => res.json({ ok: true, channels, fields: leadFields, grades: gradeLabels, gradeDescriptions, legacyGrades: legacyGradeLabels, gradeSchemaVersion }));
   router.get("/crm/template.csv", (_req, res) => {
     const columns = Object.values(leadFields);
     sendCsv(res, "viking-crm-template.csv", columns, []);
@@ -61,14 +62,14 @@ export function crmRoutes(db, getSession) {
 
   router.get("/inquiries", route((req, res) => res.json(store.list(query(req)))));
   router.get("/inquiries.csv", route((req, res) => {
-    const rows = store.list(query(req), false).inquiries;
-    const columns = ["id", "created_at", "record_origin", "source_channel", "source_detail", "import_batch_id", ...Object.keys(leadFields).filter((k) => !["initial_follow_up", "follow_up_at", "source_channel", "source_detail"].includes(k)), "last_follow_up_at", "latest_follow_up", "notes", "classification_source", "classification_reason", "notification_status", "email_notification_status", "feishu_notification_status", "page_url", "landing_page", "referrer", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+    const rows = store.list(query(req), false).inquiries.map((row) => ({ ...row, grade_label: gradeLabels[row.lead_grade], grade_schema_version: gradeSchemaVersion }));
+    const columns = ["id", "created_at", "grade_label", "grade_schema_version", "record_origin", "source_channel", "source_detail", "import_batch_id", ...Object.keys(leadFields).filter((k) => !["initial_follow_up", "follow_up_at", "source_channel", "source_detail"].includes(k)), "last_follow_up_at", "latest_follow_up", "notes", "classification_source", "classification_reason", "notification_status", "email_notification_status", "feishu_notification_status", "page_url", "landing_page", "referrer", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
     sendCsv(res, "viking-crm-leads.csv", columns, rows);
   }));
   router.get("/follow-ups.csv", route((req, res) => {
     const filter = store.filter(query(req));
     const rows = db.prepare(`SELECT a.*, inquiries.name, inquiries.company, inquiries.source_channel FROM crm_activities a JOIN inquiries ON inquiries.id = a.inquiry_id WHERE a.inquiry_id IN (SELECT id FROM inquiries ${filter.sql}) ORDER BY a.inquiry_id, a.id`).all(filter.params);
-    sendCsv(res, "viking-crm-follow-ups.csv", ["inquiry_id", "name", "company", "source_channel", "kind", "happened_at", "recorded_at", "method", "content", "next_action", "next_follow_up_at", "lead_grade", "actor", "changes_json"], rows);
+    sendCsv(res, "viking-crm-follow-ups.csv", ["inquiry_id", "name", "company", "source_channel", "kind", "happened_at", "recorded_at", "method", "content", "next_action", "next_follow_up_at", "lead_grade", "grade_schema_version", "actor", "changes_json"], rows);
   }));
   router.post("/inquiries", write, route((req, res) => {
     const inquiry = db.transaction(() => {

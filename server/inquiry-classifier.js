@@ -1,4 +1,5 @@
 import crypto from "node:crypto";
+import { defaultLeadGrade } from "./lead-grades.js";
 
 const unrelatedServicePatterns = [
   /\bseo\b/i,
@@ -164,7 +165,7 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
     return automaticGrade("E", "insufficient_inquiry_detail");
   }
 
-  return automaticGrade("D", null);
+  return automaticGrade(defaultLeadGrade, null);
 }
 
 export function normalizeContactIdentity(inquiry) {
