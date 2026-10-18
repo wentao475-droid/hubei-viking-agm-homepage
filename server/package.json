@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "better-sqlite3": "^11.10.0",
+    "csv-parse": "^7.0.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "multer": "^2.4.0",
+    "read-excel-file": "^9.3.12",
     "nodemailer": "^10.0.14"
   },
   "overrides": {

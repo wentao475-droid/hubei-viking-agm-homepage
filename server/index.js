@@ -18,6 +18,8 @@ import {
   normalizeTestContacts
 } from "./inquiry-classifier.js";
 import { applyLeadGradeMigration } from "./lead-grade-migration.js";
+import { migrateCrm } from "./crm-store.js";
+import { crmRoutes } from "./crm-routes.js";
 
 dotenv.config();
 
@@ -52,20 +54,7 @@ const inquiryRateLimitWindowMs = positiveIntegerEnv(
 );
 const inquiryRateLimitMax = positiveIntegerEnv("INQUIRY_RATE_LIMIT_MAX", 3);
 const inquiryRateLimits = new Map();
-const leadGrades = new Set(["A", "B", "C", "D", "E"]);
-const inquiryTestContacts = normalizeTestContacts(
-  process.env.INQUIRY_TEST_CONTACTS
-);
-const legacyStatusGrades = new Map([
-  ["won", "A"],
-  ["qualified", "B"],
-  ["sample", "B"],
-  ["quoted", "B"],
-  ["lost", "C"],
-  ["new", "D"],
-  ["contacted", "D"],
-  ["handled", "D"]
-]);
+const inquiryTestContacts = normalizeTestContacts(process.env.INQUIRY_TEST_CONTACTS);
 
 fs.mkdirSync(path.dirname(dbPath), { recursive: true });
 
@@ -146,6 +135,7 @@ db.exec(`
 `);
 
 applyLeadGradeMigration(db);
+migrateCrm(db);
 
 const insertInquiry = db.prepare(`
   INSERT INTO inquiries (
@@ -243,65 +233,6 @@ const updateAggregateNotification = db.prepare(`
   WHERE id = @id
 `);
 
-const inquiryStats = db.prepare(`
-  SELECT
-    COUNT(*) AS total,
-    SUM(CASE WHEN lead_grade = 'A' THEN 1 ELSE 0 END) AS grade_a,
-    SUM(CASE WHEN lead_grade = 'B' THEN 1 ELSE 0 END) AS grade_b,
-    SUM(CASE WHEN lead_grade = 'C' THEN 1 ELSE 0 END) AS grade_c,
-    SUM(CASE WHEN lead_grade = 'D' THEN 1 ELSE 0 END) AS grade_d,
-    SUM(CASE WHEN lead_grade = 'E' THEN 1 ELSE 0 END) AS grade_e,
-    SUM(
-      CASE
-        WHEN date(datetime(created_at, '+8 hours')) = date('now', '+8 hours')
-        THEN 1
-        ELSE 0
-      END
-    ) AS today_count
-  FROM inquiries
-`);
-
-const inquiryById = db.prepare(`
-  SELECT *
-  FROM inquiries
-  WHERE id = ?
-`);
-
-const updateInquiry = db.prepare(`
-  UPDATE inquiries
-  SET lead_grade = @lead_grade,
-      classification_source = 'manual',
-      classification_reason = @classification_reason,
-      duplicate_of_id = CASE
-        WHEN @lead_grade = 'E' THEN duplicate_of_id
-        ELSE NULL
-      END,
-      classified_at = CURRENT_TIMESTAMP,
-      notes = @notes,
-      next_follow_up_at = @next_follow_up_at,
-      handled_at = CASE
-        WHEN @lead_grade = 'D' THEN NULL
-        ELSE COALESCE(handled_at, CURRENT_TIMESTAMP)
-      END
-  WHERE id = @id
-`);
-
-const bulkUpdateInquiryGrade = db.prepare(`
-  UPDATE inquiries
-  SET lead_grade = @lead_grade,
-      classification_source = 'manual',
-      classification_reason = @classification_reason,
-      duplicate_of_id = CASE
-        WHEN @lead_grade = 'E' THEN duplicate_of_id
-        ELSE NULL
-      END,
-      classified_at = CURRENT_TIMESTAMP,
-      handled_at = CASE
-        WHEN @lead_grade = 'D' THEN NULL
-        ELSE COALESCE(handled_at, CURRENT_TIMESTAMP)
-      END
-  WHERE id = @id
-`);
 
 const mailer = smtpConfigured
   ? nodemailer.createTransport({
@@ -320,6 +251,7 @@ const mailer = smtpConfigured
 
 app.disable("x-powered-by");
 app.set("trust proxy", "loopback");
+app.use("/admin/api", express.json({ limit: "96kb" }));
 app.use(express.urlencoded({ extended: false, limit: "32kb" }));
 app.use(express.json({ limit: "32kb" }));
 
@@ -447,221 +379,8 @@ app.post("/admin/logout", (request, response) => {
   response.redirect(303, "/admin");
 });
 
-app.get("/admin/api/inquiries.csv", requireAdmin, (request, response) => {
-  const grade = normalizeGradeFilter(
-    request.query.grade ?? request.query.status,
-    "work"
-  );
-  const q = clean(request.query.q);
-  const { whereSql, params } = buildInquiryFilter({ grade, q });
-  const rows = db
-    .prepare(`
-      SELECT *
-      FROM inquiries
-      ${whereSql}
-      ORDER BY datetime(created_at) DESC, id DESC
-    `)
-    .all(params);
+app.use("/admin/api", requireAdmin, crmRoutes(db, getAdminSession));
 
-  const columns = [
-    "id",
-    "created_at",
-    "lead_grade",
-    "classification_source",
-    "classification_reason",
-    "duplicate_of_id",
-    "classified_at",
-    "status",
-    "name",
-    "contact",
-    "company",
-    "email",
-    "country",
-    "application",
-    "interested_product",
-    "message",
-    "page_url",
-    "landing_page",
-    "referrer",
-    "utm_source",
-    "utm_medium",
-    "utm_campaign",
-    "utm_content",
-    "utm_term",
-    "notes",
-    "next_follow_up_at",
-    "notification_status",
-    "email_notification_status",
-    "feishu_notification_status"
-  ];
-  const csv = [
-    columns.join(","),
-    ...rows.map((row) => columns.map((column) => csvCell(row[column])).join(","))
-  ].join("\r\n");
-
-  response.setHeader(
-    "Content-Disposition",
-    `attachment; filename="viking-agm-inquiries-${new Date()
-      .toISOString()
-      .slice(0, 10)}.csv"`
-  );
-  response.type("text/csv; charset=utf-8").send(`\uFEFF${csv}`);
-});
-
-app.get("/admin/api/inquiries", requireAdmin, (request, response) => {
-  const page = Math.max(
-    1,
-    Number.parseInt(String(request.query.page || "1"), 10) || 1
-  );
-  const pageSize = 20;
-  const offset = (page - 1) * pageSize;
-  const grade = normalizeGradeFilter(
-    request.query.grade ?? request.query.status,
-    "work"
-  );
-  const q = clean(request.query.q);
-  const { whereSql, params } = buildInquiryFilter({ grade, q });
-  const total = db
-    .prepare(`SELECT COUNT(*) AS count FROM inquiries ${whereSql}`)
-    .get(params).count;
-  const rows = db
-    .prepare(`
-      SELECT
-        id,
-        name,
-        contact,
-        company,
-        email,
-        country,
-        application,
-        interested_product,
-        message,
-        language,
-        page_url,
-        landing_page,
-        referrer,
-        utm_source,
-        notification_status,
-        lead_grade,
-        classification_source,
-        classification_reason,
-        duplicate_of_id,
-        status,
-        next_follow_up_at,
-        created_at
-      FROM inquiries
-      ${whereSql}
-      ORDER BY datetime(created_at) DESC, id DESC
-      LIMIT @limit OFFSET @offset
-    `)
-    .all({ ...params, limit: pageSize, offset });
-
-  response.json({
-    ok: true,
-    page,
-    pageSize,
-    total,
-    totalPages: Math.max(1, Math.ceil(total / pageSize)),
-    stats: normalizeStats(inquiryStats.get()),
-    inquiries: rows
-  });
-});
-
-app.post("/admin/api/inquiries/bulk-grade", requireAdmin, (request, response) => {
-  const leadGrade = normalizeLeadGrade(
-    request.body?.lead_grade ?? request.body?.grade ?? request.body?.status
-  );
-  const ids = Array.isArray(request.body?.ids)
-    ? [...new Set(request.body.ids.map(Number).filter(Number.isInteger))]
-    : [];
-
-  if (!leadGrade) {
-    response.status(400).json({ ok: false, error: "invalid_grade" });
-    return;
-  }
-  if (ids.length === 0 || ids.length > 100) {
-    response.status(400).json({ ok: false, error: "invalid_selection" });
-    return;
-  }
-
-  const updateMany = db.transaction((selectedIds) => {
-    let changes = 0;
-    for (const id of selectedIds) {
-      changes += bulkUpdateInquiryGrade.run({
-        id,
-        lead_grade: leadGrade,
-        classification_reason: manualClassificationReason(leadGrade)
-      }).changes;
-    }
-    return changes;
-  });
-
-  response.json({ ok: true, updated: updateMany(ids) });
-});
-
-app.get("/admin/api/inquiries/:id", requireAdmin, (request, response) => {
-  const inquiry = inquiryById.get(Number(request.params.id));
-  if (!inquiry) {
-    response.status(404).json({ ok: false, error: "not_found" });
-    return;
-  }
-
-  response.json({ ok: true, inquiry });
-});
-
-app.post("/admin/api/inquiries/:id/update", requireAdmin, (request, response) => {
-  const id = Number(request.params.id);
-  const leadGrade = normalizeLeadGrade(
-    request.body?.lead_grade ?? request.body?.grade ?? request.body?.status
-  );
-
-  if (!leadGrade) {
-    response.status(400).json({ ok: false, error: "invalid_grade" });
-    return;
-  }
-
-  const result = updateInquiry.run({
-    id,
-    lead_grade: leadGrade,
-    classification_reason: manualClassificationReason(leadGrade),
-    notes: clean(request.body?.notes, 5000),
-    next_follow_up_at:
-      clean(request.body?.next_follow_up_at, 30) || null
-  });
-  if (result.changes === 0) {
-    response.status(404).json({ ok: false, error: "not_found" });
-    return;
-  }
-
-  response.json({ ok: true, inquiry: inquiryById.get(id) });
-});
-
-app.post("/admin/api/inquiries/:id/status", requireAdmin, (request, response) => {
-  const id = Number(request.params.id);
-  const existing = inquiryById.get(id);
-  const leadGrade = normalizeLeadGrade(
-    request.body?.lead_grade ?? request.body?.grade ?? request.body?.status
-  );
-
-  if (!existing) {
-    response.status(404).json({ ok: false, error: "not_found" });
-    return;
-  }
-
-  if (!leadGrade) {
-    response.status(400).json({ ok: false, error: "invalid_grade" });
-    return;
-  }
-
-  updateInquiry.run({
-    id,
-    lead_grade: leadGrade,
-    classification_reason: manualClassificationReason(leadGrade),
-    notes: existing.notes || "",
-    next_follow_up_at: existing.next_follow_up_at || null
-  });
-  response.json({ ok: true, inquiry: inquiryById.get(id) });
-});
 
 app.use((_request, response) => {
   response.status(404).json({ ok: false, error: "not_found" });
@@ -671,44 +390,6 @@ app.listen(port, "127.0.0.1", () => {
   console.log(`Viking AGM inquiry API listening on 127.0.0.1:${port}`);
 });
 
-function buildInquiryFilter({ grade, q }) {
-  const where = [];
-  const params = {};
-
-  if (grade === "work") {
-    where.push("lead_grade IN ('A', 'B', 'D')");
-  } else if (leadGrades.has(grade)) {
-    where.push("lead_grade = @grade");
-    params.grade = grade;
-  }
-
-  if (q) {
-    where.push(`(
-      name LIKE @q OR
-      contact LIKE @q OR
-      company LIKE @q OR
-      email LIKE @q OR
-      country LIKE @q OR
-      application LIKE @q OR
-      interested_product LIKE @q OR
-      message LIKE @q OR
-      page_url LIKE @q OR
-      landing_page LIKE @q OR
-      referrer LIKE @q OR
-      utm_source LIKE @q OR
-      utm_medium LIKE @q OR
-      utm_campaign LIKE @q OR
-      classification_reason LIKE @q OR
-      notes LIKE @q
-    )`);
-    params.q = `%${q}%`;
-  }
-
-  return {
-    whereSql: where.length ? `WHERE ${where.join(" AND ")}` : "",
-    params
-  };
-}
 
 function parseList(value) {
   return String(value || "")
@@ -861,46 +542,6 @@ function safeEqual(value, expected) {
   );
 }
 
-function normalizeGradeFilter(value, fallback = "all") {
-  const raw = clean(value, 30);
-  if (!raw) {
-    return fallback;
-  }
-  if (raw.toLowerCase() === "work") {
-    return "work";
-  }
-  if (raw.toLowerCase() === "all") {
-    return "all";
-  }
-
-  return normalizeLeadGrade(raw) || fallback;
-}
-
-function normalizeLeadGrade(value) {
-  const raw = clean(value, 30);
-  const grade = raw.toUpperCase();
-  if (leadGrades.has(grade)) {
-    return grade;
-  }
-
-  return legacyStatusGrades.get(raw.toLowerCase()) || "";
-}
-
-function manualClassificationReason(leadGrade) {
-  return leadGrade === "E" ? "manual_invalid" : "manual_override";
-}
-
-function normalizeStats(stats) {
-  return {
-    total: Number(stats?.total || 0),
-    A: Number(stats?.grade_a || 0),
-    B: Number(stats?.grade_b || 0),
-    C: Number(stats?.grade_c || 0),
-    D: Number(stats?.grade_d || 0),
-    E: Number(stats?.grade_e || 0),
-    today: Number(stats?.today_count || 0)
-  };
-}
 
 function isAllowedOrigin(request) {
   if (allowedOrigins.length === 0) {
@@ -1026,7 +667,7 @@ async function runWithRetry(task, attempts) {
 }
 
 function updateAggregateNotificationStatus(id) {
-  const inquiry = inquiryById.get(id);
+  const inquiry = db.prepare("SELECT * FROM inquiries WHERE id = ?").get(id);
   const statuses = [
     inquiry.email_notification_status,
     inquiry.feishu_notification_status
@@ -1128,12 +769,4 @@ function errorMessage(error) {
 
 function sleep(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
-}
-
-function csvCell(value) {
-  let text = String(value ?? "");
-  if (/^[=+\-@]/.test(text)) {
-    text = `'${text}`;
-  }
-  return `"${text.replace(/"/g, '""')}"`;
 }

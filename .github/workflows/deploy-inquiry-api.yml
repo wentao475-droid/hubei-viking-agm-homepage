@@ -45,6 +45,11 @@ jobs:
           node --check server/inquiry-classifier.js
           node --check server/lead-grade-migration.js
           node --check server/review-inquiries.js
+          node --check server/crm-store.js
+          node --check server/crm-import.js
+          node --check server/crm-import-worker.js
+          node --check server/crm-routes.js
+          node --check server/crm-ui.js
 
       - name: Prepare SSH key and pinned host identity
         shell: bash
