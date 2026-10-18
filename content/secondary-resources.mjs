@@ -6,6 +6,9 @@ import { agmSafetyTestTopics } from "./agm-safety-test-topics.mjs";
 
 export const secondaryResourceLocales = ["vi", "ko", "ja", "es", "pt", "ru", "ar"];
 
+import { upsBatteryMonitoringTopics } from "./ups-battery-monitoring-topics.mjs";
+import { agmSohMaterialDataTopics } from "./agm-soh-material-data-topics.mjs";
+import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
@@ -30,7 +33,10 @@ export const articleKinds = [
   "agmBatteryDamageDemoSafetyTest",
   "agmSeparatorSupplyChain",
   "agmStartStopBatteryProcurement",
-  "batteryTechnologyProjectComparison"
+  "batteryTechnologyProjectComparison",
+  "sodiumIonColdStartAgmComparison",
+  "agmMaterialDataPredictiveMaintenance",
+  "upsBatteryIndividualMonitoring"
 ];
 
 export const articleDefinitions = {
@@ -54,11 +60,17 @@ export const articleDefinitions = {
   agmSeparatorBatchProcessControl: ["agm-separator-batch-consistency-and-process-control", "manufacturingQuality", "2026-08-12", "2026-10-11"],
   agmSeparatorThirdPole: ["agm-separator-third-pole-explained", "buyerGuides", "2026-09-13", "2026-10-11"],
   agmSeparatorEnergyDataDelivery: ["agm-separator-energy-data-and-delivery-risk", "manufacturingQuality", "2026-09-18", "2026-10-11"]
-  ,batteryTechnologyProjectComparison: ["compare-lead-lithium-sodium-batteries-by-project-duty", "industryApplications", "2026-10-17", "2026-10-17"]
+  ,batteryTechnologyProjectComparison: ["compare-lead-lithium-sodium-batteries-by-project-duty", "industryApplications", "2026-10-17", "2026-10-18"]
   ,en18060BatteryStandard: ["en-18060-2025-road-vehicle-battery-standard", "industryApplications", "2026-10-03", "2026-10-03"]
+  ,sodiumIonColdStartAgmComparison: ["sodium-ion-minus-40-cold-start-agm-comparison", "industryApplications", "2026-10-18", "2026-10-18"]
+  ,agmMaterialDataPredictiveMaintenance: ["agm-material-data-battery-soh-predictive-maintenance", "manufacturingQuality", "2026-10-18", "2026-10-18"]
+  ,upsBatteryIndividualMonitoring: ["ups-battery-272-individual-monitors-batch-traceability", "industryApplications", "2026-10-18", "2026-10-18"]
 };
 
 const images = {
+  upsBatteryIndividualMonitoring: ["/images/evidence/viking-agm-material-thickness-inspection-1600.webp", 1600, 900],
+  agmMaterialDataPredictiveMaintenance: ["/images/agm-quality-control-1200.webp", 1200, 900],
+  sodiumIonColdStartAgmComparison: ["/images/agm-quality-control-1200.webp", 1200, 900],
   batteryTechnologyProjectComparison: ["/images/viking-finished-separator-roll-900.webp", 900, 675],
   agmBatteryDamageDemoSafetyTest: ["/images/agm-quality-control-1200.webp", 1200, 900],
   agmPastingPaperEnergyValidation: ["/images/agm-quality-control-1200.webp", 1200, 900],
@@ -1126,6 +1138,18 @@ for (const [locale, topic] of Object.entries(batteryProjectComparisonTopics)) {
   secondaryResourceData[locale].topics.batteryTechnologyProjectComparison = topic;
 }
 
+for (const [locale, topic] of Object.entries(sodiumIonColdStartTopics)) {
+  secondaryResourceData[locale].topics.sodiumIonColdStartAgmComparison = topic;
+}
+
+for (const [locale, topic] of Object.entries(agmSohMaterialDataTopics)) {
+  secondaryResourceData[locale].topics.agmMaterialDataPredictiveMaintenance = topic;
+}
+
+for (const [locale, topic] of Object.entries(upsBatteryMonitoringTopics)) {
+  secondaryResourceData[locale].topics.upsBatteryIndividualMonitoring = topic;
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1167,6 +1191,30 @@ const arabicReferences = {
   ,agmBatteryDamageDemoSafetyTest: [["The cited company — the cited battery series demonstration in Minsk", "https://www.rostec.ru/en/media/news/rostec-showcases-an-everlasting-batteries-for-civil-and-military-equipment-in-minsk-/"]]
 };
 
+
+const generatedArticleVisuals = {
+  "batteryTechnologyProjectComparison": "/images/articles/battery-duty-comparison-hero-1600.webp",
+  "sodiumIonColdStartAgmComparison": "/images/articles/sodium-cold-start-hero-1600.webp",
+  "agmMaterialDataPredictiveMaintenance": "/images/articles/agm-soh-evidence-chain-hero-1600.webp",
+  "upsBatteryIndividualMonitoring": "/images/articles/ups-individual-monitoring-hero-1600.webp"
+};
+const generatedImageCaptions = {
+  "en": "AI-generated illustration",
+  "zh": "AI 示意图",
+  "vi": "Hình minh họa do AI tạo",
+  "ko": "AI 생성 개념도",
+  "ja": "AI生成イメージ",
+  "es": "Ilustración generada por IA",
+  "pt": "Ilustração gerada por IA",
+  "ru": "Иллюстрация, созданная ИИ",
+  "ar": "رسم توضيحي مولّد بالذكاء الاصطناعي"
+};
+
+export function generatedArticleImage(locale, kind, title) {
+  const name = generatedArticleVisuals[kind];
+  return name ? { src: name, alt: `${generatedImageCaptions[locale]}: ${title}`, width: 1600, height: 1200, caption: generatedImageCaptions[locale] } : null;
+}
+
 function articleImage(kind, title) {
   const [src, width, height] = images[kind];
   return { src, alt: title, width, height };
@@ -1180,7 +1228,13 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "dataCenterBackupPowerAgmSeparator"
+  const relatedKinds = kind === "upsBatteryIndividualMonitoring"
+    ? ["upsVrlaTechnologySelection", "agmMaterialDataPredictiveMaintenance", "agmSeparatorBatchProcessControl", "dataCenterBackupPowerAgmSeparator"]
+    : kind === "agmMaterialDataPredictiveMaintenance"
+    ? ["agmSeparatorBatchProcessControl", "agmSeparatorPressureRetention", "agmStartStopBatteryProcurement", "keyTechnicalParameters"]
+    : kind === "sodiumIonColdStartAgmComparison"
+    ? ["batteryTechnologyProjectComparison", "agmStartStopBatteryProcurement", "keyTechnicalParameters", "agmSeparatorPressureRetention"]
+    : kind === "dataCenterBackupPowerAgmSeparator"
     ? ["upsVrlaTechnologySelection", "agmSeparatorPerformanceConsistency", "keyTechnicalParameters", "agmSeparatorManufacturingQualityDelivery"]
     : kind === "aiDataCenterBackupPowerLayers"
       ? ["dataCenterBackupPowerAgmSeparator", "upsVrlaTechnologySelection", "keyTechnicalParameters", "agmSeparatorPerformanceConsistency"]
@@ -1243,6 +1297,21 @@ function buildArticle(locale, kind, localeData) {
     },
     footer: { description: common.footer, wechat: common.wechat, mobile: common.mobile }
   };
+
+  if (kind === "upsBatteryIndividualMonitoring") {
+    result.hero.image.alt = topic.imageAlt;
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[1][1], text: topic.referenceNote, items: [["UCAS / 中国政府采购网 — 2026-09-24", "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202609/t20260924_27395576.htm"]] };
+  }
+
+  if (kind === "agmMaterialDataPredictiveMaintenance") {
+    result.hero.image.alt = topic.imageAlt;
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[0][1], text: topic.referenceNote, items: [["Clarios \u2014 Battery Manager, 2026-09-14", "https://www.clarios.com/es/insights/news/news-detail/actionable-battery-intelligence-to-european-fleets"]] };
+  }
+
+  if (kind === "sodiumIonColdStartAgmComparison") {
+    result.hero.image.alt = topic.imageAlt;
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[1][1], text: topic.referenceNote, items: [["Clarios / Altris / InoBat \u2014 2026-09-14", "https://www.clarios.com/es/insights/news/news-detail/clarios-altris-and-inobat-advance-sodium-ion-technology"]] };
+  }
 
   if (kind === "batteryTechnologyProjectComparison") {
     result.references = { eyebrow: localeData.ui.reference, title: topic.sections[0][1], text: topic.sections[0][2], items: [["ELBC — Lead and Multi-Technology Workshop", "https://www.elbcexpo.org/energy-storage-workshop/"], ["Batteries International — CBI, 2026-09-19", "https://www.batteriesinternational.com/news/new-pivot-for-elbc-as-cbi-opens-doors-to-research-for-all-chemistries/"]] };
@@ -1405,6 +1474,12 @@ function buildArticle(locale, kind, localeData) {
         : label,
       url
     ]);
+  }
+
+  const generatedImage = generatedArticleImage(locale, kind, topic.title);
+  if (generatedImage) result.hero.image = generatedImage;
+  if (kind === "upsBatteryIndividualMonitoring") {
+    result.sections[4].image = topic.bodyImage;
   }
 
   return result;

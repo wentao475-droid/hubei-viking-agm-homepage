@@ -4,7 +4,10 @@ import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../c
 
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
-  { en: "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/", zh: "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-17", secondaryLastmod: "2026-10-17", arabicLastmod: "2026-10-17" },
+  { en: "/blog/ups-battery-272-individual-monitors-batch-traceability/", zh: "/zh/blog/ups-battery-272-individual-monitors-batch-traceability/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-18", secondaryLastmod: "2026-10-18", arabicLastmod: "2026-10-18" },
+  { en: "/blog/agm-material-data-battery-soh-predictive-maintenance/", zh: "/zh/blog/agm-material-data-battery-soh-predictive-maintenance/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-18", secondaryLastmod: "2026-10-18", arabicLastmod: "2026-10-18" },
+  { en: "/blog/sodium-ion-minus-40-cold-start-agm-comparison/", zh: "/zh/blog/sodium-ion-minus-40-cold-start-agm-comparison/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-18", secondaryLastmod: "2026-10-18", arabicLastmod: "2026-10-18" },
+  { en: "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/", zh: "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-18", secondaryLastmod: "2026-10-18", arabicLastmod: "2026-10-18" },
   {
     en: "/",
     zh: "/zh/",
@@ -49,9 +52,9 @@ const pages = [
     zh: "/zh/resources/",
     priority: "0.8",
     changefreq: "weekly",
-    lastmod: "2026-10-17",
-    secondaryLastmod: "2026-10-17",
-    arabicLastmod: "2026-10-17"
+    lastmod: "2026-10-18",
+    secondaryLastmod: "2026-10-18",
+    arabicLastmod: "2026-10-18"
   },
   {
     en: "/products/agm-separator-rolls/",
@@ -350,9 +353,13 @@ for (const page of pages.filter(
   const kind = articleKinds.find((kind) => page.en === `/blog/${articleDefinitions[kind][0]}/`);
   if (kind && articleDefinitions[kind][3] === "2026-10-11") page.arabicLastmod = "2026-10-11";
   page.secondaryLastmod = kind ? buildSecondaryArticleSeo("vi", kind).dateModified : "2026-10-04";
-  if (kind === "batteryTechnologyProjectComparison" || page.en === "/resources/") {
-    page.arabicLastmod = "2026-10-17";
-    page.secondaryLastmod = "2026-10-17";
+  if (kind === "batteryTechnologyProjectComparison") {
+    page.arabicLastmod = "2026-10-18";
+    page.secondaryLastmod = "2026-10-18";
+  }
+  if (kind === "sodiumIonColdStartAgmComparison" || kind === "agmMaterialDataPredictiveMaintenance" || kind === "upsBatteryIndividualMonitoring" || page.en === "/resources/") {
+    page.arabicLastmod = "2026-10-18";
+    page.secondaryLastmod = "2026-10-18";
   }
 }
 

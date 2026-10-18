@@ -14,6 +14,7 @@ import { localeHomePaths, localizedRouteGroups } from "./locales";
 import type { Lang, SiteLocale } from "./locales";
 import {
   articleDefinitions,
+  generatedArticleImage,
   buildSecondaryArticleSeo,
   secondaryResourceData
 } from "../content/secondary-resources.mjs";
@@ -2114,6 +2115,159 @@ const agmPastingPaperEnergyValidationSeo = {
   zh: { path: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 玻纤涂板纸能省多少烘干能耗？验证条件与对照方法 | 湖北维京AGM", description: "公开供应商资料提出降低窑温或停窑主张但未给量化数据；本文说明 AGM 玻纤涂板纸同线能耗、含水、极板质量和整电池验证方法。", keywords: ["AGM 玻纤涂板纸", "铅酸电池涂板纸节能", "涂板纸干燥窑温度", "玻纤涂板纸替代植物纤维", "AGM 涂板工艺验证"], pageName: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", articleDescription: "以公开产品资料中的供应商主张为边界，说明 AGM 玻纤涂板纸节能主张需要怎样做同线对照。", breadcrumbs: ["首页", "资料", "AGM 玻纤涂板纸节能验证"] }
 } as const;
 
+const upsBatteryIndividualMonitoringSeo = {
+  "en": {
+    "path": "/blog/ups-battery-272-individual-monitors-batch-traceability/",
+    "alternatePath": "/zh/blog/ups-battery-272-individual-monitors-batch-traceability/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "272 Batteries, 272 Monitors: What UPS Procurement Can Tell Us | Viking AGM",
+    "description": "A public UPS replacement notice pairs 272 VRLA batteries with 272 monitoring modules. Review individual readings, service consistency and the limits of AGM material evidence.",
+    "keywords": [
+      "272 Batteries, 272 Monitors: What UPS Procurement Can Tell Us",
+      "UPS",
+      "VRLA",
+      "AGM separator batch traceability"
+    ],
+    "pageName": "272 Batteries, 272 Monitors: What UPS Procurement Can Tell Us",
+    "articleDescription": "A public UPS replacement notice pairs 272 VRLA batteries with 272 monitoring modules. Review individual readings, service consistency and the limits of AGM material evidence.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "272 Batteries, 272 Monitors: What UPS Procurement Can Tell Us"
+    ],
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18"
+  },
+  "zh": {
+    "path": "/zh/blog/ups-battery-272-individual-monitors-batch-traceability/",
+    "alternatePath": "/blog/ups-battery-272-individual-monitors-batch-traceability/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "272 套电池、272 套监测模块：UPS 采购关注什么？ | Viking AGM",
+    "description": "以一则 UPS 更换公告为例，区分单体电压与内阻监测、服役一致性和 AGM 材料证据，建立现场、电池与隔板批次的追溯关系。",
+    "keywords": [
+      "272 套电池、272 套监测模块：UPS 采购关注什么？",
+      "UPS",
+      "VRLA",
+      "AGM separator batch traceability"
+    ],
+    "pageName": "272 套电池、272 套监测模块：UPS 采购关注什么？",
+    "articleDescription": "以一则 UPS 更换公告为例，区分单体电压与内阻监测、服役一致性和 AGM 材料证据，建立现场、电池与隔板批次的追溯关系。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "272 套电池、272 套监测模块：UPS 采购关注什么？"
+    ],
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18"
+  }
+} as const;
+
+const agmMaterialDataPredictiveMaintenanceSeo = {
+  "en": {
+    "path": "/blog/agm-material-data-battery-soh-predictive-maintenance/",
+    "alternatePath": "/zh/blog/agm-material-data-battery-soh-predictive-maintenance/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Predicting 12V Battery Failure: Where AGM Material Data Fits | Viking AGM",
+    "description": "Trace AGM batches, whole-battery aging and field records for explainable SOH assessment. Separator consistency is a material input, not a standalone prediction service.",
+    "keywords": [
+      "Predicting 12V Battery Failure: Where AGM Material Data Fits",
+      "AGM",
+      "SOH",
+      "12V battery predictive maintenance"
+    ],
+    "pageName": "Predicting 12V Battery Failure: Where AGM Material Data Fits",
+    "articleDescription": "Trace AGM batches, whole-battery aging and field records for explainable SOH assessment. Separator consistency is a material input, not a standalone prediction service.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Predicting 12V Battery Failure: Where AGM Material Data Fits"
+    ],
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18"
+  },
+  "zh": {
+    "path": "/zh/blog/agm-material-data-battery-soh-predictive-maintenance/",
+    "alternatePath": "/blog/agm-material-data-battery-soh-predictive-maintenance/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "预测 12V 电池失效：AGM 材料数据能提供什么？ | Viking AGM",
+    "description": "将 AGM 材料批次、整电池老化结果与现场记录关联，为 SOH 评估提供可解释证据。材料一致性是输入，不能单独预测失效或替代验证。",
+    "keywords": [
+      "预测 12V 电池失效：AGM 材料数据能提供什么？",
+      "AGM",
+      "SOH",
+      "12V battery predictive maintenance"
+    ],
+    "pageName": "预测 12V 电池失效：AGM 材料数据能提供什么？",
+    "articleDescription": "将 AGM 材料批次、整电池老化结果与现场记录关联，为 SOH 评估提供可解释证据。材料一致性是输入，不能单独预测失效或替代验证。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "预测 12V 电池失效：AGM 材料数据能提供什么？"
+    ],
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18"
+  }
+} as const;
+
+const sodiumIonColdStartAgmComparisonSeo = {
+  "en": {
+    "path": "/blog/sodium-ion-minus-40-cold-start-agm-comparison/",
+    "alternatePath": "/zh/blog/sodium-ion-minus-40-cold-start-agm-comparison/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "−40°C Sodium-Ion Cold Start: What Changes in the AGM Comparison? | Viking AGM",
+    "description": "What company-reported −40°C sodium-ion cold-start validation means for low-voltage battery selection, and where AGM separator evidence must stop.",
+    "keywords": [
+      "−40°C Sodium-Ion Cold Start: What Changes in the AGM Comparison?",
+      "AGM",
+      "VRLA",
+      "start-stop"
+    ],
+    "pageName": "−40°C Sodium-Ion Cold Start: What Changes in the AGM Comparison?",
+    "articleDescription": "What company-reported −40°C sodium-ion cold-start validation means for low-voltage battery selection, and where AGM separator evidence must stop.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "−40°C Sodium-Ion Cold Start: What Changes in the AGM Comparison?"
+    ],
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18"
+  },
+  "zh": {
+    "path": "/zh/blog/sodium-ion-minus-40-cold-start-agm-comparison/",
+    "alternatePath": "/blog/sodium-ion-minus-40-cold-start-agm-comparison/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "钠离子电池 −40°C 冷启动：AGM 方案该如何比较？ | Viking AGM",
+    "description": "解读企业披露的钠离子电池 −40°C 冷启动验证，从全生命周期成本、验证成熟度、回收和售后支持比较低压电池，并厘清 AGM 隔板证据边界。",
+    "keywords": [
+      "钠离子电池 −40°C 冷启动：AGM 方案该如何比较？",
+      "AGM",
+      "VRLA",
+      "start-stop"
+    ],
+    "pageName": "钠离子电池 −40°C 冷启动：AGM 方案该如何比较？",
+    "articleDescription": "解读企业披露的钠离子电池 −40°C 冷启动验证，从全生命周期成本、验证成熟度、回收和售后支持比较低压电池，并厘清 AGM 隔板证据边界。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "钠离子电池 −40°C 冷启动：AGM 方案该如何比较？"
+    ],
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18"
+  }
+} as const;
+
 const batteryTechnologyProjectComparisonSeo = {
   "en": {
     "path": "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
@@ -2136,7 +2290,7 @@ const batteryTechnologyProjectComparisonSeo = {
       "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty"
     ],
     "datePublished": "2026-10-17",
-    "dateModified": "2026-10-17"
+    "dateModified": "2026-10-18"
   },
   "zh": {
     "path": "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
@@ -2159,7 +2313,7 @@ const batteryTechnologyProjectComparisonSeo = {
       "铅、锂还是钠？从项目工况比较电池方案"
     ],
     "datePublished": "2026-10-17",
-    "dateModified": "2026-10-17"
+    "dateModified": "2026-10-18"
   }
 } as const;
 
@@ -2304,6 +2458,7 @@ export function buildSecondaryArticleMetadata(
   kind: BlogArticleKind
 ): Metadata {
   const current = buildSecondaryArticleSeo(lang, kind);
+  const hero = generatedArticleImage(lang, kind, current.pageName);
   return buildMetadata({
     title: current.title,
     description: current.description,
@@ -2312,8 +2467,8 @@ export function buildSecondaryArticleMetadata(
     ...articleLocalePaths(kind),
     locale: current.locale,
     siteName: current.siteName,
-    imageAlt: current.pageName,
-    image: {
+    imageAlt: hero?.alt ?? current.pageName,
+    image: hero ? { url: `${SITE_URL}${hero.src}`, width: hero.width, height: hero.height } : {
       url: `${SITE_URL}/images/agm-hero-production-1600.webp`,
       width: 1600,
       height: 1000
@@ -5016,6 +5171,7 @@ export function SecondaryArticleStructuredData({
   kind: BlogArticleKind;
 }) {
   const current = buildSecondaryArticleSeo(lang, kind);
+  const hero = generatedArticleImage(lang, kind, current.pageName);
   const url = `${SITE_URL}${current.path}`;
   const published = articleDefinitions[kind][2];
   const modified = current.dateModified;
@@ -5036,6 +5192,7 @@ export function SecondaryArticleStructuredData({
         "@type": "BlogPosting",
         "@id": `${url}#blogposting`,
         headline: current.pageName,
+        ...(hero ? { image: `${SITE_URL}${hero.src}` } : {}),
         description: current.articleDescription,
         url,
         datePublished: published,
@@ -5156,7 +5313,7 @@ function JsonLd({ data }: { data: unknown }) {
 
 export function buildBatteryTechnologyProjectComparisonMetadata(lang: Lang): Metadata {
   const current = seoContent("batteryTechnologyProjectComparison", lang, batteryTechnologyProjectComparisonSeo[lang]);
-  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("batteryTechnologyProjectComparison"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/viking-finished-separator-roll-900.webp`, width: 900, height: 675 } });
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("batteryTechnologyProjectComparison"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/battery-duty-comparison-hero-1600.webp`, width: 1600, height: 1200 } });
 }
 
 export function BatteryTechnologyProjectComparisonStructuredData({ lang }: { lang: Lang }) {
@@ -5166,7 +5323,58 @@ export function BatteryTechnologyProjectComparisonStructuredData({ lang }: { lan
   return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
     organizationData(lang, current.description),
     { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
-    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/viking-finished-separator-roll-900.webp`, url, datePublished: "2026-10-17", dateModified: "2026-10-17", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Battery technology comparison", "VRLA", "AGM separator application"], inLanguage: current.language },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/battery-duty-comparison-hero-1600.webp`, url, datePublished: "2026-10-17", dateModified: "2026-10-18", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Battery technology comparison", "VRLA", "AGM separator application"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildSodiumIonColdStartAgmComparisonMetadata(lang: Lang): Metadata {
+  const current = seoContent("sodiumIonColdStartAgmComparison", lang, sodiumIonColdStartAgmComparisonSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("sodiumIonColdStartAgmComparison"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/sodium-cold-start-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function SodiumIonColdStartAgmComparisonStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("sodiumIonColdStartAgmComparison", lang, sodiumIonColdStartAgmComparisonSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/sodium-cold-start-hero-1600.webp`, url, datePublished: "2026-10-18", dateModified: "2026-10-18", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Sodium-ion cold start", "AGM start-stop battery", "Validation evidence"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildAgmMaterialDataPredictiveMaintenanceMetadata(lang: Lang): Metadata {
+  const current = seoContent("agmMaterialDataPredictiveMaintenance", lang, agmMaterialDataPredictiveMaintenanceSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmMaterialDataPredictiveMaintenance"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/agm-soh-evidence-chain-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function AgmMaterialDataPredictiveMaintenanceStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("agmMaterialDataPredictiveMaintenance", lang, agmMaterialDataPredictiveMaintenanceSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/agm-soh-evidence-chain-hero-1600.webp`, url, datePublished: "2026-10-18", dateModified: "2026-10-18", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM material traceability", "Battery SOH evidence", "Battery aging records"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildUpsBatteryIndividualMonitoringMetadata(lang: Lang): Metadata {
+  const current = seoContent("upsBatteryIndividualMonitoring", lang, upsBatteryIndividualMonitoringSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("upsBatteryIndividualMonitoring"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/ups-individual-monitoring-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function UpsBatteryIndividualMonitoringStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("upsBatteryIndividualMonitoring", lang, upsBatteryIndividualMonitoringSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/ups-individual-monitoring-hero-1600.webp`, url, datePublished: "2026-10-18", dateModified: "2026-10-18", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["UPS battery individual monitoring", "VRLA procurement", "AGM batch traceability"], inLanguage: current.language },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
 }

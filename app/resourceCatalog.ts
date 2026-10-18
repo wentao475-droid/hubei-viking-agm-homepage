@@ -486,10 +486,64 @@ export const resourceArticles: ResourceArticle[] = [
     "en": "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/",
     "zh": "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/"
   }
+},
+  {
+  "id": "sodium-ion-minus-40-cold-start-agm-comparison",
+  "category": "industryApplications",
+  "publishedAt": "2026-10-18",
+  "title": {
+    "en": "−40°C Sodium-Ion Cold Start: What Changes in the AGM Comparison?",
+    "zh": "钠离子电池 −40°C 冷启动：AGM 方案该如何比较？"
+  },
+  "description": {
+    "en": "What company-reported −40°C sodium-ion cold-start validation means for low-voltage battery selection, and where AGM separator evidence must stop.",
+    "zh": "解读企业披露的钠离子电池 −40°C 冷启动验证，从全生命周期成本、验证成熟度、回收和售后支持比较低压电池，并厘清 AGM 隔板证据边界。"
+  },
+  "href": {
+    "en": "/blog/sodium-ion-minus-40-cold-start-agm-comparison/",
+    "zh": "/zh/blog/sodium-ion-minus-40-cold-start-agm-comparison/"
+  }
+},
+  {
+  "id": "agm-material-data-battery-soh-predictive-maintenance",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-10-18",
+  "title": {
+    "en": "Predicting 12V Battery Failure: Where AGM Material Data Fits",
+    "zh": "预测 12V 电池失效：AGM 材料数据能提供什么？"
+  },
+  "description": {
+    "en": "Trace AGM batches, whole-battery aging and field records for explainable SOH assessment. Separator consistency is a material input, not a standalone prediction service.",
+    "zh": "将 AGM 材料批次、整电池老化结果与现场记录关联，为 SOH 评估提供可解释证据。材料一致性是输入，不能单独预测失效或替代验证。"
+  },
+  "href": {
+    "en": "/blog/agm-material-data-battery-soh-predictive-maintenance/",
+    "zh": "/zh/blog/agm-material-data-battery-soh-predictive-maintenance/"
+  }
+},
+  {
+  "id": "ups-battery-272-individual-monitors-batch-traceability",
+  "category": "industryApplications",
+  "publishedAt": "2026-10-18",
+  "title": {
+    "en": "272 Batteries, 272 Monitors: What UPS Procurement Can Tell Us",
+    "zh": "272 套电池、272 套监测模块：UPS 采购关注什么？"
+  },
+  "description": {
+    "en": "A public UPS replacement notice pairs 272 VRLA batteries with 272 monitoring modules. Review individual readings, service consistency and the limits of AGM material evidence.",
+    "zh": "以一则 UPS 更换公告为例，区分单体电压与内阻监测、服役一致性和 AGM 材料证据，建立现场、电池与隔板批次的追溯关系。"
+  },
+  "href": {
+    "en": "/blog/ups-battery-272-individual-monitors-batch-traceability/",
+    "zh": "/zh/blog/ups-battery-272-individual-monitors-batch-traceability/"
+  }
 }
 ];
 
 const articleKindById: Record<string, string> = {
+  "ups-battery-272-individual-monitors-batch-traceability": "upsBatteryIndividualMonitoring",
+  "agm-material-data-battery-soh-predictive-maintenance": "agmMaterialDataPredictiveMaintenance",
+  "sodium-ion-minus-40-cold-start-agm-comparison": "sodiumIonColdStartAgmComparison",
   "compare-lead-lithium-sodium-batteries-by-project-duty": "batteryTechnologyProjectComparison",
   "agm-separator-supply-chain": "agmSeparatorSupplyChain",
   "agm-start-stop-battery-procurement": "agmStartStopBatteryProcurement",

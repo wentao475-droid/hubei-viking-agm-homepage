@@ -15,6 +15,9 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "upsBatteryIndividualMonitoring"
+  | "agmMaterialDataPredictiveMaintenance"
+  | "sodiumIonColdStartAgmComparison"
   | "batteryTechnologyProjectComparison"
   | "whatIsAgmSeparator"
   | "keyTechnicalParameters"
@@ -47,10 +50,10 @@ type ArticlePageData = {
     title: string;
     subtitle: string;
     secondary: string;
-    image?: { src: string; alt: string; width: number; height: number };
+    image?: { src: string; alt: string; width: number; height: number; caption?: string };
   };
   intro: string[];
-  sections: Array<{ eyebrow: string; title: string; text: string }>;
+  sections: Array<{ eyebrow: string; title: string; text: string; image?: { src: string; alt: string; width: number; height: number; caption: string } }>;
   parameters: Array<[string, string]>;
   formats: {
     eyebrow: string;
@@ -4008,18 +4011,19 @@ const batteryTechnologyProjectComparisonCopy = {
     "brandName": "Hubei Viking Technology Co., Ltd.",
     "quote": "Request a Quote",
     "hero": {
-      "eyebrow": "Battery Technology Review",
-      "title": "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
-      "subtitle": "Compare battery options through duty, site conditions, safety, recycling, total cost and evidence. Assess AGM separators only within a defined VRLA battery application.",
-      "primary": "Ask for AGM Separator Guide",
-      "secondary": "Send Your Battery Application",
-      "image": {
-        "src": "/images/viking-finished-separator-roll-900.webp",
-        "alt": "Finished AGM glass-fiber separator roll for VRLA batteries",
-        "width": 900,
-        "height": 675
-      }
-    },
+  "eyebrow": "Battery Technology Review",
+  "title": "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
+  "subtitle": "Compare battery options through duty, site conditions, safety, recycling, total cost and evidence. Assess AGM separators only within a defined VRLA battery application.",
+  "primary": "Ask for AGM Separator Guide",
+  "secondary": "Send Your Battery Application",
+  "image": {
+    "src": "/images/articles/battery-duty-comparison-hero-1600.webp",
+    "alt": "AI-generated illustration: Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
+    "width": 1600,
+    "height": 1200,
+    "caption": "AI-generated illustration"
+  }
+},
     "intro": [
       "Compare battery options through duty, site conditions, safety, recycling, total cost and evidence. Assess AGM separators only within a defined VRLA battery application."
     ],
@@ -4187,18 +4191,19 @@ const batteryTechnologyProjectComparisonCopy = {
     "brandName": "湖北维京科技有限公司",
     "quote": "获取报价",
     "hero": {
-      "eyebrow": "电池技术方案评审",
-      "title": "铅、锂还是钠？从项目工况比较电池方案",
-      "subtitle": "从负载任务、现场条件、安全、回收、总成本和验证证据比较电池方案；将 AGM 隔板放回已明确的 VRLA 电池应用中评估。",
-      "primary": "索取 AGM 隔板指南",
-      "secondary": "发送电池应用信息",
-      "image": {
-        "src": "/images/viking-finished-separator-roll-900.webp",
-        "alt": "VRLA 电池用 AGM 玻璃纤维隔板成品卷",
-        "width": 900,
-        "height": 675
-      }
-    },
+  "eyebrow": "电池技术方案评审",
+  "title": "铅、锂还是钠？从项目工况比较电池方案",
+  "subtitle": "从负载任务、现场条件、安全、回收、总成本和验证证据比较电池方案；将 AGM 隔板放回已明确的 VRLA 电池应用中评估。",
+  "primary": "索取 AGM 隔板指南",
+  "secondary": "发送电池应用信息",
+  "image": {
+    "src": "/images/articles/battery-duty-comparison-hero-1600.webp",
+    "alt": "AI 示意图: 铅、锂还是钠？从项目工况比较电池方案",
+    "width": 1600,
+    "height": 1200,
+    "caption": "AI 示意图"
+  }
+},
     "intro": [
       "从负载任务、现场条件、安全、回收、总成本和验证证据比较电池方案；将 AGM 隔板放回已明确的 VRLA 电池应用中评估。"
     ],
@@ -4353,6 +4358,887 @@ const batteryTechnologyProjectComparisonCopy = {
   }
 } as const;
 
+const sodiumIonColdStartAgmComparisonCopy = {
+  en: {
+    ...batteryTechnologyProjectComparisonCopy.en,
+  "languagePath": "/zh/blog/sodium-ion-minus-40-cold-start-agm-comparison/",
+  "hero": {
+  "eyebrow": "Battery Technology Review",
+  "title": "−40°C Sodium-Ion Cold Start: What Changes in the AGM Comparison?",
+  "subtitle": "What company-reported −40°C sodium-ion cold-start validation means for low-voltage battery selection, and where AGM separator evidence must stop.",
+  "primary": "Ask for AGM Separator Guide",
+  "secondary": "Send Your Battery Application",
+  "image": {
+    "src": "/images/articles/sodium-cold-start-hero-1600.webp",
+    "alt": "AI-generated illustration: −40°C Sodium-Ion Cold Start: What Changes in the AGM Comparison?",
+    "width": 1600,
+    "height": 1200,
+    "caption": "AI-generated illustration"
+  }
+},
+  "intro": [
+    "A new cold-start milestone changes the evidence available to buyers. The useful next step is to define the vehicle’s operating task and compare what each candidate has actually demonstrated."
+  ],
+  "sections": [
+    {
+      "eyebrow": "Reported milestone",
+      "title": "The announced result and development stage",
+      "text": "On September 14, 2026, Clarios, Altris and InoBat reported −40°C cold-cranking validation for their sodium-ion low-voltage, high-power solution. The announcement describes internal testing and customer evaluations, including automotive, commercial-vehicle and off-highway work, and a move toward pilot-scale learning and small-series production readiness."
+    },
+    {
+      "eyebrow": "Evidence boundary",
+      "title": "A cold-start result is not a lifecycle conclusion",
+      "text": "This is a company-reported milestone, not independent third-party confirmation. It does not demonstrate mass-production readiness, lifecycle cost leadership or suitability for every vehicle and climate. It does not establish that AGM has been replaced. Low-temperature performance should be compared through defined conditions and evidence rather than a fixed technology label."
+    },
+    {
+      "eyebrow": "Purchasing criteria",
+      "title": "Compare four dimensions before selecting a battery",
+      "text": "Assess lifecycle cost through initial investment, maintenance, replacement and residual value. Review validation maturity against the relevant vehicle and operating conditions. Verify the local recycling route and responsibility. Check supply and after-sales arrangements, including regional delivery, service and fault handling. A staged corporate disclosure alone cannot close these four questions."
+    },
+    {
+      "eyebrow": "Application conditions",
+      "title": "Validate the intended vehicle and climate",
+      "text": "The −40°C result is relevant to cold regions and specific vehicles; it cannot replace validation for high-temperature operation, cycling, charge acceptance, maintenance support or actual service life. Apply the same discipline to AGM on existing vehicle platforms. The weighting of cost, evidence, recycling and support changes with temperature range, architecture, duty cycle and local conditions."
+    },
+    {
+      "eyebrow": "Material inputs",
+      "title": "Separate AGM material data from battery performance",
+      "text": "Separator pore structure, electrolyte absorption, thickness, compression state and batch consistency are material inputs that can affect initial assembly conditions and repeatability. Control these inputs during low-temperature and cycling validation of start-stop batteries. They do not prove whole-battery cold-start capability or independently establish system life, cost or after-sales performance."
+    },
+    {
+      "eyebrow": "Project review",
+      "title": "Begin separator selection with project conditions",
+      "text": "Record material data, battery tests, vehicle validation and field operation separately. Start with the customer’s vehicle type, temperature range, battery architecture and target duty cycle; identify comparable data, existing validation and gaps. Viking can discuss AGM separator roll or sheet format, thickness, width, sample methods and batch consistency for a defined VRLA project. Final suitability requires customer battery and application validation."
+    }
+  ],
+  "parameters": [
+    [
+      "Lifecycle cost",
+      "Initial investment, maintenance, replacement and residual value."
+    ],
+    [
+      "Validation maturity",
+      "Vehicle-relevant conditions, methods and available evidence."
+    ],
+    [
+      "Recycling",
+      "A verifiable end-of-life route and responsible parties."
+    ],
+    [
+      "Supply and after-sales",
+      "Regional delivery, service and fault handling."
+    ]
+  ],
+  "checklist": {
+    "eyebrow": "Buyer Checklist",
+    "title": "Inputs for a start-stop battery review",
+    "text": "Use the same boundaries for every option.",
+    "items": [
+      "Vehicle type and intended region of use",
+      "Temperature range and operating extremes",
+      "Battery architecture and target duty cycle",
+      "Capacity, separator thickness, width and roll/sheet dimensions",
+      "Existing battery, vehicle and field-validation evidence",
+      "Test methods, compression conditions and sample stage",
+      "Recycling, supply, after-sales responsibility and lifecycle cost"
+    ]
+  },
+  "related": {
+    "eyebrow": "Related Pages",
+    "title": "Continue with product and quality details",
+    "items": [
+      [
+        "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
+        "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/"
+      ],
+      [
+        "Automotive AGM Start-Stop Batteries: What Separator Buyers Should Confirm",
+        "/blog/agm-start-stop-battery-separator-procurement-guide/"
+      ],
+      [
+        "Key Technical Parameters of AGM Separator",
+        "/blog/key-technical-parameters-of-agm-separator/"
+      ]
+    ]
+  },
+  "inquiry": {
+    "eyebrow": "Inquiry",
+    "title": "Request a Sample & Specification Match",
+    "text": "Share vehicle type, temperature range, battery architecture, target duty cycle, capacity, separator dimensions, test conditions and sample stage for AGM start-stop specification matching.",
+    "checklist": [
+      "Vehicle type and intended region of use",
+      "Temperature range and operating extremes",
+      "Battery architecture and target duty cycle",
+      "Capacity, separator thickness, width and roll/sheet dimensions"
+    ],
+    "fields": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "country": "Country",
+      "application": "Battery Application",
+      "message": "Message"
+    },
+    "placeholders": {
+      "message": "Share vehicle type, temperature range, battery architecture, target duty cycle, capacity, separator dimensions, test conditions and sample stage for AGM start-stop specification matching."
+    },
+    "submit": "Send Inquiry",
+    "submitting": "Sending...",
+    "required": "Please complete all required fields before submitting.",
+    "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+    "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+    "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+  },
+  "references": {
+    "eyebrow": "Source and validation boundary",
+    "title": "Company disclosure reviewed on 18 October 2026",
+    "text": "The September 14, 2026 announcement was reviewed on October 18, 2026. Its −40°C result is a company disclosure, not a Viking specification, independent certification or complete lifecycle comparison; detailed test conditions must be obtained for project validation.",
+    "items": [
+      [
+        "Clarios / Altris / InoBat — 2026-09-14",
+        "https://www.clarios.com/es/insights/news/news-detail/clarios-altris-and-inobat-advance-sodium-ion-technology"
+      ]
+    ]
+  }
+
+  },
+  zh: {
+    ...batteryTechnologyProjectComparisonCopy.zh,
+  "languagePath": "/blog/sodium-ion-minus-40-cold-start-agm-comparison/",
+  "hero": {
+  "eyebrow": "电池技术方案评审",
+  "title": "钠离子电池 −40°C 冷启动：AGM 方案该如何比较？",
+  "subtitle": "解读企业披露的钠离子电池 −40°C 冷启动验证，从全生命周期成本、验证成熟度、回收和售后支持比较低压电池，并厘清 AGM 隔板证据边界。",
+  "primary": "索取 AGM 隔板指南",
+  "secondary": "发送电池应用信息",
+  "image": {
+    "src": "/images/articles/sodium-cold-start-hero-1600.webp",
+    "alt": "AI 示意图: 钠离子电池 −40°C 冷启动：AGM 方案该如何比较？",
+    "width": 1600,
+    "height": 1200,
+    "caption": "AI 示意图"
+  }
+},
+  "intro": [
+    "新的冷启动进展改变了采购团队可以参考的证据。下一步应明确车辆的运行任务，比较各方案实际完成了哪些验证，以及哪些问题仍待确认。"
+  ],
+  "sections": [
+    {
+      "eyebrow": "企业披露",
+      "title": "公告确认了什么开发进度",
+      "text": "2026 年 9 月 14 日，Clarios、Altris 和 InoBat 披露其钠离子低压、高功率方案完成 −40°C 冷启动验证。公告涉及内部测试及客户评估，包括汽车、商用车和非道路应用，并称方案正向中试学习和小批量生产准备推进。"
+    },
+    {
+      "eyebrow": "证据边界",
+      "title": "一次冷启动结果不等于全生命周期结论",
+      "text": "这是企业披露的阶段进展，并非独立第三方确认，不能据此认定已具备大规模量产条件、全生命周期成本领先，或适用于所有车辆和气候，也不等于 AGM 已被替代。低温表现应依据明确工况与验证证据比较，不能作为某条技术路线的固定标签。"
+    },
+    {
+      "eyebrow": "采购比较",
+      "title": "采购前统一四项比较维度",
+      "text": "全生命周期成本应综合初始投入、维护、更换及残值；验证成熟度要对应具体车辆和运行条件；回收要确认当地路径和责任方；供货与售后要覆盖使用地区的交付、服务及故障处理。单次阶段性企业公告不能直接回答这四个采购问题。"
+    },
+    {
+      "eyebrow": "应用条件",
+      "title": "验证必须对应具体车型与气候",
+      "text": "−40°C 结果与寒冷地区及特定车型相关，但不能替代高温、循环、充电接受能力、维护支持或实际寿命验证。AGM 同样应放在既有车型平台、已有验证与真实服务条件中评估。温度范围、电池架构、目标工况和当地条件不同，四个维度的权重也会变化。"
+    },
+    {
+      "eyebrow": "材料输入",
+      "title": "AGM 材料数据与整电池表现分开记录",
+      "text": "隔板孔结构、吸液、厚度、压缩状态和批次一致性属于可能影响初始装配条件及重复性的材料输入，应在启停电池低温与循环验证中加以控制。这些材料数据不能证明整电池冷启动能力，也不能单独证明低压系统的寿命、成本或售后表现。"
+    },
+    {
+      "eyebrow": "项目评审",
+      "title": "从项目条件开始选择隔板",
+      "text": "材料数据、电池测试、整车验证和实际运行记录应分层保存。从客户车型、温度范围、电池架构和目标工况开始，明确可比数据、已有验证和待补证据。维京可为已明确的 VRLA 项目沟通 AGM 隔板卷材或片材、厚度、宽度、样品方法及批次一致性；最终适用性仍须由客户完成整电池及应用验证。"
+    }
+  ],
+  "parameters": [
+    [
+      "全生命周期成本",
+      "初始投入、维护、更换和残值。"
+    ],
+    [
+      "验证成熟度",
+      "对应车型的工况、方法和已有证据。"
+    ],
+    [
+      "回收",
+      "可核实的报废回收路径与责任方。"
+    ],
+    [
+      "供货与售后",
+      "使用地区的交付、服务和故障处理。"
+    ]
+  ],
+  "checklist": {
+    "eyebrow": "买家清单",
+    "title": "启停电池项目评审输入",
+    "text": "所有候选方案采用相同边界。",
+    "items": [
+      "车型及计划使用地区",
+      "温度范围与极端工况",
+      "电池架构及目标运行任务",
+      "容量、隔板厚度、宽度和卷/片尺寸",
+      "已有电池、整车和运行验证证据",
+      "测试方法、压缩条件及样品阶段",
+      "回收、供货、售后责任与全生命周期成本"
+    ]
+  },
+  "related": {
+    "eyebrow": "相关页面",
+    "title": "继续查看产品和质量信息",
+    "items": [
+      [
+        "铅、锂还是钠？从项目工况比较电池方案",
+        "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/"
+      ],
+      [
+        "汽车 AGM 启停电池：隔板采购需要确认哪些事项？",
+        "/zh/blog/agm-start-stop-battery-separator-procurement-guide/"
+      ],
+      [
+        "AGM 隔板关键技术参数",
+        "/zh/blog/key-technical-parameters-of-agm-separator/"
+      ]
+    ]
+  },
+  "inquiry": {
+    "eyebrow": "询盘",
+    "title": "申请样品与规格匹配",
+    "text": "请提供车型、温度范围、电池架构、目标工况、容量、隔板尺寸、测试条件和样品阶段，沟通启停用 AGM 隔板规格。",
+    "checklist": [
+      "车型及计划使用地区",
+      "温度范围与极端工况",
+      "电池架构及目标运行任务",
+      "容量、隔板厚度、宽度和卷/片尺寸"
+    ],
+    "fields": {
+      "name": "姓名",
+      "company": "公司",
+      "email": "邮箱",
+      "country": "国家/地区",
+      "application": "电池应用",
+      "message": "留言"
+    },
+    "placeholders": {
+      "message": "请提供车型、温度范围、电池架构、目标工况、容量、隔板尺寸、测试条件和样品阶段，沟通启停用 AGM 隔板规格。"
+    },
+    "submit": "发送询盘",
+    "submitting": "发送中...",
+    "required": "请先填写所有必填字段。",
+    "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+    "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+    "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+  },
+  "references": {
+    "eyebrow": "来源与验证边界",
+    "title": "2026 年 10 月 18 日核对的企业公告",
+    "text": "2026 年 10 月 18 日核对了所引 2026 年 9 月 14 日公告。−40°C 结果属于企业披露，不是维京规格、独立认证或完整生命周期比较；项目验证仍需取得具体测试条件。",
+    "items": [
+      [
+        "Clarios / Altris / InoBat — 2026-09-14",
+        "https://www.clarios.com/es/insights/news/news-detail/clarios-altris-and-inobat-advance-sodium-ion-technology"
+      ]
+    ]
+  }
+
+  }
+} as const;
+
+const agmMaterialDataPredictiveMaintenanceCopy = {
+  en: {
+    ...sodiumIonColdStartAgmComparisonCopy.en,
+    "languagePath": "/zh/blog/agm-material-data-battery-soh-predictive-maintenance/",
+    "hero": {
+  "eyebrow": "AGM Material Traceability",
+  "title": "Predicting 12V Battery Failure: Where AGM Material Data Fits",
+  "subtitle": "Trace AGM batches, whole-battery aging and field records for explainable SOH assessment. Separator consistency is a material input, not a standalone prediction service.",
+  "primary": "Ask for AGM Separator Guide",
+  "secondary": "Send Your Battery Application",
+  "image": {
+    "src": "/images/articles/agm-soh-evidence-chain-hero-1600.webp",
+    "alt": "AI-generated illustration: Predicting 12V Battery Failure: Where AGM Material Data Fits",
+    "width": 1600,
+    "height": 1200,
+    "caption": "AI-generated illustration"
+  }
+},
+    "intro": [
+        "For battery manufacturers and application teams, the useful shift is from collecting isolated curves to explaining why comparable batteries age differently. Start with a common design, duty cycle and traceable records."
+    ],
+    "sections": [
+        {
+            "eyebrow": "Fleet-service example",
+            "title": "Early warning needs explainable data",
+            "text": "Clarios’s September 14, 2026 page describes expanding Battery Manager engagement with European fleets. Connected hardware, cellular communication and cloud analytics provide battery health, state of charge and charging-system information for maintenance decisions. Clarios says results depend on vehicle, duty, environment and maintenance. The page does not disclose an algorithm, sample size or prediction accuracy. This is a Clarios service, not a Viking platform or a promise of an exact failure date."
+        },
+        {
+            "eyebrow": "Material evidence",
+            "title": "Trace the starting material conditions",
+            "text": "For an AGM battery health assessment—state of health, or SOH—retain separator batch identity, thickness, acid absorption, compression conditions and aging-related changes. These records help engineers check whether batteries of the same design began from comparable material conditions. Record the test method, sample state and measurement conditions alongside each result; an isolated material parameter cannot calculate SOH."
+        },
+        {
+            "eyebrow": "Battery evidence",
+            "title": "Link aging results to battery design and test conditions",
+            "text": "Whole-battery records should link capacity, internal resistance, charge-discharge behavior and post-cycle changes to battery identity, structure, temperature and the agreed test method. Keep aging stages and dates aligned with the relevant separator batch. Battery tests describe behavior under defined conditions; they are a separate evidence level from separator measurements."
+        },
+        {
+            "eyebrow": "Field evidence",
+            "title": "Place field events on the same timeline",
+            "text": "Field records should include vehicle type, duty cycle, temperature, charging-system behavior, anomalies and maintenance history. They help determine whether laboratory observations can reasonably explain service performance. A model can operate with incomplete evidence, but interpretation becomes harder. A field anomaly must not automatically be blamed on a separator, and material variation alone cannot predict vehicle failure."
+        },
+        {
+            "eyebrow": "Industry assessment",
+            "title": "Consistency may help reduce unexplained variation",
+            "text": "Viking’s industry assessment is that consistent starting materials may make comparable battery aging data easier to interpret. This is a rationale for controlling variation, not a demonstrated improvement in a particular model. Unexplained thickness, absorption or compression differences can obscure design, process and operating effects. Retain batch and aging records to support investigation; they do not form a finished predictive-maintenance solution."
+        },
+        {
+            "eyebrow": "Practical records",
+            "title": "Build a shared evidence chain before a complex platform",
+            "text": "Begin with repeatable fields for batch, key test conditions, battery aging results, field anomalies and maintenance timing. Map them to the same battery structure and target duty cycle, with clear record ownership. Viking does not provide independent battery-health monitoring or SOH calculation. For start-stop and low-voltage AGM batteries, discuss available material and aging records with battery and application teams; material tests cannot replace battery or field validation."
+        }
+    ],
+    "parameters": [
+        [
+            "Material",
+            "Batch identity, thickness, absorption and compression conditions."
+        ],
+        [
+            "Whole battery",
+            "Capacity, resistance, cycling results and defined test conditions."
+        ],
+        [
+            "Field operation",
+            "Vehicle duty, environment, charging and maintenance history."
+        ],
+        [
+            "Traceability",
+            "Battery structure, dates and links across the three levels."
+        ]
+    ],
+    "checklist": {
+        "eyebrow": "Buyer Checklist",
+        "title": "Records for an aging and failure review",
+        "text": "Use the same boundaries for every option.",
+        "items": [
+            "Battery structure, design revision and target duty cycle",
+            "Separator batch, thickness, acid absorption and compression",
+            "Sample condition, test method and measurement conditions",
+            "Battery identity, capacity, resistance and aging stages",
+            "Vehicle, temperature, charging behavior and anomalies",
+            "Maintenance events and their dates",
+            "Links among material, battery and field records; responsible teams"
+        ]
+    },
+    "related": {
+        "eyebrow": "Related Pages",
+        "title": "Continue with product and quality details",
+        "items": [
+            [
+                "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+                "/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+                "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+                "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+                "Automotive AGM Start-Stop Batteries: What Separator Buyers Should Confirm",
+                "/blog/agm-start-stop-battery-separator-procurement-guide/"
+            ]
+        ]
+    },
+    "inquiry": {
+        "eyebrow": "Inquiry",
+        "title": "Request a Sample & Specification Match",
+        "text": "Share your battery structure, target duty cycle, separator specifications and available aging records to discuss material evidence for aging and failure analysis. Battery and field validation remain necessary.",
+        "checklist": [
+            "Battery structure, design revision and target duty cycle",
+            "Separator batch, thickness, acid absorption and compression",
+            "Sample condition, test method and measurement conditions",
+            "Battery identity, capacity, resistance and aging stages"
+        ],
+        "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+        },
+        "placeholders": {
+            "message": "Share your battery structure, target duty cycle, separator specifications and available aging records to discuss material evidence for aging and failure analysis. Battery and field validation remain necessary."
+        },
+        "submit": "Send Inquiry",
+        "submitting": "Sending...",
+        "required": "Please complete all required fields before submitting.",
+        "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+        "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+        "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "references": {
+        "eyebrow": "Source and interpretation boundary",
+        "title": "Official fleet-service disclosure reviewed on 18 October 2026",
+        "text": "Official Clarios disclosure dated September 14, 2026, reviewed October 18, 2026. It supports the fleet-service description and its stated dependencies, not Viking monitoring capability or a quantified model benefit. The material-data framework and possible reduction of unexplained variation are Viking’s industry assessment.",
+        "items": [
+            [
+                "Clarios — Battery Manager, 2026-09-14",
+                "https://www.clarios.com/es/insights/news/news-detail/actionable-battery-intelligence-to-european-fleets"
+            ]
+        ]
+    }
+
+  },
+  zh: {
+    ...sodiumIonColdStartAgmComparisonCopy.zh,
+    "languagePath": "/blog/agm-material-data-battery-soh-predictive-maintenance/",
+    "hero": {
+  "eyebrow": "AGM 材料追溯",
+  "title": "预测 12V 电池失效：AGM 材料数据能提供什么？",
+  "subtitle": "将 AGM 材料批次、整电池老化结果与现场记录关联，为 SOH 评估提供可解释证据。材料一致性是输入，不能单独预测失效或替代验证。",
+  "primary": "索取 AGM 隔板指南",
+  "secondary": "发送电池应用信息",
+  "image": {
+    "src": "/images/articles/agm-soh-evidence-chain-hero-1600.webp",
+    "alt": "AI 示意图: 预测 12V 电池失效：AGM 材料数据能提供什么？",
+    "width": 1600,
+    "height": 1200,
+    "caption": "AI 示意图"
+  }
+},
+    "intro": [
+        "对电池制造商和应用团队而言，重点是从收集孤立曲线转向解释同类电池为何出现不同老化表现。先统一电池设计和目标工况，再建立可追溯记录。"
+    ],
+    "sections": [
+        {
+            "eyebrow": "车队服务案例",
+            "title": "早期预警需要可解释的数据",
+            "text": "Clarios 于 2026 年 9 月 14 日的官方页面介绍了面向欧洲车队拓展 Battery Manager 的工作。该服务通过车载硬件、蜂窝通信和云端分析提供电池健康、荷电状态与充电系统信息，支持维护决策。Clarios 表明结果受车型、工况、环境和维护影响；页面未公开算法、样本量或预测精度。这是 Clarios 服务，不是维京平台，也不是对准确失效日期的承诺。"
+        },
+        {
+            "eyebrow": "材料证据",
+            "title": "材料记录说明起始条件是否可追溯",
+            "text": "评估 AGM 电池健康状态（SOH）时，应保留隔板批次、厚度、吸酸、压缩条件及老化相关变化，帮助工程团队判断同一设计的电池是否具有可比的材料起点。结果需要同时记录测试方法、样品状态和测量条件；单个材料参数不能计算 SOH。"
+        },
+        {
+            "eyebrow": "整电池证据",
+            "title": "老化结果必须对应结构与测试条件",
+            "text": "整电池记录应把容量、内阻、充放电行为和循环后变化关联到电池标识、结构、温度及约定测试方法。老化阶段和时间需能追溯到相关隔板批次。电池试验说明特定条件下的行为，与隔板材料测量属于不同证据层级。"
+        },
+        {
+            "eyebrow": "现场证据",
+            "title": "把现场事件放到同一时间线上",
+            "text": "现场记录应包含车型、工况、温度、充电系统行为、异常及维护历史，用于判断实验室现象能否合理解释实际服役表现。证据不完整时模型仍可能运行，但解释难度会增加。不能把现场异常自动归因于隔板，也不能仅凭材料波动预测整车失效。"
+        },
+        {
+            "eyebrow": "行业判断",
+            "title": "一致性可能帮助减少难以解释的差异",
+            "text": "维京的行业判断是：一致的材料起点可能让同类电池老化数据更容易解释。这是控制波动的分析思路，不是特定模型精度改善的实证结论。厚度、吸酸或压缩表现出现无法解释的差异时，可能混淆设计、工艺与工况的影响。应保留批次与老化记录以支持追查，但这些记录不是完整的预测性维护方案。"
+        },
+        {
+            "eyebrow": "记录实践",
+            "title": "先建立证据链，再考虑复杂平台",
+            "text": "先建立材料批次、关键测试条件、整电池老化、现场异常与维护时点等可重复填写的字段，再映射到同一电池结构和目标工况，并明确记录责任方。维京不提供独立电池健康监测或 SOH 计算服务。启停和低压 AGM 项目可与电池制造及应用团队沟通已有材料与老化记录；材料测试不能代替整电池或现场验证。"
+        }
+    ],
+    "parameters": [
+        [
+            "材料层",
+            "批次标识、厚度、吸酸与压缩条件。"
+        ],
+        [
+            "整电池层",
+            "容量、内阻、循环结果及明确测试条件。"
+        ],
+        [
+            "现场层",
+            "车辆工况、环境、充电与维护历史。"
+        ],
+        [
+            "追溯关系",
+            "电池结构、时间以及三层记录之间的关联。"
+        ]
+    ],
+    "checklist": {
+        "eyebrow": "买家清单",
+        "title": "老化与失效评审需要哪些记录",
+        "text": "所有候选方案采用相同边界。",
+        "items": [
+            "电池结构、设计版本与目标工况",
+            "隔板批次、厚度、吸酸与压缩条件",
+            "样品状态、测试方法与测量条件",
+            "电池标识、容量、内阻与老化阶段",
+            "车型、温度、充电行为与异常",
+            "维护事件及时间",
+            "材料、整电池与现场记录的关联及责任团队"
+        ]
+    },
+    "related": {
+        "eyebrow": "相关页面",
+        "title": "继续查看产品和质量信息",
+        "items": [
+            [
+                "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+                "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+                "隔板装进去没问题，循环以后还能保持压力吗？",
+                "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+                "汽车 AGM 启停电池：隔板采购需要确认哪些事项？",
+                "/zh/blog/agm-start-stop-battery-separator-procurement-guide/"
+            ]
+        ]
+    },
+    "inquiry": {
+        "eyebrow": "询盘",
+        "title": "申请样品与规格匹配",
+        "text": "请提供电池结构、目标工况、隔板规格和已有老化记录，沟通老化与失效分析所需的材料证据；整电池和现场验证仍需完成。",
+        "checklist": [
+            "电池结构、设计版本与目标工况",
+            "隔板批次、厚度、吸酸与压缩条件",
+            "样品状态、测试方法与测量条件",
+            "电池标识、容量、内阻与老化阶段"
+        ],
+        "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+        },
+        "placeholders": {
+            "message": "请提供电池结构、目标工况、隔板规格和已有老化记录，沟通老化与失效分析所需的材料证据；整电池和现场验证仍需完成。"
+        },
+        "submit": "发送询盘",
+        "submitting": "发送中...",
+        "required": "请先填写所有必填字段。",
+        "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+        "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+        "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "references": {
+        "eyebrow": "来源与分析边界",
+        "title": "2026 年 10 月 18 日核对的官方车队服务资料",
+        "text": "2026 年 10 月 18 日核对 Clarios 于 2026 年 9 月 14 日发布的官方资料。来源支持其车队服务描述及所列影响因素，不证明维京监测能力或量化模型收益；材料记录框架及减少不可解释差异的可能性属于维京行业判断。",
+        "items": [
+            [
+                "Clarios — Battery Manager, 2026-09-14",
+                "https://www.clarios.com/es/insights/news/news-detail/actionable-battery-intelligence-to-european-fleets"
+            ]
+        ]
+    }
+
+  }
+} as const;
+
+const upsBatteryIndividualMonitoringCopy = {
+  en: {
+    ...agmMaterialDataPredictiveMaintenanceCopy.en,
+    "languagePath": "/zh/blog/ups-battery-272-individual-monitors-batch-traceability/",
+    "hero": {
+  "eyebrow": "UPS Battery Procurement",
+  "title": "272 Batteries, 272 Monitors: What UPS Procurement Can Tell Us",
+  "subtitle": "A public UPS replacement notice pairs 272 VRLA batteries with 272 monitoring modules. Review individual readings, service consistency and the limits of AGM material evidence.",
+  "primary": "Ask for AGM Separator Guide",
+  "secondary": "Send Your Battery Application",
+  "image": {
+    "src": "/images/articles/ups-individual-monitoring-hero-1600.webp",
+    "alt": "AI-generated illustration: 272 Batteries, 272 Monitors: What UPS Procurement Can Tell Us",
+    "width": 1600,
+    "height": 1200,
+    "caption": "AI-generated illustration"
+  }
+},
+    "intro": [
+        "One battery, one monitoring point is a useful procurement question. The case highlights the value of observing individual units after installation; it does not establish an industry-wide trend or diagnose the old batteries."
+    ],
+    "sections": [
+  {
+    "eyebrow": "Public procurement case",
+    "title": "What the September 24 notice lists",
+    "text": "The University of Chinese Academy of Sciences UPS replacement notice published on China’s government procurement website on September 24, 2026 lists 272 sets of 12V 250Ah VRLA batteries and 272 individual monitoring modules for internal resistance and voltage. The scope also includes UPS replacement, monitoring deployment, installation and commissioning. These are published requirements, not evidence that work is complete."
+  },
+  {
+    "eyebrow": "Scope boundary",
+    "title": "Equal quantities are a procurement requirement, not a field result",
+    "text": "The matched quantities are consistent with one monitoring point per battery. The notice does not establish the final wiring, sampling frequency, alarm thresholds, old-battery failure cause or operating results. It specifies VRLA, which alone does not confirm an AGM design. This single case does not show how widely the configuration is adopted or imply a Viking supply relationship."
+  },
+  {
+    "eyebrow": "Monitoring evidence",
+    "title": "Individual readings identify questions for investigation",
+    "text": "A normal string voltage does not establish that every battery is in the same condition. Individual voltage and internal-resistance records can help identify differences and when they appeared. They are investigation inputs, not a diagnosis. Review connections, charging conditions, temperature and service history alongside string-level charge-discharge behavior and complete-battery tests; no universal alarm threshold is proposed here."
+  },
+  {
+    "eyebrow": "Service consistency",
+    "title": "Consistency needs review after delivery",
+    "text": "Factory capacity and resistance checks describe a point in time. Float charging, temperature, connections and actual discharge events can change the installed group. Service review should ask whether divergence persists and whether maintenance changes the trend. Comparable records need the same measurement method and operating context; procurement of monitoring hardware alone does not prove a continuous, reliable data history."
+  },
+  {
+    "eyebrow": "AGM material boundary",
+    "title": "AGM data supports verification, not system diagnosis",
+    "text": "Where the battery actually uses AGM, the separator supports electrolyte retention, ion transport and plate-group contact. Thickness, basis weight, absorption, compression state and batch variation are relevant material inputs. They cannot establish whole-battery resistance, voltage or life. Plates, acid, assembly, welded connections and use conditions also matter. An unusual monitored value cannot be attributed directly to the separator.",
+    "image": {
+      "src": "/images/evidence/viking-agm-material-thickness-inspection-1600.webp",
+      "alt": "Viking technician measuring AGM separator material in the laboratory",
+      "width": 1600,
+      "height": 900,
+      "caption": "Viking laboratory: separator material measurement, not the university UPS project site."
+    }
+  },
+  {
+    "eyebrow": "Traceable records",
+    "title": "Link site, battery and separator records",
+    "text": "Link battery model, serial number, installation position and monitoring point with measurement times and review records. Retain battery manufacturing and test batches, plus separator batch, material data and supply records. Viking supplies AGM rolls and sheets and can discuss thickness, width, sheet dimensions, packaging and available batch documentation for defined VRLA projects. Material records help battery manufacturers investigate; battery and system validation remain necessary."
+  }
+],
+    "parameters": [
+        [
+            "Site",
+            "Map each battery position to its monitoring point."
+        ],
+        [
+            "Operating history",
+            "Record individual readings with time and conditions."
+        ],
+        [
+            "Battery",
+            "Keep manufacturing identity and complete-battery results."
+        ],
+        [
+            "AGM material",
+            "Retain batch identity, methods and specification records."
+        ]
+    ],
+    "checklist": {
+        "eyebrow": "Buyer Checklist",
+        "title": "Records for a UPS replacement review",
+        "text": "Keep operating observations distinct from material and battery evidence.",
+        "items": [
+            "Battery model, serial number and installation position",
+            "Battery-to-monitor mapping and commissioning baseline",
+            "Voltage/resistance timestamps, method and review records",
+            "Temperature, charging, connections and maintenance history",
+            "Battery production batch and complete-battery tests",
+            "AGM batch, thickness, basis weight, absorption and compression conditions",
+            "Supply records, sample stage and responsible teams"
+        ]
+    },
+    "related": {
+        "eyebrow": "Related Pages",
+        "title": "Continue with product and quality details",
+        "items": [
+            [
+                "Why Many UPS Projects Still Use VRLA Batteries",
+                "/blog/why-ups-projects-still-use-vrla-batteries/"
+            ],
+            [
+                "Predicting 12V Battery Failure: Where AGM Material Data Fits",
+                "/blog/agm-material-data-battery-soh-predictive-maintenance/"
+            ],
+            [
+                "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+                "/blog/agm-separator-batch-consistency-and-process-control/"
+            ]
+        ]
+    },
+    "inquiry": {
+        "eyebrow": "Inquiry",
+        "title": "Request a Sample & Specification Match",
+        "text": "Share UPS duty, battery design, separator dimensions, test conditions and sample stage to discuss specification matching and available batch-consistency records. Material data does not replace system diagnosis.",
+        "checklist": [
+            "Battery model, serial number and installation position",
+            "Battery-to-monitor mapping and commissioning baseline",
+            "Voltage/resistance timestamps, method and review records",
+            "Temperature, charging, connections and maintenance history"
+        ],
+        "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+        },
+        "placeholders": {
+            "message": "Share UPS duty, battery design, separator dimensions, test conditions and sample stage to discuss specification matching and available batch-consistency records. Material data does not replace system diagnosis."
+        },
+        "submit": "Send Inquiry",
+        "submitting": "Sending...",
+        "required": "Please complete all required fields before submitting.",
+        "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+        "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+        "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "references": {
+        "eyebrow": "Public source and scope",
+        "title": "Procurement notice reviewed on 18 October 2026",
+        "text": "Source: September 24, 2026 public notice, project UCAS-ZBB-2026049 (BMCC-ZC26-1049), reviewed October 18, 2026. This article uses the notice summary, not unpublished test details or a completed-project report. It does not infer AGM construction, faults, thresholds or a Viking customer relationship. The laboratory image shows Viking material inspection, not the university site.",
+        "items": [
+            [
+                "UCAS / 中国政府采购网 — 2026-09-24",
+                "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202609/t20260924_27395576.htm"
+            ]
+        ]
+    }
+
+  },
+  zh: {
+    ...agmMaterialDataPredictiveMaintenanceCopy.zh,
+    "languagePath": "/blog/ups-battery-272-individual-monitors-batch-traceability/",
+    "hero": {
+  "eyebrow": "UPS 电池采购",
+  "title": "272 套电池、272 套监测模块：UPS 采购关注什么？",
+  "subtitle": "以一则 UPS 更换公告为例，区分单体电压与内阻监测、服役一致性和 AGM 材料证据，建立现场、电池与隔板批次的追溯关系。",
+  "primary": "索取 AGM 隔板指南",
+  "secondary": "发送电池应用信息",
+  "image": {
+    "src": "/images/articles/ups-individual-monitoring-hero-1600.webp",
+    "alt": "AI 示意图: 272 套电池、272 套监测模块：UPS 采购关注什么？",
+    "width": 1600,
+    "height": 1200,
+    "caption": "AI 示意图"
+  }
+},
+    "intro": [
+        "一只电池对应一个监测点，是值得关注的采购问题。这个案例提示更换后观察单体状态的价值，但不能据此判断全行业趋势，也不能诊断旧电池故障。"
+    ],
+    "sections": [
+  {
+    "eyebrow": "公开采购案例",
+    "title": "9 月 24 日公告列出了什么",
+    "text": "中国政府采购网于 2026 年 9 月 24 日发布的中国科学院大学 UPS 和电池更换公告，列出 272 套 12V 250Ah 阀控铅酸蓄电池，以及检测单只内阻和电压的 272 套单体监测模块。项目还包含 UPS 主机更换、监控部署、安装与调试。这些是公开采购要求，不代表项目已经实施完成。"
+  },
+  {
+    "eyebrow": "需求边界",
+    "title": "数量一一对应，仍是采购需求而非运行结果",
+    "text": "两项数量相同，与每只电池配置一个监测点的思路一致。但公告摘要不能确认最终接线、采样频率、报警阈值、旧电池故障原因或运行结果。VRLA 标识本身也不能确认采用 AGM 结构。单个案例不能证明这种配置的行业普及程度，更不能暗示维京参与供货。"
+  },
+  {
+    "eyebrow": "监测证据",
+    "title": "单体读数为调查提供入口",
+    "text": "整组电压正常，不代表每只电池状态相同。单体电压、内阻及时间记录可帮助发现组内差异和变化时点，但它们只是调查输入，不是诊断。应结合连接、充电条件、温度、服役历史，以及整组充放电表现和整电池测试复核；本文不提出通用报警阈值。"
+  },
+  {
+    "eyebrow": "服役一致性",
+    "title": "一致性需要在交付后继续观察",
+    "text": "出厂容量和内阻检查描述的是特定时点。安装后的浮充、温度、连接与实际放电事件可能改变电池组状态。服役复核应关注差异是否持续、维护是否改变趋势；可比记录还需要一致的测量方法和工况。采购监测硬件本身不证明已经形成连续、可靠的数据历史。"
+  },
+  {
+    "eyebrow": "AGM 材料边界",
+    "title": "AGM 数据支持验证，不能替代系统诊断",
+    "text": "只有在电池确实采用 AGM 结构时，隔板才作为吸液保液、离子传输和极群接触的材料输入参与验证。厚度、定量、吸液、压缩状态及批次波动均需关注，但不能替代整电池内阻、电压或寿命结论。极板、酸量、装配、焊接和使用条件同样影响读数，异常不能直接归因于隔板。",
+    "image": {
+      "src": "/images/evidence/viking-agm-material-thickness-inspection-1600.webp",
+      "alt": "维京检测人员在实验室测量 AGM 隔板材料",
+      "width": 1600,
+      "height": 900,
+      "caption": "维京实验室隔板材料测量实拍，非该大学 UPS 项目现场。"
+    }
+  },
+  {
+    "eyebrow": "追溯记录",
+    "title": "将现场、整电池与隔板记录关联",
+    "text": "将电池型号、序列号、安装位置和监测点，与采集时间及复核记录关联；同时保留电池生产批次、整电池测试，以及隔板批次、材料数据和供货记录。维京供应 AGM 卷材与片材，可按明确的 VRLA 项目沟通厚度、宽度、片材尺寸、包装和可提供的批次资料。材料记录帮助电池制造商追查，整电池与系统验证仍需完成。"
+  }
+],
+    "parameters": [
+        [
+            "现场",
+            "将电池位置与监测点一一对应。"
+        ],
+        [
+            "运行历史",
+            "读数同时记录时间与工况。"
+        ],
+        [
+            "整电池",
+            "保留生产标识与整电池结果。"
+        ],
+        [
+            "AGM 材料",
+            "保留批次标识、方法和规格记录。"
+        ]
+    ],
+    "checklist": {
+        "eyebrow": "买家清单",
+        "title": "UPS 更换项目需要保留的记录",
+        "text": "将运行观察与材料、整电池证据分开记录，再建立关联。",
+        "items": [
+            "电池型号、序列号与安装位置",
+            "电池和监测点对应关系及调试基线",
+            "电压/内阻的时间、方法与复核记录",
+            "温度、充电、连接及维护历史",
+            "电池生产批次与整电池测试",
+            "AGM 批次、厚度、定量、吸液与压缩条件",
+            "供货记录、样品阶段及责任团队"
+        ]
+    },
+    "related": {
+        "eyebrow": "相关页面",
+        "title": "继续查看产品和质量信息",
+        "items": [
+            [
+                "UPS 机房都在谈锂电、钠电，为什么很多项目还在继续用 VRLA？",
+                "/zh/blog/why-ups-projects-still-use-vrla-batteries/"
+            ],
+            [
+                "预测 12V 电池失效：AGM 材料数据能提供什么？",
+                "/zh/blog/agm-material-data-battery-soh-predictive-maintenance/"
+            ],
+            [
+                "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+                "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+            ]
+        ]
+    },
+    "inquiry": {
+        "eyebrow": "询盘",
+        "title": "申请样品与规格匹配",
+        "text": "请提供 UPS 任务、电池设计、隔板尺寸、测试条件和样品阶段，沟通规格匹配及可提供的批次一致性记录。材料数据不能替代系统诊断。",
+        "checklist": [
+            "电池型号、序列号与安装位置",
+            "电池和监测点对应关系及调试基线",
+            "电压/内阻的时间、方法与复核记录",
+            "温度、充电、连接及维护历史"
+        ],
+        "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+        },
+        "placeholders": {
+            "message": "请提供 UPS 任务、电池设计、隔板尺寸、测试条件和样品阶段，沟通规格匹配及可提供的批次一致性记录。材料数据不能替代系统诊断。"
+        },
+        "submit": "发送询盘",
+        "submitting": "发送中...",
+        "required": "请先填写所有必填字段。",
+        "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+        "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+        "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "references": {
+        "eyebrow": "公开来源与边界",
+        "title": "2026 年 10 月 18 日核对的采购公告",
+        "text": "2026 年 10 月 18 日核对 2026 年 9 月 24 日公开公告，项目号 UCAS-ZBB-2026049（BMCC-ZC26-1049）。本文使用公告摘要，不推断未读取的测试细节、AGM 结构、故障、阈值或维京客户关系，也不将需求视为竣工结果。配图为维京材料检测，不是该大学项目现场。",
+        "items": [
+            [
+                "UCAS / 中国政府采购网 — 2026-09-24",
+                "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202609/t20260924_27395576.htm"
+            ]
+        ]
+    }
+
+  }
+} as const;
+
 const exportSupplySourceCopy = {
   en: {
     eyebrow: "Data Source and Note",
@@ -4387,7 +5273,13 @@ export function BlogArticlePage({
       ? null
       : secondaryArticleCopy[lang][page];
   const defaultArticle: any = secondaryArticle ?? (
-    page === "batteryTechnologyProjectComparison"
+    page === "upsBatteryIndividualMonitoring"
+      ? upsBatteryIndividualMonitoringCopy[primaryLang]
+      : page === "agmMaterialDataPredictiveMaintenance"
+      ? agmMaterialDataPredictiveMaintenanceCopy[primaryLang]
+      : page === "sodiumIonColdStartAgmComparison"
+      ? sodiumIonColdStartAgmComparisonCopy[primaryLang]
+      : page === "batteryTechnologyProjectComparison"
       ? batteryTechnologyProjectComparisonCopy[primaryLang]
       : page === "keyTechnicalParameters"
       ? keyTechnicalCopy[primaryLang]
@@ -4565,7 +5457,7 @@ export function BlogArticlePage({
               </a>
             </div>
           </div>
-          <div className="overflow-hidden rounded-md bg-white shadow-industrial">
+          <div className="relative overflow-hidden rounded-md bg-white shadow-industrial">
             <Image
               src={asset(heroImage.src)}
               alt={heroImage.alt}
@@ -4575,6 +5467,9 @@ export function BlogArticlePage({
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="aspect-[4/3] w-full object-cover"
             />
+            {heroImage.caption && (
+              <p className="absolute bottom-3 right-3 max-w-[calc(100%-1.5rem)] rounded bg-white/85 px-2 py-1 text-xs leading-5 text-steel">{heroImage.caption}</p>
+            )}
           </div>
         </div>
       </section>
@@ -4729,6 +5624,17 @@ export function BlogArticlePage({
                     {section.title}
                   </h2>
                   <p className="mt-4 text-base leading-8 text-steel">{section.text}</p>
+                  {section.image && (
+                    <figure className="mt-6">
+                      <Image src={asset(section.image.src)} alt={section.image.alt}
+                        width={section.image.width} height={section.image.height}
+                        sizes="(min-width: 1024px) 55vw, 100vw"
+                        className="h-auto w-full rounded-md" />
+                      <figcaption className="mt-2 text-sm leading-6 text-steel">
+                        {section.image.caption}
+                      </figcaption>
+                    </figure>
+                  )}
                 </section>
               ))}
             </div>

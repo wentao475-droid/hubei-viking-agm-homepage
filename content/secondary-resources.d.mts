@@ -7,3 +7,5 @@ export const articleDefinitions: Record<
 export const secondaryResourceData: Record<string, any>;
 export const secondaryArticleCopy: Record<string, Record<string, any>>;
 export function buildSecondaryArticleSeo(locale: string, kind: string): any;
+
+export function generatedArticleImage(locale: string, kind: string, title: string): { src: string; alt: string; width: number; height: number; caption: string } | null;
