@@ -2115,6 +2115,108 @@ const agmPastingPaperEnergyValidationSeo = {
   zh: { path: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 玻纤涂板纸能省多少烘干能耗？验证条件与对照方法 | 湖北维京AGM", description: "公开供应商资料提出降低窑温或停窑主张但未给量化数据；本文说明 AGM 玻纤涂板纸同线能耗、含水、极板质量和整电池验证方法。", keywords: ["AGM 玻纤涂板纸", "铅酸电池涂板纸节能", "涂板纸干燥窑温度", "玻纤涂板纸替代植物纤维", "AGM 涂板工艺验证"], pageName: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", articleDescription: "以公开产品资料中的供应商主张为边界，说明 AGM 玻纤涂板纸节能主张需要怎样做同线对照。", breadcrumbs: ["首页", "资料", "AGM 玻纤涂板纸节能验证"] }
 } as const;
 
+const earlyLeadAcidElectrodeFormationSeo = {
+  "en": {
+    "path": "/blog/early-lead-acid-battery-electrode-formation/",
+    "alternatePath": "/zh/blog/early-lead-acid-battery-electrode-formation/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Rechargeable Was Only the Beginning: Why Early Lead–Acid Batteries Took So Long to Make | Viking AGM",
+    "description": "From Planté formation cycles to Faure pasted plates, electrode manufacturing required more than rechargeability. Modern glass-fiber structures also need clear functional boundaries and validation.",
+    "keywords": [
+      "Rechargeable Was Only the Beginning: Why Early Lead–Acid Batteries Took So Long to Make",
+      "AGM",
+      "Planté",
+      "Faure",
+      "GEM"
+    ],
+    "pageName": "Rechargeable Was Only the Beginning: Why Early Lead–Acid Batteries Took So Long to Make",
+    "articleDescription": "From Planté formation cycles to Faure pasted plates, electrode manufacturing required more than rechargeability. Modern glass-fiber structures also need clear functional boundaries and validation.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Rechargeable Was Only the Beginning: Why Early Lead–Acid Batteries Took So Long to Make"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  },
+  "zh": {
+    "path": "/zh/blog/early-lead-acid-battery-electrode-formation/",
+    "alternatePath": "/blog/early-lead-acid-battery-electrode-formation/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "能充电只是起点：早期铅酸电池为什么制造缓慢？ | Viking AGM",
+    "description": "从 Planté 反复化成到 Faure 涂膏极板，电极制造的难点不止于可充电。理解现代玻纤结构，也要先区分材料位置、支撑作用与验证条件。",
+    "keywords": [
+      "能充电只是起点：早期铅酸电池为什么制造缓慢？",
+      "AGM",
+      "Planté",
+      "Faure",
+      "GEM"
+    ],
+    "pageName": "能充电只是起点：早期铅酸电池为什么制造缓慢？",
+    "articleDescription": "从 Planté 反复化成到 Faure 涂膏极板，电极制造的难点不止于可充电。理解现代玻纤结构，也要先区分材料位置、支撑作用与验证条件。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "能充电只是起点：早期铅酸电池为什么制造缓慢？"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  }
+} as const;
+
+const agmSeparatorPressureChartsSeo = {
+  "en": {
+    "path": "/blog/reading-agm-separator-pressure-charts/",
+    "alternatePath": "/zh/blog/reading-agm-separator-pressure-charts/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Reading AGM Separator Pressure Charts: Endpoints, Guide Lines, and Measured Curves | Viking AGM",
+    "description": "Two brochure endpoints and a visual guide do not constitute a continuously measured pressure curve. Confirm the data and test conditions before comparing AGM separators.",
+    "keywords": [
+      "AGM",
+      "Reading AGM Separator Pressure Charts: Endpoints, Guide Lines, and Measured Curves",
+      "Viking AGM"
+    ],
+    "pageName": "Reading AGM Separator Pressure Charts: Endpoints, Guide Lines, and Measured Curves",
+    "articleDescription": "Two brochure endpoints and a visual guide do not constitute a continuously measured pressure curve. Confirm the data and test conditions before comparing AGM separators.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Reading AGM Separator Pressure Charts: Endpoints, Guide Lines, and Measured Curves"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  },
+  "zh": {
+    "path": "/zh/blog/reading-agm-separator-pressure-charts/",
+    "alternatePath": "/blog/reading-agm-separator-pressure-charts/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "如何读懂 AGM 隔板压力图：端点、引导线与实测曲线 | Viking AGM",
+    "description": "两个手册端点加一条视觉引导线，并不构成连续实测压力曲线。比较 AGM 隔板前，应先确认数据含义与测试条件。",
+    "keywords": [
+      "AGM",
+      "如何读懂 AGM 隔板压力图：端点、引导线与实测曲线",
+      "Viking AGM"
+    ],
+    "pageName": "如何读懂 AGM 隔板压力图：端点、引导线与实测曲线",
+    "articleDescription": "两个手册端点加一条视觉引导线，并不构成连续实测压力曲线。比较 AGM 隔板前，应先确认数据含义与测试条件。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "如何读懂 AGM 隔板压力图：端点、引导线与实测曲线"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  }
+} as const;
+
 const upsBatteryIndividualMonitoringSeo = {
   "en": {
     "path": "/blog/ups-battery-272-individual-monitors-batch-traceability/",
@@ -5375,6 +5477,40 @@ export function UpsBatteryIndividualMonitoringStructuredData({ lang }: { lang: L
     organizationData(lang, current.description),
     { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
     { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/ups-individual-monitoring-hero-1600.webp`, url, datePublished: "2026-10-18", dateModified: "2026-10-18", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["UPS battery individual monitoring", "VRLA procurement", "AGM batch traceability"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildAgmSeparatorPressureChartsMetadata(lang: Lang): Metadata {
+  const current = seoContent("agmSeparatorPressureCharts", lang, agmSeparatorPressureChartsSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmSeparatorPressureCharts"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/agm-pressure-charts-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function AgmSeparatorPressureChartsStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("agmSeparatorPressureCharts", lang, agmSeparatorPressureChartsSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/agm-pressure-charts-hero-1600.webp`, url, datePublished: "2026-10-24", dateModified: "2026-10-24", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM pressure chart interpretation", "Compression and recovery endpoints"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildEarlyLeadAcidElectrodeFormationMetadata(lang: Lang): Metadata {
+  const current = seoContent("earlyLeadAcidElectrodeFormation", lang, earlyLeadAcidElectrodeFormationSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("earlyLeadAcidElectrodeFormation"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/early-lead-acid-formation-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function EarlyLeadAcidElectrodeFormationStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("earlyLeadAcidElectrodeFormation", lang, earlyLeadAcidElectrodeFormationSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/early-lead-acid-formation-hero-1600.webp`, url, datePublished: "2026-10-24", dateModified: "2026-10-24", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Early lead-acid electrode formation", "Electrode framework and AGM separator"], inLanguage: current.language },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
 }

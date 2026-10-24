@@ -15,6 +15,8 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "earlyLeadAcidElectrodeFormation"
+  | "agmSeparatorPressureCharts"
   | "upsBatteryIndividualMonitoring"
   | "agmMaterialDataPredictiveMaintenance"
   | "sodiumIonColdStartAgmComparison"
@@ -4936,6 +4938,660 @@ const agmMaterialDataPredictiveMaintenanceCopy = {
   }
 } as const;
 
+const earlyLeadAcidElectrodeFormationCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/early-lead-acid-battery-electrode-formation/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Planté demonstrated storage, but formation was slow",
+      "title": "Rechargeable Was Only the Beginning: Why Early Lead–Acid Batteries Took So Long to Make",
+      "subtitle": "From Planté formation cycles to Faure pasted plates, electrode manufacturing required more than rechargeability. Modern glass-fiber structures also need clear functional boundaries and validation.",
+      "primary": "Ask for AGM Separator Guide",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/early-lead-acid-formation-hero-1600.webp",
+        "alt": "AI-generated illustration: Rechargeable Was Only the Beginning: Why Early Lead–Acid Batteries Took So Long to Make",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "From Planté formation cycles to Faure pasted plates, electrode manufacturing required more than rechargeability. Modern glass-fiber structures also need clear functional boundaries and validation."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Planté demonstrated storage, but formation was slow",
+        "title": "Planté demonstrated storage, but formation was slow",
+        "text": "The Science Museum Group holds a Planté battery from about 1860 with 20 cells switchable between series and parallel for experimental and laboratory use. Early Planté plates needed repeated charging and discharging to develop active surface material. Rechargeability had been demonstrated; producing practical electrodes efficiently remained a manufacturing challenge."
+      },
+      {
+        "eyebrow": "Faure put convertible material on the plate first",
+        "title": "Faure put convertible material on the plate first",
+        "text": "Nature reported on 19 May 1881 that Camille Faure coated lead sheets with red lead, Pb₃O₄, before electrical conversion. Two coated sheets were rolled with felt between them in dilute acid. Charging converted the coatings toward metallic lead at one electrode and lead dioxide at the other. This changed the formation route; electrical treatment was still required. The historical account is not a modern production specification."
+      },
+      {
+        "eyebrow": "A promising structure still needed measurements",
+        "title": "A promising structure still needed measurements",
+        "text": "In Nature on 16 June 1881, William Thomson said his measurements of charge and discharge energy losses were not yet complete and discussed the influence of operating rates. A new construction can offer a useful manufacturing route, but performance still needs measurements under defined conditions. His account does not establish modern efficiency or test limits."
+      },
+      {
+        "eyebrow": "GEM places glass fiber inside the negative electrode",
+        "title": "GEM places glass fiber inside the negative electrode",
+        "text": "ArcActive states that it jointly developed Glass Electrode Material (GEM) with H&V in 2024. Developer descriptions place a three-dimensional glass-fiber framework throughout the negative active material, replacing the conventional lead grid and supporting that material. Structural and performance statements belong to the developers and require review against the conditions of specific tests."
+      },
+      {
+        "eyebrow": "An electrode framework is different from an AGM separator",
+        "title": "An electrode framework is different from an AGM separator",
+        "text": "GEM is described as part of the negative electrode. An AGM separator sits between positive and negative plates, separating electrodes, retaining electrolyte and providing an ion-conduction path. The felt between Faure’s early rolled plates should not be called modern AGM. Faure and GEM illustrate related questions about material placement and support; the sources do not establish direct technical inheritance."
+      },
+      {
+        "eyebrow": "Define the structure before choosing validation",
+        "title": "Define the structure before choosing validation",
+        "text": "For an AGM discussion, identify battery design, separator position, target thickness, dimensions, sample state and compression or electrolyte conditions. Separate material measurements from complete-battery validation. Viking did not participate in GEM development or supply and has not independently verified its stated performance. No developer claim is presented as a Viking specification or guarantee."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Define the structure before choosing validation",
+      "text": "Share your battery design, separator dimensions and intended test conditions to discuss AGM structure evaluation and a sample specification match.",
+      "items": [
+        "Battery design and material position",
+        "Separator thickness, width and roll or sheet dimensions",
+        "Sample state, pressure and electrolyte conditions",
+        "Material tests and complete-battery validation"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "How China’s Earliest Lead-Acid Batteries Were Made",
+          "/blog/how-chinas-earliest-lead-acid-batteries-were-made/"
+        ],
+        [
+          "The Battery’s ‘Third Pole’: What an AGM Separator Actually Does",
+          "/blog/agm-separator-third-pole-explained/"
+        ],
+        [
+          "What Is AGM Separator?",
+          "/blog/what-is-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Share your battery design, separator dimensions and intended test conditions to discuss AGM structure evaluation and a sample specification match.",
+      "checklist": [
+        "Battery design and material position",
+        "Separator thickness, width and roll or sheet dimensions",
+        "Sample state, pressure and electrolyte conditions",
+        "Material tests and complete-battery validation"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Share your battery design, separator dimensions and intended test conditions to discuss AGM structure evaluation and a sample specification match."
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Define the structure before choosing validation",
+      "text": "Sources reviewed on 24 October 2026: museum collection record, public Nature accounts dated 19 May and 16 June 1881, and ArcActive/H&V developer materials. The illustration is conceptual, not a historical photograph, a product reconstruction or test evidence.",
+      "items": [
+        [
+          "Science Museum Group — Planté, c. 1860",
+          "https://collection.sciencemuseumgroup.org.uk/objects/co36401/one-of-the-first-rechargeable-batteries-about-1860-lead-acid-rechargeable-batteries"
+        ],
+        [
+          "Nature — 1881-05-19",
+          "https://www.nature.com/articles/024068b0"
+        ],
+        [
+          "Nature — William Thomson, 1881-06-16",
+          "https://www.nature.com/articles/024137a0"
+        ],
+        [
+          "ArcActive — GEM",
+          "https://www.arcactive.com/technology"
+        ],
+        [
+          "H&V — GEM",
+          "https://www.hollingsworth-vose.com/industries/gem-lead-acid-battery-plate-alternative/"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/early-lead-acid-battery-electrode-formation/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "Planté 证明可储电，极板化成仍缓慢",
+      "title": "能充电只是起点：早期铅酸电池为什么制造缓慢？",
+      "subtitle": "从 Planté 反复化成到 Faure 涂膏极板，电极制造的难点不止于可充电。理解现代玻纤结构，也要先区分材料位置、支撑作用与验证条件。",
+      "primary": "索取 AGM 隔板指南",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/early-lead-acid-formation-hero-1600.webp",
+        "alt": "AI 示意图: 能充电只是起点：早期铅酸电池为什么制造缓慢？",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "从 Planté 反复化成到 Faure 涂膏极板，电极制造的难点不止于可充电。理解现代玻纤结构，也要先区分材料位置、支撑作用与验证条件。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "Planté 证明可储电，极板化成仍缓慢",
+        "title": "Planté 证明可储电，极板化成仍缓慢",
+        "text": "英国科学博物馆集团收藏一套约 1860 年的 Planté 电池，由 20 个单体组成，可切换串联或并联，用于实验与实验室工作。早期 Planté 极板需要反复充放电，逐渐形成表面活性材料。可充电已被证明，如何高效制成实用电极仍是制造难题。"
+      },
+      {
+        "eyebrow": "Faure 先把可转化材料放到极板上",
+        "title": "Faure 先把可转化材料放到极板上",
+        "text": "1881 年 5 月 19 日《Nature》报道，Camille Faure 在铅片表面涂覆红丹（Pb₃O₄），再进行电化学转化。两片涂覆铅片以毛毡隔开卷成螺旋，浸入稀酸。充电使两侧涂层分别向金属铅和二氧化铅转化。这改变了化成路径，但仍需电处理；不能把这份历史记录当作现代生产规范。"
+      },
+      {
+        "eyebrow": "新结构仍需测量来验证",
+        "title": "新结构仍需测量来验证",
+        "text": "William Thomson 在 1881 年 6 月 16 日《Nature》中指出，确定充放电能量损失所需的完整测量尚未完成，并讨论运行速率的影响。新结构可以带来有价值的制造路线，但性能仍需在明确条件下测量。这段历史描述不能作为现代效率指标或试验限值。"
+      },
+      {
+        "eyebrow": "GEM 把玻纤放入负极活性材料内部",
+        "title": "GEM 把玻纤放入负极活性材料内部",
+        "text": "ArcActive 表示，其与 H&V 于 2024 年共同开发玻璃电极材料 GEM。开发方将其描述为贯穿负极活性材料的三维玻纤骨架，用于替代传统铅栅并支撑负极材料。结构与性能说法归属于开发方，需要结合具体试验条件审阅。"
+      },
+      {
+        "eyebrow": "电极骨架与 AGM 隔板位置不同",
+        "title": "电极骨架与 AGM 隔板位置不同",
+        "text": "GEM 被描述为负极结构的一部分；AGM 隔板则位于正负极板之间，承担电极隔离、保持电解液和提供离子传导通路的作用。Faure 早期卷绕极板间的毛毡不能称为现代 AGM。两种方案体现了不同时期对材料布置与支撑的思考，现有来源不能证明直接技术传承。"
+      },
+      {
+        "eyebrow": "先明确结构，再确定验证条件",
+        "title": "先明确结构，再确定验证条件",
+        "text": "讨论 AGM 时，先确认电池设计、隔板位置、目标厚度与尺寸、样品状态，以及压力或电解液条件，区分材料检测与整电池验证。维京未参与 GEM 开发或供应，也未独立验证其所述性能。本文不将开发方说法作为维京规格或性能保证。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "先明确结构，再确定验证条件",
+      "text": "请提供电池设计、隔板尺寸与拟定测试条件，沟通 AGM 结构评价及样品规格匹配。",
+      "items": [
+        "电池设计与材料所在位置",
+        "隔板厚度、宽度及卷材或片材尺寸",
+        "样品状态、压力与电解液条件",
+        "材料检测与整电池验证安排"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "中国早期铅酸蓄电池是怎样制造的？",
+          "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/"
+        ],
+        [
+          "电池的“第三极”没有端子：AGM 隔板到底在做什么？",
+          "/zh/blog/agm-separator-third-pole-explained/"
+        ],
+        [
+          "什么是 AGM 隔板？",
+          "/zh/blog/what-is-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供电池设计、隔板尺寸与拟定测试条件，沟通 AGM 结构评价及样品规格匹配。",
+      "checklist": [
+        "电池设计与材料所在位置",
+        "隔板厚度、宽度及卷材或片材尺寸",
+        "样品状态、压力与电解液条件",
+        "材料检测与整电池验证安排"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "请提供电池设计、隔板尺寸与拟定测试条件，沟通 AGM 结构评价及样品规格匹配。"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "先明确结构，再确定验证条件",
+      "text": "2026 年 10 月 24 日核对博物馆藏品记录、1881 年 5 月 19 日及 6 月 16 日《Nature》公开报道，以及 ArcActive/H&V 开发方资料。配图为概念示意，不是历史照片、产品复原或测试证据。",
+      "items": [
+        [
+          "Science Museum Group — Planté, c. 1860",
+          "https://collection.sciencemuseumgroup.org.uk/objects/co36401/one-of-the-first-rechargeable-batteries-about-1860-lead-acid-rechargeable-batteries"
+        ],
+        [
+          "Nature — 1881-05-19",
+          "https://www.nature.com/articles/024068b0"
+        ],
+        [
+          "Nature — William Thomson, 1881-06-16",
+          "https://www.nature.com/articles/024137a0"
+        ],
+        [
+          "ArcActive — GEM",
+          "https://www.arcactive.com/technology"
+        ],
+        [
+          "H&V — GEM",
+          "https://www.hollingsworth-vose.com/industries/gem-lead-acid-battery-plate-alternative/"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const agmSeparatorPressureChartsCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/reading-agm-separator-pressure-charts/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Identify the plotted data",
+      "title": "Reading AGM Separator Pressure Charts: Endpoints, Guide Lines, and Measured Curves",
+      "subtitle": "Two brochure endpoints and a visual guide do not constitute a continuously measured pressure curve. Confirm the data and test conditions before comparing AGM separators.",
+      "primary": "Ask for AGM Separator Guide",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/agm-pressure-charts-hero-1600.webp",
+        "alt": "AI-generated illustration: Reading AGM Separator Pressure Charts: Endpoints, Guide Lines, and Measured Curves",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Two brochure endpoints and a visual guide do not constitute a continuously measured pressure curve. Confirm the data and test conditions before comparing AGM separators."
+    ],
+    "sections": [
+      {
+        "eyebrow": "01",
+        "title": "Identify the plotted data",
+        "text": "The AlphaBeta automotive start-stop AGM separator product page presents brochure nominal values alongside design values. Its compression and recovery chart displays approximate values read from the printed brochure at 10 kPa and 100 kPa."
+      },
+      {
+        "eyebrow": "02",
+        "title": "Read the connecting line correctly",
+        "text": "The straight line between the two displayed points is a visual guide. It does not represent measurements at intermediate pressures. Review endpoint charts separately from continuous measurement records."
+      },
+      {
+        "eyebrow": "03",
+        "title": "Do not interpolate performance",
+        "text": "The two endpoints alone cannot establish thickness or recovery at intermediate pressures, reconstruct complete loading and unloading curves, or predict full-battery service life through two-point interpolation."
+      },
+      {
+        "eyebrow": "04",
+        "title": "Keep endpoints separate from assembly requirements",
+        "text": "The 10 kPa and 100 kPa values are endpoints on this specific product page, not universal assembly-pressure standards. No intermediate measurement points are listed; this does not establish whether the company has performed other internal tests."
+      },
+      {
+        "eyebrow": "05",
+        "title": "Agree the comparison conditions",
+        "text": "First specify the target assembly pressure. Then confirm sample condition, loading or unloading process, measurement-point arrangement and repeat-measurement conditions. This is guidance for technical communication, not a uniform industry test standard; agree conditions for the sample and project."
+      },
+      {
+        "eyebrow": "06",
+        "title": "Keep the source in context",
+        "text": "The parameters and chart description come from a corporate product page and information attributed there to its printed brochure. They are not an independent test report or a new-product announcement published this week. They are not Viking specifications or guaranteed performance."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Agree the comparison conditions",
+      "text": "First specify the target assembly pressure. Then confirm sample condition, loading or unloading process, measurement-point arrangement and repeat-measurement conditions. This is guidance for technical communication, not a uniform industry test standard; agree conditions for the sample and project.",
+      "items": [
+        "Target assembly pressure",
+        "Sample condition and preparation",
+        "Loading or unloading process",
+        "Measurement points and repeat conditions"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+          "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Submit your target assembly pressure, separator dimensions and sample condition to discuss corresponding test conditions and a sample specification match.",
+      "checklist": [
+        "Target assembly pressure",
+        "Sample condition and preparation",
+        "Loading or unloading process",
+        "Measurement points and repeat conditions"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Submit your target assembly pressure, separator dimensions and sample condition to discuss corresponding test conditions and a sample specification match."
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Keep the source in context",
+      "text": "Corporate product page reviewed on 24 October 2026; brochure attribution follows that page. The original printed brochure was not independently reviewed. No intermediate test data or battery-life conclusion is inferred.",
+      "items": [
+        [
+          "AlphaBeta — Identify the plotted data",
+          "https://agm-alphabeta.com/zh/products/start-stop/"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/reading-agm-separator-pressure-charts/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "先确认图中数据是什么",
+      "title": "如何读懂 AGM 隔板压力图：端点、引导线与实测曲线",
+      "subtitle": "两个手册端点加一条视觉引导线，并不构成连续实测压力曲线。比较 AGM 隔板前，应先确认数据含义与测试条件。",
+      "primary": "索取 AGM 隔板指南",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/agm-pressure-charts-hero-1600.webp",
+        "alt": "AI 示意图: 如何读懂 AGM 隔板压力图：端点、引导线与实测曲线",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "两个手册端点加一条视觉引导线，并不构成连续实测压力曲线。比较 AGM 隔板前，应先确认数据含义与测试条件。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "01",
+        "title": "先确认图中数据是什么",
+        "text": "AlphaBeta 汽车启停 AGM 隔板产品页并列展示手册标称值与设计值。其压缩与回弹图展示从印刷版产品手册读取的 10 kPa 和 100 kPa 两个压力端点的近似值。"
+      },
+      {
+        "eyebrow": "02",
+        "title": "正确理解端点之间的连线",
+        "text": "两端点之间的直线仅作视觉引导，不代表中间压力下的实测数据。阅读时，应将端点图与连续测量记录分别审阅。"
+      },
+      {
+        "eyebrow": "03",
+        "title": "不要用两点插值推断性能",
+        "text": "仅凭这两个端点，不能确定中间压力下的厚度或回弹表现，不能重建完整加载与卸载曲线，也不能通过两点插值预测整电池使用寿命。"
+      },
+      {
+        "eyebrow": "04",
+        "title": "端点不等于通用装配要求",
+        "text": "10 kPa 与 100 kPa 是这一具体产品页展示的端点，不是通用装配压力标准。页面未列出中间测量点，也不能据此判断该企业是否开展过其他内部测试。"
+      },
+      {
+        "eyebrow": "05",
+        "title": "先约定压力性能比较条件",
+        "text": "技术沟通时，先明确目标装配压力，再确认样品状态、加载或卸载过程、测点安排及重复测量条件。这是图表解读与沟通建议，不是统一行业试验标准；测试条件应根据样品与双方约定确认。"
+      },
+      {
+        "eyebrow": "06",
+        "title": "把来源与证据边界说清楚",
+        "text": "参数与图表说明来自企业产品页及该页归因于印刷版产品手册的信息，不是独立测试报告，也不是本周发布的新品公告。这些信息不属于维京产品规格或性能保证。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "先约定压力性能比较条件",
+      "text": "技术沟通时，先明确目标装配压力，再确认样品状态、加载或卸载过程、测点安排及重复测量条件。这是图表解读与沟通建议，不是统一行业试验标准；测试条件应根据样品与双方约定确认。",
+      "items": [
+        "目标装配压力",
+        "样品状态与准备方式",
+        "加载或卸载过程",
+        "测点安排与重复测量条件"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "隔板装进去没问题，循环以后还能保持压力吗？",
+          "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提交目标装配压力、隔板尺寸与样品状态，沟通对应测试条件及样品规格匹配。",
+      "checklist": [
+        "目标装配压力",
+        "样品状态与准备方式",
+        "加载或卸载过程",
+        "测点安排与重复测量条件"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "请提交目标装配压力、隔板尺寸与样品状态，沟通对应测试条件及样品规格匹配。"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "把来源与证据边界说清楚",
+      "text": "2026 年 10 月 24 日核对企业产品页；手册归因沿用该页说明，未独立核阅印刷版原件。不据此推断中间压力数据或电池寿命。",
+      "items": [
+        [
+          "AlphaBeta — 先确认图中数据是什么",
+          "https://agm-alphabeta.com/zh/products/start-stop/"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const upsBatteryIndividualMonitoringCopy = {
   en: {
     ...agmMaterialDataPredictiveMaintenanceCopy.en,
@@ -5273,7 +5929,11 @@ export function BlogArticlePage({
       ? null
       : secondaryArticleCopy[lang][page];
   const defaultArticle: any = secondaryArticle ?? (
-    page === "upsBatteryIndividualMonitoring"
+    page === "earlyLeadAcidElectrodeFormation"
+      ? earlyLeadAcidElectrodeFormationCopy[primaryLang]
+      : page === "agmSeparatorPressureCharts"
+      ? agmSeparatorPressureChartsCopy[primaryLang]
+      : page === "upsBatteryIndividualMonitoring"
       ? upsBatteryIndividualMonitoringCopy[primaryLang]
       : page === "agmMaterialDataPredictiveMaintenance"
       ? agmMaterialDataPredictiveMaintenanceCopy[primaryLang]

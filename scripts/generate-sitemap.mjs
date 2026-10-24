@@ -4,6 +4,8 @@ import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../c
 
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
+  { en: "/blog/early-lead-acid-battery-electrode-formation/", zh: "/zh/blog/early-lead-acid-battery-electrode-formation/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
+  { en: "/blog/reading-agm-separator-pressure-charts/", zh: "/zh/blog/reading-agm-separator-pressure-charts/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
   { en: "/blog/ups-battery-272-individual-monitors-batch-traceability/", zh: "/zh/blog/ups-battery-272-individual-monitors-batch-traceability/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-18", secondaryLastmod: "2026-10-18", arabicLastmod: "2026-10-18" },
   { en: "/blog/agm-material-data-battery-soh-predictive-maintenance/", zh: "/zh/blog/agm-material-data-battery-soh-predictive-maintenance/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-18", secondaryLastmod: "2026-10-18", arabicLastmod: "2026-10-18" },
   { en: "/blog/sodium-ion-minus-40-cold-start-agm-comparison/", zh: "/zh/blog/sodium-ion-minus-40-cold-start-agm-comparison/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-18", secondaryLastmod: "2026-10-18", arabicLastmod: "2026-10-18" },

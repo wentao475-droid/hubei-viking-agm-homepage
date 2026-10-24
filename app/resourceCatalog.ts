@@ -113,6 +113,40 @@ export const resourceActions: ResourceAction[] = [
 ];
 
 export const resourceArticles: ResourceArticle[] = [
+{
+  "id": "early-lead-acid-battery-electrode-formation",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-10-24",
+  "title": {
+    "en": "Rechargeable Was Only the Beginning: Why Early Lead–Acid Batteries Took So Long to Make",
+    "zh": "能充电只是起点：早期铅酸电池为什么制造缓慢？"
+  },
+  "description": {
+    "en": "From Planté formation cycles to Faure pasted plates, electrode manufacturing required more than rechargeability. Modern glass-fiber structures also need clear functional boundaries and validation.",
+    "zh": "从 Planté 反复化成到 Faure 涂膏极板，电极制造的难点不止于可充电。理解现代玻纤结构，也要先区分材料位置、支撑作用与验证条件。"
+  },
+  "href": {
+    "en": "/blog/early-lead-acid-battery-electrode-formation/",
+    "zh": "/zh/blog/early-lead-acid-battery-electrode-formation/"
+  }
+},
+{
+  "id": "reading-agm-separator-pressure-charts",
+  "category": "buyerGuides",
+  "publishedAt": "2026-10-24",
+  "title": {
+    "en": "Reading AGM Separator Pressure Charts: Endpoints, Guide Lines, and Measured Curves",
+    "zh": "如何读懂 AGM 隔板压力图：端点、引导线与实测曲线"
+  },
+  "description": {
+    "en": "Two brochure endpoints and a visual guide do not constitute a continuously measured pressure curve. Confirm the data and test conditions before comparing AGM separators.",
+    "zh": "两个手册端点加一条视觉引导线，并不构成连续实测压力曲线。比较 AGM 隔板前，应先确认数据含义与测试条件。"
+  },
+  "href": {
+    "en": "/blog/reading-agm-separator-pressure-charts/",
+    "zh": "/zh/blog/reading-agm-separator-pressure-charts/"
+  }
+},
   {
     id: "what-is-agm-separator",
     category: "buyerGuides",
@@ -541,6 +575,8 @@ export const resourceArticles: ResourceArticle[] = [
 ];
 
 const articleKindById: Record<string, string> = {
+  "early-lead-acid-battery-electrode-formation": "earlyLeadAcidElectrodeFormation",
+  "reading-agm-separator-pressure-charts": "agmSeparatorPressureCharts",
   "ups-battery-272-individual-monitors-batch-traceability": "upsBatteryIndividualMonitoring",
   "agm-material-data-battery-soh-predictive-maintenance": "agmMaterialDataPredictiveMaintenance",
   "sodium-ion-minus-40-cold-start-agm-comparison": "sodiumIonColdStartAgmComparison",

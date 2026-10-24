@@ -6,12 +6,16 @@ import { agmSafetyTestTopics } from "./agm-safety-test-topics.mjs";
 
 export const secondaryResourceLocales = ["vi", "ko", "ja", "es", "pt", "ru", "ar"];
 
+import { earlyLeadAcidFormationTopics } from "./early-lead-acid-formation-topics.mjs";
+import { agmPressureChartTopics } from "./agm-pressure-chart-topics.mjs";
 import { upsBatteryMonitoringTopics } from "./ups-battery-monitoring-topics.mjs";
 import { agmSohMaterialDataTopics } from "./agm-soh-material-data-topics.mjs";
 import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
+  "earlyLeadAcidElectrodeFormation",
+  "agmSeparatorPressureCharts",
   "whatIsAgmSeparator",
   "keyTechnicalParameters",
   "howToChooseAgmSeparator",
@@ -65,9 +69,13 @@ export const articleDefinitions = {
   ,sodiumIonColdStartAgmComparison: ["sodium-ion-minus-40-cold-start-agm-comparison", "industryApplications", "2026-10-18", "2026-10-18"]
   ,agmMaterialDataPredictiveMaintenance: ["agm-material-data-battery-soh-predictive-maintenance", "manufacturingQuality", "2026-10-18", "2026-10-18"]
   ,upsBatteryIndividualMonitoring: ["ups-battery-272-individual-monitors-batch-traceability", "industryApplications", "2026-10-18", "2026-10-18"]
+  ,agmSeparatorPressureCharts: ["reading-agm-separator-pressure-charts", "buyerGuides", "2026-10-24", "2026-10-24"]
+  ,earlyLeadAcidElectrodeFormation: ["early-lead-acid-battery-electrode-formation", "manufacturingQuality", "2026-10-24", "2026-10-24"]
 };
 
 const images = {
+  earlyLeadAcidElectrodeFormation: ["/images/articles/early-lead-acid-formation-hero-1600.webp", 1600, 1200],
+  agmSeparatorPressureCharts: ["/images/articles/agm-pressure-charts-hero-1600.webp", 1600, 1200],
   upsBatteryIndividualMonitoring: ["/images/evidence/viking-agm-material-thickness-inspection-1600.webp", 1600, 900],
   agmMaterialDataPredictiveMaintenance: ["/images/agm-quality-control-1200.webp", 1200, 900],
   sodiumIonColdStartAgmComparison: ["/images/agm-quality-control-1200.webp", 1200, 900],
@@ -1150,6 +1158,14 @@ for (const [locale, topic] of Object.entries(upsBatteryMonitoringTopics)) {
   secondaryResourceData[locale].topics.upsBatteryIndividualMonitoring = topic;
 }
 
+for (const [locale, topic] of Object.entries(agmPressureChartTopics)) {
+  secondaryResourceData[locale].topics.agmSeparatorPressureCharts = topic;
+}
+
+for (const [locale, topic] of Object.entries(earlyLeadAcidFormationTopics)) {
+  secondaryResourceData[locale].topics.earlyLeadAcidElectrodeFormation = topic;
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1193,6 +1209,8 @@ const arabicReferences = {
 
 
 const generatedArticleVisuals = {
+  "earlyLeadAcidElectrodeFormation": "/images/articles/early-lead-acid-formation-hero-1600.webp",
+  "agmSeparatorPressureCharts": "/images/articles/agm-pressure-charts-hero-1600.webp",
   "batteryTechnologyProjectComparison": "/images/articles/battery-duty-comparison-hero-1600.webp",
   "sodiumIonColdStartAgmComparison": "/images/articles/sodium-cold-start-hero-1600.webp",
   "agmMaterialDataPredictiveMaintenance": "/images/articles/agm-soh-evidence-chain-hero-1600.webp",
@@ -1228,7 +1246,11 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "upsBatteryIndividualMonitoring"
+  const relatedKinds = kind === "earlyLeadAcidElectrodeFormation"
+    ? ["earlyChinaLeadAcidBatteryManufacturing", "agmSeparatorThirdPole", "whatIsAgmSeparator", "agmSeparatorPressureRetention"]
+    : kind === "agmSeparatorPressureCharts"
+    ? ["agmSeparatorPressureRetention", "keyTechnicalParameters", "agmSeparatorBatchProcessControl", "agmStartStopBatteryProcurement"]
+    : kind === "upsBatteryIndividualMonitoring"
     ? ["upsVrlaTechnologySelection", "agmMaterialDataPredictiveMaintenance", "agmSeparatorBatchProcessControl", "dataCenterBackupPowerAgmSeparator"]
     : kind === "agmMaterialDataPredictiveMaintenance"
     ? ["agmSeparatorBatchProcessControl", "agmSeparatorPressureRetention", "agmStartStopBatteryProcurement", "keyTechnicalParameters"]
@@ -1297,6 +1319,35 @@ function buildArticle(locale, kind, localeData) {
     },
     footer: { description: common.footer, wechat: common.wechat, mobile: common.mobile }
   };
+
+  if (kind === "earlyLeadAcidElectrodeFormation") {
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[5][1], text: topic.referenceNote, items: [
+  [
+    "Science Museum Group — Planté, c. 1860",
+    "https://collection.sciencemuseumgroup.org.uk/objects/co36401/one-of-the-first-rechargeable-batteries-about-1860-lead-acid-rechargeable-batteries"
+  ],
+  [
+    "Nature — 1881-05-19",
+    "https://www.nature.com/articles/024068b0"
+  ],
+  [
+    "Nature — William Thomson, 1881-06-16",
+    "https://www.nature.com/articles/024137a0"
+  ],
+  [
+    "ArcActive — GEM",
+    "https://www.arcactive.com/technology"
+  ],
+  [
+    "H&V — GEM",
+    "https://www.hollingsworth-vose.com/industries/gem-lead-acid-battery-plate-alternative/"
+  ]
+] };
+  }
+
+  if (kind === "agmSeparatorPressureCharts") {
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[5][1], text: topic.referenceNote, items: [["AlphaBeta — " + topic.sections[0][1], "https://agm-alphabeta.com/zh/products/start-stop/"]] };
+  }
 
   if (kind === "upsBatteryIndividualMonitoring") {
     result.hero.image.alt = topic.imageAlt;
