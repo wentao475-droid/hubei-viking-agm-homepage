@@ -2,7 +2,7 @@ export const earlyLeadAcidFormationTopics = {
   "vi": {
     "title": "Sạc lại mới là khởi đầu: vì sao ắc quy chì–axit ban đầu mất nhiều thời gian chế tạo?",
     "summary": "Từ chu kỳ tạo thành Planté đến bản cực trát hồ Faure, chế tạo điện cực cần hơn khả năng sạc lại. Cấu trúc sợi thủy tinh hiện đại cũng cần phân biệt chức năng và điều kiện xác nhận.",
-    "intro": "Từ chu kỳ tạo thành Planté đến bản cực trát hồ Faure, chế tạo điện cực cần hơn khả năng sạc lại. Cấu trúc sợi thủy tinh hiện đại cũng cần phân biệt chức năng và điều kiện xác nhận.",
+    "intro": "Science Museum Group lưu giữ bộ ắc quy Planté khoảng năm 1860 gồm 20 ngăn, chuyển nối tiếp hoặc song song cho thí nghiệm. Bản cực Planté ban đầu cần nạp xả lặp để tạo vật liệu hoạt tính bề mặt. Khả năng sạc lại đã có; chế tạo điện cực hiệu quả vẫn khó.",
     "sections": [
       [
         "Planté chứng minh tích điện, nhưng tạo thành chậm",
@@ -51,7 +51,7 @@ export const earlyLeadAcidFormationTopics = {
   "ko": {
     "title": "충전은 시작일 뿐: 초기 납축전지는 왜 제조에 오래 걸렸을까?",
     "summary": "Planté의 반복 화성부터 Faure 도포식 극판까지, 전극 제조에는 충전 가능성 이상의 과제가 있었습니다. 현대 유리섬유 구조도 기능과 검증 조건을 구분해야 합니다.",
-    "intro": "Planté의 반복 화성부터 Faure 도포식 극판까지, 전극 제조에는 충전 가능성 이상의 과제가 있었습니다. 현대 유리섬유 구조도 기능과 검증 조건을 구분해야 합니다.",
+    "intro": "Science Museum Group은 약 1860년의 Planté 전지를 소장하며, 실험용 20개 셀을 직렬 또는 병렬로 연결할 수 있다고 설명합니다. 초기 극판은 반복 충방전으로 표면 활물질을 형성해야 했습니다. 충전 가능성을 보인 뒤에도 효율적인 전극 제조는 과제로 남았습니다.",
     "sections": [
       [
         "Planté의 저장과 느린 화성",
@@ -100,7 +100,7 @@ export const earlyLeadAcidFormationTopics = {
   "ja": {
     "title": "充電できるだけでは足りない：初期の鉛蓄電池はなぜ製造に時間がかかったのか",
     "summary": "Planté の反復化成から Faure の塗布式極板へ。電極製造には充電可能性以上の課題があり、現代のガラス繊維構造も役割と検証条件の区別が必要です。",
-    "intro": "Planté の反復化成から Faure の塗布式極板へ。電極製造には充電可能性以上の課題があり、現代のガラス繊維構造も役割と検証条件の区別が必要です。",
+    "intro": "Science Museum Group は約 1860 年の Planté 電池を所蔵し、実験用の 20 セルを直列・並列に切替可能と説明しています。初期極板は反復充放電で表面活物質を形成しました。再充電を実証しても、効率的な電極製造は課題でした。",
     "sections": [
       [
         "Planté は蓄電を示したが化成は遅かった",
@@ -149,7 +149,7 @@ export const earlyLeadAcidFormationTopics = {
   "es": {
     "title": "Recargar fue solo el comienzo: por qué fabricar las primeras baterías de plomo–ácido llevaba tanto tiempo",
     "summary": "De los ciclos de formación de Planté a las placas empastadas de Faure, fabricar electrodos exigía más que recarga. Las estructuras modernas también requieren distinguir funciones y validación.",
-    "intro": "De los ciclos de formación de Planté a las placas empastadas de Faure, fabricar electrodos exigía más que recarga. Las estructuras modernas también requieren distinguir funciones y validación.",
+    "intro": "Science Museum Group conserva una batería Planté de alrededor de 1860 con 20 celdas conmutables entre serie y paralelo para laboratorio. Las primeras placas requerían cargas y descargas repetidas para formar material activo superficial. La recarga estaba demostrada; producir electrodos con eficiencia seguía siendo difícil.",
     "sections": [
       [
         "Planté demostró almacenamiento, pero la formación era lenta",
@@ -198,7 +198,7 @@ export const earlyLeadAcidFormationTopics = {
   "pt": {
     "title": "Recarregar era só o começo: por que as primeiras baterias de chumbo–ácido demoravam tanto para fabricar",
     "summary": "Dos ciclos de formação de Planté às placas empastadas de Faure, fabricar eletrodos exigia mais que recarga. Estruturas modernas também precisam de funções e validação bem definidas.",
-    "intro": "Dos ciclos de formação de Planté às placas empastadas de Faure, fabricar eletrodos exigia mais que recarga. Estruturas modernas também precisam de funções e validação bem definidas.",
+    "intro": "O Science Museum Group preserva uma bateria Planté de cerca de 1860 com 20 células comutáveis entre série e paralelo para laboratório. As primeiras placas exigiam cargas e descargas repetidas para formar material ativo superficial. A recarga estava demonstrada; produzir eletrodos com eficiência ainda era difícil.",
     "sections": [
       [
         "Planté demonstrou armazenamento, mas a formação era lenta",
@@ -247,7 +247,7 @@ export const earlyLeadAcidFormationTopics = {
   "ru": {
     "title": "Перезарядка была только началом: почему первые свинцово-кислотные батареи долго изготавливали",
     "summary": "От циклов формирования Planté до намазных пластин Faure: производство электродов требовало большего, чем перезарядка. Современные структуры также требуют разграничения функций и проверки.",
-    "intro": "От циклов формирования Planté до намазных пластин Faure: производство электродов требовало большего, чем перезарядка. Современные структуры также требуют разграничения функций и проверки.",
+    "intro": "Science Museum Group хранит батарею Planté примерно 1860 года с 20 элементами, переключаемыми на последовательное или параллельное соединение для лаборатории. Ранним пластинам требовались повторные заряды и разряды для образования поверхностного активного материала. Перезарядка была показана, но эффективное изготовление электродов оставалось сложным.",
     "sections": [
       [
         "Planté показал хранение энергии, но формирование было медленным",
@@ -296,7 +296,7 @@ export const earlyLeadAcidFormationTopics = {
   "ar": {
     "title": "إعادة الشحن كانت البداية فقط: لماذا استغرق تصنيع بطاريات الرصاص–الحمض الأولى وقتاً طويلاً؟",
     "summary": "من دورات التشكيل لدى Planté إلى ألواح Faure المطلية، احتاج تصنيع الأقطاب إلى أكثر من قابلية الشحن. والهياكل الحديثة تتطلب أيضاً تمييز الوظائف وشروط التحقق.",
-    "intro": "من دورات التشكيل لدى Planté إلى ألواح Faure المطلية، احتاج تصنيع الأقطاب إلى أكثر من قابلية الشحن. والهياكل الحديثة تتطلب أيضاً تمييز الوظائف وشروط التحقق.",
+    "intro": "تحتفظ Science Museum Group ببطارية Planté تعود إلى نحو 1860 وتتكون من 20 خلية قابلة للتوصيل تسلسلياً أو توازياً للأغراض المختبرية. احتاجت الألواح الأولى إلى شحن وتفريغ متكررين لتكوين مادة فعالة سطحية. ثبتت قابلية الشحن، لكن التصنيع الفعال للأقطاب ظل تحدياً.",
     "sections": [
       [
         "أثبت Planté التخزين لكن التشكيل كان بطيئاً",

@@ -15,6 +15,10 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "leadPremiumDemandRestocking"
+  | "telecomLeadAcidProcurement"
+  | "upsOriginalManufacturerEvidence"
+  | "agmVsGemGlassFiber"
   | "earlyLeadAcidElectrodeFormation"
   | "agmSeparatorPressureCharts"
   | "upsBatteryIndividualMonitoring"
@@ -4938,6 +4942,1334 @@ const agmMaterialDataPredictiveMaintenanceCopy = {
   }
 } as const;
 
+const agmVsGemGlassFiberCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/agm-separator-vs-gem-negative-electrode/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Start with the material’s location",
+      "title": "AGM and GEM: Glass Fiber Between the Plates or Inside the Negative Electrode?",
+      "subtitle": "AGM separators and GEM use glass fiber in different locations. Compare their functions, design priorities and evidence before reviewing specifications.",
+      "primary": "Ask for AGM Separator Guide",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/agm-vs-gem-hero-1600.webp",
+        "alt": "AI-generated illustration: AGM and GEM: Glass Fiber Between the Plates or Inside the Negative Electrode?",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "An AGM separator sits between positive and negative plates. Glass Electrode Material (GEM) enters negative active material and becomes part of the negative-electrode structure. A shared raw-material family does not make their location, function or evaluation conditions the same."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Start with the material’s location",
+        "title": "Start with the material’s location",
+        "text": "An AGM separator sits between positive and negative plates. Glass Electrode Material (GEM) enters negative active material and becomes part of the negative-electrode structure. A shared raw-material family does not make their location, function or evaluation conditions the same."
+      },
+      {
+        "eyebrow": "AGM separators work between the plates",
+        "title": "AGM separators work between the plates",
+        "text": "In VRLA-AGM batteries, the separator isolates electrodes, retains electrolyte, provides an ion-transport path and participates in the internal oxygen cycle. Evaluate dimensions and basis weight together with absorption, compression, plate contact and batch stability in relation to the battery design."
+      },
+      {
+        "eyebrow": "GEM becomes part of the negative electrode",
+        "title": "GEM becomes part of the negative electrode",
+        "text": "ArcActive and H&V describe GEM as a glass-fiber-based negative-electrode material forming a three-dimensional support with negative active material, presented as an alternative to a conventional lead grid. H&V says its relatively open pores allow active material to enter. These are developer descriptions, not independently verified Viking results."
+      },
+      {
+        "eyebrow": "Similar fibers do not make materials interchangeable",
+        "title": "Similar fibers do not make materials interchangeable",
+        "text": "AGM selection follows separator position and battery architecture. GEM evaluation concerns negative-electrode design, integration with active material and manufacturing process. Neither material should be treated as a substitute for the other solely because both use glass fiber. Compare each under its corresponding structural and test conditions."
+      },
+      {
+        "eyebrow": "A reported pilot is not proof of scale",
+        "title": "A reported pilot is not proof of scale",
+        "text": "ArcActive states that it jointly developed GEM with H&V in 2024. Its undated homepage reports its first pilot-scale containerized storage system operating at Deakin University’s Waurn Ponds microgrid in Australia in collaboration with Origin Zero. This company disclosure reports a pilot; it does not establish large-scale commercialization."
+      },
+      {
+        "eyebrow": "Viking’s product boundary and your next step",
+        "title": "Viking’s product boundary and your next step",
+        "text": "Viking focuses on AGM separators and can discuss rolls, sheets and dimensional requirements. GEM is discussed only to clarify structural roles; Viking makes no GEM supply, development or performance commitment. First define the material application and battery structure, then review specification compatibility and validation conditions."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Viking’s product boundary and your next step",
+      "text": "Submit your material application, battery structure and separator dimensions to request a sample and specification match. Confirm test conditions for the intended design.",
+      "items": [
+        "Material position and intended function",
+        "VRLA-AGM battery design and application",
+        "Separator thickness, width and roll or sheet dimensions",
+        "Sample condition, compression, absorption and battery validation"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "How China’s Earliest Lead-Acid Batteries Were Made",
+          "/blog/how-chinas-earliest-lead-acid-batteries-were-made/"
+        ],
+        [
+          "The Battery’s ‘Third Pole’: What an AGM Separator Actually Does",
+          "/blog/agm-separator-third-pole-explained/"
+        ],
+        [
+          "What Is AGM Separator?",
+          "/blog/what-is-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Submit your material application, battery structure and separator dimensions to request a sample and specification match. Confirm test conditions for the intended design.",
+      "checklist": [
+        "Material position and intended function",
+        "VRLA-AGM battery design and application",
+        "Separator thickness, width and roll or sheet dimensions",
+        "Sample condition, compression, absorption and battery validation"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Submit your material application, battery structure and separator dimensions to request a sample and specification match. Confirm test conditions for the intended design."
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Viking’s product boundary and your next step",
+      "text": "Public ArcActive and H&V pages reviewed on 24 October 2026. GEM structure and performance statements belong to those publishers and have not been independently verified by Viking. The pilot webpage shows no publication date; the review date is not its announcement date. The hero is an AI concept, not product or test evidence.",
+      "items": [
+        [
+          "ArcActive — Technology",
+          "https://www.arcactive.com/technology"
+        ],
+        [
+          "ArcActive — Deakin University",
+          "https://www.arcactive.com/"
+        ],
+        [
+          "H&V — GEM",
+          "https://www.hollingsworth-vose.com/industries/gem-lead-acid-battery-plate-alternative/"
+        ]
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Similar fibers do not make materials interchangeable",
+      "title": "Similar fibers do not make materials interchangeable",
+      "columns": [
+        "Comparison",
+        "AGM",
+        "GEM"
+      ],
+      "rows": [
+        [
+          "Location",
+          "Between positive and negative plates",
+          "Inside negative active material"
+        ],
+        [
+          "Main role",
+          "Separation, electrolyte retention and ion transport",
+          "Three-dimensional support; an alternative to a lead grid"
+        ],
+        [
+          "Design focus",
+          "Separator specification, absorption, compression and battery fit",
+          "Negative-electrode integration and manufacturing process"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/agm-separator-vs-gem-negative-electrode/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "先问材料位于哪里",
+      "title": "AGM 与 GEM：玻璃纤维在极板之间，还是在负极内部？",
+      "subtitle": "AGM 隔板与 GEM 都使用玻纤，但所在位置、功能与设计逻辑不同。采购比较应先辨认结构角色，再审阅规格与验证条件。",
+      "primary": "索取 AGM 隔板指南",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/agm-vs-gem-hero-1600.webp",
+        "alt": "AI 示意图: AGM 与 GEM：玻璃纤维在极板之间，还是在负极内部？",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "AGM 隔板位于正负极板之间；玻璃电极材料 GEM 则进入负极活性材料内部，成为负极结构的一部分。原料同属玻纤，不代表位置、功能或评价条件相同。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "先问材料位于哪里",
+        "title": "先问材料位于哪里",
+        "text": "AGM 隔板位于正负极板之间；玻璃电极材料 GEM 则进入负极活性材料内部，成为负极结构的一部分。原料同属玻纤，不代表位置、功能或评价条件相同。"
+      },
+      {
+        "eyebrow": "AGM 隔板在极板之间工作",
+        "title": "AGM 隔板在极板之间工作",
+        "text": "在 VRLA-AGM 电池中，隔板承担电极隔离、保持电解液、提供离子传输通路并参与内部氧循环的作用。评价时应结合电池设计，除尺寸与定量外，还要考虑吸液、压缩、极板接触与批次稳定性。"
+      },
+      {
+        "eyebrow": "GEM 成为负极结构的一部分",
+        "title": "GEM 成为负极结构的一部分",
+        "text": "ArcActive 与 H&V 将 GEM 描述为负极用玻纤材料，可与负极活性材料形成三维支撑结构，是传统铅栅的一种替代路线。H&V 表示较开放的孔结构允许活性材料进入。这些说法归属于开发方，不是维京独立验证的结果。"
+      },
+      {
+        "eyebrow": "原料相似不代表可以互换",
+        "title": "原料相似不代表可以互换",
+        "text": "AGM 选型围绕隔板位置与电池架构；GEM 评价涉及负极设计、活性材料结合及制造流程。不能仅因二者都使用玻纤就视为可互换材料，应按各自结构与试验条件比较。"
+      },
+      {
+        "eyebrow": "试点披露不等于规模化商业化",
+        "title": "试点披露不等于规模化商业化",
+        "text": "ArcActive 表示其与 H&V 于 2024 年共同开发 GEM；其未标注发布日期的首页报告，首套试点规模集装箱储能系统通过与 Origin Zero 合作，已在澳大利亚 Deakin University 的 Waurn Ponds 微电网运行。这是企业试点披露，不能据此认定规模化商业化。"
+      },
+      {
+        "eyebrow": "维京的产品边界与下一步",
+        "title": "维京的产品边界与下一步",
+        "text": "维京专注 AGM 隔板，可沟通卷材、片材与具体尺寸需求。本文介绍 GEM 仅用于区分结构角色，不构成维京对 GEM 供应、开发或性能的承诺。应先明确材料用途和电池结构，再审阅规格适配及验证条件。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "维京的产品边界与下一步",
+      "text": "请提交材料用途、电池结构与隔板尺寸，申请样品与规格匹配，并确认对应设计的测试条件。",
+      "items": [
+        "材料位置与目标功能",
+        "VRLA-AGM 电池设计及应用",
+        "隔板厚度、宽度与卷材或片材尺寸",
+        "样品状态、压缩、吸液与整电池验证"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "中国早期铅酸蓄电池是怎样制造的？",
+          "/zh/blog/how-chinas-earliest-lead-acid-batteries-were-made/"
+        ],
+        [
+          "电池的“第三极”没有端子：AGM 隔板到底在做什么？",
+          "/zh/blog/agm-separator-third-pole-explained/"
+        ],
+        [
+          "什么是 AGM 隔板？",
+          "/zh/blog/what-is-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提交材料用途、电池结构与隔板尺寸，申请样品与规格匹配，并确认对应设计的测试条件。",
+      "checklist": [
+        "材料位置与目标功能",
+        "VRLA-AGM 电池设计及应用",
+        "隔板厚度、宽度与卷材或片材尺寸",
+        "样品状态、压缩、吸液与整电池验证"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "请提交材料用途、电池结构与隔板尺寸，申请样品与规格匹配，并确认对应设计的测试条件。"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "维京的产品边界与下一步",
+      "text": "2026 年 10 月 24 日核对 ArcActive 与 H&V 公开页面。GEM 结构与性能说法归属于发布方，维京未独立验证。试点页面未标注发布日期，查阅日不等于公告日。主图为 AI 概念示意，不是产品或测试证据。",
+      "items": [
+        [
+          "ArcActive — Technology",
+          "https://www.arcactive.com/technology"
+        ],
+        [
+          "ArcActive — Deakin University",
+          "https://www.arcactive.com/"
+        ],
+        [
+          "H&V — GEM",
+          "https://www.hollingsworth-vose.com/industries/gem-lead-acid-battery-plate-alternative/"
+        ]
+      ]
+    },
+    "comparison": {
+      "eyebrow": "原料相似不代表可以互换",
+      "title": "原料相似不代表可以互换",
+      "columns": [
+        "比较项",
+        "AGM",
+        "GEM"
+      ],
+      "rows": [
+        [
+          "所在位置",
+          "正负极板之间",
+          "负极活性材料内部"
+        ],
+        [
+          "主要作用",
+          "电极隔离、保持电解液及离子传输",
+          "三维支撑；传统铅栅的一种替代路线"
+        ],
+        [
+          "设计重点",
+          "隔板规格、吸液、压缩与电池结构适配",
+          "负极材料结合与制造流程"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const upsOriginalManufacturerEvidenceCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/ups-battery-original-manufacturer-production-address-evidence/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Read the project-specific requirement",
+      "title": "UPS Battery Procurement: Match the Production Address to Original-Manufacturer Evidence",
+      "subtitle": "A Financial News Press notice shows how producer, origin and TLC records must align in one UPS battery procurement. These conditions are project-specific, not a general OEM/ODM policy.",
+      "primary": "Ask for AGM Separator Guide",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/ups-manufacturer-evidence-hero-1600.webp",
+        "alt": "AI-generated illustration: UPS Battery Procurement: Match the Production Address to Original-Manufacturer Evidence",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Financial News Press issued a notice on 9 October 2026 for 64 units of 12V 100Ah valve-regulated sealed lead-acid batteries, including handling, installation, commissioning and old-battery removal. Item 9 requires the bidding brand’s original factory to manufacture the batteries, rejects OEM/ODM-labelled products, and calls for original-manufacturer and origin evidence matching the producer and address on the TLC certificate or test report."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Read the project-specific requirement",
+        "title": "Read the project-specific requirement",
+        "text": "Financial News Press issued a notice on 9 October 2026 for 64 units of 12V 100Ah valve-regulated sealed lead-acid batteries, including handling, installation, commissioning and old-battery removal. Item 9 requires the bidding brand’s original factory to manufacture the batteries, rejects OEM/ODM-labelled products, and calls for original-manufacturer and origin evidence matching the producer and address on the TLC certificate or test report."
+      },
+      {
+        "eyebrow": "Separate the parties and their roles",
+        "title": "Separate the parties and their roles",
+        "text": "The same item requires the TLC report applicant to be the producer’s legal entity, or its wholly owned subsidiary or branch. List the brand owner, bidder, producer and report applicant separately, even where names coincide. Their relationships must be read against this notice; the brand printed on a battery is not enough to complete the review."
+      },
+      {
+        "eyebrow": "Compare the product and document fields",
+        "title": "Compare the product and document fields",
+        "text": "Compare brand and model, producer name, production address, origin evidence, TLC certificate or report, and applicant. Check product series, specification and document version together so records for different products or sites are not combined. This is a practical review sequence, not an extra qualification rule introduced by Viking."
+      },
+      {
+        "eyebrow": "Clarify discrepancies before drawing conclusions",
+        "title": "Clarify discrepancies before drawing conclusions",
+        "text": "A difference in a name, address or corporate relationship does not by itself establish fraud or illegality. Return to the notice definitions and the relevant document fields. If a requirement is ambiguous, request buyer clarification rather than deciding eligibility on either party’s behalf. The notice does not establish a general OEM/ODM rule for every battery purchase."
+      },
+      {
+        "eyebrow": "AGM records provide one material layer of traceability",
+        "title": "AGM records provide one material layer of traceability",
+        "text": "For a VRLA battery that actually uses AGM, separator batch information may support upstream material traceability. A battery manufacturer may link it to incoming-material, production and complete-battery test records in its quality system. Separator records do not replace complete-battery origin evidence, TLC certification or test reports and cannot alone establish procurement compliance."
+      },
+      {
+        "eyebrow": "Confirm Viking’s current document availability",
+        "title": "Confirm Viking’s current document availability",
+        "text": "Viking supplies AGM separators for VRLA lead-acid applications. Available batch fields and delivery-record formats must follow the company’s current valid documentation list, with internal confirmation before details are published. Ask for the current available document scope; this article does not promise particular fields, formats or evidence of complete-battery qualification."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Confirm Viking’s current document availability",
+      "text": "Share your battery design, separator requirements and document needs to request a sample and specification match. Contact Viking to confirm the current list of available AGM batch documentation.",
+      "items": [
+        "Brand, model, series and specification",
+        "Producer and production address across the documents",
+        "TLC certificate/report, applicant relationship and version",
+        "AGM batch-document availability and battery-record linkage"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "272 Batteries, 272 Monitors: What UPS Procurement Can Tell Us",
+          "/blog/ups-battery-272-individual-monitors-batch-traceability/"
+        ],
+        [
+          "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+          "/blog/agm-separator-batch-consistency-and-process-control/"
+        ],
+        [
+          "AGM Separator Manufacturing: Production, Quality Control and Reliable Delivery",
+          "/blog/agm-separator-manufacturing-quality-delivery/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Share your battery design, separator requirements and document needs to request a sample and specification match. Contact Viking to confirm the current list of available AGM batch documentation.",
+      "checklist": [
+        "Brand, model, series and specification",
+        "Producer and production address across the documents",
+        "TLC certificate/report, applicant relationship and version",
+        "AGM batch-document availability and battery-record linkage"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Share your battery design, separator requirements and document needs to request a sample and specification match. Contact Viking to confirm the current list of available AGM batch documentation."
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Confirm Viking’s current document availability",
+      "text": "People’s Bank of China Procurement Platform notice dated 9 October 2026, reviewed on 24 October 2026. The procurement terms describe this buyer’s requirements, not a general OEM/ODM policy, evidence of Viking involvement, or a compliance verdict. VRLA alone does not confirm AGM construction. The hero is an AI concept, not an actual certificate or project photograph.",
+      "items": [
+        [
+          "PBOC — Financial News Press, 2026-10-09",
+          "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/2b3536f1205442898a6c826bc16c4830.html?Type=fzjggg&noticeId=318428c1-c38e-11f1-88d4-b4055dfb2cc6&noticeType=001019"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/ups-battery-original-manufacturer-production-address-evidence/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "先读该项目的原厂要求",
+      "title": "UPS 电池原厂证明怎么核对？把生产地址与泰尔文件对应起来",
+      "subtitle": "金融时报社一则采购公告要求生产单位、产地证明与泰尔文件相互对应。这些要求仅适用于该项目，不是通用 OEM／ODM 政策。",
+      "primary": "索取 AGM 隔板指南",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/ups-manufacturer-evidence-hero-1600.webp",
+        "alt": "AI 示意图: UPS 电池原厂证明怎么核对？把生产地址与泰尔文件对应起来",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "金融时报社于 2026 年 10 月 9 日发布公告，采购 64 块 12V 100Ah 阀控式密封铅酸蓄电池，含搬运安装、调试和旧电池拆除。第 9 项要求由投标品牌原厂生产，不接受 OEM、ODM 贴牌产品，并提供原厂原产地证明，生产单位及地址须与泰尔证书或检测报告一致。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "先读该项目的原厂要求",
+        "title": "先读该项目的原厂要求",
+        "text": "金融时报社于 2026 年 10 月 9 日发布公告，采购 64 块 12V 100Ah 阀控式密封铅酸蓄电池，含搬运安装、调试和旧电池拆除。第 9 项要求由投标品牌原厂生产，不接受 OEM、ODM 贴牌产品，并提供原厂原产地证明，生产单位及地址须与泰尔证书或检测报告一致。"
+      },
+      {
+        "eyebrow": "把各方主体与角色分开",
+        "title": "把各方主体与角色分开",
+        "text": "同一条款要求，泰尔检测报告申请单位与生产单位为同一法人机构，或为其全资子公司、分公司。审阅时分别列出品牌方、投标方、生产单位与报告申请单位，即使名称相同也应明确角色。主体关系应按该公告理解，不能只凭电池上的品牌完成核对。"
+      },
+      {
+        "eyebrow": "逐项核对产品和文件字段",
+        "title": "逐项核对产品和文件字段",
+        "text": "可依次比较品牌型号、生产单位、生产地址、原产地证明、泰尔证书或报告及申请单位，并核对产品系列、规格和文件版本，避免把不同产品或生产地点的记录混用。这是实务审阅顺序，不是维京另设的资格条件。"
+      },
+      {
+        "eyebrow": "出现差异先澄清",
+        "title": "出现差异先澄清",
+        "text": "名称、地址或企业关系存在差异，本身不能证明造假或违法。应回到采购文件定义及证书、报告的对应字段核查。要求含义不清时，应向采购方提出澄清，不代替买卖双方作资格判定；本公告也不构成所有电池采购的通用 OEM／ODM 规则。"
+      },
+      {
+        "eyebrow": "AGM 记录只覆盖一层材料追溯",
+        "title": "AGM 记录只覆盖一层材料追溯",
+        "text": "对于确实采用 AGM 设计的 VRLA 电池，隔板批次资料可作为上游材料追溯的一部分，由电池制造商在其质量体系内关联来料、生产和整电池测试记录。隔板记录不能替代整电池原厂产地证明、泰尔证书或检测报告，也不能单独证明采购符合性。"
+      },
+      {
+        "eyebrow": "维京文件范围以当前清单确认为准",
+        "title": "维京文件范围以当前清单确认为准",
+        "text": "维京供应 VRLA 铅酸电池用 AGM 隔板。可提供的批次字段及交付记录格式，应以公司当前有效文件清单为准，公开具体内容前需内部确认。请联系确认当前可提供的文件范围；本文不承诺特定字段、格式或整电池资格证明。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "维京文件范围以当前清单确认为准",
+      "text": "请提供电池设计、隔板需求和资料需求，申请样品与规格匹配，并联系维京确认当前可提供的 AGM 批次文件清单。",
+      "items": [
+        "品牌、型号、系列与规格",
+        "各文件中的生产单位及生产地址",
+        "泰尔文件、申请单位关系及版本",
+        "AGM 批次文件范围与电池记录关联"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "272 套电池、272 套监测模块：UPS 采购关注什么？",
+          "/zh/blog/ups-battery-272-individual-monitors-batch-traceability/"
+        ],
+        [
+          "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+          "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+        ],
+        [
+          "湖北维京 AGM 隔板：生产、检测与稳定交付",
+          "/zh/blog/agm-separator-manufacturing-quality-delivery/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供电池设计、隔板需求和资料需求，申请样品与规格匹配，并联系维京确认当前可提供的 AGM 批次文件清单。",
+      "checklist": [
+        "品牌、型号、系列与规格",
+        "各文件中的生产单位及生产地址",
+        "泰尔文件、申请单位关系及版本",
+        "AGM 批次文件范围与电池记录关联"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "请提供电池设计、隔板需求和资料需求，申请样品与规格匹配，并联系维京确认当前可提供的 AGM 批次文件清单。"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "维京文件范围以当前清单确认为准",
+      "text": "来源为中国人民银行采购平台 2026 年 10 月 9 日公告，2026 年 10 月 24 日核对。条款仅说明该采购方要求，不构成通用 OEM／ODM 政策、维京参与项目的证据或符合性判定。VRLA 名称本身不能确认 AGM 结构。主图为 AI 概念示意，不是真实证书或项目照片。",
+      "items": [
+        [
+          "PBOC — Financial News Press, 2026-10-09",
+          "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/2b3536f1205442898a6c826bc16c4830.html?Type=fzjggg&noticeId=318428c1-c38e-11f1-88d4-b4055dfb2cc6&noticeType=001019"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const telecomLeadAcidProcurementCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/telecom-backup-lead-acid-procurement-2027-2028/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "What Vision disclosed",
+      "title": "Telecom Backup Battery Selection: What a 2027–2028 Lead-Acid Procurement Shows",
+      "subtitle": "One procurement keeps lead-acid within a specific backup-power program. Selection still needs discharge power, float conditions, system fit and total cost; AGM evidence remains material-level.",
+      "primary": "Ask for AGM Separator Guide",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/telecom-backup-procurement-hero-1600.webp",
+        "alt": "AI-generated illustration: Telecom Backup Battery Selection: What a 2027–2028 Lead-Acid Procurement Shows",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Vision Group disclosed on 11 September 2026 that it was selected for China Mobile’s 2027–2028 centralized procurement of Class I and high-power lead-acid batteries. It reported approximately USD 60 million including racks, transport and related costs, for backup applications including 5G base stations and data centers. The company reported shares of 10.53% and 14.04% respectively, and described eight consecutive years of selection."
+    ],
+    "sections": [
+      {
+        "eyebrow": "What Vision disclosed",
+        "title": "What Vision disclosed",
+        "text": "Vision Group disclosed on 11 September 2026 that it was selected for China Mobile’s 2027–2028 centralized procurement of Class I and high-power lead-acid batteries. It reported approximately USD 60 million including racks, transport and related costs, for backup applications including 5G base stations and data centers. The company reported shares of 10.53% and 14.04% respectively, and described eight consecutive years of selection."
+      },
+      {
+        "eyebrow": "Keep the procurement signal within scope",
+        "title": "Keep the procurement signal within scope",
+        "text": "The disclosure supports a limited conclusion: lead-acid remains within this particular program’s scope. The shares are category-specific procurement shares reported by Vision, not national market shares. They do not establish market-share growth, cover every base station or undisclosed project, or describe other operators’ decisions. The eight-year statement is also the company’s own account."
+      },
+      {
+        "eyebrow": "Start with short-duration power",
+        "title": "Start with short-duration power",
+        "text": "A telecom battery may spend most of its service life on float charge but must support the load when utility power fails. Define target discharge power, required backup duration and output across that period before comparing designs. Energy density alone cannot settle whether a battery meets a particular site’s backup duty."
+      },
+      {
+        "eyebrow": "Review float service and system fit",
+        "title": "Review float service and system fit",
+        "text": "Review float temperature, inspection practice, maintenance capability and replacement or fault-handling conditions. Existing cabinets, charging logic, installation space, recycling arrangements and total cost remain relevant when chemistry changes. Different sites can reach different choices. These are engineering review considerations, not unpublished tender requirements inferred from Vision’s announcement."
+      },
+      {
+        "eyebrow": "Separate battery claims from AGM data",
+        "title": "Separate battery claims from AGM data",
+        "text": "In an actual VRLA-AGM design, the separator separates plates and supports electrolyte absorption, ion transport and plate-group contact. Under the intended structure and compression, validate thickness, absorption-related behavior, compressed state and batch variation. Separator data alone cannot prove battery output, float life or base-station system reliability; average values are only a starting point."
+      },
+      {
+        "eyebrow": "Turn the signal into technical preparation",
+        "title": "Turn the signal into technical preparation",
+        "text": "The two-year program offers no separator formula that can be copied into another battery. As technical preparation, review power and duration, float temperature, maintenance, battery structure and separator specifications on one communication sheet. Viking supplies AGM rolls and sheets and can discuss baseline material information. Final suitability still requires complete-battery tests and system validation."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Turn the signal into technical preparation",
+      "text": "Share your telecom VRLA battery design, discharge duty and separator dimensions to request technical data, samples and a specification match. Confirm complete-battery and system validation plans.",
+      "items": [
+        "Target discharge power and backup duration",
+        "Float temperature, maintenance and replacement conditions",
+        "Battery structure, cabinet and charging compatibility",
+        "Separator dimensions, compression, absorption and batch validation"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Why Many UPS Projects Still Use VRLA Batteries",
+          "/blog/why-ups-projects-still-use-vrla-batteries/"
+        ],
+        [
+          "Data Center Backup Demand Is Growing. What Should AGM Separator Sourcing Review?",
+          "/blog/agm-separator-for-data-center-backup-power/"
+        ],
+        [
+          "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+          "/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Share your telecom VRLA battery design, discharge duty and separator dimensions to request technical data, samples and a specification match. Confirm complete-battery and system validation plans.",
+      "checklist": [
+        "Target discharge power and backup duration",
+        "Float temperature, maintenance and replacement conditions",
+        "Battery structure, cabinet and charging compatibility",
+        "Separator dimensions, compression, absorption and batch validation"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Share your telecom VRLA battery design, discharge duty and separator dimensions to request technical data, samples and a specification match. Confirm complete-battery and system validation plans."
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Turn the signal into technical preparation",
+      "text": "Vision corporate disclosure dated 11 September 2026, reviewed on 24 October 2026. Procurement value, category shares, applications and eight-year statement are attributed to Vision. The page does not verify Viking involvement, confirm every procured battery uses AGM or establish national market trends. Engineering considerations here are discussion guidance, not a uniform test standard. AI hero: conceptual, not a project photograph.",
+      "items": [
+        [
+          "Vision — 2026-09-11",
+          "https://www.vision-batt.com/en/news/show/4u9b23cf34l.html"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/telecom-backup-lead-acid-procurement-2027-2028/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "Vision 披露了什么",
+      "title": "通信备电怎么选？从 2027—2028 年铅酸电池采购看评估条件",
+      "subtitle": "单一采购说明铅酸仍在该备电项目范围内。选型仍需结合放电功率、浮充条件、系统适配与总成本；AGM 数据只承担材料层面的证据作用。",
+      "primary": "索取 AGM 隔板指南",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/telecom-backup-procurement-hero-1600.webp",
+        "alt": "AI 示意图: 通信备电怎么选？从 2027—2028 年铅酸电池采购看评估条件",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "Vision 集团于 2026 年 9 月 11 日披露，入选中国移动 2027—2028 年一类铅酸及高功率铅酸电池集采，报告总合同金额约 6000 万美元，含电池架、运输及相关费用，用于包括 5G 基站和数据中心在内的备电应用。其报告两类份额分别为 10.53% 和 14.04%，并称连续八年入选。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "Vision 披露了什么",
+        "title": "Vision 披露了什么",
+        "text": "Vision 集团于 2026 年 9 月 11 日披露，入选中国移动 2027—2028 年一类铅酸及高功率铅酸电池集采，报告总合同金额约 6000 万美元，含电池架、运输及相关费用，用于包括 5G 基站和数据中心在内的备电应用。其报告两类份额分别为 10.53% 和 14.04%，并称连续八年入选。"
+      },
+      {
+        "eyebrow": "采购信号的结论边界",
+        "title": "采购信号的结论边界",
+        "text": "该披露只能支持有限结论：铅酸仍在这一具体项目采购范围内。份额是 Vision 报告的分类采购份额，不是全国市场份额，不能证明市场占比上升，也不覆盖所有基站、未披露项目或其他运营商决策。“连续八年”同样属于企业自身表述。"
+      },
+      {
+        "eyebrow": "先明确短时放电功率",
+        "title": "先明确短时放电功率",
+        "text": "通信电池可能长期处于浮充状态，却需在市电中断时承担负载。比较方案前，应明确目标放电功率、备电时长及整个期间的输出要求。能量密度本身不能决定某方案是否符合具体站点的备电任务。"
+      },
+      {
+        "eyebrow": "一起审阅浮充与系统适配",
+        "title": "一起审阅浮充与系统适配",
+        "text": "浮充温度、巡检方式、维护能力与更换或故障处理条件需要共同审阅。即使改变电池体系，既有机柜、充电逻辑、安装空间、回收安排和总成本仍然重要，不同站点可能作出不同选择。这些属于工程评估建议，不是由 Vision 公告推断出的未公开招标条件。"
+      },
+      {
+        "eyebrow": "把电池结论与 AGM 数据分开",
+        "title": "把电池结论与 AGM 数据分开",
+        "text": "在确实采用 VRLA-AGM 的设计中，隔板隔离极板，支持吸液、离子传输及极群接触。应在目标结构和压缩条件下验证厚度、吸液相关表现、受压状态及批次变化。隔板数据不能单独证明电池输出、浮充寿命或基站系统可靠性，平均值只是起点。"
+      },
+      {
+        "eyebrow": "把采购信号转为技术准备",
+        "title": "把采购信号转为技术准备",
+        "text": "两年采购周期没有提供可复制到其他电池的隔板配方。技术准备可把功率与时长、浮充温度、维护方式、电池结构和隔板规格放入同一沟通表。维京供应 AGM 卷材和片材，可沟通基础材料资料；最终适用性仍需整电池测试与系统验证。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "把采购信号转为技术准备",
+      "text": "请提供通信 VRLA 电池设计、放电工况和隔板尺寸，申请技术资料、样品与规格匹配，并确认整电池及系统验证安排。",
+      "items": [
+        "目标放电功率与备电时长",
+        "浮充温度、维护与更换条件",
+        "电池结构、机柜及充电兼容性",
+        "隔板尺寸、压缩、吸液与批次验证"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "UPS 机房都在谈锂电、钠电，为什么很多项目还在继续用 VRLA？",
+          "/zh/blog/why-ups-projects-still-use-vrla-batteries/"
+        ],
+        [
+          "数据中心备电需求在增长，AGM 隔板配套该看什么？",
+          "/zh/blog/agm-separator-for-data-center-backup-power/"
+        ],
+        [
+          "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+          "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供通信 VRLA 电池设计、放电工况和隔板尺寸，申请技术资料、样品与规格匹配，并确认整电池及系统验证安排。",
+      "checklist": [
+        "目标放电功率与备电时长",
+        "浮充温度、维护与更换条件",
+        "电池结构、机柜及充电兼容性",
+        "隔板尺寸、压缩、吸液与批次验证"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "请提供通信 VRLA 电池设计、放电工况和隔板尺寸，申请技术资料、样品与规格匹配，并确认整电池及系统验证安排。"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "把采购信号转为技术准备",
+      "text": "来源为 Vision 2026 年 9 月 11 日企业披露，2026 年 10 月 24 日核对。金额、分类份额、应用及连续八年说法均归因于 Vision，不证明维京参与项目、全部采购电池采用 AGM 或全国市场趋势。本文工程建议不是统一试验标准。AI 主图为概念示意，不是项目实拍。",
+      "items": [
+        [
+          "Vision — 2026-09-11",
+          "https://www.vision-batt.com/en/news/show/4u9b23cf34l.html"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const leadPremiumDemandRestockingCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/lead-premium-battery-demand-based-restocking/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Read the dated market snapshot",
+      "title": "Lead Premiums and Cautious Restocking: Check Orders, Inventory and Cash Flow",
+      "subtitle": "A September 2026 lead-market snapshot shows why price strength and cautious battery-material purchasing can coexist. AGM supply plans should follow specifications and actual production needs.",
+      "primary": "Ask for AGM Separator Guide",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/lead-premium-restocking-hero-1600.webp",
+        "alt": "AI-generated illustration: Lead Premiums and Cautious Restocking: Check Orders, Inventory and Cash Flow",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Lead prices describe today’s material cost; stock coverage asks when extra purchases will become orders and cash. Review those questions separately before setting AGM quantities."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Read the dated market snapshot",
+        "title": "Read the dated market snapshot",
+        "text": "Yangtze Nonferrous reported on 29 September 2026 that No. 1 lead averaged RMB 16,325 per metric ton, about RMB 60 above the Shanghai Lead 2611 contract. The same commentary described weakening restocking intentions and some downstream battery makers buying mainly for immediate needs. This is a historical market snapshot, not a current quote or a statistical finding about every manufacturer."
+      },
+      {
+        "eyebrow": "A spot premium is not an end-demand measure",
+        "title": "A spot premium is not an end-demand measure",
+        "text": "A spot premium means the spot price exceeds the cited futures benchmark. It describes a price relationship, not the strength of final demand. Order visibility, finished-goods stock and working capital may lead companies to different purchases under the same price signal. Extra material must eventually become production, customer deliveries and cash."
+      },
+      {
+        "eyebrow": "Review three separate operating accounts",
+        "title": "Review three separate operating accounts",
+        "text": "The order account covers production needs, delivery schedules and customer visibility. The inventory account includes raw lead or paste, goods in transit, finished batteries and existing coverage. The cash-flow account includes purchasing capacity, payment terms, collections and payments for other materials. These accounts cannot replace one another; price cannot stand in for orders or funding."
+      },
+      {
+        "eyebrow": "Demand-based replenishment is a risk trade-off",
+        "title": "Demand-based replenishment is a risk trade-off",
+        "text": "Buying to immediate needs does not always mean buying less. It means linking coverage to actual consumption: replenish to schedule when orders are clear and avoid inventory moving ahead of orders when visibility weakens. This is an operating framework, not a universal conclusion from the report. Suppliers may discuss stable specifications, split quantities and delivery windows rather than assume a price rise will cause bulk buying."
+      },
+      {
+        "eyebrow": "AGM separator inventory needs its own logic",
+        "title": "AGM separator inventory needs its own logic",
+        "text": "AGM separators have a different cost position from lead, so a lead premium does not determine their inventory target. Review exposure to specification changes, batch transitions and cash tied up in stock. Separate stable-consumption specifications from temporary orders, and rolling production needs from materials requiring small-batch assembly validation before volume increases."
+      },
+      {
+        "eyebrow": "Build a phased material plan, not a price bet",
+        "title": "Build a phased material plan, not a price bet",
+        "text": "One day of market data cannot support a broad price or industry-demand forecast. Viking supplies AGM rolls and sheets; thickness, width, sheet dimensions, packaging, available batch documentation and phased deliveries can be discussed for the project. Align quantities with production and delivery schedules. Any supply or quotation arrangement requires confirmation against actual specifications and project conditions."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Build a phased material plan, not a price bet",
+      "text": "Share your production schedule, AGM dimensions and phased quantities to request samples and a specification match, and discuss a supply and quotation plan for actual consumption.",
+      "items": [
+        "Confirmed orders, consumption and delivery schedule",
+        "Raw material, in-transit and finished-goods coverage",
+        "Payment terms, collections and other material payments",
+        "AGM specifications, batch changes and proposed split deliveries"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+          "/blog/agm-separator-batch-consistency-and-process-control/"
+        ],
+        [
+          "AGM Separator Manufacturing: Production, Quality Control and Reliable Delivery",
+          "/blog/agm-separator-manufacturing-quality-delivery/"
+        ],
+        [
+          "Lead-Acid Battery Exports Recovered in May. Is Your AGM Separator Supply Ready?",
+          "/blog/agm-separator-export-supply-readiness/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Share your production schedule, AGM dimensions and phased quantities to request samples and a specification match, and discuss a supply and quotation plan for actual consumption.",
+      "checklist": [
+        "Confirmed orders, consumption and delivery schedule",
+        "Raw material, in-transit and finished-goods coverage",
+        "Payment terms, collections and other material payments",
+        "AGM specifications, batch changes and proposed split deliveries"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Share your production schedule, AGM dimensions and phased quantities to request samples and a specification match, and discuss a supply and quotation plan for actual consumption."
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Build a phased material plan, not a price bet",
+      "text": "Yangtze Nonferrous market commentary dated 29 September 2026, reviewed on 24 October 2026. Price and restocking descriptions are attributed to that outlet. Its published page does not give a representative survey sample or method; do not treat it as an industry-wide statistic, a current price or a forecast. The operating framework is editorial guidance, not proof of Viking inventory, capacity or delivery commitments. AI illustration, not a real warehouse photograph.",
+      "items": [
+        [
+          "Yangtze Nonferrous — 2026-09-29",
+          "https://pb.ccmn.cn/news/ZX018/202609/f39296a023984b088d8302eee0da446b.html"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/lead-premium-battery-demand-based-restocking/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "先看清市场快照的日期",
+      "title": "铅现货升水，蓄企为何仍谨慎补库？先看订单、库存与现金流",
+      "subtitle": "2026 年 9 月的一则铅市快照，说明价格偏强与材料采购谨慎可以并存。AGM 供货计划仍应围绕规格与实际排产需求制定。",
+      "primary": "索取 AGM 隔板指南",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/lead-premium-restocking-hero-1600.webp",
+        "alt": "AI 示意图: 铅现货升水，蓄企为何仍谨慎补库？先看订单、库存与现金流",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "铅价回答今天材料有多贵，库存覆盖则追问多买的材料何时变成订单和回款。确定 AGM 数量前，应把这两个问题分开。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "先看清市场快照的日期",
+        "title": "先看清市场快照的日期",
+        "text": "长江有色于 2026 年 9 月 29 日报道，长江现货 1# 铅均价为 16,325 元／吨，对沪铅 2611 合约升水约 60 元／吨。同篇评论描述备货意愿边际转弱、部分下游蓄企主要按刚需购买。这是历史市场快照，不是当前报价，也不是所有电池厂商的统计结论。"
+      },
+      {
+        "eyebrow": "现货升水不是终端需求指标",
+        "title": "现货升水不是终端需求指标",
+        "text": "现货升水表示现货价格高于所比较的期货基准，反映的是价差关系，不等于终端需求强度。订单可见度、成品库存和营运资金可能让企业在相同价格信号下作出不同采购决定；多买的材料仍需转为生产、交付与回款。"
+      },
+      {
+        "eyebrow": "分开核算三本经营账",
+        "title": "分开核算三本经营账",
+        "text": "订单账看排产需求、交付计划和客户订单可见度；库存账包括铅锭或铅膏、在途、成品电池及已覆盖生产周期；现金流账看采购资金、账期、回款与其他材料付款。这三本账不能互相替代，价格不能代替订单或资金安排。"
+      },
+      {
+        "eyebrow": "按需补库是在权衡风险",
+        "title": "按需补库是在权衡风险",
+        "text": "刚需采购并不意味着始终少买，而是让覆盖周期贴近实际消耗：订单清晰时按计划补充，可见度减弱时避免库存跑在订单前面。这是经营评估框架，不是从报道得出的统一结论。供应商可沟通稳定规格、分批数量与交付窗口，不应假设涨价必然带来集中采购。"
+      },
+      {
+        "eyebrow": "AGM 隔板库存要单独判断",
+        "title": "AGM 隔板库存要单独判断",
+        "text": "AGM 隔板与铅在材料成本中的位置不同，铅升水不能直接决定隔板库存目标。应评估规格变更、批次切换和资金占用，区分稳定消耗规格与临时订单需求，以及可滚动排产材料和放量前需小批量装配验证的材料。"
+      },
+      {
+        "eyebrow": "制定分批材料计划，而非押注价格",
+        "title": "制定分批材料计划，而非押注价格",
+        "text": "一天的行情不能支持全面的价格或行业需求预测。维京供应 AGM 卷材与片材，可按项目沟通厚度、宽度、片材尺寸、包装、可提供批次资料及分批交付。数量应与排产和交付对齐，具体供货与报价安排仍需结合实际规格及项目条件确认。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "制定分批材料计划，而非押注价格",
+      "text": "请提供排产计划、AGM 尺寸和分批数量，申请样品与规格匹配，并按实际消耗沟通供货与报价方案。",
+      "items": [
+        "已确认订单、消耗与交付计划",
+        "原料、在途及成品覆盖周期",
+        "付款账期、回款与其他材料付款",
+        "AGM 规格、批次变更与拟定分批数量"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+          "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+        ],
+        [
+          "湖北维京 AGM 隔板：生产、检测与稳定交付",
+          "/zh/blog/agm-separator-manufacturing-quality-delivery/"
+        ],
+        [
+          "海外销量回升了，AGM 隔板配套跟得上吗？",
+          "/zh/blog/agm-separator-export-supply-readiness/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供排产计划、AGM 尺寸和分批数量，申请样品与规格匹配，并按实际消耗沟通供货与报价方案。",
+      "checklist": [
+        "已确认订单、消耗与交付计划",
+        "原料、在途及成品覆盖周期",
+        "付款账期、回款与其他材料付款",
+        "AGM 规格、批次变更与拟定分批数量"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "请提供排产计划、AGM 尺寸和分批数量，申请样品与规格匹配，并按实际消耗沟通供货与报价方案。"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "制定分批材料计划，而非押注价格",
+      "text": "来源为长江有色 2026 年 9 月 29 日市场评论，2026 年 10 月 24 日核对。价格和补库描述均归因于该媒体；公开页未给出代表性调查样本或方法，不作为全行业统计、当前价格或预测。经营框架为文章建议，不证明维京库存、产能或交付承诺。AI 配图不是仓库实拍。",
+      "items": [
+        [
+          "Yangtze Nonferrous — 2026-09-29",
+          "https://pb.ccmn.cn/news/ZX018/202609/f39296a023984b088d8302eee0da446b.html"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const earlyLeadAcidElectrodeFormationCopy = {
   "en": {
     "nav": {
@@ -4968,7 +6300,7 @@ const earlyLeadAcidElectrodeFormationCopy = {
       }
     },
     "intro": [
-      "From Planté formation cycles to Faure pasted plates, electrode manufacturing required more than rechargeability. Modern glass-fiber structures also need clear functional boundaries and validation."
+      "The Science Museum Group holds a Planté battery from about 1860 with 20 cells switchable between series and parallel for experimental and laboratory use. Early Planté plates needed repeated charging and discharging to develop active surface material. Rechargeability had been demonstrated; producing practical electrodes efficiently remained a manufacturing challenge."
     ],
     "sections": [
       {
@@ -5140,7 +6472,7 @@ const earlyLeadAcidElectrodeFormationCopy = {
       }
     },
     "intro": [
-      "从 Planté 反复化成到 Faure 涂膏极板，电极制造的难点不止于可充电。理解现代玻纤结构，也要先区分材料位置、支撑作用与验证条件。"
+      "英国科学博物馆集团收藏一套约 1860 年的 Planté 电池，由 20 个单体组成，可切换串联或并联，用于实验与实验室工作。早期 Planté 极板需要反复充放电，逐渐形成表面活性材料。可充电已被证明，如何高效制成实用电极仍是制造难题。"
     ],
     "sections": [
       {
@@ -5315,36 +6647,36 @@ const agmSeparatorPressureChartsCopy = {
       }
     },
     "intro": [
-      "Two brochure endpoints and a visual guide do not constitute a continuously measured pressure curve. Confirm the data and test conditions before comparing AGM separators."
+      "The two endpoints alone cannot establish thickness or recovery at intermediate pressures, reconstruct complete loading and unloading curves, or predict full-battery service life through two-point interpolation."
     ],
     "sections": [
       {
-        "eyebrow": "01",
+        "eyebrow": "Identify the plotted data",
         "title": "Identify the plotted data",
         "text": "The AlphaBeta automotive start-stop AGM separator product page presents brochure nominal values alongside design values. Its compression and recovery chart displays approximate values read from the printed brochure at 10 kPa and 100 kPa."
       },
       {
-        "eyebrow": "02",
+        "eyebrow": "Read the connecting line correctly",
         "title": "Read the connecting line correctly",
         "text": "The straight line between the two displayed points is a visual guide. It does not represent measurements at intermediate pressures. Review endpoint charts separately from continuous measurement records."
       },
       {
-        "eyebrow": "03",
+        "eyebrow": "Do not interpolate performance",
         "title": "Do not interpolate performance",
         "text": "The two endpoints alone cannot establish thickness or recovery at intermediate pressures, reconstruct complete loading and unloading curves, or predict full-battery service life through two-point interpolation."
       },
       {
-        "eyebrow": "04",
+        "eyebrow": "Keep endpoints separate from assembly requirements",
         "title": "Keep endpoints separate from assembly requirements",
         "text": "The 10 kPa and 100 kPa values are endpoints on this specific product page, not universal assembly-pressure standards. No intermediate measurement points are listed; this does not establish whether the company has performed other internal tests."
       },
       {
-        "eyebrow": "05",
+        "eyebrow": "Agree the comparison conditions",
         "title": "Agree the comparison conditions",
         "text": "First specify the target assembly pressure. Then confirm sample condition, loading or unloading process, measurement-point arrangement and repeat-measurement conditions. This is guidance for technical communication, not a uniform industry test standard; agree conditions for the sample and project."
       },
       {
-        "eyebrow": "06",
+        "eyebrow": "Keep the source in context",
         "title": "Keep the source in context",
         "text": "The parameters and chart description come from a corporate product page and information attributed there to its printed brochure. They are not an independent test report or a new-product announcement published this week. They are not Viking specifications or guaranteed performance."
       }
@@ -5467,36 +6799,36 @@ const agmSeparatorPressureChartsCopy = {
       }
     },
     "intro": [
-      "两个手册端点加一条视觉引导线，并不构成连续实测压力曲线。比较 AGM 隔板前，应先确认数据含义与测试条件。"
+      "仅凭这两个端点，不能确定中间压力下的厚度或回弹表现，不能重建完整加载与卸载曲线，也不能通过两点插值预测整电池使用寿命。"
     ],
     "sections": [
       {
-        "eyebrow": "01",
+        "eyebrow": "先确认图中数据是什么",
         "title": "先确认图中数据是什么",
         "text": "AlphaBeta 汽车启停 AGM 隔板产品页并列展示手册标称值与设计值。其压缩与回弹图展示从印刷版产品手册读取的 10 kPa 和 100 kPa 两个压力端点的近似值。"
       },
       {
-        "eyebrow": "02",
+        "eyebrow": "正确理解端点之间的连线",
         "title": "正确理解端点之间的连线",
         "text": "两端点之间的直线仅作视觉引导，不代表中间压力下的实测数据。阅读时，应将端点图与连续测量记录分别审阅。"
       },
       {
-        "eyebrow": "03",
+        "eyebrow": "不要用两点插值推断性能",
         "title": "不要用两点插值推断性能",
         "text": "仅凭这两个端点，不能确定中间压力下的厚度或回弹表现，不能重建完整加载与卸载曲线，也不能通过两点插值预测整电池使用寿命。"
       },
       {
-        "eyebrow": "04",
+        "eyebrow": "端点不等于通用装配要求",
         "title": "端点不等于通用装配要求",
         "text": "10 kPa 与 100 kPa 是这一具体产品页展示的端点，不是通用装配压力标准。页面未列出中间测量点，也不能据此判断该企业是否开展过其他内部测试。"
       },
       {
-        "eyebrow": "05",
+        "eyebrow": "先约定压力性能比较条件",
         "title": "先约定压力性能比较条件",
         "text": "技术沟通时，先明确目标装配压力，再确认样品状态、加载或卸载过程、测点安排及重复测量条件。这是图表解读与沟通建议，不是统一行业试验标准；测试条件应根据样品与双方约定确认。"
       },
       {
-        "eyebrow": "06",
+        "eyebrow": "把来源与证据边界说清楚",
         "title": "把来源与证据边界说清楚",
         "text": "参数与图表说明来自企业产品页及该页归因于印刷版产品手册的信息，不是独立测试报告，也不是本周发布的新品公告。这些信息不属于维京产品规格或性能保证。"
       }
@@ -5929,7 +7261,15 @@ export function BlogArticlePage({
       ? null
       : secondaryArticleCopy[lang][page];
   const defaultArticle: any = secondaryArticle ?? (
-    page === "earlyLeadAcidElectrodeFormation"
+    page === "agmVsGemGlassFiber"
+      ? agmVsGemGlassFiberCopy[primaryLang]
+      : page === "upsOriginalManufacturerEvidence"
+      ? upsOriginalManufacturerEvidenceCopy[primaryLang]
+      : page === "telecomLeadAcidProcurement"
+      ? telecomLeadAcidProcurementCopy[primaryLang]
+      : page === "leadPremiumDemandRestocking"
+      ? leadPremiumDemandRestockingCopy[primaryLang]
+      : page === "earlyLeadAcidElectrodeFormation"
       ? earlyLeadAcidElectrodeFormationCopy[primaryLang]
       : page === "agmSeparatorPressureCharts"
       ? agmSeparatorPressureChartsCopy[primaryLang]

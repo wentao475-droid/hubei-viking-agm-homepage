@@ -2115,6 +2115,210 @@ const agmPastingPaperEnergyValidationSeo = {
   zh: { path: "/zh/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", alternatePath: "/blog/agm-fiberglass-pasting-paper-drying-energy-validation/", locale: "zh_CN", language: "zh-CN", siteName: "湖北维京AGM", title: "AGM 玻纤涂板纸能省多少烘干能耗？验证条件与对照方法 | 湖北维京AGM", description: "公开供应商资料提出降低窑温或停窑主张但未给量化数据；本文说明 AGM 玻纤涂板纸同线能耗、含水、极板质量和整电池验证方法。", keywords: ["AGM 玻纤涂板纸", "铅酸电池涂板纸节能", "涂板纸干燥窑温度", "玻纤涂板纸替代植物纤维", "AGM 涂板工艺验证"], pageName: "一张涂板纸能省下多少烘干能耗？先别急着相信“停用干燥窑”", articleDescription: "以公开产品资料中的供应商主张为边界，说明 AGM 玻纤涂板纸节能主张需要怎样做同线对照。", breadcrumbs: ["首页", "资料", "AGM 玻纤涂板纸节能验证"] }
 } as const;
 
+const agmVsGemGlassFiberSeo = {
+  "en": {
+    "path": "/blog/agm-separator-vs-gem-negative-electrode/",
+    "alternatePath": "/zh/blog/agm-separator-vs-gem-negative-electrode/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "AGM and GEM: Glass Fiber Between the Plates or Inside the Negative Electrode? | Viking AGM",
+    "description": "AGM separators and GEM use glass fiber in different locations. Compare their functions, design priorities and evidence before reviewing specifications.",
+    "keywords": [
+      "AGM and GEM: Glass Fiber Between the Plates or Inside the Negative Electrode?",
+      "AGM separator",
+      "GEM",
+      "glass fiber negative electrode"
+    ],
+    "pageName": "AGM and GEM: Glass Fiber Between the Plates or Inside the Negative Electrode?",
+    "articleDescription": "AGM separators and GEM use glass fiber in different locations. Compare their functions, design priorities and evidence before reviewing specifications.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "AGM and GEM: Glass Fiber Between the Plates or Inside the Negative Electrode?"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  },
+  "zh": {
+    "path": "/zh/blog/agm-separator-vs-gem-negative-electrode/",
+    "alternatePath": "/blog/agm-separator-vs-gem-negative-electrode/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "AGM 与 GEM：玻璃纤维在极板之间，还是在负极内部？ | Viking AGM",
+    "description": "AGM 隔板与 GEM 都使用玻纤，但所在位置、功能与设计逻辑不同。采购比较应先辨认结构角色，再审阅规格与验证条件。",
+    "keywords": [
+      "AGM 与 GEM：玻璃纤维在极板之间，还是在负极内部？",
+      "AGM separator",
+      "GEM",
+      "glass fiber negative electrode"
+    ],
+    "pageName": "AGM 与 GEM：玻璃纤维在极板之间，还是在负极内部？",
+    "articleDescription": "AGM 隔板与 GEM 都使用玻纤，但所在位置、功能与设计逻辑不同。采购比较应先辨认结构角色，再审阅规格与验证条件。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "AGM 与 GEM：玻璃纤维在极板之间，还是在负极内部？"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  }
+} as const;
+
+const upsOriginalManufacturerEvidenceSeo = {
+  "en": {
+    "path": "/blog/ups-battery-original-manufacturer-production-address-evidence/",
+    "alternatePath": "/zh/blog/ups-battery-original-manufacturer-production-address-evidence/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "UPS Battery Procurement: Match the Production Address to Original-Manufacturer Evidence | Viking AGM",
+    "description": "A Financial News Press notice shows how producer, origin and TLC records must align in one UPS battery procurement. These conditions are project-specific, not a general OEM/ODM policy.",
+    "keywords": [
+      "UPS Battery Procurement: Match the Production Address to Original-Manufacturer Evidence",
+      "UPS battery procurement",
+      "original manufacturer evidence",
+      "AGM batch traceability"
+    ],
+    "pageName": "UPS Battery Procurement: Match the Production Address to Original-Manufacturer Evidence",
+    "articleDescription": "A Financial News Press notice shows how producer, origin and TLC records must align in one UPS battery procurement. These conditions are project-specific, not a general OEM/ODM policy.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "UPS Battery Procurement: Match the Production Address to Original-Manufacturer Evidence"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  },
+  "zh": {
+    "path": "/zh/blog/ups-battery-original-manufacturer-production-address-evidence/",
+    "alternatePath": "/blog/ups-battery-original-manufacturer-production-address-evidence/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "UPS 电池原厂证明怎么核对？把生产地址与泰尔文件对应起来 | Viking AGM",
+    "description": "金融时报社一则采购公告要求生产单位、产地证明与泰尔文件相互对应。这些要求仅适用于该项目，不是通用 OEM／ODM 政策。",
+    "keywords": [
+      "UPS 电池原厂证明怎么核对？把生产地址与泰尔文件对应起来",
+      "UPS battery procurement",
+      "original manufacturer evidence",
+      "AGM batch traceability"
+    ],
+    "pageName": "UPS 电池原厂证明怎么核对？把生产地址与泰尔文件对应起来",
+    "articleDescription": "金融时报社一则采购公告要求生产单位、产地证明与泰尔文件相互对应。这些要求仅适用于该项目，不是通用 OEM／ODM 政策。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "UPS 电池原厂证明怎么核对？把生产地址与泰尔文件对应起来"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  }
+} as const;
+
+const telecomLeadAcidProcurementSeo = {
+  "en": {
+    "path": "/blog/telecom-backup-lead-acid-procurement-2027-2028/",
+    "alternatePath": "/zh/blog/telecom-backup-lead-acid-procurement-2027-2028/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Telecom Backup Battery Selection: What a 2027–2028 Lead-Acid Procurement Shows | Viking AGM",
+    "description": "One procurement keeps lead-acid within a specific backup-power program. Selection still needs discharge power, float conditions, system fit and total cost; AGM evidence remains material-level.",
+    "keywords": [
+      "Telecom Backup Battery Selection: What a 2027–2028 Lead-Acid Procurement Shows",
+      "telecom backup battery",
+      "float service",
+      "AGM material validation"
+    ],
+    "pageName": "Telecom Backup Battery Selection: What a 2027–2028 Lead-Acid Procurement Shows",
+    "articleDescription": "One procurement keeps lead-acid within a specific backup-power program. Selection still needs discharge power, float conditions, system fit and total cost; AGM evidence remains material-level.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Telecom Backup Battery Selection: What a 2027–2028 Lead-Acid Procurement Shows"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  },
+  "zh": {
+    "path": "/zh/blog/telecom-backup-lead-acid-procurement-2027-2028/",
+    "alternatePath": "/blog/telecom-backup-lead-acid-procurement-2027-2028/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "通信备电怎么选？从 2027—2028 年铅酸电池采购看评估条件 | Viking AGM",
+    "description": "单一采购说明铅酸仍在该备电项目范围内。选型仍需结合放电功率、浮充条件、系统适配与总成本；AGM 数据只承担材料层面的证据作用。",
+    "keywords": [
+      "通信备电怎么选？从 2027—2028 年铅酸电池采购看评估条件",
+      "telecom backup battery",
+      "float service",
+      "AGM material validation"
+    ],
+    "pageName": "通信备电怎么选？从 2027—2028 年铅酸电池采购看评估条件",
+    "articleDescription": "单一采购说明铅酸仍在该备电项目范围内。选型仍需结合放电功率、浮充条件、系统适配与总成本；AGM 数据只承担材料层面的证据作用。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "通信备电怎么选？从 2027—2028 年铅酸电池采购看评估条件"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  }
+} as const;
+
+const leadPremiumDemandRestockingSeo = {
+  "en": {
+    "path": "/blog/lead-premium-battery-demand-based-restocking/",
+    "alternatePath": "/zh/blog/lead-premium-battery-demand-based-restocking/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Lead Premiums and Cautious Restocking: Check Orders, Inventory and Cash Flow | Viking AGM",
+    "description": "A September 2026 lead-market snapshot shows why price strength and cautious battery-material purchasing can coexist. AGM supply plans should follow specifications and actual production needs.",
+    "keywords": [
+      "Lead Premiums and Cautious Restocking: Check Orders, Inventory and Cash Flow",
+      "AGM separator purchasing",
+      "demand-based replenishment",
+      "inventory planning"
+    ],
+    "pageName": "Lead Premiums and Cautious Restocking: Check Orders, Inventory and Cash Flow",
+    "articleDescription": "A September 2026 lead-market snapshot shows why price strength and cautious battery-material purchasing can coexist. AGM supply plans should follow specifications and actual production needs.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Lead Premiums and Cautious Restocking: Check Orders, Inventory and Cash Flow"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  },
+  "zh": {
+    "path": "/zh/blog/lead-premium-battery-demand-based-restocking/",
+    "alternatePath": "/blog/lead-premium-battery-demand-based-restocking/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "铅现货升水，蓄企为何仍谨慎补库？先看订单、库存与现金流 | Viking AGM",
+    "description": "2026 年 9 月的一则铅市快照，说明价格偏强与材料采购谨慎可以并存。AGM 供货计划仍应围绕规格与实际排产需求制定。",
+    "keywords": [
+      "铅现货升水，蓄企为何仍谨慎补库？先看订单、库存与现金流",
+      "AGM separator purchasing",
+      "demand-based replenishment",
+      "inventory planning"
+    ],
+    "pageName": "铅现货升水，蓄企为何仍谨慎补库？先看订单、库存与现金流",
+    "articleDescription": "2026 年 9 月的一则铅市快照，说明价格偏强与材料采购谨慎可以并存。AGM 供货计划仍应围绕规格与实际排产需求制定。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "铅现货升水，蓄企为何仍谨慎补库？先看订单、库存与现金流"
+    ],
+    "datePublished": "2026-10-24",
+    "dateModified": "2026-10-24"
+  }
+} as const;
+
 const earlyLeadAcidElectrodeFormationSeo = {
   "en": {
     "path": "/blog/early-lead-acid-battery-electrode-formation/",
@@ -5511,6 +5715,74 @@ export function EarlyLeadAcidElectrodeFormationStructuredData({ lang }: { lang: 
     organizationData(lang, current.description),
     { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
     { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/early-lead-acid-formation-hero-1600.webp`, url, datePublished: "2026-10-24", dateModified: "2026-10-24", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Early lead-acid electrode formation", "Electrode framework and AGM separator"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildAgmVsGemGlassFiberMetadata(lang: Lang): Metadata {
+  const current = seoContent("agmVsGemGlassFiber", lang, agmVsGemGlassFiberSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmVsGemGlassFiber"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/agm-vs-gem-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function AgmVsGemGlassFiberStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("agmVsGemGlassFiber", lang, agmVsGemGlassFiberSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/agm-vs-gem-hero-1600.webp`, url, datePublished: "2026-10-24", dateModified: "2026-10-24", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM separator versus GEM", "Glass fiber structural roles"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildUpsOriginalManufacturerEvidenceMetadata(lang: Lang): Metadata {
+  const current = seoContent("upsOriginalManufacturerEvidence", lang, upsOriginalManufacturerEvidenceSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("upsOriginalManufacturerEvidence"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/ups-manufacturer-evidence-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function UpsOriginalManufacturerEvidenceStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("upsOriginalManufacturerEvidence", lang, upsOriginalManufacturerEvidenceSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/ups-manufacturer-evidence-hero-1600.webp`, url, datePublished: "2026-10-24", dateModified: "2026-10-24", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["UPS original manufacturer evidence", "Production address matching", "AGM material traceability"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildTelecomLeadAcidProcurementMetadata(lang: Lang): Metadata {
+  const current = seoContent("telecomLeadAcidProcurement", lang, telecomLeadAcidProcurementSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("telecomLeadAcidProcurement"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/telecom-backup-procurement-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function TelecomLeadAcidProcurementStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("telecomLeadAcidProcurement", lang, telecomLeadAcidProcurementSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/telecom-backup-procurement-hero-1600.webp`, url, datePublished: "2026-10-24", dateModified: "2026-10-24", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Telecom backup selection", "Float service and system fit", "AGM material validation"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildLeadPremiumDemandRestockingMetadata(lang: Lang): Metadata {
+  const current = seoContent("leadPremiumDemandRestocking", lang, leadPremiumDemandRestockingSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("leadPremiumDemandRestocking"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/lead-premium-restocking-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function LeadPremiumDemandRestockingStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("leadPremiumDemandRestocking", lang, leadPremiumDemandRestockingSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/lead-premium-restocking-hero-1600.webp`, url, datePublished: "2026-10-24", dateModified: "2026-10-24", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Demand-based battery material purchasing", "AGM inventory planning", "Orders inventory and cash flow"], inLanguage: current.language },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
 }

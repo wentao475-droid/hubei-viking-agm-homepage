@@ -7,6 +7,10 @@ import { agmSafetyTestTopics } from "./agm-safety-test-topics.mjs";
 export const secondaryResourceLocales = ["vi", "ko", "ja", "es", "pt", "ru", "ar"];
 
 import { earlyLeadAcidFormationTopics } from "./early-lead-acid-formation-topics.mjs";
+import { agmVsGemTopics } from "./agm-vs-gem-topics.mjs";
+import { upsOriginalManufacturerTopics } from "./ups-original-manufacturer-topics.mjs";
+import { telecomLeadAcidProcurementTopics } from "./telecom-lead-acid-procurement-topics.mjs";
+import { leadPremiumDemandRestockingTopics } from "./lead-premium-restocking-topics.mjs";
 import { agmPressureChartTopics } from "./agm-pressure-chart-topics.mjs";
 import { upsBatteryMonitoringTopics } from "./ups-battery-monitoring-topics.mjs";
 import { agmSohMaterialDataTopics } from "./agm-soh-material-data-topics.mjs";
@@ -14,6 +18,10 @@ import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
+  "leadPremiumDemandRestocking",
+  "telecomLeadAcidProcurement",
+  "upsOriginalManufacturerEvidence",
+  "agmVsGemGlassFiber",
   "earlyLeadAcidElectrodeFormation",
   "agmSeparatorPressureCharts",
   "whatIsAgmSeparator",
@@ -71,9 +79,17 @@ export const articleDefinitions = {
   ,upsBatteryIndividualMonitoring: ["ups-battery-272-individual-monitors-batch-traceability", "industryApplications", "2026-10-18", "2026-10-18"]
   ,agmSeparatorPressureCharts: ["reading-agm-separator-pressure-charts", "buyerGuides", "2026-10-24", "2026-10-24"]
   ,earlyLeadAcidElectrodeFormation: ["early-lead-acid-battery-electrode-formation", "manufacturingQuality", "2026-10-24", "2026-10-24"]
+  ,leadPremiumDemandRestocking: ["lead-premium-battery-demand-based-restocking", "buyerGuides", "2026-10-24", "2026-10-24"]
+  ,telecomLeadAcidProcurement: ["telecom-backup-lead-acid-procurement-2027-2028", "industryApplications", "2026-10-24", "2026-10-24"]
+  ,upsOriginalManufacturerEvidence: ["ups-battery-original-manufacturer-production-address-evidence", "manufacturingQuality", "2026-10-24", "2026-10-24"]
+  ,agmVsGemGlassFiber: ["agm-separator-vs-gem-negative-electrode", "manufacturingQuality", "2026-10-24", "2026-10-24"]
 };
 
 const images = {
+  leadPremiumDemandRestocking: ["/images/articles/lead-premium-restocking-hero-1600.webp", 1600, 1200],
+  telecomLeadAcidProcurement: ["/images/articles/telecom-backup-procurement-hero-1600.webp", 1600, 1200],
+  upsOriginalManufacturerEvidence: ["/images/articles/ups-manufacturer-evidence-hero-1600.webp", 1600, 1200],
+  agmVsGemGlassFiber: ["/images/articles/agm-vs-gem-hero-1600.webp", 1600, 1200],
   earlyLeadAcidElectrodeFormation: ["/images/articles/early-lead-acid-formation-hero-1600.webp", 1600, 1200],
   agmSeparatorPressureCharts: ["/images/articles/agm-pressure-charts-hero-1600.webp", 1600, 1200],
   upsBatteryIndividualMonitoring: ["/images/evidence/viking-agm-material-thickness-inspection-1600.webp", 1600, 900],
@@ -1166,6 +1182,22 @@ for (const [locale, topic] of Object.entries(earlyLeadAcidFormationTopics)) {
   secondaryResourceData[locale].topics.earlyLeadAcidElectrodeFormation = topic;
 }
 
+for (const [locale, topic] of Object.entries(agmVsGemTopics)) {
+  secondaryResourceData[locale].topics.agmVsGemGlassFiber = topic;
+}
+
+for (const [locale, topic] of Object.entries(upsOriginalManufacturerTopics)) {
+  secondaryResourceData[locale].topics.upsOriginalManufacturerEvidence = topic;
+}
+
+for (const [locale, topic] of Object.entries(telecomLeadAcidProcurementTopics)) {
+  secondaryResourceData[locale].topics.telecomLeadAcidProcurement = topic;
+}
+
+for (const [locale, topic] of Object.entries(leadPremiumDemandRestockingTopics)) {
+  secondaryResourceData[locale].topics.leadPremiumDemandRestocking = topic;
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1209,6 +1241,10 @@ const arabicReferences = {
 
 
 const generatedArticleVisuals = {
+  "leadPremiumDemandRestocking": "/images/articles/lead-premium-restocking-hero-1600.webp",
+  "telecomLeadAcidProcurement": "/images/articles/telecom-backup-procurement-hero-1600.webp",
+  "upsOriginalManufacturerEvidence": "/images/articles/ups-manufacturer-evidence-hero-1600.webp",
+  "agmVsGemGlassFiber": "/images/articles/agm-vs-gem-hero-1600.webp",
   "earlyLeadAcidElectrodeFormation": "/images/articles/early-lead-acid-formation-hero-1600.webp",
   "agmSeparatorPressureCharts": "/images/articles/agm-pressure-charts-hero-1600.webp",
   "batteryTechnologyProjectComparison": "/images/articles/battery-duty-comparison-hero-1600.webp",
@@ -1246,7 +1282,15 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "earlyLeadAcidElectrodeFormation"
+  const relatedKinds = kind === "leadPremiumDemandRestocking"
+    ? ["agmSeparatorBatchProcessControl", "agmSeparatorManufacturingQualityDelivery", "agmSeparatorExportSupplyReadiness", "keyTechnicalParameters"]
+    : kind === "telecomLeadAcidProcurement"
+    ? ["upsVrlaTechnologySelection", "dataCenterBackupPowerAgmSeparator", "agmSeparatorBatchProcessControl", "keyTechnicalParameters"]
+    : kind === "upsOriginalManufacturerEvidence"
+    ? ["upsBatteryIndividualMonitoring", "agmSeparatorBatchProcessControl", "agmSeparatorManufacturingQualityDelivery", "keyTechnicalParameters"]
+    : kind === "agmVsGemGlassFiber"
+    ? ["earlyChinaLeadAcidBatteryManufacturing", "agmSeparatorThirdPole", "whatIsAgmSeparator", "agmSeparatorPressureRetention"]
+    : kind === "earlyLeadAcidElectrodeFormation"
     ? ["earlyChinaLeadAcidBatteryManufacturing", "agmSeparatorThirdPole", "whatIsAgmSeparator", "agmSeparatorPressureRetention"]
     : kind === "agmSeparatorPressureCharts"
     ? ["agmSeparatorPressureRetention", "keyTechnicalParameters", "agmSeparatorBatchProcessControl", "agmStartStopBatteryProcurement"]
@@ -1319,6 +1363,51 @@ function buildArticle(locale, kind, localeData) {
     },
     footer: { description: common.footer, wechat: common.wechat, mobile: common.mobile }
   };
+
+  if (kind === "agmVsGemGlassFiber") {
+    result.comparison = topic.comparison;
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[5][1], text: topic.referenceNote, items: [
+  [
+    "ArcActive — Technology",
+    "https://www.arcactive.com/technology"
+  ],
+  [
+    "ArcActive — Deakin University",
+    "https://www.arcactive.com/"
+  ],
+  [
+    "H&V — GEM",
+    "https://www.hollingsworth-vose.com/industries/gem-lead-acid-battery-plate-alternative/"
+  ]
+] };
+  }
+
+  if (kind === "upsOriginalManufacturerEvidence") {
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[5][1], text: topic.referenceNote, items: [
+  [
+    "PBOC — Financial News Press, 2026-10-09",
+    "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/2b3536f1205442898a6c826bc16c4830.html?Type=fzjggg&noticeId=318428c1-c38e-11f1-88d4-b4055dfb2cc6&noticeType=001019"
+  ]
+] };
+  }
+
+  if (kind === "telecomLeadAcidProcurement") {
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[5][1], text: topic.referenceNote, items: [
+  [
+    "Vision — 2026-09-11",
+    "https://www.vision-batt.com/en/news/show/4u9b23cf34l.html"
+  ]
+] };
+  }
+
+  if (kind === "leadPremiumDemandRestocking") {
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[5][1], text: topic.referenceNote, items: [
+  [
+    "Yangtze Nonferrous — 2026-09-29",
+    "https://pb.ccmn.cn/news/ZX018/202609/f39296a023984b088d8302eee0da446b.html"
+  ]
+] };
+  }
 
   if (kind === "earlyLeadAcidElectrodeFormation") {
     result.references = { eyebrow: localeData.ui.reference, title: topic.sections[5][1], text: topic.referenceNote, items: [

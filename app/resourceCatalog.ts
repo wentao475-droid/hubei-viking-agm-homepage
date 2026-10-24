@@ -114,6 +114,74 @@ export const resourceActions: ResourceAction[] = [
 
 export const resourceArticles: ResourceArticle[] = [
 {
+  "id": "lead-premium-battery-demand-based-restocking",
+  "category": "buyerGuides",
+  "publishedAt": "2026-10-24",
+  "title": {
+    "en": "Lead Premiums and Cautious Restocking: Check Orders, Inventory and Cash Flow",
+    "zh": "铅现货升水，蓄企为何仍谨慎补库？先看订单、库存与现金流"
+  },
+  "description": {
+    "en": "A September 2026 lead-market snapshot shows why price strength and cautious battery-material purchasing can coexist. AGM supply plans should follow specifications and actual production needs.",
+    "zh": "2026 年 9 月的一则铅市快照，说明价格偏强与材料采购谨慎可以并存。AGM 供货计划仍应围绕规格与实际排产需求制定。"
+  },
+  "href": {
+    "en": "/blog/lead-premium-battery-demand-based-restocking/",
+    "zh": "/zh/blog/lead-premium-battery-demand-based-restocking/"
+  }
+},
+{
+  "id": "telecom-backup-lead-acid-procurement-2027-2028",
+  "category": "industryApplications",
+  "publishedAt": "2026-10-24",
+  "title": {
+    "en": "Telecom Backup Battery Selection: What a 2027–2028 Lead-Acid Procurement Shows",
+    "zh": "通信备电怎么选？从 2027—2028 年铅酸电池采购看评估条件"
+  },
+  "description": {
+    "en": "One procurement keeps lead-acid within a specific backup-power program. Selection still needs discharge power, float conditions, system fit and total cost; AGM evidence remains material-level.",
+    "zh": "单一采购说明铅酸仍在该备电项目范围内。选型仍需结合放电功率、浮充条件、系统适配与总成本；AGM 数据只承担材料层面的证据作用。"
+  },
+  "href": {
+    "en": "/blog/telecom-backup-lead-acid-procurement-2027-2028/",
+    "zh": "/zh/blog/telecom-backup-lead-acid-procurement-2027-2028/"
+  }
+},
+{
+  "id": "ups-battery-original-manufacturer-production-address-evidence",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-10-24",
+  "title": {
+    "en": "UPS Battery Procurement: Match the Production Address to Original-Manufacturer Evidence",
+    "zh": "UPS 电池原厂证明怎么核对？把生产地址与泰尔文件对应起来"
+  },
+  "description": {
+    "en": "A Financial News Press notice shows how producer, origin and TLC records must align in one UPS battery procurement. These conditions are project-specific, not a general OEM/ODM policy.",
+    "zh": "金融时报社一则采购公告要求生产单位、产地证明与泰尔文件相互对应。这些要求仅适用于该项目，不是通用 OEM／ODM 政策。"
+  },
+  "href": {
+    "en": "/blog/ups-battery-original-manufacturer-production-address-evidence/",
+    "zh": "/zh/blog/ups-battery-original-manufacturer-production-address-evidence/"
+  }
+},
+{
+  "id": "agm-separator-vs-gem-negative-electrode",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-10-24",
+  "title": {
+    "en": "AGM and GEM: Glass Fiber Between the Plates or Inside the Negative Electrode?",
+    "zh": "AGM 与 GEM：玻璃纤维在极板之间，还是在负极内部？"
+  },
+  "description": {
+    "en": "AGM separators and GEM use glass fiber in different locations. Compare their functions, design priorities and evidence before reviewing specifications.",
+    "zh": "AGM 隔板与 GEM 都使用玻纤，但所在位置、功能与设计逻辑不同。采购比较应先辨认结构角色，再审阅规格与验证条件。"
+  },
+  "href": {
+    "en": "/blog/agm-separator-vs-gem-negative-electrode/",
+    "zh": "/zh/blog/agm-separator-vs-gem-negative-electrode/"
+  }
+},
+{
   "id": "early-lead-acid-battery-electrode-formation",
   "category": "manufacturingQuality",
   "publishedAt": "2026-10-24",
@@ -575,6 +643,10 @@ export const resourceArticles: ResourceArticle[] = [
 ];
 
 const articleKindById: Record<string, string> = {
+  "agm-separator-vs-gem-negative-electrode": "agmVsGemGlassFiber",
+  "ups-battery-original-manufacturer-production-address-evidence": "upsOriginalManufacturerEvidence",
+  "telecom-backup-lead-acid-procurement-2027-2028": "telecomLeadAcidProcurement",
+  "lead-premium-battery-demand-based-restocking": "leadPremiumDemandRestocking",
   "early-lead-acid-battery-electrode-formation": "earlyLeadAcidElectrodeFormation",
   "reading-agm-separator-pressure-charts": "agmSeparatorPressureCharts",
   "ups-battery-272-individual-monitors-batch-traceability": "upsBatteryIndividualMonitoring",

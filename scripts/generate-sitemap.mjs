@@ -4,6 +4,10 @@ import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../c
 
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
+  { en: "/blog/lead-premium-battery-demand-based-restocking/", zh: "/zh/blog/lead-premium-battery-demand-based-restocking/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
+  { en: "/blog/telecom-backup-lead-acid-procurement-2027-2028/", zh: "/zh/blog/telecom-backup-lead-acid-procurement-2027-2028/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
+  { en: "/blog/ups-battery-original-manufacturer-production-address-evidence/", zh: "/zh/blog/ups-battery-original-manufacturer-production-address-evidence/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
+  { en: "/blog/agm-separator-vs-gem-negative-electrode/", zh: "/zh/blog/agm-separator-vs-gem-negative-electrode/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
   { en: "/blog/early-lead-acid-battery-electrode-formation/", zh: "/zh/blog/early-lead-acid-battery-electrode-formation/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
   { en: "/blog/reading-agm-separator-pressure-charts/", zh: "/zh/blog/reading-agm-separator-pressure-charts/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
   { en: "/blog/ups-battery-272-individual-monitors-batch-traceability/", zh: "/zh/blog/ups-battery-272-individual-monitors-batch-traceability/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-18", secondaryLastmod: "2026-10-18", arabicLastmod: "2026-10-18" },
