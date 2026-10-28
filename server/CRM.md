@@ -92,4 +92,11 @@ git diff --check
 
 - 自动测试 42 项通过，新增覆盖 PDF/Word、中文/英文编号、分段文字、页眉、多个/重复编号、手工回退、文件格式/大小限制、草稿权限/数量/取消/过期、合同与订单原子保存及重复提交。浏览器使用虚构合同验证编号回填、保存后原件关联及列表直接编辑；390px 手机表单无横向溢出，重复提示不会覆盖手填编号，关闭后合同草稿数为零。
 - 解析依赖锁定 `pdfjs-dist@5.5.207` 与 `fflate@0.8.3`；PDF.js 只调用文字提取接口，不使用文档脚本或外部转换服务。版本选择参考官方 Node 示例及安全公告，避开受影响的 5.6.x 版本：[Node 示例](https://github.com/mozilla/pdf.js/blob/master/examples/node/getinfo.mjs)、[安全公告](https://github.com/advisories/GHSA-hq66-cqwq-w95j)。
-- 依赖审计仍报告 5 个既有依赖告警（body-parser、express、multer、nodemailer、qs），新增解析依赖无告警；当前部署流程的审计关卡会阻止上线。本次不越过审计、不自动修复无关依赖、不提交或部署，发布前需另行处理这些告警并复测。
+- 当次依赖审计报告 5 个既有依赖告警（body-parser、express、multer、nodemailer、qs），新增解析依赖无告警；后续修复与复测见下方。
+
+## 后端部署依赖修复（2026-10-28）
+
+- 核对 GitHub Actions 运行 `40704660987`：`Audit API dependencies` 因 5 项漏洞失败，测试、文件同步和服务器重启均未执行，线上后端未更新。Node.js Actions 运行时弃用提示不是此次失败原因。
+- 更新锁定版本为 Express 4.22.3、body-parser 1.20.9、Multer 2.5.0、Nodemailer 10.2.1；将 qs 覆盖版本从 6.16.0 更新到 6.17.0。保留审计关卡，不修改业务逻辑或数据库。
+- 使用与失败任务相同的 Node 20.20.2 完成 `npm ci --omit=dev --prefix server` 和全部 42 项测试；`npm audit --omit=dev --prefix server` 为 0 项漏洞，差异空白检查通过。
+- 本地修复未提交、推送或部署；提交这些依赖文件后需再次核对后端部署结果，不能以官网静态部署成功替代后端上线确认。
