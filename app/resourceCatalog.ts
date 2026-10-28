@@ -114,6 +114,57 @@ export const resourceActions: ResourceAction[] = [
 
 export const resourceArticles: ResourceArticle[] = [
 {
+  "id": "commercial-industrial-energy-storage-deployment-costs",
+  "category": "industryApplications",
+  "publishedAt": "2026-10-28",
+  "title": {
+    "en": "Beyond the Battery Quote: Evaluating C&I Energy Storage Deployment Costs",
+    "zh": "电池报价之外：工商储项目还要评估哪些落地成本？"
+  },
+  "description": {
+    "en": "Compare usable energy, site conditions and deployment scope. Separate ArcActive's company disclosures about costs and its pilot from universal economic conclusions.",
+    "zh": "先对齐可用能量、现场条件与交付范围，再比较储能方案；区分 ArcActive 的成本与试点披露和普遍经济性结论。"
+  },
+  "href": {
+    "en": "/blog/commercial-industrial-energy-storage-deployment-costs/",
+    "zh": "/zh/blog/commercial-industrial-energy-storage-deployment-costs/"
+  }
+},
+{
+  "id": "can-adding-fluid-restore-weak-lead-acid-battery",
+  "category": "buyerGuides",
+  "publishedAt": "2026-10-28",
+  "title": {
+    "en": "Can Adding Fluid Restore a Weak Lead-Acid Battery?",
+    "zh": "铅酸电池不耐用了，加液就能恢复吗？"
+  },
+  "description": {
+    "en": "Identify the battery construction and exact model instructions first. Reduced runtime does not prove low fluid, and AGM is not designed for routine fluid top-ups.",
+    "zh": "先识别电池结构和具体型号的维护要求。续航缩短不等于缺液，AGM 也不是为日常补液设计的。"
+  },
+  "href": {
+    "en": "/blog/can-adding-fluid-restore-weak-lead-acid-battery/",
+    "zh": "/zh/blog/can-adding-fluid-restore-weak-lead-acid-battery/"
+  }
+},
+{
+  "id": "rv-agm-batteries-starting-house-power-duty",
+  "category": "industryApplications",
+  "publishedAt": "2026-10-28",
+  "title": {
+    "en": "RV AGM Batteries: Choose Starting and House Power by Duty",
+    "zh": "房车 AGM 电池：启动与生活用电，应按工况分别选择"
+  },
+  "description": {
+    "en": "Separate AGM construction from starting, deep-cycle and dual-purpose duty. Review house loads, capacity test conditions, charging compatibility and separator validation.",
+    "zh": "区分 AGM 结构与启动、深循环、双用途设计，结合生活负载、容量测试条件、充电兼容性及隔板验证判断。"
+  },
+  "href": {
+    "en": "/blog/rv-agm-batteries-starting-house-power-duty/",
+    "zh": "/zh/blog/rv-agm-batteries-starting-house-power-duty/"
+  }
+},
+{
   "id": "agm-battery-acid-volume-wet-out-uniformity",
   "category": "manufacturingQuality",
   "publishedAt": "2026-10-27",
@@ -660,6 +711,9 @@ export const resourceArticles: ResourceArticle[] = [
 ];
 
 const articleKindById: Record<string, string> = {
+  "commercial-industrial-energy-storage-deployment-costs": "ciStorageDeploymentCosts",
+  "can-adding-fluid-restore-weak-lead-acid-battery": "leadAcidFluidTopUp",
+  "rv-agm-batteries-starting-house-power-duty": "rvAgmStartingHouseDuty",
   "agm-separator-vs-gem-negative-electrode": "agmVsGemGlassFiber",
   "ups-battery-original-manufacturer-production-address-evidence": "upsOriginalManufacturerEvidence",
   "telecom-backup-lead-acid-procurement-2027-2028": "telecomLeadAcidProcurement",

@@ -2166,6 +2166,153 @@ const agmVsGemGlassFiberSeo = {
   }
 } as const;
 
+const ciStorageDeploymentCostsSeo = {
+  "en": {
+    "path": "/blog/commercial-industrial-energy-storage-deployment-costs/",
+    "alternatePath": "/zh/blog/commercial-industrial-energy-storage-deployment-costs/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Beyond the Battery Quote: Evaluating C&I Energy Storage Deployment Costs | Viking AGM",
+    "description": "Compare usable energy, site conditions and deployment scope. Separate ArcActive's company disclosures about costs and its pilot from universal economic conclusions.",
+    "keywords": [
+      "Beyond the Battery Quote: Evaluating C&I Energy Storage Deployment Costs",
+      "AGM",
+      "C&I energy storage"
+    ],
+    "pageName": "Beyond the Battery Quote: Evaluating C&I Energy Storage Deployment Costs",
+    "articleDescription": "Compare usable energy, site conditions and deployment scope. Separate ArcActive's company disclosures about costs and its pilot from universal economic conclusions.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Beyond the Battery Quote: Evaluating C&I Energy Storage Deployment Costs"
+    ],
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-28"
+  },
+  "zh": {
+    "path": "/zh/blog/commercial-industrial-energy-storage-deployment-costs/",
+    "alternatePath": "/blog/commercial-industrial-energy-storage-deployment-costs/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "电池报价之外：工商储项目还要评估哪些落地成本？ | Viking AGM",
+    "description": "先对齐可用能量、现场条件与交付范围，再比较储能方案；区分 ArcActive 的成本与试点披露和普遍经济性结论。",
+    "keywords": [
+      "电池报价之外：工商储项目还要评估哪些落地成本？",
+      "AGM",
+      "C&I energy storage"
+    ],
+    "pageName": "电池报价之外：工商储项目还要评估哪些落地成本？",
+    "articleDescription": "先对齐可用能量、现场条件与交付范围，再比较储能方案；区分 ArcActive 的成本与试点披露和普遍经济性结论。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "电池报价之外：工商储项目还要评估哪些落地成本？"
+    ],
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-28"
+  }
+} as const;
+
+const leadAcidFluidTopUpSeo = {
+  "en": {
+    "path": "/blog/can-adding-fluid-restore-weak-lead-acid-battery/",
+    "alternatePath": "/zh/blog/can-adding-fluid-restore-weak-lead-acid-battery/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Can Adding Fluid Restore a Weak Lead-Acid Battery? | Viking AGM",
+    "description": "Identify the battery construction and exact model instructions first. Reduced runtime does not prove low fluid, and AGM is not designed for routine fluid top-ups.",
+    "keywords": [
+      "Can Adding Fluid Restore a Weak Lead-Acid Battery?",
+      "AGM",
+      "VRLA"
+    ],
+    "pageName": "Can Adding Fluid Restore a Weak Lead-Acid Battery?",
+    "articleDescription": "Identify the battery construction and exact model instructions first. Reduced runtime does not prove low fluid, and AGM is not designed for routine fluid top-ups.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Can Adding Fluid Restore a Weak Lead-Acid Battery?"
+    ],
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-28"
+  },
+  "zh": {
+    "path": "/zh/blog/can-adding-fluid-restore-weak-lead-acid-battery/",
+    "alternatePath": "/blog/can-adding-fluid-restore-weak-lead-acid-battery/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "铅酸电池不耐用了，加液就能恢复吗？ | Viking AGM",
+    "description": "先识别电池结构和具体型号的维护要求。续航缩短不等于缺液，AGM 也不是为日常补液设计的。",
+    "keywords": [
+      "铅酸电池不耐用了，加液就能恢复吗？",
+      "AGM",
+      "VRLA"
+    ],
+    "pageName": "铅酸电池不耐用了，加液就能恢复吗？",
+    "articleDescription": "先识别电池结构和具体型号的维护要求。续航缩短不等于缺液，AGM 也不是为日常补液设计的。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "铅酸电池不耐用了，加液就能恢复吗？"
+    ],
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-28"
+  }
+} as const;
+
+const rvAgmStartingHouseDutySeo = {
+  "en": {
+    "path": "/blog/rv-agm-batteries-starting-house-power-duty/",
+    "alternatePath": "/zh/blog/rv-agm-batteries-starting-house-power-duty/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "RV AGM Batteries: Choose Starting and House Power by Duty | Viking AGM",
+    "description": "Separate AGM construction from starting, deep-cycle and dual-purpose duty. Review house loads, capacity test conditions, charging compatibility and separator validation.",
+    "keywords": [
+      "RV AGM Batteries: Choose Starting and House Power by Duty",
+      "AGM",
+      "VRLA"
+    ],
+    "pageName": "RV AGM Batteries: Choose Starting and House Power by Duty",
+    "articleDescription": "Separate AGM construction from starting, deep-cycle and dual-purpose duty. Review house loads, capacity test conditions, charging compatibility and separator validation.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "RV AGM Batteries: Choose Starting and House Power by Duty"
+    ],
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-28"
+  },
+  "zh": {
+    "path": "/zh/blog/rv-agm-batteries-starting-house-power-duty/",
+    "alternatePath": "/blog/rv-agm-batteries-starting-house-power-duty/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "房车 AGM 电池：启动与生活用电，应按工况分别选择 | Viking AGM",
+    "description": "区分 AGM 结构与启动、深循环、双用途设计，结合生活负载、容量测试条件、充电兼容性及隔板验证判断。",
+    "keywords": [
+      "房车 AGM 电池：启动与生活用电，应按工况分别选择",
+      "AGM",
+      "VRLA"
+    ],
+    "pageName": "房车 AGM 电池：启动与生活用电，应按工况分别选择",
+    "articleDescription": "区分 AGM 结构与启动、深循环、双用途设计，结合生活负载、容量测试条件、充电兼容性及隔板验证判断。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "房车 AGM 电池：启动与生活用电，应按工况分别选择"
+    ],
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-28"
+  }
+} as const;
+
 const upsOriginalManufacturerEvidenceSeo = {
   "en": {
     "path": "/blog/ups-battery-original-manufacturer-production-address-evidence/",
@@ -5300,6 +5447,60 @@ export function En18060BatteryStandardStructuredData({ lang }: { lang: Lang }) {
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
 }
+
+export function buildCiStorageDeploymentCostsMetadata(lang: Lang): Metadata {
+  const current = seoContent("ciStorageDeploymentCosts", lang, ciStorageDeploymentCostsSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("ciStorageDeploymentCosts"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/ci-storage-deployment-costs-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function CiStorageDeploymentCostsStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("ciStorageDeploymentCosts", lang, ciStorageDeploymentCostsSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/ci-storage-deployment-costs-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Commercial and industrial storage deployment costs", "Company disclosure and evidence boundaries"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildLeadAcidFluidTopUpMetadata(lang: Lang): Metadata {
+  const current = seoContent("leadAcidFluidTopUp", lang, leadAcidFluidTopUpSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("leadAcidFluidTopUp"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/lead-acid-fluid-topup-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function LeadAcidFluidTopUpStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("leadAcidFluidTopUp", lang, leadAcidFluidTopUpSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/lead-acid-fluid-topup-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Lead-acid battery construction and maintenance", "AGM electrolyte retention"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+
+
+export function buildRvAgmStartingHouseDutyMetadata(lang: Lang): Metadata {
+  const current = seoContent("rvAgmStartingHouseDuty", lang, rvAgmStartingHouseDutySeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("rvAgmStartingHouseDuty"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/rv-agm-starting-house-duty-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function RvAgmStartingHouseDutyStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("rvAgmStartingHouseDuty", lang, rvAgmStartingHouseDutySeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/rv-agm-starting-house-duty-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["RV starting and house battery duty", "AGM separator validation"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
 
 export function DataCenterEvLowVoltageAgmStructuredData({ lang }: { lang: Lang }) {
   const current = seoContent("dataCenterEvLowVoltageAgm", lang, dataCenterEvLowVoltageAgmSeo[lang]);

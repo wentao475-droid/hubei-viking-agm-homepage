@@ -1,3 +1,6 @@
+import { ciStorageDeploymentTopics } from "./ci-storage-deployment-topics.mjs";
+import { leadAcidFluidTopUpTopics } from "./lead-acid-fluid-topup-topics.mjs";
+import { rvAgmDutyTopics } from "./rv-agm-duty-topics.mjs";
 import { additionalResourceTopics } from "./additional-resource-topics.mjs";
 import { arabicResourceData } from "./arabic-resources.mjs";
 import { completeResourceSections, completedResourceKinds } from "./resource-section-completions.mjs";
@@ -19,6 +22,9 @@ import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
+  "ciStorageDeploymentCosts",
+  "leadAcidFluidTopUp",
+  "rvAgmStartingHouseDuty",
   "agmAcidVolumeWetOut",
   "leadPremiumDemandRestocking",
   "telecomLeadAcidProcurement",
@@ -86,9 +92,15 @@ export const articleDefinitions = {
   ,telecomLeadAcidProcurement: ["telecom-backup-lead-acid-procurement-2027-2028", "industryApplications", "2026-10-24", "2026-10-24"]
   ,upsOriginalManufacturerEvidence: ["ups-battery-original-manufacturer-production-address-evidence", "manufacturingQuality", "2026-10-24", "2026-10-24"]
   ,agmVsGemGlassFiber: ["agm-separator-vs-gem-negative-electrode", "manufacturingQuality", "2026-10-24", "2026-10-24"]
+  ,rvAgmStartingHouseDuty: ["rv-agm-batteries-starting-house-power-duty", "industryApplications", "2026-10-28", "2026-10-28"]
+  ,leadAcidFluidTopUp: ["can-adding-fluid-restore-weak-lead-acid-battery", "buyerGuides", "2026-10-28", "2026-10-28"]
+  ,ciStorageDeploymentCosts: ["commercial-industrial-energy-storage-deployment-costs", "industryApplications", "2026-10-28", "2026-10-28"]
 };
 
 const images = {
+  ciStorageDeploymentCosts: ["/images/articles/ci-storage-deployment-costs-hero-1600.webp", 1600, 1200],
+  leadAcidFluidTopUp: ["/images/articles/lead-acid-fluid-topup-hero-1600.webp", 1600, 1200],
+  rvAgmStartingHouseDuty: ["/images/articles/rv-agm-starting-house-duty-hero-1600.webp", 1600, 1200],
   agmAcidVolumeWetOut: ["/images/articles/agm-acid-volume-wetout-hero-1600.webp", 1600, 1200],
   leadPremiumDemandRestocking: ["/images/articles/lead-premium-restocking-hero-1600.webp", 1600, 1200],
   telecomLeadAcidProcurement: ["/images/articles/telecom-backup-procurement-hero-1600.webp", 1600, 1200],
@@ -1206,6 +1218,18 @@ for (const [locale, topic] of Object.entries(agmAcidVolumeWetOutTopics)) {
   secondaryResourceData[locale].topics.agmAcidVolumeWetOut = topic;
 }
 
+for (const [locale, topic] of Object.entries(rvAgmDutyTopics)) {
+  secondaryResourceData[locale].topics.rvAgmStartingHouseDuty = topic;
+}
+
+for (const [locale, topic] of Object.entries(leadAcidFluidTopUpTopics)) {
+  secondaryResourceData[locale].topics.leadAcidFluidTopUp = topic;
+}
+
+for (const [locale, topic] of Object.entries(ciStorageDeploymentTopics)) {
+  secondaryResourceData[locale].topics.ciStorageDeploymentCosts = topic;
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1249,6 +1273,9 @@ const arabicReferences = {
 
 
 const generatedArticleVisuals = {
+  "ciStorageDeploymentCosts": "/images/articles/ci-storage-deployment-costs-hero-1600.webp",
+  "leadAcidFluidTopUp": "/images/articles/lead-acid-fluid-topup-hero-1600.webp",
+  "rvAgmStartingHouseDuty": "/images/articles/rv-agm-starting-house-duty-hero-1600.webp",
   "agmAcidVolumeWetOut": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
   "leadPremiumDemandRestocking": "/images/articles/lead-premium-restocking-hero-1600.webp",
   "telecomLeadAcidProcurement": "/images/articles/telecom-backup-procurement-hero-1600.webp",
@@ -1291,7 +1318,13 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "agmAcidVolumeWetOut"
+  const relatedKinds = kind === "ciStorageDeploymentCosts"
+    ? ["batteryTechnologyProjectComparison", "agmSeparatorEnergyDataDelivery", "keyTechnicalParameters", "agmSeparatorPressureRetention"]
+    : kind === "leadAcidFluidTopUp"
+    ? ["whatIsAgmSeparator", "keyTechnicalParameters", "agmSeparatorThirdPole", "agmSeparatorPressureRetention"]
+    : kind === "rvAgmStartingHouseDuty"
+    ? ["agmStartStopBatteryProcurement", "keyTechnicalParameters", "agmSeparatorPressureRetention", "whatIsAgmSeparator"]
+    : kind === "agmAcidVolumeWetOut"
     ? ["agmSeparatorPressureRetention", "keyTechnicalParameters", "agmSeparatorBatchProcessControl", "agmSeparatorPressureCharts"]
     : kind === "leadPremiumDemandRestocking"
     ? ["agmSeparatorBatchProcessControl", "agmSeparatorManufacturingQualityDelivery", "agmSeparatorExportSupplyReadiness", "keyTechnicalParameters"]
@@ -1416,6 +1449,41 @@ function buildArticle(locale, kind, localeData) {
   [
     "Yangtze Nonferrous — 2026-09-29",
     "https://pb.ccmn.cn/news/ZX018/202609/f39296a023984b088d8302eee0da446b.html"
+  ]
+] };
+  }
+
+  if (kind === "ciStorageDeploymentCosts") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "ArcActive — Commercial and Industrial Energy Storage",
+    "https://www.arcactive.com/"
+  ]
+] };
+  }
+
+  if (kind === "leadAcidFluidTopUp") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "Hollingsworth & Vose — AGM",
+    "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+  ],
+  [
+    "Trojan Battery — AES AGM",
+    "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+  ]
+] };
+  }
+
+  if (kind === "rvAgmStartingHouseDuty") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "Trojan Battery — AGM",
+    "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+  ],
+  [
+    "Hollingsworth & Vose — AGM",
+    "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
   ]
 ] };
   }

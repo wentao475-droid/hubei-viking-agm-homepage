@@ -15,6 +15,9 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "ciStorageDeploymentCosts"
+  | "leadAcidFluidTopUp"
+  | "rvAgmStartingHouseDuty"
   | "agmAcidVolumeWetOut"
   | "leadPremiumDemandRestocking"
   | "telecomLeadAcidProcurement"
@@ -6271,6 +6274,947 @@ const leadPremiumDemandRestockingCopy = {
   }
 } as const;
 
+const ciStorageDeploymentCostsCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/commercial-industrial-energy-storage-deployment-costs/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Budget scope",
+      "title": "Beyond the Battery Quote: Evaluating C&I Energy Storage Deployment Costs",
+      "subtitle": "Compare usable energy, site conditions and deployment scope. Separate ArcActive's company disclosures about costs and its pilot from universal economic conclusions.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/ci-storage-deployment-costs-hero-1600.webp",
+        "alt": "AI-generated illustration of storage site planning, equipment and a budget checklist",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "A battery equipment quote is not the complete budget for a commercial and industrial energy storage project. Site conditions and deployment requirements need assessment before solutions can be compared."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Budget scope",
+        "title": "Equipment arrival is not the end of the project budget",
+        "text": "From equipment arrival to operation, a project may involve site preparation, electrical connection, on-site engineering and installation, fire protection, other safeguards, emergency access, approvals and insurance. Requirements vary by project, and not every site incurs the same costs. These items cannot be inferred from the price of a particular battery."
+      },
+      {
+        "eyebrow": "Company disclosure",
+        "title": "ArcActive describes its own deployment approach",
+        "text": "ArcActive presents a containerized storage system for commercial and industrial applications. The company says spacing, fire protection, emergency access and other safeguards occupy space, add engineering complexity and may extend design, approval and installation timelines. It also says defined configurations and reuse of earlier engineering, planning and assessment work may reduce costs and deployment time. These are statements about its own solution, not independently audited conclusions for every project."
+      },
+      {
+        "eyebrow": "Pilot evidence",
+        "title": "Operation is not proof of universal economics",
+        "text": "According to ArcActive, its first pilot-scale containerized system is operating at Deakin University's Waurn Ponds microgrid in Australia in collaboration with Origin Zero. This confirms that the company has disclosed an operating field pilot. The cited page does not provide a complete, independently verifiable cost comparison or an independent audit. The pilot cannot establish that a solution will necessarily cost less at other sites."
+      },
+      {
+        "eyebrow": "Comparable requirements",
+        "title": "Align the task before comparing solutions",
+        "text": "Compare usable energy, load characteristics, site boundaries, cycling profile, temperature and operating requirements. Then review engineering, protection, connection and deployment conditions outside the battery equipment. Record what the quote includes and what still needs confirmation. This is a project-assessment approach, not a universal regulation, and does not replace compliance decisions for a specific project."
+      },
+      {
+        "eyebrow": "AGM boundary",
+        "title": "Separator evaluation belongs at the battery-material level",
+        "text": "Viking provides AGM separators with specification communication and matching support. An internal battery material cannot by itself determine engineering cost or the overall economics of a storage system. Evaluate AGM material when the target battery uses AGM construction; the ArcActive disclosure does not establish use of AGM or Viking materials in its system. Share cycling profile, operating temperature, plate-group structure and dimensions for application-fit discussions. System economics still require complete design and actual site evaluation."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Comparable project and material review checklist",
+      "text": "Submit your cycling profile, operating temperature, battery construction and AGM dimensions to discuss application fit, samples and specifications.",
+      "items": [
+        "Usable energy and load characteristics",
+        "Site boundaries, protection, connection and deployment scope",
+        "Cycling profile, temperature and operating requirements",
+        "Battery construction, AGM dimensions and validation scope"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Beyond Lead, Lithium or Sodium: Compare Batteries by Project Duty",
+          "/blog/compare-lead-lithium-sodium-batteries-by-project-duty/"
+        ],
+        [
+          "A Production Line Saves Energy. Why Might Buyers Care More About Delivery?",
+          "/blog/agm-separator-energy-data-and-delivery-risk/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Submit your cycling profile, operating temperature, battery construction and AGM dimensions to discuss application fit, samples and specifications.",
+      "checklist": [
+        "Usable energy and load characteristics",
+        "Site boundaries, protection, connection and deployment scope",
+        "Cycling profile, temperature and operating requirements",
+        "Battery construction, AGM dimensions and validation scope"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Usable energy and load characteristics; Site boundaries, protection, connection and deployment scope; Cycling profile, temperature and operating requirements; Battery construction, AGM dimensions and validation scope"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "ArcActive's public page was rechecked on 28 October 2026; it does not state the original publication date of the relevant material. Pilot and cost-benefit statements are attributed to the company. No complete, independently auditable cost data was identified on the cited page. The AI illustration is not an actual project or a compliance design.",
+      "items": [
+        [
+          "ArcActive — Commercial and Industrial Energy Storage",
+          "https://www.arcactive.com/"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/commercial-industrial-energy-storage-deployment-costs/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "预算范围",
+      "title": "电池报价之外：工商储项目还要评估哪些落地成本？",
+      "subtitle": "先对齐可用能量、现场条件与交付范围，再比较储能方案；区分 ArcActive 的成本与试点披露和普遍经济性结论。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/ci-storage-deployment-costs-hero-1600.webp",
+        "alt": "AI 示意图：工商储场地规划、设备与预算清单",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "电池设备报价不等于工商储项目的完整预算。方案比较还需要评估场地条件和部署要求，才能理解从到货到运行的实际边界。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "预算范围",
+        "title": "设备到货之后，仍有项目成本需要确认",
+        "text": "从设备到货到系统运行，项目可能涉及场地准备、电气连接、现场工程与安装、消防、其他防护措施、应急通道、审批及保险。不同项目要求不同，并非每个场地都会发生相同费用。这些成本不能仅从某种电池的价格推导出来。"
+      },
+      {
+        "eyebrow": "企业披露",
+        "title": "ArcActive 描述的是自己的部署思路",
+        "text": "ArcActive 官网展示面向工商业应用的集装箱式储能系统。公司称，布置间距、消防、应急通道和其他防护要求会占用空间、增加工程复杂度，并可能延长设计、审批和安装周期；明确的系统配置，以及复用既有工程、规划和评估工作，则可能减少成本与部署时间。这些表述属于该公司对自身方案的说明，不是适用于所有项目的独立审计结论。"
+      },
+      {
+        "eyebrow": "试点证据",
+        "title": "有运行试点，不等于普遍更便宜",
+        "text": "据 ArcActive 披露，其首个试点规模集装箱式储能系统，已通过与 Origin Zero 的合作，在澳大利亚 Deakin University 的 Waurn Ponds 微电网运行。这确认了企业公开披露一个运行中的现场试点。引用页面没有给出完整、可独立验证的项目成本对比或独立审计，因此不能据此认定该方案在其他场地必然更便宜。"
+      },
+      {
+        "eyebrow": "同条件比较",
+        "title": "先把每个方案承担的任务对齐",
+        "text": "比较前应对齐可用能量、负载特征、场地边界、循环工况、温度和运行要求，再审阅电池设备之外的工程、防护、连接与部署条件。记录报价已经包含哪些内容、哪些项目仍待确认。这是一种项目评估方法，不是通用法规，也不替代具体项目的合规判断。"
+      },
+      {
+        "eyebrow": "AGM 边界",
+        "title": "隔板评估应放回电池内部材料这一层",
+        "text": "维京提供 AGM 隔板，以及规格沟通和匹配支持。内部材料不能单独决定储能系统的工程成本或整体经济性。只有目标电池采用 AGM 结构时，才进入 AGM 材料评估；ArcActive 的这份披露不能证明其系统使用 AGM 或维京材料。请提供循环工况、运行温度、极群结构和尺寸，沟通应用匹配；系统经济性仍需完整设计和真实场地评估。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "同条件评估与材料沟通清单",
+      "text": "请提供循环工况、运行温度、电池结构和 AGM 尺寸，沟通应用匹配、样品与规格。",
+      "items": [
+        "可用能量与负载特征",
+        "场地边界、防护、连接与交付范围",
+        "循环工况、温度和运行要求",
+        "电池结构、AGM 尺寸与验证范围"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "铅、锂还是钠？从项目工况比较电池方案",
+          "/zh/blog/compare-lead-lithium-sodium-batteries-by-project-duty/"
+        ],
+        [
+          "一条产线节能，客户为什么可能更关心交付？",
+          "/zh/blog/agm-separator-energy-data-and-delivery-risk/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供循环工况、运行温度、电池结构和 AGM 尺寸，沟通应用匹配、样品与规格。",
+      "checklist": [
+        "可用能量与负载特征",
+        "场地边界、防护、连接与交付范围",
+        "循环工况、温度和运行要求",
+        "电池结构、AGM 尺寸与验证范围"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "可用能量与负载特征; 场地边界、防护、连接与交付范围; 循环工况、温度和运行要求; 电池结构、AGM 尺寸与验证范围"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "ArcActive 官网于 2026 年 10 月 28 日再次核验；相关内容未标明最初发布日期。试点及成本效益表述均归于该公司，引用页面未识别到完整、可独立审计的成本数据。AI 配图不是实际项目或合规设计图。",
+      "items": [
+        [
+          "ArcActive — Commercial and Industrial Energy Storage",
+          "https://www.arcactive.com/"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const leadAcidFluidTopUpCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/can-adding-fluid-restore-weak-lead-acid-battery/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Battery construction",
+      "title": "Can Adding Fluid Restore a Weak Lead-Acid Battery?",
+      "subtitle": "Identify the battery construction and exact model instructions first. Reduced runtime does not prove low fluid, and AGM is not designed for routine fluid top-ups.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/lead-acid-fluid-topup-hero-1600.webp",
+        "alt": "AI-generated illustration: Can Adding Fluid Restore a Weak Lead-Acid Battery?",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Before adding anything to a lead-acid battery, identify its construction and check the manufacturer's instructions for the exact model. Some flooded batteries have maintainable electrolyte levels. AGM batteries use a VRLA design that retains electrolyte within the separator and is not intended for routine fluid top-ups."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Battery construction",
+        "title": "Flooded and AGM batteries need different maintenance approaches",
+        "text": "Some flooded lead-acid batteries have accessible electrolyte levels, with inspection and maintenance procedures defined by the manufacturer. Do not infer permission to top up from the appearance of the case. In AGM construction, the glass-fiber separator holds electrolyte within the plate group rather than leaving a free-liquid layer for routine observation or replenishment. Flooded-battery practices should not be applied to every lead-acid design."
+      },
+      {
+        "eyebrow": "Exact model instructions",
+        "title": "Read the manual before adding any substance",
+        "text": "Trojan's guidance for AES AGM batteries says not to add water, acid or additives, and not to remove or alter the vent valve caps. These requirements apply to the products specified by Trojan. Other batteries should be handled according to their own model-specific documentation. If the construction or model cannot be identified, ask the manufacturer or a qualified service provider before intervening. A general lead-acid description is not a maintenance procedure."
+      },
+      {
+        "eyebrow": "Diagnosis first",
+        "title": "Reduced runtime does not prove that fluid is low",
+        "text": "A battery that no longer lasts as long may need an assessment of its condition, charging equipment and connections, rather than an assumption about fluid level. Trojan notes that both undercharging and overcharging can reduce battery life. Record the model, observed runtime change and charging history to support diagnosis; the methods and acceptance criteria should follow the manufacturer. Adding fluid cannot replace fault diagnosis or guarantee recovery of capacity that has already deteriorated."
+      },
+      {
+        "eyebrow": "Warning signs",
+        "title": "Stop using a battery that is swollen, leaking or unusually hot",
+        "text": "If the case is swollen or leaking, or the battery becomes unusually hot, stop using it and contact the manufacturer or a qualified service provider. These signs call for assessment, not an attempt to add fluid. Do not pry open the case, mix acid or inject fluid into a sealed battery. This article does not provide case-opening procedures or recovery formulations."
+      },
+      {
+        "eyebrow": "Separator matching",
+        "title": "Viking supports separator specifications for battery manufacturers",
+        "text": "Viking supplies AGM separators and supports specification discussions with battery manufacturers and material-selection teams. Electrolyte retention and plate separation must be assessed with the intended application and battery construction. Share the plate-group structure, thickness, width or sheet dimensions, compression and test conditions to begin sample discussions. Selecting separator material does not diagnose or guarantee recovery of a weak battery already in service."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Battery construction and separator matching checklist",
+      "text": "Manufacturing batteries and evaluating AGM separators? Share the application, battery construction and material dimensions to discuss samples and specifications; this is not a used-battery restoration service.",
+      "items": [
+        "Battery application and flooded or AGM/VRLA construction",
+        "Exact model, maintenance instructions and observed symptoms",
+        "Plate-group structure, compression and electrolyte management",
+        "Thickness, width or sheet dimensions and test conditions"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "What Is AGM Separator?",
+          "/blog/what-is-agm-separator/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "The Battery’s ‘Third Pole’: What an AGM Separator Actually Does",
+          "/blog/agm-separator-third-pole-explained/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Manufacturing batteries and evaluating AGM separators? Share the application, battery construction and material dimensions to discuss samples and specifications; this is not a used-battery restoration service.",
+      "checklist": [
+        "Battery application and flooded or AGM/VRLA construction",
+        "Exact model, maintenance instructions and observed symptoms",
+        "Plate-group structure, compression and electrolyte management",
+        "Thickness, width or sheet dimensions and test conditions"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Battery application and flooded or AGM/VRLA construction; Exact model, maintenance instructions and observed symptoms; Plate-group structure, compression and electrolyte management; Thickness, width or sheet dimensions and test conditions"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Sources and technical boundaries",
+      "text": "Sources checked on 28 October 2026. Trojan's maintenance requirements refer to its specified products. H&V's explanation of electrolyte retention is supplier technical information. Neither is presented as a universal maintenance rule for every lead-acid battery or a Viking guarantee. The AI illustration is conceptual, not a repair procedure.",
+      "items": [
+        [
+          "Hollingsworth & Vose — AGM",
+          "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+        ],
+        [
+          "Trojan Battery — AES AGM",
+          "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/can-adding-fluid-restore-weak-lead-acid-battery/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "电池结构",
+      "title": "铅酸电池不耐用了，加液就能恢复吗？",
+      "subtitle": "先识别电池结构和具体型号的维护要求。续航缩短不等于缺液，AGM 也不是为日常补液设计的。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/lead-acid-fluid-topup-hero-1600.webp",
+        "alt": "AI 示意图：铅酸电池不耐用了，加液就能恢复吗？",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "给铅酸电池加入任何东西之前，应先确认结构，并核对该型号的厂家说明。部分富液式电池可以按要求维护电解液液位；AGM 则采用由隔板保持电解液的 VRLA 结构，不以日常补液为维护方式。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "电池结构",
+        "title": "富液式与 AGM 的维护方式不同",
+        "text": "部分富液式铅酸电池具有可接近、可检查的电解液液位，检查与维护流程由厂家规定。不能仅凭外壳形式判断可以补液。AGM 中的玻璃纤维隔板将电解液保持在极群内部，并不是留出一层自由液体供日常观察和补充。富液式电池的维护方法，不能直接套用于所有铅酸电池结构。"
+      },
+      {
+        "eyebrow": "型号说明",
+        "title": "加入任何物质之前，先读具体型号的手册",
+        "text": "Trojan 对其 AES AGM 电池的维护要求是：不加入水、酸或添加剂，不拆卸或改变排气阀帽。这些要求适用于 Trojan 指明的产品；其他电池应遵循自身型号的资料。如果结构或型号尚不能确定，应先向厂家或合格服务机构确认，再考虑处理。笼统的“铅酸电池”名称不能代替维护流程。"
+      },
+      {
+        "eyebrow": "先做诊断",
+        "title": "使用时间缩短，并不能证明是缺液",
+        "text": "电池不耐用，需要评估电池状态、充电设备和连接情况，不能只猜测液位。Trojan 指出，欠充和过充都可能缩短电池寿命。可记录具体型号、续航变化和充电历史，为诊断提供线索；检测方法与判定条件仍应遵循厂家要求。补液不能替代故障诊断，也不能保证已经衰减的容量得到恢复。"
+      },
+      {
+        "eyebrow": "异常信号",
+        "title": "鼓胀、漏液或异常发热时应停止使用",
+        "text": "如果外壳鼓胀、漏液，或者电池出现不同寻常的发热，应停止使用，并联系厂家或合格服务机构。这些现象需要评估，不能作为自行加液的理由。不要撬开外壳、调配酸液，或向密封式电池注入液体。本文不提供开壳操作或容量修复配方。"
+      },
+      {
+        "eyebrow": "隔板匹配",
+        "title": "维京面向电池制造商支持隔板规格沟通",
+        "text": "维京提供 AGM 隔板，并支持电池制造商及材料选型团队开展规格讨论。保液和极板隔离功能应结合目标应用与电池结构评估。请提供极群结构、厚度、宽度或片材尺寸、压缩状态和测试条件，以开始样品沟通。材料选型不能诊断在用电池，也不构成对衰弱电池容量恢复的保证。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "电池结构与隔板匹配沟通清单",
+      "text": "正在制造电池并评估 AGM 隔板？请提供应用、结构和材料尺寸，沟通样品与规格；此处不提供废旧电池修复服务。",
+      "items": [
+        "电池应用及富液式或 AGM/VRLA 结构",
+        "准确型号、维护手册与观察到的现象",
+        "极群结构、压缩状态和电解液管理",
+        "厚度、宽度或片材尺寸及测试条件"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "什么是 AGM 隔板？",
+          "/zh/blog/what-is-agm-separator/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "电池的“第三极”没有端子：AGM 隔板到底在做什么？",
+          "/zh/blog/agm-separator-third-pole-explained/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "正在制造电池并评估 AGM 隔板？请提供应用、结构和材料尺寸，沟通样品与规格；此处不提供废旧电池修复服务。",
+      "checklist": [
+        "电池应用及富液式或 AGM/VRLA 结构",
+        "准确型号、维护手册与观察到的现象",
+        "极群结构、压缩状态和电解液管理",
+        "厚度、宽度或片材尺寸及测试条件"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "电池应用及富液式或 AGM/VRLA 结构; 准确型号、维护手册与观察到的现象; 极群结构、压缩状态和电解液管理; 厚度、宽度或片材尺寸及测试条件"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与技术边界",
+      "text": "来源核验于 2026 年 10 月 28 日。Trojan 的维护要求仅指其指定产品；H&V 的保液说明属于供应商技术资料。不把两份来源写成所有铅酸电池的通用维护规则，也不作为维京保证。AI 配图仅为概念示意，不是修复操作指导。",
+      "items": [
+        [
+          "Hollingsworth & Vose — AGM",
+          "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+        ],
+        [
+          "Trojan Battery — AES AGM",
+          "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const rvAgmStartingHouseDutyCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/rv-agm-batteries-starting-house-power-duty/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Construction and duty",
+      "title": "RV AGM Batteries: Choose Starting and House Power by Duty",
+      "subtitle": "Separate AGM construction from starting, deep-cycle and dual-purpose duty. Review house loads, capacity test conditions, charging compatibility and separator validation.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/rv-agm-starting-house-duty-hero-1600.webp",
+        "alt": "AI-generated illustration: RV AGM Batteries: Choose Starting and House Power by Duty",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "An RV starting battery may deliver high current for only a short period. After the engine stops, the refrigerator, lighting, water pump, fan and electronics may keep drawing power for hours. Both use batteries, but their load patterns differ. The AGM label alone does not establish suitability for house power."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Construction and duty",
+        "title": "AGM is a construction, not a duty rating",
+        "text": "AGM stands for Absorbent Glass Mat. A glass-fiber separator holds electrolyte in a construction commonly used in valve-regulated lead-acid batteries. Starting, deep-cycle and dual-purpose describe the work the battery was designed to perform. Trojan distinguishes brief high-current starting demand, extended equipment supply and a compromise between starting and light cycling. This is a useful selection framework, but the specifications, maintenance instructions and limitations of the individual model remain decisive; one manufacturer's limits should not be applied to every AGM battery."
+      },
+      {
+        "eyebrow": "Load profile",
+        "title": "Starting an engine does not prove suitability for house loads",
+        "text": "List devices that may operate together, their power and expected runtime. Include inverter losses and the momentary starting demand of compressors and pumps. A starting battery may temporarily power lights, but repeated deep discharge must be within that model's intended operating range; Trojan states that its starting batteries are not designed for repeated deep discharge. Frequent short trips with daily charging differ from extended parking supported by solar or shore power. Temperature, installation location, ventilation, maintenance and the available recharging window also matter. Compare this load profile with the model's discharge capability and the vehicle-system design."
+      },
+      {
+        "eyebrow": "Capacity conditions",
+        "title": "Read amp-hours with test conditions and usable capacity",
+        "text": "Battery capacity changes with discharge current. Similar amp-hour ratings measured at different rates cannot be assumed to provide the same result. Confirm the current or discharge duration, end voltage and test temperature before comparing. Rated capacity is separate from usable capacity at the allowed depth of discharge, and actual loads and inverter efficiency affect runtime. Use manufacturer data close to the intended duty, with allowance for cold conditions, ageing and delayed recharging. One Ah figure cannot predict an entire night or journey, and a generic runtime estimate is not a model-specific guarantee."
+      },
+      {
+        "eyebrow": "Charging and layout",
+        "title": "Check charging compatibility and the one-bank or two-bank design",
+        "text": "The alternator charger, solar controller and shore-power charger need voltage settings and charging stages compatible with the selected model. Persistent undercharging or overcharging affects operation and service-life management, so review existing equipment when replacing a battery. With separate starting and house banks, select each against its own duty and check charging and isolation against the vehicle design and equipment instructions. For a manufacturer-designated dual-purpose bank, calculate starting capability and house runtime separately, checking cycling data, recommended discharge limits and warranty terms. Neither layout suits every RV. Qualified modification or service personnel should evaluate wiring, protection or charging changes; a general article is not a rewiring guide."
+      },
+      {
+        "eyebrow": "Separator boundary",
+        "title": "The separator cannot define the duty of the complete battery",
+        "text": "An AGM separator keeps positive and negative plates apart, retains electrolyte and contributes to ion-transport conditions within the plate group. Plates, active material, acid quantity, compression and overall cell design also influence battery performance. H&V's overview supports the material-function explanation; it does not establish Viking specifications or the RV suitability of a finished battery. Users should first select by intended duty and system conditions, then compare AGM, flooded and other constructions. Battery manufacturers must validate the separator with the target plate structure, compression design and electrolyte-management approach. Similar AGM labels can still accompany different design priorities and performance data."
+      },
+      {
+        "eyebrow": "Procurement questions",
+        "title": "What should a battery manufacturer share for separator matching?",
+        "text": "Can any AGM serve as an RV house battery? Confirm the individual model's intended duty and performance data. Can a dual-purpose model serve both roles? Only if its starting, runtime and charging data meet the actual system requirements. Viking supplies AGM separators and supports specification discussions with battery manufacturers; a material request alone cannot select or guarantee the vehicle's complete electrical system. Share the expected loads, cycling pattern, plate-group structure, separator thickness, roll or sheet dimensions and test conditions to prepare samples and a complete-battery validation plan."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Project checklist for separator matching",
+      "text": "Developing a deep-cycle AGM battery for RV applications? Share the intended duty, plate-group structure, separator dimensions and test conditions to discuss samples and specification matching.",
+      "items": [
+        "Starting, deep-cycle or dual-purpose duty and expected loads",
+        "Capacity test conditions, discharge limits and charging method",
+        "Plate-group structure, compression and electrolyte management",
+        "Thickness, width, sheet dimensions and complete-battery validation plan"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Automotive AGM Start-Stop Batteries: What Separator Buyers Should Confirm",
+          "/blog/agm-start-stop-battery-separator-procurement-guide/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+          "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Developing a deep-cycle AGM battery for RV applications? Share the intended duty, plate-group structure, separator dimensions and test conditions to discuss samples and specification matching.",
+      "checklist": [
+        "Starting, deep-cycle or dual-purpose duty and expected loads",
+        "Capacity test conditions, discharge limits and charging method",
+        "Plate-group structure, compression and electrolyte management",
+        "Thickness, width, sheet dimensions and complete-battery validation plan"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Starting, deep-cycle or dual-purpose duty and expected loads; Capacity test conditions, discharge limits and charging method; Plate-group structure, compression and electrolyte management; Thickness, width, sheet dimensions and complete-battery validation plan"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Sources and technical boundaries",
+      "text": "Sources checked on 28 October 2026. Trojan's use classifications and capacity guidance are used within the scope of its own material; H&V supports the separator-function explanation. No third-party model data or supplier claim is a universal AGM result or a Viking guarantee. The AI illustration is conceptual, not a wiring plan, customer installation or test evidence.",
+      "items": [
+        [
+          "Trojan Battery — AGM",
+          "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+        ],
+        [
+          "Hollingsworth & Vose — AGM",
+          "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/rv-agm-batteries-starting-house-power-duty/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "结构与用途",
+      "title": "房车 AGM 电池：启动与生活用电，应按工况分别选择",
+      "subtitle": "区分 AGM 结构与启动、深循环、双用途设计，结合生活负载、容量测试条件、充电兼容性及隔板验证判断。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/rv-agm-starting-house-duty-hero-1600.webp",
+        "alt": "AI 示意图：房车 AGM 电池：启动与生活用电，应按工况分别选择",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "房车启动电池可能只需短时间输出大电流；发动机停机后，冰箱、照明、水泵、风扇和电子设备却可能持续用电数小时。两者都用电池，但负载模式不同。仅有 AGM 标识，不能证明电池适合生活用电。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "结构与用途",
+        "title": "AGM 是结构，不是工况等级",
+        "text": "AGM 是 Absorbent Glass Mat 的缩写，指玻璃纤维隔板保持电解液的结构，常用于阀控式铅酸电池。启动、深循环和双用途则描述电池设计承担的工作。Trojan 的选型资料区分短时大电流启动、长时间设备供电，以及兼顾启动和轻度循环的折中设计。这套分类有助于理解选型，但仍须以具体型号的规格、维护说明和使用限制为准，不能把一家厂商的限制推广到所有 AGM 电池。"
+      },
+      {
+        "eyebrow": "负载梳理",
+        "title": "能启动发动机，不等于适合生活负载",
+        "text": "先列出可能同时运行的设备、功率和使用时间，同时计入逆变损耗，以及压缩机、水泵的瞬时启动需求。启动电池可以临时给灯具供电，但反复深放电是否允许，要看该型号的设计范围；Trojan 明确其启动电池不用于反复深放电。每天充电的短途出行，与依靠太阳能或岸电长时间驻车，需求并不相同。温度、安装位置、通风、维护条件和可用回充窗口也应核对。将负载画像与型号放电能力、车辆系统设计一并评估。"
+      },
+      {
+        "eyebrow": "容量条件",
+        "title": "看 Ah，也要看测试条件和可用容量",
+        "text": "电池容量随放电电流变化。两款电池即使 Ah 接近，如果测量倍率不同，也不能直接判断实际供电结果相同。比较前应确认放电电流或时率、终止电压和测试温度。额定容量还应与允许放电深度下的可用容量区分，实际负载和逆变效率也会改变续航。用接近目标工况的厂家数据估算，并为低温、老化及回充延迟留出余量。单个 Ah 数值不能预测整晚或整段行程，一般估算也不是具体型号的性能保证。"
+      },
+      {
+        "eyebrow": "充电与配置",
+        "title": "同时检查充电兼容性和单组、双组方案",
+        "text": "行车充电器、太阳能控制器和岸电充电器的电压设置与充电阶段，需要兼容所选电池型号。长期欠充或过充会影响运行和寿命管理，更换电池时应同步复核现有设备。启动与生活电池分组时，分别按任务选型，充电及隔离遵循车辆设计和设备说明。使用厂家明确标注的双用途电池组时，仍需分别核算启动能力和生活负载续航，并检查循环数据、推荐放电限制和保修条款。没有一套配置适合所有房车；配线、保护器件或充电系统的变更应由有资质的改装或维修人员评估，不能把一般文章当成接线指南。"
+      },
+      {
+        "eyebrow": "隔板边界",
+        "title": "隔板不能单独决定整电池的使用任务",
+        "text": "AGM 隔板位于正负极板之间，保持两极分离、储持电解液，并参与极群内离子传输条件的形成。极板、活性物质、酸量、压缩状态和整体单体设计也共同影响电池性能。H&V 的概述可用于说明材料功能，但不能证明维京规格或某款成品电池适用于房车。使用者宜先确定用途和系统条件，再比较 AGM、富液式等结构；电池制造商则需将隔板与目标极群、压缩设计和电解液管理配套验证。同样标有 AGM 的产品，也可能有不同设计重点和性能数据。"
+      },
+      {
+        "eyebrow": "采购问答",
+        "title": "制造商做隔板匹配，需要提供什么？",
+        "text": "所有 AGM 都能作为房车生活电池吗？应核对具体型号的设计用途和性能数据。双用途能否兼顾两项任务？前提是其启动、续航和充电数据符合实际系统要求。维京提供 AGM 隔板并支持电池制造商开展规格讨论；单凭材料需求，不能完成整车电气系统的选型或保证。请提供预期负载、循环方式、极群结构、隔板厚度、卷材或片材尺寸及测试条件，以准备样品与整电池验证计划。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "隔板匹配前的项目清单",
+      "text": "正在开发房车深循环 AGM 电池？请提供目标工况、极群结构、隔板尺寸和测试条件，沟通样品与规格匹配。",
+      "items": [
+        "启动、深循环或双用途定位及预期负载",
+        "容量测试条件、放电限制和充电方式",
+        "极群结构、压缩状态和电解液管理",
+        "厚度、宽度、片材尺寸及整电池验证计划"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "汽车 AGM 启停电池：隔板采购需要确认哪些事项？",
+          "/zh/blog/agm-start-stop-battery-separator-procurement-guide/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "隔板装进去没问题，循环以后还能保持压力吗？",
+          "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "正在开发房车深循环 AGM 电池？请提供目标工况、极群结构、隔板尺寸和测试条件，沟通样品与规格匹配。",
+      "checklist": [
+        "启动、深循环或双用途定位及预期负载",
+        "容量测试条件、放电限制和充电方式",
+        "极群结构、压缩状态和电解液管理",
+        "厚度、宽度、片材尺寸及整电池验证计划"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "启动、深循环或双用途定位及预期负载；容量测试条件、放电限制和充电方式；极群结构、压缩状态和电解液管理；厚度、宽度、片材尺寸及整电池验证计划"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与技术边界",
+      "text": "来源核验于 2026 年 10 月 28 日。Trojan 的用途分类及容量说明仅在其资料范围内引用，H&V 用于说明隔板功能。不把第三方型号数据或供应商表述写成所有 AGM 的通用结果或维京保证。AI 配图仅为概念示意，不是接线方案、客户现场或测试证据。",
+      "items": [
+        [
+          "Trojan Battery — AGM",
+          "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+        ],
+        [
+          "Hollingsworth & Vose — AGM",
+          "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const agmAcidVolumeWetOutCopy = {
   "en": {
     "nav": {
@@ -7585,6 +8529,12 @@ export function BlogArticlePage({
       ? telecomLeadAcidProcurementCopy[primaryLang]
       : page === "leadPremiumDemandRestocking"
       ? leadPremiumDemandRestockingCopy[primaryLang]
+      : page === "ciStorageDeploymentCosts"
+      ? ciStorageDeploymentCostsCopy[primaryLang]
+      : page === "leadAcidFluidTopUp"
+      ? leadAcidFluidTopUpCopy[primaryLang]
+      : page === "rvAgmStartingHouseDuty"
+      ? rvAgmStartingHouseDutyCopy[primaryLang]
       : page === "agmAcidVolumeWetOut"
       ? agmAcidVolumeWetOutCopy[primaryLang]
       : page === "earlyLeadAcidElectrodeFormation"
@@ -7671,7 +8621,13 @@ export function BlogArticlePage({
       : null;
   const t = articleContent(page, lang, defaultArticle) as ArticlePageData;
   const sectionIds =
-    page === "keyTechnicalParameters"
+    page === "ciStorageDeploymentCosts"
+      ? ["budget-scope", "company-disclosure", "pilot-evidence", "comparable-requirements", "agm-boundary"]
+      :     page === "leadAcidFluidTopUp"
+      ? ["battery-construction", "model-instructions", "capacity-diagnosis", "warning-signs", "separator-matching"]
+      :     page === "rvAgmStartingHouseDuty"
+      ? ["construction-duty", "load-profile", "capacity-conditions", "charging-layout", "separator-boundary", "procurement-questions"]
+      :     page === "keyTechnicalParameters"
       ? [
           "thickness",
           "basis-weight",

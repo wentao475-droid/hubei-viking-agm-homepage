@@ -4,6 +4,9 @@ import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../c
 
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
+  { en: "/blog/commercial-industrial-energy-storage-deployment-costs/", zh: "/zh/blog/commercial-industrial-energy-storage-deployment-costs/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-28", secondaryLastmod: "2026-10-28", arabicLastmod: "2026-10-28" },
+  { en: "/blog/can-adding-fluid-restore-weak-lead-acid-battery/", zh: "/zh/blog/can-adding-fluid-restore-weak-lead-acid-battery/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-28", secondaryLastmod: "2026-10-28", arabicLastmod: "2026-10-28" },
+  { en: "/blog/rv-agm-batteries-starting-house-power-duty/", zh: "/zh/blog/rv-agm-batteries-starting-house-power-duty/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-28", secondaryLastmod: "2026-10-28", arabicLastmod: "2026-10-28" },
   { en: "/blog/agm-battery-acid-volume-wet-out-uniformity/", zh: "/zh/blog/agm-battery-acid-volume-wet-out-uniformity/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-27", secondaryLastmod: "2026-10-27", arabicLastmod: "2026-10-27" },
   { en: "/blog/lead-premium-battery-demand-based-restocking/", zh: "/zh/blog/lead-premium-battery-demand-based-restocking/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
   { en: "/blog/telecom-backup-lead-acid-procurement-2027-2028/", zh: "/zh/blog/telecom-backup-lead-acid-procurement-2027-2028/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-24", secondaryLastmod: "2026-10-24", arabicLastmod: "2026-10-24" },
