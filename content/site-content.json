@@ -19670,7 +19670,7 @@
         "eyebrow": "Trung tâm tài liệu tấm ngăn AGM",
         "title": "Tài liệu kỹ thuật dành cho đội ngũ mua hàng tấm ngăn AGM",
         "subtitle": "Hướng dẫn thực tế về thông số, sản xuất, chất lượng và ứng dụng giúp chuẩn bị yêu cầu kỹ thuật, mẫu thử và trao đổi với nhà cung cấp.",
-        "count": "31 bài viết kỹ thuật",
+        "count": "32 bài viết kỹ thuật",
         "actionEyebrow": "Bắt đầu trao đổi mua hàng",
         "actionTitle": "Từ nghiên cứu đến đối chiếu thông số",
         "actionText": "Chia sẻ thông tin hiện có hoặc tải hồ sơ năng lực EN/ZH trước khi liên hệ đội ngũ của chúng tôi.",
@@ -21664,6 +21664,55 @@
             "Gửi lịch sản xuất, kích thước AGM và lượng từng đợt để yêu cầu mẫu, đối chiếu thông số và trao đổi cung ứng, báo giá theo tiêu hao thực."
           ],
           "referenceNote": "Bài thị trường Yangtze Nonferrous ngày 29/9/2026, kiểm tra 24/10/2026. Giá và hành vi thuộc nguồn; trang không nêu mẫu hay phương pháp khảo sát đại diện. Không phải thống kê toàn ngành, giá hiện tại hay dự báo. Khung vận hành không chứng minh kho, công suất hoặc cam kết giao Viking. Hình AI không phải ảnh kho thật."
+        },
+        "agmAcidVolumeWetOut": {
+          "title": "Lượng axit và độ đồng đều thấm ướt của ắc quy AGM cần kiểm tra riêng",
+          "summary": "Ghi riêng lượng axit, quá trình nạp và kết quả thấm ướt, rồi xem cùng nhau trong điều kiện cấu trúc, quy trình và quan sát tương đương.",
+          "intro": "Đúng lượng axit chưa chứng minh thấm đều bên trong. Tách bằng chứng lượng, quá trình và phân bố để phép thử trả lời đúng vấn đề.",
+          "sections": [
+            [
+              "Một lượng không trả lời hai câu hỏi",
+              "Một lượng không trả lời hai câu hỏi",
+              "Điện phân phải đi qua tấm ngăn sợi thủy tinh và cấu trúc bản cực. Nhóm bản cao, đường đi vòng và khí giữ lại có thể làm phức tạp quá trình. Định lượng cho biết axit đã cấp, không mô tả đầy đủ đường đi, tốc độ thấm bên trong hay phân bố. Cần xem cấu trúc, đặc tính tấm ngăn và quy trình thực tế cùng nhau."
+            ],
+            [
+              "Ba hồ sơ cho ba mục đích",
+              "Ba hồ sơ cho ba mục đích",
+              "Hồ sơ lượng axit so liều thực với cài đặt, không chứng minh đồng đều. Hồ sơ quá trình gồm thời gian, chương trình, điều kiện, dừng bất thường và giai đoạn chân không nếu dùng; kết thúc hay nhanh hơn chưa chứng minh thấm đủ. Kết quả thấm cần phương pháp do hãng ắc quy thống nhất, cùng cấu trúc, axit và quan sát; ghi từng vùng và đốm khô hoặc tối. Đội thiết kế, sản xuất xác định tiêu chí, không phải chuẩn chung."
+            ],
+            [
+              "Quy ví dụ tấm ngăn về nhà cung cấp",
+              "Quy ví dụ tấm ngăn về nhà cung cấp",
+              "H&V mô tả PowerFill là AGM có rãnh bề mặt hỗ trợ axit chảy và thoát khí. Họ báo cáo thử riêng cho thấy nạp nhanh, phân bố đều hơn và ít đốm khô hoặc tối hơn AGM tiêu chuẩn. Đây là tuyên bố và kết quả H&V, không phải Viking hay mọi tấm ngăn. Trang công khai không đủ tái dựng quy trình thử dự án hoàn chỉnh."
+            ],
+            [
+              "Kiểm soát biến đang đánh giá",
+              "Kiểm soát biến đang đánh giá",
+              "Thử vật liệu nên dùng nhóm bản cùng lô, cấu trúc khi có thể; giữ công thức axit, cài đặt và thời gian nghỉ nhất quán. Khi đánh giá bề mặt tấm ngăn, tránh đổi vật liệu hoặc thiết bị cùng lúc. Khi chỉnh quy trình, giữ lô tấm ngăn. So cả quá trình và kết quả để giảm gán sai nguyên nhân."
+            ],
+            [
+              "Ghi thời điểm và cách quan sát",
+              "Ghi thời điểm và cách quan sát",
+              "Ghi thời điểm và phương pháp đánh giá. Ngay sau nạp có thể khác sau thời gian nghỉ xác định hay công đoạn tiếp. Với ảnh, ghi vùng hoặc phương pháp dây chuyền, giữ vị trí lấy mẫu và điều kiện quan sát. Hãng ắc quy đặt tiêu chí theo sản phẩm, không áp một phương pháp cho mọi dự án."
+            ],
+            [
+              "Xác nhận trong thiết kế ắc quy",
+              "Xác nhận trong thiết kế ắc quy",
+              "Xác nhận trong cấu trúc và quy trình mục tiêu. Giá trị hút dịch riêng, một hồ sơ nạp hay tuyên bố nhà cung cấp không tự chứng minh dung lượng, tuổi thọ hoặc hiệu năng ắc quy. Nếu đủ lượng nhưng khác thấm, xem chương trình, đường thoát khí, cấu trúc nhóm và bề mặt. Nếu quá trình cũng đổi, xác nhận tính so sánh. Quyết định theo xác nhận thiết kế và yêu cầu chất lượng của hãng."
+            ]
+          ],
+          "parameters": [],
+          "checklist": [
+            "Cấu trúc, kích thước và lô nhóm bản",
+            "Công thức axit, cài đặt và chân không nếu dùng",
+            "Lượng cấp, thời gian và dừng bất thường",
+            "Thời điểm, vị trí mẫu, phương pháp và tiêu chí"
+          ],
+          "inquiry": [
+            "Yêu cầu mẫu và đối chiếu thông số",
+            "Gửi cấu trúc nhóm bản, kích thước tấm ngăn và điều kiện nạp để yêu cầu mẫu, đối chiếu thông số và trao đổi ưu tiên thử có kiểm soát."
+          ],
+          "referenceNote": "Kiểm tra trang H&V PowerFill ngày 27/10/2026. Mô tả rãnh và hiệu năng thuộc H&V, không phải khả năng hoặc kết quả kiểm chứng Viking. Khung so sánh và quan sát không phải chuẩn ngành thống nhất. Hình AI không phải bằng chứng thử."
         }
       },
       "comparison": {
@@ -21934,7 +21983,7 @@
         "eyebrow": "AGM 분리막 자료 센터",
         "title": "AGM 분리막 구매·기술팀을 위한 실무 자료",
         "subtitle": "사양 작성, 샘플 평가 및 공급업체 협의를 준비할 수 있도록 기술 파라미터, 제조, 품질과 응용 정보를 제공합니다.",
-        "count": "31 개의 기술 자료",
+        "count": "32 개의 기술 자료",
         "actionEyebrow": "구매 협의 시작",
         "actionTitle": "자료 검토에서 사양 매칭까지",
         "actionText": "현재 확보한 요구사항을 보내거나 문의 전에 EN/ZH 기술 역량 자료를 확인하십시오.",
@@ -23923,6 +23972,55 @@
             "생산 일정, AGM 치수와 분할 수량을 보내 샘플·사양 검토 및 실제 소비에 맞는 공급·견적을 협의하십시오."
           ],
           "referenceNote": "2026년 9월 29일 Yangtze Nonferrous 논평을 10월 24일 확인했습니다. 가격·보충 설명은 해당 매체에 귀속되며 대표 표본·방법은 제시되지 않습니다. 업계 통계·현재 가격·예측이 아니며 Viking 재고·생산능력·납품 약속도 입증하지 않습니다. AI 그림은 창고 실사가 아닙니다."
+        },
+        "agmAcidVolumeWetOut": {
+          "title": "AGM 전지 주액량과 함침 균일성은 따로 확인해야 합니다",
+          "summary": "주액량·공정·함침 결과를 따로 기록한 뒤 같은 전지 구조·공정·관찰 조건에서 함께 해석하십시오.",
+          "intro": "정확한 주액량도 내부 함침 균일성을 입증하지 않습니다. 양·공정·분포의 증거를 분리해야 시험이 평가하려는 질문에 답할 수 있습니다.",
+          "sections": [
+            [
+              "한 수치로 두 질문에 답할 수 없다",
+              "한 수치로 두 질문에 답할 수 없다",
+              "전해액은 유리섬유 분리막과 극판 구조를 통과해야 합니다. 높은 극군, 복잡한 경로와 갇힌 가스는 이동을 어렵게 할 수 있습니다. 계량값은 공급량을 보여주지만 내부 경로·함침 속도·분포를 모두 설명하지 않습니다. 전지 구조, 분리막 특성과 실제 주액 공정을 함께 보십시오."
+            ],
+            [
+              "세 기록의 목적을 구분",
+              "세 기록의 목적을 구분",
+              "주액량 기록은 실투입량과 설정을 비교하며 균일성을 증명하지 않습니다. 공정 기록은 시간·프로그램·조건·비정상 정지 및 사용 시 진공 단계를 담습니다. 완료나 시간 단축만으로 충분한 함침을 입증할 수 없습니다. 함침 검사는 제조사 합의 방법과 같은 구조·산 조성·관찰 조건으로 영역별 건조·어두운 반점을 기록합니다. 설계·생산팀이 합격 기준을 정하며 보편 표준이 아닙니다."
+            ],
+            [
+              "분리막 사례는 공급사에 귀속",
+              "분리막 사례는 공급사에 귀속",
+              "H&V는 PowerFill을 산 이동과 가스 배출을 돕는 표면 채널 AGM으로 설명합니다. 자체 시험에서 일반 AGM보다 빠른 주액, 균일한 분포와 적은 건조·어두운 반점을 보고합니다. H&V 제품 주장과 결과이며 Viking 결론이나 모든 분리막의 증거가 아닙니다. 공개 설명만으로 완전한 프로젝트 시험 절차를 재현할 수 없습니다."
+            ],
+            [
+              "평가할 변수를 통제",
+              "평가할 변수를 통제",
+              "가능하면 같은 로트·구조의 극군을 쓰고 산 조성·설비 설정·후속 휴지 조건을 유지하십시오. 표면 구조 평가 시 다른 소재나 설비를 동시에 바꾸지 않습니다. 공정 조정 시 분리막 로트를 고정합니다. 공정과 함침을 함께 비교해 원인 오귀속을 줄입니다."
+            ],
+            [
+              "관찰 시점과 방법 기록",
+              "관찰 시점과 방법 기록",
+              "관찰 시간과 방법을 기록합니다. 주액 직후와 정해진 휴지 후 또는 후속 공정의 상태는 다를 수 있습니다. 사진·구역 기록·기존 방법은 채취 위치와 관찰 조건을 맞춥니다. 제조사가 제품 요건에 따라 기준을 정하며 특정 방법을 모든 프로젝트에 적용하지 않습니다."
+            ],
+            [
+              "전지 설계 안에서 검증",
+              "전지 설계 안에서 검증",
+              "목표 구조·공정에서 검증합니다. 흡액 단일값, 한 주액 기록이나 공급사 주장만으로 완성 전지 용량·수명·성능 향상을 입증할 수 없습니다. 양은 맞아도 국소 함침이 다르면 프로그램·가스 배출·극군·표면을 검토합니다. 공정도 달라졌다면 비교 조건부터 확인합니다. 최종 판단은 제조사 설계 검증과 품질 요건을 따릅니다."
+            ]
+          ],
+          "parameters": [],
+          "checklist": [
+            "극군 구조·치수·로트",
+            "산 조성·설비 설정·사용 시 진공 단계",
+            "실주액량·시간·비정상 정지",
+            "관찰 시점·영역·방법·합격 기준"
+          ],
+          "inquiry": [
+            "샘플 및 사양 검토 요청",
+            "극군 구조, 분리막 치수와 주액 조건을 보내 샘플·사양 검토 및 통제 시험 우선 항목을 협의하십시오."
+          ],
+          "referenceNote": "2026년 10월 27일 H&V PowerFill 확인. 표면 채널·주액 성능은 H&V 설명이며 Viking의 독립 검증이나 제품 능력이 아닙니다. 비교·관찰 틀은 통일 산업 표준이 아닙니다. AI 그림은 시험 증거가 아닙니다."
         }
       },
       "comparison": {
@@ -24193,7 +24291,7 @@
         "eyebrow": "Centro de recursos de separadores AGM",
         "title": "Recursos técnicos para compradores de separadores AGM",
         "subtitle": "Guias práticos sobre parâmetros, fabricação, qualidade e aplicações para preparar especificações, amostras e conversas com fornecedores.",
-        "count": "31 artigos técnicos",
+        "count": "32 artigos técnicos",
         "actionEyebrow": "Iniciar uma conversa de compra",
         "actionTitle": "Da pesquisa à análise de especificações",
         "actionText": "Compartilhe as informações disponíveis ou consulte o PDF técnico EN/ZH antes de falar com nossa equipe.",
@@ -26182,6 +26280,55 @@
             "Envie cronograma de produção, dimensões AGM e quantidades por etapa para solicitar amostras, adequação e plano de fornecimento e cotação conforme consumo."
           ],
           "referenceNote": "Comentário Yangtze Nonferrous de 29 de setembro de 2026, revisado em 24 de outubro. Preços e reposição pertencem ao relato; não há amostra ou método representativo publicado. Não é estatística setorial, preço atual ou previsão. Não comprova estoque, capacidade ou compromissos Viking. Imagem AI conceitual, não foto real."
+        },
+        "agmAcidVolumeWetOut": {
+          "title": "Volume de ácido e uniformidade de molhamento em baterias AGM exigem verificações separadas",
+          "summary": "Registre dose, processo de enchimento e molhamento separadamente e interprete juntos com estrutura, processo e observação comparáveis.",
+          "intro": "Dose correta não comprova molhamento interno uniforme. Distinga quantidade, processo e distribuição para o ensaio responder ao objetivo.",
+          "sections": [
+            [
+              "Uma quantidade não responde duas perguntas",
+              "Uma quantidade não responde duas perguntas",
+              "O eletrólito precisa atravessar separador e placas. Grupos altos, caminhos indiretos e gás retido podem complicar a movimentação. A medição indica ácido fornecido, não descreve todo o caminho, velocidade interna ou distribuição. Considere estrutura, separador e enchimento real em conjunto."
+            ],
+            [
+              "Três registros para três finalidades",
+              "Três registros para três finalidades",
+              "O registro de volume compara dose e ajuste, sem provar uniformidade. O de processo inclui tempo, programa, condições, pausas e etapas de vácuo quando usadas; terminar ou ser mais rápido não comprova molhamento completo. O resultado exige método acordado pelo fabricante com estrutura, ácido e observação comparáveis, registrando áreas e pontos secos ou escuros. Projeto e produção definem aceitação; não é norma universal."
+            ],
+            [
+              "Atribua o exemplo ao fornecedor",
+              "Atribua o exemplo ao fornecedor",
+              "A H&V descreve PowerFill como AGM com canais superficiais para fluxo de ácido e escape de gás. Relata enchimento mais rápido, distribuição uniforme e menos pontos secos ou escuros que AGM padrão em ensaios próprios. São alegações e resultados H&V, não Viking nem todo separador. A descrição não reconstrói um protocolo completo do projeto."
+            ],
+            [
+              "Controle a variável avaliada",
+              "Controle a variável avaliada",
+              "Use grupos do mesmo lote e estrutura quando possível; mantenha formulação do ácido, ajustes e repouso posterior. Ao avaliar superfície, evite alterar outros materiais ou equipamentos simultaneamente. Ao ajustar processo, mantenha o lote do separador. Compare processo e molhamento para reduzir atribuição incorreta."
+            ],
+            [
+              "Registre quando e como observar",
+              "Registre quando e como observar",
+              "Registre momento e método de observação. O estado logo após enchimento pode diferir do observado após repouso definido ou etapa seguinte. Com fotos, registros por área ou método existente, mantenha locais de amostragem e condições. O fabricante define aceitação conforme produto; não há método único para todo projeto."
+            ],
+            [
+              "Valide no projeto da bateria",
+              "Valide no projeto da bateria",
+              "Valide na estrutura e no processo previstos. Absorção isolada, um registro ou alegação não comprovam melhora de capacidade, vida ou desempenho da bateria completa. Se dose está correta mas molhamento difere, revise programa, saída de gás, grupo e superfície. Se o processo mudou, confirme comparabilidade. Decida conforme validação e qualidade do fabricante."
+            ]
+          ],
+          "parameters": [],
+          "checklist": [
+            "Estrutura, dimensões e lote do grupo",
+            "Ácido, ajustes e etapas de vácuo quando usadas",
+            "Dose fornecida, tempo e pausas",
+            "Momento, locais, método e aceitação"
+          ],
+          "inquiry": [
+            "Solicitar amostras e análise de especificações",
+            "Envie estrutura do grupo, dimensões do separador e condições de enchimento para solicitar amostras, adequação e prioridades de um ensaio controlado."
+          ],
+          "referenceNote": "Página H&V PowerFill revisada em 27 de outubro de 2026. Canais e desempenho são descrições H&V, não resultados independentes ou capacidades Viking. O quadro comparativo não é norma industrial uniforme. Imagem AI conceitual, não evidência de ensaio."
         }
       },
       "comparison": {
@@ -26452,7 +26599,7 @@
         "eyebrow": "Центр материалов по AGM-сепараторам",
         "title": "Технические материалы для закупщиков AGM-сепараторов",
         "subtitle": "Практические руководства по параметрам, производству, качеству и применению для подготовки спецификаций, образцов и переговоров с поставщиком.",
-        "count": "31 технических статей",
+        "count": "32 технических статей",
         "actionEyebrow": "Начать обсуждение закупки",
         "actionTitle": "От изучения к проверке спецификации",
         "actionText": "Перед обращением передайте имеющиеся требования или ознакомьтесь с техническим PDF на EN/ZH.",
@@ -28441,6 +28588,55 @@
             "Пришлите план производства, размеры AGM и объёмы этапов для образцов, подбора спецификаций и обсуждения поставок и предложения по реальному расходу."
           ],
           "referenceNote": "Комментарий Yangtze Nonferrous от 29 сентября 2026 года проверен 24 октября. Цены и закупки отнесены к источнику; репрезентативная выборка и метод не опубликованы. Это не отраслевая статистика, текущая цена или прогноз. Подход не подтверждает запас, мощность или обязательства Viking. AI — не фото склада."
+        },
+        "agmAcidVolumeWetOut": {
+          "title": "Объём кислоты и равномерность смачивания AGM-батареи требуют отдельных проверок",
+          "summary": "Записывайте дозу, процесс заполнения и смачивание отдельно, затем рассматривайте вместе при сопоставимых конструкции, процессе и условиях наблюдения.",
+          "intro": "Правильная доза не доказывает равномерного внутреннего смачивания. Разделяйте количество, процесс и распределение, чтобы испытание отвечало проверяемому вопросу.",
+          "sections": [
+            [
+              "Одна величина не отвечает на два вопроса",
+              "Одна величина не отвечает на два вопроса",
+              "Электролит проходит через стекловолоконный сепаратор и пластины. Высокий блок, непрямые пути и захваченный газ усложняют движение. Дозирование показывает количество поданной кислоты, не весь путь, внутреннюю скорость и распределение. Рассматривайте конструкцию, материал и фактический процесс вместе."
+            ],
+            [
+              "Три записи для трёх целей",
+              "Три записи для трёх целей",
+              "Запись объёма сравнивает дозу с настройкой, но не доказывает равномерность. Запись процесса включает время, программу, условия, паузы и вакуумные стадии при их использовании; завершение или ускорение не доказывают полного смачивания. Результат требует согласованного изготовителем метода при сопоставимых блоке, кислоте и наблюдении с фиксацией областей, сухих и тёмных пятен. Критерии задают конструкторы и производство; это не единый стандарт."
+            ],
+            [
+              "Пример сепаратора отнесён к поставщику",
+              "Пример сепаратора отнесён к поставщику",
+              "H&V описывает PowerFill как AGM с поверхностными каналами для кислоты и выхода газа. В собственных испытаниях сообщает о быстром заполнении, равномерном распределении и меньшем числе сухих или тёмных пятен относительно стандартного AGM. Это заявления H&V, не Viking и не вывод обо всех сепараторах. Публикация не восстанавливает полный протокол проекта."
+            ],
+            [
+              "Контролируйте проверяемую переменную",
+              "Контролируйте проверяемую переменную",
+              "По возможности используйте блоки одной партии и конструкции, сохраняя состав кислоты, настройки и последующую выдержку. При оценке поверхности не меняйте одновременно другие материалы или оборудование. При настройке процесса фиксируйте партию сепаратора. Сравнивайте процесс и смачивание, снижая риск ошибочной причинности."
+            ],
+            [
+              "Фиксируйте время и метод наблюдения",
+              "Фиксируйте время и метод наблюдения",
+              "Указывайте время и метод оценки. Состояние сразу после заполнения может отличаться после заданной выдержки или следующего этапа. Для фотографий, зональных записей или действующего метода сохраняйте места отбора и условия. Изготовитель задаёт критерии по продукту; один метод не подходит всем проектам."
+            ],
+            [
+              "Проверяйте в конструкции батареи",
+              "Проверяйте в конструкции батареи",
+              "Проверяйте в целевой конструкции и процессе. Отдельное поглощение, одна запись или заявление поставщика не доказывают улучшения ёмкости, срока или характеристик полной батареи. При правильной дозе и разном смачивании проверьте программу, выход газа, блок и поверхность. Если процесс изменился, сначала подтвердите сопоставимость. Решение следует проверке конструкции и требованиям качества изготовителя."
+            ]
+          ],
+          "parameters": [],
+          "checklist": [
+            "Конструкция, размеры и партия блока",
+            "Кислота, настройки и вакуумные стадии при использовании",
+            "Доза, время и необычные паузы",
+            "Время, места отбора, метод и критерии"
+          ],
+          "inquiry": [
+            "Запросить образцы и согласовать спецификацию",
+            "Пришлите конструкцию блока, размеры сепаратора и условия заполнения для образцов, подбора спецификаций и обсуждения контролируемого испытания."
+          ],
+          "referenceNote": "Страница H&V PowerFill проверена 27 октября 2026 года. Каналы и характеристики отнесены к H&V, не к независимым результатам или возможностям Viking. Подход сравнения не является единым стандартом. Иллюстрация AI не служит испытательным доказательством."
         }
       },
       "comparison": {
@@ -28711,7 +28907,7 @@
         "eyebrow": "AGMセパレーター資料センター",
         "title": "AGMセパレーターの購買・技術担当者向け実務資料",
         "subtitle": "仕様作成、サンプル評価、サプライヤー協議に役立つ技術特性、製造、品質、用途情報をまとめています。",
-        "count": "31 件の技術記事",
+        "count": "32 件の技術記事",
         "actionEyebrow": "購買相談を始める",
         "actionTitle": "情報収集から仕様照合へ",
         "actionText": "現在の要求事項を共有するか、お問い合わせ前に EN/ZH 技術能力資料をご確認ください。",
@@ -30700,6 +30896,55 @@
             "生産計画、AGM 寸法と分割数量をお送りいただき、サンプル仕様と実消費に沿う供給・見積をご相談ください。"
           ],
           "referenceNote": "2026 年 9 月 29 日の Yangtze Nonferrous 論評を 10 月 24 日確認。価格と補充説明は同媒体に帰属し、代表標本・方法は記載されていません。業界統計・現在価格・予測ではなく Viking の在庫・能力・納期保証も証明しません。AI 図は倉庫実写ではありません。"
+        },
+        "agmAcidVolumeWetOut": {
+          "title": "AGM 電池の注酸量と含浸均一性は分けて確認する",
+          "summary": "注酸量・充填過程・含浸結果を別々に記録し、同じ電池構造・工程・観察条件で合わせて解釈します。",
+          "intro": "正しい注酸量でも内部の均一な含浸は証明できません。量・過程・分布の証拠を分け、試験の目的に沿って評価します。",
+          "sections": [
+            [
+              "一つの量では二つの問いに答えられない",
+              "一つの量では二つの問いに答えられない",
+              "電解液はガラス繊維セパレーターと極板構造を通過します。背の高い極群、迂回経路や滞留ガスは移動を複雑にします。計量記録は供給量を示しますが、内部経路・含浸速度・分布を十分に説明しません。電池構造、材料特性と実工程を合わせて確認します。"
+            ],
+            [
+              "三つの記録と用途",
+              "三つの記録と用途",
+              "注酸量記録は実量と設定を比較し、均一性は証明しません。工程記録は時間・装置プログラム・条件・異常停止と使用時の真空段階を記載します。完了や短時間化は含浸完了の証明ではありません。含浸結果は製造者合意の方法で同じ極群・酸組成・観察条件を使い、各領域の乾燥部や暗色部を記録します。合否基準は設計・生産部門が定め、共通規格ではありません。"
+            ],
+            [
+              "セパレーター事例は供給者に帰属",
+              "セパレーター事例は供給者に帰属",
+              "H&V は PowerFill を酸流動と滞留ガス排出を支える表面溝付き AGM と説明します。同社試験で標準 AGM より速い充填、均一な分布、乾燥部・暗色部の減少を報告しています。H&V の製品説明と結果であり、Viking の結論や全材料への証明ではありません。公開情報だけで案件の完全な試験手順は再構成できません。"
+            ],
+            [
+              "評価変数を管理する",
+              "評価変数を管理する",
+              "可能なら同ロット・同構造の極群を使い、酸組成・装置設定・後続静置条件を一定にします。表面構造の評価時は他材料や装置を同時変更しません。工程調整時は材料ロットを固定します。過程と含浸結果を比較し、原因の取り違えを減らします。"
+            ],
+            [
+              "観察時点と方法を記録",
+              "観察時点と方法を記録",
+              "観察時点と方法を記録します。充填直後と指定静置後や後工程では状態が異なり得ます。写真、領域記録や既存方法では採取位置と観察条件を合わせます。製造者が製品要件に沿って基準を定め、一案件の方法を全案件の要件にはしません。"
+            ],
+            [
+              "電池設計の中で検証する",
+              "電池設計の中で検証する",
+              "目標構造・工程で検証します。単独吸液値、一度の充填記録や供給者説明だけでは電池容量・寿命・性能改善を証明できません。量が合っても含浸が違えばプログラム・排気路・極群・表面を確認します。工程も変わった場合は比較条件を先に確認します。判断は製造者の設計検証と品質要件に従います。"
+            ]
+          ],
+          "parameters": [],
+          "checklist": [
+            "極群構造・寸法・ロット",
+            "酸組成・装置設定・必要時の真空段階",
+            "供給量・時間・異常停止",
+            "観察時点・位置・方法・合否条件"
+          ],
+          "inquiry": [
+            "サンプル・仕様適合の相談",
+            "極群構造、セパレーター寸法と注酸条件をお送りいただき、サンプル仕様と管理試験の優先事項をご相談ください。"
+          ],
+          "referenceNote": "2026 年 10 月 27 日 H&V PowerFill を確認。表面溝と充填性能は H&V の説明で、Viking の独立検証や製品能力ではありません。比較と観察の枠組みは統一業界規格ではありません。AI 図は試験証拠ではありません。"
         }
       },
       "comparison": {
@@ -30970,7 +31215,7 @@
         "eyebrow": "Centro de recursos de separadores AGM",
         "title": "Recursos técnicos para compradores de separadores AGM",
         "subtitle": "Guías prácticas sobre parámetros, fabricación, calidad y aplicaciones para preparar especificaciones, muestras y conversaciones con proveedores.",
-        "count": "31 artículos técnicos",
+        "count": "32 artículos técnicos",
         "actionEyebrow": "Iniciar una conversación de compra",
         "actionTitle": "De la investigación a la revisión de especificaciones",
         "actionText": "Comparta la información disponible o revise el PDF técnico EN/ZH antes de contactar a nuestro equipo.",
@@ -32959,6 +33204,55 @@
             "Envíe programa de producción, dimensiones AGM y cantidades por etapa para solicitar muestras, compatibilidad y un plan de suministro y cotización acorde al consumo."
           ],
           "referenceNote": "Comentario Yangtze Nonferrous del 29 de septiembre de 2026, revisado el 24 de octubre. Atribuye precios y reposición al medio; no publica muestra ni método representativo. No es estadística sectorial, precio actual ni pronóstico. El marco no prueba inventario, capacidad o compromisos Viking. Imagen AI conceptual, no foto real."
+        },
+        "agmAcidVolumeWetOut": {
+          "title": "Volumen de ácido y uniformidad de humectación en baterías AGM: controles separados",
+          "summary": "Registre dosis, proceso de llenado y humectación por separado, e interprételos juntos con estructura, proceso y observación comparables.",
+          "intro": "Una dosis correcta no demuestra humectación interna uniforme. Distinga cantidad, proceso y distribución para que la prueba responda a su objetivo.",
+          "sections": [
+            [
+              "Una cantidad no responde dos preguntas",
+              "Una cantidad no responde dos preguntas",
+              "El electrolito debe atravesar el separador de fibra de vidrio y las placas. Grupos altos, recorridos indirectos y gas atrapado pueden complicarlo. La medición muestra ácido entregado, pero no describe toda su ruta, velocidad interna ni distribución. Revise estructura de batería, separador y llenado real en conjunto."
+            ],
+            [
+              "Tres registros para tres fines",
+              "Tres registros para tres fines",
+              "El registro de volumen compara dosis real y ajuste, sin demostrar uniformidad. El de proceso incluye tiempo, programa, condiciones, pausas y etapas de vacío si se usan; terminar o tardar menos no prueba humectación completa. El resultado requiere método acordado por el fabricante con estructura, ácido y observación comparables, documentando zonas y puntos secos u oscuros. Diseño y producción fijan aceptación; no es norma universal."
+            ],
+            [
+              "Atribuya el ejemplo al proveedor",
+              "Atribuya el ejemplo al proveedor",
+              "H&V describe PowerFill como AGM con canales superficiales para flujo de ácido y escape de gas. Reporta llenado más rápido, distribución uniforme y menos puntos secos u oscuros que AGM estándar en sus propias pruebas. Son afirmaciones y resultados de H&V, no de Viking ni de todo separador. La página no permite reconstruir un protocolo completo del proyecto."
+            ],
+            [
+              "Controle la variable evaluada",
+              "Controle la variable evaluada",
+              "Use grupos del mismo lote y estructura cuando sea posible; mantenga formulación del ácido, ajustes y reposo posterior. Al evaluar superficie del separador, evite cambiar otros materiales o equipos a la vez. Al ajustar proceso, mantenga fijo el lote. Compare proceso y humectación para reducir atribuciones equivocadas."
+            ],
+            [
+              "Registre cuándo y cómo observa",
+              "Registre cuándo y cómo observa",
+              "Registre momento y método de observación. El estado inmediato puede diferir del posterior a un reposo definido u otra etapa. Con fotografías, registros por área o método existente, mantenga posiciones de muestreo y condiciones. El fabricante fija aceptación según producto; un método no se aplica a todo proyecto."
+            ],
+            [
+              "Valide dentro del diseño de batería",
+              "Valide dentro del diseño de batería",
+              "Valide en la estructura y el proceso previstos. Un valor de absorción, un registro o una afirmación no prueban por sí solos mejoras de capacidad, vida o desempeño de batería completa. Si la dosis coincide pero la humectación cambia, revise programa, salida de gas, estructura y superficie. Si cambió el proceso, confirme comparabilidad. Decida según validación y calidad del fabricante."
+            ]
+          ],
+          "parameters": [],
+          "checklist": [
+            "Estructura, dimensiones y lote del grupo",
+            "Ácido, ajustes y etapas de vacío si aplica",
+            "Dosis entregada, tiempo y pausas",
+            "Momento, posiciones, método y aceptación"
+          ],
+          "inquiry": [
+            "Solicitar muestras y revisión de especificaciones",
+            "Envíe estructura del grupo, dimensiones del separador y condiciones de llenado para solicitar muestras, compatibilidad y prioridades de una prueba controlada."
+          ],
+          "referenceNote": "Página H&V PowerFill revisada el 27 de octubre de 2026. Canales y desempeño son descripciones de H&V, no resultados independientes o capacidades Viking. El marco comparativo no es norma industrial uniforme. Imagen AI conceptual, no evidencia de ensayo."
         }
       },
       "comparison": {
@@ -33231,7 +33525,7 @@
         "eyebrow": "مركز موارد فواصل AGM",
         "title": "موارد فنية لفرق شراء فواصل AGM",
         "subtitle": "أدلة حول المواصفات والتصنيع والجودة والتطبيقات للتحضير لمناقشة العينات والتوريد.",
-        "count": "31 مقالاً فنياً",
+        "count": "32 مقالاً فنياً",
         "actionEyebrow": "ابدأ من متطلبات المشروع",
         "actionTitle": "من البحث إلى مطابقة المواصفات",
         "actionText": "شارك المتطلبات المتاحة أو نزّل ملف القدرات بالإنجليزية والصينية قبل التواصل.",
@@ -35283,6 +35577,55 @@
             "أرسل جدول الإنتاج وأبعاد AGM والكميات المرحلية لطلب العينات ومطابقة المواصفات ومناقشة التوريد والعرض حسب الاستهلاك الفعلي."
           ],
           "referenceNote": "تعليق Yangtze Nonferrous في 29 سبتمبر 2026، روجع في 24 أكتوبر. الأسعار والتجديد منسوبان للمصدر الذي لا ينشر عينة أو منهجاً تمثيلياً. ليس إحصاء قطاعياً أو سعراً حالياً أو توقعاً، ولا يثبت مخزون Viking أو قدرتها أو التزاماتها. رسم AI ليس صورة مستودع."
+        },
+        "agmAcidVolumeWetOut": {
+          "title": "حجم الحمض وتجانس البلل في بطارية AGM يحتاجان فحصين منفصلين",
+          "summary": "سجل الجرعة وعملية التعبئة ونتائج البلل منفصلة ثم فسرها معاً تحت بنية وعملية وظروف ملاحظة قابلة للمقارنة.",
+          "intro": "صحة جرعة الحمض لا تثبت تجانس البلل الداخلي. افصل أدلة الكمية والعملية والتوزيع كي تجيب التجربة عن السؤال المطلوب.",
+          "sections": [
+            [
+              "كمية واحدة لا تجيب عن سؤالين",
+              "كمية واحدة لا تجيب عن سؤالين",
+              "يجب أن يمر الإلكتروليت عبر فاصل الألياف والألواح. قد تعقد المجموعة الطويلة والمسارات غير المباشرة والغاز المحبوس الحركة. يبين القياس كمية الحمض الموردة لا كامل المسار أو سرعة البلل الداخلي أو توزيعه. راجع بنية البطارية وخصائص الفاصل والتعبئة الفعلية معاً."
+            ],
+            [
+              "ثلاثة سجلات لثلاثة أغراض",
+              "ثلاثة سجلات لثلاثة أغراض",
+              "يقارن سجل الحجم الجرعة بالإعداد ولا يثبت التجانس. يشمل سجل العملية الزمن والبرنامج والظروف والتوقفات ومراحل التفريغ الهوائي إن استُخدمت؛ انتهاء البرنامج أو قصر الزمن لا يثبت اكتمال البلل. تحتاج النتيجة طريقة يتفق عليها المصنع مع بنية وحمض وملاحظة متقاربة وتسجيل المناطق والبقع الجافة أو الداكنة. يحدد فريقا التصميم والإنتاج القبول؛ ليس معياراً عاماً."
+            ],
+            [
+              "انسب مثال الفاصل إلى مورده",
+              "انسب مثال الفاصل إلى مورده",
+              "تصف H&V مادة PowerFill بأنها AGM بقنوات سطحية تدعم تدفق الحمض وخروج الغاز. وتذكر اختبارات خاصة بها تعبئة أسرع وتوزيعاً أكثر تجانساً وبقعاً أقل مقارنة بـ AGM قياسي. هذه بيانات H&V لا نتائج Viking ولا حكم على كل فاصل. الوصف المنشور لا يعيد بناء بروتوكول المشروع الكامل."
+            ],
+            [
+              "اضبط المتغير الجاري تقييمه",
+              "اضبط المتغير الجاري تقييمه",
+              "استخدم عند الإمكان مجموعات من دفعة وبنية واحدة، وثبت تركيبة الحمض والإعدادات والسكون اللاحق. عند تقييم السطح لا تغير مواد أو أجهزة أخرى بالتزامن. عند تعديل العملية ثبت دفعة الفاصل. قارن العملية والبلل لتقليل نسبة التحسن إلى سبب خاطئ."
+            ],
+            [
+              "سجل متى وكيف تلاحظ البلل",
+              "سجل متى وكيف تلاحظ البلل",
+              "سجل توقيت الملاحظة وطريقتها. قد يختلف الوضع فور التعبئة عنه بعد سكون محدد أو مرحلة لاحقة. مع الصور أو السجلات المناطقية أو الطريقة القائمة، ثبت مواقع العينات والظروف. يحدد المصنع القبول حسب المنتج، ولا توجد طريقة واحدة لكل مشروع."
+            ],
+            [
+              "تحقق ضمن تصميم البطارية",
+              "تحقق ضمن تصميم البطارية",
+              "تحقق داخل البنية والعملية المستهدفتين. لا تثبت قيمة امتصاص منفردة أو سجل واحد أو قول مورد تحسن سعة البطارية الكاملة أو عمرها أو أدائها. عند صحة الجرعة واختلاف البلل راجع البرنامج وخروج الغاز والمجموعة والسطح. إذا تغيرت العملية فأكد قابلية المقارنة أولاً. القرار يتبع تحقق التصميم ومتطلبات الجودة لدى المصنع."
+            ]
+          ],
+          "parameters": [],
+          "checklist": [
+            "بنية المجموعة وأبعادها ودفعتها",
+            "تركيبة الحمض والإعدادات ومراحل التفريغ الهوائي إن وجدت",
+            "الجرعة والزمن والتوقفات غير المعتادة",
+            "التوقيت ومواقع العينات والطريقة والقبول"
+          ],
+          "inquiry": [
+            "اطلب عينات ومطابقة المواصفات",
+            "أرسل بنية مجموعة الألواح وأبعاد الفاصل وظروف التعبئة لطلب العينات ومطابقة المواصفات ومناقشة أولويات تجربة مضبوطة."
+          ],
+          "referenceNote": "روجعت صفحة H&V PowerFill في 27 أكتوبر 2026. وصف القنوات والتعبئة منسوب إلى H&V وليس نتائج مستقلة أو قدرات Viking. إطار المقارنة ليس معياراً صناعياً موحداً. رسم AI مفاهيمي وليس دليلاً اختبارياً."
         }
       }
     }
@@ -67701,6 +68044,1349 @@
         }
       }
     },
+    "agmAcidVolumeWetOut": {
+      "en": {
+        "nav": {
+          "company": "Company",
+          "products": "Products",
+          "applications": "Applications",
+          "quality": "Quality",
+          "resources": "Resources",
+          "contact": "Contact"
+        },
+        "language": "中文",
+        "homePath": "/",
+        "languagePath": "/zh/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Request a Quote",
+        "hero": {
+          "eyebrow": "One quantity cannot answer two questions",
+          "title": "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+          "subtitle": "Check acid dose, filling process and wet-out results separately, then interpret them together under the same battery structure, process and observation conditions.",
+          "primary": "Ask for AGM Separator Guide",
+          "secondary": "Send Your Battery Application",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "AI-generated illustration: AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+            "width": 1600,
+            "height": 1200,
+            "caption": "AI-generated illustration"
+          }
+        },
+        "intro": [
+          "A correct acid dose does not establish uniform internal wetting. Keep quantity, process and distribution evidence distinct so a filling trial answers the question being tested."
+        ],
+        "sections": [
+          {
+            "eyebrow": "One quantity cannot answer two questions",
+            "title": "One quantity cannot answer two questions",
+            "text": "Electrolyte must move through the glass-fiber separator and plate structure. Tall plate groups, indirect flow paths and trapped gas can complicate movement. Metering records show how much acid was delivered, but not its path, the speed of internal wetting or its distribution. Battery structure, separator characteristics and the actual filling process must be considered together."
+          },
+          {
+            "eyebrow": "Keep three records for three purposes",
+            "title": "Keep three records for three purposes",
+            "text": "Acid-volume records compare delivered dose with the process setting; they do not demonstrate uniformity. Process records capture filling time, equipment program, conditions, abnormal pauses and vacuum stages where used; a completed program or shorter time does not prove full wet-out. Wet-out results require a manufacturer-agreed method under comparable plate-group, acid and observation conditions, documenting different areas and dry or dark spots. Design and production teams define acceptance criteria; this is not a universal test standard."
+          },
+          {
+            "eyebrow": "Attribute the separator example to its supplier",
+            "title": "Attribute the separator example to its supplier",
+            "text": "H&V describes PowerFill as AGM with surface channels supporting acid flow and trapped-gas release. It reports faster filling, more uniform distribution and fewer dry or dark spots than standard AGM in its own filling tests. These are H&V product statements and reported results, not Viking findings or evidence that every separator performs the same way. The public description alone is not a complete project-specific test protocol."
+          },
+          {
+            "eyebrow": "Control the variable being evaluated",
+            "title": "Control the variable being evaluated",
+            "text": "For a material trial, use plate groups of the same batch and structure where practical, and keep acid formulation, equipment settings and subsequent rest conditions consistent. When testing a separator surface structure, avoid simultaneous material or equipment changes. When adjusting the process, hold the separator batch fixed. Compare both filling records and wet-out results to reduce incorrect attribution."
+          },
+          {
+            "eyebrow": "Record when and how wet-out is observed",
+            "title": "Record when and how wet-out is observed",
+            "text": "Record observation time and assessment method. Wet-out immediately after filling can differ from the condition after a defined rest or later production step. If using photographs, area records or an established line method, keep sampling positions and observation conditions consistent. The battery manufacturer defines acceptance against product requirements; no single observation method applies to every project."
+          },
+          {
+            "eyebrow": "Bring the evidence back to the battery design",
+            "title": "Bring the evidence back to the battery design",
+            "text": "Validate findings within the intended battery structure and process. A standalone absorption value, one fill record or a supplier statement cannot independently establish improved complete-battery capacity, service life or performance. If dose meets the setting but wet-out differs, review the program, gas-release path, plate-group structure and separator surface; if process records changed, first confirm comparability. Final decisions follow the manufacturer’s design validation and quality requirements."
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "Roll vs Sheet",
+          "title": "Choose the supply format according to production workflow",
+          "items": [
+            [
+              "AGM separator rolls",
+              "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Finished AGM separator roll"
+            ],
+            [
+              "AGM separator sheets",
+              "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+              "/images/sheets1-900.webp",
+              "AGM separator sheets"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Buyer Checklist",
+          "title": "Bring the evidence back to the battery design",
+          "text": "Share your plate-group structure, separator dimensions and current filling conditions to request a sample and specification match, and discuss priorities for a controlled separator trial.",
+          "items": [
+            "Plate-group structure, dimensions and batch",
+            "Acid formulation, equipment settings and vacuum stages if used",
+            "Delivered dose, filling time and abnormal pauses",
+            "Observation time, sample locations, method and acceptance criteria"
+          ]
+        },
+        "related": {
+          "eyebrow": "Related Pages",
+          "title": "Continue with product and quality details",
+          "items": [
+            [
+              "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+              "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "Key Technical Parameters of AGM Separator",
+              "/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+              "/blog/agm-separator-batch-consistency-and-process-control/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Inquiry",
+          "title": "Request a Sample & Specification Match",
+          "text": "Share your plate-group structure, separator dimensions and current filling conditions to request a sample and specification match, and discuss priorities for a controlled separator trial.",
+          "checklist": [
+            "Plate-group structure, dimensions and batch",
+            "Acid formulation, equipment settings and vacuum stages if used",
+            "Delivered dose, filling time and abnormal pauses",
+            "Observation time, sample locations, method and acceptance criteria"
+          ],
+          "fields": {
+            "name": "Name",
+            "company": "Company",
+            "email": "Email",
+            "country": "Country",
+            "application": "Battery Application",
+            "message": "Message"
+          },
+          "placeholders": {
+            "message": "Share your plate-group structure, separator dimensions and current filling conditions to request a sample and specification match, and discuss priorities for a controlled separator trial."
+          },
+          "submit": "Send Inquiry",
+          "submitting": "Sending...",
+          "required": "Please complete all required fields before submitting.",
+          "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+          "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+          "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+        },
+        "footer": {
+          "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+          "wechat": "Official WeChat account",
+          "mobile": "Mobile website"
+        },
+        "references": {
+          "eyebrow": "Public source and scope",
+          "title": "Bring the evidence back to the battery design",
+          "text": "H&V PowerFill product page reviewed on 27 October 2026. Surface-channel and filling-performance descriptions are attributed to H&V, not independently verified Viking results or Viking product capabilities. Controlled comparisons and observation records are an editorial framework, not a uniform industry standard. AI hero: conceptual, not test evidence.",
+          "items": [
+            [
+              "H&V — PowerFill",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      },
+      "zh": {
+        "nav": {
+          "company": "公司",
+          "products": "产品",
+          "applications": "应用",
+          "quality": "质量",
+          "resources": "资料",
+          "contact": "联系"
+        },
+        "language": "EN",
+        "homePath": "/zh/",
+        "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "湖北维京科技有限公司",
+        "quote": "获取报价",
+        "hero": {
+          "eyebrow": "一个数量不能回答两个问题",
+          "title": "AGM 电池注酸量与浸润均匀性，为什么要分开检查？",
+          "subtitle": "注酸定量、填充过程与浸润结果应分别记录，再在相同电池结构、工艺及观察条件下结合判断。",
+          "primary": "索取 AGM 隔板指南",
+          "secondary": "发送电池应用信息",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "AI 示意图: AGM 电池注酸量与浸润均匀性，为什么要分开检查？",
+            "width": 1600,
+            "height": 1200,
+            "caption": "AI 示意图"
+          }
+        },
+        "intro": [
+          "注酸定量符合设定，仍不能证明内部浸润均匀。把数量、过程与分布证据分开，才能让注酸试验回答真正需要验证的问题。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "一个数量不能回答两个问题",
+            "title": "一个数量不能回答两个问题",
+            "text": "电解液需穿过玻纤隔板与极板结构。极群较高、流路曲折或气体不易排出时，内部迁移会更复杂。计量记录能够说明注入多少酸，但不能完整描述路径、内部浸润速度或分布；电池结构、隔板特征与实际注酸过程应共同考虑。"
+          },
+          {
+            "eyebrow": "三类记录对应三种用途",
+            "title": "三类记录对应三种用途",
+            "text": "注酸量记录用于比较实际定量与工艺设定，不能直接证明分布均匀。过程记录包括时间、设备程序、条件、异常停顿及适用时的真空阶段；程序完成或用时缩短不等于浸润充分。浸润结果须采用电池制造商约定的方法，在可比极群、酸配方和观察条件下记录不同区域及干斑、暗斑。验收标准由设计和生产团队制定，不是通用试验标准。"
+          },
+          {
+            "eyebrow": "隔板案例要明确供应商归因",
+            "title": "隔板案例要明确供应商归因",
+            "text": "H&V 将 PowerFill 描述为带表面通道的 AGM，旨在支持酸液流动和滞留气体排出；并称其自身填充试验相较标准 AGM 用时更短、分布更均匀、干斑或暗斑更少。这些是 H&V 的产品表述及报告结果，不是维京结论，也不能推广到所有隔板。仅凭公开说明，无法重建具体项目的完整试验方案。"
+          },
+          {
+            "eyebrow": "控制正在评价的变量",
+            "title": "控制正在评价的变量",
+            "text": "材料试验可尽量采用同批、同结构极群，保持酸配方、设备设定及后续静置条件一致。评价隔板表面结构时，避免同时改变其他材料或设备参数；调整工艺时，固定隔板批次。应同时比较注酸过程与浸润结果，减少把改善归因于错误变量的风险。"
+          },
+          {
+            "eyebrow": "记录何时、如何观察浸润",
+            "title": "记录何时、如何观察浸润",
+            "text": "记录观察时点及评估方法。注酸刚结束时的状态，可能与规定静置后或后续工序时不同。采用照片、分区记录或既有产线方法时，应保持取样位置和观察条件一致。由电池制造商按产品要求制定验收条件，不能把某项目方法写成所有项目的要求。"
+          },
+          {
+            "eyebrow": "把证据放回电池设计中验证",
+            "title": "把证据放回电池设计中验证",
+            "text": "结果需放回目标电池结构与工艺验证。单项吸液值、一次注酸记录或供应商说法，不能独立证明整电池容量、寿命或性能改善。定量符合设定而局部浸润不同，应审阅设备程序、排气路径、极群结构和隔板表面；过程记录也改变时，先确认条件是否可比。最终决定应遵循制造商设计验证与质量要求。"
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "卷材与片材",
+          "title": "根据生产流程选择供应形式",
+          "items": [
+            [
+              "AGM 隔板卷材",
+              "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM 隔板成品卷"
+            ],
+            [
+              "AGM 隔板片材",
+              "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+              "/images/sheets1-900.webp",
+              "AGM 隔板片材"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "买家清单",
+          "title": "把证据放回电池设计中验证",
+          "text": "请提供极群结构、隔板尺寸和当前注酸条件，申请样品与规格匹配，沟通隔板受控试验的优先核查项。",
+          "items": [
+            "极群结构、尺寸与批次",
+            "酸配方、设备设定及适用时的真空阶段",
+            "实际注酸量、时间与异常停顿",
+            "观察时点、取样区域、方法及验收条件"
+          ]
+        },
+        "related": {
+          "eyebrow": "相关页面",
+          "title": "继续查看产品和质量信息",
+          "items": [
+            [
+              "隔板装进去没问题，循环以后还能保持压力吗？",
+              "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "AGM 隔板关键技术参数",
+              "/zh/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+              "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "询盘",
+          "title": "申请样品与规格匹配",
+          "text": "请提供极群结构、隔板尺寸和当前注酸条件，申请样品与规格匹配，沟通隔板受控试验的优先核查项。",
+          "checklist": [
+            "极群结构、尺寸与批次",
+            "酸配方、设备设定及适用时的真空阶段",
+            "实际注酸量、时间与异常停顿",
+            "观察时点、取样区域、方法及验收条件"
+          ],
+          "fields": {
+            "name": "姓名",
+            "company": "公司",
+            "email": "邮箱",
+            "country": "国家/地区",
+            "application": "电池应用",
+            "message": "留言"
+          },
+          "placeholders": {
+            "message": "请提供极群结构、隔板尺寸和当前注酸条件，申请样品与规格匹配，沟通隔板受控试验的优先核查项。"
+          },
+          "submit": "发送询盘",
+          "submitting": "发送中...",
+          "required": "请先填写所有必填字段。",
+          "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+          "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+          "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+        },
+        "footer": {
+          "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+          "wechat": "官方微信公众号",
+          "mobile": "移动官网"
+        },
+        "references": {
+          "eyebrow": "公开来源与边界",
+          "title": "把证据放回电池设计中验证",
+          "text": "2026 年 10 月 27 日核对 H&V PowerFill 产品页。表面通道与填充表现均归因于 H&V，不是维京独立验证结果或产品能力。受控比较与观察记录属于文章建议框架，不是统一行业标准。AI 主图为概念示意，不是测试证据。",
+          "items": [
+            [
+              "H&V — PowerFill",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      },
+      "vi": {
+        "nav": {
+          "company": "Công ty",
+          "products": "Sản phẩm",
+          "quality": "Chất lượng",
+          "resources": "Tài liệu",
+          "applications": "Ứng dụng",
+          "contact": "Liên hệ"
+        },
+        "language": "VI",
+        "homePath": "/vi/",
+        "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Yêu cầu mẫu",
+        "hero": {
+          "eyebrow": "Hướng dẫn kỹ thuật AGM",
+          "title": "Lượng axit và độ đồng đều thấm ướt của ắc quy AGM cần kiểm tra riêng",
+          "subtitle": "Ghi riêng lượng axit, quá trình nạp và kết quả thấm ướt, rồi xem cùng nhau trong điều kiện cấu trúc, quy trình và quan sát tương đương.",
+          "primary": "Yêu cầu mẫu và đối chiếu thông số",
+          "secondary": "Xem danh sách kiểm tra mua hàng",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "Hình minh họa do AI tạo: Lượng axit và độ đồng đều thấm ướt của ắc quy AGM cần kiểm tra riêng",
+            "width": 1600,
+            "height": 1200,
+            "caption": "Hình minh họa do AI tạo"
+          }
+        },
+        "intro": [
+          "Đúng lượng axit chưa chứng minh thấm đều bên trong. Tách bằng chứng lượng, quá trình và phân bố để phép thử trả lời đúng vấn đề.",
+          "Ghi riêng lượng axit, quá trình nạp và kết quả thấm ướt, rồi xem cùng nhau trong điều kiện cấu trúc, quy trình và quan sát tương đương."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Một lượng không trả lời hai câu hỏi",
+            "title": "Một lượng không trả lời hai câu hỏi",
+            "text": "Điện phân phải đi qua tấm ngăn sợi thủy tinh và cấu trúc bản cực. Nhóm bản cao, đường đi vòng và khí giữ lại có thể làm phức tạp quá trình. Định lượng cho biết axit đã cấp, không mô tả đầy đủ đường đi, tốc độ thấm bên trong hay phân bố. Cần xem cấu trúc, đặc tính tấm ngăn và quy trình thực tế cùng nhau."
+          },
+          {
+            "eyebrow": "Ba hồ sơ cho ba mục đích",
+            "title": "Ba hồ sơ cho ba mục đích",
+            "text": "Hồ sơ lượng axit so liều thực với cài đặt, không chứng minh đồng đều. Hồ sơ quá trình gồm thời gian, chương trình, điều kiện, dừng bất thường và giai đoạn chân không nếu dùng; kết thúc hay nhanh hơn chưa chứng minh thấm đủ. Kết quả thấm cần phương pháp do hãng ắc quy thống nhất, cùng cấu trúc, axit và quan sát; ghi từng vùng và đốm khô hoặc tối. Đội thiết kế, sản xuất xác định tiêu chí, không phải chuẩn chung."
+          },
+          {
+            "eyebrow": "Quy ví dụ tấm ngăn về nhà cung cấp",
+            "title": "Quy ví dụ tấm ngăn về nhà cung cấp",
+            "text": "H&V mô tả PowerFill là AGM có rãnh bề mặt hỗ trợ axit chảy và thoát khí. Họ báo cáo thử riêng cho thấy nạp nhanh, phân bố đều hơn và ít đốm khô hoặc tối hơn AGM tiêu chuẩn. Đây là tuyên bố và kết quả H&V, không phải Viking hay mọi tấm ngăn. Trang công khai không đủ tái dựng quy trình thử dự án hoàn chỉnh."
+          },
+          {
+            "eyebrow": "Kiểm soát biến đang đánh giá",
+            "title": "Kiểm soát biến đang đánh giá",
+            "text": "Thử vật liệu nên dùng nhóm bản cùng lô, cấu trúc khi có thể; giữ công thức axit, cài đặt và thời gian nghỉ nhất quán. Khi đánh giá bề mặt tấm ngăn, tránh đổi vật liệu hoặc thiết bị cùng lúc. Khi chỉnh quy trình, giữ lô tấm ngăn. So cả quá trình và kết quả để giảm gán sai nguyên nhân."
+          },
+          {
+            "eyebrow": "Ghi thời điểm và cách quan sát",
+            "title": "Ghi thời điểm và cách quan sát",
+            "text": "Ghi thời điểm và phương pháp đánh giá. Ngay sau nạp có thể khác sau thời gian nghỉ xác định hay công đoạn tiếp. Với ảnh, ghi vùng hoặc phương pháp dây chuyền, giữ vị trí lấy mẫu và điều kiện quan sát. Hãng ắc quy đặt tiêu chí theo sản phẩm, không áp một phương pháp cho mọi dự án."
+          },
+          {
+            "eyebrow": "Xác nhận trong thiết kế ắc quy",
+            "title": "Xác nhận trong thiết kế ắc quy",
+            "text": "Xác nhận trong cấu trúc và quy trình mục tiêu. Giá trị hút dịch riêng, một hồ sơ nạp hay tuyên bố nhà cung cấp không tự chứng minh dung lượng, tuổi thọ hoặc hiệu năng ắc quy. Nếu đủ lượng nhưng khác thấm, xem chương trình, đường thoát khí, cấu trúc nhóm và bề mặt. Nếu quá trình cũng đổi, xác nhận tính so sánh. Quyết định theo xác nhận thiết kế và yêu cầu chất lượng của hãng."
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "Dạng cung cấp",
+          "title": "Chọn dạng cuộn hoặc tấm theo quy trình sản xuất",
+          "items": [
+            [
+              "Tấm ngăn AGM dạng cuộn",
+              "Phù hợp dây chuyền liên tục, chia cuộn hoặc cắt nội bộ trước khi lắp ráp.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Tấm ngăn AGM dạng cuộn"
+            ],
+            [
+              "Tấm ngăn AGM dạng tấm",
+              "Phù hợp khi cần kích thước cắt sẵn để đơn giản hóa khâu chuẩn bị lắp ráp.",
+              "/images/sheets1-900.webp",
+              "Tấm ngăn AGM dạng tấm"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Kiểm tra mua hàng",
+          "title": "Xác nhận yêu cầu trước khi lấy mẫu",
+          "text": "Thông tin rõ ràng giúp đánh giá mẫu và trao đổi thông số hiệu quả hơn.",
+          "items": [
+            "Cấu trúc, kích thước và lô nhóm bản",
+            "Công thức axit, cài đặt và chân không nếu dùng",
+            "Lượng cấp, thời gian và dừng bất thường",
+            "Thời điểm, vị trí mẫu, phương pháp và tiêu chí"
+          ]
+        },
+        "related": {
+          "eyebrow": "Tài liệu liên quan",
+          "title": "Tiếp tục đánh giá sản phẩm và nhà cung cấp",
+          "items": [
+            [
+              "Các thông số kỹ thuật chính của tấm ngăn AGM",
+              "/vi/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Tấm ngăn AGM còn giữ áp lực sau châm axit và chu kỳ không?",
+              "/vi/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "Vì sao một lần kiểm tra đạt không chứng minh tấm ngăn AGM sẵn sàng cho sản xuất hàng loạt?",
+              "/vi/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+              "Đọc biểu đồ áp suất tấm ngăn AGM: điểm đầu cuối, đường dẫn và đường đo",
+              "/vi/blog/reading-agm-separator-pressure-charts/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Trao đổi thông số",
+          "title": "Yêu cầu mẫu và đối chiếu thông số",
+          "text": "Gửi cấu trúc nhóm bản, kích thước tấm ngăn và điều kiện nạp để yêu cầu mẫu, đối chiếu thông số và trao đổi ưu tiên thử có kiểm soát.",
+          "checklist": [
+            "Cấu trúc, kích thước và lô nhóm bản",
+            "Công thức axit, cài đặt và chân không nếu dùng",
+            "Lượng cấp, thời gian và dừng bất thường",
+            "Thời điểm, vị trí mẫu, phương pháp và tiêu chí"
+          ],
+          "placeholders": {
+            "message": "Cấu trúc, kích thước và lô nhóm bản, Công thức axit, cài đặt và chân không nếu dùng, Lượng cấp, thời gian và dừng bất thường, Thời điểm, vị trí mẫu, phương pháp và tiêu chí"
+          }
+        },
+        "footer": {
+          "description": "Tấm ngăn sợi thủy tinh AGM dạng cuộn và tấm cho nhà sản xuất ắc quy VRLA.",
+          "wechat": "Theo dõi tài khoản WeChat của Viking AGM",
+          "mobile": "Truy cập trang web Viking AGM trên điện thoại"
+        },
+        "references": {
+          "eyebrow": "Tài liệu kỹ thuật",
+          "title": "Xác nhận trong thiết kế ắc quy",
+          "text": "Kiểm tra trang H&V PowerFill ngày 27/10/2026. Mô tả rãnh và hiệu năng thuộc H&V, không phải khả năng hoặc kết quả kiểm chứng Viking. Khung so sánh và quan sát không phải chuẩn ngành thống nhất. Hình AI không phải bằng chứng thử.",
+          "items": [
+            [
+              "Nguồn dữ liệu và lưu ý 1",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      },
+      "ko": {
+        "nav": {
+          "company": "회사",
+          "products": "제품",
+          "quality": "품질",
+          "resources": "자료",
+          "applications": "응용 분야",
+          "contact": "문의"
+        },
+        "language": "KO",
+        "homePath": "/ko/",
+        "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "샘플 요청",
+        "hero": {
+          "eyebrow": "AGM 분리막 기술 가이드",
+          "title": "AGM 전지 주액량과 함침 균일성은 따로 확인해야 합니다",
+          "subtitle": "주액량·공정·함침 결과를 따로 기록한 뒤 같은 전지 구조·공정·관찰 조건에서 함께 해석하십시오.",
+          "primary": "샘플 및 사양 검토 요청",
+          "secondary": "구매 체크리스트 보기",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "AI 생성 개념도: AGM 전지 주액량과 함침 균일성은 따로 확인해야 합니다",
+            "width": 1600,
+            "height": 1200,
+            "caption": "AI 생성 개념도"
+          }
+        },
+        "intro": [
+          "정확한 주액량도 내부 함침 균일성을 입증하지 않습니다. 양·공정·분포의 증거를 분리해야 시험이 평가하려는 질문에 답할 수 있습니다.",
+          "주액량·공정·함침 결과를 따로 기록한 뒤 같은 전지 구조·공정·관찰 조건에서 함께 해석하십시오."
+        ],
+        "sections": [
+          {
+            "eyebrow": "한 수치로 두 질문에 답할 수 없다",
+            "title": "한 수치로 두 질문에 답할 수 없다",
+            "text": "전해액은 유리섬유 분리막과 극판 구조를 통과해야 합니다. 높은 극군, 복잡한 경로와 갇힌 가스는 이동을 어렵게 할 수 있습니다. 계량값은 공급량을 보여주지만 내부 경로·함침 속도·분포를 모두 설명하지 않습니다. 전지 구조, 분리막 특성과 실제 주액 공정을 함께 보십시오."
+          },
+          {
+            "eyebrow": "세 기록의 목적을 구분",
+            "title": "세 기록의 목적을 구분",
+            "text": "주액량 기록은 실투입량과 설정을 비교하며 균일성을 증명하지 않습니다. 공정 기록은 시간·프로그램·조건·비정상 정지 및 사용 시 진공 단계를 담습니다. 완료나 시간 단축만으로 충분한 함침을 입증할 수 없습니다. 함침 검사는 제조사 합의 방법과 같은 구조·산 조성·관찰 조건으로 영역별 건조·어두운 반점을 기록합니다. 설계·생산팀이 합격 기준을 정하며 보편 표준이 아닙니다."
+          },
+          {
+            "eyebrow": "분리막 사례는 공급사에 귀속",
+            "title": "분리막 사례는 공급사에 귀속",
+            "text": "H&V는 PowerFill을 산 이동과 가스 배출을 돕는 표면 채널 AGM으로 설명합니다. 자체 시험에서 일반 AGM보다 빠른 주액, 균일한 분포와 적은 건조·어두운 반점을 보고합니다. H&V 제품 주장과 결과이며 Viking 결론이나 모든 분리막의 증거가 아닙니다. 공개 설명만으로 완전한 프로젝트 시험 절차를 재현할 수 없습니다."
+          },
+          {
+            "eyebrow": "평가할 변수를 통제",
+            "title": "평가할 변수를 통제",
+            "text": "가능하면 같은 로트·구조의 극군을 쓰고 산 조성·설비 설정·후속 휴지 조건을 유지하십시오. 표면 구조 평가 시 다른 소재나 설비를 동시에 바꾸지 않습니다. 공정 조정 시 분리막 로트를 고정합니다. 공정과 함침을 함께 비교해 원인 오귀속을 줄입니다."
+          },
+          {
+            "eyebrow": "관찰 시점과 방법 기록",
+            "title": "관찰 시점과 방법 기록",
+            "text": "관찰 시간과 방법을 기록합니다. 주액 직후와 정해진 휴지 후 또는 후속 공정의 상태는 다를 수 있습니다. 사진·구역 기록·기존 방법은 채취 위치와 관찰 조건을 맞춥니다. 제조사가 제품 요건에 따라 기준을 정하며 특정 방법을 모든 프로젝트에 적용하지 않습니다."
+          },
+          {
+            "eyebrow": "전지 설계 안에서 검증",
+            "title": "전지 설계 안에서 검증",
+            "text": "목표 구조·공정에서 검증합니다. 흡액 단일값, 한 주액 기록이나 공급사 주장만으로 완성 전지 용량·수명·성능 향상을 입증할 수 없습니다. 양은 맞아도 국소 함침이 다르면 프로그램·가스 배출·극군·표면을 검토합니다. 공정도 달라졌다면 비교 조건부터 확인합니다. 최종 판단은 제조사 설계 검증과 품질 요건을 따릅니다."
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "공급 형태",
+          "title": "생산 공정에 맞는 롤 또는 시트 선택",
+          "items": [
+            [
+              "AGM 분리막 롤",
+              "연속 생산, 슬리팅 또는 조립 전 사내 절단에 적합합니다.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM 분리막 롤"
+            ],
+            [
+              "AGM 분리막 시트",
+              "절단된 규격으로 공급하여 조립 준비를 단순화할 때 적합합니다.",
+              "/images/sheets1-900.webp",
+              "AGM 분리막 시트"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "구매 확인",
+          "title": "샘플 전에 요구사항 확인",
+          "text": "명확한 정보는 샘플 평가와 사양 협의를 더 효율적으로 만듭니다.",
+          "items": [
+            "극군 구조·치수·로트",
+            "산 조성·설비 설정·사용 시 진공 단계",
+            "실주액량·시간·비정상 정지",
+            "관찰 시점·영역·방법·합격 기준"
+          ]
+        },
+        "related": {
+          "eyebrow": "관련 자료",
+          "title": "제품 및 공급업체 평가 계속하기",
+          "items": [
+            [
+              "AGM 분리막의 핵심 기술 파라미터",
+              "/ko/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGM 분리막은 주액과 사이클 후에도 압력을 유지할까요?",
+              "/ko/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "한 번의 합격 시험만으로 AGM 분리막의 양산 적합성을 판단할 수 없는 이유",
+              "/ko/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+              "AGM 분리막 압력 그래프 읽기: 끝점, 안내선과 실측 곡선",
+              "/ko/blog/reading-agm-separator-pressure-charts/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "사양 협의",
+          "title": "샘플 및 사양 검토 요청",
+          "text": "극군 구조, 분리막 치수와 주액 조건을 보내 샘플·사양 검토 및 통제 시험 우선 항목을 협의하십시오.",
+          "checklist": [
+            "극군 구조·치수·로트",
+            "산 조성·설비 설정·사용 시 진공 단계",
+            "실주액량·시간·비정상 정지",
+            "관찰 시점·영역·방법·합격 기준"
+          ],
+          "placeholders": {
+            "message": "극군 구조·치수·로트, 산 조성·설비 설정·사용 시 진공 단계, 실주액량·시간·비정상 정지, 관찰 시점·영역·방법·합격 기준"
+          }
+        },
+        "footer": {
+          "description": "VRLA 배터리 제조사를 위한 롤 및 시트형 AGM 유리섬유 분리막.",
+          "wechat": "Viking AGM WeChat 공식 계정",
+          "mobile": "모바일에서 Viking AGM 웹사이트 방문"
+        },
+        "references": {
+          "eyebrow": "기술 자료",
+          "title": "전지 설계 안에서 검증",
+          "text": "2026년 10월 27일 H&V PowerFill 확인. 표면 채널·주액 성능은 H&V 설명이며 Viking의 독립 검증이나 제품 능력이 아닙니다. 비교·관찰 틀은 통일 산업 표준이 아닙니다. AI 그림은 시험 증거가 아닙니다.",
+          "items": [
+            [
+              "데이터 출처 및 안내 1",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      },
+      "ja": {
+        "nav": {
+          "company": "会社",
+          "products": "製品",
+          "quality": "品質",
+          "resources": "資料",
+          "applications": "用途",
+          "contact": "お問い合わせ"
+        },
+        "language": "JA",
+        "homePath": "/ja/",
+        "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "サンプル依頼",
+        "hero": {
+          "eyebrow": "AGMセパレーター技術ガイド",
+          "title": "AGM 電池の注酸量と含浸均一性は分けて確認する",
+          "subtitle": "注酸量・充填過程・含浸結果を別々に記録し、同じ電池構造・工程・観察条件で合わせて解釈します。",
+          "primary": "サンプル・仕様確認を依頼",
+          "secondary": "購買チェックリストを見る",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "AI生成イメージ: AGM 電池の注酸量と含浸均一性は分けて確認する",
+            "width": 1600,
+            "height": 1200,
+            "caption": "AI生成イメージ"
+          }
+        },
+        "intro": [
+          "正しい注酸量でも内部の均一な含浸は証明できません。量・過程・分布の証拠を分け、試験の目的に沿って評価します。",
+          "注酸量・充填過程・含浸結果を別々に記録し、同じ電池構造・工程・観察条件で合わせて解釈します。"
+        ],
+        "sections": [
+          {
+            "eyebrow": "一つの量では二つの問いに答えられない",
+            "title": "一つの量では二つの問いに答えられない",
+            "text": "電解液はガラス繊維セパレーターと極板構造を通過します。背の高い極群、迂回経路や滞留ガスは移動を複雑にします。計量記録は供給量を示しますが、内部経路・含浸速度・分布を十分に説明しません。電池構造、材料特性と実工程を合わせて確認します。"
+          },
+          {
+            "eyebrow": "三つの記録と用途",
+            "title": "三つの記録と用途",
+            "text": "注酸量記録は実量と設定を比較し、均一性は証明しません。工程記録は時間・装置プログラム・条件・異常停止と使用時の真空段階を記載します。完了や短時間化は含浸完了の証明ではありません。含浸結果は製造者合意の方法で同じ極群・酸組成・観察条件を使い、各領域の乾燥部や暗色部を記録します。合否基準は設計・生産部門が定め、共通規格ではありません。"
+          },
+          {
+            "eyebrow": "セパレーター事例は供給者に帰属",
+            "title": "セパレーター事例は供給者に帰属",
+            "text": "H&V は PowerFill を酸流動と滞留ガス排出を支える表面溝付き AGM と説明します。同社試験で標準 AGM より速い充填、均一な分布、乾燥部・暗色部の減少を報告しています。H&V の製品説明と結果であり、Viking の結論や全材料への証明ではありません。公開情報だけで案件の完全な試験手順は再構成できません。"
+          },
+          {
+            "eyebrow": "評価変数を管理する",
+            "title": "評価変数を管理する",
+            "text": "可能なら同ロット・同構造の極群を使い、酸組成・装置設定・後続静置条件を一定にします。表面構造の評価時は他材料や装置を同時変更しません。工程調整時は材料ロットを固定します。過程と含浸結果を比較し、原因の取り違えを減らします。"
+          },
+          {
+            "eyebrow": "観察時点と方法を記録",
+            "title": "観察時点と方法を記録",
+            "text": "観察時点と方法を記録します。充填直後と指定静置後や後工程では状態が異なり得ます。写真、領域記録や既存方法では採取位置と観察条件を合わせます。製造者が製品要件に沿って基準を定め、一案件の方法を全案件の要件にはしません。"
+          },
+          {
+            "eyebrow": "電池設計の中で検証する",
+            "title": "電池設計の中で検証する",
+            "text": "目標構造・工程で検証します。単独吸液値、一度の充填記録や供給者説明だけでは電池容量・寿命・性能改善を証明できません。量が合っても含浸が違えばプログラム・排気路・極群・表面を確認します。工程も変わった場合は比較条件を先に確認します。判断は製造者の設計検証と品質要件に従います。"
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "供給形状",
+          "title": "生産工程に合わせてロールまたはシートを選択",
+          "items": [
+            [
+              "AGMセパレーターロール",
+              "連続生産、スリット、組立前の社内裁断に適しています。",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGMセパレーターロール"
+            ],
+            [
+              "AGMセパレーターシート",
+              "裁断済み寸法で供給し、組立準備を簡素化する場合に適しています。",
+              "/images/sheets1-900.webp",
+              "AGMセパレーターシート"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "購買確認",
+          "title": "サンプル前に要求事項を確認",
+          "text": "情報を明確にすると、サンプル評価と仕様協議が効率化します。",
+          "items": [
+            "極群構造・寸法・ロット",
+            "酸組成・装置設定・必要時の真空段階",
+            "供給量・時間・異常停止",
+            "観察時点・位置・方法・合否条件"
+          ]
+        },
+        "related": {
+          "eyebrow": "関連資料",
+          "title": "製品・サプライヤー評価を続ける",
+          "items": [
+            [
+              "AGMセパレーターの主要技術特性",
+              "/ja/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "AGMセパレーターは注液・サイクル後も圧力を保持できるか",
+              "/ja/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "一回の合格試験だけではAGMセパレーターの量産適性を判断できない理由",
+              "/ja/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+              "AGM セパレーターの圧力図を読む：端点、補助線、実測曲線",
+              "/ja/blog/reading-agm-separator-pressure-charts/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "仕様相談",
+          "title": "サンプル・仕様適合の相談",
+          "text": "極群構造、セパレーター寸法と注酸条件をお送りいただき、サンプル仕様と管理試験の優先事項をご相談ください。",
+          "checklist": [
+            "極群構造・寸法・ロット",
+            "酸組成・装置設定・必要時の真空段階",
+            "供給量・時間・異常停止",
+            "観察時点・位置・方法・合否条件"
+          ],
+          "placeholders": {
+            "message": "極群構造・寸法・ロット, 酸組成・装置設定・必要時の真空段階, 供給量・時間・異常停止, 観察時点・位置・方法・合否条件"
+          }
+        },
+        "footer": {
+          "description": "VRLA電池メーカー向けロール・シート形状のAGMガラス繊維セパレーター。",
+          "wechat": "Viking AGM WeChat公式アカウント",
+          "mobile": "モバイルでViking AGMサイトを表示"
+        },
+        "references": {
+          "eyebrow": "技術資料",
+          "title": "電池設計の中で検証する",
+          "text": "2026 年 10 月 27 日 H&V PowerFill を確認。表面溝と充填性能は H&V の説明で、Viking の独立検証や製品能力ではありません。比較と観察の枠組みは統一業界規格ではありません。AI 図は試験証拠ではありません。",
+          "items": [
+            [
+              "データ出典と注記 1",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      },
+      "es": {
+        "nav": {
+          "company": "Empresa",
+          "products": "Productos",
+          "quality": "Calidad",
+          "resources": "Recursos",
+          "applications": "Aplicaciones",
+          "contact": "Contacto"
+        },
+        "language": "ES",
+        "homePath": "/es/",
+        "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Solicitar muestra",
+        "hero": {
+          "eyebrow": "Guía técnica de separadores AGM",
+          "title": "Volumen de ácido y uniformidad de humectación en baterías AGM: controles separados",
+          "subtitle": "Registre dosis, proceso de llenado y humectación por separado, e interprételos juntos con estructura, proceso y observación comparables.",
+          "primary": "Solicitar muestra y revisión de especificaciones",
+          "secondary": "Ver lista de compra",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "Ilustración generada por IA: Volumen de ácido y uniformidad de humectación en baterías AGM: controles separados",
+            "width": 1600,
+            "height": 1200,
+            "caption": "Ilustración generada por IA"
+          }
+        },
+        "intro": [
+          "Una dosis correcta no demuestra humectación interna uniforme. Distinga cantidad, proceso y distribución para que la prueba responda a su objetivo.",
+          "Registre dosis, proceso de llenado y humectación por separado, e interprételos juntos con estructura, proceso y observación comparables."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Una cantidad no responde dos preguntas",
+            "title": "Una cantidad no responde dos preguntas",
+            "text": "El electrolito debe atravesar el separador de fibra de vidrio y las placas. Grupos altos, recorridos indirectos y gas atrapado pueden complicarlo. La medición muestra ácido entregado, pero no describe toda su ruta, velocidad interna ni distribución. Revise estructura de batería, separador y llenado real en conjunto."
+          },
+          {
+            "eyebrow": "Tres registros para tres fines",
+            "title": "Tres registros para tres fines",
+            "text": "El registro de volumen compara dosis real y ajuste, sin demostrar uniformidad. El de proceso incluye tiempo, programa, condiciones, pausas y etapas de vacío si se usan; terminar o tardar menos no prueba humectación completa. El resultado requiere método acordado por el fabricante con estructura, ácido y observación comparables, documentando zonas y puntos secos u oscuros. Diseño y producción fijan aceptación; no es norma universal."
+          },
+          {
+            "eyebrow": "Atribuya el ejemplo al proveedor",
+            "title": "Atribuya el ejemplo al proveedor",
+            "text": "H&V describe PowerFill como AGM con canales superficiales para flujo de ácido y escape de gas. Reporta llenado más rápido, distribución uniforme y menos puntos secos u oscuros que AGM estándar en sus propias pruebas. Son afirmaciones y resultados de H&V, no de Viking ni de todo separador. La página no permite reconstruir un protocolo completo del proyecto."
+          },
+          {
+            "eyebrow": "Controle la variable evaluada",
+            "title": "Controle la variable evaluada",
+            "text": "Use grupos del mismo lote y estructura cuando sea posible; mantenga formulación del ácido, ajustes y reposo posterior. Al evaluar superficie del separador, evite cambiar otros materiales o equipos a la vez. Al ajustar proceso, mantenga fijo el lote. Compare proceso y humectación para reducir atribuciones equivocadas."
+          },
+          {
+            "eyebrow": "Registre cuándo y cómo observa",
+            "title": "Registre cuándo y cómo observa",
+            "text": "Registre momento y método de observación. El estado inmediato puede diferir del posterior a un reposo definido u otra etapa. Con fotografías, registros por área o método existente, mantenga posiciones de muestreo y condiciones. El fabricante fija aceptación según producto; un método no se aplica a todo proyecto."
+          },
+          {
+            "eyebrow": "Valide dentro del diseño de batería",
+            "title": "Valide dentro del diseño de batería",
+            "text": "Valide en la estructura y el proceso previstos. Un valor de absorción, un registro o una afirmación no prueban por sí solos mejoras de capacidad, vida o desempeño de batería completa. Si la dosis coincide pero la humectación cambia, revise programa, salida de gas, estructura y superficie. Si cambió el proceso, confirme comparabilidad. Decida según validación y calidad del fabricante."
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "Formato de suministro",
+          "title": "Elegir rollo o lámina según el proceso",
+          "items": [
+            [
+              "Rollos de separador AGM",
+              "Adecuados para producción continua, corte longitudinal o corte interno antes del montaje.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rollos de separador AGM"
+            ],
+            [
+              "Láminas de separador AGM",
+              "Adecuadas cuando se requieren dimensiones precortadas para simplificar el montaje.",
+              "/images/sheets1-900.webp",
+              "Láminas de separador AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Revisión de compra",
+          "title": "Confirmar requisitos antes de la muestra",
+          "text": "La información clara mejora la evaluación de muestras y la revisión de especificaciones.",
+          "items": [
+            "Estructura, dimensiones y lote del grupo",
+            "Ácido, ajustes y etapas de vacío si aplica",
+            "Dosis entregada, tiempo y pausas",
+            "Momento, posiciones, método y aceptación"
+          ]
+        },
+        "related": {
+          "eyebrow": "Recursos relacionados",
+          "title": "Continuar la evaluación de producto y proveedor",
+          "items": [
+            [
+              "Parámetros técnicos clave del separador AGM",
+              "/es/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "¿Mantiene presión el separador AGM después del llenado y los ciclos?",
+              "/es/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "Por qué una prueba aprobada no demuestra que un separador AGM esté listo para producción en serie",
+              "/es/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+              "Cómo leer gráficos de presión de separadores AGM: extremos, líneas guía y curvas medidas",
+              "/es/blog/reading-agm-separator-pressure-charts/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Conversación técnica",
+          "title": "Solicitar muestras y revisión de especificaciones",
+          "text": "Envíe estructura del grupo, dimensiones del separador y condiciones de llenado para solicitar muestras, compatibilidad y prioridades de una prueba controlada.",
+          "checklist": [
+            "Estructura, dimensiones y lote del grupo",
+            "Ácido, ajustes y etapas de vacío si aplica",
+            "Dosis entregada, tiempo y pausas",
+            "Momento, posiciones, método y aceptación"
+          ],
+          "placeholders": {
+            "message": "Estructura, dimensiones y lote del grupo, Ácido, ajustes y etapas de vacío si aplica, Dosis entregada, tiempo y pausas, Momento, posiciones, método y aceptación"
+          }
+        },
+        "footer": {
+          "description": "Separadores AGM de fibra de vidrio en rollos y láminas para fabricantes de baterías VRLA.",
+          "wechat": "Cuenta oficial de Viking AGM en WeChat",
+          "mobile": "Visitar Viking AGM desde el móvil"
+        },
+        "references": {
+          "eyebrow": "Referencia técnica",
+          "title": "Valide dentro del diseño de batería",
+          "text": "Página H&V PowerFill revisada el 27 de octubre de 2026. Canales y desempeño son descripciones de H&V, no resultados independientes o capacidades Viking. El marco comparativo no es norma industrial uniforme. Imagen AI conceptual, no evidencia de ensayo.",
+          "items": [
+            [
+              "Fuente de datos y nota 1",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      },
+      "pt": {
+        "nav": {
+          "company": "Empresa",
+          "products": "Produtos",
+          "quality": "Qualidade",
+          "resources": "Recursos",
+          "applications": "Aplicações",
+          "contact": "Contato"
+        },
+        "language": "PT",
+        "homePath": "/pt/",
+        "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Solicitar amostra",
+        "hero": {
+          "eyebrow": "Guia técnico de separadores AGM",
+          "title": "Volume de ácido e uniformidade de molhamento em baterias AGM exigem verificações separadas",
+          "subtitle": "Registre dose, processo de enchimento e molhamento separadamente e interprete juntos com estrutura, processo e observação comparáveis.",
+          "primary": "Solicitar amostra e análise de especificações",
+          "secondary": "Ver checklist de compra",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "Ilustração gerada por IA: Volume de ácido e uniformidade de molhamento em baterias AGM exigem verificações separadas",
+            "width": 1600,
+            "height": 1200,
+            "caption": "Ilustração gerada por IA"
+          }
+        },
+        "intro": [
+          "Dose correta não comprova molhamento interno uniforme. Distinga quantidade, processo e distribuição para o ensaio responder ao objetivo.",
+          "Registre dose, processo de enchimento e molhamento separadamente e interprete juntos com estrutura, processo e observação comparáveis."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Uma quantidade não responde duas perguntas",
+            "title": "Uma quantidade não responde duas perguntas",
+            "text": "O eletrólito precisa atravessar separador e placas. Grupos altos, caminhos indiretos e gás retido podem complicar a movimentação. A medição indica ácido fornecido, não descreve todo o caminho, velocidade interna ou distribuição. Considere estrutura, separador e enchimento real em conjunto."
+          },
+          {
+            "eyebrow": "Três registros para três finalidades",
+            "title": "Três registros para três finalidades",
+            "text": "O registro de volume compara dose e ajuste, sem provar uniformidade. O de processo inclui tempo, programa, condições, pausas e etapas de vácuo quando usadas; terminar ou ser mais rápido não comprova molhamento completo. O resultado exige método acordado pelo fabricante com estrutura, ácido e observação comparáveis, registrando áreas e pontos secos ou escuros. Projeto e produção definem aceitação; não é norma universal."
+          },
+          {
+            "eyebrow": "Atribua o exemplo ao fornecedor",
+            "title": "Atribua o exemplo ao fornecedor",
+            "text": "A H&V descreve PowerFill como AGM com canais superficiais para fluxo de ácido e escape de gás. Relata enchimento mais rápido, distribuição uniforme e menos pontos secos ou escuros que AGM padrão em ensaios próprios. São alegações e resultados H&V, não Viking nem todo separador. A descrição não reconstrói um protocolo completo do projeto."
+          },
+          {
+            "eyebrow": "Controle a variável avaliada",
+            "title": "Controle a variável avaliada",
+            "text": "Use grupos do mesmo lote e estrutura quando possível; mantenha formulação do ácido, ajustes e repouso posterior. Ao avaliar superfície, evite alterar outros materiais ou equipamentos simultaneamente. Ao ajustar processo, mantenha o lote do separador. Compare processo e molhamento para reduzir atribuição incorreta."
+          },
+          {
+            "eyebrow": "Registre quando e como observar",
+            "title": "Registre quando e como observar",
+            "text": "Registre momento e método de observação. O estado logo após enchimento pode diferir do observado após repouso definido ou etapa seguinte. Com fotos, registros por área ou método existente, mantenha locais de amostragem e condições. O fabricante define aceitação conforme produto; não há método único para todo projeto."
+          },
+          {
+            "eyebrow": "Valide no projeto da bateria",
+            "title": "Valide no projeto da bateria",
+            "text": "Valide na estrutura e no processo previstos. Absorção isolada, um registro ou alegação não comprovam melhora de capacidade, vida ou desempenho da bateria completa. Se dose está correta mas molhamento difere, revise programa, saída de gás, grupo e superfície. Se o processo mudou, confirme comparabilidade. Decida conforme validação e qualidade do fabricante."
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "Formato de fornecimento",
+          "title": "Escolher rolo ou folha conforme o processo",
+          "items": [
+            [
+              "Rolos de separador AGM",
+              "Adequados para produção contínua, corte longitudinal ou corte interno antes da montagem.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "Rolos de separador AGM"
+            ],
+            [
+              "Folhas de separador AGM",
+              "Adequadas quando dimensões pré-cortadas simplificam a preparação da montagem.",
+              "/images/sheets1-900.webp",
+              "Folhas de separador AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Análise de compra",
+          "title": "Confirmar requisitos antes da amostra",
+          "text": "Informações claras tornam a avaliação de amostras e especificações mais eficiente.",
+          "items": [
+            "Estrutura, dimensões e lote do grupo",
+            "Ácido, ajustes e etapas de vácuo quando usadas",
+            "Dose fornecida, tempo e pausas",
+            "Momento, locais, método e aceitação"
+          ]
+        },
+        "related": {
+          "eyebrow": "Recursos relacionados",
+          "title": "Continuar a avaliação de produto e fornecedor",
+          "items": [
+            [
+              "Principais parâmetros técnicos do separador AGM",
+              "/pt/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "O separador AGM mantém pressão após enchimento e ciclagem?",
+              "/pt/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "Por que um teste aprovado não comprova que o separador AGM está pronto para produção em série",
+              "/pt/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+              "Como ler gráficos de pressão de separadores AGM: extremos, linhas-guia e curvas medidas",
+              "/pt/blog/reading-agm-separator-pressure-charts/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Conversa técnica",
+          "title": "Solicitar amostras e análise de especificações",
+          "text": "Envie estrutura do grupo, dimensões do separador e condições de enchimento para solicitar amostras, adequação e prioridades de um ensaio controlado.",
+          "checklist": [
+            "Estrutura, dimensões e lote do grupo",
+            "Ácido, ajustes e etapas de vácuo quando usadas",
+            "Dose fornecida, tempo e pausas",
+            "Momento, locais, método e aceitação"
+          ],
+          "placeholders": {
+            "message": "Estrutura, dimensões e lote do grupo, Ácido, ajustes e etapas de vácuo quando usadas, Dose fornecida, tempo e pausas, Momento, locais, método e aceitação"
+          }
+        },
+        "footer": {
+          "description": "Separadores AGM de fibra de vidro em rolos e folhas para fabricantes de baterias VRLA.",
+          "wechat": "Conta oficial Viking AGM no WeChat",
+          "mobile": "Visitar o site Viking AGM pelo celular"
+        },
+        "references": {
+          "eyebrow": "Referência técnica",
+          "title": "Valide no projeto da bateria",
+          "text": "Página H&V PowerFill revisada em 27 de outubro de 2026. Canais e desempenho são descrições H&V, não resultados independentes ou capacidades Viking. O quadro comparativo não é norma industrial uniforme. Imagem AI conceitual, não evidência de ensaio.",
+          "items": [
+            [
+              "Fonte de dados e observação 1",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      },
+      "ru": {
+        "nav": {
+          "company": "Компания",
+          "products": "Продукция",
+          "quality": "Качество",
+          "resources": "Материалы",
+          "applications": "Применение",
+          "contact": "Контакты"
+        },
+        "language": "RU",
+        "homePath": "/ru/",
+        "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "Запросить образец",
+        "hero": {
+          "eyebrow": "Техническое руководство по AGM",
+          "title": "Объём кислоты и равномерность смачивания AGM-батареи требуют отдельных проверок",
+          "subtitle": "Записывайте дозу, процесс заполнения и смачивание отдельно, затем рассматривайте вместе при сопоставимых конструкции, процессе и условиях наблюдения.",
+          "primary": "Запросить образец и проверку характеристик",
+          "secondary": "Смотреть чек-лист закупки",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "Иллюстрация, созданная ИИ: Объём кислоты и равномерность смачивания AGM-батареи требуют отдельных проверок",
+            "width": 1600,
+            "height": 1200,
+            "caption": "Иллюстрация, созданная ИИ"
+          }
+        },
+        "intro": [
+          "Правильная доза не доказывает равномерного внутреннего смачивания. Разделяйте количество, процесс и распределение, чтобы испытание отвечало проверяемому вопросу.",
+          "Записывайте дозу, процесс заполнения и смачивание отдельно, затем рассматривайте вместе при сопоставимых конструкции, процессе и условиях наблюдения."
+        ],
+        "sections": [
+          {
+            "eyebrow": "Одна величина не отвечает на два вопроса",
+            "title": "Одна величина не отвечает на два вопроса",
+            "text": "Электролит проходит через стекловолоконный сепаратор и пластины. Высокий блок, непрямые пути и захваченный газ усложняют движение. Дозирование показывает количество поданной кислоты, не весь путь, внутреннюю скорость и распределение. Рассматривайте конструкцию, материал и фактический процесс вместе."
+          },
+          {
+            "eyebrow": "Три записи для трёх целей",
+            "title": "Три записи для трёх целей",
+            "text": "Запись объёма сравнивает дозу с настройкой, но не доказывает равномерность. Запись процесса включает время, программу, условия, паузы и вакуумные стадии при их использовании; завершение или ускорение не доказывают полного смачивания. Результат требует согласованного изготовителем метода при сопоставимых блоке, кислоте и наблюдении с фиксацией областей, сухих и тёмных пятен. Критерии задают конструкторы и производство; это не единый стандарт."
+          },
+          {
+            "eyebrow": "Пример сепаратора отнесён к поставщику",
+            "title": "Пример сепаратора отнесён к поставщику",
+            "text": "H&V описывает PowerFill как AGM с поверхностными каналами для кислоты и выхода газа. В собственных испытаниях сообщает о быстром заполнении, равномерном распределении и меньшем числе сухих или тёмных пятен относительно стандартного AGM. Это заявления H&V, не Viking и не вывод обо всех сепараторах. Публикация не восстанавливает полный протокол проекта."
+          },
+          {
+            "eyebrow": "Контролируйте проверяемую переменную",
+            "title": "Контролируйте проверяемую переменную",
+            "text": "По возможности используйте блоки одной партии и конструкции, сохраняя состав кислоты, настройки и последующую выдержку. При оценке поверхности не меняйте одновременно другие материалы или оборудование. При настройке процесса фиксируйте партию сепаратора. Сравнивайте процесс и смачивание, снижая риск ошибочной причинности."
+          },
+          {
+            "eyebrow": "Фиксируйте время и метод наблюдения",
+            "title": "Фиксируйте время и метод наблюдения",
+            "text": "Указывайте время и метод оценки. Состояние сразу после заполнения может отличаться после заданной выдержки или следующего этапа. Для фотографий, зональных записей или действующего метода сохраняйте места отбора и условия. Изготовитель задаёт критерии по продукту; один метод не подходит всем проектам."
+          },
+          {
+            "eyebrow": "Проверяйте в конструкции батареи",
+            "title": "Проверяйте в конструкции батареи",
+            "text": "Проверяйте в целевой конструкции и процессе. Отдельное поглощение, одна запись или заявление поставщика не доказывают улучшения ёмкости, срока или характеристик полной батареи. При правильной дозе и разном смачивании проверьте программу, выход газа, блок и поверхность. Если процесс изменился, сначала подтвердите сопоставимость. Решение следует проверке конструкции и требованиям качества изготовителя."
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "Форма поставки",
+          "title": "Выберите рулон или лист по процессу производства",
+          "items": [
+            [
+              "AGM-сепаратор в рулонах",
+              "Для непрерывного производства, продольной резки или внутреннего раскроя перед сборкой.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "AGM-сепаратор в рулонах"
+            ],
+            [
+              "AGM-сепаратор в листах",
+              "Для поставки готовых размеров и упрощения подготовки к сборке.",
+              "/images/sheets1-900.webp",
+              "AGM-сепаратор в листах"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Проверка закупки",
+          "title": "Подтвердите требования до заказа образца",
+          "text": "Чёткая информация повышает эффективность оценки образца и согласования спецификации.",
+          "items": [
+            "Конструкция, размеры и партия блока",
+            "Кислота, настройки и вакуумные стадии при использовании",
+            "Доза, время и необычные паузы",
+            "Время, места отбора, метод и критерии"
+          ]
+        },
+        "related": {
+          "eyebrow": "Связанные материалы",
+          "title": "Продолжить оценку продукции и поставщика",
+          "items": [
+            [
+              "Ключевые технические параметры AGM-сепаратора",
+              "/ru/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "Сохраняет ли AGM-сепаратор давление после заливки и циклирования?",
+              "/ru/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "Почему одного теста недостаточно для серийного производства AGM-сепаратора",
+              "/ru/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+              "Как читать графики давления AGM-сепараторов: крайние точки, направляющие и измеренные кривые",
+              "/ru/blog/reading-agm-separator-pressure-charts/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "Обсуждение спецификации",
+          "title": "Запросить образцы и согласовать спецификацию",
+          "text": "Пришлите конструкцию блока, размеры сепаратора и условия заполнения для образцов, подбора спецификаций и обсуждения контролируемого испытания.",
+          "checklist": [
+            "Конструкция, размеры и партия блока",
+            "Кислота, настройки и вакуумные стадии при использовании",
+            "Доза, время и необычные паузы",
+            "Время, места отбора, метод и критерии"
+          ],
+          "placeholders": {
+            "message": "Конструкция, размеры и партия блока, Кислота, настройки и вакуумные стадии при использовании, Доза, время и необычные паузы, Время, места отбора, метод и критерии"
+          }
+        },
+        "footer": {
+          "description": "Стекловолоконные AGM-сепараторы в рулонах и листах для производителей VRLA-батарей.",
+          "wechat": "Официальный аккаунт Viking AGM в WeChat",
+          "mobile": "Открыть сайт Viking AGM на телефоне"
+        },
+        "references": {
+          "eyebrow": "Технические материалы",
+          "title": "Проверяйте в конструкции батареи",
+          "text": "Страница H&V PowerFill проверена 27 октября 2026 года. Каналы и характеристики отнесены к H&V, не к независимым результатам или возможностям Viking. Подход сравнения не является единым стандартом. Иллюстрация AI не служит испытательным доказательством.",
+          "items": [
+            [
+              "Источник данных и примечание 1",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      },
+      "ar": {
+        "nav": {
+          "company": "الشركة",
+          "products": "المنتجات",
+          "quality": "الجودة",
+          "resources": "الموارد",
+          "applications": "التطبيقات",
+          "contact": "التواصل"
+        },
+        "language": "AR",
+        "homePath": "/ar/",
+        "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "brandName": "Hubei Viking Technology Co., Ltd.",
+        "quote": "طلب عينة",
+        "hero": {
+          "eyebrow": "دليل فني لفواصل AGM",
+          "title": "حجم الحمض وتجانس البلل في بطارية AGM يحتاجان فحصين منفصلين",
+          "subtitle": "سجل الجرعة وعملية التعبئة ونتائج البلل منفصلة ثم فسرها معاً تحت بنية وعملية وظروف ملاحظة قابلة للمقارنة.",
+          "primary": "طلب عينة ومطابقة المواصفات",
+          "secondary": "عرض قائمة تأكيد المتطلبات",
+          "image": {
+            "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+            "alt": "رسم توضيحي مولّد بالذكاء الاصطناعي: حجم الحمض وتجانس البلل في بطارية AGM يحتاجان فحصين منفصلين",
+            "width": 1600,
+            "height": 1200,
+            "caption": "رسم توضيحي مولّد بالذكاء الاصطناعي"
+          }
+        },
+        "intro": [
+          "صحة جرعة الحمض لا تثبت تجانس البلل الداخلي. افصل أدلة الكمية والعملية والتوزيع كي تجيب التجربة عن السؤال المطلوب.",
+          "سجل الجرعة وعملية التعبئة ونتائج البلل منفصلة ثم فسرها معاً تحت بنية وعملية وظروف ملاحظة قابلة للمقارنة."
+        ],
+        "sections": [
+          {
+            "eyebrow": "كمية واحدة لا تجيب عن سؤالين",
+            "title": "كمية واحدة لا تجيب عن سؤالين",
+            "text": "يجب أن يمر الإلكتروليت عبر فاصل الألياف والألواح. قد تعقد المجموعة الطويلة والمسارات غير المباشرة والغاز المحبوس الحركة. يبين القياس كمية الحمض الموردة لا كامل المسار أو سرعة البلل الداخلي أو توزيعه. راجع بنية البطارية وخصائص الفاصل والتعبئة الفعلية معاً."
+          },
+          {
+            "eyebrow": "ثلاثة سجلات لثلاثة أغراض",
+            "title": "ثلاثة سجلات لثلاثة أغراض",
+            "text": "يقارن سجل الحجم الجرعة بالإعداد ولا يثبت التجانس. يشمل سجل العملية الزمن والبرنامج والظروف والتوقفات ومراحل التفريغ الهوائي إن استُخدمت؛ انتهاء البرنامج أو قصر الزمن لا يثبت اكتمال البلل. تحتاج النتيجة طريقة يتفق عليها المصنع مع بنية وحمض وملاحظة متقاربة وتسجيل المناطق والبقع الجافة أو الداكنة. يحدد فريقا التصميم والإنتاج القبول؛ ليس معياراً عاماً."
+          },
+          {
+            "eyebrow": "انسب مثال الفاصل إلى مورده",
+            "title": "انسب مثال الفاصل إلى مورده",
+            "text": "تصف H&V مادة PowerFill بأنها AGM بقنوات سطحية تدعم تدفق الحمض وخروج الغاز. وتذكر اختبارات خاصة بها تعبئة أسرع وتوزيعاً أكثر تجانساً وبقعاً أقل مقارنة بـ AGM قياسي. هذه بيانات H&V لا نتائج Viking ولا حكم على كل فاصل. الوصف المنشور لا يعيد بناء بروتوكول المشروع الكامل."
+          },
+          {
+            "eyebrow": "اضبط المتغير الجاري تقييمه",
+            "title": "اضبط المتغير الجاري تقييمه",
+            "text": "استخدم عند الإمكان مجموعات من دفعة وبنية واحدة، وثبت تركيبة الحمض والإعدادات والسكون اللاحق. عند تقييم السطح لا تغير مواد أو أجهزة أخرى بالتزامن. عند تعديل العملية ثبت دفعة الفاصل. قارن العملية والبلل لتقليل نسبة التحسن إلى سبب خاطئ."
+          },
+          {
+            "eyebrow": "سجل متى وكيف تلاحظ البلل",
+            "title": "سجل متى وكيف تلاحظ البلل",
+            "text": "سجل توقيت الملاحظة وطريقتها. قد يختلف الوضع فور التعبئة عنه بعد سكون محدد أو مرحلة لاحقة. مع الصور أو السجلات المناطقية أو الطريقة القائمة، ثبت مواقع العينات والظروف. يحدد المصنع القبول حسب المنتج، ولا توجد طريقة واحدة لكل مشروع."
+          },
+          {
+            "eyebrow": "تحقق ضمن تصميم البطارية",
+            "title": "تحقق ضمن تصميم البطارية",
+            "text": "تحقق داخل البنية والعملية المستهدفتين. لا تثبت قيمة امتصاص منفردة أو سجل واحد أو قول مورد تحسن سعة البطارية الكاملة أو عمرها أو أدائها. عند صحة الجرعة واختلاف البلل راجع البرنامج وخروج الغاز والمجموعة والسطح. إذا تغيرت العملية فأكد قابلية المقارنة أولاً. القرار يتبع تحقق التصميم ومتطلبات الجودة لدى المصنع."
+          }
+        ],
+        "parameters": [],
+        "formats": {
+          "eyebrow": "أشكال التوريد",
+          "title": "اختيار اللفائف أو الألواح وفق عملية التصنيع",
+          "items": [
+            [
+              "لفائف فواصل AGM",
+              "للتغذية المستمرة أو التقطيع الداخلي قبل التجميع.",
+              "/images/viking-finished-separator-roll-900.webp",
+              "لفائف فواصل AGM"
+            ],
+            [
+              "ألواح فواصل AGM",
+              "للأبعاد المقطوعة مسبقاً والتجميع المباشر.",
+              "/images/sheets1-900.webp",
+              "ألواح فواصل AGM"
+            ]
+          ]
+        },
+        "checklist": {
+          "eyebrow": "قائمة المشتريات",
+          "title": "تأكيد المتطلبات قبل طلب العينات",
+          "text": "تساعد المتطلبات الواضحة على مقارنة المواد والعينات ضمن شروط متفق عليها.",
+          "items": [
+            "بنية المجموعة وأبعادها ودفعتها",
+            "تركيبة الحمض والإعدادات ومراحل التفريغ الهوائي إن وجدت",
+            "الجرعة والزمن والتوقفات غير المعتادة",
+            "التوقيت ومواقع العينات والطريقة والقبول"
+          ]
+        },
+        "related": {
+          "eyebrow": "صفحات ذات صلة",
+          "title": "تابع تقييم المواد والموردين",
+          "items": [
+            [
+              "أهم المعايير الفنية لفواصل AGM",
+              "/ar/blog/key-technical-parameters-of-agm-separator/"
+            ],
+            [
+              "احتفاظ فاصل AGM بالضغط بعد ملء الحمض والدورات",
+              "/ar/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+            ],
+            [
+              "اتساق دفعات AGM وضبط العملية",
+              "/ar/blog/agm-separator-batch-consistency-and-process-control/"
+            ],
+            [
+              "قراءة مخططات ضغط فواصل AGM: نقاط النهاية وخطوط الإرشاد والمنحنيات المقاسة",
+              "/ar/blog/reading-agm-separator-pressure-charts/"
+            ]
+          ]
+        },
+        "inquiry": {
+          "eyebrow": "مناقشة المواصفات",
+          "title": "اطلب عينات ومطابقة المواصفات",
+          "text": "أرسل بنية مجموعة الألواح وأبعاد الفاصل وظروف التعبئة لطلب العينات ومطابقة المواصفات ومناقشة أولويات تجربة مضبوطة.",
+          "checklist": [
+            "بنية المجموعة وأبعادها ودفعتها",
+            "تركيبة الحمض والإعدادات ومراحل التفريغ الهوائي إن وجدت",
+            "الجرعة والزمن والتوقفات غير المعتادة",
+            "التوقيت ومواقع العينات والطريقة والقبول"
+          ],
+          "placeholders": {
+            "message": "بنية المجموعة وأبعادها ودفعتها, تركيبة الحمض والإعدادات ومراحل التفريغ الهوائي إن وجدت, الجرعة والزمن والتوقفات غير المعتادة, التوقيت ومواقع العينات والطريقة والقبول"
+          }
+        },
+        "footer": {
+          "description": "فواصل AGM من الألياف الزجاجية على هيئة لفائف وألواح لمصنعي بطاريات VRLA.",
+          "wechat": "تابع حساب Viking AGM على WeChat",
+          "mobile": "افتح موقع Viking AGM على الهاتف"
+        },
+        "references": {
+          "eyebrow": "مراجع فنية",
+          "title": "تحقق ضمن تصميم البطارية",
+          "text": "روجعت صفحة H&V PowerFill في 27 أكتوبر 2026. وصف القنوات والتعبئة منسوب إلى H&V وليس نتائج مستقلة أو قدرات Viking. إطار المقارنة ليس معياراً صناعياً موحداً. رسم AI مفاهيمي وليس دليلاً اختبارياً.",
+          "items": [
+            [
+              "المصادر وحدود الاستدلال 1",
+              "https://www.hollingsworth-vose.com/powerfill/"
+            ]
+          ]
+        }
+      }
+    },
     "earlyLeadAcidElectrodeFormation": {
       "en": {
         "nav": {
@@ -90228,6 +91914,217 @@
         ],
         "datePublished": "2026-10-24",
         "dateModified": "2026-10-24"
+      }
+    },
+    "agmAcidVolumeWetOut": {
+      "en": {
+        "path": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "alternatePath": "/zh/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "en_US",
+        "language": "en",
+        "siteName": "Viking AGM",
+        "title": "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks | Viking AGM",
+        "description": "Check acid dose, filling process and wet-out results separately, then interpret them together under the same battery structure, process and observation conditions.",
+        "keywords": [
+          "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+          "AGM electrolyte filling",
+          "wet-out uniformity",
+          "controlled separator trial"
+        ],
+        "pageName": "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+        "articleDescription": "Check acid dose, filling process and wet-out results separately, then interpret them together under the same battery structure, process and observation conditions.",
+        "breadcrumbs": [
+          "Home",
+          "Resources",
+          "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
+      },
+      "zh": {
+        "path": "/zh/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "alternatePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "zh_CN",
+        "language": "zh-CN",
+        "siteName": "湖北维京AGM",
+        "title": "AGM 电池注酸量与浸润均匀性，为什么要分开检查？ | Viking AGM",
+        "description": "注酸定量、填充过程与浸润结果应分别记录，再在相同电池结构、工艺及观察条件下结合判断。",
+        "keywords": [
+          "AGM 电池注酸量与浸润均匀性，为什么要分开检查？",
+          "AGM electrolyte filling",
+          "wet-out uniformity",
+          "controlled separator trial"
+        ],
+        "pageName": "AGM 电池注酸量与浸润均匀性，为什么要分开检查？",
+        "articleDescription": "注酸定量、填充过程与浸润结果应分别记录，再在相同电池结构、工艺及观察条件下结合判断。",
+        "breadcrumbs": [
+          "首页",
+          "资料",
+          "AGM 电池注酸量与浸润均匀性，为什么要分开检查？"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
+      },
+      "vi": {
+        "path": "/vi/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "vi_VN",
+        "language": "vi-VN",
+        "siteName": "Viking AGM Việt Nam",
+        "title": "Lượng axit và độ đồng đều thấm ướt của ắc quy AGM cần kiểm tra riêng | Viking AGM",
+        "description": "Ghi riêng lượng axit, quá trình nạp và kết quả thấm ướt, rồi xem cùng nhau trong điều kiện cấu trúc, quy trình và quan sát tương đương.",
+        "keywords": [
+          "Lượng axit và độ đồng đều thấm ướt của ắc quy AGM cần kiểm tra riêng",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Lượng axit và độ đồng đều thấm ướt của ắc quy AGM cần kiểm tra riêng",
+        "articleDescription": "Ghi riêng lượng axit, quá trình nạp và kết quả thấm ướt, rồi xem cùng nhau trong điều kiện cấu trúc, quy trình và quan sát tương đương.",
+        "breadcrumbs": [
+          "Công ty",
+          "Tài liệu",
+          "Lượng axit và độ đồng đều thấm ướt của ắc quy AGM cần kiểm tra riêng"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
+      },
+      "ko": {
+        "path": "/ko/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "ko_KR",
+        "language": "ko-KR",
+        "siteName": "Viking AGM Korea",
+        "title": "AGM 전지 주액량과 함침 균일성은 따로 확인해야 합니다 | Viking AGM",
+        "description": "주액량·공정·함침 결과를 따로 기록한 뒤 같은 전지 구조·공정·관찰 조건에서 함께 해석하십시오.",
+        "keywords": [
+          "AGM 전지 주액량과 함침 균일성은 따로 확인해야 합니다",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "AGM 전지 주액량과 함침 균일성은 따로 확인해야 합니다",
+        "articleDescription": "주액량·공정·함침 결과를 따로 기록한 뒤 같은 전지 구조·공정·관찰 조건에서 함께 해석하십시오.",
+        "breadcrumbs": [
+          "회사",
+          "자료",
+          "AGM 전지 주액량과 함침 균일성은 따로 확인해야 합니다"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
+      },
+      "ja": {
+        "path": "/ja/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "ja_JP",
+        "language": "ja-JP",
+        "siteName": "Viking AGM Japan",
+        "title": "AGM 電池の注酸量と含浸均一性は分けて確認する | Viking AGM",
+        "description": "注酸量・充填過程・含浸結果を別々に記録し、同じ電池構造・工程・観察条件で合わせて解釈します。",
+        "keywords": [
+          "AGM 電池の注酸量と含浸均一性は分けて確認する",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "AGM 電池の注酸量と含浸均一性は分けて確認する",
+        "articleDescription": "注酸量・充填過程・含浸結果を別々に記録し、同じ電池構造・工程・観察条件で合わせて解釈します。",
+        "breadcrumbs": [
+          "会社",
+          "資料",
+          "AGM 電池の注酸量と含浸均一性は分けて確認する"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
+      },
+      "es": {
+        "path": "/es/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "es_LA",
+        "language": "es",
+        "siteName": "Viking AGM",
+        "title": "Volumen de ácido y uniformidad de humectación en baterías AGM: controles separados | Viking AGM",
+        "description": "Registre dosis, proceso de llenado y humectación por separado, e interprételos juntos con estructura, proceso y observación comparables.",
+        "keywords": [
+          "Volumen de ácido y uniformidad de humectación en baterías AGM: controles separados",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Volumen de ácido y uniformidad de humectación en baterías AGM: controles separados",
+        "articleDescription": "Registre dosis, proceso de llenado y humectación por separado, e interprételos juntos con estructura, proceso y observación comparables.",
+        "breadcrumbs": [
+          "Empresa",
+          "Recursos",
+          "Volumen de ácido y uniformidad de humectación en baterías AGM: controles separados"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
+      },
+      "pt": {
+        "path": "/pt/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "pt_BR",
+        "language": "pt-BR",
+        "siteName": "Viking AGM Brasil",
+        "title": "Volume de ácido e uniformidade de molhamento em baterias AGM exigem verificações separadas | Viking AGM",
+        "description": "Registre dose, processo de enchimento e molhamento separadamente e interprete juntos com estrutura, processo e observação comparáveis.",
+        "keywords": [
+          "Volume de ácido e uniformidade de molhamento em baterias AGM exigem verificações separadas",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Volume de ácido e uniformidade de molhamento em baterias AGM exigem verificações separadas",
+        "articleDescription": "Registre dose, processo de enchimento e molhamento separadamente e interprete juntos com estrutura, processo e observação comparáveis.",
+        "breadcrumbs": [
+          "Empresa",
+          "Recursos",
+          "Volume de ácido e uniformidade de molhamento em baterias AGM exigem verificações separadas"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
+      },
+      "ru": {
+        "path": "/ru/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "ru_RU",
+        "language": "ru-RU",
+        "siteName": "Viking AGM",
+        "title": "Объём кислоты и равномерность смачивания AGM-батареи требуют отдельных проверок | Viking AGM",
+        "description": "Записывайте дозу, процесс заполнения и смачивание отдельно, затем рассматривайте вместе при сопоставимых конструкции, процессе и условиях наблюдения.",
+        "keywords": [
+          "Объём кислоты и равномерность смачивания AGM-батареи требуют отдельных проверок",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "Объём кислоты и равномерность смачивания AGM-батареи требуют отдельных проверок",
+        "articleDescription": "Записывайте дозу, процесс заполнения и смачивание отдельно, затем рассматривайте вместе при сопоставимых конструкции, процессе и условиях наблюдения.",
+        "breadcrumbs": [
+          "Компания",
+          "Материалы",
+          "Объём кислоты и равномерность смачивания AGM-батареи требуют отдельных проверок"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
+      },
+      "ar": {
+        "path": "/ar/blog/agm-battery-acid-volume-wet-out-uniformity/",
+        "locale": "ar_AR",
+        "language": "ar",
+        "siteName": "Viking AGM",
+        "title": "حجم الحمض وتجانس البلل في بطارية AGM يحتاجان فحصين منفصلين | Viking AGM",
+        "description": "سجل الجرعة وعملية التعبئة ونتائج البلل منفصلة ثم فسرها معاً تحت بنية وعملية وظروف ملاحظة قابلة للمقارنة.",
+        "keywords": [
+          "حجم الحمض وتجانس البلل في بطارية AGM يحتاجان فحصين منفصلين",
+          "AGM separator",
+          "VRLA",
+          "Viking AGM"
+        ],
+        "pageName": "حجم الحمض وتجانس البلل في بطارية AGM يحتاجان فحصين منفصلين",
+        "articleDescription": "سجل الجرعة وعملية التعبئة ونتائج البلل منفصلة ثم فسرها معاً تحت بنية وعملية وظروف ملاحظة قابلة للمقارنة.",
+        "breadcrumbs": [
+          "الشركة",
+          "الموارد",
+          "حجم الحمض وتجانس البلل في بطارية AGM يحتاجان فحصين منفصلين"
+        ],
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27"
       }
     },
     "earlyLeadAcidElectrodeFormation": {

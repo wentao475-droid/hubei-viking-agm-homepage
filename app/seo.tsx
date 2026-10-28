@@ -2319,6 +2319,57 @@ const leadPremiumDemandRestockingSeo = {
   }
 } as const;
 
+const agmAcidVolumeWetOutSeo = {
+  "en": {
+    "path": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+    "alternatePath": "/zh/blog/agm-battery-acid-volume-wet-out-uniformity/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks | Viking AGM",
+    "description": "Check acid dose, filling process and wet-out results separately, then interpret them together under the same battery structure, process and observation conditions.",
+    "keywords": [
+      "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+      "AGM electrolyte filling",
+      "wet-out uniformity",
+      "controlled separator trial"
+    ],
+    "pageName": "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+    "articleDescription": "Check acid dose, filling process and wet-out results separately, then interpret them together under the same battery structure, process and observation conditions.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks"
+    ],
+    "datePublished": "2026-10-27",
+    "dateModified": "2026-10-27"
+  },
+  "zh": {
+    "path": "/zh/blog/agm-battery-acid-volume-wet-out-uniformity/",
+    "alternatePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "AGM 电池注酸量与浸润均匀性，为什么要分开检查？ | Viking AGM",
+    "description": "注酸定量、填充过程与浸润结果应分别记录，再在相同电池结构、工艺及观察条件下结合判断。",
+    "keywords": [
+      "AGM 电池注酸量与浸润均匀性，为什么要分开检查？",
+      "AGM electrolyte filling",
+      "wet-out uniformity",
+      "controlled separator trial"
+    ],
+    "pageName": "AGM 电池注酸量与浸润均匀性，为什么要分开检查？",
+    "articleDescription": "注酸定量、填充过程与浸润结果应分别记录，再在相同电池结构、工艺及观察条件下结合判断。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "AGM 电池注酸量与浸润均匀性，为什么要分开检查？"
+    ],
+    "datePublished": "2026-10-27",
+    "dateModified": "2026-10-27"
+  }
+} as const;
+
 const earlyLeadAcidElectrodeFormationSeo = {
   "en": {
     "path": "/blog/early-lead-acid-battery-electrode-formation/",
@@ -5783,6 +5834,23 @@ export function LeadPremiumDemandRestockingStructuredData({ lang }: { lang: Lang
     organizationData(lang, current.description),
     { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
     { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/lead-premium-restocking-hero-1600.webp`, url, datePublished: "2026-10-24", dateModified: "2026-10-24", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Demand-based battery material purchasing", "AGM inventory planning", "Orders inventory and cash flow"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildAgmAcidVolumeWetOutMetadata(lang: Lang): Metadata {
+  const current = seoContent("agmAcidVolumeWetOut", lang, agmAcidVolumeWetOutSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmAcidVolumeWetOut"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/agm-acid-volume-wetout-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function AgmAcidVolumeWetOutStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("agmAcidVolumeWetOut", lang, agmAcidVolumeWetOutSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/agm-acid-volume-wetout-hero-1600.webp`, url, datePublished: "2026-10-27", dateModified: "2026-10-27", mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM acid volume and wet-out", "Controlled filling comparison", "Battery validation"], inLanguage: current.language },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
   ]}} />;
 }

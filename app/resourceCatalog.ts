@@ -114,6 +114,23 @@ export const resourceActions: ResourceAction[] = [
 
 export const resourceArticles: ResourceArticle[] = [
 {
+  "id": "agm-battery-acid-volume-wet-out-uniformity",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-10-27",
+  "title": {
+    "en": "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+    "zh": "AGM 电池注酸量与浸润均匀性，为什么要分开检查？"
+  },
+  "description": {
+    "en": "Check acid dose, filling process and wet-out results separately, then interpret them together under the same battery structure, process and observation conditions.",
+    "zh": "注酸定量、填充过程与浸润结果应分别记录，再在相同电池结构、工艺及观察条件下结合判断。"
+  },
+  "href": {
+    "en": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+    "zh": "/zh/blog/agm-battery-acid-volume-wet-out-uniformity/"
+  }
+},
+{
   "id": "lead-premium-battery-demand-based-restocking",
   "category": "buyerGuides",
   "publishedAt": "2026-10-24",
@@ -647,6 +664,7 @@ const articleKindById: Record<string, string> = {
   "ups-battery-original-manufacturer-production-address-evidence": "upsOriginalManufacturerEvidence",
   "telecom-backup-lead-acid-procurement-2027-2028": "telecomLeadAcidProcurement",
   "lead-premium-battery-demand-based-restocking": "leadPremiumDemandRestocking",
+  "agm-battery-acid-volume-wet-out-uniformity": "agmAcidVolumeWetOut",
   "early-lead-acid-battery-electrode-formation": "earlyLeadAcidElectrodeFormation",
   "reading-agm-separator-pressure-charts": "agmSeparatorPressureCharts",
   "ups-battery-272-individual-monitors-batch-traceability": "upsBatteryIndividualMonitoring",

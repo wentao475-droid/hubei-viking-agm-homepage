@@ -15,6 +15,7 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "agmAcidVolumeWetOut"
   | "leadPremiumDemandRestocking"
   | "telecomLeadAcidProcurement"
   | "upsOriginalManufacturerEvidence"
@@ -6270,6 +6271,321 @@ const leadPremiumDemandRestockingCopy = {
   }
 } as const;
 
+const agmAcidVolumeWetOutCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/agm-battery-acid-volume-wet-out-uniformity/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "One quantity cannot answer two questions",
+      "title": "AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+      "subtitle": "Check acid dose, filling process and wet-out results separately, then interpret them together under the same battery structure, process and observation conditions.",
+      "primary": "Ask for AGM Separator Guide",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+        "alt": "AI-generated illustration: AGM Battery Acid Volume and Wet-Out Uniformity Need Separate Checks",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "A correct acid dose does not establish uniform internal wetting. Keep quantity, process and distribution evidence distinct so a filling trial answers the question being tested."
+    ],
+    "sections": [
+      {
+        "eyebrow": "One quantity cannot answer two questions",
+        "title": "One quantity cannot answer two questions",
+        "text": "Electrolyte must move through the glass-fiber separator and plate structure. Tall plate groups, indirect flow paths and trapped gas can complicate movement. Metering records show how much acid was delivered, but not its path, the speed of internal wetting or its distribution. Battery structure, separator characteristics and the actual filling process must be considered together."
+      },
+      {
+        "eyebrow": "Keep three records for three purposes",
+        "title": "Keep three records for three purposes",
+        "text": "Acid-volume records compare delivered dose with the process setting; they do not demonstrate uniformity. Process records capture filling time, equipment program, conditions, abnormal pauses and vacuum stages where used; a completed program or shorter time does not prove full wet-out. Wet-out results require a manufacturer-agreed method under comparable plate-group, acid and observation conditions, documenting different areas and dry or dark spots. Design and production teams define acceptance criteria; this is not a universal test standard."
+      },
+      {
+        "eyebrow": "Attribute the separator example to its supplier",
+        "title": "Attribute the separator example to its supplier",
+        "text": "H&V describes PowerFill as AGM with surface channels supporting acid flow and trapped-gas release. It reports faster filling, more uniform distribution and fewer dry or dark spots than standard AGM in its own filling tests. These are H&V product statements and reported results, not Viking findings or evidence that every separator performs the same way. The public description alone is not a complete project-specific test protocol."
+      },
+      {
+        "eyebrow": "Control the variable being evaluated",
+        "title": "Control the variable being evaluated",
+        "text": "For a material trial, use plate groups of the same batch and structure where practical, and keep acid formulation, equipment settings and subsequent rest conditions consistent. When testing a separator surface structure, avoid simultaneous material or equipment changes. When adjusting the process, hold the separator batch fixed. Compare both filling records and wet-out results to reduce incorrect attribution."
+      },
+      {
+        "eyebrow": "Record when and how wet-out is observed",
+        "title": "Record when and how wet-out is observed",
+        "text": "Record observation time and assessment method. Wet-out immediately after filling can differ from the condition after a defined rest or later production step. If using photographs, area records or an established line method, keep sampling positions and observation conditions consistent. The battery manufacturer defines acceptance against product requirements; no single observation method applies to every project."
+      },
+      {
+        "eyebrow": "Bring the evidence back to the battery design",
+        "title": "Bring the evidence back to the battery design",
+        "text": "Validate findings within the intended battery structure and process. A standalone absorption value, one fill record or a supplier statement cannot independently establish improved complete-battery capacity, service life or performance. If dose meets the setting but wet-out differs, review the program, gas-release path, plate-group structure and separator surface; if process records changed, first confirm comparability. Final decisions follow the manufacturer’s design validation and quality requirements."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Bring the evidence back to the battery design",
+      "text": "Share your plate-group structure, separator dimensions and current filling conditions to request a sample and specification match, and discuss priorities for a controlled separator trial.",
+      "items": [
+        "Plate-group structure, dimensions and batch",
+        "Acid formulation, equipment settings and vacuum stages if used",
+        "Delivered dose, filling time and abnormal pauses",
+        "Observation time, sample locations, method and acceptance criteria"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+          "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "Why One Passing Test Does Not Prove an AGM Separator Is Ready for Volume Production",
+          "/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Share your plate-group structure, separator dimensions and current filling conditions to request a sample and specification match, and discuss priorities for a controlled separator trial.",
+      "checklist": [
+        "Plate-group structure, dimensions and batch",
+        "Acid formulation, equipment settings and vacuum stages if used",
+        "Delivered dose, filling time and abnormal pauses",
+        "Observation time, sample locations, method and acceptance criteria"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Share your plate-group structure, separator dimensions and current filling conditions to request a sample and specification match, and discuss priorities for a controlled separator trial."
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Bring the evidence back to the battery design",
+      "text": "H&V PowerFill product page reviewed on 27 October 2026. Surface-channel and filling-performance descriptions are attributed to H&V, not independently verified Viking results or Viking product capabilities. Controlled comparisons and observation records are an editorial framework, not a uniform industry standard. AI hero: conceptual, not test evidence.",
+      "items": [
+        [
+          "H&V — PowerFill",
+          "https://www.hollingsworth-vose.com/powerfill/"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/agm-battery-acid-volume-wet-out-uniformity/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "一个数量不能回答两个问题",
+      "title": "AGM 电池注酸量与浸润均匀性，为什么要分开检查？",
+      "subtitle": "注酸定量、填充过程与浸润结果应分别记录，再在相同电池结构、工艺及观察条件下结合判断。",
+      "primary": "索取 AGM 隔板指南",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
+        "alt": "AI 示意图: AGM 电池注酸量与浸润均匀性，为什么要分开检查？",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "注酸定量符合设定，仍不能证明内部浸润均匀。把数量、过程与分布证据分开，才能让注酸试验回答真正需要验证的问题。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "一个数量不能回答两个问题",
+        "title": "一个数量不能回答两个问题",
+        "text": "电解液需穿过玻纤隔板与极板结构。极群较高、流路曲折或气体不易排出时，内部迁移会更复杂。计量记录能够说明注入多少酸，但不能完整描述路径、内部浸润速度或分布；电池结构、隔板特征与实际注酸过程应共同考虑。"
+      },
+      {
+        "eyebrow": "三类记录对应三种用途",
+        "title": "三类记录对应三种用途",
+        "text": "注酸量记录用于比较实际定量与工艺设定，不能直接证明分布均匀。过程记录包括时间、设备程序、条件、异常停顿及适用时的真空阶段；程序完成或用时缩短不等于浸润充分。浸润结果须采用电池制造商约定的方法，在可比极群、酸配方和观察条件下记录不同区域及干斑、暗斑。验收标准由设计和生产团队制定，不是通用试验标准。"
+      },
+      {
+        "eyebrow": "隔板案例要明确供应商归因",
+        "title": "隔板案例要明确供应商归因",
+        "text": "H&V 将 PowerFill 描述为带表面通道的 AGM，旨在支持酸液流动和滞留气体排出；并称其自身填充试验相较标准 AGM 用时更短、分布更均匀、干斑或暗斑更少。这些是 H&V 的产品表述及报告结果，不是维京结论，也不能推广到所有隔板。仅凭公开说明，无法重建具体项目的完整试验方案。"
+      },
+      {
+        "eyebrow": "控制正在评价的变量",
+        "title": "控制正在评价的变量",
+        "text": "材料试验可尽量采用同批、同结构极群，保持酸配方、设备设定及后续静置条件一致。评价隔板表面结构时，避免同时改变其他材料或设备参数；调整工艺时，固定隔板批次。应同时比较注酸过程与浸润结果，减少把改善归因于错误变量的风险。"
+      },
+      {
+        "eyebrow": "记录何时、如何观察浸润",
+        "title": "记录何时、如何观察浸润",
+        "text": "记录观察时点及评估方法。注酸刚结束时的状态，可能与规定静置后或后续工序时不同。采用照片、分区记录或既有产线方法时，应保持取样位置和观察条件一致。由电池制造商按产品要求制定验收条件，不能把某项目方法写成所有项目的要求。"
+      },
+      {
+        "eyebrow": "把证据放回电池设计中验证",
+        "title": "把证据放回电池设计中验证",
+        "text": "结果需放回目标电池结构与工艺验证。单项吸液值、一次注酸记录或供应商说法，不能独立证明整电池容量、寿命或性能改善。定量符合设定而局部浸润不同，应审阅设备程序、排气路径、极群结构和隔板表面；过程记录也改变时，先确认条件是否可比。最终决定应遵循制造商设计验证与质量要求。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "把证据放回电池设计中验证",
+      "text": "请提供极群结构、隔板尺寸和当前注酸条件，申请样品与规格匹配，沟通隔板受控试验的优先核查项。",
+      "items": [
+        "极群结构、尺寸与批次",
+        "酸配方、设备设定及适用时的真空阶段",
+        "实际注酸量、时间与异常停顿",
+        "观察时点、取样区域、方法及验收条件"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "隔板装进去没问题，循环以后还能保持压力吗？",
+          "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "为什么单次检测合格，不等于 AGM 隔板适合批量生产？",
+          "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供极群结构、隔板尺寸和当前注酸条件，申请样品与规格匹配，沟通隔板受控试验的优先核查项。",
+      "checklist": [
+        "极群结构、尺寸与批次",
+        "酸配方、设备设定及适用时的真空阶段",
+        "实际注酸量、时间与异常停顿",
+        "观察时点、取样区域、方法及验收条件"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "请提供极群结构、隔板尺寸和当前注酸条件，申请样品与规格匹配，沟通隔板受控试验的优先核查项。"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "把证据放回电池设计中验证",
+      "text": "2026 年 10 月 27 日核对 H&V PowerFill 产品页。表面通道与填充表现均归因于 H&V，不是维京独立验证结果或产品能力。受控比较与观察记录属于文章建议框架，不是统一行业标准。AI 主图为概念示意，不是测试证据。",
+      "items": [
+        [
+          "H&V — PowerFill",
+          "https://www.hollingsworth-vose.com/powerfill/"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const earlyLeadAcidElectrodeFormationCopy = {
   "en": {
     "nav": {
@@ -7269,6 +7585,8 @@ export function BlogArticlePage({
       ? telecomLeadAcidProcurementCopy[primaryLang]
       : page === "leadPremiumDemandRestocking"
       ? leadPremiumDemandRestockingCopy[primaryLang]
+      : page === "agmAcidVolumeWetOut"
+      ? agmAcidVolumeWetOutCopy[primaryLang]
       : page === "earlyLeadAcidElectrodeFormation"
       ? earlyLeadAcidElectrodeFormationCopy[primaryLang]
       : page === "agmSeparatorPressureCharts"

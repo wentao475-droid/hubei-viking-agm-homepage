@@ -5,6 +5,7 @@ import { channels, leadFields, CrmStore, csvText, fail, validateLead } from "./c
 import { CrmImports, parseLeadFile } from "./crm-import.js";
 import { crmClientScript } from "./crm-ui.js";
 import { gradeLabels, gradeDescriptions, legacyGradeLabels, gradeSchemaVersion } from "./lead-grades.js";
+import { orderRoutes } from "./crm-orders.js";
 
 export function crmRoutes(db, getSession) {
   const router = express.Router(), store = new CrmStore(db), imports = new CrmImports(store);
@@ -21,6 +22,7 @@ export function crmRoutes(db, getSession) {
     } catch (error) { next(error); }
   };
   const legacyWrite = (req, res, next) => req.get("origin") || req.get("referer") ? write(req, res, next) : next();
+  router.use(orderRoutes(store, actor, write));
   const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 5 * 1024 * 1024, files: 1, fields: 0 } }).single("file");
   const sendCsv = (res, filename, columns, rows) => res.set("Content-Disposition", `attachment; filename="${filename}"`).type("text/csv; charset=utf-8").send(csvText(columns, rows));
   const legacyGrades = { won: "A", qualified: "B", sample: "B", quoted: "B", lost: "D", new: "B", contacted: "B", handled: "B" };
@@ -114,7 +116,7 @@ export function crmRoutes(db, getSession) {
   router.use((error, _req, res, _next) => {
     if (!error.status && !error.code?.startsWith("LIMIT_")) console.error("CRM request failed:", error);
     const status = error.status || (error.code?.startsWith("LIMIT_") ? 413 : 500);
-    const message = error.code?.startsWith("LIMIT_") ? "上传超出限制：仅允许一个文件，大小不超过 5 MiB" : error.message;
+    const message = !error.status && error.code?.startsWith("LIMIT_") ? "上传超出限制：仅允许一个文件，大小不超过 5 MiB" : error.message;
     res.status(status).json({ ok: false, error: status === 500 ? "操作失败，请稍后重试" : message, code: error.code, duplicates: error.duplicates, duplicate_token: error.duplicate_token });
   });
   return router;

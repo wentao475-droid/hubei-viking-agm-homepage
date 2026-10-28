@@ -10,10 +10,13 @@ const clearSpamReasons = new Set([
 
 export function reviewInquiries(db) {
   const report = { automatic: [], manualReview: [] };
+  const orderedLeads = new Set(db.prepare("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'crm_orders'").get()
+    ? db.prepare("SELECT DISTINCT inquiry_id FROM crm_orders").all().map((row) => row.inquiry_id) : []);
   for (const row of db.prepare("SELECT * FROM inquiries WHERE lead_grade = 'B' ORDER BY id").all()) {
     const result = classifyInquiry({ inquiry: row });
     if (result.lead_grade !== "E") continue;
     const protections = [];
+    if (orderedLeads.has(row.id)) protections.push("has_order");
     if (row.classification_source !== "automatic") protections.push("manual_or_migrated_classification");
     if (row.notes?.trim()) protections.push("notes");
     if (row.next_follow_up_at) protections.push("scheduled_follow_up");

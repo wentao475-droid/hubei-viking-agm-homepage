@@ -11,6 +11,7 @@ import { agmVsGemTopics } from "./agm-vs-gem-topics.mjs";
 import { upsOriginalManufacturerTopics } from "./ups-original-manufacturer-topics.mjs";
 import { telecomLeadAcidProcurementTopics } from "./telecom-lead-acid-procurement-topics.mjs";
 import { leadPremiumDemandRestockingTopics } from "./lead-premium-restocking-topics.mjs";
+import { agmAcidVolumeWetOutTopics } from "./agm-acid-volume-wetout-topics.mjs";
 import { agmPressureChartTopics } from "./agm-pressure-chart-topics.mjs";
 import { upsBatteryMonitoringTopics } from "./ups-battery-monitoring-topics.mjs";
 import { agmSohMaterialDataTopics } from "./agm-soh-material-data-topics.mjs";
@@ -18,6 +19,7 @@ import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
+  "agmAcidVolumeWetOut",
   "leadPremiumDemandRestocking",
   "telecomLeadAcidProcurement",
   "upsOriginalManufacturerEvidence",
@@ -79,6 +81,7 @@ export const articleDefinitions = {
   ,upsBatteryIndividualMonitoring: ["ups-battery-272-individual-monitors-batch-traceability", "industryApplications", "2026-10-18", "2026-10-18"]
   ,agmSeparatorPressureCharts: ["reading-agm-separator-pressure-charts", "buyerGuides", "2026-10-24", "2026-10-24"]
   ,earlyLeadAcidElectrodeFormation: ["early-lead-acid-battery-electrode-formation", "manufacturingQuality", "2026-10-24", "2026-10-24"]
+  ,agmAcidVolumeWetOut: ["agm-battery-acid-volume-wet-out-uniformity", "manufacturingQuality", "2026-10-27", "2026-10-27"]
   ,leadPremiumDemandRestocking: ["lead-premium-battery-demand-based-restocking", "buyerGuides", "2026-10-24", "2026-10-24"]
   ,telecomLeadAcidProcurement: ["telecom-backup-lead-acid-procurement-2027-2028", "industryApplications", "2026-10-24", "2026-10-24"]
   ,upsOriginalManufacturerEvidence: ["ups-battery-original-manufacturer-production-address-evidence", "manufacturingQuality", "2026-10-24", "2026-10-24"]
@@ -86,6 +89,7 @@ export const articleDefinitions = {
 };
 
 const images = {
+  agmAcidVolumeWetOut: ["/images/articles/agm-acid-volume-wetout-hero-1600.webp", 1600, 1200],
   leadPremiumDemandRestocking: ["/images/articles/lead-premium-restocking-hero-1600.webp", 1600, 1200],
   telecomLeadAcidProcurement: ["/images/articles/telecom-backup-procurement-hero-1600.webp", 1600, 1200],
   upsOriginalManufacturerEvidence: ["/images/articles/ups-manufacturer-evidence-hero-1600.webp", 1600, 1200],
@@ -1198,6 +1202,10 @@ for (const [locale, topic] of Object.entries(leadPremiumDemandRestockingTopics))
   secondaryResourceData[locale].topics.leadPremiumDemandRestocking = topic;
 }
 
+for (const [locale, topic] of Object.entries(agmAcidVolumeWetOutTopics)) {
+  secondaryResourceData[locale].topics.agmAcidVolumeWetOut = topic;
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1241,6 +1249,7 @@ const arabicReferences = {
 
 
 const generatedArticleVisuals = {
+  "agmAcidVolumeWetOut": "/images/articles/agm-acid-volume-wetout-hero-1600.webp",
   "leadPremiumDemandRestocking": "/images/articles/lead-premium-restocking-hero-1600.webp",
   "telecomLeadAcidProcurement": "/images/articles/telecom-backup-procurement-hero-1600.webp",
   "upsOriginalManufacturerEvidence": "/images/articles/ups-manufacturer-evidence-hero-1600.webp",
@@ -1282,7 +1291,9 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "leadPremiumDemandRestocking"
+  const relatedKinds = kind === "agmAcidVolumeWetOut"
+    ? ["agmSeparatorPressureRetention", "keyTechnicalParameters", "agmSeparatorBatchProcessControl", "agmSeparatorPressureCharts"]
+    : kind === "leadPremiumDemandRestocking"
     ? ["agmSeparatorBatchProcessControl", "agmSeparatorManufacturingQualityDelivery", "agmSeparatorExportSupplyReadiness", "keyTechnicalParameters"]
     : kind === "telecomLeadAcidProcurement"
     ? ["upsVrlaTechnologySelection", "dataCenterBackupPowerAgmSeparator", "agmSeparatorBatchProcessControl", "keyTechnicalParameters"]
@@ -1405,6 +1416,15 @@ function buildArticle(locale, kind, localeData) {
   [
     "Yangtze Nonferrous — 2026-09-29",
     "https://pb.ccmn.cn/news/ZX018/202609/f39296a023984b088d8302eee0da446b.html"
+  ]
+] };
+  }
+
+  if (kind === "agmAcidVolumeWetOut") {
+    result.references = { eyebrow: localeData.ui.reference, title: topic.sections[5][1], text: topic.referenceNote, items: [
+  [
+    "H&V — PowerFill",
+    "https://www.hollingsworth-vose.com/powerfill/"
   ]
 ] };
   }

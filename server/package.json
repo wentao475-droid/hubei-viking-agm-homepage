@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": { "node": ">=20.19.0" },
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
@@ -13,9 +14,11 @@
     "csv-parse": "^7.0.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "fflate": "0.8.3",
     "multer": "^2.4.0",
-    "read-excel-file": "^9.3.12",
-    "nodemailer": "^10.0.14"
+    "nodemailer": "^10.0.14",
+    "pdfjs-dist": "5.5.207",
+    "read-excel-file": "^9.3.12"
   },
   "overrides": {
     "qs": "6.16.0"

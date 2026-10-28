@@ -341,7 +341,7 @@ app.use("/admin", (_request, response, next) => {
   next();
 });
 
-app.get("/admin", (request, response) => {
+app.get(["/admin", "/admin/orders", "/admin/orders/:orderId"], (request, response) => {
   if (!adminConfigured) {
     response.status(503).send(renderAdminUnavailable());
     return;

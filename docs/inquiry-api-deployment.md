@@ -47,6 +47,8 @@ apt update
 apt install -y nodejs npm sqlite3 rsync
 ```
 
+Verify `node --version` is **20.19.0 or later** before enabling contract-number intake (required by the local PDF text parser). If the OS repository supplies an older version, install a supported Node release through the existing approved server-maintenance process before deployment. This feature does not upgrade the production runtime automatically.
+
 Create the service user and directories:
 
 ```bash

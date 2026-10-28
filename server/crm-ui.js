@@ -4,10 +4,12 @@ import { gradeLabels, gradeDescriptions } from "./lead-grades.js";
 export function crmBody() {
   const options = Object.entries(channels).map(([value, label]) => `<option value="${value}">${label}</option>`).join("");
   return `<main class="admin-shell">
-    <header class="topbar"><div><p class="eyebrow">Viking AGM</p><h1>线索管理</h1><p class="timezone-note">官网与其他渠道统一管理 · 时间均为上海时间</p></div>
-      <div class="topbar-actions"><button id="new-lead" class="primary-button">新增线索</button><button id="import-leads" class="secondary-button">导入线索</button>
+    <header class="topbar"><div><p class="eyebrow">Viking AGM</p><h1 id="page-title">线索管理</h1><p class="timezone-note">官网与其他渠道统一管理 · 时间均为上海时间</p></div>
+      <div id="lead-actions" class="topbar-actions"><button id="new-lead" class="primary-button">新增线索</button><button id="import-leads" class="secondary-button">导入线索</button>
       <a class="secondary-button" href="/admin/api/crm/template.csv">下载导入模板</a><form method="POST" action="/admin/logout"><button class="ghost-button">退出</button></form></div></header>
     <div id="notice" role="status" aria-live="polite"></div>
+    <nav class="crm-actions crm-nav" aria-label="后台主导航"><a href="/admin" id="nav-leads" class="secondary-button">线索管理</a><a href="/admin/orders" id="nav-orders" class="secondary-button">订单管理</a></nav>
+    <div id="leads-view">
     <section class="stats-grid" aria-label="线索等级统计">${Object.entries(gradeLabels).map(([grade, label]) => `<button class="stat-card" data-grade="${grade}"><span>${grade} · ${label}</span><strong id="stat-${grade}">0</strong><small>${gradeDescriptions[grade]}</small></button>`).join("")}</section>
     <section class="panel"><div class="toolbar crm-toolbar">
       <label><span>搜索线索及跟进内容</span><input id="search" type="search" placeholder="姓名、公司、联系方式、需求…"></label>
@@ -19,6 +21,8 @@ export function crmBody() {
     </div><div class="crm-actions"><a id="export-csv" class="secondary-button">导出线索 CSV</a><a id="export-follow-ups" class="secondary-button">导出完整跟进 CSV</a><span id="status-message" role="status"></span></div>
     <div id="bulk-actions" class="crm-actions" hidden><span id="selected-count"></span><select id="bulk-grade" aria-label="批量等级">${Object.entries(gradeLabels).map(([g, label]) => `<option value="${g}"${g === "B" ? " selected" : ""}>${g} · ${label}</option>`).join("")}</select><button id="apply-bulk-grade" class="primary-button">应用等级</button><button id="clear-selection" class="secondary-button">清除选择</button></div>
     <div id="inquiry-list" class="inquiry-list"></div><div class="pagination"><button id="prev-page" class="secondary-button">上一页</button><span id="page-label"></span><button id="next-page" class="secondary-button">下一页</button></div></section>
+    </div>
+    <section id="orders-view" class="panel" hidden><div id="order-filters" class="crm-actions"><label><span>搜索订单</span><input type="search" id="order-search" placeholder="订单号、客户、公司、规格、物流单号"></label><label><span>订单状态</span><select id="order-status"><option value="all">全部状态</option></select></label></div><div id="orders-content"></div><div id="orders-pagination" class="pagination"><button id="orders-prev" class="secondary-button">上一页</button><span id="orders-page" role="status"></span><button id="orders-next" class="secondary-button">下一页</button></div></section>
     <dialog id="detail-drawer" class="crm-drawer"><button class="close-button" data-close="detail-drawer" aria-label="关闭详情">关闭</button><div id="detail-content"></div></dialog>
     <dialog id="workspace-dialog" class="crm-dialog"><button class="close-button" data-close="workspace-dialog" aria-label="关闭窗口">关闭</button><div id="workspace-content"></div></dialog>
   </main><script src="/admin/api/crm.js" defer></script>`;
@@ -47,6 +51,17 @@ export const crmStyles = `
   .crm-form label { min-width:0; }
   .crm-form textarea { min-height:90px; }
   .crm-form small,.muted { color:var(--steel); }
+  .order-item { min-width:0;border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:14px; }
+  #lead-orders p { overflow-wrap:anywhere; }
+  .crm-nav a[aria-current=page],.detail-tabs button[aria-selected=true] { background:var(--ink);color:#fff; }
+  .detail-tabs { border-bottom:1px solid var(--line);padding-bottom:12px; }
+  .orders-table { width:100%;border-collapse:collapse;table-layout:fixed; }
+  .orders-table th,.orders-table td { padding:12px 8px;text-align:left;border-bottom:1px solid var(--line);overflow-wrap:anywhere;vertical-align:top; }
+  .orders-table small { display:block;color:var(--steel);margin-top:6px; }
+  .order-overview { display:grid;gap:12px;overflow-wrap:anywhere; }
+  .order-overview h3 { margin-bottom:4px; }
+  .order-create { margin-top:8px;padding:6px 10px;font-size:13px; }
+  @media(max-width:860px) { .orders-table thead { display:none; } .orders-table tr { display:block;border:1px solid var(--line);border-radius:6px;padding:10px;margin:12px 0; } .orders-table td { display:block;border:0;padding:6px; } .orders-table td::before { content:attr(data-label) '：';font-weight:700; } }
   .error-text { color:#991b1b;white-space:pre-wrap;overflow-wrap:anywhere; }
   .success-text { color:#166534; }
   .timeline { display:grid;gap:12px;padding:0;list-style:none; }
@@ -74,6 +89,9 @@ function crmClient() {
   const esc = (text) => String(text ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   let grades;
   const state = { page: 1, grade: "work", channel: "all", follow_up: "all", sort: "created", batch: "", q: "" };
+  const ordersPage = location.pathname.startsWith("/admin/orders"), orderId = Number(location.pathname.match(/^\/admin\/orders\/(\d+)\/?$/)?.[1]) || null;
+  const orderState = { page: 1, status: "all", q: "" };
+  let orderSequence = 0;
   let options, rows = [], selected = new Set(), sequence = 0, draft = null, preview = null, importData = null, importGeneration = 0;
   const format = (value) => {
     if (!value) return "未安排";
@@ -95,8 +113,9 @@ function crmClient() {
     const entries = changes.before && changes.after
       ? Object.keys(changes.after).map((key) => [key, { before: changes.before[key], after: changes.after[key] }])
       : Object.entries(changes);
-    const value = (key, text) => text == null || text === "" ? "未设置" : key.endsWith("_at") ? format(text) : key === "lead_grade" ? `${schemaVersion === 1 ? "旧制 " : ""}${text} · ${(schemaVersion === 1 ? options.legacyGrades : grades)[text] || text}` : key === "source_channel" ? options.channels[text] || text : text;
-    return '<ul>' + entries.filter(([, item]) => item.before !== item.after).map(([key, item]) => `<li>${esc(options.fields[key] || (key === "grade_definition" ? "等级定义" : key))}：${esc(value(key, item.before))} → ${esc(value(key, item.after))}</li>`).join("") + '</ul>';
+    const orderLabels = { order_number: "订单编号", status: "订单状态", currency: "币种", amount: "订单金额", items: "规格明细", delivery_date: "约定交期", shipped_date: "发货日期", logistics_company: "物流公司", tracking_number: "物流单号", notes: "订单备注", contract: "最终合同" };
+    const value = (key, text) => text == null || text === "" ? "未设置" : key === "items" ? JSON.parse(text).map((item) => `${item.product}：${specification(item)}${item.unit_price ? ' · 单价 ' + item.unit_price : ''}`).join("；") : key === "status" ? orderStatuses[text] || text : key.endsWith("_at") ? format(text) : key === "lead_grade" ? `${schemaVersion === 1 ? "旧制 " : ""}${text} · ${(schemaVersion === 1 ? options.legacyGrades : grades)[text] || text}` : key === "source_channel" ? options.channels[text] || text : text;
+    return '<ul>' + entries.filter(([, item]) => item.before !== item.after).map(([key, item]) => `<li>${esc(options.fields[key] || orderLabels[key] || (key === "grade_definition" ? "等级定义" : key))}：${esc(value(key, item.before))} → ${esc(value(key, item.after))}</li>`).join("") + '</ul>';
   }
   async function api(url, body) {
     const response = await fetch("/admin/api" + url, body === undefined ? {} : body instanceof FormData ? { method: "POST", body } : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
@@ -110,6 +129,9 @@ function crmClient() {
   }
   function closeDialog(id) { $(id).close(); }
   document.querySelectorAll("[data-close]").forEach((el) => el.onclick = () => closeDialog(el.dataset.close));
+  $("detail-drawer").addEventListener("close", () => {
+    const url = new URL(location.href); url.searchParams.delete("lead"); url.searchParams.delete("tab"); history.replaceState(null, "", url);
+  });
   document.querySelectorAll("dialog").forEach((dialog) => dialog.addEventListener("click", (event) => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } }));
   async function load() {
     const request = ++sequence;
@@ -127,11 +149,12 @@ function crmClient() {
   }
   function renderRows() {
     const cell = (main, sub = "") => `<span><span class="cell-main">${esc(main || "—")}</span><span class="cell-sub">${esc(sub)}</span></span>`;
-    $("inquiry-list").innerHTML = rows.length ? '<div class="table-head"><input id="select-all" type="checkbox" aria-label="选择本页"><span>录入时间</span><span>线索</span><span>公司</span><span>需求</span><span>渠道</span><span>跟进</span><span>等级</span></div>' + rows.map((row) => `<div class="inquiry-row" tabindex="0" role="button" data-id="${row.id}" aria-label="查看 ${esc(row.name)}"><input class="row-check" type="checkbox" value="${row.id}" aria-label="选择线索 ${row.id}">${cell(format(row.created_at), "#" + row.id)}${cell(row.name, row.contact)}${cell(row.company, row.country)}${cell(row.interested_product || row.application, row.message)}${cell(options.channels[row.source_channel], row.source_detail || row.utm_source || row.referrer)}${cell("下次：" + format(row.next_follow_up_at), row.last_follow_up_at ? "最近：" + format(row.last_follow_up_at) : row.latest_follow_up ? "最近：时间未知" : "暂无沟通记录")}<span class="badge grade-${row.lead_grade.toLowerCase()}">${row.lead_grade} · ${grades[row.lead_grade]}</span></div>`).join("") : '<p class="muted">没有符合条件的线索。</p>';
+    $("inquiry-list").innerHTML = rows.length ? '<div class="table-head"><input id="select-all" type="checkbox" aria-label="选择本页"><span>录入时间</span><span>线索</span><span>公司</span><span>需求</span><span>渠道</span><span>跟进</span><span>等级 / 操作</span></div>' + rows.map((row) => `<div class="inquiry-row" tabindex="0" role="button" data-id="${row.id}" aria-label="查看 ${esc(row.name)}"><input class="row-check" type="checkbox" value="${row.id}" aria-label="选择线索 ${row.id}">${cell(format(row.created_at), "#" + row.id)}${cell(row.name, row.contact)}${cell(row.company, row.country)}${cell(row.interested_product || row.application, row.message)}${cell(options.channels[row.source_channel], row.source_detail || row.utm_source || row.referrer)}${cell("下次：" + format(row.next_follow_up_at), row.last_follow_up_at ? "最近：" + format(row.last_follow_up_at) : row.latest_follow_up ? "最近：时间未知" : "暂无沟通记录")}<span><span class="badge grade-${row.lead_grade.toLowerCase()}">${row.lead_grade} · ${grades[row.lead_grade]}</span><button class="secondary-button order-create" data-new-order="${row.id}" aria-label="为 ${esc(row.name)} 下单">下单</button></span></div>`).join("") : '<p class="muted">没有符合条件的线索。</p>';
     document.querySelectorAll(".inquiry-row").forEach((el) => {
-      el.onclick = (e) => { if (e.target.type !== "checkbox") openDetail(Number(el.dataset.id)); };
+      el.onclick = (e) => { if (e.target.type !== "checkbox" && !e.target.closest("button")) openDetail(Number(el.dataset.id)); };
       el.onkeydown = (e) => { if ((e.key === "Enter" || e.key === " ") && e.target === el) { e.preventDefault(); openDetail(Number(el.dataset.id)); } };
     });
+    document.querySelectorAll("[data-new-order]").forEach((el) => el.onclick = () => editOrder(Number(el.dataset.newOrder)));
     document.querySelectorAll(".row-check").forEach((el) => el.onchange = () => { el.checked ? selected.add(Number(el.value)) : selected.delete(Number(el.value)); syncSelection(); });
     if ($("select-all")) $("select-all").onchange = (e) => { document.querySelectorAll(".row-check").forEach((el) => { el.checked = e.target.checked; el.dispatchEvent(new Event("change")); }); };
   }
@@ -147,11 +170,15 @@ function crmClient() {
     catch (e) { notice(e.message, true); } finally { button.disabled = false; }
   };
 
-  async function openDetail(id) {
+  async function openDetail(id, tab = "follow") {
     try {
       const data = await api("/inquiries/" + id), row = data.inquiry;
+      $("detail-content").dataset.leadId = String(id);
       const pair = (label, value) => `<div class="detail-item"><span>${esc(label)}</span><strong>${esc(value || "—")}</strong></div>`;
+      const timeline = (activities) => activities.map((a) => `<li><strong>${esc(a.kind === "legacy_note" ? "历史备注 · 时间未知" : a.kind === "communication" ? (a.happened_at ? format(a.happened_at) : "历史沟通 · 时间未知") + " · " + a.method : "操作记录 · " + format(a.happened_at))}</strong><p>${esc(a.content)}</p>${a.next_action ? `<p>下一步：${esc(a.next_action)}</p>` : ""}${a.changes_json ? `<details><summary>查看变更</summary>${changesHtml(a.changes_json, a.grade_schema_version)}</details>` : ""}<small>录入：${esc(format(a.recorded_at))} · ${esc(a.actor)}${a.next_follow_up_at ? " · 下次跟进：" + esc(format(a.next_follow_up_at)) : ""}</small></li>`).join("") || '<li>暂无记录</li>';
       $("detail-content").innerHTML = `<h2 id="detail-title">${esc(row.name)}</h2><span class="badge grade-${row.lead_grade.toLowerCase()}">${row.lead_grade} · ${grades[row.lead_grade]}</span>
+        <div class="crm-actions"><button id="new-order" class="primary-button">为此线索下单</button></div>
+        <div class="crm-actions detail-tabs" role="tablist" aria-label="线索详情分类"><button id="lead-follow-tab" class="secondary-button" role="tab" aria-controls="lead-follow-panel" aria-selected="true">线索信息与跟进</button><button id="lead-orders-tab" class="secondary-button" role="tab" aria-controls="lead-orders-panel" aria-selected="false" tabindex="-1">关联订单</button></div><div id="lead-follow-panel" role="tabpanel" aria-labelledby="lead-follow-tab">
         <div class="detail-grid">${[["公司", row.company], ["渠道", (options.channels[row.source_channel] || "") + " " + row.source_detail], ["邮箱", row.email], ["电话", row.phone], ["微信", row.wechat], ["WhatsApp", row.whatsapp], ["联系方式", row.contact], ["首次联系", row.first_contact_at ? format(row.first_contact_at) : "未记录"], ["国家", row.country], ["录入", format(row.created_at)]].map(([a,b]) => pair(a,b)).join("")}</div>
         <div class="message-box"><span>${row.record_origin === "website" ? "官网原始留言" : "需求内容"}</span><p>${esc(row.message || "—")}</p></div>
         <div class="crm-actions"><button id="edit-basic" class="secondary-button">编辑基本资料</button><button id="reload-detail" class="secondary-button">重新加载详情</button></div>
@@ -164,9 +191,25 @@ function crmClient() {
           ${field("next_follow_up_at", "下次跟进（留空可清除）", local(row.next_follow_up_at), "datetime-local")}
           <label><span>线索等级</span><select name="lead_grade">${gradeOptions(row.lead_grade)}</select></label>
           <div id="follow-error" class="error-text wide" role="alert"></div><div class="crm-actions wide"><button class="primary-button" type="submit">添加跟进</button><button class="secondary-button" type="button" id="save-plan">仅更新计划/等级</button></div></form>
-        <h3>跟进时间线</h3><ol class="timeline">${data.activities.map((a) => `<li><strong>${esc(a.kind === "legacy_note" ? "历史备注 · 时间未知" : a.kind === "communication" ? (a.happened_at ? format(a.happened_at) : "历史沟通 · 时间未知") + " · " + a.method : "操作记录 · " + format(a.happened_at))}</strong><p>${esc(a.content)}</p>${a.next_action ? `<p>下一步：${esc(a.next_action)}</p>` : ""}${a.changes_json ? `<details><summary>查看变更</summary>${changesHtml(a.changes_json, a.grade_schema_version)}</details>` : ""}<small>录入：${esc(format(a.recorded_at))} · ${esc(a.actor)}${a.next_follow_up_at ? " · 下次跟进：" + esc(format(a.next_follow_up_at)) : ""}</small></li>`).join("") || '<li>暂无跟进记录</li>'}</ol>`;
+        <h3>跟进时间线</h3><ol class="timeline">${timeline(data.activities.filter((a) => a.kind !== "order"))}</ol></div><section id="lead-orders-panel" role="tabpanel" aria-labelledby="lead-orders-tab" hidden><h3>此线索的全部订单</h3><div id="lead-orders">加载订单…</div><details><summary>订单操作记录</summary><ol class="timeline">${timeline(data.activities.filter((a) => a.kind === "order"))}</ol></details></section>`;
       $("detail-drawer").setAttribute("aria-labelledby", "detail-title"); if (!$("detail-drawer").open) $("detail-drawer").showModal();
       $("edit-basic").onclick = () => editLead(row); $("reload-detail").onclick = () => openDetail(id);
+      $("new-order").onclick = () => editOrder(id);
+      const switchTab = (next) => {
+        for (const key of ["follow", "orders"]) {
+          $("lead-" + key + "-panel").hidden = key !== next;
+          $("lead-" + key + "-tab").setAttribute("aria-selected", String(key === next));
+          $("lead-" + key + "-tab").tabIndex = key === next ? 0 : -1;
+        }
+        const url = new URL(location.href);
+        if (url.searchParams.get("lead") === String(id)) { url.searchParams.set("tab", next); history.replaceState(null, "", url); }
+      };
+      for (const key of ["follow", "orders"]) {
+        const button = $("lead-" + key + "-tab"); button.onclick = () => switchTab(key);
+        button.onkeydown = (event) => { if (["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) { event.preventDefault(); const next = event.key === "Home" ? "follow" : event.key === "End" ? "orders" : key === "follow" ? "orders" : "follow"; switchTab(next); $("lead-" + next + "-tab").focus(); } };
+      }
+      switchTab(tab);
+      loadOrders(id).catch((error) => { if ($("lead-orders")) $("lead-orders").textContent = error.message; });
       const submit = async (plan) => {
         const form = $("follow-up-form"), data = Object.fromEntries(new FormData(form));
         const buttons = form.querySelectorAll("button"); buttons.forEach((b) => b.disabled = true);
@@ -175,6 +218,139 @@ function crmClient() {
       };
       $("follow-up-form").onsubmit = (e) => { e.preventDefault(); submit(false); }; $("save-plan").onclick = () => submit(true);
     } catch (e) { notice(e.message, true); }
+  }
+
+  const orderStatuses = { draft: "待确认", confirmed: "已确认", preparing: "备货中", shipped: "已发货", completed: "已完成", cancelled: "已取消" };
+  const specification = (item) => item.form === "sheet"
+    ? `${item.length} × ${item.width} × ${item.thickness} mm · ${item.quantity} 片`
+    : `厚 ${item.thickness} mm × 宽 ${item.width} mm × 长 ${item.length} m · ${item.quantity} 卷`;
+  async function loadOrders(id) {
+    const data = await api(`/inquiries/${id}/orders`);
+    if ($("detail-content").dataset.leadId !== String(id)) return;
+    $("lead-orders-tab").textContent = `关联订单（${data.orders.length}）`;
+    $("lead-orders").innerHTML = data.orders.length ? '<ol class="timeline">' + data.orders.map((order) => `<li><a href="/admin/orders/${order.id}"><strong>${esc(order.order_number)}</strong></a> · ${esc(orderStatuses[order.status])}<p>${esc(order.amount)} ${esc(order.currency)} · 交期：${esc(order.delivery_date || "未安排")}</p><a class="secondary-button" href="/admin/orders/${order.id}">进入订单详情</a></li>`).join("") + '</ol>' : '<p class="muted">此线索暂无订单，可使用“为此线索下单”。订单资料在独立订单页面维护。</p>';
+  }
+  async function loadOrderList() {
+    const request = ++orderSequence;
+    try {
+      const data = await api("/orders?" + new URLSearchParams(orderState));
+      if (request !== orderSequence) return;
+      orderState.page = data.page;
+      $("orders-page").textContent = `共 ${data.total} 笔订单 · ${data.page} / ${data.totalPages}`;
+      $("orders-prev").disabled = data.page <= 1; $("orders-next").disabled = data.page >= data.totalPages;
+      $("orders-content").innerHTML = data.orders.length ? `<table class="orders-table"><thead><tr>${["订单 / 录入时间","客户 / 公司","完整规格","金额","状态 / 交期","操作"].map((label) => `<th scope="col">${label}</th>`).join("")}</tr></thead><tbody>${data.orders.map((order) => `<tr>
+        <td data-label="订单"><a href="/admin/orders/${order.id}">${esc(order.order_number)}</a><small>${esc(format(order.created_at))}</small></td>
+        <td data-label="客户"><a href="/admin?lead=${order.inquiry_id}&tab=orders">${esc(order.lead_name)}</a><small>${esc(order.lead_company || "未填公司")}</small></td>
+        <td data-label="规格">${order.items.map((item) => `<p>${esc(item.product)}<br>${esc(specification(item))}</p>`).join("")}</td>
+        <td data-label="金额">${esc(order.amount)} ${esc(order.currency)}</td><td data-label="进度">${esc(orderStatuses[order.status])}<small>交期：${esc(order.delivery_date || "未安排")}</small></td>
+        <td data-label="操作"><div class="crm-actions"><a class="secondary-button" href="/admin/orders/${order.id}">查看</a><a class="secondary-button" href="/admin/orders/${order.id}?edit=1">编辑</a></div></td></tr>`).join("")}</tbody></table>` : '<p class="muted">暂无符合条件的订单。请在线索列表中选择客户后下单。</p>';
+    } catch (error) { notice(error.message, true); }
+  }
+  async function loadOrderDetail(id, editing = false) {
+    try {
+      const { order, lead } = await api(`/orders/${id}`);
+      $("page-title").textContent = "订单详情";
+      $("order-filters").hidden = true; $("orders-pagination").hidden = true;
+      $("orders-content").innerHTML = `<div class="order-overview"><div class="crm-actions"><a class="secondary-button" href="/admin/orders">返回全部订单</a><a class="secondary-button" href="/admin?lead=${lead.id}&tab=orders">查看来源线索</a></div>
+        <h2>${esc(order.order_number)} · ${esc(orderStatuses[order.status])}</h2><p>客户：${esc(lead.name)} · ${esc(lead.company || "未填公司")} · ${esc(lead.contact || "")}</p>
+        <h3>产品与完整规格</h3>${order.items.map((item) => `<p>${esc(item.product)}：${esc(specification(item))}${item.unit_price ? ` · 单价 ${esc(item.unit_price)} ${esc(order.currency)}/${item.form === "sheet" ? "片" : "卷"}` : ""}</p>`).join("")}
+        <p>订单总金额：${esc(order.amount)} ${esc(order.currency)}<br>约定交期：${esc(order.delivery_date || "未安排")}</p>
+        <h3>发货信息</h3><p>发货日期：${esc(order.shipped_date || "未记录")}<br>物流公司：${esc(order.logistics_company || "未记录")}<br>物流单号：${esc(order.tracking_number || "未记录")}</p>
+        ${order.notes ? `<h3>订单备注</h3><p class="message-box">${esc(order.notes)}</p>` : ""}
+        <div class="crm-actions"><button id="edit-order-detail" class="primary-button">编辑订单 / 发货</button><button id="reload-order-detail" class="secondary-button">重新加载订单</button></div>
+        <h3>最终合同</h3><p>${esc(order.contract_filename || "尚未上传合同")}</p><div class="crm-actions">${order.contract_filename ? `${["application/pdf","image/png","image/jpeg"].includes(order.contract_mime) ? `<a class="secondary-button" href="/admin/api/orders/${order.id}/contract" target="_blank" rel="noopener">预览合同</a>` : '<span class="muted">Word 文件请下载查看</span>'}<a class="secondary-button" href="/admin/api/orders/${order.id}/contract?download=1">下载合同</a>` : ""}<button id="order-contract" class="secondary-button">${order.contract_filename ? "替换最终合同" : "上传最终合同"}</button></div>
+        <small class="muted">录入：${esc(format(order.created_at))} · 更新：${esc(format(order.updated_at))}</small></div>`;
+      $("edit-order-detail").onclick = () => editOrder(lead.id, order);
+      $("order-contract").onclick = () => uploadContract(lead.id, order);
+      $("reload-order-detail").onclick = () => loadOrderDetail(id);
+      if (editing) { history.replaceState(null, "", `/admin/orders/${id}`); editOrder(lead.id, order); }
+    } catch (error) { $("orders-content").textContent = error.message; notice(error.message, true); }
+  }
+  function showWorkspace() {
+    $("workspace-dialog").setAttribute("aria-labelledby", "workspace-title");
+    if (!$("workspace-dialog").open) $("workspace-dialog").showModal();
+  }
+  function editOrder(inquiryId, order = null) {
+    const values = order || { status: "draft", currency: "CNY", items: [{ form: "sheet" }] }, requestKey = crypto.randomUUID();
+    let contractDraft = null, recognitionRun = 0, inferredNumber = null;
+    $("workspace-content").innerHTML = `<h2 id="workspace-title">${order ? "编辑订单 / 发货" : "新增订单"}</h2><p class="muted">一单可记录多种规格。片材单位：长/宽/厚均为 mm，数量为片；卷材单位：长 m、宽/厚 mm，数量为卷。订单金额为最终确认金额，不自动按单价计算。</p>
+      <form id="order-form" class="crm-form">${!order ? `<section class="wide"><h3>从合同识别订单号（可选）</h3><p class="muted">支持可复制文字的 PDF、.docx，最大 10 MiB。只识别合同编号；请核对编号并手工填写规格、数量和金额。保存订单时一并保存本合同，草稿 30 分钟后过期。</p><label><span>选择用于识别的合同</span><input name="contract_file" id="order-contract-file" type="file" accept=".pdf,.docx"></label><div class="crm-actions"><button id="read-order-contract" class="secondary-button" type="button" disabled>识别合同编号</button><button id="clear-order-contract" class="secondary-button" type="button">取消所选合同</button></div><div id="contract-recognition" role="status" aria-live="polite"></div></section>` : ""}${field("order_number", "订单编号（必填且唯一）", values.order_number)}
+      <label><span>订单状态</span><select name="status">${Object.entries(orderStatuses).map(([key, label]) => `<option value="${key}"${key === values.status ? " selected" : ""}>${label}</option>`).join("")}</select></label>
+      ${field("amount", "订单总金额（必填）", values.amount)}${field("currency", "币种（如 CNY / USD）", values.currency)}
+      ${field("delivery_date", "约定交期", values.delivery_date, "date")}${field("shipped_date", "发货日期（已发货/已完成必填）", values.shipped_date, "date")}
+      ${field("logistics_company", "物流公司", values.logistics_company)}${field("tracking_number", "物流单号", values.tracking_number)}
+      <section class="wide"><h3>产品与完整规格</h3><div id="order-items"></div><button type="button" id="add-order-item" class="secondary-button">增加规格</button></section>
+      ${field("notes", "订单备注", values.notes, "textarea", true)}<div id="order-error" class="error-text wide" role="alert"></div><button class="primary-button wide" type="submit">保存订单</button></form>`;
+    const addItem = (item = { form: "sheet" }) => {
+      const wrapper = document.createElement("fieldset"); wrapper.className = "crm-form order-item";
+      wrapper.innerHTML = `<legend>规格明细</legend>${field("product", "产品名称（必填）", item.product || "AGM 隔板")}
+        <label><span>形态</span><select name="form"><option value="sheet"${item.form === "sheet" ? " selected" : ""}>片材</option><option value="roll"${item.form === "roll" ? " selected" : ""}>卷材</option></select></label>
+        ${field("length", "长度（片材 mm / 卷材 m）", item.length)}${field("width", "宽度（mm）", item.width)}${field("thickness", "厚度（mm）", item.thickness)}${field("quantity", "数量（片 / 卷，整数）", item.quantity)}${field("unit_price", "每片 / 每卷单价（选填）", item.unit_price)}<button class="secondary-button" type="button">移除此规格</button>`;
+      wrapper.querySelector("button").onclick = () => wrapper.remove(); $("order-items").append(wrapper);
+    };
+    values.items.forEach(addItem); $("add-order-item").onclick = () => { if ($("order-items").children.length < 50) addItem(); };
+    showWorkspace();
+    const releaseDraft = async () => { const id = contractDraft; contractDraft = null; if (id) await api(`/orders/contract-drafts/${id}/cancel`, {}).catch(() => {}); };
+    if (!order) {
+      const form = $("order-form"), fileInput = $("order-contract-file"), readButton = $("read-order-contract"), saveButton = form.querySelector('button[type="submit"]');
+      const numberInput = form.elements.order_number;
+      numberInput.oninput = () => { inferredNumber = null; };
+      const changed = async () => {
+        recognitionRun++; readButton.disabled = !fileInput.files.length; saveButton.disabled = false;
+        if (inferredNumber && numberInput.value === inferredNumber) numberInput.value = "";
+        inferredNumber = null; $("contract-recognition").textContent = "";
+        await releaseDraft();
+      };
+      fileInput.onchange = changed;
+      $("clear-order-contract").onclick = () => { fileInput.value = ""; changed(); };
+      $("workspace-dialog").addEventListener("close", () => { recognitionRun++; releaseDraft(); }, { once: true });
+      readButton.onclick = async () => {
+        const run = ++recognitionRun; readButton.disabled = true; saveButton.disabled = true;
+        $("contract-recognition").textContent = "正在本站服务器识别，请稍候…";
+        try {
+          await releaseDraft();
+          const file = fileInput.files[0];
+          if (!file || file.size > 10 * 1024 * 1024) throw new Error("请选择不超过 10 MiB 的 PDF 或 .docx 合同");
+          const body = new FormData(); body.set("file", file);
+          const result = await api(`/inquiries/${inquiryId}/order-contract-preview`, body);
+          if (run !== recognitionRun || !form.isConnected || !$("workspace-dialog").open) { await api(`/orders/contract-drafts/${result.draft_id}/cancel`, {}); return; }
+          contractDraft = result.draft_id;
+          const candidates = result.candidates;
+          $("contract-recognition").innerHTML = `<p>已关联合同：${esc(file.name)}。${candidates.length ? "请核对下列合同编号，确认后保存订单。" : "未识别到明确合同编号，请手工填写订单号；所选合同仍会随订单保存。"}</p>` + candidates.map((candidate, i) => `<div class="duplicate-box"><strong>${esc(candidate.number)}</strong><p>${esc(candidate.context)}</p>${candidate.existing_order_id ? `<p class="error-text">此编号已有订单 <a href="/admin/orders/${candidate.existing_order_id}">#${candidate.existing_order_id}</a>，不能重复创建。</p>` : ""}<button type="button" class="secondary-button" data-contract-number="${i}">使用此编号</button></div>`).join("");
+          const applyNumber = (number) => { numberInput.value = number; inferredNumber = number; };
+          if (candidates.length === 1 && !numberInput.value && !candidates[0].existing_order_id) applyNumber(candidates[0].number);
+          $("contract-recognition").querySelectorAll("[data-contract-number]").forEach((button) => button.onclick = () => applyNumber(candidates[Number(button.dataset.contractNumber)].number));
+        } catch (error) {
+          if (run === recognitionRun && form.isConnected) $("contract-recognition").textContent = `${error.message}。合同尚未关联，可重试；也可取消所选合同后手动录入。`;
+        } finally { if (run === recognitionRun) { readButton.disabled = !fileInput.files.length; saveButton.disabled = false; } }
+      };
+    }
+    $("order-form").onsubmit = async (event) => {
+      event.preventDefault(); const form = event.target, button = form.querySelector('button[type="submit"]'); button.disabled = true;
+      try {
+        const input = Object.fromEntries(new FormData(form));
+        delete input.contract_file;
+        if (!order && $("order-contract-file").files.length && !contractDraft) throw new Error("请先识别所选合同，或取消所选合同后再保存");
+        input.items = [...form.querySelectorAll(".order-item")].map((element) => Object.fromEntries([...element.querySelectorAll("input,select")].map((el) => [el.name, el.value])));
+        const data = await api(`/inquiries/${inquiryId}/orders${order ? '/' + order.id : ''}`, { ...input, version: order?.version, request_key: requestKey, contract_draft_id: contractDraft });
+        contractDraft = null;
+        $("workspace-dialog").close();
+        if (!ordersPage) location.assign(`/admin/orders/${data.order.id}`);
+        else { notice("订单已保存，客户等级保持不变"); await loadOrderDetail(data.order.id); }
+      } catch (error) { $("order-error").textContent = error.message; } finally { button.disabled = false; }
+    };
+  }
+  function uploadContract(inquiryId, order) {
+    $("workspace-content").innerHTML = `<h2 id="workspace-title">${order.contract_filename ? "替换" : "上传"}最终合同 · ${esc(order.order_number)}</h2><p class="muted">每单保留一份最终确认文件；PDF、JPG、PNG 可在线预览，Word 文件可下载查看。最大 10 MiB。</p><form id="contract-form" class="crm-form"><label class="wide"><span>最终合同文件</span><input name="file" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" required></label>${order.contract_filename ? `<label class="wide"><span>当前：${esc(order.contract_filename)}。替换后旧文件不再保留，但操作记录保留。</span><input type="checkbox" name="replace" value="true" required aria-label="确认替换旧合同"></label>` : ""}<div id="contract-error" class="error-text wide" role="alert"></div><button class="primary-button" type="submit">保存最终合同</button></form>`;
+    showWorkspace();
+    $("contract-form").onsubmit = async (event) => {
+      event.preventDefault(); const form = event.target, button = form.querySelector("button"); button.disabled = true;
+      try {
+        const body = new FormData(form); body.set("version", String(order.version));
+        if (form.elements.file.files[0].size > 10 * 1024 * 1024) throw new Error("合同不能超过 10 MiB");
+        await api(`/orders/${order.id}/contract`, body); $("workspace-dialog").close(); notice("最终合同已保存"); await loadOrderDetail(order.id);
+      } catch (error) { $("contract-error").textContent = error.message; } finally { button.disabled = false; }
+    };
   }
 
   function editLead(row = null) {
@@ -270,5 +446,19 @@ function crmClient() {
   $("import-leads").onclick = openImport;
   $("workspace-dialog").addEventListener("close", () => { importGeneration++; if (draft) { const id = draft; draft = null; api(`/crm/imports/${id}/cancel`, {}).catch(() => {}); } });
   $("new-lead").disabled = true; $("import-leads").disabled = true;
-  api("/crm/options").then(async (data) => { options = data; grades = data.grades; $("new-lead").disabled = false; $("import-leads").disabled = false; await batches(); await load(); }).catch((e) => notice(e.message, true));
+  $("leads-view").hidden = ordersPage; $("orders-view").hidden = !ordersPage;
+  $(ordersPage ? "nav-orders" : "nav-leads").setAttribute("aria-current", "page");
+  if (ordersPage) {
+    $("page-title").textContent = "订单管理";
+    $("lead-actions").querySelectorAll("#new-lead,#import-leads,a").forEach((element) => element.hidden = true);
+  }
+  $("order-status").innerHTML += Object.entries(orderStatuses).map(([key, label]) => `<option value="${key}">${label}</option>`).join("");
+  $("order-status").onchange = (event) => { orderState.status = event.target.value; orderState.page = 1; loadOrderList(); };
+  let orderTimer; $("order-search").oninput = (event) => { clearTimeout(orderTimer); orderTimer = setTimeout(() => { orderState.q = event.target.value; orderState.page = 1; loadOrderList(); }, 250); };
+  $("orders-prev").onclick = () => { orderState.page--; loadOrderList(); }; $("orders-next").onclick = () => { orderState.page++; loadOrderList(); };
+  api("/crm/options").then(async (data) => {
+    options = data; grades = data.grades; $("new-lead").disabled = false; $("import-leads").disabled = false;
+    if (ordersPage) { if (orderId) await loadOrderDetail(orderId, new URLSearchParams(location.search).get("edit") === "1"); else await loadOrderList(); }
+    else { await batches(); await load(); const params = new URLSearchParams(location.search); if (/^\d+$/.test(params.get("lead") || "")) await openDetail(Number(params.get("lead")), params.get("tab") === "orders" ? "orders" : "follow"); }
+  }).catch((e) => notice(e.message, true));
 }
