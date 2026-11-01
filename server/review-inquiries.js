@@ -5,15 +5,18 @@ import Database from "better-sqlite3";
 import { classifyInquiry } from "./inquiry-classifier.js";
 
 const clearSpamReasons = new Set([
-  "unrelated_solicitation", "bulk_messaging_solicitation", "known_spam_template"
+  "unrelated_solicitation", "bulk_messaging_solicitation", "known_spam_template",
+  "google_company / Google 公司", "invalid_company_history / 公司匹配已有 E 类线索",
+  "invalid_ip_history / IP 匹配已有 E 类线索"
 ]);
 
 export function reviewInquiries(db) {
   const report = { automatic: [], manualReview: [] };
   const orderedLeads = new Set(db.prepare("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'crm_orders'").get()
     ? db.prepare("SELECT DISTINCT inquiry_id FROM crm_orders").all().map((row) => row.inquiry_id) : []);
+  const invalidHistory = db.prepare("SELECT company, ip_address FROM inquiries WHERE lead_grade = 'E'").all();
   for (const row of db.prepare("SELECT * FROM inquiries WHERE lead_grade = 'B' ORDER BY id").all()) {
-    const result = classifyInquiry({ inquiry: row });
+    const result = classifyInquiry({ inquiry: row, invalidHistory });
     if (result.lead_grade !== "E") continue;
     const protections = [];
     if (orderedLeads.has(row.id)) protections.push("has_order");

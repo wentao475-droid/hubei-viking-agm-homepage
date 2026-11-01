@@ -2166,6 +2166,208 @@ const agmVsGemGlassFiberSeo = {
   }
 } as const;
 
+const vrlaAgmGelStructuresSeo = {
+  "en": {
+    "path": "/blog/vrla-agm-gel-battery-structures-separator-matching/",
+    "alternatePath": "/zh/blog/vrla-agm-gel-battery-structures-separator-matching/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "VRLA Is a Category; AGM and GEL Are Different Structures | Viking AGM",
+    "description": "VRLA identifies a valve-regulated category. AGM and GEL immobilize electrolyte differently; separator compatibility and performance require model-specific evidence.",
+    "keywords": [
+      "VRLA Is a Category; AGM and GEL Are Different Structures",
+      "VRLA",
+      "AGM",
+      "GEL"
+    ],
+    "pageName": "VRLA Is a Category; AGM and GEL Are Different Structures",
+    "articleDescription": "VRLA identifies a valve-regulated category. AGM and GEL immobilize electrolyte differently; separator compatibility and performance require model-specific evidence.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "VRLA Is a Category; AGM and GEL Are Different Structures"
+    ],
+    "datePublished": "2026-11-01",
+    "dateModified": "2026-11-01"
+  },
+  "zh": {
+    "path": "/zh/blog/vrla-agm-gel-battery-structures-separator-matching/",
+    "alternatePath": "/blog/vrla-agm-gel-battery-structures-separator-matching/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "VRLA 是类别，AGM 与 GEL 是不同的内部结构 | Viking AGM",
+    "description": "VRLA 表示阀控铅酸类别，AGM 与 GEL 的电解液固定方式不同；隔板能否匹配及电池性能，须结合具体型号判断。",
+    "keywords": [
+      "VRLA 是类别，AGM 与 GEL 是不同的内部结构",
+      "VRLA",
+      "AGM",
+      "GEL"
+    ],
+    "pageName": "VRLA 是类别，AGM 与 GEL 是不同的内部结构",
+    "articleDescription": "VRLA 表示阀控铅酸类别，AGM 与 GEL 的电解液固定方式不同；隔板能否匹配及电池性能，须结合具体型号判断。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "VRLA 是类别，AGM 与 GEL 是不同的内部结构"
+    ],
+    "datePublished": "2026-11-01",
+    "dateModified": "2026-11-01"
+  }
+} as const;
+
+const agmBatteryOrientationSeo = {
+  "en": {
+    "path": "/blog/agm-electrolyte-retention-battery-installation-orientation/",
+    "alternatePath": "/zh/blog/agm-electrolyte-retention-battery-installation-orientation/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Electrolyte Retention Does Not Make Every AGM Battery Invertible | Viking AGM",
+    "description": "AGM electrolyte retention is a material property, not installation approval. Confirm tilt, side mounting or inversion for the exact finished-battery model.",
+    "keywords": [
+      "Electrolyte Retention Does Not Make Every AGM Battery Invertible",
+      "AGM",
+      "VRLA",
+      "battery installation orientation"
+    ],
+    "pageName": "Electrolyte Retention Does Not Make Every AGM Battery Invertible",
+    "articleDescription": "AGM electrolyte retention is a material property, not installation approval. Confirm tilt, side mounting or inversion for the exact finished-battery model.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Electrolyte Retention Does Not Make Every AGM Battery Invertible"
+    ],
+    "datePublished": "2026-10-31",
+    "dateModified": "2026-10-31"
+  },
+  "zh": {
+    "path": "/zh/blog/agm-electrolyte-retention-battery-installation-orientation/",
+    "alternatePath": "/blog/agm-electrolyte-retention-battery-installation-orientation/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "AGM 隔板能保液，不代表电池都能倒置安装 | Viking AGM",
+    "description": "保液是材料性能，不是整电池安装许可。倾斜、侧放或倒置须由具体型号的完整设计与制造商要求确认。",
+    "keywords": [
+      "AGM 隔板能保液，不代表电池都能倒置安装",
+      "AGM",
+      "VRLA",
+      "battery installation orientation"
+    ],
+    "pageName": "AGM 隔板能保液，不代表电池都能倒置安装",
+    "articleDescription": "保液是材料性能，不是整电池安装许可。倾斜、侧放或倒置须由具体型号的完整设计与制造商要求确认。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "AGM 隔板能保液，不代表电池都能倒置安装"
+    ],
+    "datePublished": "2026-10-31",
+    "dateModified": "2026-10-31"
+  }
+} as const;
+
+const batteryStorageSelfDischargeSeo = {
+  "en": {
+    "path": "/blog/unused-battery-self-discharge-storage-installation/",
+    "alternatePath": "/zh/blog/unused-battery-self-discharge-storage-installation/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "An Unused Battery Can Still Lose Charge: Managing Factory-to-Installation Time | Viking AGM",
+    "description": "Separate storage time, temperature and connected standby loads before attributing a low state of charge to a battery defect or AGM separator.",
+    "keywords": [
+      "An Unused Battery Can Still Lose Charge: Managing Factory-to-Installation Time",
+      "AGM",
+      "VRLA"
+    ],
+    "pageName": "An Unused Battery Can Still Lose Charge: Managing Factory-to-Installation Time",
+    "articleDescription": "Separate storage time, temperature and connected standby loads before attributing a low state of charge to a battery defect or AGM separator.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "An Unused Battery Can Still Lose Charge: Managing Factory-to-Installation Time"
+    ],
+    "datePublished": "2026-10-31",
+    "dateModified": "2026-10-31"
+  },
+  "zh": {
+    "path": "/zh/blog/unused-battery-self-discharge-storage-installation/",
+    "alternatePath": "/blog/unused-battery-self-discharge-storage-installation/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "电池没用过也会掉电：从出厂到安装的库存管理 | Viking AGM",
+    "description": "把储存时间、温度与外部待机负载分别记录，再判断低荷电状态的原因；单次读数不能证明电池缺陷或隔板责任。",
+    "keywords": [
+      "电池没用过也会掉电：从出厂到安装的库存管理",
+      "AGM",
+      "VRLA"
+    ],
+    "pageName": "电池没用过也会掉电：从出厂到安装的库存管理",
+    "articleDescription": "把储存时间、温度与外部待机负载分别记录，再判断低荷电状态的原因；单次读数不能证明电池缺陷或隔板责任。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "电池没用过也会掉电：从出厂到安装的库存管理"
+    ],
+    "datePublished": "2026-10-31",
+    "dateModified": "2026-10-31"
+  }
+} as const;
+
+const batteryCapacityHourRatesSeo = {
+  "en": {
+    "path": "/blog/100ah-battery-c10-c20-capacity-comparison/",
+    "alternatePath": "/zh/blog/100ah-battery-c10-c20-capacity-comparison/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Two 100Ah Batteries May Not Be Directly Comparable | Viking AGM",
+    "description": "Compare hour rate, temperature, cutoff voltage and discharge method before comparing capacity. AGM material data cannot replace complete-battery testing.",
+    "keywords": [
+      "Two 100Ah Batteries May Not Be Directly Comparable",
+      "C10",
+      "C20",
+      "AGM"
+    ],
+    "pageName": "Two 100Ah Batteries May Not Be Directly Comparable",
+    "articleDescription": "Compare hour rate, temperature, cutoff voltage and discharge method before comparing capacity. AGM material data cannot replace complete-battery testing.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Two 100Ah Batteries May Not Be Directly Comparable"
+    ],
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29"
+  },
+  "zh": {
+    "path": "/zh/blog/100ah-battery-c10-c20-capacity-comparison/",
+    "alternatePath": "/blog/100ah-battery-c10-c20-capacity-comparison/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "同为 100Ah，C10 与 C20 电池能直接比较吗？ | Viking AGM",
+    "description": "先对齐时率、温度、终止电压和放电方式，再比较容量；隔板材料数据不能替代整电池验证。",
+    "keywords": [
+      "同为 100Ah，C10 与 C20 电池能直接比较吗？",
+      "C10",
+      "C20",
+      "AGM"
+    ],
+    "pageName": "同为 100Ah，C10 与 C20 电池能直接比较吗？",
+    "articleDescription": "先对齐时率、温度、终止电压和放电方式，再比较容量；隔板材料数据不能替代整电池验证。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "同为 100Ah，C10 与 C20 电池能直接比较吗？"
+    ],
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29"
+  }
+} as const;
+
 const ciStorageDeploymentCostsSeo = {
   "en": {
     "path": "/blog/commercial-industrial-energy-storage-deployment-costs/",
@@ -5448,6 +5650,170 @@ export function En18060BatteryStandardStructuredData({ lang }: { lang: Lang }) {
   ]}} />;
 }
 
+const vrlaAgmGelFaq = {
+  "en": [
+    [
+      "Does a VRLA label mean the battery uses AGM?",
+      "No. VRLA describes the valve-regulated lead-acid category. Confirm AGM, GEL or another model-specific internal arrangement in the manufacturer’s current documentation."
+    ],
+    [
+      "Do GEL batteries need a separator?",
+      "They still need electrode separation and ion transport. Their separation components must work with gelled electrolyte and the complete product design."
+    ],
+    [
+      "Can AGM and GEL separator materials be exchanged directly?",
+      "Shared functions do not prove interchangeability. Verify the intended material function, electrolyte structure, plate group and manufacturing compatibility within the complete battery design."
+    ]
+  ],
+  "zh": [
+    [
+      "标注 VRLA 就表示采用 AGM 吗？",
+      "不是。VRLA 表示阀控铅酸类别，需查厂家现行型号文件，确认 AGM、GEL 或其他具体内部安排。"
+    ],
+    [
+      "GEL 电池也需要隔板吗？",
+      "仍需要电极隔离和离子传输，分隔组件须配合胶体电解液及完整产品设计。"
+    ],
+    [
+      "AGM 与 GEL 的隔板材料能直接互换吗？",
+      "共同功能不能证明可互换，应在完整电池设计中核对材料功能、电解液结构、极群及工艺兼容性。"
+    ]
+  ]
+} as const;
+
+export function buildVrlaAgmGelStructuresMetadata(lang: Lang): Metadata {
+  const current = seoContent("vrlaAgmGelStructures", lang, vrlaAgmGelStructuresSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("vrlaAgmGelStructures"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/vrla-agm-gel-structures-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function VrlaAgmGelStructuresStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("vrlaAgmGelStructures", lang, vrlaAgmGelStructuresSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/vrla-agm-gel-structures-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["VRLA category", "AGM and GEL structures", "Separator compatibility"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: vrlaAgmGelFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+const agmBatteryOrientationFaq = {
+  "en": [
+    [
+      "Can every AGM battery be installed upside down?",
+      "No. The AGM designation and electrolyte retention do not authorize inversion. Follow the manual, label and manufacturer approval for the exact model and target equipment."
+    ],
+    [
+      "Does approval for side mounting also cover inversion?",
+      "No. Tilt, placement on a side, placement on the back and full inversion are different geometries. Confirm the downward face and the directions of terminals and valve openings."
+    ],
+    [
+      "Does a leak-free trial prove the position is safe?",
+      "No. A short observation without seepage cannot replace finished-battery design validation or model-specific installation approval."
+    ]
+  ],
+  "zh": [
+    [
+      "所有 AGM 电池都能倒置安装吗？",
+      "不能。AGM 名称和保液性能本身不构成倒置许可，应查具体型号的说明、标签及制造商对目标设备的批准。"
+    ],
+    [
+      "允许侧放，就代表允许倒置吗？",
+      "不代表。倾斜、侧面朝下、背面平放和完全倒置是不同姿态，应确认朝下的面以及端子和阀口方向。"
+    ],
+    [
+      "短时间没漏液，能证明这种姿态安全吗？",
+      "不能。短时观察不能替代整电池设计验证或具体型号的安装批准。"
+    ]
+  ]
+} as const;
+
+export function buildAgmBatteryOrientationMetadata(lang: Lang): Metadata {
+  const current = seoContent("agmBatteryOrientation", lang, agmBatteryOrientationSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmBatteryOrientation"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/agm-battery-orientation-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function AgmBatteryOrientationStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("agmBatteryOrientation", lang, agmBatteryOrientationSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/agm-battery-orientation-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM electrolyte retention", "Model-specific battery installation orientation"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: agmBatteryOrientationFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+const batteryStorageFaq = {
+  "en": [
+    [
+      "Why can an unused new battery lose charge?",
+      "Unused does not mean an unchanged state of charge. Internal self-discharge continues during storage; time and temperature matter. Any connected standby load must be checked separately."
+    ],
+    [
+      "Should an AGM battery be topped up with fluid after losing charge?",
+      "Do not open a sealed AGM battery or add water or another liquid to address charge loss. Inspection and any maintenance charging must follow the instructions for the exact model."
+    ],
+    [
+      "Does a low arrival reading prove a separator defect?",
+      "No. Reconstruct storage, transport, installation and connection records first. Separator responsibility requires relevant material inspection and battery-validation evidence, not a single terminal reading."
+    ]
+  ],
+  "zh": [
+    [
+      "新电池没用过，为什么还会掉电？",
+      "未使用不代表荷电状态不变。内部自放电仍会发生，储存温度和时间会影响状态；接入设备后的待机耗电需要另行检查。"
+    ],
+    [
+      "AGM 电池掉电后应当补液吗？",
+      "不应以打开密封电池、加水或注液解决掉电。是否需要检查或补充充电，应按具体型号文件由相应人员判断。"
+    ],
+    [
+      "到货电量低，能证明隔板有问题吗？",
+      "不能。先重建储存、运输、安装及连接状态记录；隔板责任需要材料检验和对应批次的电池验证，不能由单次端子读数确定。"
+    ]
+  ]
+} as const;
+
+export function buildBatteryStorageSelfDischargeMetadata(lang: Lang): Metadata {
+  const current = seoContent("batteryStorageSelfDischarge", lang, batteryStorageSelfDischargeSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("batteryStorageSelfDischarge"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/battery-storage-self-discharge-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function BatteryStorageSelfDischargeStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("batteryStorageSelfDischarge", lang, batteryStorageSelfDischargeSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/battery-storage-self-discharge-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Battery storage self-discharge", "Factory-to-installation traceability"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: batteryStorageFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+export function buildBatteryCapacityHourRatesMetadata(lang: Lang): Metadata {
+  const current = seoContent("batteryCapacityHourRates", lang, batteryCapacityHourRatesSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("batteryCapacityHourRates"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/battery-capacity-hour-rates-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function BatteryCapacityHourRatesStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("batteryCapacityHourRates", lang, batteryCapacityHourRatesSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/battery-capacity-hour-rates-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["C10 and C20 capacity conditions", "Complete battery validation"], inLanguage: current.language },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
 export function buildCiStorageDeploymentCostsMetadata(lang: Lang): Metadata {
   const current = seoContent("ciStorageDeploymentCosts", lang, ciStorageDeploymentCostsSeo[lang]);
   return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("ciStorageDeploymentCosts"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/ci-storage-deployment-costs-hero-1600.webp`, width: 1600, height: 1200 } });
@@ -5760,11 +6126,11 @@ export function SecondaryArticleStructuredData({
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: current.language
       },
-      ...(kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
+      ...(kind === "vrlaAgmGelStructures" || kind === "agmBatteryOrientation" || kind === "batteryStorageSelfDischarge" || kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
         ? [{
             "@type": "FAQPage",
             "@id": `${url}#faq`,
-            mainEntity: (kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
+            mainEntity: (kind === "vrlaAgmGelStructures" ? [7, 8, 9] : kind === "agmBatteryOrientation" ? [5, 6, 7] : kind === "batteryStorageSelfDischarge" ? [6, 7, 8] : kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
               "@type": "Question",
               name: secondaryResourceData[lang].topics[kind].sections[sectionIndex][1],
               acceptedAnswer: {

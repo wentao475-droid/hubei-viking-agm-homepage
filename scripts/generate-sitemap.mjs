@@ -4,6 +4,10 @@ import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../c
 
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
+  { en: "/blog/vrla-agm-gel-battery-structures-separator-matching/", zh: "/zh/blog/vrla-agm-gel-battery-structures-separator-matching/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-01", secondaryLastmod: "2026-11-01", arabicLastmod: "2026-11-01" },
+  { en: "/blog/agm-electrolyte-retention-battery-installation-orientation/", zh: "/zh/blog/agm-electrolyte-retention-battery-installation-orientation/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-31", secondaryLastmod: "2026-10-31", arabicLastmod: "2026-10-31" },
+  { en: "/blog/unused-battery-self-discharge-storage-installation/", zh: "/zh/blog/unused-battery-self-discharge-storage-installation/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-31", secondaryLastmod: "2026-10-31", arabicLastmod: "2026-10-31" },
+  { en: "/blog/100ah-battery-c10-c20-capacity-comparison/", zh: "/zh/blog/100ah-battery-c10-c20-capacity-comparison/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-29", secondaryLastmod: "2026-10-29", arabicLastmod: "2026-10-29" },
   { en: "/blog/commercial-industrial-energy-storage-deployment-costs/", zh: "/zh/blog/commercial-industrial-energy-storage-deployment-costs/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-28", secondaryLastmod: "2026-10-28", arabicLastmod: "2026-10-28" },
   { en: "/blog/can-adding-fluid-restore-weak-lead-acid-battery/", zh: "/zh/blog/can-adding-fluid-restore-weak-lead-acid-battery/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-28", secondaryLastmod: "2026-10-28", arabicLastmod: "2026-10-28" },
   { en: "/blog/rv-agm-batteries-starting-house-power-duty/", zh: "/zh/blog/rv-agm-batteries-starting-house-power-duty/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-28", secondaryLastmod: "2026-10-28", arabicLastmod: "2026-10-28" },

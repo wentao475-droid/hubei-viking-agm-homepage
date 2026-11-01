@@ -82,7 +82,11 @@ const testNames = new Set([
   "测试线索"
 ]);
 
-export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = [] }) {
+export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = [], invalidHistory = [] }) {
+  if (/^(google|googleinc|googlellc|googleltd|googlelimited|谷歌)$/.test(normalizeCompany(inquiry.company))) {
+    return automaticGrade("E", "google_company / Google 公司");
+  }
+
   if (duplicateOfId) {
     return automaticGrade("E", "duplicate_submission", duplicateOfId);
   }
@@ -165,6 +169,9 @@ export function classifyInquiry({ inquiry, duplicateOfId = null, testContacts = 
     return automaticGrade("E", "insufficient_inquiry_detail");
   }
 
+  const historyReason = matchInvalidHistory(inquiry, invalidHistory);
+  if (historyReason) return automaticGrade("E", historyReason);
+
   return automaticGrade(defaultLeadGrade, null);
 }
 
@@ -239,4 +246,22 @@ function isInternalTest(inquiry, testContacts) {
     testNames.has(name) ||
     message.startsWith("[test]")
   );
+}
+
+// Only full normalized company identities match; never match email domains or message mentions.
+export function normalizeCompany(value) {
+  const key = normalizeText(value).replace(/[\p{P}\p{Z}\s]/gu, "");
+  return ["", "unknown", "na", "none", "notsure", "未知", "无"].includes(key) ? "" : key;
+}
+
+export function matchInvalidHistory(inquiry, rows) {
+  const company = normalizeCompany(inquiry.company);
+  const ip = normalizeText(inquiry.ip_address).replace(/^::ffff:/, "");
+  if (company && rows.some((row) => normalizeCompany(row.company) === company)) {
+    return "invalid_company_history / 公司匹配已有 E 类线索";
+  }
+  if (ip && rows.some((row) => normalizeText(row.ip_address).replace(/^::ffff:/, "") === ip)) {
+    return "invalid_ip_history / IP 匹配已有 E 类线索";
+  }
+  return null;
 }

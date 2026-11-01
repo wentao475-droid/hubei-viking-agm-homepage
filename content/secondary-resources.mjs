@@ -1,3 +1,7 @@
+import { vrlaAgmGelTopics } from "./vrla-agm-gel-structures-topics.mjs";
+import { agmBatteryOrientationTopics } from "./agm-battery-orientation-topics.mjs";
+import { batteryStorageTopics } from "./battery-storage-self-discharge-topics.mjs";
+import { batteryCapacityHourRateTopics } from "./battery-capacity-hour-rate-topics.mjs";
 import { ciStorageDeploymentTopics } from "./ci-storage-deployment-topics.mjs";
 import { leadAcidFluidTopUpTopics } from "./lead-acid-fluid-topup-topics.mjs";
 import { rvAgmDutyTopics } from "./rv-agm-duty-topics.mjs";
@@ -22,6 +26,10 @@ import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
+  "vrlaAgmGelStructures",
+  "agmBatteryOrientation",
+  "batteryStorageSelfDischarge",
+  "batteryCapacityHourRates",
   "ciStorageDeploymentCosts",
   "leadAcidFluidTopUp",
   "rvAgmStartingHouseDuty",
@@ -95,9 +103,17 @@ export const articleDefinitions = {
   ,rvAgmStartingHouseDuty: ["rv-agm-batteries-starting-house-power-duty", "industryApplications", "2026-10-28", "2026-10-28"]
   ,leadAcidFluidTopUp: ["can-adding-fluid-restore-weak-lead-acid-battery", "buyerGuides", "2026-10-28", "2026-10-28"]
   ,ciStorageDeploymentCosts: ["commercial-industrial-energy-storage-deployment-costs", "industryApplications", "2026-10-28", "2026-10-28"]
+  ,batteryCapacityHourRates: ["100ah-battery-c10-c20-capacity-comparison", "buyerGuides", "2026-10-29", "2026-10-29"]
+  ,batteryStorageSelfDischarge: ["unused-battery-self-discharge-storage-installation", "manufacturingQuality", "2026-10-31", "2026-10-31"]
+  ,agmBatteryOrientation: ["agm-electrolyte-retention-battery-installation-orientation", "manufacturingQuality", "2026-10-31", "2026-10-31"]
+  ,vrlaAgmGelStructures: ["vrla-agm-gel-battery-structures-separator-matching", "buyerGuides", "2026-11-01", "2026-11-01"]
 };
 
 const images = {
+  vrlaAgmGelStructures: ["/images/articles/vrla-agm-gel-structures-hero-1600.webp", 1600, 1200],
+  agmBatteryOrientation: ["/images/articles/agm-battery-orientation-hero-1600.webp", 1600, 1200],
+  batteryStorageSelfDischarge: ["/images/articles/battery-storage-self-discharge-hero-1600.webp", 1600, 1200],
+  batteryCapacityHourRates: ["/images/articles/battery-capacity-hour-rates-hero-1600.webp", 1600, 1200],
   ciStorageDeploymentCosts: ["/images/articles/ci-storage-deployment-costs-hero-1600.webp", 1600, 1200],
   leadAcidFluidTopUp: ["/images/articles/lead-acid-fluid-topup-hero-1600.webp", 1600, 1200],
   rvAgmStartingHouseDuty: ["/images/articles/rv-agm-starting-house-duty-hero-1600.webp", 1600, 1200],
@@ -1230,6 +1246,22 @@ for (const [locale, topic] of Object.entries(ciStorageDeploymentTopics)) {
   secondaryResourceData[locale].topics.ciStorageDeploymentCosts = topic;
 }
 
+for (const [locale, topic] of Object.entries(batteryCapacityHourRateTopics)) {
+  secondaryResourceData[locale].topics.batteryCapacityHourRates = topic;
+}
+
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.batteryStorageSelfDischarge = batteryStorageTopics[locale];
+}
+
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.agmBatteryOrientation = agmBatteryOrientationTopics[locale];
+}
+
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.vrlaAgmGelStructures = vrlaAgmGelTopics[locale];
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1273,6 +1305,10 @@ const arabicReferences = {
 
 
 const generatedArticleVisuals = {
+  "vrlaAgmGelStructures": "/images/articles/vrla-agm-gel-structures-hero-1600.webp",
+  "agmBatteryOrientation": "/images/articles/agm-battery-orientation-hero-1600.webp",
+  "batteryStorageSelfDischarge": "/images/articles/battery-storage-self-discharge-hero-1600.webp",
+  "batteryCapacityHourRates": "/images/articles/battery-capacity-hour-rates-hero-1600.webp",
   "ciStorageDeploymentCosts": "/images/articles/ci-storage-deployment-costs-hero-1600.webp",
   "leadAcidFluidTopUp": "/images/articles/lead-acid-fluid-topup-hero-1600.webp",
   "rvAgmStartingHouseDuty": "/images/articles/rv-agm-starting-house-duty-hero-1600.webp",
@@ -1318,7 +1354,15 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "ciStorageDeploymentCosts"
+  const relatedKinds = kind === "vrlaAgmGelStructures"
+    ? ["whatIsAgmSeparator", "keyTechnicalParameters", "agmBatteryOrientation", "agmGlassFiberVsPvcSeparator"]
+    : kind === "agmBatteryOrientation"
+    ? ["whatIsAgmSeparator", "agmSeparatorPressureRetention", "keyTechnicalParameters", "leadAcidFluidTopUp"]
+    : kind === "batteryStorageSelfDischarge"
+    ? ["leadAcidFluidTopUp", "agmSeparatorBatchProcessControl", "keyTechnicalParameters", "agmSeparatorPressureRetention"]
+    : kind === "batteryCapacityHourRates"
+    ? ["rvAgmStartingHouseDuty", "keyTechnicalParameters", "agmSeparatorPressureRetention", "whatIsAgmSeparator"]
+    : kind === "ciStorageDeploymentCosts"
     ? ["batteryTechnologyProjectComparison", "agmSeparatorEnergyDataDelivery", "keyTechnicalParameters", "agmSeparatorPressureRetention"]
     : kind === "leadAcidFluidTopUp"
     ? ["whatIsAgmSeparator", "keyTechnicalParameters", "agmSeparatorThirdPole", "agmSeparatorPressureRetention"]
@@ -1449,6 +1493,54 @@ function buildArticle(locale, kind, localeData) {
   [
     "Yangtze Nonferrous — 2026-09-29",
     "https://pb.ccmn.cn/news/ZX018/202609/f39296a023984b088d8302eee0da446b.html"
+  ]
+] };
+  }
+
+  if (kind === "vrlaAgmGelStructures") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "Victron Energy — Gel and AGM Batteries, §§1–3",
+    "https://www.victronenergy.com/upload/documents/Datasheet-GEL-and-AGM-Batteries-EN.pdf"
+  ],
+  [
+    "Battery Council International — About Battery Separators",
+    "https://batterycouncil.org/battery-facts-and-applications/about-battery-separators/"
+  ]
+] };
+  }
+
+  if (kind === "agmBatteryOrientation") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "Yuasa Battery FAQ — Can an AGM battery be installed in any position?",
+    "https://www.yuasabatteries.com/resources/faqs/"
+  ]
+] };
+  }
+
+  if (kind === "batteryStorageSelfDischarge") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "GS Yuasa — How to manage stock, sales & returns (2024-11-01)",
+    "https://www.gs-yuasa.eu/en-de/info-hub/how-to-manage-stock-sales-and-returns-yuasa"
+  ],
+  [
+    "Yuasa Battery Inc. — Battery Maintenance & Storage",
+    "https://www.yuasabatteries.com/resources/guides/battery-maintenance-storage/"
+  ]
+] };
+  }
+
+  if (kind === "batteryCapacityHourRates") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "Sacred Sun — SP Series",
+    "https://sacredsun.cn/"
+  ],
+  [
+    "Trojan — AGM ratings",
+    "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
   ]
 ] };
   }

@@ -225,3 +225,19 @@ function inquiry(overrides = {}) {
     ...overrides
   };
 }
+
+test("Google company overrides convincing product requirements without blocking mentions or email domains", () => {
+  for (const company of ["google", " GOOGLE ", "Google LLC", "Ｇｏｏｇｌｅ", "谷歌"]) {
+    assert.equal(classifyInquiry({ inquiry: inquiry({ company, message: "Quote 2mm AGM separator samples" }) }).lead_grade, "E");
+  }
+  assert.equal(classifyInquiry({ inquiry: inquiry({ company: "Battery Manufacturer", contact: "buyer@gmail.com", message: "Found you on Google. Please quote 2mm AGM separator samples." }) }).lead_grade, "B");
+});
+
+test("invalid history matches full company or IP and is withdrawn when E record is restored", () => {
+  const row = inquiry({ company: "Normal Buyer", ip_address: "192.0.2.1", message: "Please quote 2mm AGM samples." });
+  assert.match(classifyInquiry({ inquiry: row, invalidHistory: [{ company: "normal buyer", ip_address: "192.0.2.2" }] }).classification_reason, /^invalid_company_history/);
+  assert.match(classifyInquiry({ inquiry: row, invalidHistory: [{ company: "Other", ip_address: "::ffff:192.0.2.1" }] }).classification_reason, /^invalid_ip_history/);
+  assert.equal(classifyInquiry({ inquiry: row, invalidHistory: [] }).lead_grade, "B");
+  assert.equal(classifyInquiry({ inquiry: inquiry({ company: "", ip_address: "" }), invalidHistory: [{ company: "", ip_address: "" }] }).lead_grade, "B");
+  assert.equal(classifyInquiry({ inquiry: row, invalidHistory: [{ company: "Normal Buyer Group", ip_address: "192.0.2.3" }] }).lead_grade, "B");
+});

@@ -15,6 +15,10 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "vrlaAgmGelStructures"
+  | "agmBatteryOrientation"
+  | "batteryStorageSelfDischarge"
+  | "batteryCapacityHourRates"
   | "ciStorageDeploymentCosts"
   | "leadAcidFluidTopUp"
   | "rvAgmStartingHouseDuty"
@@ -6274,6 +6278,1358 @@ const leadPremiumDemandRestockingCopy = {
   }
 } as const;
 
+const vrlaAgmGelStructuresCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/vrla-agm-gel-battery-structures-separator-matching/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "VRLA identifies a category, not one internal structure",
+      "title": "VRLA Is a Category; AGM and GEL Are Different Structures",
+      "subtitle": "VRLA identifies a valve-regulated category. AGM and GEL immobilize electrolyte differently; separator compatibility and performance require model-specific evidence.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/vrla-agm-gel-structures-hero-1600.webp",
+        "alt": "AI illustration comparing fiber-held electrolyte and gel under the VRLA category",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "A battery label may say VRLA while revealing little about how the electrolyte is immobilized inside. AGM and GEL are both common forms of valve-regulated lead-acid batteries, but their electrolyte states and internal structures differ. The VRLA label alone cannot establish whether a separator is suitable or interchangeable."
+    ],
+    "sections": [
+      {
+        "eyebrow": "VRLA identifies a category, not one internal structure",
+        "title": "VRLA identifies a category, not one internal structure",
+        "text": "VRLA stands for Valve Regulated Lead Acid and describes a category of lead-acid batteries with a valve-regulated design.\n\nVictron’s technical literature explains that a safety valve manages internal gas. Gas may still be released through the valve during overcharging or a cell failure, so “valve regulated” should not be read as “never vents.”\n\nAGM and GEL provide another level of information. Both are common VRLA forms, but they refer to different electrolyte-immobilization structures. In practical terms, lead acid identifies the chemistry, VRLA identifies the valve-regulated category, and AGM or GEL further describes how the electrolyte is held. These terms answer different questions and are not interchangeable."
+      },
+      {
+        "eyebrow": "AGM uses a glass-fiber separator to hold electrolyte",
+        "title": "AGM uses a glass-fiber separator to hold electrolyte",
+        "text": "AGM stands for Absorbent Glass Mat. According to Victron, the electrolyte in an AGM battery is absorbed by the glass-fiber mat between the plates through capillary action.\n\nThe separator therefore performs more than physical separation. It keeps the positive and negative plates apart while also participating in electrolyte retention and distribution within the plate group.\n\nThis makes the AGM separator part of the battery’s internal design rather than an independent pad that can be specified without context. Its specification must work with the plate group, electrolyte design, and manufacturing process. The term “AGM” alone does not define one universal set of separator parameters."
+      },
+      {
+        "eyebrow": "GEL fixes the electrolyte in a gel state",
+        "title": "GEL fixes the electrolyte in a gel state",
+        "text": "In a GEL battery, the electrolyte is immobilized in a gel state. This differs from the capillary retention mechanism used in AGM batteries, and the internal materials must suit the product’s particular construction.\n\nA GEL battery still requires separation between the positive and negative electrodes. Battery Council International explains that battery separators keep the electrodes apart while allowing ions to pass, and that separator materials and structures vary with battery technology. BCI also identifies separators intended for gel lead-acid batteries.\n\nThe useful distinction is therefore not that one structure has a separator while the other does not. AGM and GEL immobilize electrolyte differently, while their separation components must perform the required electrical-isolation and ion-transport functions within their respective designs. Individual products may also use different or combined internal arrangements, so the model-specific technical documentation remains decisive."
+      },
+      {
+        "eyebrow": "Similar functions do not make the structures interchangeable",
+        "title": "Similar functions do not make the structures interchangeable",
+        "text": "AGM and GEL batteries both need electrical separation between the electrodes and a path for ionic movement. Those shared functions do not establish that their separator materials or structures can be exchanged.\n\nIn an AGM battery, the glass-fiber separator also retains electrolyte. In a GEL product, the separation structure must operate with gelled electrolyte and the complete battery design. BCI’s separate discussion of AGM and gel-battery separators reflects this need for technical matching; it does not establish an absolute rule that a material can never appear in another design.\n\nExternal similarity is also insufficient evidence. Two batteries may have the same rated voltage or similar dimensions while using different electrolyte-immobilization methods, separation structures, and material environments. Any material change may affect its interaction with the plates and the manufacturing process. Suitability must therefore be confirmed within the complete battery design."
+      },
+      {
+        "eyebrow": "Structure names do not establish a universal performance ranking",
+        "title": "Structure names do not establish a universal performance ranking",
+        "text": "AGM and GEL should not be placed in a universal hierarchy based only on their names. Performance descriptions for particular product series—including service life, rate capability, or other characteristics—apply to those products and their stated conditions. They should not be extended to every AGM or GEL battery.\n\nThe appropriate route depends on the model, design objective, and operating conditions. Product data and manufacturer validation remain more useful than a general conclusion based on the structure name alone."
+      },
+      {
+        "eyebrow": "Clarify the battery structure before discussing material specifications",
+        "title": "Clarify the battery structure before discussing material specifications",
+        "text": "In development, procurement, and channel communication, “VRLA” is only a starting point. Before discussing separator specifications, confirm whether the battery uses an AGM or GEL structure, how the electrolyte is immobilized, what function the separation component performs, and what manufacturing requirements apply.\n\nTerms such as “sealed” or “maintenance-free” still do not identify the internal structure. Use the model’s specification sheet, technical documentation, or structure information confirmed by the battery manufacturer. If different documents describe the same model inconsistently, the manufacturer should confirm which description is current.\n\nMaterial discussions should also be tied to a specific product and application. Relevant information normally includes the battery model, technical route, intended function of the separation component, applicable dimensions or material requirements, and manufacturing compatibility conditions. A proprietary formulation does not need to be disclosed merely to establish the structure type and intended material function."
+      },
+      {
+        "eyebrow": "Viking Technology’s scope",
+        "title": "Viking Technology’s scope",
+        "text": "Viking Technology focuses on AGM glass-fiber separators and specification discussions for battery manufacturers. Matching a separator to a particular battery requires the customer’s confirmed battery structure, intended material function, and manufacturing requirements.\n\nThis scope does not mean that Viking manufactures complete GEL batteries, and separator matching does not replace the battery manufacturer’s complete product design and validation. A material’s basic function alone cannot provide certification, service-life, or performance guarantees for the finished battery.\n\nBattery manufacturers can send Viking Technology their confirmed battery structure and material requirements to discuss AGM separator specification matching."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Does a VRLA label mean the battery uses AGM?",
+        "text": "No. VRLA describes the valve-regulated lead-acid category. Confirm AGM, GEL or another model-specific internal arrangement in the manufacturer’s current documentation."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "Do GEL batteries need a separator?",
+        "text": "They still need electrode separation and ion transport. Their separation components must work with gelled electrolyte and the complete product design."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "Can AGM and GEL separator materials be exchanged directly?",
+        "text": "Shared functions do not prove interchangeability. Verify the intended material function, electrolyte structure, plate group and manufacturing compatibility within the complete battery design."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Confirm structure before specifying material",
+      "text": "VRLA identifies a valve-regulated category. AGM and GEL immobilize electrolyte differently; separator compatibility and performance require model-specific evidence.",
+      "items": [
+        "Confirmed battery model and structure",
+        "Electrolyte immobilization method",
+        "Separation component function",
+        "Dimensions and manufacturing compatibility"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "What Is an AGM Separator?",
+          "/blog/what-is-agm-separator/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "AGM Electrolyte Retention and Installation Orientation",
+          "/blog/agm-electrolyte-retention-battery-installation-orientation/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "VRLA identifies a valve-regulated category. AGM and GEL immobilize electrolyte differently; separator compatibility and performance require model-specific evidence.",
+      "checklist": [
+        "Confirmed battery model and structure",
+        "Electrolyte immobilization method",
+        "Separation component function",
+        "Dimensions and manufacturing compatibility"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Confirmed battery model and structure; Electrolyte immobilization method; Separation component function; Dimensions and manufacturing compatibility"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "Sources checked on 1 November 2026; publication dates not confirmed. Victron Sections 1–3 support descriptions of VRLA, AGM and GEL; BCI supports separation and ion-transport functions and technology-specific structures. Product-series performance is not a universal ranking, certification of Viking products or finished-battery guarantee. AI artwork is not test evidence.",
+      "items": [
+        [
+          "Victron Energy — Gel and AGM Batteries, §§1–3",
+          "https://www.victronenergy.com/upload/documents/Datasheet-GEL-and-AGM-Batteries-EN.pdf"
+        ],
+        [
+          "Battery Council International — About Battery Separators",
+          "https://batterycouncil.org/battery-facts-and-applications/about-battery-separators/"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/vrla-agm-gel-battery-structures-separator-matching/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "VRLA 表示类别，不是一套内部结构",
+      "title": "VRLA 是类别，AGM 与 GEL 是不同的内部结构",
+      "subtitle": "VRLA 表示阀控铅酸类别，AGM 与 GEL 的电解液固定方式不同；隔板能否匹配及电池性能，须结合具体型号判断。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/vrla-agm-gel-structures-hero-1600.webp",
+        "alt": "VRLA 类别下玻璃纤维保液与胶体固定电解液的 AI 示意图",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "VRLA 表示阀控铅酸类别，AGM 与 GEL 的电解液固定方式不同；隔板能否匹配及电池性能，须结合具体型号判断。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "VRLA 表示类别，不是一套内部结构",
+        "title": "VRLA 表示类别，不是一套内部结构",
+        "text": "VRLA 即 Valve Regulated Lead Acid，描述采用阀控设计的铅酸电池类别。Victron 技术资料说明安全阀管理内部气体，过充或单体故障时仍可能通过阀门排气，因此阀控不等于永不排气。AGM 与 GEL 进一步描述不同的电解液固定结构：铅酸说明化学体系，VRLA 说明阀控类别，AGM/GEL 说明电解液如何被固定。这些术语回答不同问题，不能互相替代。"
+      },
+      {
+        "eyebrow": "AGM 用玻璃纤维隔板保留电解液",
+        "title": "AGM 用玻璃纤维隔板保留电解液",
+        "text": "AGM 即 Absorbent Glass Mat。Victron 描述电解液通过毛细作用被极板之间的玻璃纤维毡吸持。隔板既隔开正负极板，也参与极群内的保液与分布，因此是电池内部设计的一部分，而非脱离设计独立指定的垫片。规格需要配合极群、电解液方案和制造工艺；AGM 名称本身并不代表唯一、通用的一组隔板参数。"
+      },
+      {
+        "eyebrow": "GEL 将电解液固定为胶体状态",
+        "title": "GEL 将电解液固定为胶体状态",
+        "text": "GEL 中的电解液以胶体状态固定，区别于 AGM 的毛细保液机制，内部材料要适应该产品构造。GEL 同样需要正负极隔离。BCI 说明隔板在隔开电极的同时允许离子通过，材料和结构随电池技术变化，也介绍了面向胶体铅酸电池的隔板。因此差别不是一方有隔板而另一方没有，而是固定电解液及完成隔离、离子传输功能的设计不同。个别产品可能采用不同或组合式内部安排，仍以型号技术文件为准。"
+      },
+      {
+        "eyebrow": "功能相似不等于结构和材料可直接互换",
+        "title": "功能相似不等于结构和材料可直接互换",
+        "text": "AGM 和 GEL 都要电极隔离及离子通路，但共同功能不能证明材料或结构可以交换。AGM 玻璃纤维隔板还承担保液，GEL 分隔结构则须与胶体电解液和整电池设计协同。BCI 分别讨论两类隔板体现了技术匹配需求，不代表某种材料绝不可能出现在另一种设计中。相同标称电压或相似尺寸也不能证明兼容；材料变更会影响极板配合与工艺，应在完整设计中验证。"
+      },
+      {
+        "eyebrow": "结构名称不能建立通用性能排名",
+        "title": "结构名称不能建立通用性能排名",
+        "text": "不能仅凭 AGM/GEL 名称确定谁的寿命、倍率或性能更好。某系列产品的性能说明仅适用于该产品及所述条件，不能推广到所有 AGM 或 GEL。合适路线取决于型号、设计目标与工况；产品数据和制造商验证，比仅根据结构名称下结论更有意义。"
+      },
+      {
+        "eyebrow": "讨论材料规格前先确认电池结构",
+        "title": "讨论材料规格前先确认电池结构",
+        "text": "开发、采购及渠道沟通中，VRLA 只是起点。先确认 AGM/GEL、固定电解液方式、分隔组件承担的功能及制造要求。密封或免维护仍不能指明内部结构，应使用型号规格书、技术文件或电池厂确认的信息；同型号文件相互矛盾时请厂家确认现行描述。沟通还应关联产品和应用，说明型号、技术路线、功能、尺寸或材料要求及工艺兼容条件。仅确认结构类型和材料作用，不要求披露专有配方。"
+      },
+      {
+        "eyebrow": "维京的材料支持范围",
+        "title": "维京的材料支持范围",
+        "text": "维京聚焦 AGM 玻璃纤维隔板及与电池制造商的规格沟通。匹配需要客户确认的电池结构、材料功能与制造要求。这不表示维京制造完整 GEL 电池，也不替代电池厂的产品设计和整电池验证。材料基本功能不能提供成品认证、寿命或性能保证。电池制造商可提交已确认的结构与材料要求，开展样品及规格匹配。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "标注 VRLA 就表示采用 AGM 吗？",
+        "text": "不是。VRLA 表示阀控铅酸类别，需查厂家现行型号文件，确认 AGM、GEL 或其他具体内部安排。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "GEL 电池也需要隔板吗？",
+        "text": "仍需要电极隔离和离子传输，分隔组件须配合胶体电解液及完整产品设计。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "AGM 与 GEL 的隔板材料能直接互换吗？",
+        "text": "共同功能不能证明可互换，应在完整电池设计中核对材料功能、电解液结构、极群及工艺兼容性。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "材料规格沟通前的结构确认清单",
+      "text": "VRLA 表示阀控铅酸类别，AGM 与 GEL 的电解液固定方式不同；隔板能否匹配及电池性能，须结合具体型号判断。",
+      "items": [
+        "已确认的型号与电池结构",
+        "电解液固定方式",
+        "分隔组件承担的功能",
+        "尺寸及制造工艺兼容条件"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "什么是 AGM 隔板？",
+          "/zh/blog/what-is-agm-separator/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "AGM 保液与电池安装姿态",
+          "/zh/blog/agm-electrolyte-retention-battery-installation-orientation/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "VRLA 表示阀控铅酸类别，AGM 与 GEL 的电解液固定方式不同；隔板能否匹配及电池性能，须结合具体型号判断。",
+      "checklist": [
+        "已确认的型号与电池结构",
+        "电解液固定方式",
+        "分隔组件承担的功能",
+        "尺寸及制造工艺兼容条件"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "已确认的型号与电池结构; 电解液固定方式; 分隔组件承担的功能; 尺寸及制造工艺兼容条件"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "来源核验于 2026 年 11 月 1 日，未确认原始发布日期。Victron 仅引用第 1–3 节结构说明；BCI 用于隔离、离子传输及结构随技术变化的说明。不把产品系列性能当作通用排名，也不是维京产品认证或成品保证。AI 配图不是试验证据。",
+      "items": [
+        [
+          "Victron Energy — Gel and AGM Batteries, §§1–3",
+          "https://www.victronenergy.com/upload/documents/Datasheet-GEL-and-AGM-Batteries-EN.pdf"
+        ],
+        [
+          "Battery Council International — About Battery Separators",
+          "https://batterycouncil.org/battery-facts-and-applications/about-battery-separators/"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const agmBatteryOrientationCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/agm-electrolyte-retention-battery-installation-orientation/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Electrolyte retention is not installation approval",
+      "title": "Electrolyte Retention Does Not Make Every AGM Battery Invertible",
+      "subtitle": "AGM electrolyte retention is a material property, not installation approval. Confirm tilt, side mounting or inversion for the exact finished-battery model.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/agm-battery-orientation-hero-1600.webp",
+        "alt": "Electrolyte Retention Does Not Make Every AGM Battery Invertible",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "An AGM separator holds electrolyte within its glass-fiber structure, but that material property does not authorize every battery orientation. Installation limits must be confirmed for the specific battery model and its complete design."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Electrolyte retention is not installation approval",
+        "title": "Electrolyte retention is not installation approval",
+        "text": "AGM stands for Absorbent Glass Mat. The separator retains electrolyte within its fiber pores and keeps it between the positive and negative plates. This mechanism helps manage electrolyte inside the battery and can support greater flexibility in installation angle than a flooded design.\n\nHowever, the separator is only one part of the finished battery. The enclosure, lid sealing, safety-valve position, terminal layout, internal group restraint and intended operating conditions must also be considered. The absence of visible leakage in one position does not establish long-term suitability or manufacturer approval.\n\nThe term “AGM” therefore cannot determine on its own whether a battery may be tilted, side-mounted or inverted. The material provides a design basis; the permitted orientation depends on the complete product design and its validation."
+      },
+      {
+        "eyebrow": "Tilting, side mounting and inversion are different conditions",
+        "title": "Tilting, side mounting and inversion are different conditions",
+        "text": "The phrase “installed on its side” is often ambiguous. It may describe placing one side of the battery downward, laying the battery on its back or fully turning it over. These positions change the orientation of the electrolyte, valves and terminals in different ways and should not be treated as equivalent.\n\nIn its FAQ section “Can an AGM battery be installed in any position?”, Yuasa states that most applications still use an upright installation. It also notes that some applications may require a tilted position or placement flat on the battery’s back, and that retained electrolyte gives AGM batteries more installation-angle flexibility than batteries with free-flowing electrolyte.\n\nThe FAQ does not provide a universal angle table or authorize inverted use for every AGM model. The page showed no explicit publication date and was checked on October 31, 2026. It is Yuasa product guidance, not a Viking Technology test or an installation approval covering every brand and model.\n\nA model approved for one side-mounted position does not establish that another model supports the same position, and side mounting does not imply that inversion is acceptable. The manual, product label and manufacturer guidance for the exact model remain decisive."
+      },
+      {
+        "eyebrow": "Confirm the complete battery requirements before installation",
+        "title": "Confirm the complete battery requirements before installation",
+        "text": "For any non-upright installation, first define the proposed geometry precisely: whether the battery will be tilted, placed on a side, laid on its back or fully inverted; which face will point downward; and where the terminals and valve openings will face. Equipment designers, vehicle manufacturers, service teams and distributors should then confirm whether the exact battery model is approved for that position.\n\nAvailable space is not proof of compatibility. If the original equipment layout, equipment-manufacturer requirements and battery-manufacturer instructions appear to conflict, the relevant equipment or battery technical personnel should resolve the issue before installation. A short trial that shows no seepage cannot replace formal confirmation because it does not cover long-term operating conditions, sealing performance or reliability requirements.\n\nAn unusual orientation alone also does not prove that a battery is leaking or safe. If the enclosure, valve area or equipment compartment appears abnormal, follow the battery and equipment manufacturers’ service procedures. This article does not provide instructions for inversion tests or owner-performed modifications."
+      },
+      {
+        "eyebrow": "Replacement requires more than matching dimensions",
+        "title": "Replacement requires more than matching dimensions",
+        "text": "Replacement decisions should not rely only on matching external dimensions. Changing the model or installation position can alter terminal and cable routing, enclosure support, compartment clearance and maintenance access. Even when both batteries use AGM construction, approval must be based on the replacement model in the target equipment."
+      },
+      {
+        "eyebrow": "The separator supports battery design but cannot certify the finished battery",
+        "title": "The separator supports battery design but cannot certify the finished battery",
+        "text": "For battery engineering teams, the target orientation should be defined during finished-battery design and validated by the battery manufacturer against the product requirements. The object of validation is the complete battery under its intended conditions, not an isolated separator placed in a different direction.\n\nWhere a product is expected to experience particular vibration, temperature or long-term operating conditions, the manufacturer should incorporate those conditions into the applicable validation plan. This article does not propose universal test durations, angles or acceptance thresholds. Packaging labels, product instructions and after-sales materials should remain consistent with the resulting design and validation limits.\n\nAGM separator retention is one material property considered in battery design. For a defined product, the battery manufacturer may evaluate it together with the plate-group structure, separator specification, electrolyte configuration and enclosure design. Material evaluation can determine whether a separator meets specified design and process requirements, but it cannot independently authorize an installation orientation for the complete battery.\n\nViking Technology supplies AGM separators and supports specification discussions with battery manufacturers. Separator matching should be verified against the target battery structure by the material and battery-manufacturing teams. Permission to tilt, side-mount or invert the completed battery remains the responsibility of that model’s manufacturer."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Can every AGM battery be installed upside down?",
+        "text": "No. The AGM designation and electrolyte retention do not authorize inversion. Follow the manual, label and manufacturer approval for the exact model and target equipment."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "Does approval for side mounting also cover inversion?",
+        "text": "No. Tilt, placement on a side, placement on the back and full inversion are different geometries. Confirm the downward face and the directions of terminals and valve openings."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "Does a leak-free trial prove the position is safe?",
+        "text": "No. A short observation without seepage cannot replace finished-battery design validation or model-specific installation approval."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Installation review checklist",
+      "text": "AGM electrolyte retention is a material property, not installation approval. Confirm tilt, side mounting or inversion for the exact finished-battery model.",
+      "items": [
+        "Exact battery model and equipment",
+        "Downward face, terminals and valves",
+        "Manufacturer instructions and approval",
+        "Complete-battery validation scope"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "What Is an AGM Separator?",
+          "/blog/what-is-agm-separator/"
+        ],
+        [
+          "AGM Separator Pressure Retention After Filling and Cycling",
+          "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "AGM electrolyte retention is a material property, not installation approval. Confirm tilt, side mounting or inversion for the exact finished-battery model.",
+      "checklist": [
+        "Exact battery model and equipment",
+        "Downward face, terminals and valves",
+        "Manufacturer instructions and approval",
+        "Complete-battery validation scope"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Exact battery model and equipment; Downward face, terminals and valves; Manufacturer instructions and approval; Complete-battery validation scope"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "Yuasa FAQ checked on 31 October 2026; no explicit publication date was shown. It explains electrolyte retention and installation flexibility in its product context, without a universal angle table or approval for all brands. This is not a Viking battery test, installation certification or safety guarantee. The AI illustration is not test evidence.",
+      "items": [
+        [
+          "Yuasa Battery FAQ — Can an AGM battery be installed in any position?",
+          "https://www.yuasabatteries.com/resources/faqs/"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/agm-electrolyte-retention-battery-installation-orientation/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "保液能力不等于安装批准",
+      "title": "AGM 隔板能保液，不代表电池都能倒置安装",
+      "subtitle": "保液是材料性能，不是整电池安装许可。倾斜、侧放或倒置须由具体型号的完整设计与制造商要求确认。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/agm-battery-orientation-hero-1600.webp",
+        "alt": "AGM 隔板能保液，不代表电池都能倒置安装",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "保液是材料性能，不是整电池安装许可。倾斜、侧放或倒置须由具体型号的完整设计与制造商要求确认。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "保液能力不等于安装批准",
+        "title": "保液能力不等于安装批准",
+        "text": "AGM 即吸附式玻璃纤维毡。隔板通过纤维孔隙保留电解液，使其处于正负极板之间；这有助于管理内部电解液，相比有自由流动电解液的设计，可为安装角度提供更大设计空间。但隔板只是整电池的一部分，外壳、上盖密封、安全阀位置、端子布置、极群固定和目标工况都需要考虑。某个位置没有看到漏液，并不能证明长期适用或厂家已批准。AGM 这个名称本身不能决定能否倾斜、侧放或倒置；安装许可来自完整产品设计与验证。"
+      },
+      {
+        "eyebrow": "倾斜、侧放和倒置不是同一条件",
+        "title": "倾斜、侧放和倒置不是同一条件",
+        "text": "“侧着安装”可能指一侧朝下、背面朝下或完全翻转，不同位置改变电解液、阀门和端子的方向，不能等同处理。Yuasa FAQ 表示多数应用仍采用直立安装，某些应用可能需要倾斜或背面平放，保液机制使 AGM 比自由液体设计有更多安装角度灵活性。但页面未给出通用角度表，也未批准所有 AGM 倒置使用。该页未见明确发布日期，核验于 2026 年 10 月 31 日；它属于 Yuasa 产品说明，并非维京试验或所有品牌的安装许可。一个型号侧放获准，也不证明其他型号可侧放，更不等于可倒置。"
+      },
+      {
+        "eyebrow": "先确认完整安装条件，再判断适配",
+        "title": "先确认完整安装条件，再判断适配",
+        "text": "非直立安装前，应明确是倾斜、哪一侧朝下、背面平放还是完全倒置，并记录端子和阀口方向。设备设计、车辆制造、服务及经销团队应确认准确型号是否批准该位置。空间放得下不代表兼容；若原设备布置、设备方要求与电池说明冲突，应在安装前由相关技术人员解决。短时未见渗液不能替代长期工况、密封和可靠性验证。异常姿态本身也不能证明正在漏液或安全；外壳、阀区或设备舱异常时，遵循电池及设备方维修程序。本文不提供倒置试验或用户改装步骤。"
+      },
+      {
+        "eyebrow": "更换电池不能只匹配外形尺寸",
+        "title": "更换电池不能只匹配外形尺寸",
+        "text": "变更型号或安装姿态可能影响端子及线缆走向、外壳支撑、舱内间隙和维护通道。即使两款均为 AGM，也须针对替换型号在目标设备中的应用确认许可，不能沿用原型号结论。采购与服务记录应写明型号、目标设备、具体姿态及依据的产品文件，不能只用“侧放”或“同尺寸”作为安装条件。"
+      },
+      {
+        "eyebrow": "材料匹配不能认证整电池安装姿态",
+        "title": "材料匹配不能认证整电池安装姿态",
+        "text": "目标姿态应在整电池设计时定义，并由电池厂家对预期工况验证；对象是完整电池，不是把一片隔板换个方向。若产品涉及特定振动、温度或长期运行条件，应纳入适用验证计划，本文不设通用角度、时长或验收门槛。包装标签、说明和售后资料应与验证边界一致。厂家可结合极群结构、隔板规格、电解液配置和外壳设计评估保液性能；材料检验只能确定约定设计与工艺规格是否满足，不能独立批准安装姿态。维京提供 AGM 隔板及规格沟通，匹配由材料与电池制造团队对目标结构验证；倾斜、侧放或倒置许可仍由该型号制造商负责。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "所有 AGM 电池都能倒置安装吗？",
+        "text": "不能。AGM 名称和保液性能本身不构成倒置许可，应查具体型号的说明、标签及制造商对目标设备的批准。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "允许侧放，就代表允许倒置吗？",
+        "text": "不代表。倾斜、侧面朝下、背面平放和完全倒置是不同姿态，应确认朝下的面以及端子和阀口方向。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "短时间没漏液，能证明这种姿态安全吗？",
+        "text": "不能。短时观察不能替代整电池设计验证或具体型号的安装批准。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "安装姿态确认清单",
+      "text": "保液是材料性能，不是整电池安装许可。倾斜、侧放或倒置须由具体型号的完整设计与制造商要求确认。",
+      "items": [
+        "准确型号与目标设备",
+        "朝下面、端子与阀口方向",
+        "产品说明及制造商许可",
+        "整电池验证范围"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "什么是 AGM 隔板？",
+          "/zh/blog/what-is-agm-separator/"
+        ],
+        [
+          "AGM 隔板注酸与循环后的压力保持",
+          "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "保液是材料性能，不是整电池安装许可。倾斜、侧放或倒置须由具体型号的完整设计与制造商要求确认。",
+      "checklist": [
+        "准确型号与目标设备",
+        "朝下面、端子与阀口方向",
+        "产品说明及制造商许可",
+        "整电池验证范围"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "准确型号与目标设备; 朝下面、端子与阀口方向; 产品说明及制造商许可; 整电池验证范围"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "Yuasa FAQ 核验于 2026 年 10 月 31 日，页面未见明确发布日期。资料描述其产品语境中的保液及安装灵活性，没有通用角度表，也不覆盖所有品牌。不是维京整电池试验、安装认证或安全保证。AI 配图不是试验证据。",
+      "items": [
+        [
+          "Yuasa Battery FAQ — Can an AGM battery be installed in any position?",
+          "https://www.yuasabatteries.com/resources/faqs/"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const batteryStorageSelfDischargeCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/unused-battery-self-discharge-storage-installation/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Factory condition is only the start of the timeline",
+      "title": "An Unused Battery Can Still Lose Charge: Managing Factory-to-Installation Time",
+      "subtitle": "Separate storage time, temperature and connected standby loads before attributing a low state of charge to a battery defect or AGM separator.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/battery-storage-self-discharge-hero-1600.webp",
+        "alt": "An Unused Battery Can Still Lose Charge: Managing Factory-to-Installation Time",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "A battery’s condition can change even when it has never powered equipment. Storage time, temperature and any connected standby load must be separated and documented before a low state of charge is treated as evidence of a defect or attributed to an AGM separator."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Factory condition is only the start of the timeline",
+        "title": "Factory condition is only the start of the timeline",
+        "text": "After a lead-acid battery has been manufactured, tested and placed in inventory, internal chemical reactions continue. Its state of charge can therefore decline without an external load.\n\nIn stock-management guidance dated November 1, 2024, GS Yuasa explains that batteries gradually lose charge through ongoing internal chemical reactions and that discharge is faster during warmer summer conditions. The guidance was written for the company’s dealer and after-sales context.\n\n“Never used” only means that the battery has not powered an external device. It does not establish that its state of charge remained unchanged. Production dates, factory test records and warehouse entry dates help show how long each battery has been in inventory. Batteries from the same batch may also require individual review if their storage periods differ."
+      },
+      {
+        "eyebrow": "Charging and adding fluid are different actions",
+        "title": "Charging and adding fluid are different actions",
+        "text": "A maintenance charge means restoring charge with suitable equipment and according to the battery manufacturer’s instructions for the specific model. Adding fluid means putting liquid into the battery. These actions are not interchangeable.\n\nAGM batteries use a sealed, valve-regulated construction. If their state of charge declines, users should not respond by opening the battery, adding water or introducing another liquid. Any inspection or charging procedure must follow the applicable product documentation and be performed by appropriately experienced personnel."
+      },
+      {
+        "eyebrow": "Storage records need both time and temperature",
+        "title": "Storage records need both time and temperature",
+        "text": "Battery inventory management should record more than quantities. The entry date, batch, storage environment, periodic condition checks and maintenance history can help a distributor or warehouse team reconstruct what the product experienced.\n\nThe required checks, inspection intervals and conditions for a maintenance charge must come from the battery manufacturer’s documentation for that model. Recommendations are not identical across products.\n\nFor example, a Yuasa Battery Inc. storage page provides inspection and maintenance guidance for specified Powersports AGM batteries and notes that higher storage temperatures accelerate self-discharge. The page does not show a clear publication date. Its intervals and voltage requirements apply to the products covered by that guidance and should not be extended to every AGM or VRLA battery.\n\nA maintenance-free or sealed design reduces routine water-maintenance requirements. It does not stop self-discharge or remove the need for inventory control. Warehouses should manage stock rotation and condition checks against the relevant battery documentation, rather than applying values from another brand or model as a universal rule."
+      },
+      {
+        "eyebrow": "The record should continue through transport and installation",
+        "title": "The record should continue through transport and installation",
+        "text": "Time continues to pass after a battery leaves the warehouse. Transport, temporary storage and installation scheduling may all affect the delivery timeline.\n\nA record that says only “shipped” is rarely enough to locate the stage at which a change occurred. Useful traceability may include the model and batch, production or dispatch date, warehouse entry and exit dates, transport and receipt times, installation date, and any inspection or maintenance-charge records.\n\nThis does not mean that every battery should follow one inspection frequency. The purpose is to preserve comparable information at each handover. Compliance with storage requirements and the need for further testing should be assessed by the battery manufacturer or personnel responsible for the model, using the applicable product documents."
+      },
+      {
+        "eyebrow": "Internal self-discharge and connected loads require separate checks",
+        "title": "Internal self-discharge and connected loads require separate checks",
+        "text": "Once a battery is connected to a vehicle or another system, standby electronics may draw current even when the equipment is not operating. Control modules, alarms, communication devices and other standby components are possible examples.\n\nThat external consumption is distinct from the battery’s internal self-discharge. An investigation should first establish whether the battery was stored independently or connected to equipment, how long that condition continued, and what the battery and equipment records show.\n\nWhen a low state of charge is found, a single reading usually cannot identify where the change occurred. Review the model, manufacturing and dispatch dates, storage temperature and duration, transport and installation delay, connection status, and available inspection records in chronological order. Any period without records should be marked as an information gap.\n\nA battery should not be classified as defective solely because it was unused or arrived with a low reading. The same observation also cannot, by itself, assign responsibility to the separator. Charging equipment, procedures and thresholds must be confirmed against the instructions for the specific battery."
+      },
+      {
+        "eyebrow": "Battery maintenance and separator matching are separate responsibilities",
+        "title": "Battery maintenance and separator matching are separate responsibilities",
+        "text": "Battery condition during storage and delivery involves the battery manufacturer, distributor, warehouse and user. AGM separator control follows a separate material-supply and battery-manufacturing quality process.\n\nThe separator supports electrolyte retention and works with the plate-group structure. It cannot eliminate self-discharge in the complete battery or replace storage checks and maintenance charging. When an inventory or delivery anomaly appears, the first step is to collect the model, timeline, storage conditions and external-load information. The responsible parties can then investigate against the product records.\n\nWhether a separator met an agreed specification should be determined through the material inspection and battery-validation results for the relevant batch. A terminal battery reading alone cannot establish separator responsibility.\n\nViking Technology supplies AGM separators and supports specification discussions with battery manufacturers. Separator matching should reflect the battery design, operating conditions and the manufacturer’s validation requirements. Maintenance of the complete battery remains governed by the relevant battery documentation and responsible battery parties."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Why can an unused new battery lose charge?",
+        "text": "Unused does not mean an unchanged state of charge. Internal self-discharge continues during storage; time and temperature matter. Any connected standby load must be checked separately."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "Should an AGM battery be topped up with fluid after losing charge?",
+        "text": "Do not open a sealed AGM battery or add water or another liquid to address charge loss. Inspection and any maintenance charging must follow the instructions for the exact model."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "Does a low arrival reading prove a separator defect?",
+        "text": "No. Reconstruct storage, transport, installation and connection records first. Separator responsibility requires relevant material inspection and battery-validation evidence, not a single terminal reading."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Storage and handover checklist",
+      "text": "Separate storage time, temperature and connected standby loads before attributing a low state of charge to a battery defect or AGM separator.",
+      "items": [
+        "Model, batch and factory tests",
+        "Warehouse and installation timeline",
+        "Temperature, checks and maintenance",
+        "Independent storage or connected load"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Can Adding Fluid Restore a Weak Lead-Acid Battery?",
+          "/blog/can-adding-fluid-restore-weak-lead-acid-battery/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Separate storage time, temperature and connected standby loads before attributing a low state of charge to a battery defect or AGM separator.",
+      "checklist": [
+        "Model, batch and factory tests",
+        "Warehouse and installation timeline",
+        "Temperature, checks and maintenance",
+        "Independent storage or connected load"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Model, batch and factory tests; Warehouse and installation timeline; Temperature, checks and maintenance; Independent storage or connected load"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "Sources checked on 31 October 2026. GS Yuasa guidance is dated 1 November 2024; the Yuasa Battery Inc. storage page has no clear publication date. Both address their own products or dealer contexts, not universal inspection intervals, voltage thresholds or maintenance rules for all AGM/VRLA batteries. The AI illustration is not test or site evidence.",
+      "items": [
+        [
+          "GS Yuasa — How to manage stock, sales & returns (2024-11-01)",
+          "https://www.gs-yuasa.eu/en-de/info-hub/how-to-manage-stock-sales-and-returns-yuasa"
+        ],
+        [
+          "Yuasa Battery Inc. — Battery Maintenance & Storage",
+          "https://www.yuasabatteries.com/resources/guides/battery-maintenance-storage/"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/unused-battery-self-discharge-storage-installation/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "出厂只是时间线的起点",
+      "title": "电池没用过也会掉电：从出厂到安装的库存管理",
+      "subtitle": "把储存时间、温度与外部待机负载分别记录，再判断低荷电状态的原因；单次读数不能证明电池缺陷或隔板责任。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/battery-storage-self-discharge-hero-1600.webp",
+        "alt": "电池没用过也会掉电：从出厂到安装的库存管理",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "把储存时间、温度与外部待机负载分别记录，再判断低荷电状态的原因；单次读数不能证明电池缺陷或隔板责任。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "出厂只是时间线的起点",
+        "title": "出厂只是时间线的起点",
+        "text": "铅酸电池完成生产、检测并入库后，内部化学反应仍在继续，因此即使没有外部负载，荷电状态也可能下降。GS Yuasa 于 2024 年 11 月 1 日发布的库存、销售与退货管理资料说明，内部持续反应会使电池逐渐失去电量，温暖夏季会加快这一过程；该资料面向其经销与售后场景。“没用过”只说明未给外部设备供电，不代表电量一直不变。生产日期、出厂检测和入库记录有助于重建库存时间；同批电池储存时长不同，也需要分别查看。"
+      },
+      {
+        "eyebrow": "补充充电与补液是两件事",
+        "title": "补充充电与补液是两件事",
+        "text": "维护性补充充电，是使用合适设备并按照该型号厂家的要求恢复电量；补液则是向电池中加入液体，两者不能互相替代。AGM 采用密封阀控结构，荷电状态下降时，不应以撬开电池、加水或注入其他液体应对。检查及充电应依照适用产品文件，由具备相应经验的人员执行。免维护或密封设计降低了日常补水维护需求，并不意味着电池不会自放电。"
+      },
+      {
+        "eyebrow": "库存记录必须同时包含时间和温度",
+        "title": "库存记录必须同时包含时间和温度",
+        "text": "库存管理不只记录数量，还应保留入库日期、批次、储存环境、定期状态检查和维护历史，以便重建产品经历。检查内容、周期及何时需要补充充电，须来自该型号制造商的文件，不同产品的建议并不相同。例如 Yuasa Battery Inc. 的储存页面针对指定 Powersports AGM 产品给出检查和维护指导，并指出高温会加快自放电；页面未显示明确发布日期。其周期和电压要求不能推广到所有 AGM 或 VRLA 电池。仓库应结合适用文件开展库存轮换和状态检查。"
+      },
+      {
+        "eyebrow": "记录应延续到运输、收货与安装",
+        "title": "记录应延续到运输、收货与安装",
+        "text": "电池出库后仍会经历运输、临时存放和等待安装。只有“已发货”记录，通常不足以定位状态变化发生在哪一环节。可追溯信息包括型号和批次、生产或发运日期、入出库日期、运输及收货时间、安装日期，以及各阶段检查和补充充电记录。这不是要求每块电池采用同一检查频率，而是保存各次交接中可比较的信息。是否符合储存要求、是否需要进一步测试，应由制造商或该型号的责任人员对照产品文件判断。"
+      },
+      {
+        "eyebrow": "内部自放电与设备待机耗电分开检查",
+        "title": "内部自放电与设备待机耗电分开检查",
+        "text": "电池接入车辆或系统后，即使设备未运行，控制模块、报警器、通信设备等也可能消耗待机电流。这种外部耗电与内部自放电不同。排查时先确认独立储存还是已接入设备、持续多久，再对照电池与设备记录。发现低荷电状态时，单次读数通常无法定位变化阶段；应按时间顺序核对型号、生产发运日期、温度和时长、运输与安装延迟、连接状态及检查记录，缺失时段明确标为信息缺口。不能仅凭“未使用却读数低”认定电池有缺陷，也不能据此归责隔板。"
+      },
+      {
+        "eyebrow": "整电池维护与隔板匹配的责任边界",
+        "title": "整电池维护与隔板匹配的责任边界",
+        "text": "储存和交付中的电池状态涉及制造商、经销商、仓库及用户；AGM 隔板则有独立的材料供应和制造质量流程。隔板支持保液并配合极群结构，不能消除整电池自放电，也不能替代库存检查和维护性充电。异常时先收集型号、时间线、储存条件和外部负载信息，再由责任方对照产品记录调查。隔板是否满足约定规格，应依据相应批次材料检验与整电池验证结果，而非端子单次读数。维京提供 AGM 隔板及规格沟通支持，匹配仍需结合电池设计、工况和制造商验证要求。整电池维护遵循其产品文件。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "新电池没用过，为什么还会掉电？",
+        "text": "未使用不代表荷电状态不变。内部自放电仍会发生，储存温度和时间会影响状态；接入设备后的待机耗电需要另行检查。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "AGM 电池掉电后应当补液吗？",
+        "text": "不应以打开密封电池、加水或注液解决掉电。是否需要检查或补充充电，应按具体型号文件由相应人员判断。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "到货电量低，能证明隔板有问题吗？",
+        "text": "不能。先重建储存、运输、安装及连接状态记录；隔板责任需要材料检验和对应批次的电池验证，不能由单次端子读数确定。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "库存与交接检查清单",
+      "text": "把储存时间、温度与外部待机负载分别记录，再判断低荷电状态的原因；单次读数不能证明电池缺陷或隔板责任。",
+      "items": [
+        "型号、批次与出厂检测",
+        "入出库及安装时间线",
+        "温度与检查维护记录",
+        "独立储存或连接状态"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "电池变弱后，补液能恢复吗？",
+          "/zh/blog/can-adding-fluid-restore-weak-lead-acid-battery/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "把储存时间、温度与外部待机负载分别记录，再判断低荷电状态的原因；单次读数不能证明电池缺陷或隔板责任。",
+      "checklist": [
+        "型号、批次与出厂检测",
+        "入出库及安装时间线",
+        "温度与检查维护记录",
+        "独立储存或连接状态"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "型号、批次与出厂检测; 入出库及安装时间线; 温度与检查维护记录; 独立储存或连接状态"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "来源核验于 2026 年 10 月 31 日。GS Yuasa 资料日期为 2024 年 11 月 1 日；Yuasa Battery Inc. 储存页未见明确发布日期。两者均为其产品或经销场景指导，不构成通用检查周期、电压门槛或所有 AGM/VRLA 电池的维护规定。AI 配图不是检测或实拍证据。",
+      "items": [
+        [
+          "GS Yuasa — How to manage stock, sales & returns (2024-11-01)",
+          "https://www.gs-yuasa.eu/en-de/info-hub/how-to-manage-stock-sales-and-returns-yuasa"
+        ],
+        [
+          "Yuasa Battery Inc. — Battery Maintenance & Storage",
+          "https://www.yuasabatteries.com/resources/guides/battery-maintenance-storage/"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const batteryCapacityHourRatesCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/100ah-battery-c10-c20-capacity-comparison/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Hour rates and C-rate",
+      "title": "Two 100Ah Batteries May Not Be Directly Comparable",
+      "subtitle": "Compare hour rate, temperature, cutoff voltage and discharge method before comparing capacity. AGM material data cannot replace complete-battery testing.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/battery-capacity-hour-rates-hero-1600.webp",
+        "alt": "AI illustration of two batteries and different capacity-rating conditions",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Compare hour rate, temperature, cutoff voltage and discharge method before comparing capacity. AGM material data cannot replace complete-battery testing."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Hour rates and C-rate",
+        "title": "Hour rates and C-rate",
+        "text": "C10 refers to a 10-hour capacity rating, while C20 refers to a 20-hour capacity rating. These terms describe the capacity-rating method. They are not quality grades and do not mean that a battery can be discharged 10 or 20 times.\n\nA simple calculation illustrates the corresponding nominal currents:\n\n- For a 100Ah rating defined at C20: 100Ah ÷ 20h = 5A\n- For a 100Ah rating defined at C10: 100Ah ÷ 10h = 10A\n\nThis arithmetic does not prove that the same battery will necessarily deliver 100Ah both at 5A for 20 hours and at 10A for 10 hours. Actual delivered capacity also depends on discharge current, battery design, and the test termination conditions. These examples cannot be used to derive a universal conversion ratio.\n\nHour-rate notation should also be distinguished from C-rate notation. In capacity specifications, C10 and C20 commonly refer to 10-hour and 20-hour ratings. Expressions such as 1C and 0.5C describe current relative to rated capacity. The parameter field and its context determine which convention is being used."
+      },
+      {
+        "eyebrow": "Model-specific conditions",
+        "title": "Model-specific conditions",
+        "text": "Sacred Sun's SP Series page provides a useful manufacturer-specific example. It lists 5–33Ah products at C20 and 25°C, while 38–250Ah products are listed at C10 and 25°C. This shows that different capacity ranges within one series may use different hour-rate labels.\n\nThese are specifications for the relevant Sacred Sun products. They should not be generalized to other brands or all lead-acid batteries.\n\nTemperature must be checked with the hour rate. Capacity tests are conducted at specified temperatures, and the Sacred Sun information cited above states 25°C. Performance measured or obtained under a different application temperature may differ from the nominal condition.\n\nCutoff voltage is another essential boundary. It defines the voltage at which a discharge test stops. Different cutoff voltages represent different discharge depths and may produce different results. A comparison that records only 100Ah but omits the cutoff voltage is missing a key condition.\n\nThe discharge load must also be clear. Constant-current and constant-power tests have different load characteristics. Ah data are comparable only within their stated discharge conditions.\n\nUPS selection additionally considers system voltage, power, discharge duration, and cutoff conditions. A constant-current capacity figure cannot replace verification under the intended equipment duty.\n\nTrojan's technical explanation of AGM battery ratings also states that amp-hour capacity changes with discharge current and uses different hour rates to illustrate that relationship. This supports the limited conclusion that capacity depends on rating conditions; it does not establish one hour rate as a universal industry standard."
+      },
+      {
+        "eyebrow": "A comparison table",
+        "title": "A comparison table",
+        "text": "When reviewing specifications or test reports, place the following information in one table:\n\n- Nominal capacity and its hour rate, such as C10 or C20\n- Test temperature\n- Discharge cutoff voltage\n- Discharge method and current or power\n- Tested model, test object, and test basis\n\nIf two products were evaluated under different conditions, pause the comparison and request complete discharge data or test notes for the relevant models. For short-duration, high-power applications, review the corresponding power-discharge information instead of extrapolating only from a long-duration Ah rating.\n\nA specification containing only one capacity figure should be traced to its discharge table, footnotes, or test description. Confirm the battery model and voltage platform, then read the row headings, column headings, and units. Manufacturers place hour-rate information in different locations. Copying the number alone can remove the condition that gives it meaning.\n\nMissing information should not be silently assumed. If one document states 25°C and the other gives no temperature, the second value cannot automatically be treated as if it used the same condition. The same principle applies when one report states a cutoff voltage and another lists capacity alone."
+      },
+      {
+        "eyebrow": "Nominal, laboratory and field data",
+        "title": "Nominal, laboratory and field data",
+        "text": "Nominal ratings, measured laboratory results, and equipment operating data answer different questions.\n\nA nominal value describes the product's rating basis. A laboratory report records the result for a specific sample under specified conditions. Field monitoring data are also affected by equipment load, environment, battery condition, and time in service.\n\nWhen these values appear in the same comparison, label their source and test date. A single field reading should not be used directly to redefine a product specification.\n\nSelection can then be divided into two questions:\n\n1. What is the battery's rated value under its standard capacity-test conditions?\n2. What current or power must the system deliver under the actual load?\n\nThe first question supports document comparison. The second requires equipment requirements and application data from the battery manufacturer. The questions are related, but one Ah figure cannot replace the complete engineering calculation."
+      },
+      {
+        "eyebrow": "Separator validation",
+        "title": "Separator validation",
+        "text": "In an AGM lead-acid battery, the separator participates in electrolyte retention, ion transport, and the structural relationship within the plate group. Its specification and consistency should be evaluated against the target battery structure, manufacturing process, and test requirements.\n\nA single separator material property cannot be converted directly into complete-battery Ah capacity. It also cannot independently prove battery performance at C10, C20, or a specified power duty.\n\nComplete-battery capacity also depends on plate design, electrolyte, battery construction, assembly, and test conditions. Capacity conclusions must therefore come from tests on the relevant battery model under the relevant conditions.\n\nViking Technology supplies AGM separators and supports specification discussions with battery manufacturers. Material matching should consider the target capacity-test condition, temperature, cutoff voltage, load method, separator thickness, and dimensions, with the final decision based on the specific battery design and validation results."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Two 100Ah Batteries May Not Be Directly Comparable",
+      "text": "Compare hour rate, temperature, cutoff voltage and discharge method before comparing capacity. AGM material data cannot replace complete-battery testing.",
+      "items": [
+        "Hour rates and C-rate",
+        "Model-specific conditions",
+        "A comparison table",
+        "Nominal, laboratory and field data",
+        "Separator validation"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "RV AGM Batteries: Choose Starting and House Power by Duty",
+          "/blog/rv-agm-batteries-starting-house-power-duty/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "Will an AGM Separator Still Hold Pressure After Filling and Cycling?",
+          "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Compare hour rate, temperature, cutoff voltage and discharge method before comparing capacity. AGM material data cannot replace complete-battery testing.",
+      "checklist": [
+        "Hour rates and C-rate",
+        "Model-specific conditions",
+        "A comparison table",
+        "Nominal, laboratory and field data",
+        "Separator validation"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Hour rates and C-rate; Model-specific conditions; A comparison table; Nominal, laboratory and field data; Separator validation"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "Sources checked on 29 October 2026. Sacred Sun ranges and 25°C conditions apply only to its cited SP products. Trojan supports current-dependent capacity, not a universal hour rate or conversion. Neither source is Viking testing. AI illustration is not test evidence.",
+      "items": [
+        [
+          "Sacred Sun — SP Series",
+          "https://sacredsun.cn/"
+        ],
+        [
+          "Trojan — AGM ratings",
+          "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/100ah-battery-c10-c20-capacity-comparison/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "时率与倍率",
+      "title": "同为 100Ah，C10 与 C20 电池能直接比较吗？",
+      "subtitle": "先对齐时率、温度、终止电压和放电方式，再比较容量；隔板材料数据不能替代整电池验证。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/battery-capacity-hour-rates-hero-1600.webp",
+        "alt": "AI 示意图：不同测试条件下两块电池的容量对照",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "先对齐时率、温度、终止电压和放电方式，再比较容量；隔板材料数据不能替代整电池验证。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "时率与倍率",
+        "title": "时率与倍率",
+        "text": "C10 指 10 小时率容量，C20 指 20 小时率容量，不是品质等级，也不是可放电次数。100Ah÷20h=5A、100Ah÷10h=10A，只是在各自额定条件下计算名义电流，不能证明同一电池在两种电流下都能交付 100Ah，更不能推出通用换算比例。实际容量还取决于设计、放电电流和终止条件。要区分时率写法与 1C、0.5C 这类相对额定容量的电流倍率，结合参数栏与上下文判断。"
+      },
+      {
+        "eyebrow": "型号及测试条件",
+        "title": "型号及测试条件",
+        "text": "圣阳 SP 系列公开资料将 5–33Ah 列为 C20、25°C，将 38–250Ah 列为 C10、25°C。这只是相应型号的厂家规格，不代表其他品牌或所有铅酸电池。温度必须与时率一起读；终止电压定义试验停止边界，不同终止条件可能得到不同结果。恒流与恒功率放电的负载特征也不同。UPS 还要核对系统电压、功率、时长和终止条件，不能只拿长时率 Ah 代替实际工况验证。Trojan 的资料支持容量随放电电流变化这一有限结论，不意味着某一时率是行业统一标准。"
+      },
+      {
+        "eyebrow": "建立同条件对照表",
+        "title": "建立同条件对照表",
+        "text": "把额定容量与时率、测试温度、终止电压、放电方法及电流或功率、型号、测试对象和依据放在同一张对照表。条件不同，先补齐放电表和试验说明，再下结论；短时高功率应用应看对应功率放电数据。单独出现的容量数值要追溯到表格、脚注和方法说明，核对电压平台、行列标题及单位。未标注温度或终止电压，不能自动假定与另一份资料一致。"
+      },
+      {
+        "eyebrow": "区分三类数据",
+        "title": "区分三类数据",
+        "text": "额定值说明产品的标称依据，实验室结果对应特定样品及试验条件，现场读数还受实际负载、环境、电池状态和服役时间影响。比较时记录数据来源和测试日期，不用一次现场读数直接重定义产品规格。先问标准容量条件下额定值是多少，再问设备实际需要什么电流或功率；前者支持文档比较，后者需要设备要求与厂家应用数据，一个 Ah 数值不能代替完整工程计算。"
+      },
+      {
+        "eyebrow": "隔板与整电池验证",
+        "title": "隔板与整电池验证",
+        "text": "AGM 隔板参与保液、离子传输和极群内的结构配合，规格与一致性应结合目标电池结构、工艺和测试要求验证。单项隔板指标不能直接换算整电池 Ah，也不能独立证明 C10、C20 或指定功率工况性能。极板、酸液、结构、装配与测试条件共同影响容量，结论应来自对应型号、对应条件的整电池测试。维京提供 AGM 隔板及规格沟通，请提供目标容量测试条件、温度、终止电压、负载方式、厚度和尺寸，以具体电池设计和验证结果确定匹配。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "同为 100Ah，C10 与 C20 电池能直接比较吗？",
+      "text": "先对齐时率、温度、终止电压和放电方式，再比较容量；隔板材料数据不能替代整电池验证。",
+      "items": [
+        "时率与倍率",
+        "型号及测试条件",
+        "建立同条件对照表",
+        "区分三类数据",
+        "隔板与整电池验证"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "房车 AGM 电池：启动与生活用电，应按工况分别选择",
+          "/zh/blog/rv-agm-batteries-starting-house-power-duty/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "隔板装进去没问题，循环以后还能保持压力吗？",
+          "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "先对齐时率、温度、终止电压和放电方式，再比较容量；隔板材料数据不能替代整电池验证。",
+      "checklist": [
+        "时率与倍率",
+        "型号及测试条件",
+        "建立同条件对照表",
+        "区分三类数据",
+        "隔板与整电池验证"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "时率与倍率; 型号及测试条件; 建立同条件对照表; 区分三类数据; 隔板与整电池验证"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "来源核验于 2026 年 10 月 29 日。圣阳的容量范围和 25°C 条件仅指所引 SP 产品；Trojan 用于支持容量随电流变化，不作为通用时率或换算依据。两者都不是维京测试，AI 配图不是试验证据。",
+      "items": [
+        [
+          "Sacred Sun — SP Series",
+          "https://sacredsun.cn/"
+        ],
+        [
+          "Trojan — AGM ratings",
+          "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const ciStorageDeploymentCostsCopy = {
   "en": {
     "nav": {
@@ -8529,6 +9885,14 @@ export function BlogArticlePage({
       ? telecomLeadAcidProcurementCopy[primaryLang]
       : page === "leadPremiumDemandRestocking"
       ? leadPremiumDemandRestockingCopy[primaryLang]
+      : page === "vrlaAgmGelStructures"
+      ? vrlaAgmGelStructuresCopy[primaryLang]
+      : page === "agmBatteryOrientation"
+      ? agmBatteryOrientationCopy[primaryLang]
+      : page === "batteryStorageSelfDischarge"
+      ? batteryStorageSelfDischargeCopy[primaryLang]
+      : page === "batteryCapacityHourRates"
+      ? batteryCapacityHourRatesCopy[primaryLang]
       : page === "ciStorageDeploymentCosts"
       ? ciStorageDeploymentCostsCopy[primaryLang]
       : page === "leadAcidFluidTopUp"
@@ -8621,7 +9985,15 @@ export function BlogArticlePage({
       : null;
   const t = articleContent(page, lang, defaultArticle) as ArticlePageData;
   const sectionIds =
-    page === "ciStorageDeploymentCosts"
+    page === "vrlaAgmGelStructures"
+      ? ["vrla-category", "agm-retention", "gel-structure", "material-compatibility", "performance-boundary", "structure-checklist", "viking-scope", "faq-vrla", "faq-gel", "faq-interchange"]
+      : page === "agmBatteryOrientation"
+      ? ["retention-not-approval", "orientation-differences", "installation-review", "replacement-model", "battery-validation", "faq-inversion", "faq-side-mount", "faq-leak-free"]
+      : page === "batteryStorageSelfDischarge"
+      ? ["factory-timeline", "charging-not-fluid", "time-temperature", "transport-installation", "standby-loads", "separator-boundary", "faq-unused", "faq-fluid", "faq-separator"]
+      : page === "batteryCapacityHourRates"
+      ? ["hour-rates", "test-conditions", "comparison-table", "data-levels", "separator-validation"]
+      :     page === "ciStorageDeploymentCosts"
       ? ["budget-scope", "company-disclosure", "pilot-evidence", "comparable-requirements", "agm-boundary"]
       :     page === "leadAcidFluidTopUp"
       ? ["battery-construction", "model-instructions", "capacity-diagnosis", "warning-signs", "separator-matching"]

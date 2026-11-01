@@ -114,6 +114,74 @@ export const resourceActions: ResourceAction[] = [
 
 export const resourceArticles: ResourceArticle[] = [
 {
+  "id": "vrla-agm-gel-battery-structures-separator-matching",
+  "category": "buyerGuides",
+  "publishedAt": "2026-11-01",
+  "title": {
+    "en": "VRLA Is a Category; AGM and GEL Are Different Structures",
+    "zh": "VRLA 是类别，AGM 与 GEL 是不同的内部结构"
+  },
+  "description": {
+    "en": "VRLA identifies a valve-regulated category. AGM and GEL immobilize electrolyte differently; separator compatibility and performance require model-specific evidence.",
+    "zh": "VRLA 表示阀控铅酸类别，AGM 与 GEL 的电解液固定方式不同；隔板能否匹配及电池性能，须结合具体型号判断。"
+  },
+  "href": {
+    "en": "/blog/vrla-agm-gel-battery-structures-separator-matching/",
+    "zh": "/zh/blog/vrla-agm-gel-battery-structures-separator-matching/"
+  }
+},
+{
+  "id": "agm-electrolyte-retention-battery-installation-orientation",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-10-31",
+  "title": {
+    "en": "Electrolyte Retention Does Not Make Every AGM Battery Invertible",
+    "zh": "AGM 隔板能保液，不代表电池都能倒置安装"
+  },
+  "description": {
+    "en": "AGM electrolyte retention is a material property, not installation approval. Confirm tilt, side mounting or inversion for the exact finished-battery model.",
+    "zh": "保液是材料性能，不是整电池安装许可。倾斜、侧放或倒置须由具体型号的完整设计与制造商要求确认。"
+  },
+  "href": {
+    "en": "/blog/agm-electrolyte-retention-battery-installation-orientation/",
+    "zh": "/zh/blog/agm-electrolyte-retention-battery-installation-orientation/"
+  }
+},
+{
+  "id": "unused-battery-self-discharge-storage-installation",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-10-31",
+  "title": {
+    "en": "An Unused Battery Can Still Lose Charge: Managing Factory-to-Installation Time",
+    "zh": "电池没用过也会掉电：从出厂到安装的库存管理"
+  },
+  "description": {
+    "en": "Separate storage time, temperature and connected standby loads before attributing a low state of charge to a battery defect or AGM separator.",
+    "zh": "把储存时间、温度与外部待机负载分别记录，再判断低荷电状态的原因；单次读数不能证明电池缺陷或隔板责任。"
+  },
+  "href": {
+    "en": "/blog/unused-battery-self-discharge-storage-installation/",
+    "zh": "/zh/blog/unused-battery-self-discharge-storage-installation/"
+  }
+},
+{
+  "id": "100ah-battery-c10-c20-capacity-comparison",
+  "category": "buyerGuides",
+  "publishedAt": "2026-10-29",
+  "title": {
+    "en": "Two 100Ah Batteries May Not Be Directly Comparable",
+    "zh": "同为 100Ah，C10 与 C20 电池能直接比较吗？"
+  },
+  "description": {
+    "en": "Compare hour rate, temperature, cutoff voltage and discharge method before comparing capacity. AGM material data cannot replace complete-battery testing.",
+    "zh": "先对齐时率、温度、终止电压和放电方式，再比较容量；隔板材料数据不能替代整电池验证。"
+  },
+  "href": {
+    "en": "/blog/100ah-battery-c10-c20-capacity-comparison/",
+    "zh": "/zh/blog/100ah-battery-c10-c20-capacity-comparison/"
+  }
+},
+{
   "id": "commercial-industrial-energy-storage-deployment-costs",
   "category": "industryApplications",
   "publishedAt": "2026-10-28",
@@ -711,6 +779,10 @@ export const resourceArticles: ResourceArticle[] = [
 ];
 
 const articleKindById: Record<string, string> = {
+  "vrla-agm-gel-battery-structures-separator-matching": "vrlaAgmGelStructures",
+  "agm-electrolyte-retention-battery-installation-orientation": "agmBatteryOrientation",
+  "unused-battery-self-discharge-storage-installation": "batteryStorageSelfDischarge",
+  "100ah-battery-c10-c20-capacity-comparison": "batteryCapacityHourRates",
   "commercial-industrial-energy-storage-deployment-costs": "ciStorageDeploymentCosts",
   "can-adding-fluid-restore-weak-lead-acid-battery": "leadAcidFluidTopUp",
   "rv-agm-batteries-starting-house-power-duty": "rvAgmStartingHouseDuty",

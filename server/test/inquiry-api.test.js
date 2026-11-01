@@ -129,9 +129,11 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   assert.equal(rows[1].lead_grade, "E");
   assert.equal(rows[1].classification_reason, "duplicate_submission");
   assert.equal(rows[1].duplicate_of_id, rows[0].id);
-  assert.equal(rows[2].lead_grade, "B");
+  assert.equal(rows[2].lead_grade, "E");
+  assert.equal(rows[2].classification_reason, "invalid_company_history / 公司匹配已有 E 类线索");
+  assert.equal(rows[2].email_notification_status, "skipped");
   assert.equal(rows[5].classification_reason, "internal_test");
-  assert.equal(rows[6].classification_reason, "bulk_messaging_solicitation");
+  assert.equal(rows[6].classification_reason, "google_company / Google 公司");
   assert.equal(rows[6].lead_grade, "E");
   assert.equal(rows[6].email_notification_status, "skipped");
   assert.equal(rows[6].feishu_notification_status, "skipped");
@@ -147,10 +149,10 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   const cookie = login.headers.get("set-cookie").split(";", 1)[0];
 
   const workQueue = await adminJson(`${baseUrl}/admin/api/inquiries`, cookie);
-  assert.equal(workQueue.total, 2);
+  assert.equal(workQueue.total, 1);
   assert.equal(workQueue.inquiries[0].lead_grade, "B");
-  assert.equal(workQueue.stats.B, 2);
-  assert.equal(workQueue.stats.E, 5);
+  assert.equal(workQueue.stats.B, 1);
+  assert.equal(workQueue.stats.E, 6);
 
   const manual = await fetch(
     `${baseUrl}/admin/api/inquiries/${rows[0].id}/update`,
@@ -206,6 +208,13 @@ test("API classifies, filters and manually grades inquiries", async (context) =>
   assert.equal((await restore.json()).inquiry.classification_source, "manual");
   assert.ok(!reviewInquiries(db).automatic.some((row) => row.id === rows[6].id));
   assert.ok(reviewInquiries(db).manualReview.some((row) => row.id === rows[6].id));
+  const repeatedIp = await submit(baseUrl, { name: "Another buyer", contact: "new@factory.example", company: "Different Factory", message: "Please quote 2mm AGM separator samples." });
+  assert.equal(repeatedIp.status, 202);
+  const repeatedRow = db.prepare("SELECT * FROM inquiries WHERE id = ?").get((await repeatedIp.json()).id);
+  assert.equal(repeatedRow.lead_grade, "E");
+  assert.match(repeatedRow.classification_reason, /^invalid_ip_history/);
+  assert.equal(repeatedRow.email_notification_status, "skipped");
+  assert.equal(repeatedRow.feishu_notification_status, "skipped");
 });
 
 async function submit(baseUrl, fields) {

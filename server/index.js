@@ -301,6 +301,7 @@ app.post("/api/inquiry", (request, response) => {
   const classification = classifyInquiry({
     inquiry: record,
     duplicateOfId: duplicate?.id || null,
+    invalidHistory: db.prepare("SELECT company, ip_address FROM inquiries WHERE lead_grade = 'E'").all(),
     testContacts: inquiryTestContacts
   });
 

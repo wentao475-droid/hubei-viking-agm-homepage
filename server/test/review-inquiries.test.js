@@ -13,7 +13,7 @@ test("history review is read-only by default and protects followed-up leads", as
   const db = new Database(filename);
   context.after(() => { db.close(); fs.rmSync(directory, { recursive: true, force: true }); });
   db.exec(`CREATE TABLE inquiries (
-    id INTEGER PRIMARY KEY, name TEXT, message TEXT, company TEXT,
+    id INTEGER PRIMARY KEY, name TEXT, message TEXT, company TEXT, ip_address TEXT,
     lead_grade TEXT, classification_source TEXT, classification_reason TEXT,
     notes TEXT, next_follow_up_at TEXT, handled_at TEXT, status TEXT,
     classified_at TEXT, notification_status TEXT,
