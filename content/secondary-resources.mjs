@@ -1,3 +1,4 @@
+import { parallelBatteryTopics } from "./parallel-battery-current-sharing-topics.mjs";
 import { vrlaAgmGelTopics } from "./vrla-agm-gel-structures-topics.mjs";
 import { agmBatteryOrientationTopics } from "./agm-battery-orientation-topics.mjs";
 import { batteryStorageTopics } from "./battery-storage-self-discharge-topics.mjs";
@@ -26,6 +27,7 @@ import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
+  "parallelBatteryCurrentSharing",
   "vrlaAgmGelStructures",
   "agmBatteryOrientation",
   "batteryStorageSelfDischarge",
@@ -107,9 +109,11 @@ export const articleDefinitions = {
   ,batteryStorageSelfDischarge: ["unused-battery-self-discharge-storage-installation", "manufacturingQuality", "2026-10-31", "2026-10-31"]
   ,agmBatteryOrientation: ["agm-electrolyte-retention-battery-installation-orientation", "manufacturingQuality", "2026-10-31", "2026-10-31"]
   ,vrlaAgmGelStructures: ["vrla-agm-gel-battery-structures-separator-matching", "buyerGuides", "2026-11-01", "2026-11-01"]
+  ,parallelBatteryCurrentSharing: ["parallel-battery-current-sharing-measurement-layers", "manufacturingQuality", "2026-11-06", "2026-11-06"]
 };
 
 const images = {
+  parallelBatteryCurrentSharing: ["/images/articles/parallel-battery-current-sharing-hero-1600.webp", 1600, 1200],
   vrlaAgmGelStructures: ["/images/articles/vrla-agm-gel-structures-hero-1600.webp", 1600, 1200],
   agmBatteryOrientation: ["/images/articles/agm-battery-orientation-hero-1600.webp", 1600, 1200],
   batteryStorageSelfDischarge: ["/images/articles/battery-storage-self-discharge-hero-1600.webp", 1600, 1200],
@@ -1262,6 +1266,10 @@ for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].topics.vrlaAgmGelStructures = vrlaAgmGelTopics[locale];
 }
 
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.parallelBatteryCurrentSharing = parallelBatteryTopics[locale];
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1305,6 +1313,7 @@ const arabicReferences = {
 
 
 const generatedArticleVisuals = {
+  "parallelBatteryCurrentSharing": "/images/articles/parallel-battery-current-sharing-hero-1600.webp",
   "vrlaAgmGelStructures": "/images/articles/vrla-agm-gel-structures-hero-1600.webp",
   "agmBatteryOrientation": "/images/articles/agm-battery-orientation-hero-1600.webp",
   "batteryStorageSelfDischarge": "/images/articles/battery-storage-self-discharge-hero-1600.webp",
@@ -1354,7 +1363,9 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "vrlaAgmGelStructures"
+  const relatedKinds = kind === "parallelBatteryCurrentSharing"
+    ? ["keyTechnicalParameters", "agmSeparatorBatchProcessControl", "batteryCapacityHourRates", "whatIsAgmSeparator"]
+    : kind === "vrlaAgmGelStructures"
     ? ["whatIsAgmSeparator", "keyTechnicalParameters", "agmBatteryOrientation", "agmGlassFiberVsPvcSeparator"]
     : kind === "agmBatteryOrientation"
     ? ["whatIsAgmSeparator", "agmSeparatorPressureRetention", "keyTechnicalParameters", "leadAcidFluidTopUp"]
@@ -1493,6 +1504,19 @@ function buildArticle(locale, kind, localeData) {
   [
     "Yangtze Nonferrous — 2026-09-29",
     "https://pb.ccmn.cn/news/ZX018/202609/f39296a023984b088d8302eee0da446b.html"
+  ]
+] };
+  }
+
+  if (kind === "parallelBatteryCurrentSharing") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "Victron Energy — Batteries in series or parallel (2026-10-23)",
+    "https://www.victronenergy.com/knowledge-articles/2026/10/23/batteries-in-series-or-parallel"
+  ],
+  [
+    "Victron Energy — Wiring Unlimited §3.3",
+    "https://www.victronenergy.com/media/pg/The_Wiring_Unlimited_book/en/battery-bank-wiring.html"
   ]
 ] };
   }

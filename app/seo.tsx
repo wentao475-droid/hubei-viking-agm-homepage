@@ -2166,6 +2166,55 @@ const agmVsGemGlassFiberSeo = {
   }
 } as const;
 
+const parallelBatteryCurrentSharingSeo = {
+  "en": {
+    "path": "/blog/parallel-battery-current-sharing-measurement-layers/",
+    "alternatePath": "/zh/blog/parallel-battery-current-sharing-measurement-layers/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Why One Battery in a Parallel Bank Works Harder: Measure the Right Layer | Viking AGM",
+    "description": "Compare external paths, whole-battery condition and separator material data separately when investigating unequal current sharing in parallel batteries.",
+    "keywords": [
+      "Why One Battery in a Parallel Bank Works Harder: Measure the Right Layer",
+      "AGM",
+      "parallel current sharing"
+    ],
+    "pageName": "Why One Battery in a Parallel Bank Works Harder: Measure the Right Layer",
+    "articleDescription": "Compare external paths, whole-battery condition and separator material data separately when investigating unequal current sharing in parallel batteries.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Why One Battery in a Parallel Bank Works Harder: Measure the Right Layer"
+    ],
+    "datePublished": "2026-11-06",
+    "dateModified": "2026-11-06"
+  },
+  "zh": {
+    "path": "/zh/blog/parallel-battery-current-sharing-measurement-layers/",
+    "alternatePath": "/blog/parallel-battery-current-sharing-measurement-layers/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "并联电池为何有一支路更累？先分清测量层级 | Viking AGM",
+    "description": "排查并联均流时，分别查看外部连接路径、整电池状态和隔板材料数据，让结论对应实际测量对象。",
+    "keywords": [
+      "并联电池为何有一支路更累？先分清测量层级",
+      "AGM",
+      "parallel current sharing"
+    ],
+    "pageName": "并联电池为何有一支路更累？先分清测量层级",
+    "articleDescription": "排查并联均流时，分别查看外部连接路径、整电池状态和隔板材料数据，让结论对应实际测量对象。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "并联电池为何有一支路更累？先分清测量层级"
+    ],
+    "datePublished": "2026-11-06",
+    "dateModified": "2026-11-06"
+  }
+} as const;
+
 const vrlaAgmGelStructuresSeo = {
   "en": {
     "path": "/blog/vrla-agm-gel-battery-structures-separator-matching/",
@@ -5650,6 +5699,55 @@ export function En18060BatteryStandardStructuredData({ lang }: { lang: Lang }) {
   ]}} />;
 }
 
+const parallelBatteryFaq = {
+  "en": [
+    [
+      "Does equal voltage prove equal branch current?",
+      "No. Common buses establish a shared voltage reference, while cable paths, contacts and battery condition can produce unequal branch currents. Compare current records under equivalent conditions."
+    ],
+    [
+      "Is separator resistance the same as battery internal resistance?",
+      "No. Separator-and-electrolyte behavior is one material-level contribution; whole-battery measurements include multiple components and electrochemical processes."
+    ],
+    [
+      "Can one hot connection identify the cause?",
+      "No. Heat is a clue, not a diagnosis. Compare path measurements with branch current, battery history and matched test conditions."
+    ]
+  ],
+  "zh": [
+    [
+      "电压相同就说明每条支路电流一样吗？",
+      "不能。母线提供共同电压参考，但路径、接点和电池状态会影响电流，应比较同等工况下的支路记录。"
+    ],
+    [
+      "隔板电阻就是整电池内阻吗？",
+      "不是。隔板与电解液只是材料层级的一部分，整电池测量还包含其他元件与电化学过程。"
+    ],
+    [
+      "一个接点发热就能确定原因吗？",
+      "不能。发热是线索，应结合路径测量、支路电流、历史及一致测试条件诊断。"
+    ]
+  ]
+} as const;
+
+export function buildParallelBatteryCurrentSharingMetadata(lang: Lang): Metadata {
+  const current = seoContent("parallelBatteryCurrentSharing", lang, parallelBatteryCurrentSharingSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("parallelBatteryCurrentSharing"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/parallel-battery-current-sharing-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function ParallelBatteryCurrentSharingStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("parallelBatteryCurrentSharing", lang, parallelBatteryCurrentSharingSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/parallel-battery-current-sharing-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Parallel battery current sharing", "Resistance measurement layers"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: parallelBatteryFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
 const vrlaAgmGelFaq = {
   "en": [
     [
@@ -6126,11 +6224,11 @@ export function SecondaryArticleStructuredData({
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: current.language
       },
-      ...(kind === "vrlaAgmGelStructures" || kind === "agmBatteryOrientation" || kind === "batteryStorageSelfDischarge" || kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
+      ...(kind === "parallelBatteryCurrentSharing" || kind === "vrlaAgmGelStructures" || kind === "agmBatteryOrientation" || kind === "batteryStorageSelfDischarge" || kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
         ? [{
             "@type": "FAQPage",
             "@id": `${url}#faq`,
-            mainEntity: (kind === "vrlaAgmGelStructures" ? [7, 8, 9] : kind === "agmBatteryOrientation" ? [5, 6, 7] : kind === "batteryStorageSelfDischarge" ? [6, 7, 8] : kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
+            mainEntity: (kind === "parallelBatteryCurrentSharing" ? [5, 6, 7] : kind === "vrlaAgmGelStructures" ? [7, 8, 9] : kind === "agmBatteryOrientation" ? [5, 6, 7] : kind === "batteryStorageSelfDischarge" ? [6, 7, 8] : kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
               "@type": "Question",
               name: secondaryResourceData[lang].topics[kind].sections[sectionIndex][1],
               acceptedAnswer: {

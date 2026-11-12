@@ -114,6 +114,23 @@ export const resourceActions: ResourceAction[] = [
 
 export const resourceArticles: ResourceArticle[] = [
 {
+  "id": "parallel-battery-current-sharing-measurement-layers",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-11-06",
+  "title": {
+    "en": "Why One Battery in a Parallel Bank Works Harder: Measure the Right Layer",
+    "zh": "并联电池为何有一支路更累？先分清测量层级"
+  },
+  "description": {
+    "en": "Compare external paths, whole-battery condition and separator material data separately when investigating unequal current sharing in parallel batteries.",
+    "zh": "排查并联均流时，分别查看外部连接路径、整电池状态和隔板材料数据，让结论对应实际测量对象。"
+  },
+  "href": {
+    "en": "/blog/parallel-battery-current-sharing-measurement-layers/",
+    "zh": "/zh/blog/parallel-battery-current-sharing-measurement-layers/"
+  }
+},
+{
   "id": "vrla-agm-gel-battery-structures-separator-matching",
   "category": "buyerGuides",
   "publishedAt": "2026-11-01",
@@ -779,6 +796,7 @@ export const resourceArticles: ResourceArticle[] = [
 ];
 
 const articleKindById: Record<string, string> = {
+  "parallel-battery-current-sharing-measurement-layers": "parallelBatteryCurrentSharing",
   "vrla-agm-gel-battery-structures-separator-matching": "vrlaAgmGelStructures",
   "agm-electrolyte-retention-battery-installation-orientation": "agmBatteryOrientation",
   "unused-battery-self-discharge-storage-installation": "batteryStorageSelfDischarge",

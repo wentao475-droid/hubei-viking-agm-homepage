@@ -15,6 +15,7 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "parallelBatteryCurrentSharing"
   | "vrlaAgmGelStructures"
   | "agmBatteryOrientation"
   | "batteryStorageSelfDischarge"
@@ -6278,6 +6279,349 @@ const leadPremiumDemandRestockingCopy = {
   }
 } as const;
 
+const parallelBatteryCurrentSharingCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/parallel-battery-current-sharing-measurement-layers/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Equal voltage does not guarantee equal current",
+      "title": "Why One Battery in a Parallel Bank Works Harder: Measure the Right Layer",
+      "subtitle": "Compare external paths, whole-battery condition and separator material data separately when investigating unequal current sharing in parallel batteries.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/parallel-battery-current-sharing-hero-1600.webp",
+        "alt": "Why One Battery in a Parallel Bank Works Harder: Measure the Right Layer",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Compare external paths, whole-battery condition and separator material data separately when investigating unequal current sharing in parallel batteries."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Equal voltage does not guarantee equal current",
+        "title": "Equal voltage does not guarantee equal current",
+        "text": "In a parallel battery bank, every battery is connected to the same positive and negative buses. The common buses provide a shared voltage reference, but cable and contact voltage drops can make measured battery-terminal voltages differ. Branch currents may also differ.\n\nCurrent distribution depends on both the connection path and the condition of each battery. Cable length, terminals, joints and contact interfaces add resistance. Batteries of the same model may also differ in age, state of charge, temperature, ageing and internal condition.\n\nA battery that repeatedly carries more charging or discharging current has a heavier operating load. Its condition may then change and affect subsequent current sharing. A single total-voltage reading cannot establish this trend; branch-current records under comparable operating conditions are required."
+      },
+      {
+        "eyebrow": "External path resistance starts with cables and connections",
+        "title": "External path resistance starts with cables and connections",
+        "text": "The current path runs from the charger or load to a battery and back to the common circuit. Cables, terminals, joints and contact interfaces all contribute to its resistance. Longer paths, additional connections or changing contact conditions can produce different voltage drops between branches.\n\nWhen resistance is approximately constant, voltage drop follows V = IR, while resistive loss follows P = I²R. These relationships do not mean that every connection maintains a fixed resistance under all conditions. Temperature, surface condition and contact quality may change during operation.\n\nHeat or a visibly different cable path can provide a useful clue, but neither proves the cause by itself. Path measurements should be assessed together with branch current and battery data."
+      },
+      {
+        "eyebrow": "Whole-battery internal resistance describes the battery as a system",
+        "title": "Whole-battery internal resistance describes the battery as a system",
+        "text": "Whole-battery internal resistance is an electrical measurement of the complete battery. Its result depends on the test method, temperature, state of charge, rest period and battery condition. It is not the independent value of one internal component.\n\nIf one battery differs from the others, its voltage response and current acceptance may also differ, even when the external paths appear similar. Conversely, similar internal-resistance readings do not prove that the external branch paths have equal resistance.\n\nComparisons should therefore use the same equipment, method and operating conditions. The record should retain the temperature, state of charge and measurement time. Without comparable conditions, a numerical difference may reflect both battery condition and the test setup."
+      },
+      {
+        "eyebrow": "Separator-related resistance is a material-level factor",
+        "title": "Separator-related resistance is a material-level factor",
+        "text": "Inside an AGM battery, the separator retains electrolyte and lies in the ion-transport path between the plates. Separator-related resistance describes the behavior of the separator material together with the electrolyte. It is distinct from external cable and contact resistance, and it is not equivalent to whole-battery internal resistance.\n\nA complete battery response reflects multiple internal components and electrochemical processes. Separator data can help explain one part of the internal ion-transport environment, but it cannot independently represent whole-battery internal resistance or predict how much current one parallel branch will carry.\n\nFor separator manufacturers and battery developers, material-level data remains useful when comparing batches or designs under defined product structures and test conditions. It should form one layer of the investigation, alongside branch measurements and complete-battery verification."
+      },
+      {
+        "eyebrow": "Match each conclusion to the correct measurement",
+        "title": "Match each conclusion to the correct measurement",
+        "text": "Start by confirming whether the system is parallel or series connected. In a parallel bank, examine the individual current paths and determine whether the readings were taken during charging or discharging. Then compare the condition and history of each battery under consistent test conditions.\n\nA practical operating record should include the battery model and batch, service time, temperature, state of charge, branch current, individual-battery voltage and internal resistance, plus the cable route and connection condition.\n\nOnly when the system-level and whole-battery evidence continues to indicate a material factor should the investigation move to separator batch data and structural matching. This sequence does not presume that the separator is irrelevant. It keeps each conclusion tied to the object actually measured.\n\nViking Technology focuses on AGM separator manufacturing. Material matching must be discussed in relation to battery structure, batch and application conditions. A separator does not replace battery design, system connections or complete-system validation."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Does equal voltage prove equal branch current?",
+        "text": "No. Common buses establish a shared voltage reference, while cable paths, contacts and battery condition can produce unequal branch currents. Compare current records under equivalent conditions."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "Is separator resistance the same as battery internal resistance?",
+        "text": "No. Separator-and-electrolyte behavior is one material-level contribution; whole-battery measurements include multiple components and electrochemical processes."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "Can one hot connection identify the cause?",
+        "text": "No. Heat is a clue, not a diagnosis. Compare path measurements with branch current, battery history and matched test conditions."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Current-sharing investigation record",
+      "text": "Compare external paths, whole-battery condition and separator material data separately when investigating unequal current sharing in parallel batteries.",
+      "items": [
+        "Topology and charge/discharge state",
+        "Model, batch, service time and temperature",
+        "State of charge, branch current and battery readings",
+        "Cable routes, connections and test method"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "What Is an AGM Separator?",
+          "/blog/what-is-agm-separator/"
+        ],
+        [
+          "Key Technical Parameters of AGM Separator",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "AGM Electrolyte Retention and Installation Orientation",
+          "/blog/agm-electrolyte-retention-battery-installation-orientation/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Compare external paths, whole-battery condition and separator material data separately when investigating unequal current sharing in parallel batteries.",
+      "checklist": [
+        "Topology and charge/discharge state",
+        "Model, batch, service time and temperature",
+        "State of charge, branch current and battery readings",
+        "Cable routes, connections and test method"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Topology and charge/discharge state; Model, batch, service time and temperature; State of charge, branch current and battery readings; Cable routes, connections and test method"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "Sources checked on 6 November 2026. The dated Victron article is identified separately from the undated Wiring Unlimited §3.3. These are system-wiring references, not Viking test results or separator specifications. Material data cannot independently establish whole-battery resistance or parallel current sharing. AI illustration is not test evidence.",
+      "items": [
+        [
+          "Victron Energy — Batteries in series or parallel (2026-10-23)",
+          "https://www.victronenergy.com/knowledge-articles/2026/10/23/batteries-in-series-or-parallel"
+        ],
+        [
+          "Victron Energy — Wiring Unlimited §3.3",
+          "https://www.victronenergy.com/media/pg/The_Wiring_Unlimited_book/en/battery-bank-wiring.html"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/parallel-battery-current-sharing-measurement-layers/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "电压相同不代表支路电流相等",
+      "title": "并联电池为何有一支路更累？先分清测量层级",
+      "subtitle": "排查并联均流时，分别查看外部连接路径、整电池状态和隔板材料数据，让结论对应实际测量对象。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/parallel-battery-current-sharing-hero-1600.webp",
+        "alt": "并联电池为何有一支路更累？先分清测量层级",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "排查并联均流时，分别查看外部连接路径、整电池状态和隔板材料数据，让结论对应实际测量对象。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "电压相同不代表支路电流相等",
+        "title": "电压相同不代表支路电流相等",
+        "text": "理想并联节点共享母线电压，但各电池端子受路径压降影响，不能据此认定支路电流相等。电缆长度、端子、接头和接触界面都会贡献电阻；同型号也可能有服役时间、荷电状态、温度、老化及内部状态差异。反复承担更多充放电电流的电池负担更重，状态变化又可能影响后续分流。一次总电压读数不能说明趋势，需要可比工况下的支路电流记录。"
+      },
+      {
+        "eyebrow": "外部路径电阻从线缆和连接处查起",
+        "title": "外部路径电阻从线缆和连接处查起",
+        "text": "路径包含从充电器或负载至电池再返回公共回路的完整往返。长度、连接数量和接触状态不同会产生不同压降。在电阻近似不变时，V = IR，电阻损耗 P = I²R；这不代表接点电阻始终恒定，温度、表面和接触质量可能变化。发热或不同走线路径只能作为线索，须与支路电流和电池数据一起判断，不能单独定因。"
+      },
+      {
+        "eyebrow": "整电池内阻是系统级电气测量",
+        "title": "整电池内阻是系统级电气测量",
+        "text": "结果受方法、设备、温度、荷电状态、静置时间及电池状态影响，不是某个内部元件的独立数值。外部路径相似时，电池状态差异仍可能影响电压响应和电流接受；内阻读数相似也不能证明外部支路电阻相同。比较须统一仪器、方法和条件，保存温度、荷电状态及测量时间，否则差值可能同时来自电池与测试设置。"
+      },
+      {
+        "eyebrow": "隔板相关电阻属于材料层级",
+        "title": "隔板相关电阻属于材料层级",
+        "text": "AGM 隔板保留电解液并处于极板间离子传输路径中。隔板与电解液共同表现的电阻行为，不等于外部线缆接点电阻，也不等于整电池内阻。整电池响应包含多个部件与电化学过程；材料数据有助于解释内部环境的一部分，不能独立代表整电池内阻或预测一条并联支路的电流。材料批次或设计比较仍有价值，但须限定结构与测试条件，并结合支路及整电池验证。"
+      },
+      {
+        "eyebrow": "让每个结论对应正确的测量",
+        "title": "让每个结论对应正确的测量",
+        "text": "先确认串联或并联，记录充电还是放电，再查看各支路完整路径，并按一致条件对照电池状态和历史。记录型号、批次、服役时间、温度、荷电状态、支路电流、单电池电压与内阻、线缆走向、接点及测量方法。只有系统和整电池证据仍指向材料因素时，再追溯隔板批次与结构匹配；这不是预先排除材料，而是让结论匹配被测对象。维京聚焦 AGM 隔板制造，应用匹配需结合结构、批次和工况，不能替代系统连接、电池设计或整系统验证。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "电压相同就说明每条支路电流一样吗？",
+        "text": "不能。母线提供共同电压参考，但路径、接点和电池状态会影响电流，应比较同等工况下的支路记录。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "隔板电阻就是整电池内阻吗？",
+        "text": "不是。隔板与电解液只是材料层级的一部分，整电池测量还包含其他元件与电化学过程。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "一个接点发热就能确定原因吗？",
+        "text": "不能。发热是线索，应结合路径测量、支路电流、历史及一致测试条件诊断。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "并联均流排查记录清单",
+      "text": "排查并联均流时，分别查看外部连接路径、整电池状态和隔板材料数据，让结论对应实际测量对象。",
+      "items": [
+        "连接拓扑及充放电状态",
+        "型号、批次、服役时间与温度",
+        "荷电状态、支路电流与电池读数",
+        "线缆路径、接点及测试方法"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "什么是 AGM 隔板？",
+          "/zh/blog/what-is-agm-separator/"
+        ],
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "AGM 保液与电池安装姿态",
+          "/zh/blog/agm-electrolyte-retention-battery-installation-orientation/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "排查并联均流时，分别查看外部连接路径、整电池状态和隔板材料数据，让结论对应实际测量对象。",
+      "checklist": [
+        "连接拓扑及充放电状态",
+        "型号、批次、服役时间与温度",
+        "荷电状态、支路电流与电池读数",
+        "线缆路径、接点及测试方法"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "连接拓扑及充放电状态; 型号、批次、服役时间与温度; 荷电状态、支路电流与电池读数; 线缆路径、接点及测试方法"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "来源核验于 2026 年 11 月 6 日。Victron 日期文章与未确认发布日期的 Wiring Unlimited 第 3.3 节分别标注；系统布线资料不属于维京测试或隔板规格。材料数据不能独立证明整电池内阻或并联均流。AI 示意图不是试验证据。",
+      "items": [
+        [
+          "Victron Energy — Batteries in series or parallel (2026-10-23)",
+          "https://www.victronenergy.com/knowledge-articles/2026/10/23/batteries-in-series-or-parallel"
+        ],
+        [
+          "Victron Energy — Wiring Unlimited §3.3",
+          "https://www.victronenergy.com/media/pg/The_Wiring_Unlimited_book/en/battery-bank-wiring.html"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const vrlaAgmGelStructuresCopy = {
   "en": {
     "nav": {
@@ -9885,6 +10229,8 @@ export function BlogArticlePage({
       ? telecomLeadAcidProcurementCopy[primaryLang]
       : page === "leadPremiumDemandRestocking"
       ? leadPremiumDemandRestockingCopy[primaryLang]
+      : page === "parallelBatteryCurrentSharing"
+      ? parallelBatteryCurrentSharingCopy[primaryLang]
       : page === "vrlaAgmGelStructures"
       ? vrlaAgmGelStructuresCopy[primaryLang]
       : page === "agmBatteryOrientation"
@@ -9985,7 +10331,9 @@ export function BlogArticlePage({
       : null;
   const t = articleContent(page, lang, defaultArticle) as ArticlePageData;
   const sectionIds =
-    page === "vrlaAgmGelStructures"
+    page === "parallelBatteryCurrentSharing"
+      ? ["current-sharing", "external-path", "battery-resistance", "separator-resistance", "measurement-record", "faq-voltage", "faq-resistance", "faq-heat"]
+      : page === "vrlaAgmGelStructures"
       ? ["vrla-category", "agm-retention", "gel-structure", "material-compatibility", "performance-boundary", "structure-checklist", "viking-scope", "faq-vrla", "faq-gel", "faq-interchange"]
       : page === "agmBatteryOrientation"
       ? ["retention-not-approval", "orientation-differences", "installation-review", "replacement-model", "battery-validation", "faq-inversion", "faq-side-mount", "faq-leak-free"]

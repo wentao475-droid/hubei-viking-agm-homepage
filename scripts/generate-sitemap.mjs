@@ -4,6 +4,7 @@ import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../c
 
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
+  { en: "/blog/parallel-battery-current-sharing-measurement-layers/", zh: "/zh/blog/parallel-battery-current-sharing-measurement-layers/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-06", secondaryLastmod: "2026-11-06", arabicLastmod: "2026-11-06" },
   { en: "/blog/vrla-agm-gel-battery-structures-separator-matching/", zh: "/zh/blog/vrla-agm-gel-battery-structures-separator-matching/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-01", secondaryLastmod: "2026-11-01", arabicLastmod: "2026-11-01" },
   { en: "/blog/agm-electrolyte-retention-battery-installation-orientation/", zh: "/zh/blog/agm-electrolyte-retention-battery-installation-orientation/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-31", secondaryLastmod: "2026-10-31", arabicLastmod: "2026-10-31" },
   { en: "/blog/unused-battery-self-discharge-storage-installation/", zh: "/zh/blog/unused-battery-self-discharge-storage-installation/", priority: "0.75", changefreq: "monthly", lastmod: "2026-10-31", secondaryLastmod: "2026-10-31", arabicLastmod: "2026-10-31" },
