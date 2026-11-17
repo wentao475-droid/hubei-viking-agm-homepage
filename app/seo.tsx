@@ -2166,6 +2166,104 @@ const agmVsGemGlassFiberSeo = {
   }
 } as const;
 
+const ebikeCccEvidenceScopeSeo = {
+  "en": {
+    "path": "/blog/ebike-ccc-certification-battery-evidence-scope/",
+    "alternatePath": "/zh/blog/ebike-ccc-certification-battery-evidence-scope/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "A Qualified Battery Does Not Define the E-Bike’s CCC Certification Scope | Viking AGM",
+    "description": "Match material, finished battery and complete vehicle records to their scope under China’s e-bike CCC transition.",
+    "keywords": [
+      "CCC",
+      "CNCA-C11-16:2026",
+      "AGM"
+    ],
+    "pageName": "A Qualified Battery Does Not Define the E-Bike’s CCC Certification Scope",
+    "articleDescription": "Match material, finished battery and complete vehicle records to their scope under China’s e-bike CCC transition.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "A Qualified Battery Does Not Define the E-Bike’s CCC Certification Scope"
+    ],
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17"
+  },
+  "zh": {
+    "path": "/zh/blog/ebike-ccc-certification-battery-evidence-scope/",
+    "alternatePath": "/blog/ebike-ccc-certification-battery-evidence-scope/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "电池检测合格后，如何核对电动自行车 CCC 认证范围？ | Viking AGM",
+    "description": "按材料、成品电池和整车核对文件，了解 CNCA-C11-16:2026 的转换安排。",
+    "keywords": [
+      "CCC",
+      "CNCA-C11-16:2026",
+      "AGM"
+    ],
+    "pageName": "电池检测合格后，如何核对电动自行车 CCC 认证范围？",
+    "articleDescription": "按材料、成品电池和整车核对文件，了解 CNCA-C11-16:2026 的转换安排。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "电池检测合格后，如何核对电动自行车 CCC 认证范围？"
+    ],
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17"
+  }
+} as const;
+
+const leadAcidChargingDischargeSeo = {
+  "en": {
+    "path": "/blog/lead-acid-battery-full-discharge-before-charging/",
+    "alternatePath": "/zh/blog/lead-acid-battery-full-discharge-before-charging/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Lead-Acid Batteries Do Not Need to Be Drained Before Charging | Viking AGM",
+    "description": "Use model-specific charging instructions and review load, depth of discharge and recharge intervals when evaluating cycling duty.",
+    "keywords": [
+      "lead-acid battery charging",
+      "AGM",
+      "deep-cycle duty"
+    ],
+    "pageName": "Lead-Acid Batteries Do Not Need to Be Drained Before Charging",
+    "articleDescription": "Use model-specific charging instructions and review load, depth of discharge and recharge intervals when evaluating cycling duty.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Lead-Acid Batteries Do Not Need to Be Drained Before Charging"
+    ],
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17"
+  },
+  "zh": {
+    "path": "/zh/blog/lead-acid-battery-full-discharge-before-charging/",
+    "alternatePath": "/blog/lead-acid-battery-full-discharge-before-charging/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "铅酸电池充电前需要先放空吗？ | Viking AGM",
+    "description": "按型号核对充电程序，并用负载、放电深度和回充间隔评估循环工况。",
+    "keywords": [
+      "lead-acid battery charging",
+      "AGM",
+      "deep-cycle duty"
+    ],
+    "pageName": "铅酸电池充电前需要先放空吗？",
+    "articleDescription": "按型号核对充电程序，并用负载、放电深度和回充间隔评估循环工况。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "铅酸电池充电前需要先放空吗？"
+    ],
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17"
+  }
+} as const;
+
 const parallelBatteryCurrentSharingSeo = {
   "en": {
     "path": "/blog/parallel-battery-current-sharing-measurement-layers/",
@@ -5699,6 +5797,104 @@ export function En18060BatteryStandardStructuredData({ lang }: { lang: Lang }) {
   ]}} />;
 }
 
+const ebikeCccFaq = {
+  "en": [
+    [
+      "Does a passing battery test establish vehicle CCC certification?",
+      "The complete vehicle requires a certification assessment for its own model and configuration. A battery report supports the tests listed in that report."
+    ],
+    [
+      "Can an existing certificate still be used after November 1?",
+      "The announcement permits existing valid certificates to remain in use and transition through product changes or renewal. Confirm the status of a specific certificate with its issuer."
+    ],
+    [
+      "What are separator batch records used for?",
+      "They support incoming inspection, traceability and change review. The applicable rule and certification body determine which documents must be submitted."
+    ]
+  ],
+  "zh": [
+    [
+      "电池通过测试后，整车能直接取得 CCC 吗？",
+      "整车需要按自身型号、配置及范围接受认证评定。电池报告仅支持其中所列测试项目。"
+    ],
+    [
+      "11 月 1 日后，原有有效证书还能用吗？",
+      "公告允许有效旧证继续使用，可在产品变更、到期换证等环节自然转换。具体证书状态由发证机构核实。"
+    ],
+    [
+      "隔板批次记录有什么用？",
+      "可用于来料验收、批次追溯和变更核对。认证所需提交文件由适用规则和认证机构要求确定。"
+    ]
+  ]
+} as const;
+
+export function buildEbikeCccEvidenceScopeMetadata(lang: Lang): Metadata {
+  const current = seoContent("ebikeCccEvidenceScope", lang, ebikeCccEvidenceScopeSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("ebikeCccEvidenceScope"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/ebike-ccc-evidence-scope-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function EbikeCccEvidenceScopeStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("ebikeCccEvidenceScope", lang, ebikeCccEvidenceScopeSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/ebike-ccc-evidence-scope-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Electric bicycle CCC certification scope", "Battery and material traceability"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: ebikeCccFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+const leadAcidChargingFaq = {
+  "en": [
+    [
+      "Do Trojan AGM and AES AGM batteries need a full discharge before charging?",
+      "Trojan says a full discharge is unnecessary for memory-effect prevention. Follow the charging instructions for the specific model."
+    ],
+    [
+      "When should a deep-cycle battery be recharged?",
+      "Use the model instructions, depth of discharge, load, temperature and available charging time to decide."
+    ],
+    [
+      "What information helps match an AGM separator?",
+      "Share the plate-group structure, thickness, compression, cycle duty and test conditions for specification review and complete-battery validation."
+    ]
+  ],
+  "zh": [
+    [
+      "需要放空 Trojan AGM 或 AES AGM 才能充电吗？",
+      "可以依据对应型号的说明安排回充。Trojan 说明无需为消除记忆效应而完全放电。"
+    ],
+    [
+      "深循环电池应该在什么时候回充？",
+      "结合型号说明、放电深度、负载、温度和可用充电时间确定。"
+    ],
+    [
+      "评估隔板循环适配时应提供什么？",
+      "提供极群结构、目标厚度及压缩状态、负载、循环和测试条件，供规格匹配和整电池验证使用。"
+    ]
+  ]
+} as const;
+
+export function buildLeadAcidChargingDischargeMetadata(lang: Lang): Metadata {
+  const current = seoContent("leadAcidChargingDischarge", lang, leadAcidChargingDischargeSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("leadAcidChargingDischarge"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/lead-acid-charging-discharge-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function LeadAcidChargingDischargeStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("leadAcidChargingDischarge", lang, leadAcidChargingDischargeSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/lead-acid-charging-discharge-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Lead-acid battery charging", "Deep-cycle duty and AGM separator matching"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: leadAcidChargingFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
 const parallelBatteryFaq = {
   "en": [
     [
@@ -6224,11 +6420,11 @@ export function SecondaryArticleStructuredData({
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: current.language
       },
-      ...(kind === "parallelBatteryCurrentSharing" || kind === "vrlaAgmGelStructures" || kind === "agmBatteryOrientation" || kind === "batteryStorageSelfDischarge" || kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
+      ...(kind === "leadAcidChargingDischarge" || kind === "ebikeCccEvidenceScope" || kind === "parallelBatteryCurrentSharing" || kind === "vrlaAgmGelStructures" || kind === "agmBatteryOrientation" || kind === "batteryStorageSelfDischarge" || kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
         ? [{
             "@type": "FAQPage",
             "@id": `${url}#faq`,
-            mainEntity: (kind === "parallelBatteryCurrentSharing" ? [5, 6, 7] : kind === "vrlaAgmGelStructures" ? [7, 8, 9] : kind === "agmBatteryOrientation" ? [5, 6, 7] : kind === "batteryStorageSelfDischarge" ? [6, 7, 8] : kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
+            mainEntity: (kind === "leadAcidChargingDischarge" || kind === "ebikeCccEvidenceScope" || kind === "parallelBatteryCurrentSharing" ? [5, 6, 7] : kind === "vrlaAgmGelStructures" ? [7, 8, 9] : kind === "agmBatteryOrientation" ? [5, 6, 7] : kind === "batteryStorageSelfDischarge" ? [6, 7, 8] : kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
               "@type": "Question",
               name: secondaryResourceData[lang].topics[kind].sections[sectionIndex][1],
               acceptedAnswer: {

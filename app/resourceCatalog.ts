@@ -114,6 +114,40 @@ export const resourceActions: ResourceAction[] = [
 
 export const resourceArticles: ResourceArticle[] = [
 {
+  "id": "lead-acid-battery-full-discharge-before-charging",
+  "category": "buyerGuides",
+  "publishedAt": "2026-11-17",
+  "title": {
+    "en": "Lead-Acid Batteries Do Not Need to Be Drained Before Charging",
+    "zh": "铅酸电池充电前需要先放空吗？"
+  },
+  "description": {
+    "en": "Use model-specific charging instructions and review load, depth of discharge and recharge intervals when evaluating cycling duty.",
+    "zh": "按型号核对充电程序，并用负载、放电深度和回充间隔评估循环工况。"
+  },
+  "href": {
+    "en": "/blog/lead-acid-battery-full-discharge-before-charging/",
+    "zh": "/zh/blog/lead-acid-battery-full-discharge-before-charging/"
+  }
+},
+{
+  "id": "ebike-ccc-certification-battery-evidence-scope",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-11-17",
+  "title": {
+    "en": "A Qualified Battery Does Not Define the E-Bike’s CCC Certification Scope",
+    "zh": "电池检测合格后，如何核对电动自行车 CCC 认证范围？"
+  },
+  "description": {
+    "en": "Match material, finished battery and complete vehicle records to their scope under China’s e-bike CCC transition.",
+    "zh": "按材料、成品电池和整车核对文件，了解 CNCA-C11-16:2026 的转换安排。"
+  },
+  "href": {
+    "en": "/blog/ebike-ccc-certification-battery-evidence-scope/",
+    "zh": "/zh/blog/ebike-ccc-certification-battery-evidence-scope/"
+  }
+},
+{
   "id": "parallel-battery-current-sharing-measurement-layers",
   "category": "manufacturingQuality",
   "publishedAt": "2026-11-06",
@@ -796,6 +830,8 @@ export const resourceArticles: ResourceArticle[] = [
 ];
 
 const articleKindById: Record<string, string> = {
+  "ebike-ccc-certification-battery-evidence-scope": "ebikeCccEvidenceScope",
+  "lead-acid-battery-full-discharge-before-charging": "leadAcidChargingDischarge",
   "parallel-battery-current-sharing-measurement-layers": "parallelBatteryCurrentSharing",
   "vrla-agm-gel-battery-structures-separator-matching": "vrlaAgmGelStructures",
   "agm-electrolyte-retention-battery-installation-orientation": "agmBatteryOrientation",

@@ -1,3 +1,5 @@
+import { leadAcidChargingTopics } from "./lead-acid-charging-discharge-topics.mjs";
+import { ebikeCccTopics } from "./ebike-ccc-evidence-scope-topics.mjs";
 import { parallelBatteryTopics } from "./parallel-battery-current-sharing-topics.mjs";
 import { vrlaAgmGelTopics } from "./vrla-agm-gel-structures-topics.mjs";
 import { agmBatteryOrientationTopics } from "./agm-battery-orientation-topics.mjs";
@@ -27,6 +29,8 @@ import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
+  "leadAcidChargingDischarge",
+  "ebikeCccEvidenceScope",
   "parallelBatteryCurrentSharing",
   "vrlaAgmGelStructures",
   "agmBatteryOrientation",
@@ -110,9 +114,13 @@ export const articleDefinitions = {
   ,agmBatteryOrientation: ["agm-electrolyte-retention-battery-installation-orientation", "manufacturingQuality", "2026-10-31", "2026-10-31"]
   ,vrlaAgmGelStructures: ["vrla-agm-gel-battery-structures-separator-matching", "buyerGuides", "2026-11-01", "2026-11-01"]
   ,parallelBatteryCurrentSharing: ["parallel-battery-current-sharing-measurement-layers", "manufacturingQuality", "2026-11-06", "2026-11-06"]
+  ,ebikeCccEvidenceScope: ["ebike-ccc-certification-battery-evidence-scope", "manufacturingQuality", "2026-11-17", "2026-11-17"]
+  ,leadAcidChargingDischarge: ["lead-acid-battery-full-discharge-before-charging", "buyerGuides", "2026-11-17", "2026-11-17"]
 };
 
 const images = {
+  leadAcidChargingDischarge: ["/images/articles/lead-acid-charging-discharge-hero-1600.webp", 1600, 1200],
+  ebikeCccEvidenceScope: ["/images/articles/ebike-ccc-evidence-scope-hero-1600.webp", 1600, 1200],
   parallelBatteryCurrentSharing: ["/images/articles/parallel-battery-current-sharing-hero-1600.webp", 1600, 1200],
   vrlaAgmGelStructures: ["/images/articles/vrla-agm-gel-structures-hero-1600.webp", 1600, 1200],
   agmBatteryOrientation: ["/images/articles/agm-battery-orientation-hero-1600.webp", 1600, 1200],
@@ -1270,6 +1278,14 @@ for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].topics.parallelBatteryCurrentSharing = parallelBatteryTopics[locale];
 }
 
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.ebikeCccEvidenceScope = ebikeCccTopics[locale];
+}
+
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.leadAcidChargingDischarge = leadAcidChargingTopics[locale];
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1313,6 +1329,8 @@ const arabicReferences = {
 
 
 const generatedArticleVisuals = {
+  "leadAcidChargingDischarge": "/images/articles/lead-acid-charging-discharge-hero-1600.webp",
+  "ebikeCccEvidenceScope": "/images/articles/ebike-ccc-evidence-scope-hero-1600.webp",
   "parallelBatteryCurrentSharing": "/images/articles/parallel-battery-current-sharing-hero-1600.webp",
   "vrlaAgmGelStructures": "/images/articles/vrla-agm-gel-structures-hero-1600.webp",
   "agmBatteryOrientation": "/images/articles/agm-battery-orientation-hero-1600.webp",
@@ -1363,7 +1381,11 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "parallelBatteryCurrentSharing"
+  const relatedKinds = kind === "leadAcidChargingDischarge"
+    ? ["batteryStorageSelfDischarge", "leadAcidFluidTopUp", "agmSeparatorPressureRetention"]
+    : kind === "ebikeCccEvidenceScope"
+    ? ["agmSeparatorBatchProcessControl", "agmSeparatorSupplyChain", "en18060BatteryStandard"]
+    : kind === "parallelBatteryCurrentSharing"
     ? ["keyTechnicalParameters", "agmSeparatorBatchProcessControl", "batteryCapacityHourRates", "whatIsAgmSeparator"]
     : kind === "vrlaAgmGelStructures"
     ? ["whatIsAgmSeparator", "keyTechnicalParameters", "agmBatteryOrientation", "agmGlassFiberVsPvcSeparator"]
@@ -1504,6 +1526,28 @@ function buildArticle(locale, kind, localeData) {
   [
     "Yangtze Nonferrous — 2026-09-29",
     "https://pb.ccmn.cn/news/ZX018/202609/f39296a023984b088d8302eee0da446b.html"
+  ]
+] };
+  }
+
+  if (kind === "ebikeCccEvidenceScope") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "CNCA Announcement No. 8 of 2026",
+    "https://www.cnca.gov.cn/hlwfw/ywzl/qzxcprz/tzgg/art/2026/art_8c3c6f4802fe4be8a47d08629f9acd7a.html"
+  ],
+  [
+    "Hong Kong Trade and Industry Department — Announcement excerpt (PDF)",
+    "https://www.tid.gov.hk/en/tradecircular/files/2026/ci4972026a.pdf"
+  ]
+] };
+  }
+
+  if (kind === "leadAcidChargingDischarge") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "Trojan Battery — AES AGM and Standard AGM Battery Maintenance",
+    "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
   ]
 ] };
   }

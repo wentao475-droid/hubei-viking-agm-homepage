@@ -15,6 +15,8 @@ import {
 
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
+  | "ebikeCccEvidenceScope"
+  | "leadAcidChargingDischarge"
   | "parallelBatteryCurrentSharing"
   | "vrlaAgmGelStructures"
   | "agmBatteryOrientation"
@@ -6279,6 +6281,652 @@ const leadPremiumDemandRestockingCopy = {
   }
 } as const;
 
+const ebikeCccEvidenceScopeCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/ebike-ccc-certification-battery-evidence-scope/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Three dates, three different meanings",
+      "title": "A Qualified Battery Does Not Define the E-Bike’s CCC Certification Scope",
+      "subtitle": "Match material, finished battery and complete vehicle records to their scope under China’s e-bike CCC transition.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/ebike-ccc-evidence-scope-hero-1600.webp",
+        "alt": "Illustration of an e-bike, a battery and separator documentation",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Match material, finished battery and complete vehicle records to their scope under China’s e-bike CCC transition."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Three dates, three different meanings",
+        "title": "Three dates, three different meanings",
+        "text": "The administration’s webpage shows a publication date of May 31, 2026, while the announcement itself is dated May 29, 2026. Both dates should be retained rather than treating the webpage publication date as the date of the announcement.\n\nAccording to the implementation arrangement, certification bodies may conduct CCC certification under either the previous or new rule, depending on the applicant’s preference, from the announcement’s publication through October 31, 2026. From November 1, 2026, new certification activities must follow the new rule.\n\nNovember 1 determines which rule applies to new certification activities. It does not mean that every previously issued certificate becomes invalid on that date.\n\nThe announcement states that existing valid compulsory product certification certificates may continue to be used. Conversion can be completed through natural transition arrangements such as product changes or certificate renewal. The date should therefore not be summarized as “all old certificates become invalid.” Nor can it determine the status of a particular certificate by itself.\n\nThe validity of a certificate and the procedure triggered by a specific product change should be confirmed with the relevant certification body based on the certificate and product concerned."
+      },
+      {
+        "eyebrow": "Start by asking what the document proves",
+        "title": "Start by asking what the document proves",
+        "text": "In a supply chain, “qualified” may refer to a material inspection result, documentation for a finished battery, or CCC certification for a complete e-bike. These records operate at different levels and answer different questions.\n\nMaterial level: separator specifications and batch records\n\nFor AGM separators, specifications, batch identification, inspection records, and change information can support incoming-material control, traceability, and technical communication. They describe the relevant material and supply batch. They are not certification conclusions for a finished battery or an e-bike.\n\nAn internal traceability system may link the material name, specification version, and batch number to inspection and receiving records. This makes it possible to locate the relevant files when a material batch is reviewed.\n\nThis is a document-management practice. It does not mean that every material record is a mandatory submission for vehicle certification.\n\nFinished-battery level: documents for a defined battery product\n\nA battery report, model record, or applicable certification document covers the battery product, model, and test scope identified in that document. It may support an assessment of the battery used in an e-bike, but it cannot independently prove that the complete vehicle meets its certification requirements.\n\nTest reports and certification certificates also serve different purposes. A report generally records the sample, test items, and methods used. A certificate applies to the product and certification scope stated in the certification document.\n\nPassing one test should not be described as the complete vehicle having obtained certification. Documentation for one model should not automatically be extended to another model merely because its appearance or configuration is similar.\n\nVehicle level: the certified vehicle and its stated scope\n\nA vehicle CCC certificate applies to the certified object and the scope stated on the certificate. The vehicle model, actual configuration, and relevant certificate records therefore need to be matched during a review.\n\nBattery documentation may satisfy its own applicable requirements, but it cannot replace a vehicle-level certification determination. In the other direction, a vehicle certificate does not replace every material record in the supply chain.\n\nA useful first question is: which product, model, batch, or version does this document cover? The next question is what conclusion the document can support. A complete file set may still fail to answer the current question if its object or scope does not align."
+      },
+      {
+        "eyebrow": "Build traceability around product levels",
+        "title": "Build traceability around product levels",
+        "text": "Battery manufacturers, procurement teams, quality personnel, and vehicle supply-chain teams can make reviews more reliable by filing records according to the object they cover.\n\nMaterial records may include the supplier, material name and specification, batch, inspection result, and specification changes. Finished-battery records may link the battery model to test or product documents, production batches, and the version supplied for a particular vehicle. Vehicle records should separately identify the vehicle model, certification certificate, and information relating to the actual product configuration.\n\nThis is a management recommendation for supply-chain coordination and quality traceability. It is not a new document-submission obligation created by the administration’s announcement.\n\nThe responsible product party should determine which records must be submitted, which format applies, and whether a change assessment is required under the applicable rule and the certification body’s requirements.\n\nAn internal index can connect each document with its object, model or specification, batch or version, date, and storage location. When a report or supplier change notice arrives, the team can then see which material batch or battery model it covers and whether it relates to the current vehicle configuration.\n\nThe index is a practical review method, not a standard template prescribed by the announcement."
+      },
+      {
+        "eyebrow": "Record changes without making certification assumptions",
+        "title": "Record changes without making certification assumptions",
+        "text": "When a material specification, supply source, or product configuration changes, recording the changed object, affected models, batch range, effective date, and available verification evidence helps upstream and downstream teams trace the impact.\n\nThese records describe what changed. They do not replace the certification body’s assessment of whether a certificate is affected or an additional procedure is required.\n\nIf certificate information does not align with the product model, configuration, or current document version, a material inspection report should not be used to infer that the vehicle certificate remains valid or has become invalid.\n\nThe certificate holder or other responsible product party should organize the relevant records and confirm the applicable requirements with the issuing body. This article explains how supply-chain evidence can be separated by level; it is not a compliance conclusion or legal advice for a specific product."
+      },
+      {
+        "eyebrow": "The boundary of Viking’s material documentation",
+        "title": "The boundary of Viking’s material documentation",
+        "text": "Viking Technology supplies AGM separator material. Specifications, batch traceability, inspection records, and change-related documentation can support material management and information exchange for battery manufacturers.\n\nThese records describe the material level. They are not certification for a finished battery, they are not an e-bike CCC certificate, and they cannot replace the certification body’s determination of the certified product and certificate scope.\n\nFor procurement and quality teams, the practical sequence is straightforward: identify the object covered by each document, then determine which conclusion that document can support. Materials, batteries, and complete vehicles each require evidence matched to their own object. Cross-level use should be confirmed by the responsible product party and the relevant certification body.\n\nContact Viking Technology to discuss AGM separator specifications and traceability documents."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Does a passing battery test establish vehicle CCC certification?",
+        "text": "The complete vehicle requires a certification assessment for its own model and configuration. A battery report supports the tests listed in that report."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "Can an existing certificate still be used after November 1?",
+        "text": "The announcement permits existing valid certificates to remain in use and transition through product changes or renewal. Confirm the status of a specific certificate with its issuer."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "What are separator batch records used for?",
+        "text": "They support incoming inspection, traceability and change review. The applicable rule and certification body determine which documents must be submitted."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Records to cross-check",
+      "text": "Match material, finished battery and complete vehicle records to their scope under China’s e-bike CCC transition.",
+      "items": [
+        "Material specification revision and lot",
+        "Battery model and report scope",
+        "Vehicle configuration and certificate scope",
+        "Change date and verification evidence"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "AGM Separator Batch Consistency",
+          "/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Viking Technology supplies AGM separator material. Specifications, batch traceability, inspection records, and change-related documentation can support material management and information exchange for battery manufacturers.\n\nThese records describe the material level. They are not certification for a finished battery, they are not an e-bike CCC certificate, and they cannot replace the certification body’s determination of the certified product and certificate scope.\n\nFor procurement and quality teams, the practical sequence is straightforward: identify the object covered by each document, then determine which conclusion that document can support. Materials, batteries, and complete vehicles each require evidence matched to their own object. Cross-level use should be confirmed by the responsible product party and the relevant certification body.\n\nContact Viking Technology to discuss AGM separator specifications and traceability documents.",
+      "checklist": [
+        "Material specification revision and lot",
+        "Battery model and report scope",
+        "Vehicle configuration and certificate scope",
+        "Change date and verification evidence"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Material specification revision and lot / Battery model and report scope / Vehicle configuration and certificate scope / Change date and verification evidence"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "The announcement and its PDF excerpt were checked on 17 November 2026. Check certificate-specific procedures with the issuing body.",
+      "items": [
+        [
+          "CNCA Announcement No. 8 of 2026",
+          "https://www.cnca.gov.cn/hlwfw/ywzl/qzxcprz/tzgg/art/2026/art_8c3c6f4802fe4be8a47d08629f9acd7a.html"
+        ],
+        [
+          "Hong Kong Trade and Industry Department — Announcement excerpt (PDF)",
+          "https://www.tid.gov.hk/en/tradecircular/files/2026/ci4972026a.pdf"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/ebike-ccc-certification-battery-evidence-scope/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "规则何时适用",
+      "title": "电池检测合格后，如何核对电动自行车 CCC 认证范围？",
+      "subtitle": "按材料、成品电池和整车核对文件，了解 CNCA-C11-16:2026 的转换安排。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/ebike-ccc-evidence-scope-hero-1600.webp",
+        "alt": "电动自行车、电池和隔板文件示意图",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "按材料、成品电池和整车核对文件，了解 CNCA-C11-16:2026 的转换安排。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "规则何时适用",
+        "title": "规则何时适用",
+        "text": "国家认监委 2026 年第 8 号公告落款为 5 月 29 日，网页于 5 月 31 日发布。至 10 月 31 日，认证机构可按委托人意愿选用新旧规则。11 月 1 日起按 CNCA-C11-16:2026 开展认证活动，有效旧证可继续使用，并通过产品变更、到期换证等方式自然转换。"
+      },
+      {
+        "eyebrow": "核对文件覆盖的对象",
+        "title": "核对文件覆盖的对象",
+        "text": "AGM 隔板规格、检验和批号用于材料验收及追溯。电池报告覆盖所列样品、项目和方法，适用的电池证书覆盖所载型号与范围。整车 CCC 应核对证载车型、实际配置及认证范围。相似的外观或配置不足以把一份文件扩展到另一型号。"
+      },
+      {
+        "eyebrow": "按产品层级建立追溯",
+        "title": "按产品层级建立追溯",
+        "text": "材料记录关联供应商、规格版本、批号及检验；电池记录关联型号、生产批次、报告及供货版本；整车记录关联车型、证书和实际配置。可在内部索引记录对象、型号或规格、批次或版本、日期及存放位置。具体提交资料和格式由责任方按规则及认证机构要求确定。"
+      },
+      {
+        "eyebrow": "记录变更并核实证书影响",
+        "title": "记录变更并核实证书影响",
+        "text": "记录变更对象、受影响型号、批次范围、生效日期和验证证据。型号、配置或版本有出入时，由证书持有人或责任方联系发证机构确认所需程序和证书状态。"
+      },
+      {
+        "eyebrow": "维京提供哪些材料资料",
+        "title": "维京提供哪些材料资料",
+        "text": "维京可就 AGM 隔板规格、批次追溯、检验记录和变更信息与电池制造商沟通。申请样品与规格匹配时，可提供电池应用、目标尺寸、规格版本和所需追溯资料。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "电池通过测试后，整车能直接取得 CCC 吗？",
+        "text": "整车需要按自身型号、配置及范围接受认证评定。电池报告仅支持其中所列测试项目。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "11 月 1 日后，原有有效证书还能用吗？",
+        "text": "公告允许有效旧证继续使用，可在产品变更、到期换证等环节自然转换。具体证书状态由发证机构核实。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "隔板批次记录有什么用？",
+        "text": "可用于来料验收、批次追溯和变更核对。认证所需提交文件由适用规则和认证机构要求确定。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "文件核对清单",
+      "text": "按材料、成品电池和整车核对文件，了解 CNCA-C11-16:2026 的转换安排。",
+      "items": [
+        "材料规格版本与批次",
+        "电池型号与报告范围",
+        "整车配置与证书范围",
+        "变更日期与验证证据"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "AGM 隔板批次一致性",
+          "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "维京可就 AGM 隔板规格、批次追溯、检验记录和变更信息与电池制造商沟通。申请样品与规格匹配时，可提供电池应用、目标尺寸、规格版本和所需追溯资料。",
+      "checklist": [
+        "材料规格版本与批次",
+        "电池型号与报告范围",
+        "整车配置与证书范围",
+        "变更日期与验证证据"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "材料规格版本与批次 / 电池型号与报告范围 / 整车配置与证书范围 / 变更日期与验证证据"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "公告及 PDF 摘录于 2026 年 11 月 17 日核对。具体证书及变更程序请向发证机构确认。",
+      "items": [
+        [
+          "CNCA Announcement No. 8 of 2026",
+          "https://www.cnca.gov.cn/hlwfw/ywzl/qzxcprz/tzgg/art/2026/art_8c3c6f4802fe4be8a47d08629f9acd7a.html"
+        ],
+        [
+          "Hong Kong Trade and Industry Department — Announcement excerpt (PDF)",
+          "https://www.tid.gov.hk/en/tradecircular/files/2026/ci4972026a.pdf"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const leadAcidChargingDischargeCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/lead-acid-battery-full-discharge-before-charging/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Recharge with capacity remaining",
+      "title": "Lead-Acid Batteries Do Not Need to Be Drained Before Charging",
+      "subtitle": "Use model-specific charging instructions and review load, depth of discharge and recharge intervals when evaluating cycling duty.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/lead-acid-charging-discharge-hero-1600.webp",
+        "alt": "Illustration of an AGM battery, charger, separator sample and logbook",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Use model-specific charging instructions and review load, depth of discharge and recharge intervals when evaluating cycling duty."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Recharge with capacity remaining",
+        "title": "Recharge with capacity remaining",
+        "text": "Running a battery close to empty before reconnecting the charger is sometimes described as a way to prevent a memory effect. For the AGM and AES AGM products covered by Trojan’s maintenance guidance, that step is unnecessary.\n\nTrojan states that lead-acid batteries do not have a memory effect requiring them to be fully discharged before charging. Users therefore should not intentionally drain these batteries simply to prepare them for a recharge.\n\nThe scope matters. This is guidance for Trojan’s AGM and AES AGM products. It is not a universal rule for every battery chemistry, brand or model, and it does not replace the applicable product manual."
+      },
+      {
+        "eyebrow": "No Full Discharge Is Required, but Charging Conditions Still Matter",
+        "title": "No Full Discharge Is Required, but Charging Conditions Still Matter",
+        "text": "Removing the unnecessary full-discharge step does not make the charging method interchangeable.\n\nOn the same maintenance page, Trojan notes that both undercharging and overcharging can affect battery life and calls for a charging program suitable for the relevant AGM product. Voltage, current, charging stages and temperature compensation should be checked against the instructions for the battery and charger. Requirements can differ between products.\n\nA battery used in standby power, frequent cycling, vehicle service or mobile equipment may operate under a different load and charging rhythm. A simple rule such as “fully charge before use” or “use everything before charging” cannot cover every application.\n\nIf charging occurs frequently, first confirm that the charger type and program are suitable for the battery model. Follow the system instructions when the equipment manufacturer supplies the complete charging system. Charger replacement or setting changes should be reviewed by the responsible product party or qualified personnel.\n\nThe category “lead-acid battery” alone is not enough to establish one charging parameter set for every product."
+      },
+      {
+        "eyebrow": "Deep-Cycle Capability Does Not Mean Draining the Battery Every Time",
+        "title": "Deep-Cycle Capability Does Not Mean Draining the Battery Every Time",
+        "text": "A deep-cycle battery is designed for an appropriate cycling duty. Deep-cycle batteries are designed to supply loads over longer periods and to undergo repeated discharge and recharge cycles. That capability is not a recommendation to empty the battery during every cycle.\n\nStarting, deep-cycle and dual-purpose batteries also have different design objectives. Starting batteries support short bursts of high current. Deep-cycle batteries supply equipment for longer periods. Dual-purpose designs balance the two duties. The same operating habit may therefore be unsuitable across these categories.\n\nActual cycling duty combines discharge depth, cycle frequency, load, charging interval, ambient temperature and recovery charging. The label “deep-cycle” alone cannot determine the correct charging point or a universal discharge percentage for every model.\n\nBefore selecting a battery, review the model instructions and equipment requirements alongside the expected load, runtime, recharge interval and standby pattern. Distributors should also compare these conditions with the intended product duty and manufacturer documentation instead of relying on the deep-cycle label alone.\n\nIf a battery already shows reduced capacity, insufficient runtime or abnormal charging, changing when it is recharged does not prove that the ageing problem will be reversed. Diagnosis requires the model, operating history and an appropriate test method. No remote repair conclusion can be made from the charging habit alone."
+      },
+      {
+        "eyebrow": "Operating Records Provide Better Evidence Than “Run It Empty”",
+        "title": "Operating Records Provide Better Evidence Than “Run It Empty”",
+        "text": "When engineers and battery manufacturers discuss cycle life, the product model, load profile, charge and discharge frequency, discharge depth, charger and settings, temperature, and test conditions should be recorded together. Without that context, statements such as “frequently drained” or “always fully charged” reveal little about whether a result came from battery design, system settings or operating conditions.\n\nComparative validation also requires controlled conditions. If two groups differ in model, load, temperature or charging regime, their performance difference cannot automatically be attributed to one material or one operating habit.\n\nA useful operating record identifies:\n\n- Battery model and application\n- Approximate load and runtime per cycle\n- Cycle frequency\n- Charging equipment and program\n- Ambient temperature and recharge interval\n- Any defined depth-of-discharge or termination condition used in testing\n\nWith these conditions documented, charging decisions can be discussed in the context of a specific product and duty rather than reduced to “run it empty before charging.”"
+      },
+      {
+        "eyebrow": "The AGM Separator Is One Part of the Battery System",
+        "title": "The AGM Separator Is One Part of the Battery System",
+        "text": "In an AGM battery, the glass-fiber separator contributes to positive and negative plate separation, electrolyte retention and ion transport. Its specification must be considered together with the plate-group structure, compression state and target cycling duty.\n\nCycle performance also depends on the plates, electrolyte, charging regime, temperature, assembly and depth of use. A separator alone cannot determine the cycle life of a finished battery, and replacing the separator cannot restore an aged battery.\n\nViking Technology focuses on AGM separator materials. We can discuss separator specifications against the target cycling duty, plate-group structure and test conditions. Final cycle performance must still be validated by the battery manufacturer at complete-battery level.\n\nSubmit your cycle operating conditions for an AGM separator specification recommendation."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Do Trojan AGM and AES AGM batteries need a full discharge before charging?",
+        "text": "Trojan says a full discharge is unnecessary for memory-effect prevention. Follow the charging instructions for the specific model."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "When should a deep-cycle battery be recharged?",
+        "text": "Use the model instructions, depth of discharge, load, temperature and available charging time to decide."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "What information helps match an AGM separator?",
+        "text": "Share the plate-group structure, thickness, compression, cycle duty and test conditions for specification review and complete-battery validation."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Operating conditions to record",
+      "text": "Use model-specific charging instructions and review load, depth of discharge and recharge intervals when evaluating cycling duty.",
+      "items": [
+        "Battery model and application",
+        "Load, discharge depth and runtime",
+        "Charger program, temperature and recharge interval",
+        "Plate group, thickness and compression"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "AGM Separator Pressure Retention After Filling and Cycling",
+          "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "In an AGM battery, the glass-fiber separator contributes to positive and negative plate separation, electrolyte retention and ion transport. Its specification must be considered together with the plate-group structure, compression state and target cycling duty.\n\nCycle performance also depends on the plates, electrolyte, charging regime, temperature, assembly and depth of use. A separator alone cannot determine the cycle life of a finished battery, and replacing the separator cannot restore an aged battery.\n\nViking Technology focuses on AGM separator materials. We can discuss separator specifications against the target cycling duty, plate-group structure and test conditions. Final cycle performance must still be validated by the battery manufacturer at complete-battery level.\n\nSubmit your cycle operating conditions for an AGM separator specification recommendation.",
+      "checklist": [
+        "Battery model and application",
+        "Load, discharge depth and runtime",
+        "Charger program, temperature and recharge interval",
+        "Plate group, thickness and compression"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Battery model and application / Load, discharge depth and runtime / Charger program, temperature and recharge interval / Plate group, thickness and compression"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "The charging guidance concerns Trojan AGM and AES AGM products. Consult the documentation for the exact battery and charger.",
+      "items": [
+        [
+          "Trojan Battery — AES AGM and Standard AGM Battery Maintenance",
+          "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/lead-acid-battery-full-discharge-before-charging/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "充电前可以保留剩余电量",
+      "title": "铅酸电池充电前需要先放空吗？",
+      "subtitle": "按型号核对充电程序，并用负载、放电深度和回充间隔评估循环工况。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/lead-acid-charging-discharge-hero-1600.webp",
+        "alt": "AGM 电池、充电器、隔板样品和工况记录示意图",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "按型号核对充电程序，并用负载、放电深度和回充间隔评估循环工况。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "充电前可以保留剩余电量",
+        "title": "充电前可以保留剩余电量",
+        "text": "Trojan 对 AGM 和 AES AGM 的维护指南说明，这些电池无须为消除记忆效应而先完全放电。可按具体电池及设备说明安排回充。"
+      },
+      {
+        "eyebrow": "核对电池和充电器说明",
+        "title": "核对电池和充电器说明",
+        "text": "欠充或过充都可能影响寿命。核对适用型号、充电电压、电流、阶段及温度补偿。整套充电系统由设备厂提供时，应遵循系统说明，更换充电器或调整设定由责任方或专业人员确认。"
+      },
+      {
+        "eyebrow": "用实际负载理解深循环",
+        "title": "用实际负载理解深循环",
+        "text": "启动型适合短时大电流，深循环型面向较长时间供电，双用途型兼顾两类工况。选择时结合放电深度、频率、负载、续航、回充间隔和温度。续航下降时，诊断需要型号、使用历史和合适的测试。"
+      },
+      {
+        "eyebrow": "记录工况再做对比",
+        "title": "记录工况再做对比",
+        "text": "记录型号、用途、每次负载及运行时间、循环频率、充电器与程序、温度、回充间隔以及测试终止条件。比较材料或操作习惯时，保持负载、温度、型号和充电制度等条件一致。"
+      },
+      {
+        "eyebrow": "按目标循环工况选配 AGM 隔板",
+        "title": "按目标循环工况选配 AGM 隔板",
+        "text": "玻纤隔板隔离正负极板、保持电解液并支持离子传输。厚度和压缩状态应配合极群结构。向维京提供应用、循环工况、极群结构及测试条件，以讨论样品和规格。成品循环性能由电池制造商结合极板、电解液、装配及充电制度验证。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "需要放空 Trojan AGM 或 AES AGM 才能充电吗？",
+        "text": "可以依据对应型号的说明安排回充。Trojan 说明无需为消除记忆效应而完全放电。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "深循环电池应该在什么时候回充？",
+        "text": "结合型号说明、放电深度、负载、温度和可用充电时间确定。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "评估隔板循环适配时应提供什么？",
+        "text": "提供极群结构、目标厚度及压缩状态、负载、循环和测试条件，供规格匹配和整电池验证使用。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "循环工况记录清单",
+      "text": "按型号核对充电程序，并用负载、放电深度和回充间隔评估循环工况。",
+      "items": [
+        "电池型号与应用",
+        "负载、放电深度与续航",
+        "充电程序、温度及回充间隔",
+        "极群结构、厚度与压缩状态"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "AGM 隔板注酸与循环后的压力保持",
+          "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "玻纤隔板隔离正负极板、保持电解液并支持离子传输。厚度和压缩状态应配合极群结构。向维京提供应用、循环工况、极群结构及测试条件，以讨论样品和规格。成品循环性能由电池制造商结合极板、电解液、装配及充电制度验证。",
+      "checklist": [
+        "电池型号与应用",
+        "负载、放电深度与续航",
+        "充电程序、温度及回充间隔",
+        "极群结构、厚度与压缩状态"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "电池型号与应用 / 负载、放电深度与续航 / 充电程序、温度及回充间隔 / 极群结构、厚度与压缩状态"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "充电建议适用于 Trojan AGM 与 AES AGM。实际设置以对应电池和充电器的说明为准。",
+      "items": [
+        [
+          "Trojan Battery — AES AGM and Standard AGM Battery Maintenance",
+          "https://www.trojanbattery.com/trojan-aes-batteries/aes-agm-standard-agm-battery-maintenance"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const parallelBatteryCurrentSharingCopy = {
   "en": {
     "nav": {
@@ -10229,6 +10877,10 @@ export function BlogArticlePage({
       ? telecomLeadAcidProcurementCopy[primaryLang]
       : page === "leadPremiumDemandRestocking"
       ? leadPremiumDemandRestockingCopy[primaryLang]
+      : page === "ebikeCccEvidenceScope"
+      ? ebikeCccEvidenceScopeCopy[primaryLang]
+      : page === "leadAcidChargingDischarge"
+      ? leadAcidChargingDischargeCopy[primaryLang]
       : page === "parallelBatteryCurrentSharing"
       ? parallelBatteryCurrentSharingCopy[primaryLang]
       : page === "vrlaAgmGelStructures"
@@ -10331,7 +10983,11 @@ export function BlogArticlePage({
       : null;
   const t = articleContent(page, lang, defaultArticle) as ArticlePageData;
   const sectionIds =
-    page === "parallelBatteryCurrentSharing"
+    page === "leadAcidChargingDischarge"
+      ? ["remaining-charge", "charger-settings", "deep-cycle-duty", "operating-records", "separator-matching", "faq-discharge", "faq-recharge", "faq-separator"]
+      : page === "ebikeCccEvidenceScope"
+      ? ["ccc-transition", "evidence-scope", "traceability", "change-review", "material-documents", "faq-battery", "faq-certificate", "faq-batch"]
+      : page === "parallelBatteryCurrentSharing"
       ? ["current-sharing", "external-path", "battery-resistance", "separator-resistance", "measurement-record", "faq-voltage", "faq-resistance", "faq-heat"]
       : page === "vrlaAgmGelStructures"
       ? ["vrla-category", "agm-retention", "gel-structure", "material-compatibility", "performance-boundary", "structure-checklist", "viking-scope", "faq-vrla", "faq-gel", "faq-interchange"]
@@ -10617,7 +11273,9 @@ export function BlogArticlePage({
                   <h2 className="mt-3 text-3xl font-bold leading-tight text-ink">
                     {section.title}
                   </h2>
-                  <p className="mt-4 text-base leading-8 text-steel">{section.text}</p>
+                  <p className={`mt-4 text-base leading-8 text-steel${page === "leadAcidChargingDischarge" ? " whitespace-pre-line" : ""}`}>
+                    {section.text}
+                  </p>
                   {section.image && (
                     <figure className="mt-6">
                       <Image src={asset(section.image.src)} alt={section.image.alt}
