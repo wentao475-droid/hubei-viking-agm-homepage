@@ -1,3 +1,6 @@
+import { ahCcaRatingsTopics } from "./automotive-battery-ah-cca-topics.mjs";
+import { positiveActiveMaterialTopics } from "./positive-active-material-softening-topics.mjs";
+import { agmIronPurityTopics } from "./agm-separator-iron-purity-topics.mjs";
 import { leadAcidChargingTopics } from "./lead-acid-charging-discharge-topics.mjs";
 import { ebikeCccTopics } from "./ebike-ccc-evidence-scope-topics.mjs";
 import { parallelBatteryTopics } from "./parallel-battery-current-sharing-topics.mjs";
@@ -29,6 +32,9 @@ import { sodiumIonColdStartTopics } from "./sodium-ion-cold-start-topics.mjs";
 import { batteryProjectComparisonTopics } from "./battery-project-comparison-topics.mjs";
 
 export const articleKinds = [
+  "automotiveBatteryAhCca",
+  "positiveActiveMaterialSoftening",
+  "agmSeparatorIronPurity",
   "leadAcidChargingDischarge",
   "ebikeCccEvidenceScope",
   "parallelBatteryCurrentSharing",
@@ -115,10 +121,16 @@ export const articleDefinitions = {
   ,vrlaAgmGelStructures: ["vrla-agm-gel-battery-structures-separator-matching", "buyerGuides", "2026-11-01", "2026-11-01"]
   ,parallelBatteryCurrentSharing: ["parallel-battery-current-sharing-measurement-layers", "manufacturingQuality", "2026-11-06", "2026-11-06"]
   ,ebikeCccEvidenceScope: ["ebike-ccc-certification-battery-evidence-scope", "manufacturingQuality", "2026-11-17", "2026-11-17"]
+  ,agmSeparatorIronPurity: ["agm-separator-iron-content-purity-self-discharge", "manufacturingQuality", "2026-11-23", "2026-11-23"]
+  ,positiveActiveMaterialSoftening: ["positive-active-material-softening-shedding-lead-acid", "manufacturingQuality", "2026-11-23", "2026-11-23"]
+  ,automotiveBatteryAhCca: ["car-battery-ah-cca-ratings-label-guide", "buyerGuides", "2026-11-24", "2026-11-24"]
   ,leadAcidChargingDischarge: ["lead-acid-battery-full-discharge-before-charging", "buyerGuides", "2026-11-17", "2026-11-17"]
 };
 
 const images = {
+  automotiveBatteryAhCca: ["/images/articles/automotive-battery-ah-cca-hero-1600.webp", 1600, 1200],
+  positiveActiveMaterialSoftening: ["/images/articles/positive-active-material-softening-hero-1600.webp", 1600, 1200],
+  agmSeparatorIronPurity: ["/images/articles/agm-separator-iron-purity-hero-1600.webp", 1600, 1200],
   leadAcidChargingDischarge: ["/images/articles/lead-acid-charging-discharge-hero-1600.webp", 1600, 1200],
   ebikeCccEvidenceScope: ["/images/articles/ebike-ccc-evidence-scope-hero-1600.webp", 1600, 1200],
   parallelBatteryCurrentSharing: ["/images/articles/parallel-battery-current-sharing-hero-1600.webp", 1600, 1200],
@@ -1286,6 +1298,18 @@ for (const locale of secondaryResourceLocales) {
   secondaryResourceData[locale].topics.leadAcidChargingDischarge = leadAcidChargingTopics[locale];
 }
 
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.agmSeparatorIronPurity = agmIronPurityTopics[locale];
+}
+
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.positiveActiveMaterialSoftening = positiveActiveMaterialTopics[locale];
+}
+
+for (const locale of secondaryResourceLocales) {
+  secondaryResourceData[locale].topics.automotiveBatteryAhCca = ahCcaRatingsTopics[locale];
+}
+
 completeResourceSections(secondaryResourceData);
 
 const articleCountLabels = {
@@ -1329,6 +1353,9 @@ const arabicReferences = {
 
 
 const generatedArticleVisuals = {
+  automotiveBatteryAhCca: "/images/articles/automotive-battery-ah-cca-hero-1600.webp",
+  positiveActiveMaterialSoftening: "/images/articles/positive-active-material-softening-hero-1600.webp",
+  agmSeparatorIronPurity: "/images/articles/agm-separator-iron-purity-hero-1600.webp",
   "leadAcidChargingDischarge": "/images/articles/lead-acid-charging-discharge-hero-1600.webp",
   "ebikeCccEvidenceScope": "/images/articles/ebike-ccc-evidence-scope-hero-1600.webp",
   "parallelBatteryCurrentSharing": "/images/articles/parallel-battery-current-sharing-hero-1600.webp",
@@ -1381,7 +1408,13 @@ function buildArticle(locale, kind, localeData) {
   const topic = localeData.topics[kind];
   const common = localeData.common;
   const definitions = Object.entries(articleDefinitions);
-  const relatedKinds = kind === "leadAcidChargingDischarge"
+  const relatedKinds = kind === "automotiveBatteryAhCca"
+    ? ["batteryCapacityHourRates", "agmStartStopBatteryProcurement", "keyTechnicalParameters"]
+    : kind === "positiveActiveMaterialSoftening"
+    ? ["agmSeparatorPressureRetention", "agmSeparatorBatchProcessControl", "keyTechnicalParameters"]
+    : kind === "agmSeparatorIronPurity"
+    ? ["keyTechnicalParameters", "agmSeparatorBatchProcessControl", "batteryStorageSelfDischarge"]
+    : kind === "leadAcidChargingDischarge"
     ? ["batteryStorageSelfDischarge", "leadAcidFluidTopUp", "agmSeparatorPressureRetention"]
     : kind === "ebikeCccEvidenceScope"
     ? ["agmSeparatorBatchProcessControl", "agmSeparatorSupplyChain", "en18060BatteryStandard"]
@@ -1539,6 +1572,57 @@ function buildArticle(locale, kind, localeData) {
   [
     "Hong Kong Trade and Industry Department — Announcement excerpt (PDF)",
     "https://www.tid.gov.hk/en/tradecircular/files/2026/ci4972026a.pdf"
+  ]
+] };
+  }
+
+  if (kind === "agmSeparatorIronPurity") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "HIOKI — Lead-acid Battery Handbook (2020), p. 10",
+    "https://www.tekfinland.fi/wp-content/uploads/2021/09/HIOKI_Lead_acsid_Measurement_Guide_A_UG_BT0002E01.pdf"
+  ],
+  [
+    "Changzhou Haixin — AGM separator specification",
+    "https://www.cz-haixin.com.cn/products_10/35.html"
+  ]
+] };
+  }
+
+  if (kind === "positiveActiveMaterialSoftening") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "Theoretical calculations for using positive electrode compression to increase lead–acid battery life (2000)",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0378775399003845"
+  ],
+  [
+    "Effect of compression on the behaviour of lead-acid batteries (2001)",
+    "https://www.sciencedirect.com/science/article/abs/pii/S037877530000639X"
+  ],
+  [
+    "Essential characteristics for separators in valve-regulated lead–acid batteries (2002)",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0378775302003154"
+  ]
+] };
+  }
+
+  if (kind === "automotiveBatteryAhCca") {
+    result.references = { eyebrow: localeData.ui.reference, title: localeData.ui.source, text: topic.referenceNote, items: [
+  [
+    "GS Yuasa — Understanding vehicle battery ratings (2024)",
+    "https://www.yuasa.com/uk/info-hub/understanding-vehicle-battery-ratings"
+  ],
+  [
+    "GS Yuasa — YBX9096, 12V 70Ah 760A(EN)",
+    "https://www.yuasa.com/uk/ybx9096"
+  ],
+  [
+    "GS Yuasa — Understanding automotive battery standards & part numbers (2024)",
+    "https://www.yuasa.com/uk/info-hub/battery-standards-and-part-numbers"
+  ],
+  [
+    "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+    "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
   ]
 ] };
   }

@@ -16,6 +16,9 @@ import {
 type IconProps = { size?: number; className?: string };
 export type BlogArticleKind =
   | "ebikeCccEvidenceScope"
+  | "agmSeparatorIronPurity"
+  | "positiveActiveMaterialSoftening"
+  | "automotiveBatteryAhCca"
   | "leadAcidChargingDischarge"
   | "parallelBatteryCurrentSharing"
   | "vrlaAgmGelStructures"
@@ -6608,6 +6611,1055 @@ const ebikeCccEvidenceScopeCopy = {
   }
 } as const;
 
+const agmSeparatorIronPurityCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/agm-separator-iron-content-purity-self-discharge/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Iron as a material-purity indicator",
+      "title": "Why AGM Separator Specifications Set Such Tight Limits on Iron",
+      "subtitle": "Review iron impurity limits, the Fe²⁺/Fe³⁺ self-discharge pathway and the test definitions needed for AGM separator procurement.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/agm-separator-iron-purity-hero-1600.webp",
+        "alt": "Illustration of AGM separator sheets, roll and laboratory sample vials",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Iron may occupy only a few thousandths of a percent on a separator specification. Its significance comes from how dissolved impurities interact with the electrolyte and plates. Procurement should connect the reported value with its test method and battery validation."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Iron as a material-purity indicator",
+        "title": "Iron as a material-purity indicator",
+        "text": "Iron content describes the mass fraction of iron impurities in the separator. It is commonly reviewed with chloride and substances reducing potassium permanganate. The AGM material sits between the plates and retains electrolyte, making the behavior of soluble constituents relevant to the battery’s impurity environment. Changzhou Haixin’s public table lists iron at ≤0.005% in its ‘national standard’ column and ≤0.003% in its ‘enterprise standard’ column. These are attributed examples from that supplier’s publication. A purchasing specification still needs an agreed requirement, method and reporting basis. Neither column establishes a universal limit or a Viking product commitment."
+      },
+      {
+        "eyebrow": "Why dissolved iron can increase self-discharge",
+        "title": "Why dissolved iron can increase self-discharge",
+        "text": "HIOKI’s Lead-acid Battery Handbook describes a repeating impurity reaction. At the positive electrode, Fe²⁺ is oxidized to Fe³⁺. At the negative electrode, Fe³⁺ is reduced to Fe²⁺. Repetition allows dissolved iron to participate in internal charge transfer while the battery is idle. This helps explain why small impurity quantities receive attention. The mechanism concerns iron in the electrolyte. To assess a separator batch, determine the measured iron fraction, its release under defined conditions and the finished battery’s response. A material result alone cannot quantify a particular battery’s self-discharge or establish the source of an observed fault."
+      },
+      {
+        "eyebrow": "Review purity and structural properties together",
+        "title": "Review purity and structural properties together",
+        "text": "A purity review should cover iron, chloride and substances reducing potassium permanganate. The permanganate test provides an indication of reducing substances under the specified procedure. Moisture also requires attention for storage, transport and the consistency of the material’s condition before acid wetting. Reading these indicators together gives a fuller view than an iron result alone. Acid weight loss and electrical resistance require their own assessment alongside the impurity group. The purchasing team should agree which properties are relevant to its battery design and obtain results with sufficient method and batch information to support comparison."
+      },
+      {
+        "eyebrow": "Align the test definition before comparing values",
+        "title": "Align the test definition before comparing values",
+        "text": "Ask whether a report measures total iron or acid-soluble iron, how the sample is prepared, which analytical procedure is used and how the result is calculated. Where acid extraction is involved, record acid concentration, temperature, exposure time and other conditions specified by the method. Check units and the mass basis, including any dry-sample requirement. Different definitions or preparation procedures can make apparently similar percentages unsuitable for direct comparison. Agree the limit and method together, then apply the same basis to supplier reports, incoming inspection and trials. A measured total content, a released amount and a battery performance result answer different questions."
+      },
+      {
+        "eyebrow": "Connect incoming inspection with battery validation",
+        "title": "Connect incoming inspection with battery validation",
+        "text": "Start by reviewing the impurity group and requesting the supplier’s method and reporting definition. For a new supplier or material, combine incoming inspection with a small production trial and battery-level validation under documented conditions. If abnormal self-discharge appears, investigate separator batches, plate materials, electrolyte and process water together. Record temperature, charging history and the comparison conditions as part of the investigation. Viking Technology supports AGM separator specification and sample discussions. Submit the application, target properties, agreed method and trial conditions for material matching. The battery manufacturer should determine final suitability through its own design and validation."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Is there one iron limit for every AGM separator?",
+        "text": "Acceptance requires an agreed specification and test method. The cited supplier’s ≤0.005% and ≤0.003% values are examples from its published table."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "Can total iron and acid-soluble iron be compared directly?",
+        "text": "First align the measured fraction, sample preparation, units and extraction conditions. The two results can represent different quantities."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "Does high self-discharge prove the separator is contaminated?",
+        "text": "Investigate the separator, plates, electrolyte, process water and operating conditions together. A battery-level symptom requires evidence across the impurity chain."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Purity review checklist",
+      "text": "Submit your target specification, test method and battery application to discuss AGM separator samples and material matching.",
+      "items": [
+        "Application, separator form and target specification",
+        "Total or acid-soluble iron and reporting units",
+        "Sampling, analytical method and extraction conditions",
+        "Batch identification, incoming inspection and battery trial"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "Key AGM Separator Parameters",
+          "/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "AGM Separator Batch Consistency & Process Control",
+          "/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Submit your target specification, test method and battery application to discuss AGM separator samples and material matching.",
+      "checklist": [
+        "Application, separator form and target specification",
+        "Total or acid-soluble iron and reporting units",
+        "Sampling, analytical method and extraction conditions",
+        "Batch identification, incoming inspection and battery trial"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Application, separator form and target specification / Total or acid-soluble iron and reporting units / Sampling, analytical method and extraction conditions / Batch identification, incoming inspection and battery trial"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "HIOKI’s 2020 handbook, page 10, supports the dissolved-iron mechanism. Haixin’s product table supplies the attributed specification examples. Sources checked on November 23, 2026. The agreed customer specification and complete-battery validation determine acceptance.",
+      "items": [
+        [
+          "HIOKI — Lead-acid Battery Handbook (2020), p. 10",
+          "https://www.tekfinland.fi/wp-content/uploads/2021/09/HIOKI_Lead_acsid_Measurement_Guide_A_UG_BT0002E01.pdf"
+        ],
+        [
+          "Changzhou Haixin — AGM separator specification",
+          "https://www.cz-haixin.com.cn/products_10/35.html"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/agm-separator-iron-content-purity-self-discharge/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "铁含量是材料纯度指标",
+      "title": "AGM 隔板为什么要严格控制铁含量？",
+      "subtitle": "从铁离子的自放电路径出发，核对 AGM 隔板铁含量限值、检测口径与整电池验证要求。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/agm-separator-iron-purity-hero-1600.webp",
+        "alt": "AGM 隔板片材、卷材与实验室样品瓶示意图",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "铁含量在隔板规格中可能只有千分之几，却关系到可溶性杂质进入电解液后的行为。采购与质量团队需要把数值、检测方法和电池验证联系起来阅读。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "铁含量是材料纯度指标",
+        "title": "铁含量是材料纯度指标",
+        "text": "铁含量表示隔板中铁杂质的质量分数，通常与氯含量、还原高锰酸钾物质等一起审查。AGM 隔板处于正负极板之间并保持电解液，可溶性组分的行为因此值得关注。常州海鑫公开表格的“国家标准”栏列出铁含量 ≤0.005%，“企业标准”栏为 ≤0.003%。这些数字是该供应商公开资料中的示例。实际采购仍需约定验收要求、方法和结果口径，表格栏目名称本身无法确立通用限值，也不能转作维京产品承诺。"
+      },
+      {
+        "eyebrow": "溶解铁为什么会增加自放电",
+        "title": "溶解铁为什么会增加自放电",
+        "text": "HIOKI《铅酸电池手册》描述了铁离子的循环反应。Fe²⁺ 在正极被氧化为 Fe³⁺，Fe³⁺ 到达负极后又被还原为 Fe²⁺。反应重复进行，使溶解铁能参与电池内部的电荷转移，即使电池闲置也可能增加自放电。这解释了少量杂质为何需要受到重视。机制针对电解液中的铁，评估具体隔板批次还需区分检测到的铁组分、规定条件下的释放量，以及成品电池的实际表现。单项材料结果不足以计算特定电池的自放电，也不足以定位异常来源。"
+      },
+      {
+        "eyebrow": "把纯度指标与结构性能一同审查",
+        "title": "把纯度指标与结构性能一同审查",
+        "text": "纯度审查应覆盖铁、氯和还原高锰酸钾物质。高锰酸钾试验反映规定程序下的还原性物质情况。水分则与储运、材料状态一致性和后续润湿有关。把这些指标放在一起，才能比单看铁含量获得更完整的信息。浸酸失重、电阻等也需要在杂质组以外独立评价。采购方应结合电池设计约定相关项目，并索取带有方法、批次及条件信息的结果，以支持不同样品和供方之间的比较。"
+      },
+      {
+        "eyebrow": "比较数值前先统一检测口径",
+        "title": "比较数值前先统一检测口径",
+        "text": "先问清报告测的是总铁还是酸溶性铁，样品如何制备、采用什么分析方法、结果如何计算。涉及酸萃取时，应记录方法规定的酸浓度、温度、接触时间及其他条件，同时核对单位、质量基准和是否按干样计算。口径或前处理不同，两个相似百分数也可能无法直接比较。限值与方法需要成套约定，供应商报告、来料检验及试产采用同一基准。总含量、释放量和电池性能结果各自回答不同的问题。"
+      },
+      {
+        "eyebrow": "用来料检验和整电池验证形成闭环",
+        "title": "用来料检验和整电池验证形成闭环",
+        "text": "先审查杂质组，要求供应商说明方法与结果定义。引入新供方或材料时，将来料检验、小批试产及有条件记录的电池验证结合。出现异常自放电时，同时检查隔板批次、极板材料、电解液和工艺用水，并记录温度、充电历史和对比条件。维京科技支持 AGM 隔板规格与样品沟通。提交应用、目标指标、约定方法和试验条件，可用于材料匹配讨论。最终适用性由电池制造商结合自身设计和验证确定。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "所有 AGM 隔板都执行同一个铁含量限值吗？",
+        "text": "验收需约定规格和检测方法。引用的 ≤0.005% 与 ≤0.003% 是海鑫公开表格中的供方示例。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "总铁和酸溶性铁能直接比较吗？",
+        "text": "需先核对检测组分、前处理、单位和萃取条件，两类结果可能代表不同的量。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "自放电偏高就能认定隔板受污染吗？",
+        "text": "应同时调查隔板、极板、电解液、工艺用水和运行条件，沿杂质链收集证据以定位电池异常。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "隔板纯度评审清单",
+      "text": "请提供目标规格、检测方法和电池应用，沟通 AGM 隔板样品与材料匹配。",
+      "items": [
+        "应用、隔板形式及目标规格",
+        "总铁或酸溶性铁与报告单位",
+        "取样、分析方法及萃取条件",
+        "批次标识、来料检验与电池试产"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "AGM 隔板关键技术参数",
+          "/zh/blog/key-technical-parameters-of-agm-separator/"
+        ],
+        [
+          "AGM 隔板批次一致性与过程控制",
+          "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供目标规格、检测方法和电池应用，沟通 AGM 隔板样品与材料匹配。",
+      "checklist": [
+        "应用、隔板形式及目标规格",
+        "总铁或酸溶性铁与报告单位",
+        "取样、分析方法及萃取条件",
+        "批次标识、来料检验与电池试产"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "应用、隔板形式及目标规格 / 总铁或酸溶性铁与报告单位 / 取样、分析方法及萃取条件 / 批次标识、来料检验与电池试产"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "溶解铁机制依据 HIOKI 2020 年手册第 10 页，限值示例来自海鑫公开产品表。来源核对日期为 2026 年 11 月 23 日。验收以双方约定的客户规格及整电池验证为依据。",
+      "items": [
+        [
+          "HIOKI — Lead-acid Battery Handbook (2020), p. 10",
+          "https://www.tekfinland.fi/wp-content/uploads/2021/09/HIOKI_Lead_acsid_Measurement_Guide_A_UG_BT0002E01.pdf"
+        ],
+        [
+          "Changzhou Haixin — AGM separator specification",
+          "https://www.cz-haixin.com.cn/products_10/35.html"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const positiveActiveMaterialSofteningCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/positive-active-material-softening-shedding-lead-acid/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Softening can begin with weaker particle contact",
+      "title": "Why Positive Active Material Loosens as Lead–Acid Batteries Age",
+      "subtitle": "Review particle contact, cycling conditions and plate-group restraint when investigating positive active material softening and shedding.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/positive-active-material-softening-hero-1600.webp",
+        "alt": "Conceptual illustration of positive plate active material and AGM separator layers",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "Capacity loss and visible shedding can appear at different stages of ageing. For cycling lead–acid batteries, quality and R&D teams should connect structural observations with operating records and controlled complete-battery validation."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Softening can begin with weaker particle contact",
+        "title": "Softening can begin with weaker particle contact",
+        "text": "Positive active material consists mainly of lead dioxide. Charge and discharge change its structure, and repeated cycling can weaken connections between particles. A 2001 study describes softening through loss of contact as the active mass expands, with capacity consequences particularly relevant to higher-rate discharge. Reduced electrical connectivity may therefore precede conspicuous detachment. This is an interpretation of the mechanism, requiring evidence beyond a photograph. Capacity trends, resistance changes, appearance and teardown findings each describe a different aspect of battery condition. Record them together with the design and test history before drawing a causal conclusion."
+      },
+      {
+        "eyebrow": "Cycling degradation has interacting influences",
+        "title": "Cycling degradation has interacting influences",
+        "text": "Plate formulation and structure, the grid-to-active-material interface, electrolyte condition, charging, discharge rate, depth of cycle and temperature can all influence the investigation. Element-group construction can change how the same material set behaves. A shedding observation from one project cannot be transferred directly to every battery design. Identify when the capacity or cell behaviour changed, where abnormalities appeared and whether a comparable control group was tested. These records help narrow the investigation. Controlled validation is needed to determine which variable accounts for the observed change."
+      },
+      {
+        "eyebrow": "Evaluate compression within the battery design",
+        "title": "Evaluate compression within the battery design",
+        "text": "A theoretical paper published in 2000 examined positive-electrode compression and active-material stability. The separate 2001 experimental study compared AGM, gel and AJS separation systems under different initial compression conditions. Their conclusions concern the models, materials, constructions and tests examined. The systems had different compression characteristics, which must accompany any comparison. Evaluate plate-group space, separator compression and recovery, active-material condition and operating duty together. The papers provide research context for a validation plan. They do not establish a pressure setting for every design or a performance commitment for Viking separators."
+      },
+      {
+        "eyebrow": "The AGM separator participates in restraint",
+        "title": "The AGM separator participates in restraint",
+        "text": "A 2002 paper identifies electrolyte supply, oxygen transport and restraint of active-material growth as important separator functions in VRLA batteries. AGM therefore participates in the structural conditions within the plate group alongside its insulating role. Plate formulation, compression design, electrolyte conditions and cycling duty still affect finished-battery results. An isolated separator property cannot demonstrate that a particular battery will avoid shedding or achieve a stated life. Likewise, shedding alone cannot establish the separator as the cause. Viking’s related article on pressure retention after filling and cycling provides material-test context for this discussion."
+      },
+      {
+        "eyebrow": "Keep observations and causal tests traceable",
+        "title": "Keep observations and causal tests traceable",
+        "text": "Define the test object, comparison conditions, target variable and endpoints before interpreting a plate change. Keep plates, materials, charge and discharge regimes, temperature and battery construction comparable between control and test groups. When compression is the variable, document it explicitly and avoid changing several components simultaneously. Trace capacity trends, cell-level readings and teardown observations to individual samples and cycles. A photograph records material condition at inspection. Material tests support comparisons of separator samples. Complete-battery tests are needed to assess how those observations relate to the target design and service duty."
+      },
+      {
+        "eyebrow": "Prepare a separator sample discussion",
+        "title": "Prepare a separator sample discussion",
+        "text": "Viking supplies AGM separator rolls and sheets and supports specification discussions with battery manufacturers. Provide the application, cycling conditions and required sample form to begin an R&D or quality review. Include the plate-group space, relevant compression or recovery test definition, and the proposed validation conditions when available. Initial discussions can use non-confidential operating requirements. The customer determines material suitability using its battery design and corresponding validation results. Submit your application and cycling conditions to request an AGM separator sample."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Can particle contact weaken before obvious shedding appears?",
+        "text": "It may. The research describes softening through loss of contact as active material expands. Compare electrical and structural records to assess the specific battery."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "Do the cited compression studies define one pressure setting?",
+        "text": "Their conclusions apply to the models, separation systems and test conditions examined. Set and validate compression for the actual battery design."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "Does visible shedding prove the AGM separator caused the failure?",
+        "text": "Shedding alone cannot establish the cause. Investigate plates, electrolyte, compression design and cycling duty with traceable control and test records."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Cycling validation checklist",
+      "text": "Provide the battery application, cycling conditions and required roll or sheet sample format to discuss AGM separator specifications.",
+      "items": [
+        "Battery application, plate-group construction and sample form",
+        "Charge/discharge regime, cycle depth and temperature",
+        "Compression/recovery definition and controlled comparison",
+        "Sample IDs, capacity trends and teardown endpoints"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "AGM Separator Pressure Retention After Filling and Cycling",
+          "/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ],
+        [
+          "AGM Separator Batch Consistency & Process Control",
+          "/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Provide the battery application, cycling conditions and required roll or sheet sample format to discuss AGM separator specifications.",
+      "checklist": [
+        "Battery application, plate-group construction and sample form",
+        "Charge/discharge regime, cycle depth and temperature",
+        "Compression/recovery definition and controlled comparison",
+        "Sample IDs, capacity trends and teardown endpoints"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Battery application, plate-group construction and sample form / Charge/discharge regime, cycle depth and temperature / Compression/recovery definition and controlled comparison / Sample IDs, capacity trends and teardown endpoints"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "The 2000 theoretical paper and the 2001 and 2002 studies are cited from available indexed publication records, abstracts and introduction excerpts, checked on November 23, 2026. Full-text numerical results are not used as design settings. The illustration is conceptual, and material testing requires complete-battery validation.",
+      "items": [
+        [
+          "Theoretical calculations for using positive electrode compression to increase lead–acid battery life (2000)",
+          "https://www.sciencedirect.com/science/article/abs/pii/S0378775399003845"
+        ],
+        [
+          "Effect of compression on the behaviour of lead-acid batteries (2001)",
+          "https://www.sciencedirect.com/science/article/abs/pii/S037877530000639X"
+        ],
+        [
+          "Essential characteristics for separators in valve-regulated lead–acid batteries (2002)",
+          "https://www.sciencedirect.com/science/article/abs/pii/S0378775302003154"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/positive-active-material-softening-shedding-lead-acid/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "软化可能先体现为颗粒接触减弱",
+      "title": "铅酸电池正极活性物质为何逐渐松散？",
+      "subtitle": "结合颗粒接触、循环工况和极群约束，分析正极活性物质软化、脱落与验证方法。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/positive-active-material-softening-hero-1600.webp",
+        "alt": "正极活性物质与 AGM 隔板层结构概念示意图",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "容量下降与可见脱落可能发生在老化的不同阶段。循环型铅酸电池的研发与质量评审，应把结构观察、运行记录和受控的整电池验证联系起来。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "软化可能先体现为颗粒接触减弱",
+        "title": "软化可能先体现为颗粒接触减弱",
+        "text": "正极活性物质主要由二氧化铅构成，充放电反应伴随内部结构变化，持续循环可能削弱颗粒间连接。2001 年研究将软化描述为活性物质膨胀时二氧化铅颗粒接触的丧失，并指出高倍率放电下的容量影响值得关注。由此可推测，导电连接的恶化可能早于明显块状脱落。这个机理解释需要照片之外的证据。容量趋势、电阻变化、外观和拆解分别反映不同层面的电池状态，应结合设计与试验历史判断原因。"
+      },
+      {
+        "eyebrow": "循环退化受到多项条件共同影响",
+        "title": "循环退化受到多项条件共同影响",
+        "text": "极板配方与结构、板栅和活性物质结合、电解液、充电条件、放电倍率、循环深度和温度都可能影响结果。极群结构变化也会改变同一组材料的表现。某个项目观察到脱落，不能直接成为其他电池设计的通用解释。先明确容量或单体行为在第几阶段发生变化、异常集中在哪里、是否有相同条件下的对照组。记录可以缩小调查范围，确定具体变量的影响仍需要受控验证。"
+      },
+      {
+        "eyebrow": "把压力放回具体电池设计中评估",
+        "title": "把压力放回具体电池设计中评估",
+        "text": "2000 年理论论文研究正极受压与活性物质稳定性，2001 年实验研究则在不同初始压力下比较 AGM、胶体和 AJS 分隔系统。结论适用于所研究的模型、材料、结构和测试条件，各系统的压缩特性也存在差异。评估应同时考虑极群空间、隔板压缩与回弹、活性物质状态及运行工况。论文可为验证方案提供研究背景，不能据此给所有设计指定同一个压力，也不能转作维京隔板的性能承诺。"
+      },
+      {
+        "eyebrow": "AGM 隔板参与极群内部约束",
+        "title": "AGM 隔板参与极群内部约束",
+        "text": "2002 年隔板论文将电解液供应、氧传输和约束活性物质生长列为 VRLA 隔板的重要作用。AGM 除了隔离正负极板，也参与极群内部结构条件。成品表现仍受到极板配方、压缩设计、电解液和循环任务影响。单项隔板特性不足以证明某种电池能够避免脱落或达到某个寿命，可见脱落本身也无法认定隔板是原因。维京关于注酸和循环后压力保持的相关文章，可作为材料试验条件与边界的延伸阅读。"
+      },
+      {
+        "eyebrow": "让观察结果和因果验证可以追溯",
+        "title": "让观察结果和因果验证可以追溯",
+        "text": "先定义试验对象、对比条件、目标变量和终点。试验组与对照组保持极板、材料、充放电制度、温度及电池结构可比；研究压缩设计时明确记录该变量，避免同时改变多项组分。容量趋势、单体数据和拆解观察应追溯到各样品及对应循环。照片记录检查时的状态，材料试验支持隔板样品比较，整电池试验用于判断这些观察与目标设计、服役任务之间的关系。"
+      },
+      {
+        "eyebrow": "准备隔板样品与规格沟通",
+        "title": "准备隔板样品与规格沟通",
+        "text": "维京提供 AGM 隔板卷材和片材，支持电池制造商的规格沟通。研发或质量团队可先提供应用、循环工况和所需样品形式；已有极群空间、压缩或回弹测试定义、验证条件时可一并提交。初次沟通可以使用非保密的运行需求。材料适用性由客户结合自己的电池设计和验证结果确定。提交应用与循环条件，开始 AGM 隔板样品讨论。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "颗粒接触减弱会早于明显脱落吗？",
+        "text": "有这种可能。研究描述了活性物质膨胀时颗粒接触丧失的软化机制，具体电池需结合电气和结构记录评估。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "这些压力研究给出了统一的设计值吗？",
+        "text": "结论适用于研究中的模型、分隔系统和试验条件，实际压力应结合对应电池设计设置和验证。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "看到脱落就能认定 AGM 隔板造成失效吗？",
+        "text": "仅凭脱落无法确定原因，应结合可追溯的试验与对照记录，调查极板、电解液、压缩设计和循环工况。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "循环验证记录清单",
+      "text": "请提供电池应用、循环工况与卷材或片材样品需求，沟通 AGM 隔板规格匹配。",
+      "items": [
+        "电池应用、极群结构与样品形式",
+        "充放电制度、循环深度与温度",
+        "压缩及回弹定义、对照条件",
+        "样品编号、容量趋势与拆解终点"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "注酸与循环后的 AGM 隔板压力保持",
+          "/zh/blog/agm-separator-pressure-retention-after-acid-filling-and-cycling/"
+        ],
+        [
+          "AGM 隔板批次一致性与过程控制",
+          "/zh/blog/agm-separator-batch-consistency-and-process-control/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供电池应用、循环工况与卷材或片材样品需求，沟通 AGM 隔板规格匹配。",
+      "checklist": [
+        "电池应用、极群结构与样品形式",
+        "充放电制度、循环深度与温度",
+        "压缩及回弹定义、对照条件",
+        "样品编号、容量趋势与拆解终点"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "电池应用、极群结构与样品形式 / 充放电制度、循环深度与温度 / 压缩及回弹定义、对照条件 / 样品编号、容量趋势与拆解终点"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "2000 年理论论文及 2001、2002 年研究依据可获取的出版检索记录、摘要与引言片段核对，核对日期为 2026 年 11 月 23 日。全文数值未作为设计设定值使用。配图为概念示意，材料试验需与整电池验证衔接。",
+      "items": [
+        [
+          "Theoretical calculations for using positive electrode compression to increase lead–acid battery life (2000)",
+          "https://www.sciencedirect.com/science/article/abs/pii/S0378775399003845"
+        ],
+        [
+          "Effect of compression on the behaviour of lead-acid batteries (2001)",
+          "https://www.sciencedirect.com/science/article/abs/pii/S037877530000639X"
+        ],
+        [
+          "Essential characteristics for separators in valve-regulated lead–acid batteries (2002)",
+          "https://www.sciencedirect.com/science/article/abs/pii/S0378775302003154"
+        ]
+      ]
+    }
+  }
+} as const;
+
+const automotiveBatteryAhCcaCopy = {
+  "en": {
+    "nav": {
+      "company": "Company",
+      "products": "Products",
+      "applications": "Applications",
+      "quality": "Quality",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "language": "中文",
+    "homePath": "/",
+    "languagePath": "/zh/blog/car-battery-ah-cca-ratings-label-guide/",
+    "brandName": "Hubei Viking Technology Co., Ltd.",
+    "quote": "Request a Quote",
+    "hero": {
+      "eyebrow": "Read Ah together with the hour rate",
+      "title": "Ah and CCA on a Car Battery Label: Two Ratings, Two Different Questions",
+      "subtitle": "Read Ah with its capacity test basis and CCA with its cold-start standard, then check the complete vehicle fitment requirement.",
+      "primary": "Request a Sample & Specification Match",
+      "secondary": "Send Your Battery Application",
+      "image": {
+        "src": "/images/articles/automotive-battery-ah-cca-hero-1600.webp",
+        "alt": "Illustration of an automotive battery and diagnostic tester in a cool service workshop",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI-generated illustration"
+      }
+    },
+    "intro": [
+      "A battery label brings together several measures of finished-battery performance. Capacity, cold-start current and vehicle fitment each require their own supporting information. For material selection, return to the target battery design and validation conditions."
+    ],
+    "sections": [
+      {
+        "eyebrow": "Read Ah together with the hour rate",
+        "title": "Read Ah together with the hour rate",
+        "text": "Ah means ampere-hours and expresses rated capacity under specified conditions. An entry such as Capacity (20hr) includes the hour rate as part of the specification. GS Yuasa illustrates the relationship with a 60Ah battery delivering 3A for 20 hours under its stated test basis. This example explains the rating. Actual loads, temperature, battery condition and operating endpoints still need consideration when estimating runtime. Record the hour rate and test basis alongside the Ah number when comparing products. Rated capacity alone cannot establish the current available for a cold engine start."
+      },
+      {
+        "eyebrow": "Read CCA together with the test standard",
+        "title": "Read CCA together with the test standard",
+        "text": "CCA means Cold Cranking Amperes and concerns high-current delivery under cold-start test conditions. The starter requires substantial current for a short period. CCA uses amperes, while Ah uses ampere-hours, so the two numbers describe different quantities. Capacity cannot be converted directly to CCA. GS Yuasa also notes differences in cold-cranking ratings between standards. Check the standard designation before comparing values. This article uses the purpose of the rating without prescribing temperatures, durations or cutoff voltages for individual standards. A product comparison needs an aligned test basis."
+      },
+      {
+        "eyebrow": "A model example shows why both ratings appear",
+        "title": "A model example shows why both ratings appear",
+        "text": "GS Yuasa’s YBX9096 product page is headed 12V 70Ah 760A(EN). Its specification gives nominal voltage 12V, Capacity (20hr) 70Ah, CCA 760A and separator type AGM. These figures describe that published GS Yuasa model and retain their model and test context. The capacity entry and cold-start entry answer separate performance questions about the same complete battery. Their presence on one label supports reading them together. Neither figure defines a universal AGM requirement or a separator-level result, and neither can stand in for the other during evaluation."
+      },
+      {
+        "eyebrow": "Confirm vehicle fitment after reading the label",
+        "title": "Confirm vehicle fitment after reading the label",
+        "text": "Review the required battery technology, dimensions, terminal layout, hold-down arrangement and start-stop needs against the vehicle manufacturer’s instructions. Start with Ah and its hour rate, then CCA and its standard, and finally confirm the complete fitment specification for the particular vehicle. Increasing one label value does not establish suitability. When a vehicle fails to start, state of charge, use history and the electrical system may also matter. A technician should assess the vehicle using the relevant manufacturer information. Label interpretation alone cannot determine the cause or select a replacement for every vehicle."
+      },
+      {
+        "eyebrow": "AGM separator data belongs within whole-battery design",
+        "title": "AGM separator data belongs within whole-battery design",
+        "text": "Capacity and cold-start performance result from the complete battery and its specified tests. Plates, active material, electrolyte, conductive connections, assembly and material interactions all contribute to design and validation. Within AGM batteries, the glass-fiber separator separates the plates, retains electrolyte and permits ionic transport. Hollingsworth & Vose describes this internal functional role in its supplier document. The description supports understanding the material’s place in the design. A separator property alone cannot demonstrate a particular finished-battery CCA, Ah rating or vehicle suitability."
+      },
+      {
+        "eyebrow": "Prepare a material discussion with validation conditions",
+        "title": "Prepare a material discussion with validation conditions",
+        "text": "Provide the target starting duty, battery structure, applicable test standard and whole-battery validation method together with the separator specification. Include installed thickness, plate-group compression and manufacturing conditions when available. Material tests can support sample matching under agreed conditions. The battery manufacturer confirms the final Ah, CCA and vehicle suitability within its complete design. Viking supplies AGM separators and specification support to lead-acid battery manufacturers. Share your cold-start duty, structure and validation conditions to discuss roll or sheet samples and an appropriate material specification."
+      },
+      {
+        "eyebrow": "FAQ 1",
+        "title": "Can Ah be converted directly into CCA?",
+        "text": "Ah and CCA measure different quantities under different tests. Compare rated capacity and cold-start current on their respective stated bases."
+      },
+      {
+        "eyebrow": "FAQ 2",
+        "title": "Does a higher Ah rating guarantee vehicle fitment?",
+        "text": "Confirm battery technology, dimensions, terminals, hold-down, start-stop requirements and manufacturer instructions together with Ah and CCA."
+      },
+      {
+        "eyebrow": "FAQ 3",
+        "title": "Can one separator parameter establish a finished battery’s CCA?",
+        "text": "Material data supports matching within the battery design. The battery manufacturer must verify CCA and capacity through the applicable complete-battery tests."
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "Roll vs Sheet",
+      "title": "Choose the supply format according to production workflow",
+      "items": [
+        [
+          "AGM separator rolls",
+          "Rolls are suitable for continuous production, further slitting and in-house cutting before assembly.",
+          "/images/viking-finished-separator-roll-900.webp",
+          "Finished AGM separator roll"
+        ],
+        [
+          "AGM separator sheets",
+          "Sheets are convenient for direct assembly, small batches, sample review and customized battery models.",
+          "/images/sheets1-900.webp",
+          "AGM separator sheets"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "Buyer Checklist",
+      "title": "Battery rating and material review checklist",
+      "text": "Share your target cold-start duty, battery structure and validation conditions to discuss AGM separator specifications and samples.",
+      "items": [
+        "Capacity, hour rate and test basis",
+        "CCA and standard designation",
+        "Battery structure, plate-group compression and sample format",
+        "Cold-start duty and whole-battery validation conditions"
+      ]
+    },
+    "related": {
+      "eyebrow": "Related Pages",
+      "title": "Continue with product and quality details",
+      "items": [
+        [
+          "100Ah Batteries and C10/C20 Capacity Comparison",
+          "/blog/100ah-battery-c10-c20-capacity-comparison/"
+        ],
+        [
+          "AGM Start-Stop Battery Separator Procurement Guide",
+          "/blog/agm-start-stop-battery-separator-procurement-guide/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "Inquiry",
+      "title": "Request a Sample & Specification Match",
+      "text": "Share your target cold-start duty, battery structure and validation conditions to discuss AGM separator specifications and samples.",
+      "checklist": [
+        "Capacity, hour rate and test basis",
+        "CCA and standard designation",
+        "Battery structure, plate-group compression and sample format",
+        "Cold-start duty and whole-battery validation conditions"
+      ],
+      "fields": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "country": "Country",
+        "application": "Battery Application",
+        "message": "Message"
+      },
+      "placeholders": {
+        "message": "Capacity, hour rate and test basis / CCA and standard designation / Battery structure, plate-group compression and sample format / Cold-start duty and whole-battery validation conditions"
+      },
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "Please complete all required fields before submitting.",
+      "success": "Thank you. Your inquiry has been received. Our team will review it and respond soon.",
+      "failure": "Sorry, the inquiry could not be sent right now. Please try again later.",
+      "emailFallback": "Your email client has been opened with the inquiry details. Please send the email to complete your inquiry."
+    },
+    "footer": {
+      "description": "AGM glass fiber separator manufacturer serving lead-acid battery producers and trading partners worldwide.",
+      "wechat": "Official WeChat account",
+      "mobile": "Mobile website"
+    },
+    "references": {
+      "eyebrow": "Public source and scope",
+      "title": "Source and disclosure boundaries",
+      "text": "GS Yuasa’s ratings guide, standards guide and YBX9096 product page provide definitions and the model example. The H&V document describes the separator’s internal function. Sources checked on November 24, 2026. Model data retains its published scope; detailed CCA standard procedures are outside this article’s scope.",
+      "items": [
+        [
+          "GS Yuasa — Understanding vehicle battery ratings (2024)",
+          "https://www.yuasa.com/uk/info-hub/understanding-vehicle-battery-ratings"
+        ],
+        [
+          "GS Yuasa — YBX9096, 12V 70Ah 760A(EN)",
+          "https://www.yuasa.com/uk/ybx9096"
+        ],
+        [
+          "GS Yuasa — Understanding automotive battery standards & part numbers (2024)",
+          "https://www.yuasa.com/uk/info-hub/battery-standards-and-part-numbers"
+        ],
+        [
+          "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+          "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+        ]
+      ]
+    }
+  },
+  "zh": {
+    "nav": {
+      "company": "公司",
+      "products": "产品",
+      "applications": "应用",
+      "quality": "质量",
+      "resources": "资料",
+      "contact": "联系"
+    },
+    "language": "EN",
+    "homePath": "/zh/",
+    "languagePath": "/blog/car-battery-ah-cca-ratings-label-guide/",
+    "brandName": "湖北维京科技有限公司",
+    "quote": "获取报价",
+    "hero": {
+      "eyebrow": "读 Ah 时保留小时率",
+      "title": "汽车电池标签上的 Ah 和 CCA 怎么看？",
+      "subtitle": "Ah 连同容量测试口径阅读，CCA 连同冷启动标准阅读，再核对车辆的完整适配要求。",
+      "primary": "申请样品与规格匹配",
+      "secondary": "发送电池应用信息",
+      "image": {
+        "src": "/images/articles/automotive-battery-ah-cca-hero-1600.webp",
+        "alt": "汽车电池与诊断仪在低温主题维修环境中的示意图",
+        "width": 1600,
+        "height": 1200,
+        "caption": "AI 示意图"
+      }
+    },
+    "intro": [
+      "电池标签汇集了成品电池的多项性能信息。额定容量、冷启动电流和车辆适配各自需要对应依据，材料选型则应回到目标电池设计及验证条件。"
+    ],
+    "sections": [
+      {
+        "eyebrow": "读 Ah 时保留小时率",
+        "title": "读 Ah 时保留小时率",
+        "text": "Ah 表示安时，用于给出规定条件下的额定容量。“Capacity (20hr)”中的 20 小时率也是规格的一部分。GS Yuasa 用 60Ah 电池在所述测试口径下以 3A 放电 20 小时说明这种关系。实际续航还应考虑负载、温度、电池状态和使用终点。比较产品时，把小时率及测试依据与 Ah 数值一同记录。额定容量本身无法确定冷启动时可提供的电流。"
+      },
+      {
+        "eyebrow": "读 CCA 时核对测试标准",
+        "title": "读 CCA 时核对测试标准",
+        "text": "CCA 是冷启动电流，关注电池在低温启动试验条件下提供大电流的能力，启动机需要在短时间内取得较大电流。CCA 的单位为 A，Ah 的单位为安时，两者是不同的量，不能直接换算。GS Yuasa 也说明，不同标准下的冷启动额定值可能存在差异。比较前应核对标准标识。本文解释指标用途，具体标准的温度、时长和截止电压应查阅相应文件。产品对比需要一致的测试依据。"
+      },
+      {
+        "eyebrow": "同一型号为什么同时列出两项数值",
+        "title": "同一型号为什么同时列出两项数值",
+        "text": "GS Yuasa YBX9096 产品页标题为“12V 70Ah 760A(EN)”。规格表列出额定电压 12V、20 小时率容量 70Ah、CCA 760A，隔板类型为 AGM。这些数字属于该 GS Yuasa 型号的公开规格，需要保留型号和测试背景。容量与冷启动两栏分别描述同一成品电池的不同表现，应共同阅读。它们不能转作通用 AGM 要求或隔板层面的结果，也不能在评价时相互替代。"
+      },
+      {
+        "eyebrow": "读完标签还要确认车辆适配",
+        "title": "读完标签还要确认车辆适配",
+        "text": "按车辆制造商说明核对电池技术类型、外形尺寸、端子布局、固定方式和启停要求。可先读 Ah 及小时率，再读 CCA 及标准，最后确认具体车型的完整适配规格。提高标签中的某个数值并不足以确定适用性。车辆无法启动时，荷电状态、使用历史和电气系统也可能相关，需由技术人员依据车辆及电池厂资料检查。标签信息支持规格理解，无法单独完成故障诊断或适配选择。"
+      },
+      {
+        "eyebrow": "AGM 材料数据应放在整电池设计中理解",
+        "title": "AGM 材料数据应放在整电池设计中理解",
+        "text": "容量和冷启动表现来自完整电池及规定试验。极板、活性物质、电解液、导电连接、装配和材料间配合共同参与设计与验证。在 AGM 电池中，玻纤隔板隔离正负极板、保持电解液并支持离子传输。Hollingsworth & Vose 的供应商资料描述了这一内部功能位置，可帮助理解材料作用。单项隔板参数不足以证明某一成品电池的 CCA、Ah 或车型适配。"
+      },
+      {
+        "eyebrow": "带着验证条件沟通隔板规格",
+        "title": "带着验证条件沟通隔板规格",
+        "text": "将目标启动工况、电池结构、适用测试标准和整电池验证方法，与隔板规格一并提出。已有安装厚度、极群压缩及制造条件时可同时提供。材料测试支持在约定条件下匹配样品，最终 Ah、CCA 与车辆适用性由电池制造商在完整设计中验证。维京为铅酸电池制造商提供 AGM 隔板及规格支持。提交冷启动任务、结构与验证条件，可沟通卷材或片材样品及材料规格。"
+      },
+      {
+        "eyebrow": "常见问答 1",
+        "title": "Ah 能直接换算成 CCA 吗？",
+        "text": "两者测量的量和试验不同，应分别连同各自规定的容量与冷启动测试依据比较。"
+      },
+      {
+        "eyebrow": "常见问答 2",
+        "title": "Ah 更大就一定适配车辆吗？",
+        "text": "需把电池类型、尺寸、端子、固定方式、启停要求及厂家说明与 Ah、CCA 一同核对。"
+      },
+      {
+        "eyebrow": "常见问答 3",
+        "title": "单个隔板参数能确定成品电池的 CCA 吗？",
+        "text": "材料数据支持设计中的规格匹配，成品 CCA 与容量仍需由电池制造商通过适用的整电池试验验证。"
+      }
+    ],
+    "parameters": [],
+    "formats": {
+      "eyebrow": "卷材与片材",
+      "title": "根据生产流程选择供应形式",
+      "items": [
+        [
+          "AGM 隔板卷材",
+          "卷材适合连续生产、进一步分切以及装配前的厂内裁切。",
+          "/images/viking-finished-separator-roll-900.webp",
+          "AGM 隔板成品卷"
+        ],
+        [
+          "AGM 隔板片材",
+          "片材适合直接装配、小批量需求、样品评估和定制电池型号。",
+          "/images/sheets1-900.webp",
+          "AGM 隔板片材"
+        ]
+      ]
+    },
+    "checklist": {
+      "eyebrow": "买家清单",
+      "title": "额定值与材料评审清单",
+      "text": "请提供目标冷启动工况、电池结构与验证条件，沟通 AGM 隔板规格和样品。",
+      "items": [
+        "容量、小时率与测试口径",
+        "CCA 及对应标准标识",
+        "电池结构、极群压缩与样品形式",
+        "冷启动工况及整电池验证条件"
+      ]
+    },
+    "related": {
+      "eyebrow": "相关页面",
+      "title": "继续查看产品和质量信息",
+      "items": [
+        [
+          "100Ah 电池与 C10/C20 容量比较",
+          "/zh/blog/100ah-battery-c10-c20-capacity-comparison/"
+        ],
+        [
+          "AGM 启停电池隔板采购指南",
+          "/zh/blog/agm-start-stop-battery-separator-procurement-guide/"
+        ]
+      ]
+    },
+    "inquiry": {
+      "eyebrow": "询盘",
+      "title": "申请样品与规格匹配",
+      "text": "请提供目标冷启动工况、电池结构与验证条件，沟通 AGM 隔板规格和样品。",
+      "checklist": [
+        "容量、小时率与测试口径",
+        "CCA 及对应标准标识",
+        "电池结构、极群压缩与样品形式",
+        "冷启动工况及整电池验证条件"
+      ],
+      "fields": {
+        "name": "姓名",
+        "company": "公司",
+        "email": "邮箱",
+        "country": "国家/地区",
+        "application": "电池应用",
+        "message": "留言"
+      },
+      "placeholders": {
+        "message": "容量、小时率与测试口径 / CCA 及对应标准标识 / 电池结构、极群压缩与样品形式 / 冷启动工况及整电池验证条件"
+      },
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "required": "请先填写所有必填字段。",
+      "success": "谢谢，您的询盘信息已收到，我们会尽快评估并回复。",
+      "failure": "抱歉，询盘暂时未能发送，请稍后再试。",
+      "emailFallback": "已为您打开邮件客户端并填入询盘内容，请发送邮件完成询盘。"
+    },
+    "footer": {
+      "description": "AGM 玻璃纤维隔板制造商，服务全球铅酸电池生产企业和贸易合作伙伴。",
+      "wechat": "官方微信公众号",
+      "mobile": "移动官网"
+    },
+    "references": {
+      "eyebrow": "公开来源与边界",
+      "title": "参考资料与披露边界",
+      "text": "额定值定义与型号示例来自 GS Yuasa 的额定值指南、标准指南及 YBX9096 产品页，隔板内部作用参考 H&V 资料。来源核对日期为 2026 年 11 月 24 日。型号数据保留其公开适用范围，本文不展开各 CCA 标准的具体试验程序。",
+      "items": [
+        [
+          "GS Yuasa — Understanding vehicle battery ratings (2024)",
+          "https://www.yuasa.com/uk/info-hub/understanding-vehicle-battery-ratings"
+        ],
+        [
+          "GS Yuasa — YBX9096, 12V 70Ah 760A(EN)",
+          "https://www.yuasa.com/uk/ybx9096"
+        ],
+        [
+          "GS Yuasa — Understanding automotive battery standards & part numbers (2024)",
+          "https://www.yuasa.com/uk/info-hub/battery-standards-and-part-numbers"
+        ],
+        [
+          "Hollingsworth & Vose — Absorbent Glass Mat (AGM) Separator",
+          "https://www.hollingsworth-vose.com/wp-content/uploads/AGM-Separator.pdf"
+        ]
+      ]
+    }
+  }
+} as const;
+
 const leadAcidChargingDischargeCopy = {
   "en": {
     "nav": {
@@ -10879,6 +11931,12 @@ export function BlogArticlePage({
       ? leadPremiumDemandRestockingCopy[primaryLang]
       : page === "ebikeCccEvidenceScope"
       ? ebikeCccEvidenceScopeCopy[primaryLang]
+      : page === "agmSeparatorIronPurity"
+      ? agmSeparatorIronPurityCopy[primaryLang]
+      : page === "positiveActiveMaterialSoftening"
+      ? positiveActiveMaterialSofteningCopy[primaryLang]
+      : page === "automotiveBatteryAhCca"
+      ? automotiveBatteryAhCcaCopy[primaryLang]
       : page === "leadAcidChargingDischarge"
       ? leadAcidChargingDischargeCopy[primaryLang]
       : page === "parallelBatteryCurrentSharing"
@@ -10983,7 +12041,42 @@ export function BlogArticlePage({
       : null;
   const t = articleContent(page, lang, defaultArticle) as ArticlePageData;
   const sectionIds =
-    page === "leadAcidChargingDischarge"
+    page === "automotiveBatteryAhCca"
+      ? [
+          "capacity-hour-rate",
+          "cold-cranking-standard",
+          "model-example",
+          "vehicle-fitment",
+          "whole-battery-design",
+          "material-validation",
+          "faq-conversion",
+          "faq-fitment",
+          "faq-separator"
+        ]
+      : page === "positiveActiveMaterialSoftening"
+      ? [
+          "particle-contact",
+          "cycling-conditions",
+          "compression-research",
+          "separator-restraint",
+          "validation-records",
+          "sample-discussion",
+          "faq-contact",
+          "faq-pressure",
+          "faq-cause"
+        ]
+      : page === "agmSeparatorIronPurity"
+      ? [
+          "purity-indicator",
+          "iron-redox-cycle",
+          "impurity-group",
+          "test-definition",
+          "incoming-validation",
+          "faq-limits",
+          "faq-soluble",
+          "faq-diagnosis"
+        ]
+      : page === "leadAcidChargingDischarge"
       ? ["remaining-charge", "charger-settings", "deep-cycle-duty", "operating-records", "separator-matching", "faq-discharge", "faq-recharge", "faq-separator"]
       : page === "ebikeCccEvidenceScope"
       ? ["ccc-transition", "evidence-scope", "traceability", "change-review", "material-documents", "faq-battery", "faq-certificate", "faq-batch"]

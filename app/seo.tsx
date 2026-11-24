@@ -2215,6 +2215,157 @@ const ebikeCccEvidenceScopeSeo = {
   }
 } as const;
 
+const agmSeparatorIronPuritySeo = {
+  "en": {
+    "path": "/blog/agm-separator-iron-content-purity-self-discharge/",
+    "alternatePath": "/zh/blog/agm-separator-iron-content-purity-self-discharge/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Why AGM Separator Specifications Set Such Tight Limits on Iron | Viking AGM",
+    "description": "Review iron impurity limits, the Fe²⁺/Fe³⁺ self-discharge pathway and the test definitions needed for AGM separator procurement.",
+    "keywords": [
+      "AGM separator iron content",
+      "iron impurities",
+      "separator purity"
+    ],
+    "pageName": "Why AGM Separator Specifications Set Such Tight Limits on Iron",
+    "articleDescription": "Review iron impurity limits, the Fe²⁺/Fe³⁺ self-discharge pathway and the test definitions needed for AGM separator procurement.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Why AGM Separator Specifications Set Such Tight Limits on Iron"
+    ],
+    "datePublished": "2026-11-23",
+    "dateModified": "2026-11-23"
+  },
+  "zh": {
+    "path": "/zh/blog/agm-separator-iron-content-purity-self-discharge/",
+    "alternatePath": "/blog/agm-separator-iron-content-purity-self-discharge/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "AGM 隔板为什么要严格控制铁含量？ | Viking AGM",
+    "description": "从铁离子的自放电路径出发，核对 AGM 隔板铁含量限值、检测口径与整电池验证要求。",
+    "keywords": [
+      "AGM 隔板铁含量",
+      "隔板纯度",
+      "自放电",
+      "酸溶性铁"
+    ],
+    "pageName": "AGM 隔板为什么要严格控制铁含量？",
+    "articleDescription": "从铁离子的自放电路径出发，核对 AGM 隔板铁含量限值、检测口径与整电池验证要求。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "AGM 隔板为什么要严格控制铁含量？"
+    ],
+    "datePublished": "2026-11-23",
+    "dateModified": "2026-11-23"
+  }
+} as const;
+
+const positiveActiveMaterialSofteningSeo = {
+  "en": {
+    "path": "/blog/positive-active-material-softening-shedding-lead-acid/",
+    "alternatePath": "/zh/blog/positive-active-material-softening-shedding-lead-acid/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Why Positive Active Material Loosens as Lead–Acid Batteries Age | Viking AGM",
+    "description": "Review particle contact, cycling conditions and plate-group restraint when investigating positive active material softening and shedding.",
+    "keywords": [
+      "positive active material softening",
+      "lead-acid plate shedding",
+      "AGM separator compression"
+    ],
+    "pageName": "Why Positive Active Material Loosens as Lead–Acid Batteries Age",
+    "articleDescription": "Review particle contact, cycling conditions and plate-group restraint when investigating positive active material softening and shedding.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Why Positive Active Material Loosens as Lead–Acid Batteries Age"
+    ],
+    "datePublished": "2026-11-23",
+    "dateModified": "2026-11-23"
+  },
+  "zh": {
+    "path": "/zh/blog/positive-active-material-softening-shedding-lead-acid/",
+    "alternatePath": "/blog/positive-active-material-softening-shedding-lead-acid/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "铅酸电池正极活性物质为何逐渐松散？ | Viking AGM",
+    "description": "结合颗粒接触、循环工况和极群约束，分析正极活性物质软化、脱落与验证方法。",
+    "keywords": [
+      "正极活性物质软化",
+      "铅酸电池脱落",
+      "AGM 隔板压缩",
+      "极群压力"
+    ],
+    "pageName": "铅酸电池正极活性物质为何逐渐松散？",
+    "articleDescription": "结合颗粒接触、循环工况和极群约束，分析正极活性物质软化、脱落与验证方法。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "铅酸电池正极活性物质为何逐渐松散？"
+    ],
+    "datePublished": "2026-11-23",
+    "dateModified": "2026-11-23"
+  }
+} as const;
+
+const automotiveBatteryAhCcaSeo = {
+  "en": {
+    "path": "/blog/car-battery-ah-cca-ratings-label-guide/",
+    "alternatePath": "/zh/blog/car-battery-ah-cca-ratings-label-guide/",
+    "locale": "en_US",
+    "language": "en",
+    "siteName": "Viking AGM",
+    "title": "Ah and CCA on a Car Battery Label: Two Ratings, Two Different Questions | Viking AGM",
+    "description": "Read Ah with its capacity test basis and CCA with its cold-start standard, then check the complete vehicle fitment requirement.",
+    "keywords": [
+      "car battery Ah and CCA",
+      "battery capacity hour rate",
+      "cold cranking standard",
+      "AGM separator"
+    ],
+    "pageName": "Ah and CCA on a Car Battery Label: Two Ratings, Two Different Questions",
+    "articleDescription": "Read Ah with its capacity test basis and CCA with its cold-start standard, then check the complete vehicle fitment requirement.",
+    "breadcrumbs": [
+      "Home",
+      "Resources",
+      "Ah and CCA on a Car Battery Label: Two Ratings, Two Different Questions"
+    ],
+    "datePublished": "2026-11-24",
+    "dateModified": "2026-11-24"
+  },
+  "zh": {
+    "path": "/zh/blog/car-battery-ah-cca-ratings-label-guide/",
+    "alternatePath": "/blog/car-battery-ah-cca-ratings-label-guide/",
+    "locale": "zh_CN",
+    "language": "zh-CN",
+    "siteName": "湖北维京AGM",
+    "title": "汽车电池标签上的 Ah 和 CCA 怎么看？ | Viking AGM",
+    "description": "Ah 连同容量测试口径阅读，CCA 连同冷启动标准阅读，再核对车辆的完整适配要求。",
+    "keywords": [
+      "汽车电池 Ah CCA",
+      "容量小时率",
+      "冷启动电流",
+      "AGM 隔板"
+    ],
+    "pageName": "汽车电池标签上的 Ah 和 CCA 怎么看？",
+    "articleDescription": "Ah 连同容量测试口径阅读，CCA 连同冷启动标准阅读，再核对车辆的完整适配要求。",
+    "breadcrumbs": [
+      "首页",
+      "资料",
+      "汽车电池标签上的 Ah 和 CCA 怎么看？"
+    ],
+    "datePublished": "2026-11-24",
+    "dateModified": "2026-11-24"
+  }
+} as const;
+
 const leadAcidChargingDischargeSeo = {
   "en": {
     "path": "/blog/lead-acid-battery-full-discharge-before-charging/",
@@ -5846,6 +5997,153 @@ export function EbikeCccEvidenceScopeStructuredData({ lang }: { lang: Lang }) {
   ]}} />;
 }
 
+const agmIronPurityFaq = {
+  "en": [
+    [
+      "Is there one iron limit for every AGM separator?",
+      "Acceptance requires an agreed specification and test method. The cited supplier’s ≤0.005% and ≤0.003% values are examples from its published table."
+    ],
+    [
+      "Can total iron and acid-soluble iron be compared directly?",
+      "First align the measured fraction, sample preparation, units and extraction conditions. The two results can represent different quantities."
+    ],
+    [
+      "Does high self-discharge prove the separator is contaminated?",
+      "Investigate the separator, plates, electrolyte, process water and operating conditions together. A battery-level symptom requires evidence across the impurity chain."
+    ]
+  ],
+  "zh": [
+    [
+      "所有 AGM 隔板都执行同一个铁含量限值吗？",
+      "验收需约定规格和检测方法。引用的 ≤0.005% 与 ≤0.003% 是海鑫公开表格中的供方示例。"
+    ],
+    [
+      "总铁和酸溶性铁能直接比较吗？",
+      "需先核对检测组分、前处理、单位和萃取条件，两类结果可能代表不同的量。"
+    ],
+    [
+      "自放电偏高就能认定隔板受污染吗？",
+      "应同时调查隔板、极板、电解液、工艺用水和运行条件，沿杂质链收集证据以定位电池异常。"
+    ]
+  ]
+} as const;
+
+export function buildAgmSeparatorIronPurityMetadata(lang: Lang): Metadata {
+  const current = seoContent("agmSeparatorIronPurity", lang, agmSeparatorIronPuritySeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("agmSeparatorIronPurity"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/agm-separator-iron-purity-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function AgmSeparatorIronPurityStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("agmSeparatorIronPurity", lang, agmSeparatorIronPuritySeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/agm-separator-iron-purity-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["AGM separator iron impurities", "Material purity and self-discharge"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: agmIronPurityFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+const positiveActiveMaterialFaq = {
+  "en": [
+    [
+      "Can particle contact weaken before obvious shedding appears?",
+      "It may. The research describes softening through loss of contact as active material expands. Compare electrical and structural records to assess the specific battery."
+    ],
+    [
+      "Do the cited compression studies define one pressure setting?",
+      "Their conclusions apply to the models, separation systems and test conditions examined. Set and validate compression for the actual battery design."
+    ],
+    [
+      "Does visible shedding prove the AGM separator caused the failure?",
+      "Shedding alone cannot establish the cause. Investigate plates, electrolyte, compression design and cycling duty with traceable control and test records."
+    ]
+  ],
+  "zh": [
+    [
+      "颗粒接触减弱会早于明显脱落吗？",
+      "有这种可能。研究描述了活性物质膨胀时颗粒接触丧失的软化机制，具体电池需结合电气和结构记录评估。"
+    ],
+    [
+      "这些压力研究给出了统一的设计值吗？",
+      "结论适用于研究中的模型、分隔系统和试验条件，实际压力应结合对应电池设计设置和验证。"
+    ],
+    [
+      "看到脱落就能认定 AGM 隔板造成失效吗？",
+      "仅凭脱落无法确定原因，应结合可追溯的试验与对照记录，调查极板、电解液、压缩设计和循环工况。"
+    ]
+  ]
+} as const;
+
+export function buildPositiveActiveMaterialSofteningMetadata(lang: Lang): Metadata {
+  const current = seoContent("positiveActiveMaterialSoftening", lang, positiveActiveMaterialSofteningSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("positiveActiveMaterialSoftening"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/positive-active-material-softening-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function PositiveActiveMaterialSofteningStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("positiveActiveMaterialSoftening", lang, positiveActiveMaterialSofteningSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/positive-active-material-softening-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Positive active material softening", "AGM separator restraint and battery validation"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: positiveActiveMaterialFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
+const ahCcaRatingsFaq = {
+  "en": [
+    [
+      "Can Ah be converted directly into CCA?",
+      "Ah and CCA measure different quantities under different tests. Compare rated capacity and cold-start current on their respective stated bases."
+    ],
+    [
+      "Does a higher Ah rating guarantee vehicle fitment?",
+      "Confirm battery technology, dimensions, terminals, hold-down, start-stop requirements and manufacturer instructions together with Ah and CCA."
+    ],
+    [
+      "Can one separator parameter establish a finished battery’s CCA?",
+      "Material data supports matching within the battery design. The battery manufacturer must verify CCA and capacity through the applicable complete-battery tests."
+    ]
+  ],
+  "zh": [
+    [
+      "Ah 能直接换算成 CCA 吗？",
+      "两者测量的量和试验不同，应分别连同各自规定的容量与冷启动测试依据比较。"
+    ],
+    [
+      "Ah 更大就一定适配车辆吗？",
+      "需把电池类型、尺寸、端子、固定方式、启停要求及厂家说明与 Ah、CCA 一同核对。"
+    ],
+    [
+      "单个隔板参数能确定成品电池的 CCA 吗？",
+      "材料数据支持设计中的规格匹配，成品 CCA 与容量仍需由电池制造商通过适用的整电池试验验证。"
+    ]
+  ]
+} as const;
+
+export function buildAutomotiveBatteryAhCcaMetadata(lang: Lang): Metadata {
+  const current = seoContent("automotiveBatteryAhCca", lang, automotiveBatteryAhCcaSeo[lang]);
+  return buildMetadata({ title: current.title, description: current.description, keywords: [...current.keywords], path: current.path, ...articleLocalePaths("automotiveBatteryAhCca"), locale: current.locale, siteName: current.siteName, imageAlt: current.pageName, image: { url: `${SITE_URL}/images/articles/automotive-battery-ah-cca-hero-1600.webp`, width: 1600, height: 1200 } });
+}
+
+export function AutomotiveBatteryAhCcaStructuredData({ lang }: { lang: Lang }) {
+  const current = seoContent("automotiveBatteryAhCca", lang, automotiveBatteryAhCcaSeo[lang]);
+  const url = `${SITE_URL}${current.path}`;
+  const homePath = lang === "zh" ? "/zh/" : "/";
+  return <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+    organizationData(lang, current.description),
+    { "@type": "WebPage", "@id": `${url}#webpage`, url, name: current.pageName, description: current.description, inLanguage: current.language, isPartOf: { "@id": `${SITE_URL}/#website` } },
+    { "@type": "BlogPosting", "@id": `${url}#blogposting`, headline: current.pageName, description: current.articleDescription, image: `${SITE_URL}/images/articles/automotive-battery-ah-cca-hero-1600.webp`, url, datePublished: current.datePublished, dateModified: current.dateModified, mainEntityOfPage: { "@id": `${url}#webpage` }, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, about: ["Automotive battery Ah and CCA", "AGM separator and whole-battery validation"], inLanguage: current.language },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: ahCcaRatingsFaq[lang].map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: current.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === 0 ? `${SITE_URL}${homePath}` : index === 1 ? `${SITE_URL}${getResourcesPath(lang)}` : url })) }
+  ]}} />;
+}
+
 const leadAcidChargingFaq = {
   "en": [
     [
@@ -6420,11 +6718,11 @@ export function SecondaryArticleStructuredData({
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: current.language
       },
-      ...(kind === "leadAcidChargingDischarge" || kind === "ebikeCccEvidenceScope" || kind === "parallelBatteryCurrentSharing" || kind === "vrlaAgmGelStructures" || kind === "agmBatteryOrientation" || kind === "batteryStorageSelfDischarge" || kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
+      ...(kind === "automotiveBatteryAhCca" || kind === "positiveActiveMaterialSoftening" || kind === "agmSeparatorIronPurity" || kind === "leadAcidChargingDischarge" || kind === "ebikeCccEvidenceScope" || kind === "parallelBatteryCurrentSharing" || kind === "vrlaAgmGelStructures" || kind === "agmBatteryOrientation" || kind === "batteryStorageSelfDischarge" || kind === "aiDataCenterBackupPowerLayers" || kind === "agmPastingPaperEnergyValidation" || kind === "agmBatteryDamageDemoSafetyTest"
         ? [{
             "@type": "FAQPage",
             "@id": `${url}#faq`,
-            mainEntity: (kind === "leadAcidChargingDischarge" || kind === "ebikeCccEvidenceScope" || kind === "parallelBatteryCurrentSharing" ? [5, 6, 7] : kind === "vrlaAgmGelStructures" ? [7, 8, 9] : kind === "agmBatteryOrientation" ? [5, 6, 7] : kind === "batteryStorageSelfDischarge" ? [6, 7, 8] : kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
+            mainEntity: (kind === "automotiveBatteryAhCca" || kind === "positiveActiveMaterialSoftening" ? [6, 7, 8] : kind === "agmSeparatorIronPurity" || kind === "leadAcidChargingDischarge" || kind === "ebikeCccEvidenceScope" || kind === "parallelBatteryCurrentSharing" ? [5, 6, 7] : kind === "vrlaAgmGelStructures" ? [7, 8, 9] : kind === "agmBatteryOrientation" ? [5, 6, 7] : kind === "batteryStorageSelfDischarge" ? [6, 7, 8] : kind === "agmBatteryDamageDemoSafetyTest" ? [5, 6] : [kind === "agmPastingPaperEnergyValidation" ? 6 : 5]).map((sectionIndex) => ({
               "@type": "Question",
               name: secondaryResourceData[lang].topics[kind].sections[sectionIndex][1],
               acceptedAnswer: {

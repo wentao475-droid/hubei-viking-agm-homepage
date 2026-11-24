@@ -5,6 +5,9 @@ import { articleKinds, articleDefinitions, buildSecondaryArticleSeo } from "../c
 const SITE_URL = "https://www.vikingagm.com";
 const pages = [
   { en: "/blog/ebike-ccc-certification-battery-evidence-scope/", zh: "/zh/blog/ebike-ccc-certification-battery-evidence-scope/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-17", secondaryLastmod: "2026-11-17", arabicLastmod: "2026-11-17" },
+  { en: "/blog/agm-separator-iron-content-purity-self-discharge/", zh: "/zh/blog/agm-separator-iron-content-purity-self-discharge/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-23", secondaryLastmod: "2026-11-23", arabicLastmod: "2026-11-23" },
+  { en: "/blog/positive-active-material-softening-shedding-lead-acid/", zh: "/zh/blog/positive-active-material-softening-shedding-lead-acid/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-23", secondaryLastmod: "2026-11-23", arabicLastmod: "2026-11-23" },
+  { en: "/blog/car-battery-ah-cca-ratings-label-guide/", zh: "/zh/blog/car-battery-ah-cca-ratings-label-guide/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-24", secondaryLastmod: "2026-11-24", arabicLastmod: "2026-11-24" },
   { en: "/blog/lead-acid-battery-full-discharge-before-charging/", zh: "/zh/blog/lead-acid-battery-full-discharge-before-charging/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-17", secondaryLastmod: "2026-11-17", arabicLastmod: "2026-11-17" },
   { en: "/blog/parallel-battery-current-sharing-measurement-layers/", zh: "/zh/blog/parallel-battery-current-sharing-measurement-layers/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-06", secondaryLastmod: "2026-11-06", arabicLastmod: "2026-11-06" },
   { en: "/blog/vrla-agm-gel-battery-structures-separator-matching/", zh: "/zh/blog/vrla-agm-gel-battery-structures-separator-matching/", priority: "0.75", changefreq: "monthly", lastmod: "2026-11-01", secondaryLastmod: "2026-11-01", arabicLastmod: "2026-11-01" },

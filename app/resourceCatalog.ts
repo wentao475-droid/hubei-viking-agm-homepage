@@ -114,6 +114,57 @@ export const resourceActions: ResourceAction[] = [
 
 export const resourceArticles: ResourceArticle[] = [
 {
+  "id": "car-battery-ah-cca-ratings-label-guide",
+  "category": "buyerGuides",
+  "publishedAt": "2026-11-24",
+  "title": {
+    "en": "Ah and CCA on a Car Battery Label: Two Ratings, Two Different Questions",
+    "zh": "汽车电池标签上的 Ah 和 CCA 怎么看？"
+  },
+  "description": {
+    "en": "Read Ah with its capacity test basis and CCA with its cold-start standard, then check the complete vehicle fitment requirement.",
+    "zh": "Ah 连同容量测试口径阅读，CCA 连同冷启动标准阅读，再核对车辆的完整适配要求。"
+  },
+  "href": {
+    "en": "/blog/car-battery-ah-cca-ratings-label-guide/",
+    "zh": "/zh/blog/car-battery-ah-cca-ratings-label-guide/"
+  }
+},
+{
+  "id": "positive-active-material-softening-shedding-lead-acid",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-11-23",
+  "title": {
+    "en": "Why Positive Active Material Loosens as Lead–Acid Batteries Age",
+    "zh": "铅酸电池正极活性物质为何逐渐松散？"
+  },
+  "description": {
+    "en": "Review particle contact, cycling conditions and plate-group restraint when investigating positive active material softening and shedding.",
+    "zh": "结合颗粒接触、循环工况和极群约束，分析正极活性物质软化、脱落与验证方法。"
+  },
+  "href": {
+    "en": "/blog/positive-active-material-softening-shedding-lead-acid/",
+    "zh": "/zh/blog/positive-active-material-softening-shedding-lead-acid/"
+  }
+},
+{
+  "id": "agm-separator-iron-content-purity-self-discharge",
+  "category": "manufacturingQuality",
+  "publishedAt": "2026-11-23",
+  "title": {
+    "en": "Why AGM Separator Specifications Set Such Tight Limits on Iron",
+    "zh": "AGM 隔板为什么要严格控制铁含量？"
+  },
+  "description": {
+    "en": "Review iron impurity limits, the Fe²⁺/Fe³⁺ self-discharge pathway and the test definitions needed for AGM separator procurement.",
+    "zh": "从铁离子的自放电路径出发，核对 AGM 隔板铁含量限值、检测口径与整电池验证要求。"
+  },
+  "href": {
+    "en": "/blog/agm-separator-iron-content-purity-self-discharge/",
+    "zh": "/zh/blog/agm-separator-iron-content-purity-self-discharge/"
+  }
+},
+{
   "id": "lead-acid-battery-full-discharge-before-charging",
   "category": "buyerGuides",
   "publishedAt": "2026-11-17",
@@ -830,6 +881,9 @@ export const resourceArticles: ResourceArticle[] = [
 ];
 
 const articleKindById: Record<string, string> = {
+  "car-battery-ah-cca-ratings-label-guide": "automotiveBatteryAhCca",
+  "positive-active-material-softening-shedding-lead-acid": "positiveActiveMaterialSoftening",
+  "agm-separator-iron-content-purity-self-discharge": "agmSeparatorIronPurity",
   "ebike-ccc-certification-battery-evidence-scope": "ebikeCccEvidenceScope",
   "lead-acid-battery-full-discharge-before-charging": "leadAcidChargingDischarge",
   "parallel-battery-current-sharing-measurement-layers": "parallelBatteryCurrentSharing",
