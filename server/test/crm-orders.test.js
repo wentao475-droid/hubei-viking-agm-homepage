@@ -7,7 +7,7 @@ import { validateOrder, migrateOrders, OrderStore } from "../crm-orders.js";
 import { CrmStore } from "../crm-store.js";
 import { reviewInquiries } from "../review-inquiries.js";
 
-const order = (extra = {}) => ({ request_key: randomUUID(), order_number: "VK-20261027-01", status: "confirmed", currency: "CNY", amount: "12000.00", delivery_date: "2026-11-20",
+const order = (extra = {}) => ({ request_key: randomUUID(), contract_number: "VK-20261027-01", status: "confirmed", currency: "CNY", amount: "12000.00", delivery_date: "2026-11-20",
   items: [{ product: "AGM 隔板", form: "sheet", length: "276", width: "148", thickness: "1.8", quantity: "20000", unit_price: "0.6" }], ...extra });
 
 test("order specifications retain exact dimensions, units, quantities and dates", () => {
@@ -28,7 +28,7 @@ test("orders and final contracts: auth, multiple orders, concurrency, audit, shi
   assert.deepEqual(saved.items, validateOrder(input).items);
   assert.equal((await api.json(url, input, 201)).order.id, saved.id);
   await api.json(url, order(), 409);
-  const second = (await api.json(url, order({ order_number: "VK-02" }), 201)).order;
+  const second = (await api.json(url, order({ contract_number: "VK-02" }), 201)).order;
   assert.equal((await api.json(url)).orders.length, 2);
   const other = (await api.json("/inquiries", { name: "另一客户", email: "other@example.net", source_channel: "email" }, 201)).inquiry;
   await api.json(`/inquiries/${other.id}/orders/${saved.id}`, { ...input, version: 0 }, 404);
@@ -107,7 +107,7 @@ test("independent order pages and global listing cover every lead, filters and p
   const first = (await api.json("/inquiries", { name: "甲客户", company: "甲公司", email: "a@example.net", source_channel: "wechat", lead_grade: "E" }, 201)).inquiry;
   const second = (await api.json("/inquiries", { name: "乙客户", email: "b@example.net", source_channel: "website", lead_grade: "A" }, 201)).inquiry;
   const ids = [];
-  for (let n = 0; n < 23; n++) ids.push((await api.json(`/inquiries/${n === 22 ? second.id : first.id}/orders`, order({ order_number: `GLOBAL-${String(n).padStart(2, "0")}`, status: n === 22 ? "shipped" : "confirmed", shipped_date: n === 22 ? "2026-10-28" : null }), 201)).order.id);
+  for (let n = 0; n < 23; n++) ids.push((await api.json(`/inquiries/${n === 22 ? second.id : first.id}/orders`, order({ contract_number: `GLOBAL-${String(n).padStart(2, "0")}`, status: n === 22 ? "shipped" : "confirmed", shipped_date: n === 22 ? "2026-10-28" : null }), 201)).order.id);
   assert.equal((await fetch(api.base + "/admin/api/orders")).status, 401);
   assert.equal((await fetch(api.base + `/admin/api/orders/${ids[0]}`)).status, 401);
   const all = await api.json("/orders");
@@ -129,4 +129,115 @@ test("independent order pages and global listing cover every lead, filters and p
     assert.equal(response.status, 200); assert.match(await response.text(), /后台主导航/);
   }
   assert.match(await (await fetch(api.base + `/admin/orders/${ids[0]}`)).text(), /Sign in/);
+});
+
+test("system order numbers are immutable, distinct from contract numbers and safe on retries", async (t) => {
+  const api = await testApi(t);
+  const lead = (await api.json("/inquiries", { name: "编号测试", email: "numbers@example.net", source_channel: "wechat" }, 201)).inquiry;
+  const url = `/inquiries/${lead.id}/orders`;
+  const input = order({ contract_number: "SIGNED-001", order_number: "CLIENT-SUPPLIED" });
+  delete input.status;
+  const saved = (await api.json(url, input, 201)).order;
+  assert.match(saved.order_number, /^VK-\d{8}-\d{6,}$/);
+  assert.notEqual(saved.order_number, input.order_number);
+  assert.notEqual(saved.order_number, saved.contract_number);
+  assert.equal(saved.contract_number, "SIGNED-001");
+  assert.equal(saved.status, "confirmed");
+  const retry = (await api.json(url, { ...input, amount: "invalid" }, 201)).order;
+  assert.equal(retry.id, saved.id);
+  assert.equal(retry.order_number, saved.order_number);
+  await api.json(url, { ...input, request_key: randomUUID() }, 409);
+  const created = await Promise.all(["SIGNED-002", ""].map((contract_number) => api.json(url, order({ contract_number }), 201)));
+  assert.equal(new Set([saved, ...created.map((result) => result.order)].map((row) => row.order_number)).size, 3);
+  const edit = { ...order(), order_number: "CHANGED-BY-CLIENT", version: saved.version, notes: "核对完成" };
+  delete edit.contract_number;
+  delete edit.status;
+  const updated = (await api.json(`${url}/${saved.id}`, edit)).order;
+  assert.equal(updated.order_number, saved.order_number);
+  assert.equal(updated.contract_number, saved.contract_number);
+  assert.equal(updated.status, saved.status);
+  const changed = (await api.json(`${url}/${saved.id}`, { ...updated, contract_number: "SIGNED-CORRECTED" })).order;
+  assert.equal(changed.order_number, saved.order_number);
+  assert.equal((await api.json("/orders?q=SIGNED-CORRECTED")).orders[0].id, saved.id);
+  assert.equal((await api.json("/orders?q=" + saved.order_number)).orders[0].id, saved.id);
+  const detail = await api.json(`/inquiries/${lead.id}`);
+  assert.ok(detail.activities.some((row) => JSON.parse(row.changes_json || "{}").contract_number?.after === "SIGNED-CORRECTED"));
+  assert.equal(detail.inquiry.notification_status, "skipped");
+});
+
+test("legacy order migration preserves identifiers, files and versions and handles number collisions", async (t) => {
+  const api = await testApi(t);
+  const lead = (await api.json("/inquiries", { name: "旧单迁移", email: "legacy@example.net", source_channel: "wechat" }, 201)).inquiry;
+  const saved = (await api.json(`/inquiries/${lead.id}/orders`, order({ contract_number: "" }), 201)).order;
+  const db = new Database(api.dbPath); t.after(() => db.close());
+  const original = Buffer.from("%PDF-1.4\nlegacy contract");
+  const store = new OrderStore(new CrmStore(db));
+  store.contract(saved.id, { originalname: "legacy.pdf", buffer: original, size: original.length }, { version: saved.version }, "admin");
+  db.prepare("UPDATE crm_orders SET order_number='LEGACY-ORDER-001' WHERE id=?").run(saved.id);
+  db.exec("DROP INDEX crm_order_contract_number; ALTER TABLE crm_orders DROP COLUMN contract_number");
+  const before = db.prepare("SELECT * FROM crm_orders WHERE id=?").get(saved.id);
+  const file = db.prepare("SELECT * FROM crm_order_contracts WHERE order_id=?").get(saved.id);
+  migrateOrders(db); migrateOrders(db);
+  const after = db.prepare("SELECT * FROM crm_orders WHERE id=?").get(saved.id);
+  assert.deepEqual(after, { ...before, contract_number: "" });
+  assert.deepEqual(db.prepare("SELECT * FROM crm_order_contracts WHERE order_id=?").get(saved.id), file);
+  const first = store.nextOrderNumber("2026-11-24T16:30:00Z");
+  assert.match(first, /^VK-20261125-/);
+  db.prepare("UPDATE crm_orders SET order_number=? WHERE id=?").run(first, saved.id);
+  const next = store.nextOrderNumber("2026-11-24T16:30:00Z");
+  assert.notEqual(next, first);
+  assert.equal(Number(next.split("-").at(-1)), Number(first.split("-").at(-1)) + 1);
+});
+
+test("contract preparation saves incomplete drafts and converts a signed contract with an immutable snapshot", async (t) => {
+  const api = await testApi(t);
+  const lead = (await api.json("/inquiries", { name: "签约联系人", company: "测试买方", phone: "0123456789", source_channel: "wechat" }, 201)).inquiry;
+  const url = `/inquiries/${lead.id}/order-preparation`;
+  const ordersUrl = `/inquiries/${lead.id}/orders`;
+  const initial = await api.json(url);
+  assert.equal(initial.values.buyer_phone, "0123456789");
+  assert.equal(initial.values.buyer_name, "签约联系人");
+  assert.equal((await fetch(api.base + "/admin/api" + url)).status, 401);
+  const partial = { ...initial.values, preparation_version: initial.version, delivery_address: "待核对地址" };
+  assert.equal((await api.request(url, partial, { Origin: "https://foreign.example" })).status, 403);
+  const draft = await api.json(url, partial);
+  assert.equal((await api.json(url)).values.delivery_address, "待核对地址");
+  await api.json(url, partial, 409);
+  assert.equal((await api.json(ordersUrl)).orders.length, 0);
+
+  const personal = { ...initial.values, ...order({ contract_number: "SIGNED-01" }), preparation_version: draft.version,
+    account_name: "测试客户", bank_account: "000012345678", bank_name: "测试银行", delivery_address: "确认后地址" };
+  const missing = await api.json(url, { ...personal, bank_account: "", ready: true }, 400);
+  assert.match(missing.error, /付款账号/);
+  const company = { ...personal, signing_type: "company", buyer_name: "测试买方" };
+  assert.match((await api.json(url, { ...company, ready: true }, 400)).error, /发票抬头.*纳税人识别号/);
+  const confirmed = await api.json(url, { ...company, invoice_title: "测试买方", tax_id: "TEST-TAX", ready: true });
+  const input = { ...confirmed.values, request_key: personal.request_key, preparation_version: confirmed.version };
+  await api.json(ordersUrl, input, 400);
+  const upload = new FormData();
+  const pdf = Buffer.from("%PDF-1.4\nSigned test contract");
+  upload.set("file", new Blob([pdf]), "signed.pdf");
+  upload.set("recognize", "false");
+  const staged = await api.json(`/inquiries/${lead.id}/order-contract-preview`, upload);
+  const payload = { ...input, contract_draft_id: staged.draft_id };
+  const saved = (await api.json(ordersUrl, payload, 201)).order;
+  assert.match(saved.order_number, /^VK-/);
+  assert.equal(saved.contract_number, "SIGNED-01");
+  assert.equal(saved.status, "confirmed");
+  assert.equal((await api.json(ordersUrl, payload, 201)).order.id, saved.id);
+  assert.equal((await api.json(url)).version, null);
+  assert.deepEqual(Buffer.from(await (await api.request(`/orders/${saved.id}/contract`)).arrayBuffer()), pdf);
+  const next = await api.json(url, { ...personal, contract_number: "SIGNED-02", preparation_version: null, delivery_address: "下一单地址", ready: true });
+  const secondFile = await api.json(`/inquiries/${lead.id}/order-contract-preview`, upload);
+  const second = (await api.json(ordersUrl, { ...next.values, request_key: randomUUID(), preparation_version: next.version, contract_draft_id: secondFile.draft_id }, 201)).order;
+  const secondSnapshot = (await api.json(`/orders/${second.id}`)).preparation;
+  assert.equal(secondSnapshot.signing_type, "personal");
+  assert.equal(secondSnapshot.delivery_address, "下一单地址");
+  assert.equal(secondSnapshot.tax_id, undefined);
+  const snapshot = (await api.json(`/orders/${saved.id}`)).preparation;
+  assert.equal(snapshot.delivery_address, "确认后地址");
+  assert.equal(snapshot.bank_account, "000012345678");
+  assert.equal(snapshot.tax_id, "TEST-TAX");
+  assert.ok(!JSON.stringify(await api.json(ordersUrl)).includes("000012345678"));
+  assert.ok(!JSON.stringify((await api.json(`/inquiries/${lead.id}`)).activities).includes("000012345678"));
 });

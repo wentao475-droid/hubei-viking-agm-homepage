@@ -25,9 +25,8 @@ const date = (value, label) => {
 
 export function validateOrder(input) {
   const result = {};
-  for (const key of ["order_number", "logistics_company", "tracking_number", "notes"]) result[key] = text(input[key], key, key === "notes" ? 5000 : 100);
-  if (!result.order_number) fail("请填写订单编号");
-  result.status = input.status || "draft";
+  for (const key of ["contract_number", "logistics_company", "tracking_number", "notes"]) result[key] = text(input[key], key, key === "notes" ? 5000 : 100);
+  result.status = input.status || "confirmed";
   if (!Object.hasOwn(orderStatuses, result.status)) fail("无效订单状态");
   result.currency = text(input.currency, "币种", 3).toUpperCase();
   if (!/^[A-Z]{3}$/.test(result.currency)) fail("币种请填写三个英文字母，例如 CNY、USD");
@@ -49,8 +48,34 @@ export function validateOrder(input) {
   return result;
 }
 
+export const preparationFields = {
+  buyer_name: "客户姓名 / 公司名称", buyer_phone: "客户联系电话",
+  account_name: "客户付款户名", bank_account: "客户付款账号", bank_name: "客户开户银行",
+  delivery_address: "收货地址", recipient: "收货人", recipient_phone: "收货电话"
+};
+export const invoiceFields = {
+  invoice_title: "发票抬头", tax_id: "纳税人识别号", invoice_address: "开票地址",
+  invoice_phone: "开票电话", invoice_bank: "开票开户行", invoice_account: "开票银行账号",
+  invoice_type: "发票类型", invoice_email: "收票邮箱"
+};
+
+function preparationDetails(input, complete) {
+  const type = input.signing_type;
+  if (!["personal", "company"].includes(type)) fail("请选择签约方式");
+  const fields = { ...preparationFields, ...(type === "company" ? invoiceFields : {}) };
+  const result = { signing_type: type };
+  for (const [key, label] of Object.entries(fields)) result[key] = text(input[key], label);
+  if (complete) {
+    const required = [...Object.keys(preparationFields), ...(type === "company" ? ["invoice_title", "tax_id"] : [])];
+    const missing = required.filter((key) => !result[key]).map((key) => fields[key]);
+    if (missing.length) fail("请补齐：" + missing.join("、"));
+  }
+  return result;
+}
+
 export function migrateOrders(db) {
-  db.exec(`CREATE TABLE IF NOT EXISTS crm_orders (
+  db.transaction(() => {
+    db.exec(`CREATE TABLE IF NOT EXISTS crm_orders (
     id INTEGER PRIMARY KEY, inquiry_id INTEGER NOT NULL REFERENCES inquiries(id),
     request_key TEXT NOT NULL UNIQUE, order_number TEXT NOT NULL UNIQUE,
     status TEXT NOT NULL, currency TEXT NOT NULL, amount TEXT NOT NULL, items_json TEXT NOT NULL,
@@ -69,23 +94,83 @@ export function migrateOrders(db) {
     id TEXT PRIMARY KEY, inquiry_id INTEGER NOT NULL REFERENCES inquiries(id), actor TEXT NOT NULL,
     filename TEXT NOT NULL, data BLOB NOT NULL, expires_at TEXT NOT NULL
   );
-  CREATE INDEX IF NOT EXISTS crm_contract_draft_expiry ON crm_order_contract_drafts(expires_at);`);
+  CREATE INDEX IF NOT EXISTS crm_contract_draft_expiry ON crm_order_contract_drafts(expires_at);
+  CREATE TABLE IF NOT EXISTS crm_order_preparations (
+    inquiry_id INTEGER PRIMARY KEY REFERENCES inquiries(id), version TEXT NOT NULL, data_json TEXT NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS crm_order_snapshots (
+    order_id INTEGER PRIMARY KEY REFERENCES crm_orders(id), data_json TEXT NOT NULL
+  );`);
+    if (!db.prepare("PRAGMA table_info(crm_orders)").all().some((column) => column.name === "contract_number")) {
+      db.exec("ALTER TABLE crm_orders ADD COLUMN contract_number TEXT NOT NULL DEFAULT ''");
+    }
+    db.exec("CREATE UNIQUE INDEX IF NOT EXISTS crm_order_contract_number ON crm_orders(contract_number) WHERE contract_number <> ''");
+  }).immediate();
+}
+
+function contractFileType(file) {
+  if (!file?.buffer?.length || file.size > maxContractSize) fail("请选择不超过 10 MiB 的合同文件");
+  const data = file.buffer;
+  const types = {
+    pdf: ["application/pdf", data.subarray(0, 5).toString() === "%PDF-"],
+    png: ["image/png", data.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))],
+    jpg: ["image/jpeg", data[0] === 255 && data[1] === 216 && data[2] === 255],
+    jpeg: ["image/jpeg", data[0] === 255 && data[1] === 216 && data[2] === 255],
+    docx: ["application/vnd.openxmlformats-officedocument.wordprocessingml.document", data.subarray(0, 4).equals(Buffer.from([80,75,3,4]))],
+    doc: ["application/msword", data.subarray(0, 8).equals(Buffer.from([208,207,17,224,161,177,26,225]))]
+  };
+  const ext = String(file.originalname).split(".").pop().toLowerCase();
+  if (!types[ext]?.[1]) fail("合同格式与文件内容不符，仅支持 PDF、PNG、JPG、DOC、DOCX");
+  return types[ext][0];
 }
 
 export class OrderStore {
   constructor(store) { this.store = store; this.db = store.db; migrateOrders(this.db); }
   cleanupDrafts() { this.db.prepare("DELETE FROM crm_order_contract_drafts WHERE expires_at <= ?").run(new Date().toISOString()); }
   cancelDraft(id, actor) { this.db.prepare("DELETE FROM crm_order_contract_drafts WHERE id = ? AND actor = ?").run(id, actor); }
-  async stageContract(inquiryId, file, actor) {
+  preparation(inquiryId) {
+    const lead = this.store.get(inquiryId);
+    const row = this.db.prepare("SELECT version, data_json FROM crm_order_preparations WHERE inquiry_id = ?").get(inquiryId);
+    if (row) return { version: row.version, values: JSON.parse(row.data_json), company: lead.company };
+    return { version: null, values: {
+      signing_type: "personal", buyer_name: lead.name, buyer_phone: lead.phone,
+      recipient: lead.name, recipient_phone: lead.phone, currency: "CNY", items: [{ form: "sheet" }]
+    }, company: lead.company };
+  }
+  checkPreparation(inquiryId, version) {
+    if (this.preparation(inquiryId).version !== version) fail("合同准备资料已更新，请重新打开后再操作", 409);
+  }
+  savePreparation(inquiryId, input) {
+    return this.db.transaction(() => {
+      this.checkPreparation(inquiryId, input.preparation_version);
+      const values = preparationDetails(input, input.ready === true);
+      for (const key of ["amount", "currency", "delivery_date", "contract_number", "notes"]) {
+        values[key] = text(input[key], key, key === "notes" ? 5000 : 100);
+      }
+      if (!Array.isArray(input.items) || input.items.length > 50) fail("最多填写 50 个规格明细");
+      values.items = input.items.map((item) => Object.fromEntries(
+        ["product", "form", "length", "width", "thickness", "quantity", "unit_price"].map((key) => [key, text(item?.[key], key, 200)])
+      ));
+      if (input.ready === true) validateOrder(values);
+      const version = randomUUID();
+      this.db.prepare(`INSERT INTO crm_order_preparations VALUES (?, ?, ?)
+        ON CONFLICT(inquiry_id) DO UPDATE SET version=excluded.version, data_json=excluded.data_json`).run(inquiryId, version, JSON.stringify(values));
+      return { version, values };
+    }).immediate();
+  }
+  async stageContract(inquiryId, file, actor, recognize = true) {
     this.store.get(inquiryId); this.cleanupDrafts();
     if (this.db.prepare("SELECT count(*) n FROM crm_order_contract_drafts WHERE actor = ?").get(actor).n >= 3) fail("最多保留三份合同草稿，请关闭旧表单后重试", 429);
-    const result = await readContract(file);
+    contractFileType(file);
+    const result = recognize ? await readContract(file) : { candidates: [], has_text: false };
     const id = randomUUID(), expires = new Date(Date.now() + 30 * 60000).toISOString();
     this.db.prepare("INSERT INTO crm_order_contract_drafts(id, inquiry_id, actor, filename, data, expires_at) VALUES (?, ?, ?, ?, ?, ?)").run(id, inquiryId, actor, file.originalname, file.buffer, expires);
     return { draft_id: id, expires_at: expires, ...result, candidates: result.candidates.map((candidate) => ({ ...candidate,
-      existing_order_id: this.db.prepare("SELECT id FROM crm_orders WHERE order_number = ?").get(candidate.number)?.id || null })) };
+      existing_order_id: this.db.prepare("SELECT id FROM crm_orders WHERE contract_number = ?").get(candidate.number)?.id || null })) };
   }
   create(inquiryId, input, actor) {
+    const preparing = Object.hasOwn(input, "preparation_version");
+    if (preparing && !input.contract_draft_id) fail("请上传并关联最终签章合同");
     if (!input.contract_draft_id) return this.save(inquiryId, null, input, actor);
     return this.db.transaction(() => {
       const existing = this.db.prepare("SELECT id, inquiry_id FROM crm_orders WHERE request_key = ?").get(input.request_key || "");
@@ -96,8 +181,19 @@ export class OrderStore {
       this.cleanupDrafts();
       const draft = this.db.prepare("SELECT * FROM crm_order_contract_drafts WHERE id = ? AND actor = ? AND inquiry_id = ?").get(input.contract_draft_id, actor, inquiryId);
       if (!draft) fail("合同草稿已失效或不属于当前线索，请重新上传识别", 410);
+      let snapshot;
+      if (preparing) {
+        if (!input.preparation_version) fail("请先保存合同准备资料");
+        this.checkPreparation(inquiryId, input.preparation_version);
+        snapshot = preparationDetails(input, true);
+        input = { ...input, status: "confirmed", shipped_date: null, logistics_company: "", tracking_number: "" };
+      }
       const order = this.save(inquiryId, null, input, actor);
       const result = this.contract(order.id, { originalname: draft.filename, buffer: draft.data, size: draft.data.length }, { version: order.version }, actor);
+      if (snapshot) {
+        this.db.prepare("INSERT INTO crm_order_snapshots VALUES (?, ?)").run(order.id, JSON.stringify(snapshot));
+        this.db.prepare("DELETE FROM crm_order_preparations WHERE inquiry_id = ?").run(inquiryId);
+      }
       this.cancelDraft(draft.id, actor);
       return result;
     }).immediate();
@@ -121,7 +217,7 @@ export class OrderStore {
     }
     if (query.q) {
       params.q = `%${text(query.q, "搜索内容", 200)}%`;
-      terms.push("(o.order_number LIKE @q OR i.name LIKE @q OR i.company LIKE @q OR o.tracking_number LIKE @q OR o.items_json LIKE @q)");
+      terms.push("(o.order_number LIKE @q OR o.contract_number LIKE @q OR i.name LIKE @q OR i.company LIKE @q OR o.tracking_number LIKE @q OR o.items_json LIKE @q)");
     }
     const sql = terms.length ? `WHERE ${terms.join(" AND ")}` : "";
     const total = this.db.prepare(`SELECT count(*) n FROM crm_orders o JOIN inquiries i ON i.id=o.inquiry_id ${sql}`).get(params).n;
@@ -136,10 +232,19 @@ export class OrderStore {
   audit(row, actor, content, changes) {
     this.store.activity(row.inquiry_id, actor, { kind: "order", content: `订单 ${row.order_number}：${content}`, changes_json: JSON.stringify(changes) });
   }
+  nextOrderNumber(now) {
+    const day = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(now)).replaceAll("-", "");
+    let sequence = this.db.prepare("SELECT coalesce(max(id), 0) + 1 n FROM crm_orders").get().n;
+    let number;
+    do {
+      number = `VK-${day}-${String(sequence++).padStart(6, "0")}`;
+    } while (this.db.prepare("SELECT id FROM crm_orders WHERE order_number = ?").get(number));
+    return number;
+  }
   save(inquiryId, id, input, actor) {
     return this.db.transaction(() => {
       this.store.get(inquiryId);
-      const next = validateOrder(input), old = id ? this.get(id) : null;
+      const old = id ? this.get(id) : null;
       if (old && old.inquiry_id !== inquiryId) fail("订单不属于当前线索", 404);
       if (old) this.checkVersion(old, input.version);
       else {
@@ -150,8 +255,10 @@ export class OrderStore {
           return this.get(existing.id);
         }
       }
-      if (this.db.prepare("SELECT id FROM crm_orders WHERE order_number = ? AND id <> ?").get(next.order_number, id || 0)) fail("订单编号已存在", 409);
+      const next = validateOrder({ ...input, contract_number: input.contract_number ?? old?.contract_number, status: input.status ?? old?.status });
+      if (next.contract_number && this.db.prepare("SELECT id FROM crm_orders WHERE contract_number = ? AND id <> ?").get(next.contract_number, id || 0)) fail("合同编号已有订单，请核对现有订单", 409);
       const now = new Date().toISOString();
+      next.order_number = old ? old.order_number : this.nextOrderNumber(now);
       const values = { ...next, items_json: JSON.stringify(next.items), now, actor };
       delete values.items;
       const columns = Object.keys(next).filter((key) => key !== "items").concat("items_json");
@@ -165,18 +272,7 @@ export class OrderStore {
     }).immediate();
   }
   contract(id, file, input, actor) {
-    if (!file?.buffer?.length || file.size > maxContractSize) fail("请选择不超过 10 MiB 的合同文件");
-    const data = file.buffer;
-    const types = {
-      pdf: ["application/pdf", data.subarray(0, 5).toString() === "%PDF-"],
-      png: ["image/png", data.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))],
-      jpg: ["image/jpeg", data[0] === 255 && data[1] === 216 && data[2] === 255],
-      jpeg: ["image/jpeg", data[0] === 255 && data[1] === 216 && data[2] === 255],
-      docx: ["application/vnd.openxmlformats-officedocument.wordprocessingml.document", data.subarray(0, 4).equals(Buffer.from([80,75,3,4]))],
-      doc: ["application/msword", data.subarray(0, 8).equals(Buffer.from([208,207,17,224,161,177,26,225]))]
-    };
-    const ext = String(file.originalname).split(".").pop().toLowerCase();
-    if (!types[ext]?.[1]) fail("合同格式与文件内容不符，仅支持 PDF、PNG、JPG、DOC、DOCX");
+    const mime = contractFileType(file), data = file.buffer;
     let filename = file.originalname;
     if ([...filename].every((c) => c.charCodeAt(0) <= 255)) {
       try { filename = new TextDecoder("utf-8", { fatal: true }).decode(Buffer.from(filename, "latin1")); } catch { /* Keep non-UTF8 names. */ }
@@ -188,7 +284,7 @@ export class OrderStore {
       if (row.contract_filename && input.replace !== "true") fail("此订单已有最终合同，请确认替换", 409);
       const sha256 = createHash("sha256").update(data).digest("hex"), now = new Date().toISOString();
       this.db.prepare(`INSERT INTO crm_order_contracts(order_id, filename, mime, data, sha256, uploaded_at, actor)
-        VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(order_id) DO UPDATE SET filename=excluded.filename, mime=excluded.mime, data=excluded.data, sha256=excluded.sha256, uploaded_at=excluded.uploaded_at, actor=excluded.actor`).run(id, filename, types[ext][0], data, sha256, now, actor);
+        VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(order_id) DO UPDATE SET filename=excluded.filename, mime=excluded.mime, data=excluded.data, sha256=excluded.sha256, uploaded_at=excluded.uploaded_at, actor=excluded.actor`).run(id, filename, mime, data, sha256, now, actor);
       this.db.prepare("UPDATE crm_orders SET version=version+1, updated_at=?, actor=? WHERE id=?").run(now, actor, id);
       this.audit(row, actor, row.contract_filename ? "替换最终合同" : "上传最终合同", { contract: { before: row.contract_filename ? `${row.contract_filename} SHA256:${row.contract_sha256}` : null, after: `${filename} SHA256:${sha256}` } });
       return this.get(id);
@@ -206,12 +302,15 @@ export function orderRoutes(store, actor, write) {
     if (error) return next(Object.assign(error, { status: 413, message: "合同上传超出限制：仅允许一个文件，大小不超过 10 MiB" }));
     next();
   });
-  router.post("/inquiries/:id/order-contract-preview", write, contractUpload, route(async (req, res) => res.json({ ok: true, ...await orders.stageContract(Number(req.params.id), req.file, actor(req)) })));
+  router.post("/inquiries/:id/order-contract-preview", write, contractUpload, route(async (req, res) => res.json({ ok: true, ...await orders.stageContract(Number(req.params.id), req.file, actor(req), req.body.recognize !== "false") })));
   router.post("/orders/contract-drafts/:id/cancel", write, route((req, res) => { orders.cancelDraft(req.params.id, actor(req)); res.json({ ok: true }); }));
+  router.get("/inquiries/:id/order-preparation", route((req, res) => res.json({ ok: true, ...orders.preparation(Number(req.params.id)) })));
+  router.post("/inquiries/:id/order-preparation", write, route((req, res) => res.json({ ok: true, ...orders.savePreparation(Number(req.params.id), req.body) })));
   router.get("/orders", route((req, res) => res.json(orders.search(req.query))));
   router.get("/orders/:id", route((req, res) => {
     const order = orders.get(Number(req.params.id)), lead = store.get(order.inquiry_id);
-    res.json({ ok: true, order, lead: { id: lead.id, name: lead.name, company: lead.company, contact: lead.contact, email: lead.email, phone: lead.phone } });
+    const snapshot = store.db.prepare("SELECT data_json FROM crm_order_snapshots WHERE order_id = ?").get(order.id);
+    res.json({ ok: true, order, preparation: snapshot ? JSON.parse(snapshot.data_json) : null, lead: { id: lead.id, name: lead.name, company: lead.company, contact: lead.contact, email: lead.email, phone: lead.phone } });
   }));
   router.get("/inquiries/:id/orders", route((req, res) => res.json({ ok: true, orders: orders.list(Number(req.params.id)), statuses: orderStatuses })));
   router.post("/inquiries/:id/orders", write, route((req, res) => res.status(201).json({ ok: true, order: orders.create(Number(req.params.id), req.body, actor(req)) })));

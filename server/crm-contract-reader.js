@@ -12,7 +12,7 @@ export function contractNumbers(text) {
     if (!number || number.length > 100 || !/[A-Za-z0-9]/.test(number) || /^(?:未填|待定|暂无|买方|卖方|签订|日期|签约|签署|甲方|乙方|none$|tbd$)/i.test(number)) continue;
     const context = text.slice(match.index, match.index + match[0].length + number.length).replace(/\s+/g, " ").slice(0, 220);
     if (!candidates.has(number)) candidates.set(number, { number, context });
-    if (candidates.size > 20) fail("合同中编号过多，请手动核对并录入订单号");
+    if (candidates.size > 20) fail("合同中编号过多，请手动核对并录入合同编号");
   }
   return [...candidates.values()];
 }

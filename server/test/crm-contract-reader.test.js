@@ -52,7 +52,7 @@ test("contract intake previews without orders, atomically attaches original, ded
   const preview = await api.json(previewUrl, upload());
   assert.equal(preview.candidates[0].number, "VK-20261028-003");
   assert.equal((await api.json("/orders")).total, 0);
-  const input = { request_key: randomUUID(), order_number: preview.candidates[0].number, status: "confirmed", currency: "CNY", amount: "12000", contract_draft_id: preview.draft_id,
+  const input = { request_key: randomUUID(), contract_number: preview.candidates[0].number, status: "confirmed", currency: "CNY", amount: "12000", contract_draft_id: preview.draft_id,
     items: [{ form: "sheet", product: "AGM", length: "276", width: "148", thickness: "1.8", quantity: "20000" }] };
   await api.json(`/inquiries/${other.id}/orders`, input, 410);
   db.prepare("UPDATE crm_order_contract_drafts SET actor='someone-else' WHERE id=?").run(preview.draft_id);
@@ -66,6 +66,9 @@ test("contract intake previews without orders, atomically attaches original, ded
   db.exec("DROP TRIGGER fail_contract");
   const created = (await api.json(ordersUrl, input, 201)).order;
   assert.equal(created.contract_filename, "合同.pdf");
+  assert.equal(created.contract_number, preview.candidates[0].number);
+  assert.notEqual(created.order_number, created.contract_number);
+  assert.match(created.order_number, /^VK-\d{8}-\d{6,}$/);
   assert.deepEqual(Buffer.from(await (await api.request(`/orders/${created.id}/contract?download=1`)).arrayBuffer()), pdf);
   assert.equal((await api.json(ordersUrl, input, 201)).order.id, created.id);
   assert.equal(db.prepare("SELECT count(*) n FROM crm_order_contract_drafts").get().n, 0);
@@ -78,17 +81,17 @@ test("contract intake previews without orders, atomically attaches original, ded
   assert.equal(db.prepare("SELECT count(*) n FROM crm_order_contract_drafts").get().n, 0);
   const expired = await api.json(previewUrl, upload());
   db.prepare("UPDATE crm_order_contract_drafts SET expires_at='2000-01-01' WHERE id=?").run(expired.draft_id);
-  await api.json(ordersUrl, { ...input, request_key: randomUUID(), order_number: "NEW-123", contract_draft_id: expired.draft_id }, 410);
+  await api.json(ordersUrl, { ...input, request_key: randomUUID(), contract_number: "NEW-123", contract_draft_id: expired.draft_id }, 410);
   // Cleanup is inside the failed transaction; a normal preview also clears expired drafts.
   const manual = await api.json(previewUrl, upload(contractPdf(["No identifier"]), "manual.pdf"));
   assert.equal(manual.candidates.length, 0);
-  const handEntered = (await api.json(ordersUrl, { ...input, request_key: randomUUID(), order_number: "MANUAL-001", contract_draft_id: manual.draft_id }, 201)).order;
+  const handEntered = (await api.json(ordersUrl, { ...input, request_key: randomUUID(), contract_number: "MANUAL-001", contract_draft_id: manual.draft_id }, 201)).order;
   assert.equal(handEntered.contract_filename, "manual.pdf");
   assert.equal(db.prepare("SELECT count(*) n FROM crm_order_contract_drafts").get().n, 0);
   assert.equal((await api.json(`/inquiries/${lead.id}`)).inquiry.lead_grade, "B");
   const word = docx('<w:document><w:p><w:t>合同编号：WORD-2026-001</w:t></w:p></w:document>');
   const wordPreview = await api.json(previewUrl, upload(word, "最终.docx"));
-  const wordOrder = (await api.json(ordersUrl, { ...input, request_key: randomUUID(), order_number: wordPreview.candidates[0].number, contract_draft_id: wordPreview.draft_id }, 201)).order;
+  const wordOrder = (await api.json(ordersUrl, { ...input, request_key: randomUUID(), contract_number: wordPreview.candidates[0].number, contract_draft_id: wordPreview.draft_id }, 201)).order;
   const download = await api.request(`/orders/${wordOrder.id}/contract`);
   assert.match(download.headers.get("content-disposition"), /^attachment/);
   assert.deepEqual(Buffer.from(await download.arrayBuffer()), word);
